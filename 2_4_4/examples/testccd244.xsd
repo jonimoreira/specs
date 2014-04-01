@@ -48,7 +48,7 @@
 
   <!-- CCD Root Element -->
   <xs:element name='ccd-f2b7c24b-39c0-4ff4-b528-f8b509429572' type='ccd:ct-f2b7c24b-39c0-4ff4-b528-f8b509429572'/>
-  <xs:complexType name='ct-f2b7c24b-39c0-4ff4-b528-f8b509429572'> <!-- Test 2.4.3 All Datatypes -->
+  <xs:complexType name='ct-f2b7c24b-39c0-4ff4-b528-f8b509429572'> <!-- Test 2.4.4 All Datatypes -->
     <xs:complexContent>
       <xs:restriction base='mlhim244:CCDType'>
         <xs:sequence>
@@ -60,13 +60,13 @@
 
     <!-- CCD Components Begin Below -->
 
-  <xs:complexType name='ct-da1b3744-3e15-4c9a-8dd1-30e9077de89e'> <!-- Test 2.4.3 All Datatypes -->
+  <xs:complexType name='ct-da1b3744-3e15-4c9a-8dd1-30e9077de89e'> <!-- Test 2.4.4 All Datatypes -->
     <xs:annotation>
     <xs:documentation>
-      Test 2.4.3 All Datatypes
+      Test 2.4.4 All Datatypes
     </xs:documentation>
     <xs:appinfo>
-    <!--No valid semantic links for  ct-da1b3744-3e15-4c9a-8dd1-30e9077de89e : Test 2.4.3 All Datatypes -->
+    <!--No valid semantic links for  ct-da1b3744-3e15-4c9a-8dd1-30e9077de89e : Test 2.4.4 All Datatypes -->
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
@@ -1764,7 +1764,7 @@ Examples:
 
 
 
-  <xs:complexType name='ct-a2216c60-f0ad-49f4-8f3e-cd2b9850c910'> <!-- Test 2.4.3 All Datatypes -->
+  <xs:complexType name='ct-a2216c60-f0ad-49f4-8f3e-cd2b9850c910'> <!-- Test 2.4.4 All Datatypes -->
     <xs:annotation>
     <xs:documentation>
       A test Cluster that contains all permissible datatypes Plus one cluster. 
@@ -1778,7 +1778,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base='mlhim244:ClusterType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Test 2.4.3 All Datatypes"/>
+          <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Test 2.4.4 All Datatypes"/>
       <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-bdef65c9-6667-4104-9ad6-505c88e1c636'/><!-- Cluster Demographics -->
       <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-6acdd92b-3bd3-4127-92a1-605403dfedcf'/><!-- DvBoolean Alveolar rhabdomyosarcoma -->
       <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-fabaca05-c71c-469d-bbfd-6892ca7c7137'/><!-- DvURI Functionally related to -->

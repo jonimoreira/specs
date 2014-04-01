@@ -7,6 +7,7 @@
   <xs:annotation>
     <xs:documentation>
     This is the Multi-Level Healthcare Information Modelling (MLHIM) project reference model implementation in XML Schema 1.1.
+    MLHIM Release 2.4.4
     It consists of the core datatypes and structures for MLHIM models, called Concept Constraint Definitions (CCDs).
     Further documentation and implementation instructions can be found on or via links from http://www.mlhim.org
     
@@ -620,6 +621,9 @@
       <xs:element name="date-interval" type="xs:date"/>
       <xs:element name="datetime-interval" type="xs:dateTime"/>
       <xs:element name="time-interval" type="xs:time"/>
+      <xs:element name="day-interval" type="xs:gDay"/>
+      <xs:element name="month-interval" type="xs:gMonth"/>
+      <xs:element name="year-interval" type="xs:gYear"/>
       <xs:element name="duration-interval" type="xs:duration"/>
     </xs:choice>
   </xs:complexType>
