@@ -7,6 +7,7 @@
   <xs:annotation>
     <xs:documentation>
     This is the Multi-Level Healthcare Information Modelling (MLHIM) project reference model implementation in XML Schema 1.1.
+    MLHIM Release 2.4.4
     It consists of the core datatypes and structures for MLHIM models, called Concept Constraint Definitions (CCDs).
     Further documentation and implementation instructions can be found on or via links from http://www.mlhim.org
     
