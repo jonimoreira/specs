@@ -40,7 +40,7 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="valid-time-end" type="xs:dateTime" nillable="true">
         <xs:annotation>
-          <xs:documentation>If present this must be a valid date-time including timezone</xs:documentation>
+          <xs:documentation>If present this must be a valid date-time including timezone. It is used to indicate the ending time that information is considered valid or is to have expired.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -64,12 +64,12 @@
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="0" name="valid-trues" type="xs:string">
             <xs:annotation>
-              <xs:documentation>A set of strings that are to be converted to a boolean True in the implementation.</xs:documentation>
+              <xs:documentation>A string that represents a boolean True in the implementation. These are generally constrained by a set of enumerations in the CCD.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="valid-falses" type="xs:string">
             <xs:annotation>
-              <xs:documentation>A set of strings that are to be converted to a boolean False in the implementation.</xs:documentation>
+              <xs:documentation>A string that represents a boolean False in the implementation. These are generally constrained by a set of enumerations in the CCD.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="DvBoolean-dv" type="xs:string">
@@ -99,8 +99,7 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Normally constrained by on ontology such as the OBO RO http://purl.obolibrary.org/obo/ro.owl
-              </xs:documentation>
+              <xs:documentation>Normally constrained by on ontology such as the OBO RO http://purl.obolibrary.org/obo/ro.owl</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -155,12 +154,12 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="terminology-version" type="xs:string">
             <xs:annotation>
-              <xs:documentation>The proper release/version ID from the releasing authority. </xs:documentation>
+              <xs:documentation>The proper release/version ID from the releasing authority.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="terminology-code" type="xs:string">
             <xs:annotation>
-              <xs:documentation>The uniquely identifiable code string from the terminology. </xs:documentation>
+              <xs:documentation>The uniquely identifiable code string from the terminology.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -171,10 +170,11 @@
 
   <xs:complexType name="DvIdentifierType">
     <xs:annotation>
-      <xs:documentation>DvIndentifierType is DEPRECATED as of 2.4.3 and will be removed in future versions. See https://github.com/mlhim/specs/issues/14 for details. 
+      <xs:documentation> 
         Type for representing identifiers of real-world entities. Typical identifiers include: drivers licence
         number, social security number, veterans affairs number, prescription id, order id, system id and so on. The actual
-        identifier is in the DvString-dv. </xs:documentation>
+        identifier is in the DvString-dv. 
+      </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvStringType">
@@ -186,12 +186,12 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="issuer" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Authority which issues the kind of id used in the id field of this object. </xs:documentation>
+              <xs:documentation>Authority which issues the kind of id used in the id field of this object.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="assignor" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Organisation that assigned the id to the item being identified. </xs:documentation>
+              <xs:documentation>Organisation that assigned the id to the item being identified.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -209,8 +209,7 @@
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="1" name="size" type="xs:int">
             <xs:annotation>
-              <xs:documentation>Original size in bytes of unencoded encapsu- lated data. I.e. encodings such as base64, hex- adecimal
-                etc do not change the value of this attribute. </xs:documentation>
+              <xs:documentation>Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64, hexadecimal, etc do not change the value of this attribute.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="encoding" type="xs:string">
@@ -246,12 +245,12 @@
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="0" name="DvParsable-dv" type="xs:string">
             <xs:annotation>
-              <xs:documentation>The string, which may validly be empty in some syntaxes </xs:documentation>
+              <xs:documentation>The string, which may validly be empty in some syntaxes.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="formalism" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Name of the formalism, e.g. “GLIF 1.0”, “proforma” etc. </xs:documentation>
+              <xs:documentation>Name of the formalism, e.g. “GLIF 1.0”, “proforma” etc.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -301,7 +300,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="uri" type="xs:anyURI">
             <xs:annotation>
               <xs:documentation>URI reference to electronic information stored outside the record as a file, database entry etc, if
-                supplied as a reference. </xs:documentation>
+                supplied as a reference.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="media-content" type="xs:base64Binary">
@@ -878,8 +877,7 @@
 
   <xs:complexType abstract="true" name="ExceptionalValueType">
     <xs:annotation>
-      <xs:documentation>Subclasses are used to indicate why a value is missing (Null) or is outside a measurable range.
-      </xs:documentation>
+      <xs:documentation>Subclasses are used to indicate why a value is missing (Null) or is outside a measurable range.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
