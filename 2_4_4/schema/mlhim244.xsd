@@ -1132,7 +1132,7 @@
 
   <xs:complexType abstract="true" name="ItemType">
     <xs:annotation>
-      <xs:documentation>The abstract parent of Cluster and Element representation classes. </xs:documentation>
+      <xs:documentation>The abstract parent of Cluster and DvAdapter representation classes. </xs:documentation>
     </xs:annotation>
   </xs:complexType>
   <xs:element abstract="true" name="Item" substitutionGroup="mlhim244:entry-data" type="mlhim244:ItemType"/>
@@ -1140,7 +1140,7 @@
   <xs:complexType name="ClusterType">
     <xs:annotation>
       <xs:documentation>The grouping variant of Item, which may contain further instances of Item, in an ordered list. This
-        provides the root Item for potentially very complex structures. </xs:documentation>
+        provides the root Item for arbitrarily complex structures. </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:ItemType">
@@ -1152,7 +1152,7 @@
           </xs:element>
           <xs:element maxOccurs="unbounded" minOccurs="1" ref="mlhim244:items">
             <xs:annotation>
-              <xs:documentation>List of Item types. </xs:documentation>
+              <xs:documentation>List of Item types.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
