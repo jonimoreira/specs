@@ -940,7 +940,7 @@
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
           <xs:documentation>Derived : An actual value may exist, but it must be derived from the provided information; usually an
-            expression is provided directly. </xs:documentation>
+            expression is provided directly.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Derived" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -955,7 +955,7 @@
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
           <xs:documentation>Unencoded : No attempt has been made to encode the information correctly but the raw source
-            information is represented, usually in free text </xs:documentation>
+            information is represented, usually in free text</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Unencoded" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -970,7 +970,7 @@
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
           <xs:documentation>Other : The actual value is not a member of the permitted data values in the variable. (e.g., when the
-            value of the variable is not by the coding system) </xs:documentation>
+            value of the variable is not by the coding system)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Other" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -984,7 +984,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Negative Infinity : Negative infinity of numbers </xs:documentation>
+          <xs:documentation>Negative Infinity : Negative infinity of numbers</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Negative Infinity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -999,7 +999,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Positive Infinity : Positive infinity of numbers </xs:documentation>
+          <xs:documentation>Positive Infinity : Positive infinity of numbers</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Positive Infinity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1013,7 +1013,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Unknown : A proper value is applicable, but not known </xs:documentation>
+          <xs:documentation>Unknown : A proper value is applicable, but not known</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Unknown" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1027,8 +1027,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Asked and Refused : Information was sought but refused to be provided (e.g., patient was asked but
-            refused to answer) </xs:documentation>
+          <xs:documentation>Asked and Refused : Information was sought but refused to be provided (e.g., patient was asked but refused to answer)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Asked and Refused" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1042,7 +1041,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Not Asked : This information has not been sought (e.g., patient was not asked) </xs:documentation>
+          <xs:documentation>Not Asked : This information has not been sought (e.g., patient was not asked)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Asked" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1058,7 +1057,7 @@
         <xs:annotation>
           <xs:documentation>Sufficient Quantity : The specific quantity is not known, but is known to non-zero and it is not
             specified because it makes up the bulk of the material; Add 10mg of ingredient X, 50mg of ingredient Y and sufficient
-            quantity of water to 100mL. </xs:documentation>
+            quantity of water to 100mL.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Sufficient Quantity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1072,7 +1071,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Trace : The content is greater or less than zero but too small to be quantified. </xs:documentation>
+          <xs:documentation>Trace : The content is greater or less than zero but too small to be quantified.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Trace" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1086,8 +1085,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Asked but Unknown : Information was sought but not found (e.g., patient was asked but did not know)
-          </xs:documentation>
+          <xs:documentation>Asked but Unknown : Information was sought but not found (e.g., patient was asked but did not know)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Asked but Unknown" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1101,8 +1099,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Not Available : Information is unavailable at this time but is expected that it will be available
-            later. </xs:documentation>
+          <xs:documentation></xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Available" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1116,8 +1113,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Not Applicable : No proper value is applicable in this context e.g.,the number of cigarrettes smoked
-            per day by a non-smoker subject. </xs:documentation>
+          <xs:documentation>Not Applicable : No proper value is applicable in this context e.g.,the number of cigarettes smoked per day by a non-smoker subject.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Applicable" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1165,7 +1161,7 @@
   <!-- Replacement for ElementType -->
   <xs:complexType name="DvAdapterType">
     <xs:annotation>
-      <xs:documentation>The leaf variant of Item, to which any DvAny subtype instance is attached for use in a Cluster.</xs:documentation>
+      <xs:documentation>The leaf variant of Item, to which any DvAnyType subtype instance is attached for use in a Cluster.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:ItemType">
@@ -1190,18 +1186,17 @@
         spatial structure, timing information, and contextual information, as well as the subject and generator of the
         information; required for complete semantic interoperability. Each subtype has identical attribute information. The
         subtyping is used to allow persistence to separate the types of Entries; primarily import in healthcare for the
-        de-identification of clinical information. </xs:documentation>
+        de-identification of clinical information.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:entry-links">
         <xs:annotation>
-          <xs:documentation>Optional link(s) to other Locatable structures or external entities.</xs:documentation>
+          <xs:documentation>Optional link(s) to other locatable structures or external entities.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:entry-audit">
         <xs:annotation>
-          <xs:documentation>Audit trail from the system of original commit of information forming the content of this node, or
-                from a conversion gateway which has synthesised this node. </xs:documentation>
+          <xs:documentation>Audit trail from the system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="language" type="xs:language">
@@ -1222,17 +1217,17 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:entry-provider">
         <xs:annotation>
-          <xs:documentation>Optional identification of the source of the information in this Entry, which might be: • the patient• a patient agent, e.g. parent, guardian • the clinician • a device or software </xs:documentation>
+          <xs:documentation>Optional identification of the source of the information in this Entry, which might be: • the patient• a patient agent, e.g. parent, guardian • the clinician • a device or software</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:other-participations">
         <xs:annotation>
-          <xs:documentation>List of other participations at Entry level. </xs:documentation>
+          <xs:documentation>List of other participations at Entry level.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:protocol-id">
         <xs:annotation>
-          <xs:documentation>Optional external identifier of protocol used to create this Entry. This could be a clinical guideline, an operations protocol,etc. </xs:documentation>
+          <xs:documentation>Optional external identifier of protocol used to create this Entry. This could be a clinical guideline, an operations protocol,etc.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string">
@@ -1252,7 +1247,7 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:entry-data">
         <xs:annotation>
-          <xs:documentation>The data structure of the Entry. </xs:documentation>
+          <xs:documentation>The data structure of the Entry.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -1270,7 +1265,7 @@
 
   <xs:complexType name="CareEntryType">
     <xs:annotation>
-      <xs:documentation>Entry subtype for all entries related to care of an a subject of record. </xs:documentation>
+      <xs:documentation>Entry subtype for all entries related to care of an a subject of record.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:EntryType"/>
@@ -1281,9 +1276,9 @@
   <xs:complexType name="AdminEntryType">
     <xs:annotation>
       <xs:documentation>Entry subtype for administrative information, i.e. information about setting up the clinical process,
-        but not itself clinically relevant. Archetypes will define con- tained information. Used for admistrative details of
+        but not itself clinically relevant. Archetypes will define contained information. Used for administrative details of
         admission, episode, ward location, discharge, appointment (if not stored in a practice management or appointments
-        system). Not used for any clinically significant information. </xs:documentation>
+        system). Not used for any clinically significant information.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:EntryType"/>
@@ -1295,7 +1290,7 @@
     <xs:annotation>
       <xs:documentation>Entry subtype for demographic information, i.e. name structures, roles, locations, etc. Modelled as a
         separate class from AdminEntry in order to facilitate the separation of clinical and non-clical information to support
-        de-identification of clinical and administrative data. </xs:documentation>
+        de-identification of clinical and administrative data.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:EntryType"/>
@@ -1307,7 +1302,7 @@
   <!--CCD / constraint model -->
   <xs:complexType name="CCDType">
     <xs:annotation>
-      <xs:documentation>This is the root node of a Concept Constraint Definition. </xs:documentation>
+      <xs:documentation>This is the root node of a Concept Constraint Definition.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:definition">
