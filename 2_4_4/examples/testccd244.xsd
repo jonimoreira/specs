@@ -917,7 +917,7 @@
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string' default='111-111-1111'/>
           <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
           </xs:sequence>
-          <xs:assert test="matches(mlhim244:DvString-dv, '[0-9]{3}-[0-9]{3}-[0-9]{4}')"/>
+          <xs:assert test="matches(DvString-dv, '[0-9]{3}-[0-9]{3}-[0-9]{4}')"/>
         </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
@@ -958,7 +958,7 @@ Examples:
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
           <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
           </xs:sequence>
-          <xs:assert test="matches(mlhim244:DvString-dv, '^\d{5}([\-]?\d{4})?$')"/>
+          <xs:assert test="matches(DvString-dv, '^\d{5}([\-]?\d{4})?$')"/>
         </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
@@ -1015,7 +1015,7 @@ Examples:
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
           <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
           </xs:sequence>
-          <xs:assert test="matches(mlhim244:DvString-dv, '^-?([1-8]?[0-9]\.{1}\d{1,6}$|90\.{1}0{1,6}$)')"/>
+          <xs:assert test="matches(DvString-dv, '^-?([1-8]?[0-9]\.{1}\d{1,6}$|90\.{1}0{1,6}$)')"/>
         </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
@@ -1050,7 +1050,7 @@ Examples:
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
           <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
           </xs:sequence>
-          <xs:assert test="matches(mlhim244:DvString-dv, '^-?((([1]?[0-7][0-9]|[1-9]?[0-9])\.{1}\d{1,6}$)|[1]?[1-8][0]\.{1}0{1,6}$)')"/>
+          <xs:assert test="matches(DvString-dv, '^-?((([1]?[0-7][0-9]|[1-9]?[0-9])\.{1}\d{1,6}$)|[1]?[1-8][0]\.{1}0{1,6}$)')"/>
         </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
@@ -1181,7 +1181,7 @@ Examples:
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
           <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
           </xs:sequence>
-          <xs:assert test="matches(mlhim244:DvString-dv, '^-?([1-8]?[0-9]\.{1}\d{1,6}$|90\.{1}0{1,6}$)')"/>
+          <xs:assert test="matches(DvString-dv, '^-?([1-8]?[0-9]\.{1}\d{1,6}$|90\.{1}0{1,6}$)')"/>
         </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
@@ -1216,7 +1216,7 @@ Examples:
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
           <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
           </xs:sequence>
-          <xs:assert test="matches(mlhim244:DvString-dv, '^-?((([1]?[0-7][0-9]|[1-9]?[0-9])\.{1}\d{1,6}$)|[1]?[1-8][0]\.{1}0{1,6}$)')"/>
+          <xs:assert test="matches(DvString-dv, '^-?((([1]?[0-7][0-9]|[1-9]?[0-9])\.{1}\d{1,6}$)|[1]?[1-8][0]\.{1}0{1,6}$)')"/>
         </xs:restriction>
       </xs:complexContent>
     </xs:complexType>

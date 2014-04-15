@@ -456,7 +456,7 @@
             </xs:annotation>
           </xs:element>
         </xs:sequence>
-        <xs:assert test="(if(mlhim244:magnitude mod 1 = 0) then true() else false())"/>
+        <xs:assert test="(if(magnitude mod 1 = 0) then true() else false())"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -600,7 +600,7 @@
                 Defines the interval. The interval values are bound or unbounded and must be defined in a CCD using a combination of min and max inclusive and exclusive restrictions. 
               </xs:documentation>
             </xs:annotation>
-          </xs:element>
+          </xs:element>          
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -766,13 +766,12 @@
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="party-name" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Optional human-readable name (in String form). </xs:documentation>
+          <xs:documentation>Optional human-readable name (in String form).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:external-ref">
         <xs:annotation>
-          <xs:documentation>Optional reference to more detailed demographic or identification information for this party, in an
-                external system. </xs:documentation>
+          <xs:documentation>Optional reference to more detailed demographic or identification information for this party, in an external system.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:details">
@@ -1166,7 +1165,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim244:ItemType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:DvAdapter-dv">
+          <xs:element maxOccurs="unbounded" minOccurs="1" ref="mlhim244:DvAdapter-dv">
             <xs:annotation>
               <xs:documentation>Data value type of this leaf.</xs:documentation>
             </xs:annotation>
