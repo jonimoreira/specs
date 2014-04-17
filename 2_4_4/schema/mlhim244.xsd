@@ -1165,7 +1165,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim244:ItemType">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:DvAdapter-dv">
+          <xs:element maxOccurs="unbounded" minOccurs="1" ref="mlhim244:DvAdapter-dv">
             <xs:annotation>
               <xs:documentation>Data value type of this leaf.</xs:documentation>
             </xs:annotation>
