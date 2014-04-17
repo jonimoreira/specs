@@ -1209,7 +1209,7 @@
           <xs:documentation>Name of character set encoding in which text values in this Entry are encoded. Default should be utf-8.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:entry-subject">
+      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:entry-subject">
         <xs:annotation>
           <xs:documentation>Id of human subject of this Entry, e.g.: • subject of record (patient, etc.) • organ donor • foetus • a family member • another clinically relevant person.</xs:documentation>
         </xs:annotation>
