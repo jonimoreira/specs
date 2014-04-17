@@ -1145,7 +1145,7 @@
               <xs:documentation>Descriptive name of this branch. </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="1" ref="mlhim244:items">
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:items">
             <xs:annotation>
               <xs:documentation>List of Item types.</xs:documentation>
             </xs:annotation>
