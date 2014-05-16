@@ -589,15 +589,39 @@
   <xs:complexType name="DvIntervalType">
     <xs:annotation>
       <xs:documentation>Generic class defining an interval (i.e. range) of a comparable type. An interval is a contiguous
-        subrange of a comparable base type. Used to define intervals of dates, times, quantities, etc. Whose datatypes are the same and are ordered.</xs:documentation>
+        subrange of a comparable base type. Used to define intervals of dates, times, quantities, etc. Whose datatypes are the same and are ordered.
+        Implementations are tasked with coercing the string values in 'upper' and 'lower' into the type defined by interval-type. 
+      </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="interval" type="mlhim244:interval-type">
+          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:interval-type"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="lower" type="xs:string">
             <xs:annotation>
               <xs:documentation>
-                Defines the interval. The interval values are bound or unbounded and must be defined in a CCD using a combination of min and max inclusive and exclusive restrictions. 
+                Defines the lower value of the interval. 
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>          
+          <xs:element maxOccurs="1" minOccurs="0" name="upper" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                Defines the upper value of the interval. 
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>          
+          <xs:element maxOccurs="1" minOccurs="1" name="lower-included" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>
+                Is the lower value of the interval inclusive?. 
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>          
+          <xs:element maxOccurs="1" minOccurs="1" name="upper-included" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>
+                Is the upper value of the interval inclusive?. 
               </xs:documentation>
             </xs:annotation>
           </xs:element>          
@@ -607,7 +631,26 @@
   </xs:complexType>
   <xs:element name="DvInterval" substitutionGroup="mlhim244:DvAny" type="mlhim244:DvIntervalType"/>
 
-  <xs:complexType name="interval-type">
+  <xs:element name="interval-type">
+    <xs:annotation>
+      <xs:documentation>
+        Defines the interval type.   
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="int"/>
+        <xs:enumeration value="decimal"/>
+        <xs:enumeration value="float"/>
+        <xs:enumeration value="date"/>
+        <xs:enumeration value="time"/>                
+        <xs:enumeration value="datetime"/>
+        <xs:enumeration value="duration"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>          
+  
+<!--  <xs:complexType name="interval-type">
     <xs:annotation>
       <xs:documentation>
         Choose the typed element of the interval.
@@ -625,7 +668,7 @@
       <xs:element name="year-interval" type="xs:gYear"/>
       <xs:element name="duration-interval" type="xs:duration"/>
     </xs:choice>
-  </xs:complexType>
+  </xs:complexType>-->
   
   <xs:complexType name="ReferenceRangeType">
     <xs:annotation>
@@ -1165,7 +1208,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim244:ItemType">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="1" ref="mlhim244:DvAdapter-dv">
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:DvAdapter-dv">
             <xs:annotation>
               <xs:documentation>Data value type of this leaf.</xs:documentation>
             </xs:annotation>
