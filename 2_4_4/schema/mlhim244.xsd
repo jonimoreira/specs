@@ -33,6 +33,7 @@
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:ExceptionalValue"/>
+      
       <xs:element maxOccurs="1" minOccurs="0" name="valid-time-begin" type="xs:dateTime">
         <xs:annotation>
           <xs:documentation>If present this must be a valid datetime including timezone. It is used to indicate the beginning time that information is considered valid or when the information was collected.</xs:documentation>
@@ -649,27 +650,7 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:element>          
-  
-<!--  <xs:complexType name="interval-type">
-    <xs:annotation>
-      <xs:documentation>
-        Choose the typed element of the interval.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:choice minOccurs="1" maxOccurs="1">
-      <xs:element name="int-interval" type="xs:int"/>
-      <xs:element name="decimal-interval" type="xs:decimal"/>
-      <xs:element name="float-interval" type="xs:float"/>
-      <xs:element name="date-interval" type="xs:date"/>
-      <xs:element name="datetime-interval" type="xs:dateTime"/>
-      <xs:element name="time-interval" type="xs:time"/>
-      <xs:element name="day-interval" type="xs:gDay"/>
-      <xs:element name="month-interval" type="xs:gMonth"/>
-      <xs:element name="year-interval" type="xs:gYear"/>
-      <xs:element name="duration-interval" type="xs:duration"/>
-    </xs:choice>
-  </xs:complexType>-->
-  
+    
   <xs:complexType name="ReferenceRangeType">
     <xs:annotation>
       <xs:documentation>
@@ -917,7 +898,7 @@
 
 
 
-  <xs:complexType abstract="true" name="ExceptionalValueType">
+  <xs:complexType  abstract="true" name="ExceptionalValueType">
     <xs:annotation>
       <xs:documentation>Subclasses are used to indicate why a value is missing (Null) or is outside a measurable range.</xs:documentation>
     </xs:annotation>
