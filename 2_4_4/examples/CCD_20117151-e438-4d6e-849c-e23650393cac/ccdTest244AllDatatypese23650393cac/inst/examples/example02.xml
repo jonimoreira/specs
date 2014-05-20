@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ccd:ccd-20117151-e438-4d6e-849c-e23650393cac xmlns:mlhim244='http://www.mlhim.org/xmlns/mlhim2/2_4_4' 
+xmlns:ccd='http://www.mlhim.org/ccd'
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+xsi:schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_4 http://www.ccdgen.com/ccdlib/ccd-20117151-e438-4d6e-849c-e23650393cac.xsd'>
+  <ccd:el-090c6a4b-271d-4452-8bcc-59823268dc16> <!-- Entry -->
+  <!-- entry-links -->
+  <!-- entry-audit -->
+  <language>en-US</language>
+  <encoding>utf-8</encoding>
+  <!-- entry-subject -->
+      <ccd:el-e5563d40-2372-4fbd-9a27-c8f493f22c53> <!-- Party -->
+      <party-name>A. Sample Name</party-name>
+      <!-- PI external-ref -->
+      <!-- PI details -->
+    </ccd:el-e5563d40-2372-4fbd-9a27-c8f493f22c53>
+  <!-- entry-provider -->
+      <ccd:el-19ac8105-fa08-47ba-8dd0-9c79ca490bda> <!-- Party -->
+      <party-name>A. Sample Name</party-name>
+      <!-- PI external-ref -->
+      <!-- PI details -->
+    </ccd:el-19ac8105-fa08-47ba-8dd0-9c79ca490bda>
+  <!-- other-participations -->
+  <!-- protocol-id -->
+  <!-- workflow-id -->
+  <!-- attestation -->
+  <!-- entry-data -->
+      <ccd:el-24aa9046-676a-47df-9c87-f9f8e3228fe7> <!-- Cluster -->
+      <cluster-subject>Test 2.4.4 : entry-data</cluster-subject>
+      <ccd:el-540f481d-6de4-4f32-abf4-96d0e5e796c1> <!-- Cluster -->
+        <cluster-subject>Test 2.4.4 - sub-cluster</cluster-subject>
+        <ccd:el-72a22a0f-c83a-4b30-82a1-526bd8917a5e> <!-- DvAdapter -->
+          <ccd:el-8c177dbd-c25e-4908-bffa-cdcb5c0e38e6> <!-- DvString -->
+            <data-name>Blood glucose before injection of imaging agent</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1997-02-21T23:08:41Z</valid-time-begin>
+            <valid-time-end>2014-08-30T08:49:41Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-8c177dbd-c25e-4908-bffa-cdcb5c0e38e6>
+        </ccd:el-72a22a0f-c83a-4b30-82a1-526bd8917a5e>
+      </ccd:el-540f481d-6de4-4f32-abf4-96d0e5e796c1>
+      <ccd:el-d4a08e19-9404-45ac-a195-09120964468f> <!-- DvAdapter -->
+        <ccd:el-86c56818-26f0-4238-9292-1f32976755e5> <!-- DvBoolean -->
+          <data-name>Fever</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2020-08-22T02:56:10Z</valid-time-begin>
+          <valid-time-end>1997-10-26T10:52:51Z</valid-time-end>
+          <!-- <valid-trues/> -->
+          <!-- <valid-falses/> -->
+          <DvBoolean-dv>YES</DvBoolean-dv>
+        </ccd:el-86c56818-26f0-4238-9292-1f32976755e5>
+      </ccd:el-d4a08e19-9404-45ac-a195-09120964468f>
+      <ccd:el-53220c76-50de-44fb-9068-25224b96114d> <!-- DvAdapter -->
+        <ccd:el-da990c3e-c752-4787-9b3a-d6f4f4051f95> <!-- DvURI -->
+          <data-name>Contains</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2018-09-07T14:07:07Z</valid-time-begin>
+          <valid-time-end>1983-11-29T12:32:39Z</valid-time-end>
+          <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+          <relation>contains</relation>
+        </ccd:el-da990c3e-c752-4787-9b3a-d6f4f4051f95>
+      </ccd:el-53220c76-50de-44fb-9068-25224b96114d>
+      <ccd:el-56a285a6-b4ac-4323-83a3-f13cb51f1703> <!-- DvAdapter -->
+        <ccd:el-02479f10-f59e-41a9-ab24-62882b83f168> <!-- DvString -->
+          <data-name>Malaria blood smear test</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1995-05-23T01:51:16Z</valid-time-begin>
+          <valid-time-end>1986-07-21T12:25:49Z</valid-time-end>
+          <DvString-dv>Inconclusive</DvString-dv>
+          <language>en-US</language>
+        </ccd:el-02479f10-f59e-41a9-ab24-62882b83f168>
+      </ccd:el-56a285a6-b4ac-4323-83a3-f13cb51f1703>
+      <ccd:el-8e8a8405-2c8d-4923-b7c4-8e3980c24d27> <!-- DvAdapter -->
+        <ccd:el-de04cb2b-0908-4862-819b-cb1645bf47c3> <!-- DvCodedString -->
+          <data-name>Test CodedString for 2.4.4</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1996-01-21T16:53:51Z</valid-time-begin>
+          <valid-time-end>2012-03-15T12:45:10Z</valid-time-end>
+          <DvString-dv>Ones</DvString-dv>
+          <language>en-US</language>
+          <terminology-abbrev>test</terminology-abbrev>
+          <terminology-name>Testing</terminology-name>
+          <terminology-version>0.000</terminology-version>
+          <terminology-code>1111</terminology-code>
+        </ccd:el-de04cb2b-0908-4862-819b-cb1645bf47c3>
+      </ccd:el-8e8a8405-2c8d-4923-b7c4-8e3980c24d27>
+      <ccd:el-340f8c4e-784d-400c-87ef-1027e9443c61> <!-- DvAdapter -->
+        <ccd:el-329056e5-1c56-48a2-822f-577f25edf1b0> <!-- DvIdentifier -->
+          <data-name>AdverseReaction.identifier</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2015-07-07T07:35:00Z</valid-time-begin>
+          <valid-time-end>1999-11-08T19:57:50Z</valid-time-end>
+          <DvString-dv>Default ID</DvString-dv>
+          <language>en-US</language>
+          <id-name>Adverse Reaction Identifier</id-name>
+          <issuer>FHIR</issuer>
+          <assignor>FHIR</assignor>
+        </ccd:el-329056e5-1c56-48a2-822f-577f25edf1b0>
+      </ccd:el-340f8c4e-784d-400c-87ef-1027e9443c61>
+      <ccd:el-45e75fc9-9351-4191-ae5c-345bc672a769> <!-- DvAdapter -->
+        <ccd:el-1671670b-e1db-4d71-a7dd-6bb09c025902> <!-- DvParsable -->
+          <data-name>Test DvParsable for 2.4.4</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2001-01-24T23:32:51Z</valid-time-begin>
+          <valid-time-end>1972-10-25T20:08:01Z</valid-time-end>
+          <size>0</size>
+          <encoding>utf-8</encoding>
+          <language>en-US</language>
+          <DvParsable-dv>Some parsable information.</DvParsable-dv>
+          <formalism>Unknown</formalism>
+        </ccd:el-1671670b-e1db-4d71-a7dd-6bb09c025902>
+      </ccd:el-45e75fc9-9351-4191-ae5c-345bc672a769>
+      <ccd:el-579fab01-0516-4bcb-877b-3dbc9dc398f5> <!-- DvAdapter -->
+        <ccd:el-67c9a5a1-a869-4b9d-a677-7a86b38788a1> <!-- DvMedia -->
+          <data-name>Test DvMedia for 2.4.4</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2009-09-14T09:44:21Z</valid-time-begin>
+          <valid-time-end>1997-01-30T20:16:20Z</valid-time-end>
+          <size>0</size>
+          <encoding>utf-8</encoding>
+          <language>en-US</language>
+          <mime-type>png</mime-type>
+          <compression-type>gz</compression-type>
+          <hash-result>dshfsoud6y3rwpef838rhf983trgf9e93w8rytgf</hash-result>
+          <hash-function>MD5</hash-function>
+          <alt-txt>Fake Media entry data.</alt-txt>
+          <uri>http://www.mlhim.org/fake_media</uri>
+          <!--<media-content></media-content>-->
+        </ccd:el-67c9a5a1-a869-4b9d-a677-7a86b38788a1>
+      </ccd:el-579fab01-0516-4bcb-877b-3dbc9dc398f5>
+      <ccd:el-e231bd83-0e84-4bf7-967a-d2bbae77bb49> <!-- DvAdapter -->
+        <ccd:el-fbee469e-174f-42a0-9e67-6d6db531352c> <!-- DvOrdinal -->
+          <data-name>Karnofsky Performance Status Score</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1988-04-27T03:03:10Z</valid-time-begin>
+          <valid-time-end>2003-08-18T02:51:11Z</valid-time-end>
+          <normal-status>Normal, no complaints, no evidence of disease</normal-status>
+          <DvOrdinal-dv>80</DvOrdinal-dv>
+          <symbol>Normal activity with effort; some signs or symptoms of disease</symbol>
+        </ccd:el-fbee469e-174f-42a0-9e67-6d6db531352c>
+      </ccd:el-e231bd83-0e84-4bf7-967a-d2bbae77bb49>
+      <ccd:el-b0d3bbaf-b236-4542-a588-e833a969c973> <!-- DvAdapter -->
+        <ccd:el-d4ff557f-4064-47c6-b4f0-de7e2cd5bfc7> <!-- DvCount -->
+            <data-name>Test DvCount for 2.4.4</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1974-10-11T06:02:35Z</valid-time-begin>
+            <valid-time-end>1990-12-12T22:28:58Z</valid-time-end>
+          <normal-status>my normal</normal-status>
+            <magnitude>5</magnitude>
+            <mlhim244:magnitude-status>=</mlhim244:magnitude-status>
+            <error>0</error>
+            <accuracy>0</accuracy>
+          <ccd:el-d6ce7add-82bb-4051-a503-ea61ed3589aa> <!-- DvString -->
+            <data-name>Test Simple Units for 2.4.4</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2006-01-08T14:16:26Z</valid-time-begin>
+            <valid-time-end>2012-04-30T02:36:01Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-d6ce7add-82bb-4051-a503-ea61ed3589aa>
+        </ccd:el-d4ff557f-4064-47c6-b4f0-de7e2cd5bfc7>
+      </ccd:el-b0d3bbaf-b236-4542-a588-e833a969c973>
+      <ccd:el-2af1bed1-41aa-4613-ab52-64d5876e52ac> <!-- DvAdapter -->
+        <ccd:el-0fd33260-ea64-4d18-9c92-f28f83474a98> <!-- DvQuantity -->
+          <data-name>Test DvQuantity for 2.4.4</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1991-09-30T13:26:45Z</valid-time-begin>
+          <valid-time-end>1983-12-21T17:20:58Z</valid-time-end>
+        <ccd:el-15cbc674-659a-4f6d-9362-fb3eebb8842c> <!-- ReferenceRange -->
+            <data-name>Test ReferenceRange</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2007-05-15T22:40:45Z</valid-time-begin>
+            <valid-time-end>2014-12-26T15:26:09Z</valid-time-end>
+            <referencerange-definition>ReferenceRange for testing only.</referencerange-definition>
+            <ccd:el-8cd8265e-f6b0-4c7e-9cf7-3fcf84782160> <!-- DvInterval -->
+              <data-name>Test Data Range 2.4.4</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1993-10-30T09:00:07Z</valid-time-begin>
+              <valid-time-end>2013-08-13T22:47:28Z</valid-time-end>
+              <mlhim244:interval-type>int</mlhim244:interval-type>
+              <lower>0</lower>
+              <upper>10</upper>
+              <lower-included>true</lower-included>
+              <upper-included>true</upper-included>
+            </ccd:el-8cd8265e-f6b0-4c7e-9cf7-3fcf84782160>
+            <is-normal>false</is-normal>
+          </ccd:el-15cbc674-659a-4f6d-9362-fb3eebb8842c>
+            <magnitude>974050663462969678958240475122561944911872</magnitude>
+          <mlhim244:magnitude-status>=</mlhim244:magnitude-status>
+          <error>0</error>
+          <accuracy>0</accuracy>
+          <ccd:el-d6ce7add-82bb-4051-a503-ea61ed3589aa> <!-- DvString -->
+            <data-name>Test Simple Units for 2.4.4</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1971-03-10T03:25:45Z</valid-time-begin>
+            <valid-time-end>1976-04-12T09:01:31Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-d6ce7add-82bb-4051-a503-ea61ed3589aa>
+        </ccd:el-0fd33260-ea64-4d18-9c92-f28f83474a98>
+      </ccd:el-2af1bed1-41aa-4613-ab52-64d5876e52ac>
+      <ccd:el-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f> <!-- DvAdapter -->
+        <ccd:el-230a82ea-ee77-4a96-b33e-103ca49e20f5> <!-- DvRatio -->
+          <data-name>Test Ratio</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2000-11-29T00:58:20Z</valid-time-begin>
+          <valid-time-end>2000-11-03T10:40:15Z</valid-time-end>
+            <magnitude>-19.84396194127687349587811820</magnitude>
+          <mlhim244:magnitude-status>=</mlhim244:magnitude-status>
+          <error>0</error>
+          <accuracy>0</accuracy>
+          <mlhim244:ratio-type>ratio</mlhim244:ratio-type>
+          <numerator>661478.14111185236833989620208740234375</numerator>
+          <denominator>-33333.975496895611286163330078125</denominator>
+          <!-- Numerator Units -->
+          <ccd:el-d6ce7add-82bb-4051-a503-ea61ed3589aa> <!-- DvString -->
+            <data-name>Test Simple Units for 2.4.4</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1977-04-10T06:38:20Z</valid-time-begin>
+            <valid-time-end>1993-01-07T00:12:27Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-d6ce7add-82bb-4051-a503-ea61ed3589aa>
+          <!-- Denominator Units -->
+          <ccd:el-d6ce7add-82bb-4051-a503-ea61ed3589aa> <!-- DvString -->
+            <data-name>Test Simple Units for 2.4.4</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2016-10-09T04:22:47Z</valid-time-begin>
+            <valid-time-end>1972-11-28T05:52:15Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-d6ce7add-82bb-4051-a503-ea61ed3589aa>
+          <!-- Ratio Units -->
+        <!-- None Defined -->
+        </ccd:el-230a82ea-ee77-4a96-b33e-103ca49e20f5>
+      </ccd:el-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f>
+      <ccd:el-3c601bd8-79d4-48c3-8860-404c4502a8d5> <!-- DvAdapter -->
+        <ccd:el-29d84f3a-a351-4328-9252-5d451997cf80> <!-- DvTemporal -->
+          <data-name>Fever: date of onset</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2007-06-26T17:58:10Z</valid-time-begin>
+          <valid-time-end>2015-12-20T06:35:18Z</valid-time-end>
+          <dvtemporal-date>2005-09-20Z</dvtemporal-date>
+          <dvtemporal-month-day>--09-20</dvtemporal-month-day>
+        </ccd:el-29d84f3a-a351-4328-9252-5d451997cf80>
+      </ccd:el-3c601bd8-79d4-48c3-8860-404c4502a8d5>
+    </ccd:el-24aa9046-676a-47df-9c87-f9f8e3228fe7>
+  </ccd:el-090c6a4b-271d-4452-8bcc-59823268dc16>
+</ccd:ccd-20117151-e438-4d6e-849c-e23650393cac>
