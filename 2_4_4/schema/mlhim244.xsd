@@ -54,9 +54,9 @@
     <xs:annotation>
       <xs:documentation>Items which represent boolean decisions, such as true/false or yes/no answers. Use for such data, it
         is important to devise the meanings (usually questions in subjective data) carefully, so that the only allowed results
-        are in fact true or false. Potential Misuse: The DvBoolean class should not be used as a replacement for naively
+        are in fact true or false. Potential Misuse: The DvBooleanType should not be used as a replacement for naively
         modelled enumerated types such as male/female etc. Such values should be coded, and in any case the enumeration often
-        has more than two values. Though the DvBoolean-dv attribute is a String type this is to easily allow responses that the
+        has more than two values. Though the DvBoolean-dv element is a String type this is to easily allow responses that the
         user is more familiar with using in the context such as 'Yes', 'No' or 'True', 'False'. A conversion method is required
         to convert the valid-trues to True and the valid-falses to False. </xs:documentation>
     </xs:annotation>
@@ -88,7 +88,7 @@
 
   <xs:complexType name="DvURIType">
     <xs:annotation>
-      <xs:documentation>Used to specify a Universal Resource Identifier. Set the pattern to accommodate your needs.</xs:documentation>
+      <xs:documentation>Used to specify a Universal Resource Identifier. Set the pattern to accommodate your needs in a CCD.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
@@ -111,7 +111,7 @@
 
   <xs:complexType name="DvStringType">
     <xs:annotation>
-      <xs:documentation>DvString: The string data type can contain characters, line feeds, carriage returns, and tab characters.</xs:documentation>
+      <xs:documentation>The string data type can contain characters, line feeds, carriage returns, and tab characters.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
@@ -136,9 +136,9 @@
 
   <xs:complexType name="DvCodedStringType">
     <xs:annotation>
-      <xs:documentation>A text item whose DvString-dv attribute must be the long name or description from a controlled
+      <xs:documentation>A text item whose DvString-dv element must be the long name or description from a controlled
         terminology. The key (i.e. the 'code') of which is the terminology-code attribute. In some cases, DvString-dv and
-        terminology-code may have the same content. </xs:documentation>
+        terminology-code may have the same content.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvStringType">
@@ -203,7 +203,7 @@
 
   <xs:complexType abstract="true" name="DvEncapsulatedType">
     <xs:annotation>
-      <xs:documentation>Abstract class defining the common meta-data of all types of encapsulated data. </xs:documentation>
+      <xs:documentation>Abstract class defining the common meta-data of all types of encapsulated data.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
