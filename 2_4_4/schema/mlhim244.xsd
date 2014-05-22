@@ -65,17 +65,17 @@
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="0" name="valid-trues" type="xs:string">
             <xs:annotation>
-              <xs:documentation>A string that represents a boolean True in the implementation. These are generally constrained by a set of enumerations in the CCD.</xs:documentation>
+              <xs:documentation>A string that represents a boolean True in the implementation. These are generally constrained by a set of enumerations in the PcT.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="valid-falses" type="xs:string">
             <xs:annotation>
-              <xs:documentation>A string that represents a boolean False in the implementation. These are generally constrained by a set of enumerations in the CCD.</xs:documentation>
+              <xs:documentation>A string that represents a boolean False in the implementation. These are generally constrained by a set of enumerations in the PcT.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="DvBoolean-dv" type="xs:string">
             <xs:annotation>
-              <xs:documentation>A truly boolean value in the implementation language, derived by selection in the implementation of
+              <xs:documentation>To be converted to a truly boolean value in the implementation language, derived by selection in the implementation of
                 one of the valid-trues or valid-falses. DvBoolean-dv may be a Void or Null value; in which case; ev cannot be empty.
               </xs:documentation>
             </xs:annotation>
@@ -118,14 +118,14 @@
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="0" name="DvString-dv" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Displayable rendition of the item.</xs:documentation>
+              <xs:documentation>The string value of the item.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language">
             <xs:annotation>
               <xs:documentation>Optional indicator of the localised language in which this data-type is written. The ·value space· of
                 language is the set of all strings that are valid language identifiers as defined [RFC 3066] . Only required when the
-                language used here is different from the enclosing Entry. </xs:documentation>
+                language used here is different from the enclosing Entry.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -225,7 +225,7 @@
               <xs:documentation>Optional indicator of the localised language in which the value is written. Coded IAW IETF RFC 5646.
                 http://tools.ietf.org/html/rfc5646 language tag information should be used from the IANA registry
                 http://www.iana.org/assignments/language-subtag-registry Only used when the text object is in a different language from
-                the enclosing CCD. </xs:documentation>
+                the enclosing CCD.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -251,7 +251,7 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="formalism" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Name of the formalism, e.g. “GLIF 1.0”, “proforma” etc.</xs:documentation>
+              <xs:documentation>Name of the formalism, e.g. 'GLIF 1.0', 'ADL 1.4', etc.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -263,7 +263,7 @@
   <xs:complexType name="DvMediaType">
     <xs:annotation>
       <xs:documentation>A specialisation of DvEncapsulated for audiovisual and bio-signal types. Includes further metadata
-        relating to media types which are not applicable to other subtypes of DvEncapsulated.</xs:documentation>
+        relating to media types which are not applicable to other subtypes of DvEncapsulatedType.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvEncapsulatedType">
@@ -271,13 +271,13 @@
           <xs:element maxOccurs="1" minOccurs="0" name="mime-type" type="xs:string">
             <xs:annotation>
               <xs:documentation>MIME type of the original media-content w/o any compression. See IANA registered types:
-                http://www.iana.org/assignments/media-types/index.html </xs:documentation>
+                http://www.iana.org/assignments/media-types/index.html</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="compression-type" type="xs:string">
             <xs:annotation>
               <xs:documentation>Compression/archiving mime-type. Void means no compression/archiving. For a list of common mime-types
-                for compression/archiving see: http://en.wikipedia.org/wiki/List_of_archive_formats </xs:documentation>
+                for compression/archiving see: http://en.wikipedia.org/wiki/List_of_archive_formats.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="hash-result" type="xs:string">
@@ -306,7 +306,7 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="media-content" type="xs:base64Binary">
             <xs:annotation>
-              <xs:documentation>The content; if stored locally. </xs:documentation>
+              <xs:documentation>The content; if stored locally.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -448,6 +448,7 @@
         Countable quantities. Used for countable types such as pregnancies and steps (taken by a physiotherapy
         patient), number of cigarettes smoked in a day, etc. Misuse:Not used for amounts of physical entities (which all have
         standardized units). Note that PcTs derived from DvCountType should make magnitude, error and accuracy attributes minOccurs = '1'.
+        The magnitude element is restricted to integers via an xs:assert.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -481,7 +482,7 @@
           <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:DvQuantity-units">
             <xs:annotation>
               <xs:documentation>Stringified units, expressed in unit syntax, e.g. "kg/m2", “mm[Hg]", "ms-1", "km/h". A DvCodedStringType should be used when possible.
-                 UOM codes can be found: http://www.obofoundry.org Also available in other terminologies such as SNOMEDCT. </xs:documentation>
+                 UOM codes can be found: http://www.obofoundry.org Also available in other terminologies such as SNOMEDCT.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -507,7 +508,7 @@
           <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:ratio-type">
             <xs:annotation>
               <xs:documentation>
-                Indicates semantic type of ratio  must be set as fixed to one of the below strings in CCDs.
+                Indicates semantic type of ratio  must be set as fixed to one of the below strings in PcTs.
                 ratio = a relationship between two numbers.
                 
                 proportion = a relationship between two numbers where there is a bi-univocal relationship between the
@@ -722,7 +723,7 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="timestamp" type="xs:dateTime">
         <xs:annotation>
-          <xs:documentation>DvDateTime timestamp of handling the item. For an originating system, this will be time of creation,
+          <xs:documentation>Timestamp of handling the item. For an originating system, this will be time of creation,
             for an intermediate feeder system, this will be a time of accession or other time of handling, where available.
           </xs:documentation>
         </xs:annotation>
@@ -766,14 +767,12 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:feeder-system-audit">
         <xs:annotation>
-          <xs:documentation>Any audit information for the information item from the feeder system, if different from the
-            originating system. </xs:documentation>
+          <xs:documentation>Any audit information for the information item from the feeder system, if different from the originating system. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:feeder-system-ids">
         <xs:annotation>
-          <xs:documentation>Identifiers used for the item in the feeder sys- tem, where the feeder system is distinct from the
-            originating system. </xs:documentation>
+          <xs:documentation>Identifiers used for the item in the feeder system, where the feeder system is distinct from the originating system. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:original-content">
