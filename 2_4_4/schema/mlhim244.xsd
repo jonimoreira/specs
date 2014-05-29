@@ -33,6 +33,7 @@
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:ExceptionalValue"/>
+      
       <xs:element maxOccurs="1" minOccurs="0" name="valid-time-begin" type="xs:dateTime">
         <xs:annotation>
           <xs:documentation>If present this must be a valid datetime including timezone. It is used to indicate the beginning time that information is considered valid or when the information was collected.</xs:documentation>
@@ -40,7 +41,7 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="valid-time-end" type="xs:dateTime" nillable="true">
         <xs:annotation>
-          <xs:documentation>If present this must be a valid date-time including timezone</xs:documentation>
+          <xs:documentation>If present this must be a valid date-time including timezone. It is used to indicate the ending time that information is considered valid or is to have expired.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -53,9 +54,9 @@
     <xs:annotation>
       <xs:documentation>Items which represent boolean decisions, such as true/false or yes/no answers. Use for such data, it
         is important to devise the meanings (usually questions in subjective data) carefully, so that the only allowed results
-        are in fact true or false. Potential Misuse: The DvBoolean class should not be used as a replacement for naively
+        are in fact true or false. Potential Misuse: The DvBooleanType should not be used as a replacement for naively
         modelled enumerated types such as male/female etc. Such values should be coded, and in any case the enumeration often
-        has more than two values. Though the DvBoolean-dv attribute is a String type this is to easily allow responses that the
+        has more than two values. Though the DvBoolean-dv element is a String type this is to easily allow responses that the
         user is more familiar with using in the context such as 'Yes', 'No' or 'True', 'False'. A conversion method is required
         to convert the valid-trues to True and the valid-falses to False. </xs:documentation>
     </xs:annotation>
@@ -64,17 +65,17 @@
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="0" name="valid-trues" type="xs:string">
             <xs:annotation>
-              <xs:documentation>A set of strings that are to be converted to a boolean True in the implementation.</xs:documentation>
+              <xs:documentation>A string that represents a boolean True in the implementation. These are generally constrained by a set of enumerations in the PcT.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="valid-falses" type="xs:string">
             <xs:annotation>
-              <xs:documentation>A set of strings that are to be converted to a boolean False in the implementation.</xs:documentation>
+              <xs:documentation>A string that represents a boolean False in the implementation. These are generally constrained by a set of enumerations in the PcT.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="DvBoolean-dv" type="xs:string">
             <xs:annotation>
-              <xs:documentation>A truly boolean value in the implementation language, derived by selection in the implementation of
+              <xs:documentation>To be converted to a truly boolean value in the implementation language, derived by selection in the implementation of
                 one of the valid-trues or valid-falses. DvBoolean-dv may be a Void or Null value; in which case; ev cannot be empty.
               </xs:documentation>
             </xs:annotation>
@@ -87,7 +88,7 @@
 
   <xs:complexType name="DvURIType">
     <xs:annotation>
-      <xs:documentation>Used to specify a Universal Resource Identifier. Set the pattern to accommodate your needs.</xs:documentation>
+      <xs:documentation>Used to specify a Universal Resource Identifier. Set the pattern to accommodate your needs in a CCD.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
@@ -99,8 +100,7 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Normally constrained by on ontology such as the OBO RO http://purl.obolibrary.org/obo/ro.owl
-              </xs:documentation>
+              <xs:documentation>Normally constrained by on ontology such as the OBO RO http://purl.obolibrary.org/obo/ro.owl</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -111,21 +111,21 @@
 
   <xs:complexType name="DvStringType">
     <xs:annotation>
-      <xs:documentation>DvString: The string data type can contain characters, line feeds, carriage returns, and tab characters.</xs:documentation>
+      <xs:documentation>The string data type can contain characters, line feeds, carriage returns, and tab characters.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="0" name="DvString-dv" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Displayable rendition of the item.</xs:documentation>
+              <xs:documentation>The string value of the item.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language">
             <xs:annotation>
               <xs:documentation>Optional indicator of the localised language in which this data-type is written. The ·value space· of
                 language is the set of all strings that are valid language identifiers as defined [RFC 3066] . Only required when the
-                language used here is different from the enclosing Entry. </xs:documentation>
+                language used here is different from the enclosing Entry.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -136,9 +136,9 @@
 
   <xs:complexType name="DvCodedStringType">
     <xs:annotation>
-      <xs:documentation>A text item whose DvString-dv attribute must be the long name or description from a controlled
+      <xs:documentation>A text item whose DvString-dv element must be the long name or description from a controlled
         terminology. The key (i.e. the 'code') of which is the terminology-code attribute. In some cases, DvString-dv and
-        terminology-code may have the same content. </xs:documentation>
+        terminology-code may have the same content.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvStringType">
@@ -155,12 +155,12 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="terminology-version" type="xs:string">
             <xs:annotation>
-              <xs:documentation>The proper release/version ID from the releasing authority. </xs:documentation>
+              <xs:documentation>The proper release/version ID from the releasing authority.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="terminology-code" type="xs:string">
             <xs:annotation>
-              <xs:documentation>The uniquely identifiable code string from the terminology. </xs:documentation>
+              <xs:documentation>The uniquely identifiable code string from the terminology.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -171,10 +171,11 @@
 
   <xs:complexType name="DvIdentifierType">
     <xs:annotation>
-      <xs:documentation>DvIndentifierType is DEPRECATED as of 2.4.3 and will be removed in future versions. See https://github.com/mlhim/specs/issues/14 for details. 
+      <xs:documentation> 
         Type for representing identifiers of real-world entities. Typical identifiers include: drivers licence
         number, social security number, veterans affairs number, prescription id, order id, system id and so on. The actual
-        identifier is in the DvString-dv. </xs:documentation>
+        identifier is in the DvString-dv. 
+      </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvStringType">
@@ -186,12 +187,12 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="issuer" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Authority which issues the kind of id used in the id field of this object. </xs:documentation>
+              <xs:documentation>Authority which issues the kind of id used in the id field of this object.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="assignor" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Organisation that assigned the id to the item being identified. </xs:documentation>
+              <xs:documentation>Organisation that assigned the id to the item being identified.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -202,15 +203,14 @@
 
   <xs:complexType abstract="true" name="DvEncapsulatedType">
     <xs:annotation>
-      <xs:documentation>Abstract class defining the common meta-data of all types of encapsulated data. </xs:documentation>
+      <xs:documentation>Abstract type defining the common meta-data of all types of encapsulated data.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="1" name="size" type="xs:int">
             <xs:annotation>
-              <xs:documentation>Original size in bytes of unencoded encapsu- lated data. I.e. encodings such as base64, hex- adecimal
-                etc do not change the value of this attribute. </xs:documentation>
+              <xs:documentation>Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64, hexadecimal, etc do not change the value of this attribute.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="encoding" type="xs:string">
@@ -225,7 +225,7 @@
               <xs:documentation>Optional indicator of the localised language in which the value is written. Coded IAW IETF RFC 5646.
                 http://tools.ietf.org/html/rfc5646 language tag information should be used from the IANA registry
                 http://www.iana.org/assignments/language-subtag-registry Only used when the text object is in a different language from
-                the enclosing CCD. </xs:documentation>
+                the enclosing CCD.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -246,12 +246,12 @@
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="0" name="DvParsable-dv" type="xs:string">
             <xs:annotation>
-              <xs:documentation>The string, which may validly be empty in some syntaxes </xs:documentation>
+              <xs:documentation>The string, which may validly be empty in some syntaxes.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="formalism" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Name of the formalism, e.g. “GLIF 1.0”, “proforma” etc. </xs:documentation>
+              <xs:documentation>Name of the formalism, e.g. 'GLIF 1.0', 'ADL 1.4', etc.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -263,7 +263,7 @@
   <xs:complexType name="DvMediaType">
     <xs:annotation>
       <xs:documentation>A specialisation of DvEncapsulated for audiovisual and bio-signal types. Includes further metadata
-        relating to media types which are not applicable to other subtypes of DvEncapsulated. </xs:documentation>
+        relating to media types which are not applicable to other subtypes of DvEncapsulatedType.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvEncapsulatedType">
@@ -271,13 +271,13 @@
           <xs:element maxOccurs="1" minOccurs="0" name="mime-type" type="xs:string">
             <xs:annotation>
               <xs:documentation>MIME type of the original media-content w/o any compression. See IANA registered types:
-                http://www.iana.org/assignments/media-types/index.html </xs:documentation>
+                http://www.iana.org/assignments/media-types/index.html</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="compression-type" type="xs:string">
             <xs:annotation>
               <xs:documentation>Compression/archiving mime-type. Void means no compression/archiving. For a list of common mime-types
-                for compression/archiving see: http://en.wikipedia.org/wiki/List_of_archive_formats </xs:documentation>
+                for compression/archiving see: http://en.wikipedia.org/wiki/List_of_archive_formats.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="hash-result" type="xs:string">
@@ -301,12 +301,12 @@
           <xs:element maxOccurs="1" minOccurs="0" name="uri" type="xs:anyURI">
             <xs:annotation>
               <xs:documentation>URI reference to electronic information stored outside the record as a file, database entry etc, if
-                supplied as a reference. </xs:documentation>
+                supplied as a reference.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="media-content" type="xs:base64Binary">
             <xs:annotation>
-              <xs:documentation>The content; if stored locally. </xs:documentation>
+              <xs:documentation>The content; if stored locally.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -317,7 +317,7 @@
 
   <xs:complexType abstract="true" name="DvOrderedType">
     <xs:annotation>
-      <xs:documentation>Abstract class defining the concept of ordered values, which includes ordinals as well as true
+      <xs:documentation>Abstract type defining the concept of ordered values, which includes ordinals as well as true
         quantities. The implementations require the functions ‘&lt;’, '&gt;' and is_strictly_comparable_to ('==').
       </xs:documentation>
     </xs:annotation>
@@ -380,7 +380,7 @@
 
   <xs:complexType abstract="true" name="DvQuantifiedType">
     <xs:annotation>
-      <xs:documentation>Abstract class defining the concept of true quantified values, i.e. values which are not only ordered,
+      <xs:documentation>Abstract type defining the concept of true quantified values, i.e. values which are not only ordered,
         but which have a precise magnitude. </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -444,9 +444,12 @@
 
   <xs:complexType name="DvCountType">
     <xs:annotation>
-      <xs:documentation>Countable quantities. Used for countable types such as pregnancies and steps (taken by a physiotherapy
+      <xs:documentation>
+        Countable quantities. Used for countable types such as pregnancies and steps (taken by a physiotherapy
         patient), number of cigarettes smoked in a day, etc. Misuse:Not used for amounts of physical entities (which all have
-        standardized units). Note that CCDs derived from DvCount should make magnitude, error and accuracy attributes minOccurs = '1'. </xs:documentation>
+        standardized units). Note that PcTs derived from DvCountType should make magnitude, error and accuracy attributes minOccurs = '1'.
+        The magnitude element is restricted to integers via an xs:assert.
+      </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvQuantifiedType">
@@ -457,7 +460,7 @@
             </xs:annotation>
           </xs:element>
         </xs:sequence>
-        <xs:assert test="(if(mlhim244:magnitude mod 1 = 0) then true() else false())"/>
+        <xs:assert test="(if(magnitude mod 1 = 0) then true() else false())"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -466,10 +469,11 @@
 
   <xs:complexType name="DvQuantityType">
     <xs:annotation>
-      <xs:documentation>Quantified type representing “scientific” quantities, i.e. quantities expressed as a magnitude and
+      <xs:documentation>
+        Quantified type representing “scientific” quantities, i.e. quantities expressed as a magnitude and
         units. Can also be used for time durations, where it is more convenient to treat these as simply a number of individual seconds, 
         minutes, hours, days, months, years, etc. when no temporal calculation is to be performed.
-        Note that CCDs derived from DvQuantity should make magnitude, error and accuracy attributes minOccurs = '1'.
+        Note that PcTs derived from DvQuantityType should make magnitude, error and accuracy attributes minOccurs = '1'.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -478,7 +482,7 @@
           <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:DvQuantity-units">
             <xs:annotation>
               <xs:documentation>Stringified units, expressed in unit syntax, e.g. "kg/m2", “mm[Hg]", "ms-1", "km/h". A DvCodedStringType should be used when possible.
-                 UOM codes can be found: http://www.obofoundry.org Also available in other terminologies such as SNOMEDCT. </xs:documentation>
+                 UOM codes can be found: http://www.obofoundry.org Also available in other terminologies such as SNOMEDCT.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -490,11 +494,13 @@
 
   <xs:complexType name="DvRatioType">
     <xs:annotation>
-      <xs:documentation>Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. Should not
+      <xs:documentation>
+        Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. Should not
         be used to represent things like blood pressure which are often written using a ‘/’ character, giving the misleading
         impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as
         (e.g.) “6/24” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count
-        fingers etc). Should not be used for formulations. </xs:documentation>
+        fingers etc). Should not be used for formulations. 
+      </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvQuantifiedType">
@@ -502,7 +508,7 @@
           <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:ratio-type">
             <xs:annotation>
               <xs:documentation>
-                Indicates semantic type of ratio  must be set as fixed to one of the below strings in CCDs.
+                Indicates semantic type of ratio  must be set as fixed to one of the below strings in PcTs.
                 ratio = a relationship between two numbers.
                 
                 proportion = a relationship between two numbers where there is a bi-univocal relationship between the
@@ -561,9 +567,10 @@
   
   <xs:complexType name="DvTemporalType">
     <xs:annotation>
-      <xs:documentation>Class defining the concept of date and time types. 
-        Must be constrained in CCDs to be one or more of the below elements.  
-        This gives the modeller the ability to optionally allow partial dates at run time.  
+      <xs:documentation>
+        Type defining the concept of date and time types. 
+        Must be constrained in PcTs to be one or more of the below elements.  
+        This gives the modeller the ability to optionally allow full or partial dates at run time.  
         Setting maxOccurs and minOccurs to zero cause the element to be prohibited.
       </xs:documentation>
     </xs:annotation>
@@ -589,45 +596,69 @@
 
   <xs:complexType name="DvIntervalType">
     <xs:annotation>
-      <xs:documentation>Generic class defining an interval (i.e. range) of a comparable type. An interval is a contiguous
-        subrange of a comparable base type. Used to define intervals of dates, times, quantities, etc. Whose datatypes are the same and are ordered.</xs:documentation>
+      <xs:documentation>
+        Generic type defining an interval (i.e. range) of a comparable type. An interval is a contiguous
+        subrange of a comparable base type. Used to define intervals of dates, times, quantities, etc. Whose datatypes are the same and are ordered.
+        Implementations are tasked with coercing the string values in 'upper' and 'lower' into the type defined by interval-type. 
+      </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="interval" type="mlhim244:interval-type">
+          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:interval-type"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="lower" type="xs:string">
             <xs:annotation>
               <xs:documentation>
-                Defines the interval. The interval values are bound or unbounded and must be defined in a CCD using a combination of min and max inclusive and exclusive restrictions. 
+                Defines the lower value of the interval. 
               </xs:documentation>
             </xs:annotation>
-          </xs:element>
+          </xs:element>          
+          <xs:element maxOccurs="1" minOccurs="0" name="upper" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>
+                Defines the upper value of the interval. 
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>          
+          <xs:element maxOccurs="1" minOccurs="1" name="lower-included" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>
+                Is the lower value of the interval inclusive?. 
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>          
+          <xs:element maxOccurs="1" minOccurs="1" name="upper-included" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation>
+                Is the upper value of the interval inclusive?. 
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>          
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="DvInterval" substitutionGroup="mlhim244:DvAny" type="mlhim244:DvIntervalType"/>
 
-  <xs:complexType name="interval-type">
+  <xs:element name="interval-type">
     <xs:annotation>
       <xs:documentation>
-        Choose the typed element of the interval.
+        Defines the interval type.   
       </xs:documentation>
     </xs:annotation>
-    <xs:choice minOccurs="1" maxOccurs="1">
-      <xs:element name="int-interval" type="xs:int"/>
-      <xs:element name="decimal-interval" type="xs:decimal"/>
-      <xs:element name="float-interval" type="xs:float"/>
-      <xs:element name="date-interval" type="xs:date"/>
-      <xs:element name="datetime-interval" type="xs:dateTime"/>
-      <xs:element name="time-interval" type="xs:time"/>
-      <xs:element name="day-interval" type="xs:gDay"/>
-      <xs:element name="month-interval" type="xs:gMonth"/>
-      <xs:element name="year-interval" type="xs:gYear"/>
-      <xs:element name="duration-interval" type="xs:duration"/>
-    </xs:choice>
-  </xs:complexType>
-  
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="int"/>
+        <xs:enumeration value="decimal"/>
+        <xs:enumeration value="float"/>
+        <xs:enumeration value="date"/>
+        <xs:enumeration value="time"/>                
+        <xs:enumeration value="datetime"/>
+        <xs:enumeration value="duration"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>          
+    
   <xs:complexType name="ReferenceRangeType">
     <xs:annotation>
       <xs:documentation>
@@ -664,11 +695,13 @@
   <!--Common package types-->
   <xs:complexType name="FeederAuditDetailsType">
     <xs:annotation>
-      <xs:documentation>Audit details for any system in a feeder system chain. Audit details here means the general notion of
+      <xs:documentation>
+        Audit details for any system in a feeder system chain. Audit details here means the general notion of
         who/where/when the information item to which the audit is attached was created. None of the attributes are defined as
         mandatory, however, in different scenarios, various combinations of attributes will usually be mandatory. This can be
         controlled by specifying feeder audit details in CCDs used when conjunction with non-MLHIM systems as interface
-        definitions. </xs:documentation>
+        definitions. 
+      </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:system-id">
@@ -690,7 +723,7 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="timestamp" type="xs:dateTime">
         <xs:annotation>
-          <xs:documentation>DvDateTime timestamp of handling the item. For an originating system, this will be time of creation,
+          <xs:documentation>Timestamp of handling the item. For an originating system, this will be time of creation,
             for an intermediate feeder system, this will be a time of accession or other time of handling, where available.
           </xs:documentation>
         </xs:annotation>
@@ -715,7 +748,8 @@
 
   <xs:complexType name="FeederAuditType">
     <xs:annotation>
-      <xs:documentation>Audit and other meta-data for software applications and systems in the feeder chain. This information
+      <xs:documentation>
+        Audit and other meta-data for software applications and systems in the feeder chain. This information
         is not typically used by modellers but by the applications themselves to "tag" entries when performing an extract.
       </xs:documentation>
     </xs:annotation>
@@ -733,14 +767,12 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:feeder-system-audit">
         <xs:annotation>
-          <xs:documentation>Any audit information for the information item from the feeder system, if different from the
-            originating system. </xs:documentation>
+          <xs:documentation>Any audit information for the information item from the feeder system, if different from the originating system. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:feeder-system-ids">
         <xs:annotation>
-          <xs:documentation>Identifiers used for the item in the feeder sys- tem, where the feeder system is distinct from the
-            originating system. </xs:documentation>
+          <xs:documentation>Identifiers used for the item in the feeder system, where the feeder system is distinct from the originating system. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:original-content">
@@ -760,20 +792,21 @@
 
   <xs:complexType name="PartyType">
     <xs:annotation>
-      <xs:documentation>Description of a party, including an optional external link to data for this party
+      <xs:documentation>
+        Description of a party, including an optional external link to data for this party
         in a demographic or other identity management system. An additional details element provides for the inclusion of information related to this party directly. 
-        If the party information is to be anonymous then do not include the details element. The string 'Self' may be entered as the party-name if an external_ref is include.</xs:documentation>
+        If the party information is to be anonymous then do not include the details element. The string 'Self' may be entered as the party-name if an external_ref is include.
+      </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="party-name" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Optional human-readable name (in String form). </xs:documentation>
+          <xs:documentation>Optional human-readable name (in String form).</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:external-ref">
         <xs:annotation>
-          <xs:documentation>Optional reference to more detailed demographic or identification information for this party, in an
-                external system. </xs:documentation>
+          <xs:documentation>Optional reference to more detailed demographic or identification information for this party, in an external system.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:details">
@@ -789,8 +822,9 @@
 
   <xs:complexType name="AttestationType">
     <xs:annotation>
-      <xs:documentation>Record an attestation by a party of item(s) of record content. The type of attestation is recorded by
-        the reason attribute, which my be coded. </xs:documentation>
+      <xs:documentation>
+        Record an attestation by a party of item(s) of record content. The type of attestation is recorded by the reason attribute, which my be coded.
+      </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:attested-view">
@@ -833,10 +867,12 @@
 
   <xs:complexType name="ParticipationType">
     <xs:annotation>
-      <xs:documentation>Model of a participation of a Party (any Actor or Role) in an activity. Used to represent any
+      <xs:documentation>
+        Model of a participation of a Party (any Actor or Role) in an activity. Used to represent any
         participation of a Party in some activity, which is not explicitly in the model, e.g. assisting nurse. Can be used to
         record past or future participations. Should not be used in place of more permanent relationships between demographic
-        entities. </xs:documentation>
+        entities.
+      </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:performer">
@@ -876,9 +912,13 @@
 
 
 
-  <xs:complexType abstract="true" name="ExceptionalValueType">
+  <xs:complexType  abstract="true" name="ExceptionalValueType">
     <xs:annotation>
-      <xs:documentation>Subclasses are used to indicate why a value is missing (Null) or is outside a measurable range.
+      <xs:documentation>
+        Subtypes are used to indicate why a value is missing (Null) or is outside a measurable range.
+        The element ev-name is fixed in restricted types to a descriptive string. 
+        The subtypes defined in the reference model are considered sufficiently generic to be useful in many instances.  
+        CCDs may contain additional ExceptionalValueType restrictions. 
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -891,9 +931,11 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>No Information : The value is exceptional (missing, omitted, incomplete, improper). No information as
+          <xs:documentation>
+            No Information : The value is exceptional (missing, omitted, incomplete, improper). No information as
             to the reason for being an exceptional value is provided. This is the most general exceptional value. It is also the
-            default exceptional value </xs:documentation>
+            default exceptional value. 
+          </xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="No Information" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -907,11 +949,13 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Masked : There is information on this item available but it has not been provided by the sender due to
+          <xs:documentation>
+            Masked : There is information on this item available but it has not been provided by the sender due to
             security, privacy or other reasons. There may be an alternate mechanism for gaining access to this information. Warning:
             Using this exceptional value does provide information that may be a breach of confidentiality, even though no detail
             data is provided. Its primary purpose is for those circumstances where it is necessary to inform the receiver that the
-            information does exist without providing any detail </xs:documentation>
+            information does exist without providing any detail.
+          </xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Masked" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -925,8 +969,10 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Invalid : The value as represented in the instance is not a member of the set of permitted data values
-            in the constrained value domain of a variable. </xs:documentation>
+          <xs:documentation>
+            Invalid : The value as represented in the instance is not a member of the set of permitted data values
+            in the constrained value domain of a variable.
+          </xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Invalid" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -941,8 +987,9 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Derived : An actual value may exist, but it must be derived from the provided information; usually an
-            expression is provided directly. </xs:documentation>
+          <xs:documentation>
+            Derived : An actual value may exist, but it must be derived from the provided information; usually an expression is provided directly.
+          </xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Derived" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -956,8 +1003,9 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Unencoded : No attempt has been made to encode the information correctly but the raw source
-            information is represented, usually in free text </xs:documentation>
+          <xs:documentation>
+            Unencoded : No attempt has been made to encode the information correctly but the raw source information is represented, usually in free text.
+          </xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Unencoded" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -971,8 +1019,9 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Other : The actual value is not a member of the permitted data values in the variable. (e.g., when the
-            value of the variable is not by the coding system) </xs:documentation>
+          <xs:documentation>
+            Other: The actual value is not a member of the permitted data values in the variable. (e.g., when the value of the variable is not by the coding system)
+          </xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Other" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -986,7 +1035,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Negative Infinity : Negative infinity of numbers </xs:documentation>
+          <xs:documentation>Negative Infinity : Negative infinity of numbers</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Negative Infinity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1001,7 +1050,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Positive Infinity : Positive infinity of numbers </xs:documentation>
+          <xs:documentation>Positive Infinity : Positive infinity of numbers</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Positive Infinity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1015,7 +1064,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Unknown : A proper value is applicable, but not known </xs:documentation>
+          <xs:documentation>Unknown : A proper value is applicable, but not known</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Unknown" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1029,8 +1078,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Asked and Refused : Information was sought but refused to be provided (e.g., patient was asked but
-            refused to answer) </xs:documentation>
+          <xs:documentation>Asked and Refused : Information was sought but refused to be provided (e.g., patient was asked but refused to answer)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Asked and Refused" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1044,7 +1092,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Not Asked : This information has not been sought (e.g., patient was not asked) </xs:documentation>
+          <xs:documentation>Not Asked : This information has not been sought (e.g., patient was not asked)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Asked" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1060,7 +1108,7 @@
         <xs:annotation>
           <xs:documentation>Sufficient Quantity : The specific quantity is not known, but is known to non-zero and it is not
             specified because it makes up the bulk of the material; Add 10mg of ingredient X, 50mg of ingredient Y and sufficient
-            quantity of water to 100mL. </xs:documentation>
+            quantity of water to 100mL.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Sufficient Quantity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1074,7 +1122,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Trace : The content is greater or less than zero but too small to be quantified. </xs:documentation>
+          <xs:documentation>Trace : The content is greater or less than zero but too small to be quantified.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Trace" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1088,8 +1136,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Asked but Unknown : Information was sought but not found (e.g., patient was asked but did not know)
-          </xs:documentation>
+          <xs:documentation>Asked but Unknown : Information was sought but not found (e.g., patient was asked but did not know)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Asked but Unknown" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1103,8 +1150,9 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Not Available : Information is unavailable at this time but is expected that it will be available
-            later. </xs:documentation>
+          <xs:documentation>
+            This information is not available and the specific reason is not known.
+          </xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Available" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1118,8 +1166,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim244:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation>Not Applicable : No proper value is applicable in this context e.g.,the number of cigarrettes smoked
-            per day by a non-smoker subject. </xs:documentation>
+          <xs:documentation>Not Applicable : No proper value is applicable in this context e.g.,the number of cigarettes smoked per day by a non-smoker subject.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Applicable" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1134,7 +1181,7 @@
 
   <xs:complexType abstract="true" name="ItemType">
     <xs:annotation>
-      <xs:documentation>The abstract parent of Cluster and Element representation classes. </xs:documentation>
+      <xs:documentation>The abstract parent of ClusterType and DvAdapterType structural representation types.</xs:documentation>
     </xs:annotation>
   </xs:complexType>
   <xs:element abstract="true" name="Item" substitutionGroup="mlhim244:entry-data" type="mlhim244:ItemType"/>
@@ -1142,7 +1189,7 @@
   <xs:complexType name="ClusterType">
     <xs:annotation>
       <xs:documentation>The grouping variant of Item, which may contain further instances of Item, in an ordered list. This
-        provides the root Item for potentially very complex structures. </xs:documentation>
+        provides the root Item for arbitrarily complex structures.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:ItemType">
@@ -1152,9 +1199,9 @@
               <xs:documentation>Descriptive name of this branch. </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="1" ref="mlhim244:items">
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:items">
             <xs:annotation>
-              <xs:documentation>List of Item types. </xs:documentation>
+              <xs:documentation>List of Item types.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -1167,12 +1214,12 @@
   <!-- Replacement for ElementType -->
   <xs:complexType name="DvAdapterType">
     <xs:annotation>
-      <xs:documentation>The leaf variant of Item, to which any DvAny subtype instance is attached for use in a Cluster.</xs:documentation>
+      <xs:documentation>The leaf variant of Item, to which any DvAnyType subtype instance is attached for use in a Cluster.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:ItemType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:DvAdapter-dv">
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:DvAdapter-dv">
             <xs:annotation>
               <xs:documentation>Data value type of this leaf.</xs:documentation>
             </xs:annotation>
@@ -1187,29 +1234,25 @@
   <!--Content / entry types -->
   <xs:complexType abstract="true" name="EntryType">
     <xs:annotation>
-      <xs:documentation>The abstract parent of all Entry subtypes. An Entry is the root of a logical set of data items. An
-        Entry is also the minimal unit of information any query should return, since a whole Entry (including sub-parts) records
-        spatial structure, timing information, and contextual information, as well as the subject and generator of the
-        information; required for complete semantic interoperability. Each subtype has identical attribute information. The
-        subtyping is used to allow persistence to separate the types of Entries; primarily import in healthcare for the
-        de-identification of clinical information. </xs:documentation>
+      <xs:documentation>The abstract parent of all Entry subtypes. An Entry is the root of a logical set of data items. Each subtype has an identical information structure. 
+        The subtyping is used to allow persistence to separate the types of Entries; primarily import in healthcare for the de-identification of clinical information.
+      </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:entry-links">
         <xs:annotation>
-          <xs:documentation>Optional link(s) to other Locatable structures or external entities.</xs:documentation>
+          <xs:documentation>Optional link(s) to other locatable structures or external entities.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:entry-audit">
         <xs:annotation>
-          <xs:documentation>Audit trail from the system of original commit of information forming the content of this node, or
-                from a conversion gateway which has synthesised this node. </xs:documentation>
+          <xs:documentation>Audit trail from the system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="language" type="xs:language">
         <xs:annotation>
-          <xs:documentation>Mandatory indicator of the localised language in which this Entry is written. The ·value space· of
-                language is the set of all strings that are valid language identifiers as defined [RFC 3066] . </xs:documentation>
+          <xs:documentation>Mandatory indicator of the localised language in which this Entry is written. The value space of
+                language is the set of all strings that are valid language identifiers as defined [RFC 3066].</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="encoding" type="xs:string">
@@ -1217,24 +1260,24 @@
           <xs:documentation>Name of character set encoding in which text values in this Entry are encoded. Default should be utf-8.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:entry-subject">
+      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:entry-subject">
         <xs:annotation>
           <xs:documentation>Id of human subject of this Entry, e.g.: • subject of record (patient, etc.) • organ donor • foetus • a family member • another clinically relevant person.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:entry-provider">
         <xs:annotation>
-          <xs:documentation>Optional identification of the source of the information in this Entry, which might be: • the patient• a patient agent, e.g. parent, guardian • the clinician • a device or software </xs:documentation>
+          <xs:documentation>Optional identification of the source of the information in this Entry, which might be: • the patient• a patient agent, e.g. parent, guardian • the clinician • a device or software</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim244:other-participations">
         <xs:annotation>
-          <xs:documentation>List of other participations at Entry level. </xs:documentation>
+          <xs:documentation>List of other participations at Entry level.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim244:protocol-id">
         <xs:annotation>
-          <xs:documentation>Optional external identifier of protocol used to create this Entry. This could be a clinical guideline, an operations protocol,etc. </xs:documentation>
+          <xs:documentation>Optional external identifier of protocol used to create this Entry. This could be a clinical guideline, an operations protocol,etc.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string">
@@ -1254,7 +1297,7 @@
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:entry-data">
         <xs:annotation>
-          <xs:documentation>The data structure of the Entry. </xs:documentation>
+          <xs:documentation>The data structure of the Entry.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -1272,7 +1315,7 @@
 
   <xs:complexType name="CareEntryType">
     <xs:annotation>
-      <xs:documentation>Entry subtype for all entries related to care of an a subject of record. </xs:documentation>
+      <xs:documentation>Entry subtype for all entries related to care of an a subject of record.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:EntryType"/>
@@ -1283,9 +1326,9 @@
   <xs:complexType name="AdminEntryType">
     <xs:annotation>
       <xs:documentation>Entry subtype for administrative information, i.e. information about setting up the clinical process,
-        but not itself clinically relevant. Archetypes will define con- tained information. Used for admistrative details of
+        but not itself clinically relevant. Archetypes will define contained information. Used for administrative details of
         admission, episode, ward location, discharge, appointment (if not stored in a practice management or appointments
-        system). Not used for any clinically significant information. </xs:documentation>
+        system). Not used for any clinically significant information.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:EntryType"/>
@@ -1296,8 +1339,8 @@
   <xs:complexType name="DemographicEntryType">
     <xs:annotation>
       <xs:documentation>Entry subtype for demographic information, i.e. name structures, roles, locations, etc. Modelled as a
-        separate class from AdminEntry in order to facilitate the separation of clinical and non-clical information to support
-        de-identification of clinical and administrative data. </xs:documentation>
+        separate type from AdminEntry in order to facilitate the separation of clinical and non-clical information to support
+        de-identification of clinical and administrative data.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim244:EntryType"/>
@@ -1309,7 +1352,7 @@
   <!--CCD / constraint model -->
   <xs:complexType name="CCDType">
     <xs:annotation>
-      <xs:documentation>This is the root node of a Concept Constraint Definition. </xs:documentation>
+      <xs:documentation>This is the root node of a Concept Constraint Definition.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" ref="mlhim244:definition">
