@@ -63,12 +63,12 @@
     <xs:complexContent>
       <xs:extension base="mlhim244:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="valid-trues" type="xs:string">
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="valid-trues" type="xs:string">
             <xs:annotation>
               <xs:documentation>A string that represents a boolean True in the implementation. These are generally constrained by a set of enumerations in the PcT.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="valid-falses" type="xs:string">
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="valid-falses" type="xs:string">
             <xs:annotation>
               <xs:documentation>A string that represents a boolean False in the implementation. These are generally constrained by a set of enumerations in the PcT.</xs:documentation>
             </xs:annotation>
