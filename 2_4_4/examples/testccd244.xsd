@@ -2605,29 +2605,15 @@ functionally related to:
           <xs:element maxOccurs='1' minOccurs='0' ref='mlhim244:ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='1' name='interval' type='ccd:ct-7f7f8c6f-3b44-477f-a1f4-9d029eb73985'/>          
+          <xs:element maxOccurs='1' minOccurs='1' ref='mlhim244:interval-type'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='lower' type='xs:string' fixed='0'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='upper' type='xs:string' fixed='10'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='lower-included' type='xs:boolean' fixed='true'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='upper-included' type='xs:boolean' fixed='true'/>
         </xs:sequence>
       </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
-  
-  <xs:complexType name='ct-7f7f8c6f-3b44-477f-a1f4-9d029eb73985'>
-    <xs:complexContent>
-      <xs:restriction base="mlhim244:interval-type">
-        <xs:sequence>
-          <xs:element name="decimal-interval">
-            <xs:simpleType>
-              <xs:restriction base="xs:decimal">
-                <xs:minInclusive value="0"/>
-                <xs:maxInclusive value="200"/>
-              </xs:restriction>
-            </xs:simpleType>
-          </xs:element>
-        </xs:sequence>
-      </xs:restriction>
-    </xs:complexContent>
-  </xs:complexType>
-  
   
   <xs:element name='el-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f' substitutionGroup='mlhim244:items' type='ccd:ct-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f'/>
   <xs:complexType name='ct-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f'> <!-- Adapter for: Test Ratio -->
