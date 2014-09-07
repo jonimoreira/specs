@@ -3,7 +3,7 @@ MLHIM Specifications & Reference Implementation
 
 Multi-Level Healthcare Information Modelling Specifications
 
-The current released version is 2.4.4
+The current released version is 2.4.4 Development is in the 2_4_5 branch.
 
 The 'master' branch tracks the current stable changes of the development release which is now 2.4.4
 
