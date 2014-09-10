@@ -2606,15 +2606,41 @@ functionally related to:
           <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='1' ref='mlhim245:interval-type'/>
-          <xs:element maxOccurs='1' minOccurs='0' name='lower' type='xs:string' fixed='0'/>
-          <xs:element maxOccurs='1' minOccurs='0' name='upper' type='xs:string' fixed='10'/>
+
+          <xs:element maxOccurs="1" minOccurs="0" name="lower" type="ccd:ct-bb60389b-1b98-4931-bc88-a0de39e6e566"/>
+          
+          <xs:element maxOccurs="1" minOccurs="0" name="upper" type="ccd:ct-ac3ae279-27fa-45c9-9cf7-599693d2bcd2"/>
+
           <xs:element maxOccurs='1' minOccurs='1' name='lower-included' type='xs:boolean' fixed='true'/>
           <xs:element maxOccurs='1' minOccurs='1' name='upper-included' type='xs:boolean' fixed='true'/>
         </xs:sequence>
       </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
+  
+  <xs:complexType name="ct-bb60389b-1b98-4931-bc88-a0de39e6e566">
+    <xs:complexContent>
+      <xs:restriction base="mlhim245:invl-type">
+    <xs:choice>
+      <xs:element maxOccurs="1" minOccurs="1" name="invl-int" type="xs:int" fixed="0"/>
+
+    </xs:choice>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ct-ac3ae279-27fa-45c9-9cf7-599693d2bcd2">
+    <xs:complexContent>
+      <xs:restriction base="mlhim245:invl-type">
+        <xs:choice>
+          <xs:element maxOccurs="1" minOccurs="1" name="invl-int" type="xs:int" fixed="10"/>
+
+        </xs:choice>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  
   
   <xs:element name='el-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f' substitutionGroup='mlhim245:items' type='ccd:ct-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f'/>
   <xs:complexType name='ct-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f'> <!-- Adapter for: Test Ratio -->
