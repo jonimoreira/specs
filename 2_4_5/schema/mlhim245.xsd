@@ -676,7 +676,8 @@
             </xs:annotation>
           </xs:element>
         </xs:sequence>
-        <!-- There could be an assert here to compare the child elements of upper and lower to see if the CCD restricted both to the same type. -->
+        <!-- The assert doesn't need the value comparison if CCDs use the fixed attribute. But just in case we want to be sure the interval makes sense. upper and lower to see if the CCD restricted both to the same type. -->        
+        <xs:assert test="(lower/*/name() = upper/*/name()) and (lower/*/node() lt upper/*/node())"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

@@ -1716,6 +1716,13 @@
                         <referencerange-definition>ReferenceRange for testing only.</referencerange-definition>
                         <ccd:el-3a2afd8a-99c5-4505-b558-f6bcf0ce1414>
                             <data-name>Casual glucose test: &lt; 200mg/dl</data-name>
+                            <lower>
+                                <invl-int>0</invl-int>
+                            </lower>
+                            <upper>
+                                <invl-int>10</invl-int>
+                            </upper>
+                            
                             <lower-included>true</lower-included>
                             <upper-included>true</upper-included>
                         </ccd:el-3a2afd8a-99c5-4505-b558-f6bcf0ce1414>
@@ -1785,6 +1792,13 @@
                         <referencerange-definition>ReferenceRange for testing only.</referencerange-definition>
                         <ccd:el-3a2afd8a-99c5-4505-b558-f6bcf0ce1414>
                             <data-name>Casual glucose test: &lt; 200mg/dl</data-name>
+                            <lower>
+                                <invl-int>0</invl-int>
+                            </lower>
+                            <upper>
+                                <invl-int>10</invl-int>
+                            </upper>
+                            
                             <lower-included>true</lower-included>
                             <upper-included>true</upper-included>
                         </ccd:el-3a2afd8a-99c5-4505-b558-f6bcf0ce1414>
