@@ -1720,11 +1720,13 @@
                                 <invl-int>0</invl-int>
                             </lower>
                             <upper>
-                                <invl-int>10</invl-int>
+                                <invl-int xsi:nil='true'></invl-int>
                             </upper>
                             
                             <lower-included>true</lower-included>
                             <upper-included>true</upper-included>
+                            <lower-bounded>true</lower-bounded>
+                            <upper-bounded>true</upper-bounded>
                         </ccd:el-3a2afd8a-99c5-4505-b558-f6bcf0ce1414>
                         <is-normal>false</is-normal>
                     </ccd:el-cc253572-1043-43bf-b500-2d2d57aa7be3>
@@ -1796,11 +1798,14 @@
                                 <invl-int>0</invl-int>
                             </lower>
                             <upper>
-                                <invl-int>10</invl-int>
+                                <invl-int xsi:nil='true'/>
                             </upper>
                             
                             <lower-included>true</lower-included>
                             <upper-included>true</upper-included>
+                            <lower-bounded>true</lower-bounded>
+                            <upper-bounded>true</upper-bounded>
+                            
                         </ccd:el-3a2afd8a-99c5-4505-b558-f6bcf0ce1414>
                         <is-normal>false</is-normal>
                     </ccd:el-cc253572-1043-43bf-b500-2d2d57aa7be3>
@@ -1953,11 +1958,14 @@
                                 <invl-int>0</invl-int>
                             </lower>
                             <upper>
-                                <invl-int>10</invl-int>
+                                <invl-int xsi:nil='true'/>
                             </upper>
                             
                             <lower-included>true</lower-included>
                             <upper-included>true</upper-included>
+                            <lower-bounded>true</lower-bounded>
+                            <upper-bounded>true</upper-bounded>
+                            
                         </ccd:el-3a2afd8a-99c5-4505-b558-f6bcf0ce1414>
                         <is-normal>false</is-normal>
                     </ccd:el-cc253572-1043-43bf-b500-2d2d57aa7be3>
@@ -2044,10 +2052,13 @@
                                 <invl-int>0</invl-int>
                             </lower>
                             <upper>
-                                <invl-int>10</invl-int>
+                                <invl-int xsi:nil='true'/>
                             </upper>
                             <lower-included>true</lower-included>
                             <upper-included>true</upper-included>
+                            <lower-bounded>true</lower-bounded>
+                            <upper-bounded>true</upper-bounded>
+                            
                         </ccd:el-3a2afd8a-99c5-4505-b558-f6bcf0ce1414>
                         <is-normal>false</is-normal>
                     </ccd:el-cc253572-1043-43bf-b500-2d2d57aa7be3>

@@ -2613,6 +2613,8 @@ functionally related to:
 
           <xs:element maxOccurs='1' minOccurs='1' name='lower-included' type='xs:boolean' fixed='true'/>
           <xs:element maxOccurs='1' minOccurs='1' name='upper-included' type='xs:boolean' fixed='true'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='lower-bounded' type='xs:boolean' fixed='true'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='upper-bounded' type='xs:boolean' fixed='true'/>
         </xs:sequence>
       </xs:restriction>
       </xs:complexContent>
@@ -2632,8 +2634,9 @@ functionally related to:
     <xs:complexContent>
       <xs:restriction base="mlhim245:invl-type">
         <xs:choice>
-          <xs:element maxOccurs="1" minOccurs="1" name="invl-int" type="xs:int" fixed="10"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="invl-int" type="xs:int" nillable="true"/>
         </xs:choice>
+        <xs:assert test='boolean(invl-int/node()) = false()'/> <!-- Instance elements must be set to xsi:nil='true' -->
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>

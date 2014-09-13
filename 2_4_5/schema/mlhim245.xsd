@@ -692,9 +692,19 @@
               <xs:documentation> Is the upper value of the interval inclusive?. </xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="lower-bounded" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation> Is the lower value of the interval bounded?. </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="upper-bounded" type="xs:boolean">
+            <xs:annotation>
+              <xs:documentation> Is the upper value of the interval bounded?. </xs:documentation>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
         <!-- The assert doesn't need the value comparison if CCDs use the fixed attribute. But just in case we want to be sure the interval makes sense. upper and lower to see if the CCD restricted both to the same type. -->        
-        <xs:assert test="(lower/*/name() = upper/*/name()) and (lower/*/node() lt upper/*/node())"/>
+        <xs:assert test="lower/*/name() = upper/*/name()"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -702,14 +712,13 @@
 
   <xs:complexType name="invl-type">
     <xs:choice>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-int" type="xs:int"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-integer" type="xs:integer"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-decimal" type="xs:decimal"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-float" type="xs:float"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-date" type="xs:date"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-time" type="xs:time"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-datetime" type="xs:dateTime"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-duration" type="xs:duration"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="invl-int" type="xs:int" nillable="true"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="invl-decimal" type="xs:decimal" nillable="true"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="invl-float" type="xs:float" nillable="true"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="invl-date" type="xs:date" nillable="true"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="invl-time" type="xs:time" nillable="true"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="invl-dateTime" type="xs:dateTime" nillable="true"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="invl-duration" type="xs:duration" nillable="true"/>
     </xs:choice>
   </xs:complexType>
 
