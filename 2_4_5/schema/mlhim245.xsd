@@ -759,107 +759,44 @@
 
 
   <!--Common package types-->
-  <xs:complexType name="FeederAuditDetailsType">
+  
+  <xs:complexType name="AuditType">
     <xs:annotation>
-      <xs:documentation> Audit details for any system in a feeder system chain. Audit details here
-        means the general notion of who/where/when the information item to which the audit is
-        attached was created. None of the attributes are defined as mandatory, however, in different
-        scenarios, various combinations of attributes will usually be mandatory. This can be
-        controlled by specifying feeder audit details in CCDs used when conjunction with non-MLHIM
-        systems as interface definitions. </xs:documentation>
+      <xs:documentation>
+        AuditType provides a mechanism to identifiy the who/where/when tracking of instances as they move from system to system.       
+      </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:system-id">
+      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim245:system-id">
         <xs:annotation>
-          <xs:documentation>Identifier of the system which handled the information item.
+          <xs:documentation>Identifier of systems which created or handled the information item. 
+            'Systems' can also be defined as an individual application or a data repository in which the data was manipulated.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:provider">
+      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:system-user">
         <xs:annotation>
-          <xs:documentation>Provider(s) who created, committed, forwarded or otherwise handled the
-            item. </xs:documentation>
+          <xs:documentation>User(s) who created, committed, forwarded or otherwise handled the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:location">
         <xs:annotation>
-          <xs:documentation>Identifier of the particular site/facility within an organisation which
-            handled the item. </xs:documentation>
+          <xs:documentation>Location indoformation of the particular site/facility within an organisation which handled the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="timestamp" type="xs:dateTime">
+      <xs:element maxOccurs="1" minOccurs="1" name="timestamp" type="xs:dateTime">
         <xs:annotation>
-          <xs:documentation>Timestamp of handling the item. For an originating system, this will be
-            time of creation, for an intermediate feeder system, this will be a time of accession or
-            other time of handling, where available. </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:subject">
-        <xs:annotation>
-          <xs:documentation>Identifiers for subject of the received information
-            item.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="version-id" type="xs:string">
-        <xs:annotation>
-          <xs:documentation>Applicable version information.</xs:documentation>
+          <xs:documentation>Timestamp of handling the item.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
+  <xs:element name="system-user" type="mlhim245:PartyType"/>
   <xs:element name="system-id" type="mlhim245:DvIdentifierType"/>
-  <xs:element name="provider" type="mlhim245:PartyType"/>
   <xs:element name="location" type="mlhim245:ItemType"/>
-  <xs:element name="subject" type="mlhim245:PartyType"/>
-  <xs:element name="FeederAuditDetails" type="mlhim245:FeederAuditDetailsType"/>
-
-  <xs:complexType name="FeederAuditType">
-    <xs:annotation>
-      <xs:documentation> Audit and other meta-data for software applications and systems in the
-        feeder chain. This information is not typically used by modellers but by the applications
-        themselves to "tag" entries when performing an extract. </xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:originating-system-audit">
-        <xs:annotation>
-          <xs:documentation>Any audit information for the information item from the originating
-            system. </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim245:originating-system-ids">
-        <xs:annotation>
-          <xs:documentation>Identifiers used for the item in the originating system, e.g. filler and
-            placer ids. </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:feeder-system-audit">
-        <xs:annotation>
-          <xs:documentation>Any audit information for the information item from the feeder system,
-            if different from the originating system. </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim245:feeder-system-ids">
-        <xs:annotation>
-          <xs:documentation>Identifiers used for the item in the feeder system, where the feeder
-            system is distinct from the originating system. </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:original-content">
-        <xs:annotation>
-          <xs:documentation>Reference to original content corresponding to the MLHIM content at this
-            node. Typically a URI reference to a document or message in a persistent store
-            associated with the record. </xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="originating-system-audit" type="mlhim245:FeederAuditDetailsType"/>
-  <xs:element name="originating-system-ids" type="mlhim245:DvIdentifierType"/>
-  <xs:element name="feeder-system-audit" type="mlhim245:FeederAuditDetailsType"/>
-  <xs:element name="feeder-system-ids" type="mlhim245:DvIdentifierType"/>
-  <xs:element name="original-content" type="mlhim245:DvURIType"/>
-  <xs:element name="FeederAudit" type="mlhim245:FeederAuditType"/>
-
+  <xs:element name="Audit" type="mlhim245:AuditType"/>
+  
+  
   <xs:complexType name="PartyType">
     <xs:annotation>
       <xs:documentation> Description of a party, including an optional external link to data for
@@ -924,7 +861,7 @@
           <xs:documentation>Datetime of committal of the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="is-pending" type="xs:boolean">
+      <xs:element maxOccurs="1" minOccurs="1" name="is-pending" type="xs:boolean">
         <xs:annotation>
           <xs:documentation>True if this attestation is outstanding; 'false' means it has been
             completed.</xs:documentation>
@@ -1235,7 +1172,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim245:ExceptionalValueType">
         <xs:annotation>
-          <xs:documentation> This information is not available and the specific reason is not known.
+          <xs:documentation>Not Available: This information is not available and the specific reason is not known.
           </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -1337,7 +1274,7 @@
             entities.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:entry-audit">
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim245:entry-audit">
         <xs:annotation>
           <xs:documentation>Audit trail from the system of original commit of information forming
             the content of this node, or from a conversion gateway which has synthesised this
@@ -1407,7 +1344,7 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="entry-links" type="mlhim245:DvURIType"/>
-  <xs:element name="entry-audit" type="mlhim245:FeederAuditType"/>
+  <xs:element name="entry-audit" type="mlhim245:AuditType"/>
   <xs:element name="entry-subject" type="mlhim245:PartyType"/>
   <xs:element name="entry-provider" type="mlhim245:PartyType"/>
   <xs:element name="other-participations" type="mlhim245:ParticipationType"/>

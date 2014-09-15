@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ccd:ccd-a351ee5c-c303-4fc2-b190-e22c7a26ddad xmlns:mlhim245='http://www.mlhim.org/xmlns/mlhim2/2_4_5'
+xmlns:ccd='http://www.mlhim.org/ccd'
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_5 http://www.ccdgen.com/ccdlib/ccd-a351ee5c-c303-4fc2-b190-e22c7a26ddad.xsd'>
+  <ccd:el-1b19d08f-d11d-442e-89cb-68e4f290122a> <!-- Entry -->
+  <!-- entry-links -->
+      <ccd:el-c0bfcffb-8891-4b60-a3a9-fafc716d4283> <!-- DvURI -->
+      <data-name>Connected To - Test 2.4.5</data-name>
+      <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+      <valid-time-begin>1972-07-22T14:34:57Z</valid-time-begin>
+      <valid-time-end>2014-04-13T09:45:12Z</valid-time-end>
+      <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+      <relation>connected to</relation>
+    </ccd:el-c0bfcffb-8891-4b60-a3a9-fafc716d4283>
+  <!-- entry-audit -->
+  <language>en-US</language>
+  <encoding>utf-8</encoding>
+  <!-- entry-subject -->
+      <ccd:el-7d7d1225-dd95-457e-a838-0bdca7be448f> <!-- Party -->
+      <party-name>A. Sample Name</party-name>
+      <!-- PI external-ref -->
+      <!-- PI details -->
+      <ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb> <!-- Cluster -->
+        <cluster-subject>Address Details (US)</cluster-subject>
+        <ccd:el-81450576-b284-4c9c-a48b-fce809dab869> <!-- DvAdapter -->
+          <ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc> <!-- DvString -->
+            <data-name>Additional Address Line(s) (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1984-10-21T18:05:55Z</valid-time-begin>
+            <valid-time-end>2011-04-28T23:04:24Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+        </ccd:el-81450576-b284-4c9c-a48b-fce809dab869>
+        <ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf> <!-- DvAdapter -->
+          <ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7> <!-- DvString -->
+            <data-name>State Abbreviation (USPS)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1975-10-09T07:19:00Z</valid-time-begin>
+            <valid-time-end>1975-09-21T23:41:50Z</valid-time-end>
+            <DvString-dv>IL</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+        </ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf>
+        <ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12> <!-- DvAdapter -->
+          <ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8> <!-- DvString -->
+            <data-name>Street Number and Name (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2020-01-24T10:36:18Z</valid-time-begin>
+            <valid-time-end>2002-05-29T09:30:29Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+        </ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12>
+        <ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f> <!-- DvAdapter -->
+          <ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374> <!-- DvString -->
+            <data-name>Telephone Number (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1991-06-01T22:51:54Z</valid-time-begin>
+            <valid-time-end>1980-07-04T05:48:03Z</valid-time-end>
+            <DvString-dv>111-111-1111</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374>
+        </ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f>
+        <ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885> <!-- DvAdapter -->
+          <ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a> <!-- DvString -->
+            <data-name>Zip Code (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1981-12-06T14:26:54Z</valid-time-begin>
+            <valid-time-end>1980-09-17T16:19:52Z</valid-time-end>
+            <DvString-dv>11111-2222</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+        </ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885>
+      </ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+    </ccd:el-7d7d1225-dd95-457e-a838-0bdca7be448f>
+  <!-- entry-provider -->
+      <ccd:el-6556e8e9-1646-4b38-bab0-72353c13c035> <!-- Party -->
+      <party-name>A. Sample Name</party-name>
+      <!-- PI external-ref -->
+      <ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf> <!-- DvURI -->
+        <data-name>External Reference for Party - Test 2.4.5</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2013-03-30T11:25:46Z</valid-time-begin>
+        <valid-time-end>1973-03-07T05:45:22Z</valid-time-end>
+        <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+        <relation>Party Associated with the record</relation>
+      </ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+      <!-- PI details -->
+      <ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb> <!-- Cluster -->
+        <cluster-subject>Address Details (US)</cluster-subject>
+        <ccd:el-81450576-b284-4c9c-a48b-fce809dab869> <!-- DvAdapter -->
+          <ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc> <!-- DvString -->
+            <data-name>Additional Address Line(s) (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2008-09-02T00:30:21Z</valid-time-begin>
+            <valid-time-end>1975-06-06T07:41:50Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+        </ccd:el-81450576-b284-4c9c-a48b-fce809dab869>
+        <ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf> <!-- DvAdapter -->
+          <ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7> <!-- DvString -->
+            <data-name>State Abbreviation (USPS)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2005-08-13T03:58:05Z</valid-time-begin>
+            <valid-time-end>1980-02-11T11:07:13Z</valid-time-end>
+            <DvString-dv>MA</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+        </ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf>
+        <ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12> <!-- DvAdapter -->
+          <ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8> <!-- DvString -->
+            <data-name>Street Number and Name (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1980-06-06T05:20:33Z</valid-time-begin>
+            <valid-time-end>1992-01-07T16:08:45Z</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+        </ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12>
+        <ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f> <!-- DvAdapter -->
+          <ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374> <!-- DvString -->
+            <data-name>Telephone Number (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2002-02-12T06:34:59Z</valid-time-begin>
+            <valid-time-end>1978-01-14T06:24:13Z</valid-time-end>
+            <DvString-dv>111-111-1111</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374>
+        </ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f>
+        <ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885> <!-- DvAdapter -->
+          <ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a> <!-- DvString -->
+            <data-name>Zip Code (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1988-12-21T05:13:35Z</valid-time-begin>
+            <valid-time-end>1993-08-08T01:36:54Z</valid-time-end>
+            <DvString-dv>32324</DvString-dv>
+            <language>en-US</language>
+          </ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+        </ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885>
+      </ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+    </ccd:el-6556e8e9-1646-4b38-bab0-72353c13c035>
+  <!-- other-participations -->
+      <ccd:el-a66de5b3-7d00-4b0e-b6b0-b96b39b1b1ef> <!-- Participation -->
+      <!-- performer -->
+      <ccd:el-9c9b3fb7-bc53-4a6a-9434-392101ef9b08> <!-- Party -->
+        <party-name>A. Sample Name</party-name>
+        <!-- PI external-ref -->
+        <ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf> <!-- DvURI -->
+          <data-name>External Reference for Party - Test 2.4.5</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2003-07-01T10:27:01Z</valid-time-begin>
+          <valid-time-end>1978-11-26T06:10:36Z</valid-time-end>
+          <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+          <relation>Party Associated with the record</relation>
+        </ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+        <!-- PI details -->
+        <ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb> <!-- Cluster -->
+          <cluster-subject>Address Details (US)</cluster-subject>
+          <ccd:el-81450576-b284-4c9c-a48b-fce809dab869> <!-- DvAdapter -->
+            <ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc> <!-- DvString -->
+              <data-name>Additional Address Line(s) (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1972-05-12T19:01:42Z</valid-time-begin>
+              <valid-time-end>1999-03-06T10:45:56Z</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+          </ccd:el-81450576-b284-4c9c-a48b-fce809dab869>
+          <ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf> <!-- DvAdapter -->
+            <ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7> <!-- DvString -->
+              <data-name>State Abbreviation (USPS)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1973-09-05T20:55:38Z</valid-time-begin>
+              <valid-time-end>1988-10-22T16:37:11Z</valid-time-end>
+              <DvString-dv>WY</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+          </ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf>
+          <ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12> <!-- DvAdapter -->
+            <ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8> <!-- DvString -->
+              <data-name>Street Number and Name (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1996-12-23T21:48:52Z</valid-time-begin>
+              <valid-time-end>2002-09-15T00:10:30Z</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+          </ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12>
+          <ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f> <!-- DvAdapter -->
+            <ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374> <!-- DvString -->
+              <data-name>Telephone Number (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1977-04-05T03:33:00Z</valid-time-begin>
+              <valid-time-end>1993-11-28T20:52:31Z</valid-time-end>
+              <DvString-dv>111-111-1111</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374>
+          </ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f>
+          <ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885> <!-- DvAdapter -->
+            <ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a> <!-- DvString -->
+              <data-name>Zip Code (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2003-11-07T07:59:04Z</valid-time-begin>
+              <valid-time-end>2011-08-27T08:50:53Z</valid-time-end>
+              <DvString-dv>99999</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+          </ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885>
+        </ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+      </ccd:el-9c9b3fb7-bc53-4a6a-9434-392101ef9b08>
+      <!-- function -->
+      <ccd:el-cf7bb5ef-b6f0-42df-b144-aa475de9f010> <!-- DvCodedString -->
+        <data-name>Participation Function - Test 2.4.5</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2004-01-13T18:19:55Z</valid-time-begin>
+        <valid-time-end>1994-10-19T11:30:20Z</valid-time-end>
+        <DvString-dv>Agent</DvString-dv>
+        <language>en-US</language>
+        <terminology-abbrev>FOAF</terminology-abbrev>
+        <terminology-name>Friend Of A Friend</terminology-name>
+        <terminology-version>0.98</terminology-version>
+        <terminology-code>Agent</terminology-code>
+      </ccd:el-cf7bb5ef-b6f0-42df-b144-aa475de9f010>
+      <!-- mode -->      <ccd:el-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee> <!-- DvCodedString -->
+        <data-name>Participation Mode - Test 2.4.5</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2017-07-10T07:47:50Z</valid-time-begin>
+        <valid-time-end>1992-04-12T10:40:47Z</valid-time-end>
+        <DvString-dv>Person</DvString-dv>
+        <language>en-US</language>
+        <terminology-abbrev>FOAF</terminology-abbrev>
+        <terminology-name>Friend Of A Friend</terminology-name>
+        <terminology-version>0.98</terminology-version>
+        <terminology-code>Person</terminology-code>
+      </ccd:el-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee>
+      <start-time>1975-03-29T15:42:29Z</start-time>
+      <end-time>2001-11-06T17:34:29Z</end-time>
+    </ccd:el-a66de5b3-7d00-4b0e-b6b0-b96b39b1b1ef>
+  <!-- protocol-id -->
+      <ccd:el-90f19fde-c3b0-422a-85ad-30ed7139c57a> <!-- DvIdentifier -->
+      <data-name>Generic Protocol ID - Test 2.4.5</data-name>
+      <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+      <valid-time-begin>2008-04-17T01:52:52Z</valid-time-begin>
+      <valid-time-end>1977-04-04T22:36:22Z</valid-time-end>
+      <DvString-dv>Default ID</DvString-dv>
+      <language>en-US</language>
+      <id-name>Protocal ID</id-name>
+      <issuer>Owner</issuer>
+      <assignor>Owner</assignor>
+    </ccd:el-90f19fde-c3b0-422a-85ad-30ed7139c57a>
+  <!-- workflow-id -->
+      <ccd:el-3b46a988-3845-4660-9f3c-bc09b23ca7b7> <!-- DvURI -->
+      <data-name>Workflow ID - Test 2.4.5</data-name>
+      <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+      <valid-time-begin>1973-03-02T17:16:04Z</valid-time-begin>
+      <valid-time-end>2003-12-23T08:42:02Z</valid-time-end>
+      <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+      <relation>material information bearer</relation>
+    </ccd:el-3b46a988-3845-4660-9f3c-bc09b23ca7b7>
+  <!-- attestation -->
+  <ccd:el-09195d20-7e9d-4c19-bfcb-acf47bafbf98> <!-- Attestation -->
+      <!-- ATT attested-view -->
+      <ccd:el-769d1fbc-ef3e-484b-bcec-c292bdb0f16e> <!-- DvMedia -->
+        <data-name>Attestation View - Test 2.4.5</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2001-09-01T07:10:26Z</valid-time-begin>
+        <valid-time-end>2020-05-27T19:30:16Z</valid-time-end>
+        <size>0</size>
+        <encoding>utf-8</encoding>
+        <language>en-US</language>
+        <mime-type>png</mime-type>
+        <compression-type>gz</compression-type>
+        <hash-result>dshfsoud6y3rwpef838rhf983trgf9e93w8rytgf</hash-result>
+        <hash-function>MD5</hash-function>
+        <alt-txt>Fake Media entry data.</alt-txt>
+        <uri>http://www.mlhim.org/fake_media</uri>
+        <!--<media-content></media-content>-->
+      </ccd:el-769d1fbc-ef3e-484b-bcec-c292bdb0f16e>
+      <!-- ATT :proof -->
+      <ccd:el-dcc9f32f-0e24-4884-aabb-145d24e21aaf> <!-- DvParsable -->
+        <data-name>Proof - Test 2.4.5</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2015-07-10T16:14:46Z</valid-time-begin>
+        <valid-time-end>1979-09-18T05:03:35Z</valid-time-end>
+        <size>0</size>
+        <encoding>utf-8</encoding>
+        <language>en-US</language>
+        <DvParsable-dv>Some parsable information.</DvParsable-dv>
+        <formalism>Unknown</formalism>
+      </ccd:el-dcc9f32f-0e24-4884-aabb-145d24e21aaf>
+      <!-- ATT reason -->
+      <ccd:el-93d066ef-c6ed-4fec-b747-aa87c71bbbbc> <!-- DvCodedString -->
+        <data-name>Attestation Reason - Test 2.4.5</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>1998-07-17T22:17:00Z</valid-time-begin>
+        <valid-time-end>1990-02-08T05:43:10Z</valid-time-end>
+        <DvString-dv>release</DvString-dv>
+        <language>en-US</language>
+        <terminology-abbrev>DOAP</terminology-abbrev>
+        <terminology-name>Description of a Project</terminology-name>
+        <terminology-version>0.1</terminology-version>
+        <terminology-code>release</terminology-code>
+      </ccd:el-93d066ef-c6ed-4fec-b747-aa87c71bbbbc>
+      <!-- ATT committer -->
+      <ccd:el-0d8535e0-6bc8-424a-941d-539fa9d75211> <!-- Party -->
+        <party-name>A. Sample Name</party-name>
+        <!-- PI external-ref -->
+        <ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf> <!-- DvURI -->
+          <data-name>External Reference for Party - Test 2.4.5</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2013-09-30T09:25:39Z</valid-time-begin>
+          <valid-time-end>2013-01-14T19:02:41Z</valid-time-end>
+          <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+          <relation>Party Associated with the record</relation>
+        </ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+        <!-- PI details -->
+        <ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb> <!-- Cluster -->
+          <cluster-subject>Address Details (US)</cluster-subject>
+          <ccd:el-81450576-b284-4c9c-a48b-fce809dab869> <!-- DvAdapter -->
+            <ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc> <!-- DvString -->
+              <data-name>Additional Address Line(s) (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1973-04-19T21:31:22Z</valid-time-begin>
+              <valid-time-end>2005-11-15T23:04:05Z</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+          </ccd:el-81450576-b284-4c9c-a48b-fce809dab869>
+          <ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf> <!-- DvAdapter -->
+            <ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7> <!-- DvString -->
+              <data-name>State Abbreviation (USPS)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2012-12-01T19:45:38Z</valid-time-begin>
+              <valid-time-end>2003-03-24T12:46:41Z</valid-time-end>
+              <DvString-dv>MT</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+          </ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf>
+          <ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12> <!-- DvAdapter -->
+            <ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8> <!-- DvString -->
+              <data-name>Street Number and Name (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1996-03-20T23:24:42Z</valid-time-begin>
+              <valid-time-end>1998-07-25T05:28:55Z</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+          </ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12>
+          <ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f> <!-- DvAdapter -->
+            <ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374> <!-- DvString -->
+              <data-name>Telephone Number (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2002-04-04T11:53:48Z</valid-time-begin>
+              <valid-time-end>2019-11-02T22:03:41Z</valid-time-end>
+              <DvString-dv>111-111-1111</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374>
+          </ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f>
+          <ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885> <!-- DvAdapter -->
+            <ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a> <!-- DvString -->
+              <data-name>Zip Code (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2019-12-27T01:03:52Z</valid-time-begin>
+              <valid-time-end>1979-03-06T15:48:50Z</valid-time-end>
+              <DvString-dv>65656</DvString-dv>
+              <language>en-US</language>
+            </ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+          </ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885>
+        </ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+      </ccd:el-0d8535e0-6bc8-424a-941d-539fa9d75211>
+      <time-committed>2013-04-11T02:53:05Z</time-committed>
+      <is-pending>true</is-pending>
+</ccd:el-09195d20-7e9d-4c19-bfcb-acf47bafbf98>
+  <!-- entry-data -->
+      <ccd:el-3c00a7ae-d144-47e5-95aa-431aba322002> <!-- Cluster -->
+      <cluster-subject>Test 2.4.5 : AdminEntry entry-data</cluster-subject>
+      <ccd:el-78593028-574a-4596-bf38-5b4d037cb74e> <!-- DvAdapter -->
+        <ccd:el-70d4b917-9f7c-4ffb-bfcf-a603c4938c10> <!-- DvString -->
+          <data-name>CDC Race Code - Test 2.4.5</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1972-03-19T03:55:33Z</valid-time-begin>
+          <valid-time-end>1993-12-31T17:53:19Z</valid-time-end>
+          <DvString-dv>Default String</DvString-dv>
+          <language>en-US</language>
+        </ccd:el-70d4b917-9f7c-4ffb-bfcf-a603c4938c10>
+      </ccd:el-78593028-574a-4596-bf38-5b4d037cb74e>
+    </ccd:el-3c00a7ae-d144-47e5-95aa-431aba322002>
+  </ccd:el-1b19d08f-d11d-442e-89cb-68e4f290122a>
+</ccd:ccd-a351ee5c-c303-4fc2-b190-e22c7a26ddad>

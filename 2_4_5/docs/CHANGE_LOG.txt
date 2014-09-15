@@ -1,6 +1,9 @@
 #Changes from 2.4.4 to 2.4.5                       
     Modified DvBooleanType to use valid-true or valid-false in a xs:choice and deleted DvBoolean-dv. 
-
+    Modified DvIntervalType to improve validation of the upper and lower data type selections. 
+    Added AuditType to simplify and improve the audit trail functionality.
+    Removed FeederAuditType and FeederAuditDetailsType.
+    Modified entry-audit to use the new AuditType. Set maxOccurs to unbounded so each step in processing gets a new audit element. 
 
 
 #Changes from 2.4.3 to 2.4.4                       
