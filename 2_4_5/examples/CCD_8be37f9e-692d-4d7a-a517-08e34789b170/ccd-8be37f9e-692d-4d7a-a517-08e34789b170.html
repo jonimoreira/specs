@@ -1,0 +1,501 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Example 2.4.5 Implementation (Admin)</title>
+<meta name="description" content="HTML Form Template for ccd-8be37f9e-692d-4d7a-a517-08e34789b170"/>
+<meta name="keywords" content="HTML,CSS,XML, MLHIM, CCD, PcT"/>
+<meta name="author" content="CCD-Gen http://www.ccdgen.com"/>
+<meta charset="UTF-8"/>
+<meta id='ccd-8be37f9e-692d-4d7a-a517-08e34789b170'/>
+<meta lang='en-US'/>
+<link href="http://www.mlhim.org/css/mlhim245.css" title="MLHIM 2.4.5 " type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">  if (typeof jQuery == 'undefined') {  document.write(unescape("%3Cscript src='/js/jquery-1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));}</script><script type="text/javascript" >
+  $(document).ready(function() {
+  $('#devon').click(function() {
+  $('.devonly').css('display','inline');
+});
+});
+</script>
+<script type="text/javascript" >
+  $(document).ready(function() {
+  $('#devoff').click(function() {
+  $('.devonly').css('display', 'none');
+});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('.collapsed').on('click', function (e) {
+        $(this).removeClass('collapsed');
+        $(this).addClass('uncollapsed');
+        $(this).children('.content').show();
+        e.preventDefault();
+    });
+    $('.hidebutton').on('click', function (e) {
+        $(this).parent().hide();
+        $(this).parent().parent().removeClass('uncollapsed');
+        $(this).parent().parent().addClass('collapsed');
+        e.stopPropagation();
+        e.preventDefault();
+        });
+    });
+</script>
+</head>
+<body>
+<span class='ccdtitle'>Example 2.4.5 Implementation (Admin)</span><br />
+<span class='ccdid'>ccd-8be37f9e-692d-4d7a-a517-08e34789b170</span><br />
+<div style="text-align: center; font-weight: bold; font-size: 14px;">Developer View: <a href="#" id='devon' class="devon">On</a>   
+<a href="#" id='devoff' class="devoff">Off</a> &nbsp; &nbsp; &nbsp;<a href='http://mlhim.org/rm245_html' target='RM_245'>(Reference model details index)</a><br /><span style='color: red;  font-size: 12px;'>(click on the section titles below to expand the content)</span></div> <br />
+<div class='ccd collapsed'>
+<div class='devonly collapsed'>
+<b>Concept Constraint Definition (CCD)</b><br />
+<div class='ccd_md collapsed'><br /><p style='font-size: larger;'> CCD Meta-Data:</p>
+<div class='content'>
+<b>Created By:</b>&nbsp;&nbsp;
+Tim Cook tim@mlhim.org<br />
+<b>Contributors:</b><br/>
+No Other Contributors<br/>
+<b>Keywords: </b>&nbsp;&nbsp;Test 2.4.5 AdminEntry;Test 2.4.5;<br/>
+<b>Source: </b>http://www.mlhim.org<br/>
+<b>Rights: </b>CC-BY http://creativecommons.org/licenses/by/3.0/<br/>
+<b>Related to: </b>&nbsp;&nbsp;None<br/>
+<b>Coverage: </b>&nbsp;&nbsp;Universal<br/>
+<b>Description: </b>&nbsp;&nbsp;Example CCD-Gen Implementation of the MLHIM 2.4.5 RM functionality.<br/><br/>
+<b>Published By: </b>&nbsp;&nbsp;MLHIM LAB, UERJ<br/>
+<b>Publication Date/Time: </b>&nbsp;&nbsp;2014-09-17 13:32:02.725624+00:00<br/>
+<b>Language: </b>en-US<br/>
+<b>MLHIM Reference Model Version: </b>&nbsp;&nbsp;2.4.5<br/>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+</div><br />
+</div>
+  <div class='entry collapsed'><br /> <span style="text-align: center; font-weight: bold;"> Entry: Example for 2.4.5</span><br />
+
+<em>The Entry meta-data is not normally user facing. It is shown here for developers. <a href='#entry-data'>Entry data begins here</a>.</em>
+  <form action='' method='' name='Example for 2.4.5' target='' >
+   <div class='devonly collapsed'>
+   entry-links: <br />
+  <b>No entry-links defined.</b><br />
+   entry-audit: <br />
+  <b>No entry-audit defined.</b><br />
+  <br />language: &nbsp;&nbsp;<b>en-US</b><br />
+  encoding: &nbsp;&nbsp;<b>utf-8</b><br /><br />
+   entry-subject: <br />
+        <div id='7d7d1225-dd95-457e-a838-0bdca7be448f' class='partyidentified collapsed'> 
+    <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_Party.html' title='7d7d1225-dd95-457e-a838-0bdca7be448f' target='RM_245'>Party</a></span><br /><br />
+    <span class='devonly dataname'><a href='http://www.mlhim.org/generic_pcts' title='A generic Entry Subject.
+
+rdf:isDefinedBy : http://www.mlhim.org/generic_pcts
+' target='_blank'>Party Semantics</a><br /></span>
+<div class='content'>
+      Party Name: <input name='pct-7d7d1225-dd95-457e-a838-0bdca7be448f:party-name' type='text' value=''/><br />
+      external-ref: <br />
+      details: <br />
+      <div id='c3a94922-7fed-415e-8d8c-6b184b167cdb' class='cluster collapsed'> 
+      <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_Cluster.html' title='c3a94922-7fed-415e-8d8c-6b184b167cdb' target='RM_245'>Cluster</a></span><br /><br />
+      <span class='dataname'><a href='http://www.mlhim.org/generic_pcts' title='Details cluster with address elements.
+
+rdf:isDefinedBy : http://www.mlhim.org/generic_pcts
+' target='_blank'>Address Details (US)</a><br /></span>
+<div class='content'>
+          <div id='d102a7b2-675c-432c-b7a2-1df1620e1ccc' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='d102a7b2-675c-432c-b7a2-1df1620e1ccc' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='#' title='Used for additional address lines in the US such as building name or apartment number.
+
+' target='_blank'>Additional Address Line(s) (US)</a><br /></span>
+<div class='content'>
+           Enter a string: <input name='pct-d102a7b2-675c-432c-b7a2-1df1620e1ccc:DvString' type='text' size='30' value='Default String'/>           Language: <input name='pct-d102a7b2-675c-432c-b7a2-1df1620e1ccc:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-d102a7b2-675c-432c-b7a2-1df1620e1ccc:valid-time-begin' type='datetime' value='1993-12-31T01:51:31'/>
+           End Valid Time: <input name='pct-d102a7b2-675c-432c-b7a2-1df1620e1ccc:valid-time-end' type='datetime' value='1974-07-30T21:30:46'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+          <div id='aea44d76-771e-4c34-ae69-6d37643e96b7' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='aea44d76-771e-4c34-ae69-6d37643e96b7' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='#' title='Used in US address cluster for two character US state abbreviation.
+
+' target='_blank'>State Abbreviation (USPS)</a><br /></span>
+<div class='content'>
+           Choose a value: <select name='pct-aea44d76-771e-4c34-ae69-6d37643e96b7:DvString-dv'>
+            <option value='AL' label='AL'>AL</option>
+            <option value='AK' label='AK'>AK</option>
+            <option value='AS' label='AS'>AS</option>
+            <option value='AZ' label='AZ'>AZ</option>
+            <option value='AR' label='AR'>AR</option>
+            <option value='CA' label='CA'>CA</option>
+            <option value='CO' label='CO'>CO</option>
+            <option value='CT' label='CT'>CT</option>
+            <option value='DE' label='DE'>DE</option>
+            <option value='DC' label='DC'>DC</option>
+            <option value='FM' label='FM'>FM</option>
+            <option value='FL' label='FL'>FL</option>
+            <option value='GA' label='GA'>GA</option>
+            <option value='GU' label='GU'>GU</option>
+            <option value='HI' label='HI'>HI</option>
+            <option value='ID' label='ID'>ID</option>
+            <option value='IL' label='IL'>IL</option>
+            <option value='IN' label='IN'>IN</option>
+            <option value='IA' label='IA'>IA</option>
+            <option value='KS' label='KS'>KS</option>
+            <option value='KY' label='KY'>KY</option>
+            <option value='LA' label='LA'>LA</option>
+            <option value='ME' label='ME'>ME</option>
+            <option value='MH' label='MH'>MH</option>
+            <option value='MD' label='MD'>MD</option>
+            <option value='MA' label='MA'>MA</option>
+            <option value='MI' label='MI'>MI</option>
+            <option value='MN' label='MN'>MN</option>
+            <option value='MS' label='MS'>MS</option>
+            <option value='MO' label='MO'>MO</option>
+            <option value='MT' label='MT'>MT</option>
+            <option value='NE' label='NE'>NE</option>
+            <option value='NV' label='NV'>NV</option>
+            <option value='NH' label='NH'>NH</option>
+            <option value='NJ' label='NJ'>NJ</option>
+            <option value='NM' label='NM'>NM</option>
+            <option value='NY' label='NY'>NY</option>
+            <option value='NC' label='NC'>NC</option>
+            <option value='ND' label='ND'>ND</option>
+            <option value='MP' label='MP'>MP</option>
+            <option value='CM' label='CM'>CM</option>
+            <option value='OH' label='OH'>OH</option>
+            <option value='OK' label='OK'>OK</option>
+            <option value='OR' label='OR'>OR</option>
+            <option value='PA' label='PA'>PA</option>
+            <option value='PR' label='PR'>PR</option>
+            <option value='RI' label='RI'>RI</option>
+            <option value='SC' label='SC'>SC</option>
+            <option value='SD' label='SD'>SD</option>
+            <option value='TN' label='TN'>TN</option>
+            <option value='TX' label='TX'>TX</option>
+            <option value='TT' label='TT'>TT</option>
+            <option value='AA' label='AA'>AA</option>
+            <option value='AE' label='AE'>AE</option>
+            <option value='AP' label='AP'>AP</option>
+            <option value='UT' label='UT'>UT</option>
+            <option value='VT' label='VT'>VT</option>
+            <option value='VI' label='VI'>VI</option>
+            <option value='VA' label='VA'>VA</option>
+            <option value='WA' label='WA'>WA</option>
+            <option value='WV' label='WV'>WV</option>
+            <option value='WI' label='WI'>WI</option>
+            <option value='WY' label='WY'>WY</option>
+          </select><br />
+           Language: <input name='pct-aea44d76-771e-4c34-ae69-6d37643e96b7:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-aea44d76-771e-4c34-ae69-6d37643e96b7:valid-time-begin' type='datetime' value='1973-03-29T23:51:10'/>
+           End Valid Time: <input name='pct-aea44d76-771e-4c34-ae69-6d37643e96b7:valid-time-end' type='datetime' value='2003-04-29T13:40:28'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+          <div id='ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='#' title='A single line US Street number and name. The typical format is:
+123 Main St. 
+
+' target='_blank'>Street Number and Name (US)</a><br /></span>
+<div class='content'>
+           Enter a string: <input name='pct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8:DvString' type='text' size='30' value='Default String'/>           Language: <input name='pct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8:valid-time-begin' type='datetime' value='1993-07-08T12:57:33'/>
+           End Valid Time: <input name='pct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8:valid-time-end' type='datetime' value='1996-03-11T19:32:26'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+          <div id='9c65478e-5cdf-413b-aa54-ce0574e48374' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='9c65478e-5cdf-413b-aa54-ce0574e48374' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='#' title='A US telephone number. Exactly 12 characters; 111-111-1111 with a pattern match of "[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+
+' target='_blank'>Telephone Number (US)</a><br /></span>
+<div class='content'>
+           Enter a string: <input name='pct-9c65478e-5cdf-413b-aa54-ce0574e48374:DvString' type='text' size='30' value='111-111-1111'/>           Language: <input name='pct-9c65478e-5cdf-413b-aa54-ce0574e48374:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-9c65478e-5cdf-413b-aa54-ce0574e48374:valid-time-begin' type='datetime' value='2019-04-02T12:35:10'/>
+           End Valid Time: <input name='pct-9c65478e-5cdf-413b-aa54-ce0574e48374:valid-time-end' type='datetime' value='1977-11-16T02:29:48'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+          <div id='3a45af86-b8fd-4161-b9e0-4ccf6322493a' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='3a45af86-b8fd-4161-b9e0-4ccf6322493a' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='https://www.usps.com/' title='Used in address cluster for US Zip (postal) Codes. Minimum of 5 characters with a maximum of 10 characters. Accommodates the older 5 character codes or the Zip+4 with the additional 4 characters following a dash. 
+
+Examples:
+12345
+12345-0987 
+
+rdf:isDefinedBy : https://www.usps.com/
+' target='_blank'>Zip Code (US)</a><br /></span>
+<div class='content'>
+           Enter a string: <input name='pct-3a45af86-b8fd-4161-b9e0-4ccf6322493a:DvString' type='text' size='30' value='Default String'/>           Language: <input name='pct-3a45af86-b8fd-4161-b9e0-4ccf6322493a:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-3a45af86-b8fd-4161-b9e0-4ccf6322493a:valid-time-begin' type='datetime' value='1999-06-16T08:58:03'/>
+           End Valid Time: <input name='pct-3a45af86-b8fd-4161-b9e0-4ccf6322493a:valid-time-end' type='datetime' value='1995-08-14T17:44:06'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+       </div>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+     </div>
+   entry-provider: <br />
+        <div id='6556e8e9-1646-4b38-bab0-72353c13c035' class='partyidentified collapsed'> 
+    <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_Party.html' title='6556e8e9-1646-4b38-bab0-72353c13c035' target='RM_245'>Party</a></span><br /><br />
+    <span class='devonly dataname'><a href='http://www.mlhim.org/generic_pcts' title='A generic Entry provider.
+
+rdf:isDefinedBy : http://www.mlhim.org/generic_pcts
+' target='_blank'>Party Semantics</a><br /></span>
+<div class='content'>
+      Party Name: <input name='pct-6556e8e9-1646-4b38-bab0-72353c13c035:party-name' type='text' value=''/><br />
+      external-ref: <br />
+      <div id='fadd4b97-559d-423d-a90f-49a712e6f1bf' class='dvuri collapsed'> 
+      <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvURI.html' title='fadd4b97-559d-423d-a90f-49a712e6f1bf' target='RM_245'>DvURI</a></span><br /><br />
+      <span class='dataname'><a href='http://www.mlhim.org/generic_pcts' title='A generic URI for use with Party to be used as a pointer to a demographic service record.
+
+rdf:isDefinedBy : http://www.mlhim.org/generic_pcts
+' target='_blank'>External Reference for Party - Test 2.4.5</a><br /></span>
+<div class='content'>
+       Enter a URI: <input name='pct-fadd4b97-559d-423d-a90f-49a712e6f1bf:DvURI' type='text' size='30' value=''/>
+       Relationship: <em>Party Associated with the record</em><br />
+      <span class='devonly'> Begin Valid Time:  <input name='pct-fadd4b97-559d-423d-a90f-49a712e6f1bf:valid-time-begin' type='datetime' value='1994-03-10T14:20:51'/>
+       End Valid Time: <input name='pct-fadd4b97-559d-423d-a90f-49a712e6f1bf:valid-time-end' type='datetime' value='1997-05-27T02:54:35'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+       </div>
+      details: <br />
+      <div id='c3a94922-7fed-415e-8d8c-6b184b167cdb' class='cluster collapsed'> 
+      <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_Cluster.html' title='c3a94922-7fed-415e-8d8c-6b184b167cdb' target='RM_245'>Cluster</a></span><br /><br />
+      <span class='dataname'><a href='http://www.mlhim.org/generic_pcts' title='Details cluster with address elements.
+
+rdf:isDefinedBy : http://www.mlhim.org/generic_pcts
+' target='_blank'>Address Details (US)</a><br /></span>
+<div class='content'>
+          <div id='d102a7b2-675c-432c-b7a2-1df1620e1ccc' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='d102a7b2-675c-432c-b7a2-1df1620e1ccc' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='#' title='Used for additional address lines in the US such as building name or apartment number.
+
+' target='_blank'>Additional Address Line(s) (US)</a><br /></span>
+<div class='content'>
+           Enter a string: <input name='pct-d102a7b2-675c-432c-b7a2-1df1620e1ccc:DvString' type='text' size='30' value='Default String'/>           Language: <input name='pct-d102a7b2-675c-432c-b7a2-1df1620e1ccc:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-d102a7b2-675c-432c-b7a2-1df1620e1ccc:valid-time-begin' type='datetime' value='1996-03-31T08:59:37'/>
+           End Valid Time: <input name='pct-d102a7b2-675c-432c-b7a2-1df1620e1ccc:valid-time-end' type='datetime' value='1986-12-28T09:59:28'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+          <div id='aea44d76-771e-4c34-ae69-6d37643e96b7' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='aea44d76-771e-4c34-ae69-6d37643e96b7' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='#' title='Used in US address cluster for two character US state abbreviation.
+
+' target='_blank'>State Abbreviation (USPS)</a><br /></span>
+<div class='content'>
+           Choose a value: <select name='pct-aea44d76-771e-4c34-ae69-6d37643e96b7:DvString-dv'>
+            <option value='AL' label='AL'>AL</option>
+            <option value='AK' label='AK'>AK</option>
+            <option value='AS' label='AS'>AS</option>
+            <option value='AZ' label='AZ'>AZ</option>
+            <option value='AR' label='AR'>AR</option>
+            <option value='CA' label='CA'>CA</option>
+            <option value='CO' label='CO'>CO</option>
+            <option value='CT' label='CT'>CT</option>
+            <option value='DE' label='DE'>DE</option>
+            <option value='DC' label='DC'>DC</option>
+            <option value='FM' label='FM'>FM</option>
+            <option value='FL' label='FL'>FL</option>
+            <option value='GA' label='GA'>GA</option>
+            <option value='GU' label='GU'>GU</option>
+            <option value='HI' label='HI'>HI</option>
+            <option value='ID' label='ID'>ID</option>
+            <option value='IL' label='IL'>IL</option>
+            <option value='IN' label='IN'>IN</option>
+            <option value='IA' label='IA'>IA</option>
+            <option value='KS' label='KS'>KS</option>
+            <option value='KY' label='KY'>KY</option>
+            <option value='LA' label='LA'>LA</option>
+            <option value='ME' label='ME'>ME</option>
+            <option value='MH' label='MH'>MH</option>
+            <option value='MD' label='MD'>MD</option>
+            <option value='MA' label='MA'>MA</option>
+            <option value='MI' label='MI'>MI</option>
+            <option value='MN' label='MN'>MN</option>
+            <option value='MS' label='MS'>MS</option>
+            <option value='MO' label='MO'>MO</option>
+            <option value='MT' label='MT'>MT</option>
+            <option value='NE' label='NE'>NE</option>
+            <option value='NV' label='NV'>NV</option>
+            <option value='NH' label='NH'>NH</option>
+            <option value='NJ' label='NJ'>NJ</option>
+            <option value='NM' label='NM'>NM</option>
+            <option value='NY' label='NY'>NY</option>
+            <option value='NC' label='NC'>NC</option>
+            <option value='ND' label='ND'>ND</option>
+            <option value='MP' label='MP'>MP</option>
+            <option value='CM' label='CM'>CM</option>
+            <option value='OH' label='OH'>OH</option>
+            <option value='OK' label='OK'>OK</option>
+            <option value='OR' label='OR'>OR</option>
+            <option value='PA' label='PA'>PA</option>
+            <option value='PR' label='PR'>PR</option>
+            <option value='RI' label='RI'>RI</option>
+            <option value='SC' label='SC'>SC</option>
+            <option value='SD' label='SD'>SD</option>
+            <option value='TN' label='TN'>TN</option>
+            <option value='TX' label='TX'>TX</option>
+            <option value='TT' label='TT'>TT</option>
+            <option value='AA' label='AA'>AA</option>
+            <option value='AE' label='AE'>AE</option>
+            <option value='AP' label='AP'>AP</option>
+            <option value='UT' label='UT'>UT</option>
+            <option value='VT' label='VT'>VT</option>
+            <option value='VI' label='VI'>VI</option>
+            <option value='VA' label='VA'>VA</option>
+            <option value='WA' label='WA'>WA</option>
+            <option value='WV' label='WV'>WV</option>
+            <option value='WI' label='WI'>WI</option>
+            <option value='WY' label='WY'>WY</option>
+          </select><br />
+           Language: <input name='pct-aea44d76-771e-4c34-ae69-6d37643e96b7:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-aea44d76-771e-4c34-ae69-6d37643e96b7:valid-time-begin' type='datetime' value='1996-05-07T19:01:50'/>
+           End Valid Time: <input name='pct-aea44d76-771e-4c34-ae69-6d37643e96b7:valid-time-end' type='datetime' value='1986-08-29T18:03:33'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+          <div id='ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='#' title='A single line US Street number and name. The typical format is:
+123 Main St. 
+
+' target='_blank'>Street Number and Name (US)</a><br /></span>
+<div class='content'>
+           Enter a string: <input name='pct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8:DvString' type='text' size='30' value='Default String'/>           Language: <input name='pct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8:valid-time-begin' type='datetime' value='1975-02-13T11:53:16'/>
+           End Valid Time: <input name='pct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8:valid-time-end' type='datetime' value='1981-06-12T07:36:53'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+          <div id='9c65478e-5cdf-413b-aa54-ce0574e48374' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='9c65478e-5cdf-413b-aa54-ce0574e48374' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='#' title='A US telephone number. Exactly 12 characters; 111-111-1111 with a pattern match of "[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+
+' target='_blank'>Telephone Number (US)</a><br /></span>
+<div class='content'>
+           Enter a string: <input name='pct-9c65478e-5cdf-413b-aa54-ce0574e48374:DvString' type='text' size='30' value='111-111-1111'/>           Language: <input name='pct-9c65478e-5cdf-413b-aa54-ce0574e48374:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-9c65478e-5cdf-413b-aa54-ce0574e48374:valid-time-begin' type='datetime' value='1995-10-29T02:07:59'/>
+           End Valid Time: <input name='pct-9c65478e-5cdf-413b-aa54-ce0574e48374:valid-time-end' type='datetime' value='2000-11-11T09:13:59'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+          <div id='3a45af86-b8fd-4161-b9e0-4ccf6322493a' class='dvstring collapsed'> 
+          <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvString.html' title='3a45af86-b8fd-4161-b9e0-4ccf6322493a' target='RM_245'>DvString</a></span><br /><br />
+          <span class='dataname'><a href='https://www.usps.com/' title='Used in address cluster for US Zip (postal) Codes. Minimum of 5 characters with a maximum of 10 characters. Accommodates the older 5 character codes or the Zip+4 with the additional 4 characters following a dash. 
+
+Examples:
+12345
+12345-0987 
+
+rdf:isDefinedBy : https://www.usps.com/
+' target='_blank'>Zip Code (US)</a><br /></span>
+<div class='content'>
+           Enter a string: <input name='pct-3a45af86-b8fd-4161-b9e0-4ccf6322493a:DvString' type='text' size='30' value='Default String'/>           Language: <input name='pct-3a45af86-b8fd-4161-b9e0-4ccf6322493a:language' type='text' size='6' value='en-US'/><br />
+          <span class='devonly'> Begin Valid Time:  <input name='pct-3a45af86-b8fd-4161-b9e0-4ccf6322493a:valid-time-begin' type='datetime' value='2007-05-09T17:56:28'/>
+           End Valid Time: <input name='pct-3a45af86-b8fd-4161-b9e0-4ccf6322493a:valid-time-end' type='datetime' value='2010-01-08T21:08:14'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+           </div>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+       </div>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+     </div>
+   other-participations: <br />
+  <b>No other-paticipations defined.</b><br />
+   protocol-id: <br />
+  <b>No protocol-id defined.</b><br />
+   workflow-id: <br />
+  <b>No workflow-id defined.</b><br />
+   attestation: <br />
+  <b>No attestation defined.</b><br />
+
+</div> <!-- closes the devonly section -->
+
+<div class='entry-data collapsed'>
+<a name='entry-data' id='entry-data'>Entry data:</a><br />
+   entry-data: <br />
+        <div id='af96cb66-baff-4433-acad-7f5051744b52' class='cluster collapsed'> 
+    <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_Cluster.html' title='af96cb66-baff-4433-acad-7f5051744b52' target='RM_245'>Cluster</a></span><br /><br />
+    <span class='dataname'><a href='https://github.com/mlhim/specs/tree/2_4_5/2_4_5/examples' title='Example Cluster for AdminEntry for 2.4.5 reference implementation.
+
+rdf:isDefinedBy : https://github.com/mlhim/specs/tree/2_4_5/2_4_5/examples
+' target='_blank'>Example Cluster for AdminEntry</a><br /></span>
+<div class='content'>
+        <div id='869a8d90-16d5-4af6-91ec-acc5983ab0f0' class='dvboolean  collapsed'> 
+        <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvBoolean.html' title='869a8d90-16d5-4af6-91ec-acc5983ab0f0' target='RM_245'>DvBoolean</a></span><br /><br />
+        <span class='dataname'><a href='http://www.hl7.org/implement/standards/fhir/patient-definitions.html#Patient.active' title='Whether this patient record is in active use.
+
+rdf:isDefinedBy : http://www.hl7.org/implement/standards/fhir/patient-definitions.html#Patient.active
+' target='_blank'>Patient active</a><br /></span>
+<div class='content'>
+         Choose a True value: <select name='pct-869a8d90-16d5-4af6-91ec-acc5983ab0f0:valid-true'>
+          <option value='-------' label='-------'>-------</option><br />
+          <option value='yes' label='yes'>yes</option><br />
+         OR choose a False value: <select name='pct-869a8d90-16d5-4af6-91ec-acc5983ab0f0:valid-false'>
+          <option value='-------' label='-------'>-------</option><br />
+          <option value='no' label='no'>no</option><br />
+        </select><br />
+        <span class='devonly'> Begin Valid Time:  <input name='pct-869a8d90-16d5-4af6-91ec-acc5983ab0f0:valid-time-begin' type='datetime' value='1983-02-03T23:45:21'/>
+         End Valid Time: <input name='pct-869a8d90-16d5-4af6-91ec-acc5983ab0f0:valid-time-end' type='datetime' value='1983-12-27T05:32:08'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+         </div>
+        <div id='5afc20d1-72ec-4d8c-b95d-288346efcbfd' class='dvstring collapsed'> 
+        <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvIdentifier.html' title='5afc20d1-72ec-4d8c-b95d-288346efcbfd' target='RM_245'>DvIdentifier</a></span><br /><br />
+        <span class='dataname'><a href='https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2518985&version=1.0' title='An example set of Identifiers. 
+
+rdf:isDefinedBy : https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2518985&version=1.0
+' target='_blank'>Insurance Provider</a><br /></span>
+<div class='content'>
+         Enter an identifier: <input name='pct-5afc20d1-72ec-4d8c-b95d-288346efcbfd:DvIdentifier' type='text' size='30' value='Default String'/>         Language: <input name='pct-5afc20d1-72ec-4d8c-b95d-288346efcbfd:language' type='text' size='6' value='en-US'/><br />
+         Choose ID Name: <select name='pct-5afc20d1-72ec-4d8c-b95d-288346efcbfd:DvString-dv'>
+          <option value='Policy Number' label='Policy Number'>Policy Number</option>
+          <option value='Policy Number' label='Policy Number'>Policy Number</option>
+          <option value='Policy Number' label='Policy Number'>Policy Number</option>
+          <option value='Policy Number' label='Policy Number'>Policy Number</option>
+          <option value='SSN' label='SSN'>SSN</option>
+        </select><br />
+        <span class='devonly'> Begin Valid Time:  <input name='pct-5afc20d1-72ec-4d8c-b95d-288346efcbfd:valid-time-begin' type='datetime' value='1995-06-02T17:03:39'/>
+         End Valid Time: <input name='pct-5afc20d1-72ec-4d8c-b95d-288346efcbfd:valid-time-end' type='datetime' value='2019-01-20T07:28:25'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+         </div>
+        <div id='ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c' class='dvencapsulated collapsed'> 
+        <span class='devonly pcttype'><a href='http://mlhim.org/rm245_html/mlhim245_xsd_Element_mlhim245_DvMedia.html' title='ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c' target='RM_245'>DvMedia</a></span><br /><br />
+        <span class='dataname'><a href='http://www.hl7.org/implement/standards/fhir/practitioner-definitions.html#Patient.photo' title='Image of the person. Reused from FHIR.
+
+rdf:isDefinedBy : http://www.hl7.org/implement/standards/fhir/practitioner-definitions.html#Patient.photo
+' target='_blank'>Patient Photo</a><br /></span>
+<div class='content'>
+         Size (bytes):  <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:size' type='number' value='0'/>
+         Encoding: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:encoding' type='text' value='utf-8'/>
+         Language:  <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:language' type='text' value='en-US'/><br />
+         MIME Type: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:mime-type' type='text' value=''/>
+         Compression Type: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:compression-type' type='text' value=''/><br />
+         HASH Result: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:hash-result' type='text' value=''/>
+         HASH Function: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:hash-function' type='text' value=''/><br />
+         Alt. Text: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:alt-txt' type='text' value=''/>
+         URI: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:uri' type='text' value=''/><br />
+         Media Content: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:media-content' type='text' value=''/><br />
+        <span class='devonly'> Begin Valid Time:  <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:valid-time-begin' type='datetime' value='2010-03-30T05:06:57'/>
+         End Valid Time: <input name='pct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c:valid-time-end' type='datetime' value='1983-08-31T20:47:18'/><br /></span>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+         </div>
+<button type='button' class='btn btn-danger hidebutton'>Close</button>
+</div>
+     </div>
+  </div></form>
+</div>
+  <div><span class='ccdtitle' style='background-color: lightgreen;'>Created using the CCD-Gen!</span><span style='float: right; font-size: 8px;'>form design contributions by <a href='https://www.google.com/+MichalZubkowiczMZ'>Michal Zubkowicz</a></span><br />
+  <span class='ccdid'>2014-09-17 10:32</span><br /></div>
+</div>
+</body>
+</html>

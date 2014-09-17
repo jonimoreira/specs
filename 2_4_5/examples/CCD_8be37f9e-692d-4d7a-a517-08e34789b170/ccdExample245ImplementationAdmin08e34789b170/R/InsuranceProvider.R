@@ -1,0 +1,138 @@
+# Copyright 2014, Timothy W. Cook <tim@mlhim.org>
+# Licensed under the Apache License, Version 2.0 (the 'License');
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an 'AS IS' BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#' Convert XML instance subset to a dataframe.
+#'
+#' Returns a data.frame of the collected nodes of: \code{Insurance Provider} from the XML instance passed as fileName.
+#' The XML element name is el-5afc20d1-72ec-4d8c-b95d-288346efcbfd as a restriction of the mlhim245:DvIdentifier
+#' The vectors are: ccd, data_name, ev-name, valid_time_begin, valid_time_end, ev_name, fileName,
+#' DvString_dv, language, id_name, issuer, assignor
+#' 
+#' An example set of Identifiers. 
+#' 
+#' @references
+#' The data is structured according to the Multi-Level Healthcare Information Modelling (MLHIM) Reference Model (RM) 2.4.5
+#' \url{http://www.mlhim.org}
+#' The semantic reference(s) for this data:
+#' @references
+#' \code{rdf:isDefinedBy} \url{https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2518985&version=1.0}
+#' 
+#' @param fileList - The path/file name(s) of the XML file(s) to process.
+#' @return A dataframe consisting of the vectors listed in the Description.
+#' 
+#' @examples
+#' files <- dir('./inst/examples', recursive=TRUE, full.names=TRUE, pattern='\\.xml$')
+#' InsuranceProvider <- getInsuranceProvider(files) 
+#' 
+#' @export
+getInsuranceProvider <- function(fileList)
+{
+    ldata <- lapply(fileList, parseInsuranceProvider)
+    clean <- ldata[!is.na(ldata)]
+    data <- do.call(rbind,clean)
+    return(data)
+}
+
+parseInsuranceProvider <- function(fileName)
+{
+  ccduri <- ccduri() # function in each CCD metadata file
+  nsDEF <- nsDEF() # function in each CCD metadata file
+  doc <- xmlTreeParse(fileName, handlers=list('comment'=function(x,...){NULL}), asTree = TRUE)
+  root <- xmlRoot(doc)
+  pct <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd', nsDEF)
+  # assign common vectors a default
+  data_name <- 'Invalid data -- Missing data-name.'
+  ev_name <- NA
+  valid_time_begin <- NA
+  valid_time_end <- NA
+  if (length(pct) > 0)
+  {
+      ccd <- xmlName(root)
+      # test for an ExceptionalValue
+      children <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/child::node()', nsDEF)
+      if (!is.na(charmatch('mlhim245:',children[[2]]))) # the exceptional value elements are in the RM namespace
+      {
+        n <- getNodeSet(root, paste('//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/',xmlName(children[[2]]),'/ev-name'), nsDEF)
+        ev_name <- xmlValue(n[[1]])
+      }
+      
+      n <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/data-name', nsDEF)
+      if (length(n) > 0)
+      {
+        data_name <- xmlValue(n[[1]])
+      }
+      
+      n <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/valid-time-begin', nsDEF)
+      if (length(n) > 0)
+      {
+        ds <- xmlValue(n[[1]])
+        ds <- gsub('T', ' ', ds)
+        valid_time_begin <- as.POSIXct(ds)
+      }
+      
+      n <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/valid-time-end', nsDEF)
+      if (length(n) > 0)
+      {
+        ds <- xmlValue(n[[1]])
+        ds <- gsub('T', ' ', ds)
+        valid_time_end <- as.POSIXct(ds)
+      }
+  
+      # PcT defaults
+      DvString_dv <- NA
+      language <- NA
+      id_name <- NA
+      issuer <- NA
+      assignor <- NA
+      
+      n <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/DvString-dv', nsDEF)
+      if (length(n) > 0)
+      {
+        DvString_dv <- xmlValue(n[[1]])
+      }
+      
+      n <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/language', nsDEF)
+      if (length(n) > 0)
+      {
+        language <- xmlValue(n[[1]])
+      }
+      
+      n <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/id-name', nsDEF)
+      if (length(n) > 0)
+      {
+        id_name <- xmlValue(n[[1]])
+      }
+      
+      n <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/issuer', nsDEF)
+      if (length(n) > 0)
+      {
+        issuer <- xmlValue(n[[1]])
+      }
+      
+      n <- getNodeSet(root, '//ccd:el-5afc20d1-72ec-4d8c-b95d-288346efcbfd/assignor', nsDEF)
+      if (length(n) > 0)
+      {
+        assignor <- xmlValue(n[[1]])
+      }
+      
+      data <- data.frame(ccd, data_name, valid_time_begin, valid_time_end,
+                         DvString_dv,language,id_name, issuer, assignor,
+                         ev_name, fileName, stringsAsFactors = FALSE)
+      
+  
+  } else
+  {
+      data <- NA
+  }
+  
+  return(data)
+  
+}
