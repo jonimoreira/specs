@@ -90,13 +90,13 @@ parsePatientactive <- function(fileName)
       valid_true <- NA
       valid_false <- NA
       
-      n <- getNodeSet(root, '//ccd:el-869a8d90-16d5-4af6-91ec-acc5983ab0f0/valid_true', nsDEF)
+      n <- getNodeSet(root, '//ccd:el-869a8d90-16d5-4af6-91ec-acc5983ab0f0/valid-true', nsDEF)
       if (length(n) > 0)
       {
         valid_true <- xmlValue(n[[1]])
       }
       
-      n <- getNodeSet(root, '//ccd:el-869a8d90-16d5-4af6-91ec-acc5983ab0f0/valid_false', nsDEF)
+      n <- getNodeSet(root, '//ccd:el-869a8d90-16d5-4af6-91ec-acc5983ab0f0/valid-false', nsDEF)
       if (length(n) > 0)
       {
         valid_false <- xmlValue(n[[1]])

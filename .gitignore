@@ -47,7 +47,12 @@ nosetests.xml
 
 #oXygen
 *.xpr
+#R Project
+.RData
+.Rbuildignore
+.Rhistory
 
 #misc.
 graphics/Vinheta MLHIM/*
 *.zip
+.Rproj.user
