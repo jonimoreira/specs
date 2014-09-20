@@ -42,7 +42,7 @@ Participation, Attestation and DvMedia.
 Demographic
 -----------
 CCD ID: 
-This CCD has an entry-data Cluster that contains two Clusters (Name Cluster and Address with telephone number Cluster) with three additional datatypes for date of birth, ethnicity and education, at the same hierarchical level as the Clusters.
+This CCD has an entry-data Cluster that contains two Clusters (Person Name Cluster and Address Cluster) with four additional datatypes for gender, date of birth, ethnicity and education, at the same hierarchical level as the Clusters.
 
 The PcTs used here are DvString, DvOrdinal, DvTemporal
 The telephone number PcT demonstrates the use of an xs:assert to validate the format of the DvString-dv. 
