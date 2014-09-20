@@ -23,7 +23,9 @@ Additional information can be found in the MLHIM 2.4.5 User Manual.
 
 Admin
 -----
-CCD ID: 
+CCD ID: ccd-8be37f9e-692d-4d7a-a517-08e34789b170
+
+
 This CCD has an entry-data Cluster with current photo, insurance ID for accepted carriers and an active patient flag.
 This one demonstrates an AdminEntry type with one small Cluster with PcTs for; DvMedia, DvIdentifier and DvBoolean.
 This is one of the simplest type of CCD and does not have any audit tracking, workflow, etc.
@@ -31,7 +33,9 @@ This is one of the simplest type of CCD and does not have any audit tracking, wo
 
 Care
 ----
-CCD ID: 
+CCD ID: ccd-e1f92636-e27d-4eb4-a540-79a41354722a
+
+
 This CCD has information about a person's height, weight, Medication Administration dosage rate, blood pressure, pulse rate, body temperature. 
 This one demonstrates an CareEntry type with three Clusters in the entry-data Cluster. This CCD has full audit trail, workflow, etc. capbilities.
 
@@ -41,7 +45,9 @@ Participation, Attestation and DvMedia.
 
 Demographic
 -----------
-CCD ID: 
+CCD ID: ccd-206943cb-c1d0-44a2-be42-f1f67f15e9f9 
+
+
 This CCD has an entry-data Cluster that contains two Clusters (Person Name Cluster and Address Cluster) with four additional datatypes for gender, date of birth, ethnicity and education, at the same hierarchical level as the Clusters.
 
 The PcTs used here are DvString, DvOrdinal, DvTemporal
