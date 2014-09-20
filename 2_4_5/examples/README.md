@@ -32,9 +32,8 @@ This is one of the simplest type of CCD and does not have any audit tracking, wo
 Care
 ----
 CCD ID: 
-This CCD has information about a person's height, weight, Medication Administration dosage rate, blood pressure, pulse rate, body temperature and TB diagnosis. 
-This one demonstrates an CareEntry type with three Clusters in the entry-data Cluster. This CCD has full audit trail, workflow, etc.
-capbilities.
+This CCD has information about a person's height, weight, Medication Administration dosage rate, blood pressure, pulse rate, body temperature. 
+This one demonstrates an CareEntry type with three Clusters in the entry-data Cluster. This CCD has full audit trail, workflow, etc. capbilities.
 
 The PcTs used are; DvQuantity, DvCount, DvRatio, DvParsable, ReferenceRange, DvInterval, DvCodedString, DvURI, Party. 
 Participation, Attestation and DvMedia.

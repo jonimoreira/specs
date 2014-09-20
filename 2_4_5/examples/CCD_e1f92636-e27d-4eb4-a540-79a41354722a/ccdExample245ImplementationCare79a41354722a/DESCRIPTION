@@ -1,0 +1,14 @@
+Package: ccdExample245ImplementationCare79a41354722a
+Type: Package
+Title: ccdExample245ImplementationCare79a41354722a
+Version: 1.0
+Date: 2014-09-20
+Author: Timothy W. Cook <tim@mlhim.org>
+Maintainer: Timothy W. Cook <tim@mlhim.org>
+Description: Creates a data frame from instances of the MLHIM CCD for:
+  Example 2.4.5 Implementation (Care)
+  The CCD ID is: e1f92636-e27d-4eb4-a540-79a41354722a
+  Example CCD-Gen Implementation of the MLHIM 2.4.5 RM functionality.
+License: Apache License 2.0
+Depends: 
+  XML
