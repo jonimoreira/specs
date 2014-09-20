@@ -121,12 +121,12 @@ parseMedicationAdministrationdosagerateTest245 <- function(fileName)
        {
          magnitude <- as.numeric(xmlValue(n[[1]]))
        }
-       n <- getNodeSet(root, '//ccd:el-aea9a220-7ed5-444c-9044-5f26c584eed1/mlhim244:ratio-type', nsDEF)
+       n <- getNodeSet(root, '//ccd:el-aea9a220-7ed5-444c-9044-5f26c584eed1/mlhim245:ratio-type', nsDEF)
        if (length(n) > 0)
         {
          ratio_type <- xmlValue(n[[1]])
         }
-       n <- getNodeSet(root, '//ccd:el-aea9a220-7ed5-444c-9044-5f26c584eed1/mlhim244:magnitude-status', nsDEF)
+       n <- getNodeSet(root, '//ccd:el-aea9a220-7ed5-444c-9044-5f26c584eed1/mlhim245:magnitude-status', nsDEF)
        if (length(n) > 0)
         {
          magnitude_status <- xmlValue(n[[1]])
