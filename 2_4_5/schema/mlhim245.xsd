@@ -69,8 +69,6 @@
   </xs:complexType>
   <xs:element abstract="true" name="DvAny" type="mlhim245:DvAnyType"/>
 
-
-
   <xs:complexType name="DvBooleanType">
     <xs:annotation>
       <xs:documentation>Items which represent boolean decisions, such as true/false or yes/no
