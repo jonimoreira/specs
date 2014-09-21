@@ -78,10 +78,7 @@
         subjective data) carefully, so that the only allowed results are in fact true or false.
         Potential Misuse: The DvBooleanType should not be used as a replacement for naively modelled
         enumerated types such as male/female etc. Such values should be coded, and in any case the
-        enumeration often has more than two values. Though the DvBoolean-dv element is a String type
-        this is to easily allow responses that the user is more familiar with using in the context
-        such as 'Yes', 'No' or 'True', 'False'. A conversion method is required to convert the
-        valid-trues to True and the valid-falses to False. </xs:documentation>
+        enumeration often has more than two values.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim245:DvAnyType">
