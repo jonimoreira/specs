@@ -577,24 +577,24 @@
                 contained in the denominator) </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="numerator" type="xs:decimal">
+          <xs:element maxOccurs="1" minOccurs="0" name="numerator" type="xs:decimal">
             <xs:annotation>
               <xs:documentation>numerator of ratio </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name="denominator" type="xs:decimal">
+          <xs:element maxOccurs="1" minOccurs="0" name="denominator" type="xs:decimal">
             <xs:annotation>
               <xs:documentation>denominator of ratio </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim245:numerator-units">
+          <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:numerator-units">
             <xs:annotation>
               <xs:documentation>Used to convey the meaning of the numerator. Typically countable
                 units such as; cigarettes, drinks, exercise periods, etc. May or may not come from a
                 terminology such as OBO Foundry Units ontology. </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim245:denominator-units">
+          <xs:element maxOccurs="1" minOccurs="0" ref="mlhim245:denominator-units">
             <xs:annotation>
               <xs:documentation>Used to convey the meaning of the denominator. Typically units such
                 as; days, years, months, etc. May or may not come from a standard terminology.
