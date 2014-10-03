@@ -11,7 +11,7 @@ After release, the only changes allowed in the Reference Model implementation (X
 A signed, compressed (zip) download is available here: https://launchpad.net/mlhim-specs Look for the large, green button. 
 The release package contains a reference implementation, documentation, mindmap files, UML diagrams and useful user information. 
 
-Technical documentation for ther eference implementation in XML Schema 1.1 and RDF/XML is available from the
+Technical documentation for the XML Schema 1.1 and RDF/XML reference implementation, is available from the
 [MLHIM website](http://mlhim.org/documents.html).
 
 See the mlhim/tools repository for more examples and tools. 
