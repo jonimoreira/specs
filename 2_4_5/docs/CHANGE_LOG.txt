@@ -1,7 +1,10 @@
-#Changes from 2.4.4 to 2.4.5                       
+#Changes from 2.4.4 to 2.4.5  (see the git commit msgs. for details)                     
     Modified DvBooleanType to use valid-true or valid-false in a xs:choice and deleted DvBoolean-dv. 
-
-
+    Modified DvIntervalType to improve validation of the upper and lower data type selections. 
+    Added AuditType to simplify and improve the audit trail functionality.
+    Removed FeederAuditType and FeederAuditDetailsType.
+    Modified entry-audit to use the new AuditType. Set maxOccurs to unbounded so each step in processing gets a new audit element. 
+    Modified DvRatio numerator and denominator minOccurs to 0 (zero) to support modeling of adimensional ratios without these    being explicit. Also modified their related units requirement to zero. Examples of this are odds ratios. 
 
 #Changes from 2.4.3 to 2.4.4                       
        moving from master to 2_4_4                

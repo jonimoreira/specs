@@ -1,0 +1,41 @@
+# Copyright 2014, Timothy W. Cook <tim@mlhim.org>
+# metadata.R for ccd-8be37f9e-692d-4d7a-a517-08e34789b170.xsd
+# Licensed under the Apache License, Version 2.0 (the 'License');
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an 'AS IS' BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#' @title getMetadata
+#'
+#' The Concept Constraint Definition (CCD) Metadata
+#' @export
+getMetadata <- data.frame(
+  dc_title='Example 2.4.5 Implementation (Admin)',
+  dc_creator='Tim Cook <tim@mlhim.org>',
+  dc_contributors='None',
+  dc_subject='Test 2.4.5 AdminEntry',
+  dc_source='http://www.mlhim.org',
+  dc_relation='None',
+  dc_coverage='Universal',
+  dc_type='MLHIM Concept Constraint Definition (CCD)',
+  dc_identifier='ccd-8be37f9e-692d-4d7a-a517-08e34789b170',
+  dc_description='Example CCD-Gen Implementation of the MLHIM 2.4.5 RM functionality.',
+  dc_publisher='MLHIM LAB, UERJ',
+  dc_date=as.POSIXct(strptime('2014-09-17 13:3211', '%Y-%m-%d %HH:%MM%SS')),
+  dc_format='text/xml',
+  dc_language='en-us',
+  stringsAsFactors=FALSE)
+  
+nsDEF <- function(){
+  return(c(ccd='http://www.mlhim.org/ccd',mlhim245='http://www.mlhim.org/xmlns/mlhim2/2_4_5'))  
+} 
+
+ccduri <- function(){
+    return('http://www.ccdgen.com/ccdlib/ccd-8be37f9e-692d-4d7a-a517-08e34789b170.xsd')
+}
+
