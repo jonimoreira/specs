@@ -1,0 +1,1061 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema  xmlns:xs='http://www.w3.org/2001/XMLSchema'
+  xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+  xmlns:owl='http://www.w3.org/2002/07/owl#'
+  xmlns:dc='http://purl.org/dc/elements/1.1/'
+  xmlns:sawsdl='http://www.w3.org/ns/sawsdl'
+  xmlns:sawsdlrdf='http://www.w3.org/ns/sawsdl#'
+  xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
+  xmlns:vc='http://www.w3.org/2007/XMLSchema-versioning' vc:minVersion='1.1'
+>
+
+  <!-- Import the Reference Model -->
+  <xs:include schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246.xsd'/>
+
+  <!-- METADATA Section -->
+  <xs:annotation>
+    <xs:appinfo>
+    <rdf:RDF>
+    <rdf:Description rdf:about='http://www.ccdgen.com/ccdlib/ccd-8be37f9e-692d-4d7a-a517-08e34789b170.xsd'>
+      <dc:title>Example 2.4.6 Implementation (Admin)</dc:title>
+      <dc:creator>Tim Cook tim@mlhim.org</dc:creator>
+      <dc:contributor>None</dc:contributor>
+      <dc:subject>Test 2.4.6 AdminEntry;Test 2.4.6</dc:subject>
+      <dc:source>http://www.mlhim.org</dc:source>
+      <dc:rights>CC-BY http://creativecommons.org/licenses/by/3.0/</dc:rights>
+      <dc:relation>None</dc:relation>
+      <dc:coverage>Universal</dc:coverage>
+      <dc:type>MLHIM Concept Constraint Definition (CCD)</dc:type>
+      <dc:identifier>ccd-8be37f9e-692d-4d7a-a517-08e34789b170</dc:identifier>
+      <dc:description>
+        Example CCD-Gen Implementation of the MLHIM 2.4.5 RM functionality.
+        This CCD was created by the CCD-Gen application.
+      </dc:description>
+      <dc:publisher>MLHIM LAB, UERJ</dc:publisher>
+      <dc:date>2014-09-17 13:32:02.725624+00:00</dc:date>
+      <dc:format>text/xml</dc:format>
+      <dc:language>en-US</dc:language>
+    </rdf:Description>
+    </rdf:RDF>
+    </xs:appinfo>
+  </xs:annotation>
+
+  <!-- CCD Root Element -->
+  <xs:element name='ccd-8be37f9e-692d-4d7a-a517-08e34789b170' type='ct-8be37f9e-692d-4d7a-a517-08e34789b170'/>
+  <xs:complexType name='ct-8be37f9e-692d-4d7a-a517-08e34789b170'> <!-- Example 2.4.5 Implementation (Admin) -->
+    <xs:complexContent>
+      <xs:restriction base='CCDType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-03be8eda-7039-47c6-9972-d8c48b26e247'/> <!-- definition -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+    <!-- CCD Components Begin Below -->
+
+  <xs:complexType name='ct-03be8eda-7039-47c6-9972-d8c48b26e247'> <!-- Example for 2.4.5 -->
+    <xs:annotation>
+    <xs:documentation>
+      This example is on GitHub. It is basically the smallest possible CCD Entry with only three datatypes in one Cluster.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-03be8eda-7039-47c6-9972-d8c48b26e247'>
+    <rdf:isDefinedBy rdf:resource='https%3A//github.com/mlhim/specs/tree/2_4_5/2_4_5/examples'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='AdminEntryType'>
+        <xs:sequence>
+          <xs:element maxOccurs='unbounded' minOccurs='0' ref='entry-links'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='entry-audit'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='language' type='xs:language' fixed='en-US'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='encoding' type='xs:string' fixed='utf-8'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-7d7d1225-dd95-457e-a838-0bdca7be448f'/> <!-- entry-subject -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-6556e8e9-1646-4b38-bab0-72353c13c035'/> <!-- entry-provider -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='other-participations'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='protocol-id'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='current-state' type='xs:string' default=''/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='workflow-id'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='attestation'/>
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-af96cb66-baff-4433-acad-7f5051744b52'/> <!-- entry-data -->
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+
+
+  <xs:complexType name='ct-7d7d1225-dd95-457e-a838-0bdca7be448f' xml:lang='en-US'> <!-- Subject of the Entry (US) -->
+    <xs:annotation>
+    <xs:documentation>
+      A generic Entry Subject.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-7d7d1225-dd95-457e-a838-0bdca7be448f'>
+    <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='PartyType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='party-name' type='xs:string'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='external-ref'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+
+
+  <xs:complexType name='ct-c3a94922-7fed-415e-8d8c-6b184b167cdb'> <!-- Address Details (US) -->
+    <xs:annotation>
+    <xs:documentation>
+      Details cluster with address elements.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-c3a94922-7fed-415e-8d8c-6b184b167cdb'>
+    <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='ClusterType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Address Details (US)"/>
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-81450576-b284-4c9c-a48b-fce809dab869'/><!-- DvString Additional Address Line(s) (US) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-3f8ea455-9e59-46ac-9889-15ef78040ebf'/><!-- DvString State Abbreviation (USPS) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12'/><!-- DvString Street Number and Name (US) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-ed052649-7ccc-49f7-8de4-54dd37227e3f'/><!-- DvString Telephone Number (US) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-4ed453ea-0435-4366-83f4-bb444c2a4885'/><!-- DvString Zip Code (US) -->
+        </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:complexType name='ct-d102a7b2-675c-432c-b7a2-1df1620e1ccc' xml:lang='en-US'> <!-- Additional Address Line(s) (US) -->
+    <xs:annotation>
+    <xs:documentation>
+      Used for additional address lines in the US such as building name or apartment number.
+    </xs:documentation>
+    <xs:appinfo>
+    <!--No valid semantic links for  ct-d102a7b2-675c-432c-b7a2-1df1620e1ccc : Additional Address Line(s) (US) -->
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvStringType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Additional Address Line(s) (US)"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:element name='el-81450576-b284-4c9c-a48b-fce809dab869' substitutionGroup='items' type='ct-81450576-b284-4c9c-a48b-fce809dab869'/>
+  <xs:complexType name='ct-81450576-b284-4c9c-a48b-fce809dab869'> <!-- Adapter for: Additional Address Line(s) (US) -->
+    <xs:complexContent>
+      <xs:restriction base='DvAdapterType'>
+        <xs:sequence>
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-d102a7b2-675c-432c-b7a2-1df1620e1ccc'/> <!-- Reference to: Additional Address Line(s) (US) -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name='ct-aea44d76-771e-4c34-ae69-6d37643e96b7' xml:lang='en-US'> <!-- State Abbreviation (USPS) -->
+    <xs:annotation>
+    <xs:documentation>
+      Used in US address cluster for two character US state abbreviation.
+    </xs:documentation>
+    <xs:appinfo>
+    <!--No valid semantic links for  ct-aea44d76-771e-4c34-ae69-6d37643e96b7 : State Abbreviation (USPS) -->
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvStringType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="State Abbreviation (USPS)"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
+              <xs:simpleType>
+                <xs:restriction base='xs:string'>
+                  <xs:enumeration value='AL'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Alabama
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='AK'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Alaska
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='AS'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      American Samoa
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='AZ'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Arizona
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='AR'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Arkansas
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='CA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      California
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='CO'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Colorado
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='CT'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Connecticut
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='DE'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Delaware
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='DC'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      District of Columbia
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='FM'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Federated States of Micronesia
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='FL'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Florida
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='GA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Georgia
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='GU'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Guam
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='HI'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Hawaii
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='ID'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Idaho
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='IL'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Illinois
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='IN'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Indiana
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='IA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Iowa
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='KS'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Kansas
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='KY'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Kentucky
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='LA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Louisiana
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='ME'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Maine
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MH'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Marshall Islands
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MD'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Maryland
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Massachusetts
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MI'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Michigan
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MN'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Minnesota
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MS'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Mississippi
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MO'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Missouri
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MT'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Montana
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='NE'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Nebraska
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='NV'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Nevada
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='NH'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      New Hampshire
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='NJ'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      New Jersey
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='NM'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      New Mexico
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='NY'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      New York
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='NC'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      North Carolina
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='ND'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      North Dakota
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='MP'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Northern Mariana Islands
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='CM'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Northern Mariana Islands
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='OH'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Ohio
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='OK'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Oklahoma
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='OR'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Oregon
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='PA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Pennsylvania
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='PR'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Puerto Rico
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='RI'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Rhode Island
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='SC'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      South Carolina
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='SD'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      South Dakota
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='TN'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Tennessee
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='TX'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Texas
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='TT'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Trust Territory of the Pacific Islands
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='AA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      U.S. Armed Forces – Americas
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='AE'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      U.S. Armed Forces – Europe
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='AP'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      U.S. Armed Forces – Pacific
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='UT'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Utah
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='VT'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Vermont
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='VI'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Virgin Islands
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='VA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Virginia
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='WA'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Washington
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='WV'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      West Virginia
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='WI'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Wisconsin
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='WY'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Wyoming
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:element name='el-3f8ea455-9e59-46ac-9889-15ef78040ebf' substitutionGroup='items' type='ct-3f8ea455-9e59-46ac-9889-15ef78040ebf'/>
+  <xs:complexType name='ct-3f8ea455-9e59-46ac-9889-15ef78040ebf'> <!-- Adapter for: State Abbreviation (USPS) -->
+    <xs:complexContent>
+      <xs:restriction base='DvAdapterType'>
+        <xs:sequence>
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-aea44d76-771e-4c34-ae69-6d37643e96b7'/> <!-- Reference to: State Abbreviation (USPS) -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name='ct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8' xml:lang='en-US'> <!-- Street Number and Name (US) -->
+    <xs:annotation>
+    <xs:documentation>
+      A single line US Street number and name. The typical format is:
+123 Main St. 
+    </xs:documentation>
+    <xs:appinfo>
+    <!--No valid semantic links for  ct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8 : Street Number and Name (US) -->
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvStringType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Street Number and Name (US)"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:element name='el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12' substitutionGroup='items' type='ct-d2bdf7e2-bb37-457f-8782-ee22fb8cee12'/>
+  <xs:complexType name='ct-d2bdf7e2-bb37-457f-8782-ee22fb8cee12'> <!-- Adapter for: Street Number and Name (US) -->
+    <xs:complexContent>
+      <xs:restriction base='DvAdapterType'>
+        <xs:sequence>
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8'/> <!-- Reference to: Street Number and Name (US) -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name='ct-9c65478e-5cdf-413b-aa54-ce0574e48374' xml:lang='en-US'> <!-- Telephone Number (US) -->
+    <xs:annotation>
+    <xs:documentation>
+      A US telephone number. Exactly 12 characters; 111-111-1111 with a pattern match of "[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+    </xs:documentation>
+    <xs:appinfo>
+    <!--No valid semantic links for  ct-9c65478e-5cdf-413b-aa54-ce0574e48374 : Telephone Number (US) -->
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvStringType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Telephone Number (US)"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string' default='111-111-1111'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
+          </xs:sequence>
+          <xs:assert test="matches(DvString-dv, '[0-9]{3}-[0-9]{3}-[0-9]{4}')"/>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:element name='el-ed052649-7ccc-49f7-8de4-54dd37227e3f' substitutionGroup='items' type='ct-ed052649-7ccc-49f7-8de4-54dd37227e3f'/>
+  <xs:complexType name='ct-ed052649-7ccc-49f7-8de4-54dd37227e3f'> <!-- Adapter for: Telephone Number (US) -->
+    <xs:complexContent>
+      <xs:restriction base='DvAdapterType'>
+        <xs:sequence>
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-9c65478e-5cdf-413b-aa54-ce0574e48374'/> <!-- Reference to: Telephone Number (US) -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name='ct-3a45af86-b8fd-4161-b9e0-4ccf6322493a' xml:lang='en-US'> <!-- Zip Code (US) -->
+    <xs:annotation>
+    <xs:documentation>
+      Used in address cluster for US Zip (postal) Codes. Minimum of 5 characters with a maximum of 10 characters. Accommodates the older 5 character codes or the Zip+4 with the additional 4 characters following a dash. 
+
+Examples:
+12345
+12345-0987 
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-3a45af86-b8fd-4161-b9e0-4ccf6322493a'>
+      <rdf:isDefinedBy rdf:resource='https%3A//www.usps.com/'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvStringType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Zip Code (US)"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
+          </xs:sequence>
+          <xs:assert test="matches(DvString-dv, '^\d{5}([\-]?\d{4})?$')"/>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:element name='el-4ed453ea-0435-4366-83f4-bb444c2a4885' substitutionGroup='items' type='ct-4ed453ea-0435-4366-83f4-bb444c2a4885'/>
+  <xs:complexType name='ct-4ed453ea-0435-4366-83f4-bb444c2a4885'> <!-- Adapter for: Zip Code (US) -->
+    <xs:complexContent>
+      <xs:restriction base='DvAdapterType'>
+        <xs:sequence>
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-3a45af86-b8fd-4161-b9e0-4ccf6322493a'/> <!-- Reference to: Zip Code (US) -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+
+  <xs:complexType name='ct-6556e8e9-1646-4b38-bab0-72353c13c035' xml:lang='en-US'> <!-- Entry Provider (US) -->
+    <xs:annotation>
+    <xs:documentation>
+      A generic Entry provider.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-6556e8e9-1646-4b38-bab0-72353c13c035'>
+    <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='PartyType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='party-name' type='xs:string'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-fadd4b97-559d-423d-a90f-49a712e6f1bf'/> <!-- external-ref -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+
+
+  <xs:complexType name='ct-fadd4b97-559d-423d-a90f-49a712e6f1bf' xml:lang='en-US'> <!-- External Reference for Party - Test 2.4.5 -->
+    <xs:annotation>
+    <xs:documentation>
+      A generic URI for use with Party to be used as a pointer to a demographic service record.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-fadd4b97-559d-423d-a90f-49a712e6f1bf'>
+    <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvURIType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="External Reference for Party - Test 2.4.5"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='DvURI-dv' type='xs:anyURI'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='relation' type='xs:string' fixed='Party Associated with the record'/>
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+
+
+  <xs:complexType name='ct-af96cb66-baff-4433-acad-7f5051744b52'> <!-- Example Cluster for AdminEntry -->
+    <xs:annotation>
+    <xs:documentation>
+      Example Cluster for AdminEntry for 2.4.5 reference implementation.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-af96cb66-baff-4433-acad-7f5051744b52'>
+    <rdf:isDefinedBy rdf:resource='https%3A//github.com/mlhim/specs/tree/2_4_5/2_4_5/examples'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='ClusterType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Example Cluster for AdminEntry"/>
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-11469bfc-7346-4c89-b669-5552e2ea5d8b'/><!-- DvBoolean Patient active -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-1abcc14d-36a6-4e9a-b0e5-1713c458d3cf'/><!-- DvIdentifier Insurance Provider -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-0ece4003-e160-4979-9b34-4e01f6362cf1'/><!-- DvMedia Patient Photo -->
+        </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+
+
+  <xs:complexType name='ct-869a8d90-16d5-4af6-91ec-acc5983ab0f0' xml:lang='en-US'> <!-- Patient active -->
+    <xs:annotation>
+    <xs:documentation>
+      Whether this patient record is in active use.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-869a8d90-16d5-4af6-91ec-acc5983ab0f0'>
+    <rdf:isDefinedBy rdf:resource='http%3A//www.hl7.org/implement/standards/fhir/patient-definitions.html%23Patient.active'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvBooleanType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Patient active"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:choice>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-true'>
+            <xs:simpleType>
+              <xs:restriction base='xs:string'>
+                  <xs:enumeration value='yes'/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-false'>
+            <xs:simpleType>
+              <xs:restriction base='xs:string'>
+                  <xs:enumeration value='no'/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          </xs:choice>
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:element name='el-11469bfc-7346-4c89-b669-5552e2ea5d8b' substitutionGroup='items' type='ct-11469bfc-7346-4c89-b669-5552e2ea5d8b'/>
+  <xs:complexType name='ct-11469bfc-7346-4c89-b669-5552e2ea5d8b'> <!-- Adapter for: Patient active -->
+    <xs:complexContent>
+      <xs:restriction base='DvAdapterType'>
+        <xs:sequence>
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-869a8d90-16d5-4af6-91ec-acc5983ab0f0'/> <!-- Reference to: Patient active -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+
+  <xs:complexType name='ct-5afc20d1-72ec-4d8c-b95d-288346efcbfd' xml:lang='en-US'> <!-- Insurance Provider -->
+    <xs:annotation>
+    <xs:documentation>
+      An example set of Identifiers. 
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-5afc20d1-72ec-4d8c-b95d-288346efcbfd'>
+      <rdf:isDefinedBy rdf:resource='https%3A//cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2518985%26version%3D1.0'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvIdentifierType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Insurance Provider"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='DvString-dv' type='xs:string'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language'/>
+            <xs:element maxOccurs='1' minOccurs='1' name='id-name'>
+              <xs:simpleType>
+                <xs:restriction base='xs:string'>
+                  <xs:enumeration value='Policy Number'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Policy Number
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='Policy Number'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Policy Number
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='Policy Number'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Policy Number
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='Policy Number'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      Policy Number
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value='SSN'>
+                  <xs:annotation>
+                    <xs:appinfo>
+                      SSN
+                    </xs:appinfo>
+                  </xs:annotation>
+                  </xs:enumeration>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element maxOccurs='1' minOccurs='1' name='issuer'>
+              <xs:simpleType>
+                <xs:restriction base='xs:string'>
+                  <xs:enumeration value='Blue Cross Blue Shield'/>
+                  <xs:enumeration value='Humna'/>
+                  <xs:enumeration value='Cigna'/>
+                  <xs:enumeration value='Well Point'/>
+                  <xs:enumeration value='SS Administration'/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element maxOccurs='1' minOccurs='1' name='assignor'>
+              <xs:simpleType>
+                <xs:restriction base='xs:string'>
+                  <xs:enumeration value='Blue Cross Blue Shield'/>
+                  <xs:enumeration value='Humna'/>
+                  <xs:enumeration value='Cigna'/>
+                  <xs:enumeration value='Well Point'/>
+                  <xs:enumeration value='SS Administration'/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:element name='el-1abcc14d-36a6-4e9a-b0e5-1713c458d3cf' substitutionGroup='items' type='ct-1abcc14d-36a6-4e9a-b0e5-1713c458d3cf'/>
+  <xs:complexType name='ct-1abcc14d-36a6-4e9a-b0e5-1713c458d3cf'> <!-- Adapter for: Insurance Provider -->
+    <xs:complexContent>
+      <xs:restriction base='DvAdapterType'>
+        <xs:sequence>
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-5afc20d1-72ec-4d8c-b95d-288346efcbfd'/> <!-- Reference to: Insurance Provider -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+
+  <xs:complexType name='ct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c' xml:lang='en-US'> <!-- Patient Photo -->
+    <xs:annotation>
+    <xs:documentation>
+      Image of the person. Reused from FHIR.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='ct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c'>
+      <rdf:isDefinedBy rdf:resource='http%3A//www.hl7.org/implement/standards/fhir/practitioner-definitions.html%23Patient.photo'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='DvMediaType'>
+        <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Patient Photo"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='size' type='xs:int'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='encoding' type='xs:string' default='utf-8'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='language' type='xs:language' default='en-US'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='mime-type'>
+            <xs:simpleType>
+              <xs:restriction base='xs:string'>
+                <xs:enumeration value='png'/>
+                <xs:enumeration value='jpg'/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element maxOccurs='1' minOccurs='0' name='compression-type' type='xs:string'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='hash-result' type='xs:string'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='hash-function' type='xs:string' default=''/>
+          <xs:element maxOccurs='1' minOccurs='0' name='alt-txt' type='xs:string' default='Current Photo'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='uri' type='xs:anyURI'/>
+          <xs:element maxOccurs='1' minOccurs='0' name='media-content' type='xs:base64Binary'/>
+          </xs:sequence>
+        </xs:restriction>
+      </xs:complexContent>
+    </xs:complexType>
+
+  <xs:element name='el-0ece4003-e160-4979-9b34-4e01f6362cf1' substitutionGroup='items' type='ct-0ece4003-e160-4979-9b34-4e01f6362cf1'/>
+  <xs:complexType name='ct-0ece4003-e160-4979-9b34-4e01f6362cf1'> <!-- Adapter for: Patient Photo -->
+    <xs:complexContent>
+      <xs:restriction base='DvAdapterType'>
+        <xs:sequence>
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c'/> <!-- Reference to: Patient Photo -->
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name='el-03be8eda-7039-47c6-9972-d8c48b26e247' substitutionGroup='definition' type='ct-03be8eda-7039-47c6-9972-d8c48b26e247'/>
+  <xs:element name='el-7d7d1225-dd95-457e-a838-0bdca7be448f' substitutionGroup='entry-subject' type='ct-7d7d1225-dd95-457e-a838-0bdca7be448f'/>
+  <xs:element name='el-c3a94922-7fed-415e-8d8c-6b184b167cdb' substitutionGroup='details' type='ct-c3a94922-7fed-415e-8d8c-6b184b167cdb'/>
+  <xs:element name='el-d102a7b2-675c-432c-b7a2-1df1620e1ccc' substitutionGroup='DvAdapter-dv' type='ct-d102a7b2-675c-432c-b7a2-1df1620e1ccc'/>
+  <xs:element name='el-aea44d76-771e-4c34-ae69-6d37643e96b7' substitutionGroup='DvAdapter-dv' type='ct-aea44d76-771e-4c34-ae69-6d37643e96b7'/>
+  <xs:element name='el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8' substitutionGroup='DvAdapter-dv' type='ct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8'/>
+  <xs:element name='el-9c65478e-5cdf-413b-aa54-ce0574e48374' substitutionGroup='DvAdapter-dv' type='ct-9c65478e-5cdf-413b-aa54-ce0574e48374'/>
+  <xs:element name='el-3a45af86-b8fd-4161-b9e0-4ccf6322493a' substitutionGroup='DvAdapter-dv' type='ct-3a45af86-b8fd-4161-b9e0-4ccf6322493a'/>
+  <xs:element name='el-6556e8e9-1646-4b38-bab0-72353c13c035' substitutionGroup='entry-provider' type='ct-6556e8e9-1646-4b38-bab0-72353c13c035'/>
+  <xs:element name='el-fadd4b97-559d-423d-a90f-49a712e6f1bf' substitutionGroup='external-ref' type='ct-fadd4b97-559d-423d-a90f-49a712e6f1bf'/>
+  <xs:element name='el-af96cb66-baff-4433-acad-7f5051744b52' substitutionGroup='entry-data' type='ct-af96cb66-baff-4433-acad-7f5051744b52'/>
+  <xs:element name='el-869a8d90-16d5-4af6-91ec-acc5983ab0f0' substitutionGroup='DvAdapter-dv' type='ct-869a8d90-16d5-4af6-91ec-acc5983ab0f0'/>
+  <xs:element name='el-5afc20d1-72ec-4d8c-b95d-288346efcbfd' substitutionGroup='DvAdapter-dv' type='ct-5afc20d1-72ec-4d8c-b95d-288346efcbfd'/>
+  <xs:element name='el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c' substitutionGroup='DvAdapter-dv' type='ct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c'/>
+
+</xs:schema>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ccd-8be37f9e-692d-4d7a-a517-08e34789b170 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+ xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/home/tim/MLHIM/git/specs/2_4_6/examples/Admin_CCD_246.xsd">
+    <el-03be8eda-7039-47c6-9972-d8c48b26e247>
+        <entry-links>
+            <data-name>data-name0</data-name>
+            <TRC>
+                <ev-name>Trace</ev-name>
+            </TRC>
+            <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+            <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+            <DvURI-dv>http://www.oxygenxml.com/</DvURI-dv>
+            <relation>relation0</relation>
+        </entry-links>
+        <entry-links>
+            <data-name>data-name1</data-name>
+            <ASKR>
+                <ev-name>Asked and Refused</ev-name>
+            </ASKR>
+            <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+            <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+            <DvURI-dv>http://www.oxygenxml.com/</DvURI-dv>
+            <relation>relation1</relation>
+        </entry-links>
+        <entry-audit>
+            <system-id>
+                <data-name>data-name2</data-name>
+                <QS>
+                    <ev-name>Sufficient Quantity</ev-name>
+                </QS>
+                <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                <DvString-dv>DvString-dv0</DvString-dv>
+                <language>en-US</language>
+                <id-name>id-name0</id-name>
+                <issuer>issuer0</issuer>
+                <assignor>assignor0</assignor>
+            </system-id>
+            <system-user>
+                <party-name>party-name0</party-name>
+                
+                <el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+                    <cluster-subject>Address Details (US)</cluster-subject>
+                </el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+            </system-user>
+            <location xsi:type="ct-0ece4003-e160-4979-9b34-4e01f6362cf1">
+                <el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c>
+                    <data-name>Patient Photo</data-name>
+                    <NA>
+                        <ev-name>Not Applicable</ev-name>
+                    </NA>
+                    <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                    <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                    <size>0</size>
+                    <encoding>utf-8</encoding>
+                    <language>en-US</language>
+                    <mime-type>png</mime-type>
+                    <compression-type>compression-type0</compression-type>
+                    <hash-result>hash-result0</hash-result>
+                    <hash-function></hash-function>
+                    <alt-txt>Current Photo</alt-txt>
+                    <uri>http://www.oxygenxml.com/</uri>
+                    <media-content>ZGVmYXVsdA==</media-content>
+                </el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c>
+                <el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c>
+                    <data-name>Patient Photo</data-name>
+                    <PINF>
+                        <ev-name>Positive Infinity</ev-name>
+                    </PINF>
+                    <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                    <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                    <size>0</size>
+                    <encoding>utf-8</encoding>
+                    <language>en-US</language>
+                    <mime-type>png</mime-type>
+                    <compression-type>compression-type1</compression-type>
+                    <hash-result>hash-result1</hash-result>
+                    <hash-function></hash-function>
+                    <alt-txt>Current Photo</alt-txt>
+                    <uri>http://www.oxygenxml.com/</uri>
+                    <media-content>ZGVmYXVsdA==</media-content>
+                </el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c>
+            </location>
+            <timestamp>2006-05-04T18:13:51.0</timestamp>
+        </entry-audit>
+        <language>en-US</language>
+        <encoding>utf-8</encoding>
+        <el-7d7d1225-dd95-457e-a838-0bdca7be448f>
+            <party-name>party-name1</party-name>
+            
+            <el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+                <cluster-subject>Address Details (US)</cluster-subject>
+                <el-81450576-b284-4c9c-a48b-fce809dab869>
+                    <el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+                        <data-name>Additional Address Line(s) (US)</data-name>
+                        <DvString-dv>DvString-dv1</DvString-dv>
+                    </el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+                    <el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+                        <data-name>Additional Address Line(s) (US)</data-name>
+                        <DvString-dv>DvString-dv2</DvString-dv>
+                    </el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+                </el-81450576-b284-4c9c-a48b-fce809dab869>
+                <el-3f8ea455-9e59-46ac-9889-15ef78040ebf>
+                    <el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+                        <data-name>State Abbreviation (USPS)</data-name>
+                        <DvString-dv>AL</DvString-dv>
+                    </el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+                    <el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+                        <data-name>State Abbreviation (USPS)</data-name>
+                        <DvString-dv>AL</DvString-dv>
+                    </el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+                </el-3f8ea455-9e59-46ac-9889-15ef78040ebf>
+                <el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12>
+                    <el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+                        <data-name>Street Number and Name (US)</data-name>
+                        <DvString-dv>DvString-dv5</DvString-dv>
+                    </el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+                    <el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+                        <data-name>Street Number and Name (US)</data-name>
+                        <DvString-dv>DvString-dv6</DvString-dv>
+                    </el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+                </el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12>
+                <el-ed052649-7ccc-49f7-8de4-54dd37227e3f>
+                 
+                </el-ed052649-7ccc-49f7-8de4-54dd37227e3f>
+                <el-4ed453ea-0435-4366-83f4-bb444c2a4885>
+                    <el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+                        <data-name>Zip Code (US)</data-name>
+                        <DvString-dv>99999</DvString-dv>
+                    </el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+                    <el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+                        <data-name>Zip Code (US)</data-name>
+                        <DvString-dv>99999</DvString-dv>
+                    </el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+                </el-4ed453ea-0435-4366-83f4-bb444c2a4885>
+            </el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+        </el-7d7d1225-dd95-457e-a838-0bdca7be448f>
+        <el-6556e8e9-1646-4b38-bab0-72353c13c035>
+            <party-name>party-name2</party-name>
+            <el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+                <data-name>External Reference for Party - Test 2.4.5</data-name>
+                <QS>
+                    <ev-name>Sufficient Quantity</ev-name>
+                </QS>
+                <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                <DvURI-dv>http://www.oxygenxml.com/</DvURI-dv>
+                <relation>Party Associated with the record</relation>
+            </el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+            <el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+                <cluster-subject>Address Details (US)</cluster-subject>
+                <el-81450576-b284-4c9c-a48b-fce809dab869>
+                    <el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+                        <data-name>Additional Address Line(s) (US)</data-name>
+                        <DvString-dv>DvString-dv9</DvString-dv>
+                    </el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+                    <el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+                        <data-name>Additional Address Line(s) (US)</data-name>
+                        <DvString-dv>DvString-dv10</DvString-dv>
+                    </el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
+                </el-81450576-b284-4c9c-a48b-fce809dab869>
+                <el-3f8ea455-9e59-46ac-9889-15ef78040ebf>
+                    <el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+                        <data-name>State Abbreviation (USPS)</data-name>
+                        <DvString-dv>AL</DvString-dv>
+                    </el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+                    <el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+                        <data-name>State Abbreviation (USPS)</data-name>
+                        <DvString-dv>AL</DvString-dv>
+                    </el-aea44d76-771e-4c34-ae69-6d37643e96b7>
+                </el-3f8ea455-9e59-46ac-9889-15ef78040ebf>
+                <el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12>
+                    <el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+                        <data-name>Street Number and Name (US)</data-name>
+                        <DvString-dv>DvString-dv13</DvString-dv>
+                    </el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+                    <el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+                        <data-name>Street Number and Name (US)</data-name>
+                        <DvString-dv>DvString-dv14</DvString-dv>
+                    </el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8>
+                </el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12>
+                <el-ed052649-7ccc-49f7-8de4-54dd37227e3f>
+                  
+                </el-ed052649-7ccc-49f7-8de4-54dd37227e3f>
+                <el-4ed453ea-0435-4366-83f4-bb444c2a4885>
+                    <el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+                        <data-name>Zip Code (US)</data-name>
+                        <DvString-dv>00000</DvString-dv>
+                    </el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+                    <el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+                        <data-name>Zip Code (US)</data-name>
+                        <DvString-dv>00000</DvString-dv>
+                    </el-3a45af86-b8fd-4161-b9e0-4ccf6322493a>
+                </el-4ed453ea-0435-4366-83f4-bb444c2a4885>
+            </el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+        </el-6556e8e9-1646-4b38-bab0-72353c13c035>
+        <other-participations>
+            <performer>
+                <party-name>party-name3</party-name>
+                <el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+                    <data-name>External Reference for Party - Test 2.4.5</data-name>
+                    <DvURI-dv>http://www.oxygenxml.com/</DvURI-dv>
+                    <relation>Party Associated with the record</relation>
+                </el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+                <el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+                    <cluster-subject>Address Details (US)</cluster-subject>
+                </el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+            </performer>
+            <function>
+                <data-name>data-name3</data-name>
+                <NINF>
+                    <ev-name>Negative Infinity</ev-name>
+                </NINF>
+                <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                <DvString-dv>DvString-dv17</DvString-dv>
+                <language>en-US</language>
+            </function>
+            <mode>
+                <data-name>data-name4</data-name>
+                <NASK>
+                    <ev-name>Not Asked</ev-name>
+                </NASK>
+                <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                <DvString-dv>DvString-dv18</DvString-dv>
+                <language>en-US</language>
+            </mode>
+            <start-time>2006-05-04T18:13:51.0</start-time>
+            <end-time>2006-05-04T18:13:51.0</end-time>
+        </other-participations>
+        <protocol-id>
+            <data-name>data-name5</data-name>
+            <NINF>
+                <ev-name>Negative Infinity</ev-name>
+            </NINF>
+            <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+            <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+            <DvString-dv>DvString-dv19</DvString-dv>
+            <language>en-US</language>
+            <id-name>id-name1</id-name>
+            <issuer>issuer1</issuer>
+            <assignor>assignor1</assignor>
+        </protocol-id>
+        <current-state></current-state>
+        <workflow-id>
+            <data-name>data-name6</data-name>
+            <NAV>
+                <ev-name>Not Available</ev-name>
+            </NAV>
+            <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+            <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+            <DvURI-dv>http://www.oxygenxml.com/</DvURI-dv>
+            <relation>relation2</relation>
+        </workflow-id>
+        <attestation>
+            <attested-view>
+                <data-name>data-name7</data-name>
+                <OTH>
+                    <ev-name>Other</ev-name>
+                </OTH>
+                <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                <size>0</size>
+                <encoding>encoding0</encoding>
+                <language>en-US</language>
+                <mime-type>mime-type2</mime-type>
+                <compression-type>compression-type2</compression-type>
+                <hash-result>hash-result2</hash-result>
+                <hash-function>hash-function0</hash-function>
+                <alt-txt>alt-txt0</alt-txt>
+                <uri>http://www.oxygenxml.com/</uri>
+                <media-content>ZGVmYXVsdA==</media-content>
+            </attested-view>
+            <proof>
+                <data-name>data-name8</data-name>
+                <DER>
+                    <ev-name>Derived</ev-name>
+                </DER>
+                <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                <size>0</size>
+                <encoding>encoding1</encoding>
+                <language>en-US</language>
+                <DvParsable-dv>DvParsable-dv0</DvParsable-dv>
+                <formalism>formalism0</formalism>
+            </proof>
+            <reason>
+                <data-name>data-name9</data-name>
+                <NI>
+                    <ev-name>No Information</ev-name>
+                </NI>
+                <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                <DvString-dv>DvString-dv20</DvString-dv>
+                <language>en-US</language>
+            </reason>
+            <committer>
+                <party-name>party-name4</party-name>
+                <el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+                    <data-name>External Reference for Party - Test 2.4.5</data-name>
+                    <DvURI-dv>http://www.oxygenxml.com/</DvURI-dv>
+                    <relation>Party Associated with the record</relation>
+                </el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
+                <el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+                    <cluster-subject>Address Details (US)</cluster-subject>
+                </el-c3a94922-7fed-415e-8d8c-6b184b167cdb>
+            </committer>
+            <time-committed>2006-05-04T18:13:51.0</time-committed>
+            <is-pending>false</is-pending>
+        </attestation>
+        <el-af96cb66-baff-4433-acad-7f5051744b52>
+            <cluster-subject>Example Cluster for AdminEntry</cluster-subject>
+            <el-11469bfc-7346-4c89-b669-5552e2ea5d8b>
+                <el-869a8d90-16d5-4af6-91ec-acc5983ab0f0>
+                    <data-name>Patient active</data-name>
+                    <QS>
+                        <ev-name>Sufficient Quantity</ev-name>
+                    </QS>
+                    <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                    <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                    <valid-false>no</valid-false>
+                </el-869a8d90-16d5-4af6-91ec-acc5983ab0f0>
+                <el-869a8d90-16d5-4af6-91ec-acc5983ab0f0>
+                    <data-name>Patient active</data-name>
+                    <ASKU>
+                        <ev-name>Asked but Unknown</ev-name>
+                    </ASKU>
+                    <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                    <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                    <valid-true>yes</valid-true>
+                </el-869a8d90-16d5-4af6-91ec-acc5983ab0f0>
+            </el-11469bfc-7346-4c89-b669-5552e2ea5d8b>
+            <el-1abcc14d-36a6-4e9a-b0e5-1713c458d3cf>
+                <el-5afc20d1-72ec-4d8c-b95d-288346efcbfd>
+                    <data-name>Insurance Provider</data-name>
+                    <PINF>
+                        <ev-name>Positive Infinity</ev-name>
+                    </PINF>
+                    <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                    <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                    <DvString-dv>DvString-dv21</DvString-dv>
+                    <language>en-US</language>
+                    <id-name>Policy Number</id-name>
+                    <issuer>Blue Cross Blue Shield</issuer>
+                    <assignor>Blue Cross Blue Shield</assignor>
+                </el-5afc20d1-72ec-4d8c-b95d-288346efcbfd>
+                <el-5afc20d1-72ec-4d8c-b95d-288346efcbfd>
+                    <data-name>Insurance Provider</data-name>
+                    <UNC>
+                        <ev-name>Unencoded</ev-name>
+                    </UNC>
+                    <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                    <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                    <DvString-dv>DvString-dv22</DvString-dv>
+                    <language>en-US</language>
+                    <id-name>Policy Number</id-name>
+                    <issuer>Blue Cross Blue Shield</issuer>
+                    <assignor>Blue Cross Blue Shield</assignor>
+                </el-5afc20d1-72ec-4d8c-b95d-288346efcbfd>
+            </el-1abcc14d-36a6-4e9a-b0e5-1713c458d3cf>
+            <el-0ece4003-e160-4979-9b34-4e01f6362cf1>
+                <el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c>
+                    <data-name>Patient Photo</data-name>
+                    <DER>
+                        <ev-name>Derived</ev-name>
+                    </DER>
+                    <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                    <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                    <size>0</size>
+                    <encoding>utf-8</encoding>
+                    <language>en-US</language>
+                    <mime-type>png</mime-type>
+                    <compression-type>compression-type3</compression-type>
+                    <hash-result>hash-result3</hash-result>
+                    <hash-function></hash-function>
+                    <alt-txt>Current Photo</alt-txt>
+                    <uri>http://www.oxygenxml.com/</uri>
+                    <media-content>ZGVmYXVsdA==</media-content>
+                </el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c>
+                <el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c>
+                    <data-name>Patient Photo</data-name>
+                    <NINF>
+                        <ev-name>Negative Infinity</ev-name>
+                    </NINF>
+                    <valid-time-begin>2006-05-04T18:13:51.0</valid-time-begin>
+                    <valid-time-end>2006-05-04T18:13:51.0</valid-time-end>
+                    <size>0</size>
+                    <encoding>utf-8</encoding>
+                    <language>en-US</language>
+                    <mime-type>png</mime-type>
+                    <compression-type>compression-type4</compression-type>
+                    <hash-result>hash-result4</hash-result>
+                    <hash-function></hash-function>
+                    <alt-txt>Current Photo</alt-txt>
+                    <uri>http://www.oxygenxml.com/</uri>
+                    <media-content>ZGVmYXVsdA==</media-content>
+                </el-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c>
+            </el-0ece4003-e160-4979-9b34-4e01f6362cf1>
+        </el-af96cb66-baff-4433-acad-7f5051744b52>
+    </el-03be8eda-7039-47c6-9972-d8c48b26e247>
+</ccd-8be37f9e-692d-4d7a-a517-08e34789b170>
