@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ccd:ccd-e1f92636-e27d-4eb4-a540-79a41354722a xmlns:mlhim245='http://www.mlhim.org/xmlns/mlhim2/2_4_5'
+<ccd:ccd-e1f92636-e27d-4eb4-a540-79a41354722a xmlns='http://www.mlhim.org/ccd'
+  xmlns:mlhim245='http://www.mlhim.org/xmlns/mlhim2/2_4_5'
 xmlns:ccd='http://www.mlhim.org/ccd'
 xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 xsi:schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_5 http://www.ccdgen.com/ccdlib/ccd-e1f92636-e27d-4eb4-a540-79a41354722a.xsd'>

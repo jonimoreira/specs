@@ -19,8 +19,8 @@ xsi:schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_5 http://www.ccdgen.co
           <ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc> <!-- DvString -->
             <data-name>Additional Address Line(s) (US)</data-name>
             <!-- Use any subtype of ExceptionalValue here when a value is missing-->
-            <valid-time-begin>2001-12-16T15:53:41Z</valid-time-begin>
-            <valid-time-end>2014-08-05T19:57:07Z</valid-time-end>
+            <valid-time-begin>2001-12-16T15:53:41+00:00</valid-time-begin>
+            <valid-time-end>2014-08-05T19:57:07+00:00</valid-time-end>
             <DvString-dv>Default String</DvString-dv>
             <language>en-US</language>
           </ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc>
