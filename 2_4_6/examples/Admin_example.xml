@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ccd-8be37f9e-692d-4d7a-a517-08e34789b170 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
- xmlns:owl="http://www.w3.org/2002/07/owl#"
- xmlns:dc="http://purl.org/dc/elements/1.1/"
- xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
- xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#"
- xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
- xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+<ccd-8be37f9e-692d-4d7a-a517-08e34789b171 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:noNamespaceSchemaLocation="file:/home/tim/MLHIM/git/specs/2_4_6/examples/Admin_CCD_246.xsd">
-    <el-03be8eda-7039-47c6-9972-d8c48b26e247>
+ xsi:noNamespaceSchemaLocation="http://www.ccdgen.com/ccdlib/ccd-8be37f9e-692d-4d7a-a517-08e34789b171.xsd">
+    <el-03be8eda-7039-47c6-9972-d8c48b26e247> 
         <entry-links>
             <data-name>data-name0</data-name>
             <TRC>
@@ -145,7 +139,7 @@
         <el-6556e8e9-1646-4b38-bab0-72353c13c035>
             <party-name>party-name2</party-name>
             <el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
-                <data-name>External Reference for Party - Test 2.4.5</data-name>
+                <data-name>External Reference for Party - Test 2.4.6</data-name>
                 <QS>
                     <ev-name>Sufficient Quantity</ev-name>
                 </QS>
@@ -205,7 +199,7 @@
             <performer>
                 <party-name>party-name3</party-name>
                 <el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
-                    <data-name>External Reference for Party - Test 2.4.5</data-name>
+                    <data-name>External Reference for Party - Test 2.4.6</data-name>
                     <DvURI-dv>http://www.oxygenxml.com/</DvURI-dv>
                     <relation>Party Associated with the record</relation>
                 </el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
@@ -305,7 +299,7 @@
             <committer>
                 <party-name>party-name4</party-name>
                 <el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
-                    <data-name>External Reference for Party - Test 2.4.5</data-name>
+                    <data-name>External Reference for Party - Test 2.4.6</data-name>
                     <DvURI-dv>http://www.oxygenxml.com/</DvURI-dv>
                     <relation>Party Associated with the record</relation>
                 </el-fadd4b97-559d-423d-a90f-49a712e6f1bf>
@@ -406,4 +400,4 @@
             </el-0ece4003-e160-4979-9b34-4e01f6362cf1>
         </el-af96cb66-baff-4433-acad-7f5051744b52>
     </el-03be8eda-7039-47c6-9972-d8c48b26e247>
-</ccd-8be37f9e-692d-4d7a-a517-08e34789b170>
+</ccd-8be37f9e-692d-4d7a-a517-08e34789b171>

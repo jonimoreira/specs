@@ -15,6 +15,9 @@
 
   <!-- MLHIM 2.4.5 RM XML Schema -->
   <uri name="http://www.mlhim.org/xmlns/mlhim2/2_4_5/mlhim245.xsd" uri="/home/MLHIM/mlhim245.xsd"/>
+
+ <!-- MLHIM 2.4.6 RM XML Schema -->
+  <uri name="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246.xsd" uri="/home/MLHIM/mlhim246.xsd"/>
  
   <!-- MLHIM CCDs -->
   <rewriteSystem systemIdStartString="http://www.ccdgen.com/ccdlib/" rewritePrefix="/home/MLHIM/CCD_Library/"/>

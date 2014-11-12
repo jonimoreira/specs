@@ -1,37 +1,34 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <xs:schema  xmlns:xs='http://www.w3.org/2001/XMLSchema'
-  xmlns:mlhim245='http://www.mlhim.org/xmlns/mlhim2/2_4_5'
   xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
   xmlns:owl='http://www.w3.org/2002/07/owl#'
   xmlns:dc='http://purl.org/dc/elements/1.1/'
   xmlns:sawsdl='http://www.w3.org/ns/sawsdl'
   xmlns:sawsdlrdf='http://www.w3.org/ns/sawsdl#'
   xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
-  xmlns:ccd='http://www.mlhim.org/ccd'
-  targetNamespace='http://www.mlhim.org/ccd'
   xmlns:vc='http://www.w3.org/2007/XMLSchema-versioning' vc:minVersion='1.1'
 >
 
   <!-- Import the Reference Model -->
-  <xs:import schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_5/mlhim245.xsd' namespace='http://www.mlhim.org/xmlns/mlhim2/2_4_5'/>
+  <xs:include schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246.xsd'/>
 
   <!-- METADATA Section -->
   <xs:annotation>
     <xs:appinfo>
     <rdf:RDF>
-    <rdf:Description rdf:about='http://www.ccdgen.com/ccdlib/ccd-e1f92636-e27d-4eb4-a540-79a41354722a.xsd'>
-      <dc:title>Example 2.4.5 Implementation (Care)</dc:title>
+    <rdf:Description rdf:about='http://www.ccdgen.com/ccdlib/ccd-e1f92636-e27d-4eb4-a540-79a41354722b.xsd'>
+      <dc:title>Example 2.4.6 Implementation (Care)</dc:title>
       <dc:creator>Tim Cook tim@mlhim.org</dc:creator>
       <dc:contributor>None</dc:contributor>
-      <dc:subject>Example 2.4.5 CareEntry;Test 2.4.5</dc:subject>
+      <dc:subject>Example 2.4.6 CareEntry;Test 2.4.6</dc:subject>
       <dc:source>http://www.mlhim.org</dc:source>
       <dc:rights>CC-BY http://creativecommons.org/licenses/by/3.0/</dc:rights>
       <dc:relation>None</dc:relation>
       <dc:coverage>Universal</dc:coverage>
       <dc:type>MLHIM Concept Constraint Definition (CCD)</dc:type>
-      <dc:identifier>ccd-e1f92636-e27d-4eb4-a540-79a41354722a</dc:identifier>
+      <dc:identifier>ccd-e1f92636-e27d-4eb4-a540-79a41354722b</dc:identifier>
       <dc:description>
-        Example CCD-Gen Implementation of the MLHIM 2.4.5 RM functionality.
+        Example CCD-Gen Implementation of the MLHIM 2.4.6 RM functionality.
         This CCD was created by the CCD-Gen application.
       </dc:description>
       <dc:publisher>MLHIM LAB, UERJ</dc:publisher>
@@ -44,12 +41,12 @@
   </xs:annotation>
 
   <!-- CCD Root Element -->
-  <xs:element name='ccd-e1f92636-e27d-4eb4-a540-79a41354722a' type='ccd:ct-e1f92636-e27d-4eb4-a540-79a41354722a'/>
-  <xs:complexType name='ct-e1f92636-e27d-4eb4-a540-79a41354722a'> <!-- Example 2.4.5 Implementation (Care) -->
+  <xs:element name='ccd-e1f92636-e27d-4eb4-a540-79a41354722b' type='ct-e1f92636-e27d-4eb4-a540-79a41354722b'/>
+  <xs:complexType name='ct-e1f92636-e27d-4eb4-a540-79a41354722b'> <!-- Example 2.4.6 Implementation (Care) -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:CCDType'>
+      <xs:restriction base='CCDType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de'/> <!-- definition -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de'/> <!-- definition -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -57,30 +54,30 @@
 
     <!-- CCD Components Begin Below -->
 
-  <xs:complexType name='ct-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de'> <!-- Example 2.4.5 CareEntry -->
+  <xs:complexType name='ct-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de'> <!-- Example 2.4.6 CareEntry -->
     <xs:annotation>
     <xs:documentation>
-      A CareEntry test for MLHIM 2.4.5
+      A CareEntry test for MLHIM 2.4.6
     </xs:documentation>
     <xs:appinfo>
-    <!--No valid semantic links for  ct-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de : Example 2.4.5 CareEntry -->
+    <!--No valid semantic links for  ct-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de : Example 2.4.6 CareEntry -->
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:CareEntryType'>
+      <xs:restriction base='CareEntryType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'/> <!-- entry-links -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-cab1f0d2-04f4-48c4-85e2-6f2952a823ec'/> <!-- entry-audit -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'/> <!-- entry-links -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-cab1f0d2-04f4-48c4-85e2-6f2952a823ec'/> <!-- entry-audit -->
           <xs:element maxOccurs='1' minOccurs='1' name='language' type='xs:language' fixed='en-US'/>
           <xs:element maxOccurs='1' minOccurs='1' name='encoding' type='xs:string' fixed='utf-8'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-7d7d1225-dd95-457e-a838-0bdca7be448f'/> <!-- entry-subject -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-6556e8e9-1646-4b38-bab0-72353c13c035'/> <!-- entry-provider -->
-        <xs:element maxOccurs='unbounded' minOccurs='0' ref='ccd:el-a66de5b3-7d00-4b0e-b6b0-b96b39b1b1ef'/> <!-- other-participations -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-90f19fde-c3b0-422a-85ad-30ed7139c57a'/> <!-- protocol-id -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-7d7d1225-dd95-457e-a838-0bdca7be448f'/> <!-- entry-subject -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-6556e8e9-1646-4b38-bab0-72353c13c035'/> <!-- entry-provider -->
+        <xs:element maxOccurs='unbounded' minOccurs='0' ref='el-a66de5b3-7d00-4b0e-b6b0-b96b39b1b1ef'/> <!-- other-participations -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-90f19fde-c3b0-422a-85ad-30ed7139c57a'/> <!-- protocol-id -->
           <xs:element maxOccurs='1' minOccurs='0' name='current-state' type='xs:string' default='testing'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-3b46a988-3845-4660-9f3c-bc09b23ca7b7'/> <!-- workflow-id -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-09195d20-7e9d-4c19-bfcb-acf47bafbf98'/> <!-- attestation -->
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-ecc3bd5e-6aca-428f-ab25-fdd1c5ab2743'/> <!-- entry-data -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-3b46a988-3845-4660-9f3c-bc09b23ca7b7'/> <!-- workflow-id -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-09195d20-7e9d-4c19-bfcb-acf47bafbf98'/> <!-- attestation -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-ecc3bd5e-6aca-428f-ab25-fdd1c5ab2743'/> <!-- entry-data -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -88,22 +85,22 @@
 
 
 
-  <xs:complexType name='ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4' xml:lang='en-US'> <!-- attached to - Test 2.4.5 -->
+  <xs:complexType name='ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4' xml:lang='en-US'> <!-- attached to - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       attached to
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'>
+    <rdf:Description rdf:about='ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'>
     <rdf:isDefinedBy rdf:resource='http%3A//purl.obolibrary.org/obo/RO_0002371'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvURIType'>
+      <xs:restriction base='DvURIType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="attached to - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="attached to - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvURI-dv' type='xs:anyURI'/>
@@ -115,21 +112,21 @@
 
 
 
-  <xs:complexType name='ct-cab1f0d2-04f4-48c4-85e2-6f2952a823ec' xml:lang='en-US'> <!-- Audit Test 2.4.5 -->
+  <xs:complexType name='ct-cab1f0d2-04f4-48c4-85e2-6f2952a823ec' xml:lang='en-US'> <!-- Audit Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
-      Testing 2.4.5
+      Testing 2.4.6
     </xs:documentation>
     <xs:appinfo>
-    <!--No valid semantic links for  ct-cab1f0d2-04f4-48c4-85e2-6f2952a823ec : Audit Test 2.4.5 -->
+    <!--No valid semantic links for  ct-cab1f0d2-04f4-48c4-85e2-6f2952a823ec : Audit Test 2.4.6 -->
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:AuditType'>
+      <xs:restriction base='AuditType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-6f8999dc-5b17-4f9b-9a5f-55ec89848edc'/> <!-- system-id -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:system-user'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:location'/>
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-6f8999dc-5b17-4f9b-9a5f-55ec89848edc'/> <!-- system-id -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='system-user'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='location'/>
           <xs:element maxOccurs='1' minOccurs='1' name='timestamp' type='xs:dateTime'/>
           </xs:sequence>
         </xs:restriction>
@@ -138,22 +135,22 @@
 
 
 
-  <xs:complexType name='ct-6f8999dc-5b17-4f9b-9a5f-55ec89848edc' xml:lang='en-US'> <!-- System ID - Test 2.4.5 -->
+  <xs:complexType name='ct-6f8999dc-5b17-4f9b-9a5f-55ec89848edc' xml:lang='en-US'> <!-- System ID - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       A reusable system ID for FeederAuditDetails.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-6f8999dc-5b17-4f9b-9a5f-55ec89848edc'>
+    <rdf:Description rdf:about='ct-6f8999dc-5b17-4f9b-9a5f-55ec89848edc'>
       <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvIdentifierType'>
+      <xs:restriction base='DvIdentifierType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="System ID - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="System ID - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='DvString-dv' type='xs:string'/>
@@ -207,17 +204,17 @@
       A generic Entry Subject.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-7d7d1225-dd95-457e-a838-0bdca7be448f'>
+    <rdf:Description rdf:about='ct-7d7d1225-dd95-457e-a838-0bdca7be448f'>
     <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:PartyType'>
+      <xs:restriction base='PartyType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='party-name' type='xs:string'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:external-ref'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='external-ref'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -231,20 +228,20 @@
       Details cluster with address elements.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-c3a94922-7fed-415e-8d8c-6b184b167cdb'>
+    <rdf:Description rdf:about='ct-c3a94922-7fed-415e-8d8c-6b184b167cdb'>
     <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:ClusterType'>
+      <xs:restriction base='ClusterType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Address Details (US)"/>
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-81450576-b284-4c9c-a48b-fce809dab869'/><!-- DvString Additional Address Line(s) (US) -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-3f8ea455-9e59-46ac-9889-15ef78040ebf'/><!-- DvString State Abbreviation (USPS) -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12'/><!-- DvString Street Number and Name (US) -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-ed052649-7ccc-49f7-8de4-54dd37227e3f'/><!-- DvString Telephone Number (US) -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-4ed453ea-0435-4366-83f4-bb444c2a4885'/><!-- DvString Zip Code (US) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-81450576-b284-4c9c-a48b-fce809dab869'/><!-- DvString Additional Address Line(s) (US) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-3f8ea455-9e59-46ac-9889-15ef78040ebf'/><!-- DvString State Abbreviation (USPS) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12'/><!-- DvString Street Number and Name (US) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-ed052649-7ccc-49f7-8de4-54dd37227e3f'/><!-- DvString Telephone Number (US) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-4ed453ea-0435-4366-83f4-bb444c2a4885'/><!-- DvString Zip Code (US) -->
         </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -260,10 +257,10 @@
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Additional Address Line(s) (US)"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
@@ -273,12 +270,12 @@
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-81450576-b284-4c9c-a48b-fce809dab869' substitutionGroup='mlhim245:items' type='ccd:ct-81450576-b284-4c9c-a48b-fce809dab869'/>
+  <xs:element name='el-81450576-b284-4c9c-a48b-fce809dab869' substitutionGroup='items' type='ct-81450576-b284-4c9c-a48b-fce809dab869'/>
   <xs:complexType name='ct-81450576-b284-4c9c-a48b-fce809dab869'> <!-- Adapter for: Additional Address Line(s) (US) -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-d102a7b2-675c-432c-b7a2-1df1620e1ccc'/> <!-- Reference to: Additional Address Line(s) (US) -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-d102a7b2-675c-432c-b7a2-1df1620e1ccc'/> <!-- Reference to: Additional Address Line(s) (US) -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -294,10 +291,10 @@
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="State Abbreviation (USPS)"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
@@ -753,12 +750,12 @@
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-3f8ea455-9e59-46ac-9889-15ef78040ebf' substitutionGroup='mlhim245:items' type='ccd:ct-3f8ea455-9e59-46ac-9889-15ef78040ebf'/>
+  <xs:element name='el-3f8ea455-9e59-46ac-9889-15ef78040ebf' substitutionGroup='items' type='ct-3f8ea455-9e59-46ac-9889-15ef78040ebf'/>
   <xs:complexType name='ct-3f8ea455-9e59-46ac-9889-15ef78040ebf'> <!-- Adapter for: State Abbreviation (USPS) -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-aea44d76-771e-4c34-ae69-6d37643e96b7'/> <!-- Reference to: State Abbreviation (USPS) -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-aea44d76-771e-4c34-ae69-6d37643e96b7'/> <!-- Reference to: State Abbreviation (USPS) -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -775,10 +772,10 @@
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Street Number and Name (US)"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
@@ -788,12 +785,12 @@
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12' substitutionGroup='mlhim245:items' type='ccd:ct-d2bdf7e2-bb37-457f-8782-ee22fb8cee12'/>
+  <xs:element name='el-d2bdf7e2-bb37-457f-8782-ee22fb8cee12' substitutionGroup='items' type='ct-d2bdf7e2-bb37-457f-8782-ee22fb8cee12'/>
   <xs:complexType name='ct-d2bdf7e2-bb37-457f-8782-ee22fb8cee12'> <!-- Adapter for: Street Number and Name (US) -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8'/> <!-- Reference to: Street Number and Name (US) -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8'/> <!-- Reference to: Street Number and Name (US) -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -809,10 +806,10 @@
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Telephone Number (US)"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string' default='111-111-1111'/>
@@ -823,12 +820,12 @@
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-ed052649-7ccc-49f7-8de4-54dd37227e3f' substitutionGroup='mlhim245:items' type='ccd:ct-ed052649-7ccc-49f7-8de4-54dd37227e3f'/>
+  <xs:element name='el-ed052649-7ccc-49f7-8de4-54dd37227e3f' substitutionGroup='items' type='ct-ed052649-7ccc-49f7-8de4-54dd37227e3f'/>
   <xs:complexType name='ct-ed052649-7ccc-49f7-8de4-54dd37227e3f'> <!-- Adapter for: Telephone Number (US) -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-9c65478e-5cdf-413b-aa54-ce0574e48374'/> <!-- Reference to: Telephone Number (US) -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-9c65478e-5cdf-413b-aa54-ce0574e48374'/> <!-- Reference to: Telephone Number (US) -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -844,16 +841,16 @@ Examples:
 12345-0987 
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-3a45af86-b8fd-4161-b9e0-4ccf6322493a'>
+    <rdf:Description rdf:about='ct-3a45af86-b8fd-4161-b9e0-4ccf6322493a'>
       <rdf:isDefinedBy rdf:resource='https%3A//www.usps.com/'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Zip Code (US)"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
@@ -864,12 +861,12 @@ Examples:
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-4ed453ea-0435-4366-83f4-bb444c2a4885' substitutionGroup='mlhim245:items' type='ccd:ct-4ed453ea-0435-4366-83f4-bb444c2a4885'/>
+  <xs:element name='el-4ed453ea-0435-4366-83f4-bb444c2a4885' substitutionGroup='items' type='ct-4ed453ea-0435-4366-83f4-bb444c2a4885'/>
   <xs:complexType name='ct-4ed453ea-0435-4366-83f4-bb444c2a4885'> <!-- Adapter for: Zip Code (US) -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-3a45af86-b8fd-4161-b9e0-4ccf6322493a'/> <!-- Reference to: Zip Code (US) -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-3a45af86-b8fd-4161-b9e0-4ccf6322493a'/> <!-- Reference to: Zip Code (US) -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -883,17 +880,17 @@ Examples:
       A generic Entry provider.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-6556e8e9-1646-4b38-bab0-72353c13c035'>
+    <rdf:Description rdf:about='ct-6556e8e9-1646-4b38-bab0-72353c13c035'>
     <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:PartyType'>
+      <xs:restriction base='PartyType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='party-name' type='xs:string'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf'/> <!-- external-ref -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-fadd4b97-559d-423d-a90f-49a712e6f1bf'/> <!-- external-ref -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -901,22 +898,22 @@ Examples:
 
 
 
-  <xs:complexType name='ct-fadd4b97-559d-423d-a90f-49a712e6f1bf' xml:lang='en-US'> <!-- External Reference for Party - Test 2.4.5 -->
+  <xs:complexType name='ct-fadd4b97-559d-423d-a90f-49a712e6f1bf' xml:lang='en-US'> <!-- External Reference for Party - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       A generic URI for use with Party to be used as a pointer to a demographic service record.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-fadd4b97-559d-423d-a90f-49a712e6f1bf'>
+    <rdf:Description rdf:about='ct-fadd4b97-559d-423d-a90f-49a712e6f1bf'>
     <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvURIType'>
+      <xs:restriction base='DvURIType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="External Reference for Party - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="External Reference for Party - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvURI-dv' type='xs:anyURI'/>
@@ -938,11 +935,11 @@ Examples:
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:ParticipationType'>
+      <xs:restriction base='ParticipationType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-9c9b3fb7-bc53-4a6a-9434-392101ef9b08'/> <!-- performer -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-cf7bb5ef-b6f0-42df-b144-aa475de9f010'/> <!-- function -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee'/> <!-- mode -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-9c9b3fb7-bc53-4a6a-9434-392101ef9b08'/> <!-- performer -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-cf7bb5ef-b6f0-42df-b144-aa475de9f010'/> <!-- function -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee'/> <!-- mode -->
           <xs:element maxOccurs='1' minOccurs='0' name='start-time' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='end-time' type='xs:dateTime'/>
           </xs:sequence>
@@ -958,17 +955,17 @@ Examples:
       A generic Entry provider.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-9c9b3fb7-bc53-4a6a-9434-392101ef9b08'>
+    <rdf:Description rdf:about='ct-9c9b3fb7-bc53-4a6a-9434-392101ef9b08'>
     <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:PartyType'>
+      <xs:restriction base='PartyType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='party-name' type='xs:string'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf'/> <!-- external-ref -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-fadd4b97-559d-423d-a90f-49a712e6f1bf'/> <!-- external-ref -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -976,22 +973,22 @@ Examples:
 
 
 
-  <xs:complexType name='ct-cf7bb5ef-b6f0-42df-b144-aa475de9f010' xml:lang='en-US'> <!-- Participation Function - Test 2.4.5 -->
+  <xs:complexType name='ct-cf7bb5ef-b6f0-42df-b144-aa475de9f010' xml:lang='en-US'> <!-- Participation Function - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       Participation Function
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-cf7bb5ef-b6f0-42df-b144-aa475de9f010'>
+    <rdf:Description rdf:about='ct-cf7bb5ef-b6f0-42df-b144-aa475de9f010'>
       <rdf:isDefinedBy rdf:resource='http%3A//xmlns.com/foaf/spec/%23glance'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvCodedStringType'>
+      <xs:restriction base='DvCodedStringType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Participation Function - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Participation Function - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
@@ -1076,20 +1073,20 @@ Examples:
 
 
 
-  <xs:complexType name='ct-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee' xml:lang='en-US'> <!-- Participation Mode - Test 2.4.5 -->
+  <xs:complexType name='ct-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee' xml:lang='en-US'> <!-- Participation Mode - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       A generic definition that the participation mode is some type of agent. 
     </xs:documentation>
     <xs:appinfo>
-    <!--No valid semantic links for  ct-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee : Participation Mode - Test 2.4.5 -->
+    <!--No valid semantic links for  ct-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee : Participation Mode - Test 2.4.6 -->
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvCodedStringType'>
+      <xs:restriction base='DvCodedStringType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Participation Mode - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Participation Mode - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
@@ -1174,22 +1171,22 @@ Examples:
 
 
 
-  <xs:complexType name='ct-90f19fde-c3b0-422a-85ad-30ed7139c57a' xml:lang='en-US'> <!-- Generic Protocol ID - Test 2.4.5 -->
+  <xs:complexType name='ct-90f19fde-c3b0-422a-85ad-30ed7139c57a' xml:lang='en-US'> <!-- Generic Protocol ID - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       A reusable system ID for Entry Protocol ID.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-90f19fde-c3b0-422a-85ad-30ed7139c57a'>
+    <rdf:Description rdf:about='ct-90f19fde-c3b0-422a-85ad-30ed7139c57a'>
       <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvIdentifierType'>
+      <xs:restriction base='DvIdentifierType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Generic Protocol ID - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Generic Protocol ID - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='DvString-dv' type='xs:string'/>
@@ -1228,22 +1225,22 @@ Examples:
 
 
 
-  <xs:complexType name='ct-3b46a988-3845-4660-9f3c-bc09b23ca7b7' xml:lang='en-US'> <!-- Workflow ID - Test 2.4.5 -->
+  <xs:complexType name='ct-3b46a988-3845-4660-9f3c-bc09b23ca7b7' xml:lang='en-US'> <!-- Workflow ID - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       The link points to the workflow definition
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-3b46a988-3845-4660-9f3c-bc09b23ca7b7'>
+    <rdf:Description rdf:about='ct-3b46a988-3845-4660-9f3c-bc09b23ca7b7'>
     <rdf:isDefinedBy rdf:resource='http%3A//purl.obolibrary.org/obo/IAO_0000178'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvURIType'>
+      <xs:restriction base='DvURIType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Workflow ID - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Workflow ID - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvURI-dv' type='xs:anyURI'/>
@@ -1265,12 +1262,12 @@ Examples:
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:AttestationType'>
+      <xs:restriction base='AttestationType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-769d1fbc-ef3e-484b-bcec-c292bdb0f16e'/> <!-- attested-view -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-dcc9f32f-0e24-4884-aabb-145d24e21aaf'/> <!-- proof -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-93d066ef-c6ed-4fec-b747-aa87c71bbbbc'/> <!-- reason -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-0d8535e0-6bc8-424a-941d-539fa9d75211'/> <!-- committer -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-769d1fbc-ef3e-484b-bcec-c292bdb0f16e'/> <!-- attested-view -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-dcc9f32f-0e24-4884-aabb-145d24e21aaf'/> <!-- proof -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-93d066ef-c6ed-4fec-b747-aa87c71bbbbc'/> <!-- reason -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-0d8535e0-6bc8-424a-941d-539fa9d75211'/> <!-- committer -->
           <xs:element maxOccurs='1' minOccurs='0' name='time-committed' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' default='true' name='is-pending' type='xs:boolean'/>
           </xs:sequence>
@@ -1280,20 +1277,20 @@ Examples:
 
 
 
-  <xs:complexType name='ct-769d1fbc-ef3e-484b-bcec-c292bdb0f16e' xml:lang='en-US'> <!-- Attestation View - Test 2.4.5 -->
+  <xs:complexType name='ct-769d1fbc-ef3e-484b-bcec-c292bdb0f16e' xml:lang='en-US'> <!-- Attestation View - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       A generic container for an attestation view.
     </xs:documentation>
     <xs:appinfo>
-    <!--No valid semantic links for  ct-769d1fbc-ef3e-484b-bcec-c292bdb0f16e : Attestation View - Test 2.4.5 -->
+    <!--No valid semantic links for  ct-769d1fbc-ef3e-484b-bcec-c292bdb0f16e : Attestation View - Test 2.4.6 -->
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvMediaType'>
+      <xs:restriction base='DvMediaType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Attestation View - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Attestation View - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='size' type='xs:int'/>
@@ -1313,20 +1310,20 @@ Examples:
 
 
 
-  <xs:complexType name='ct-dcc9f32f-0e24-4884-aabb-145d24e21aaf' xml:lang='en-US'> <!-- Proof - Test 2.4.5 -->
+  <xs:complexType name='ct-dcc9f32f-0e24-4884-aabb-145d24e21aaf' xml:lang='en-US'> <!-- Proof - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       A generic container for an attestation proof document.
     </xs:documentation>
     <xs:appinfo>
-    <!--No valid semantic links for  ct-dcc9f32f-0e24-4884-aabb-145d24e21aaf : Proof - Test 2.4.5 -->
+    <!--No valid semantic links for  ct-dcc9f32f-0e24-4884-aabb-145d24e21aaf : Proof - Test 2.4.6 -->
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvParsableType'>
+      <xs:restriction base='DvParsableType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Proof - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Proof - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='size' type='xs:int'/>
@@ -1341,22 +1338,22 @@ Examples:
 
 
 
-  <xs:complexType name='ct-93d066ef-c6ed-4fec-b747-aa87c71bbbbc' xml:lang='en-US'> <!-- Attestation Reason - Test 2.4.5 -->
+  <xs:complexType name='ct-93d066ef-c6ed-4fec-b747-aa87c71bbbbc' xml:lang='en-US'> <!-- Attestation Reason - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       A finalized release of some information entity.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-93d066ef-c6ed-4fec-b747-aa87c71bbbbc'>
+    <rdf:Description rdf:about='ct-93d066ef-c6ed-4fec-b747-aa87c71bbbbc'>
       <rdf:isDefinedBy rdf:resource='http%3A//usefulinc.com/ns/doap%2523release'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvCodedStringType'>
+      <xs:restriction base='DvCodedStringType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Attestation Reason - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Attestation Reason - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
@@ -1414,17 +1411,17 @@ Examples:
       A generic Entry provider.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-0d8535e0-6bc8-424a-941d-539fa9d75211'>
+    <rdf:Description rdf:about='ct-0d8535e0-6bc8-424a-941d-539fa9d75211'>
     <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:PartyType'>
+      <xs:restriction base='PartyType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='party-name' type='xs:string'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-fadd4b97-559d-423d-a90f-49a712e6f1bf'/> <!-- external-ref -->
-          <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-fadd4b97-559d-423d-a90f-49a712e6f1bf'/> <!-- external-ref -->
+          <xs:element maxOccurs='1' minOccurs='0' ref='el-c3a94922-7fed-415e-8d8c-6b184b167cdb'/> <!-- details -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1435,20 +1432,20 @@ Examples:
   <xs:complexType name='ct-ecc3bd5e-6aca-428f-ab25-fdd1c5ab2743'> <!-- Example Cluster for CareEntry -->
     <xs:annotation>
     <xs:documentation>
-      The entry-data cluster for the 2.4.5 example CareEntry CCD.
+      The entry-data cluster for the 2.4.6 example CareEntry CCD.
     </xs:documentation>
     <xs:appinfo>
     <!--No valid semantic links for  ct-ecc3bd5e-6aca-428f-ab25-fdd1c5ab2743 : Example Cluster for CareEntry -->
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:ClusterType'>
+      <xs:restriction base='ClusterType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Example Cluster for CareEntry"/>
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-f523dddb-737a-44ba-af49-5548d5f9a8d1'/><!-- Cluster Blood Pressure -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-73602f26-fdcb-489e-a28d-79a50453cf09'/><!-- Cluster Physical Measurements -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-3f44d623-14c4-4d27-ae17-cdafb86af886'/><!-- Cluster Vitals -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-b4823b2c-386e-4988-b7a4-265f89421b3d'/><!-- DvRatio MedicationAdministration dosage rate - Test 2.4.5 -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-f523dddb-737a-44ba-af49-5548d5f9a8d1'/><!-- Cluster Blood Pressure -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-73602f26-fdcb-489e-a28d-79a50453cf09'/><!-- Cluster Physical Measurements -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-3f44d623-14c4-4d27-ae17-cdafb86af886'/><!-- Cluster Vitals -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-b4823b2c-386e-4988-b7a4-265f89421b3d'/><!-- DvRatio MedicationAdministration dosage rate - Test 2.4.6 -->
         </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1466,11 +1463,11 @@ Examples:
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:ClusterType'>
+      <xs:restriction base='ClusterType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Blood Pressure"/>
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-0eff4d4a-757c-4284-b826-1d354f34d753'/><!-- DvQuantity Diastolic Blood Pressure Value -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-4be99edd-bcdf-442e-b700-e585cb85bb27'/><!-- DvQuantity Systolic Blood Pressure Value -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-0eff4d4a-757c-4284-b826-1d354f34d753'/><!-- DvQuantity Diastolic Blood Pressure Value -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-4be99edd-bcdf-442e-b700-e585cb85bb27'/><!-- DvQuantity Systolic Blood Pressure Value -->
         </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1487,19 +1484,19 @@ Restricted to values of 1 - 999, inclusive.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvQuantityType'>
+      <xs:restriction base='DvQuantityType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Diastolic Blood Pressure Value"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:reference-ranges'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='reference-ranges'/>
           <xs:element maxOccurs='1' minOccurs='0' name='normal-status' type='xs:string' default=''/> 
           <xs:element maxOccurs='1' minOccurs='1'  name='magnitude' type='xs:decimal'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:magnitude-status'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='magnitude-status'/>
           <xs:element maxOccurs='1' minOccurs='1' name='error'  type='xs:int' default='0'/>
           <xs:element maxOccurs='1' minOccurs='1' name='accuracy' type='xs:int' default='0'/>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-1667f08f-9fed-461f-bb69-b206a61938e6'/> <!-- DvQuantity-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-1667f08f-9fed-461f-bb69-b206a61938e6'/> <!-- DvQuantity-units -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1515,10 +1512,10 @@ Restricted to values of 1 - 999, inclusive.
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="mmHg"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
@@ -1528,12 +1525,12 @@ Restricted to values of 1 - 999, inclusive.
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-0eff4d4a-757c-4284-b826-1d354f34d753' substitutionGroup='mlhim245:items' type='ccd:ct-0eff4d4a-757c-4284-b826-1d354f34d753'/>
+  <xs:element name='el-0eff4d4a-757c-4284-b826-1d354f34d753' substitutionGroup='items' type='ct-0eff4d4a-757c-4284-b826-1d354f34d753'/>
   <xs:complexType name='ct-0eff4d4a-757c-4284-b826-1d354f34d753'> <!-- Adapter for: Diastolic Blood Pressure Value -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-46ceabe6-ab62-4aeb-b4be-dddf454c7f19'/> <!-- Reference to: Diastolic Blood Pressure Value -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-46ceabe6-ab62-4aeb-b4be-dddf454c7f19'/> <!-- Reference to: Diastolic Blood Pressure Value -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1548,30 +1545,30 @@ Restricted to values of 1 - 999, inclusive.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvQuantityType'>
+      <xs:restriction base='DvQuantityType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Systolic Blood Pressure Value"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:reference-ranges'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='reference-ranges'/>
           <xs:element maxOccurs='1' minOccurs='0' name='normal-status' type='xs:string' default=''/> 
           <xs:element maxOccurs='1' minOccurs='1'  name='magnitude' type='xs:decimal'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:magnitude-status'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='magnitude-status'/>
           <xs:element maxOccurs='1' minOccurs='1' name='error'  type='xs:int' default='0'/>
           <xs:element maxOccurs='1' minOccurs='1' name='accuracy' type='xs:int' default='0'/>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-1667f08f-9fed-461f-bb69-b206a61938e6'/> <!-- DvQuantity-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-1667f08f-9fed-461f-bb69-b206a61938e6'/> <!-- DvQuantity-units -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-4be99edd-bcdf-442e-b700-e585cb85bb27' substitutionGroup='mlhim245:items' type='ccd:ct-4be99edd-bcdf-442e-b700-e585cb85bb27'/>
+  <xs:element name='el-4be99edd-bcdf-442e-b700-e585cb85bb27' substitutionGroup='items' type='ct-4be99edd-bcdf-442e-b700-e585cb85bb27'/>
   <xs:complexType name='ct-4be99edd-bcdf-442e-b700-e585cb85bb27'> <!-- Adapter for: Systolic Blood Pressure Value -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-4016fb70-0ef8-4a26-b6e0-d1c6549efe1a'/> <!-- Reference to: Systolic Blood Pressure Value -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-4016fb70-0ef8-4a26-b6e0-d1c6549efe1a'/> <!-- Reference to: Systolic Blood Pressure Value -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1589,11 +1586,11 @@ Restricted to values of 1 - 999, inclusive.
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:ClusterType'>
+      <xs:restriction base='ClusterType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Physical Measurements"/>
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-b87ab29d-b143-4cac-9ac4-0a1b09b40772'/><!-- DvQuantity Height -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-62ae89aa-5997-47aa-86ea-f155f1323b39'/><!-- DvQuantity Weight -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-b87ab29d-b143-4cac-9ac4-0a1b09b40772'/><!-- DvQuantity Height -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-62ae89aa-5997-47aa-86ea-f155f1323b39'/><!-- DvQuantity Weight -->
         </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1608,13 +1605,13 @@ Restricted to values of 1 - 999, inclusive.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvQuantityType'>
+      <xs:restriction base='DvQuantityType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Height"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:reference-ranges'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='reference-ranges'/>
           <xs:element maxOccurs='1' minOccurs='0' name='normal-status' type='xs:string' default=''/> 
           <xs:element maxOccurs='1' minOccurs='1'  name='magnitude'>
             <xs:simpleType>
@@ -1623,10 +1620,10 @@ Restricted to values of 1 - 999, inclusive.
             </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:magnitude-status'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='magnitude-status'/>
           <xs:element maxOccurs='1' minOccurs='1' name='error'  type='xs:int' default='0'/>
           <xs:element maxOccurs='1' minOccurs='1' name='accuracy' type='xs:int' default='0'/>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-9158aae9-4493-4d25-b3a9-d4608bbc9995'/> <!-- DvQuantity-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-9158aae9-4493-4d25-b3a9-d4608bbc9995'/> <!-- DvQuantity-units -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1642,10 +1639,10 @@ Restricted to values of 1 - 999, inclusive.
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="cm"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
@@ -1655,12 +1652,12 @@ Restricted to values of 1 - 999, inclusive.
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-b87ab29d-b143-4cac-9ac4-0a1b09b40772' substitutionGroup='mlhim245:items' type='ccd:ct-b87ab29d-b143-4cac-9ac4-0a1b09b40772'/>
+  <xs:element name='el-b87ab29d-b143-4cac-9ac4-0a1b09b40772' substitutionGroup='items' type='ct-b87ab29d-b143-4cac-9ac4-0a1b09b40772'/>
   <xs:complexType name='ct-b87ab29d-b143-4cac-9ac4-0a1b09b40772'> <!-- Adapter for: Height -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-1145a60e-8fad-46aa-878d-b41d9925ea4b'/> <!-- Reference to: Height -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-1145a60e-8fad-46aa-878d-b41d9925ea4b'/> <!-- Reference to: Height -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1675,13 +1672,13 @@ Restricted to values of 1 - 999, inclusive.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvQuantityType'>
+      <xs:restriction base='DvQuantityType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Weight"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:reference-ranges'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='reference-ranges'/>
           <xs:element maxOccurs='1' minOccurs='0' name='normal-status' type='xs:string' default=''/> 
           <xs:element maxOccurs='1' minOccurs='1'  name='magnitude'>
             <xs:simpleType>
@@ -1690,10 +1687,10 @@ Restricted to values of 1 - 999, inclusive.
             </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:magnitude-status'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='magnitude-status'/>
           <xs:element maxOccurs='1' minOccurs='1' name='error'  type='xs:int' default='0'/>
           <xs:element maxOccurs='1' minOccurs='1' name='accuracy' type='xs:int' default='0'/>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-2c13f479-4c71-4fe2-8fbb-82510a42f121'/> <!-- DvQuantity-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-2c13f479-4c71-4fe2-8fbb-82510a42f121'/> <!-- DvQuantity-units -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1709,10 +1706,10 @@ Restricted to values of 1 - 999, inclusive.
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Body Weight UOM"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
@@ -1755,12 +1752,12 @@ Restricted to values of 1 - 999, inclusive.
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-62ae89aa-5997-47aa-86ea-f155f1323b39' substitutionGroup='mlhim245:items' type='ccd:ct-62ae89aa-5997-47aa-86ea-f155f1323b39'/>
+  <xs:element name='el-62ae89aa-5997-47aa-86ea-f155f1323b39' substitutionGroup='items' type='ct-62ae89aa-5997-47aa-86ea-f155f1323b39'/>
   <xs:complexType name='ct-62ae89aa-5997-47aa-86ea-f155f1323b39'> <!-- Adapter for: Weight -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-60bb270c-11e6-46c6-b7c8-f3321f68240e'/> <!-- Reference to: Weight -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-60bb270c-11e6-46c6-b7c8-f3321f68240e'/> <!-- Reference to: Weight -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1778,12 +1775,12 @@ Restricted to values of 1 - 999, inclusive.
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:ClusterType'>
+      <xs:restriction base='ClusterType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='cluster-subject' type='xs:string' fixed="Vitals"/>
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-f523dddb-737a-44ba-af49-5548d5f9a8d1'/><!-- Cluster Blood Pressure -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-45b03a0d-5fea-4a42-aa97-f36f5b02f430'/><!-- DvCount Heart Rate/Pulse (beats per minute) -->
-      <xs:element maxOccurs='1' minOccurs='0' ref='ccd:el-60c87775-3262-4513-b27c-70a9ca1a3759'/><!-- DvQuantity Body Temperature -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-f523dddb-737a-44ba-af49-5548d5f9a8d1'/><!-- Cluster Blood Pressure -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-45b03a0d-5fea-4a42-aa97-f36f5b02f430'/><!-- DvCount Heart Rate/Pulse (beats per minute) -->
+      <xs:element maxOccurs='1' minOccurs='0' ref='el-60c87775-3262-4513-b27c-70a9ca1a3759'/><!-- DvQuantity Body Temperature -->
         </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1798,19 +1795,19 @@ Restricted to values of 1 - 999, inclusive.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvCountType'>
+      <xs:restriction base='DvCountType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Heart Rate/Pulse (beats per minute)"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:reference-ranges'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='reference-ranges'/>
           <xs:element maxOccurs='1' minOccurs='0' name='normal-status' type='xs:string' default=''/> 
           <xs:element maxOccurs='1' minOccurs='1'  name='magnitude' type='xs:decimal'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:magnitude-status'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='magnitude-status'/>
           <xs:element maxOccurs='1' minOccurs='1' name='error'  type='xs:int' default='0'/>
           <xs:element maxOccurs='1' minOccurs='1' name='accuracy' type='xs:int' default='0'/>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-4b2d3e99-c031-48ba-a1b3-39793d32b2c5'/> <!-- DvCount-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-4b2d3e99-c031-48ba-a1b3-39793d32b2c5'/> <!-- DvCount-units -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1822,16 +1819,16 @@ Restricted to values of 1 - 999, inclusive.
       "beats per minute"
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-4b2d3e99-c031-48ba-a1b3-39793d32b2c5'>
+    <rdf:Description rdf:about='ct-4b2d3e99-c031-48ba-a1b3-39793d32b2c5'>
       <rdf:isDefinedBy rdf:resource='https%3A//cdebrowser.nci.nih.gov/CDEBrowser/'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="beats per minute"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
@@ -1853,12 +1850,12 @@ Restricted to values of 1 - 999, inclusive.
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-45b03a0d-5fea-4a42-aa97-f36f5b02f430' substitutionGroup='mlhim245:items' type='ccd:ct-45b03a0d-5fea-4a42-aa97-f36f5b02f430'/>
+  <xs:element name='el-45b03a0d-5fea-4a42-aa97-f36f5b02f430' substitutionGroup='items' type='ct-45b03a0d-5fea-4a42-aa97-f36f5b02f430'/>
   <xs:complexType name='ct-45b03a0d-5fea-4a42-aa97-f36f5b02f430'> <!-- Adapter for: Heart Rate/Pulse (beats per minute) -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-ff15ce4b-4f7f-47d5-bb72-bde1f68cb287'/> <!-- Reference to: Heart Rate/Pulse (beats per minute) -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-ff15ce4b-4f7f-47d5-bb72-bde1f68cb287'/> <!-- Reference to: Heart Rate/Pulse (beats per minute) -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1873,13 +1870,13 @@ Restricted to values of 1 - 999, inclusive.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvQuantityType'>
+      <xs:restriction base='DvQuantityType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Body Temperature"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:reference-ranges'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='reference-ranges'/>
           <xs:element maxOccurs='1' minOccurs='0' name='normal-status' type='xs:string' default=''/> 
           <xs:element maxOccurs='1' minOccurs='1'  name='magnitude'>
             <xs:simpleType>
@@ -1888,10 +1885,10 @@ Restricted to values of 1 - 999, inclusive.
             </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:magnitude-status'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='magnitude-status'/>
           <xs:element maxOccurs='1' minOccurs='1' name='error'  type='xs:int' default='0'/>
           <xs:element maxOccurs='1' minOccurs='1' name='accuracy' type='xs:int' default='0'/>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-9ac654c7-7f6c-42c8-8fea-d6ed7f167b20'/> <!-- DvQuantity-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-9ac654c7-7f6c-42c8-8fea-d6ed7f167b20'/> <!-- DvQuantity-units -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
@@ -1907,10 +1904,10 @@ Restricted to values of 1 - 999, inclusive.
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
           <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Body Temperature UOM"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
@@ -1939,12 +1936,12 @@ Restricted to values of 1 - 999, inclusive.
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-60c87775-3262-4513-b27c-70a9ca1a3759' substitutionGroup='mlhim245:items' type='ccd:ct-60c87775-3262-4513-b27c-70a9ca1a3759'/>
+  <xs:element name='el-60c87775-3262-4513-b27c-70a9ca1a3759' substitutionGroup='items' type='ct-60c87775-3262-4513-b27c-70a9ca1a3759'/>
   <xs:complexType name='ct-60c87775-3262-4513-b27c-70a9ca1a3759'> <!-- Adapter for: Body Temperature -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-0fd6fea0-869c-4e45-b6c8-39f57f43628a'/> <!-- Reference to: Body Temperature -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-0fd6fea0-869c-4e45-b6c8-39f57f43628a'/> <!-- Reference to: Body Temperature -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1952,26 +1949,26 @@ Restricted to values of 1 - 999, inclusive.
 
 
 
-  <xs:complexType name='ct-aea9a220-7ed5-444c-9044-5f26c584eed1' xml:lang='en-US'> <!-- MedicationAdministration dosage rate - Test 2.4.5 -->
+  <xs:complexType name='ct-aea9a220-7ed5-444c-9044-5f26c584eed1' xml:lang='en-US'> <!-- MedicationAdministration dosage rate - Test 2.4.6 -->
     <xs:annotation>
       <xs:documentation>
       Identifies the speed with which the medication was introduced into the patient. Typically the rate for an infusion e.g. 200ml in 2 hours. May also expressed as a rate per unit of time such as 100ml per hour - the duration is then not specified, or is specified in the quantity.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvRatioType'>
+      <xs:restriction base='DvRatioType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="MedicationAdministration dosage rate - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="MedicationAdministration dosage rate - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:reference-ranges'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='reference-ranges'/>
           <xs:element maxOccurs='1' minOccurs='0' name='normal-status' type='xs:string' default=''/> 
           <xs:element maxOccurs='1' minOccurs='0' name='magnitude' type='xs:decimal'/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:magnitude-status'/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='magnitude-status'/>
           <xs:element maxOccurs='1' minOccurs='1' name='error'  type='xs:int' default='0'/>
           <xs:element maxOccurs='1' minOccurs='1' name='accuracy' type='xs:int' default='0'/>
-          <xs:element maxOccurs='1' minOccurs='1' ref='mlhim245:ratio-type'/>
+          <xs:element maxOccurs='1' minOccurs='1' ref='ratio-type'/>
           <xs:element maxOccurs='1' minOccurs='1' name='numerator'>
             <xs:simpleType>
             <xs:restriction base='xs:decimal'>
@@ -1984,28 +1981,28 @@ Restricted to values of 1 - 999, inclusive.
             </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-fef4ff7b-148f-4318-bf22-2b715a2ac20b'/> <!-- numerator-units -->
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-4716f056-aa09-46bf-a6e5-5e79e298217b'/> <!-- denominator-units -->
-          <xs:element maxOccurs='1' minOccurs='1' ref='ccd:el-70d4b917-9f7c-4ffb-bfcf-a603c4938c10'/> <!-- ratio-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-fef4ff7b-148f-4318-bf22-2b715a2ac20b'/> <!-- numerator-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-4716f056-aa09-46bf-a6e5-5e79e298217b'/> <!-- denominator-units -->
+          <xs:element maxOccurs='1' minOccurs='1' ref='el-70d4b917-9f7c-4ffb-bfcf-a603c4938c10'/> <!-- ratio-units -->
           </xs:sequence>
         </xs:restriction>
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:complexType name='ct-fef4ff7b-148f-4318-bf22-2b715a2ac20b' xml:lang='en-US'> <!-- bpm Test 2.4.5 -->
+  <xs:complexType name='ct-fef4ff7b-148f-4318-bf22-2b715a2ac20b' xml:lang='en-US'> <!-- bpm Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       Beats per minute (for heart rate)
     </xs:documentation>
     <xs:appinfo>
-    <!--No valid semantic links for  ct-fef4ff7b-148f-4318-bf22-2b715a2ac20b : bpm Test 2.4.5 -->
+    <!--No valid semantic links for  ct-fef4ff7b-148f-4318-bf22-2b715a2ac20b : bpm Test 2.4.6 -->
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="bpm Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="bpm Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
@@ -2017,22 +2014,22 @@ Restricted to values of 1 - 999, inclusive.
 
 
 
-  <xs:complexType name='ct-4716f056-aa09-46bf-a6e5-5e79e298217b' xml:lang='en-US'> <!-- Condition severity - Test 2.4.5 -->
+  <xs:complexType name='ct-4716f056-aa09-46bf-a6e5-5e79e298217b' xml:lang='en-US'> <!-- Condition severity - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       A subjective assessment of the severity of the condition as evaluated by the clinician.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-4716f056-aa09-46bf-a6e5-5e79e298217b'>
+    <rdf:Description rdf:about='ct-4716f056-aa09-46bf-a6e5-5e79e298217b'>
       <rdf:isDefinedBy rdf:resource='http%3A//www.hl7.org/implement/standards/fhir/condition-definitions.html%23Condition.severity'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvCodedStringType'>
+      <xs:restriction base='DvCodedStringType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Condition severity - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Condition severity - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv'>
@@ -2093,22 +2090,22 @@ Restricted to values of 1 - 999, inclusive.
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:complexType name='ct-70d4b917-9f7c-4ffb-bfcf-a603c4938c10' xml:lang='en-US'> <!-- CDC Race Code - Test 2.4.5 -->
+  <xs:complexType name='ct-70d4b917-9f7c-4ffb-bfcf-a603c4938c10' xml:lang='en-US'> <!-- CDC Race Code - Test 2.4.6 -->
     <xs:annotation>
     <xs:documentation>
       The unique identifer code for reporting information about race based on the Center for Disease Control and Prevention (CDC) categories.
     </xs:documentation>
     <xs:appinfo>
-    <rdf:Description rdf:about='ccd:ct-70d4b917-9f7c-4ffb-bfcf-a603c4938c10'>
+    <rdf:Description rdf:about='ct-70d4b917-9f7c-4ffb-bfcf-a603c4938c10'>
       <rdf:isDefinedBy rdf:resource='https%3A//cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2200286%26version%3D1.0'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvStringType'>
+      <xs:restriction base='DvStringType'>
         <xs:sequence>
-          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="CDC Race Code - Test 2.4.5"/>
-          <xs:element maxOccurs='1' minOccurs='0' ref='mlhim245:ExceptionalValue'/>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="CDC Race Code - Test 2.4.6"/>
+          <xs:element maxOccurs='1' minOccurs='0' ref='ExceptionalValue'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-begin' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='0' name='valid-time-end' type='xs:dateTime'/>
           <xs:element maxOccurs='1' minOccurs='1' name='DvString-dv' type='xs:string'/>
@@ -2118,59 +2115,59 @@ Restricted to values of 1 - 999, inclusive.
       </xs:complexContent>
     </xs:complexType>
 
-  <xs:element name='el-b4823b2c-386e-4988-b7a4-265f89421b3d' substitutionGroup='mlhim245:items' type='ccd:ct-b4823b2c-386e-4988-b7a4-265f89421b3d'/>
-  <xs:complexType name='ct-b4823b2c-386e-4988-b7a4-265f89421b3d'> <!-- Adapter for: MedicationAdministration dosage rate - Test 2.4.5 -->
+  <xs:element name='el-b4823b2c-386e-4988-b7a4-265f89421b3d' substitutionGroup='items' type='ct-b4823b2c-386e-4988-b7a4-265f89421b3d'/>
+  <xs:complexType name='ct-b4823b2c-386e-4988-b7a4-265f89421b3d'> <!-- Adapter for: MedicationAdministration dosage rate - Test 2.4.6 -->
     <xs:complexContent>
-      <xs:restriction base='mlhim245:DvAdapterType'>
+      <xs:restriction base='DvAdapterType'>
         <xs:sequence>
-          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='ccd:el-aea9a220-7ed5-444c-9044-5f26c584eed1'/> <!-- Reference to: MedicationAdministration dosage rate - Test 2.4.5 -->
+          <xs:element  maxOccurs='unbounded' minOccurs='0' ref='el-aea9a220-7ed5-444c-9044-5f26c584eed1'/> <!-- Reference to: MedicationAdministration dosage rate - Test 2.4.6 -->
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:element name='el-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de' substitutionGroup='mlhim245:definition' type='ccd:ct-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de'/>
-  <xs:element name='el-3a54417d-d1d6-4294-b868-e7a9ab28f8c4' substitutionGroup='mlhim245:entry-links' type='ccd:ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'/>
-  <xs:element name='el-cab1f0d2-04f4-48c4-85e2-6f2952a823ec' substitutionGroup='mlhim245:entry-audit' type='ccd:ct-cab1f0d2-04f4-48c4-85e2-6f2952a823ec'/>
-  <xs:element name='el-6f8999dc-5b17-4f9b-9a5f-55ec89848edc' substitutionGroup='mlhim245:system-id' type='ccd:ct-6f8999dc-5b17-4f9b-9a5f-55ec89848edc'/>
-  <xs:element name='el-7d7d1225-dd95-457e-a838-0bdca7be448f' substitutionGroup='mlhim245:entry-subject' type='ccd:ct-7d7d1225-dd95-457e-a838-0bdca7be448f'/>
-  <xs:element name='el-c3a94922-7fed-415e-8d8c-6b184b167cdb' substitutionGroup='mlhim245:details' type='ccd:ct-c3a94922-7fed-415e-8d8c-6b184b167cdb'/>
-  <xs:element name='el-d102a7b2-675c-432c-b7a2-1df1620e1ccc' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-d102a7b2-675c-432c-b7a2-1df1620e1ccc'/>
-  <xs:element name='el-aea44d76-771e-4c34-ae69-6d37643e96b7' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-aea44d76-771e-4c34-ae69-6d37643e96b7'/>
-  <xs:element name='el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8'/>
-  <xs:element name='el-9c65478e-5cdf-413b-aa54-ce0574e48374' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-9c65478e-5cdf-413b-aa54-ce0574e48374'/>
-  <xs:element name='el-3a45af86-b8fd-4161-b9e0-4ccf6322493a' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-3a45af86-b8fd-4161-b9e0-4ccf6322493a'/>
-  <xs:element name='el-6556e8e9-1646-4b38-bab0-72353c13c035' substitutionGroup='mlhim245:entry-provider' type='ccd:ct-6556e8e9-1646-4b38-bab0-72353c13c035'/>
-  <xs:element name='el-fadd4b97-559d-423d-a90f-49a712e6f1bf' substitutionGroup='mlhim245:external-ref' type='ccd:ct-fadd4b97-559d-423d-a90f-49a712e6f1bf'/>
-  <xs:element name='el-a66de5b3-7d00-4b0e-b6b0-b96b39b1b1ef' substitutionGroup='mlhim245:other-participations' type='ccd:ct-a66de5b3-7d00-4b0e-b6b0-b96b39b1b1ef'/>
-  <xs:element name='el-9c9b3fb7-bc53-4a6a-9434-392101ef9b08' substitutionGroup='mlhim245:performer' type='ccd:ct-9c9b3fb7-bc53-4a6a-9434-392101ef9b08'/>
-  <xs:element name='el-cf7bb5ef-b6f0-42df-b144-aa475de9f010' substitutionGroup='mlhim245:function' type='ccd:ct-cf7bb5ef-b6f0-42df-b144-aa475de9f010'/>
-  <xs:element name='el-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee' substitutionGroup='mlhim245:mode' type='ccd:ct-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee'/>
-  <xs:element name='el-90f19fde-c3b0-422a-85ad-30ed7139c57a' substitutionGroup='mlhim245:protocol-id' type='ccd:ct-90f19fde-c3b0-422a-85ad-30ed7139c57a'/>
-  <xs:element name='el-3b46a988-3845-4660-9f3c-bc09b23ca7b7' substitutionGroup='mlhim245:workflow-id' type='ccd:ct-3b46a988-3845-4660-9f3c-bc09b23ca7b7'/>
-  <xs:element name='el-09195d20-7e9d-4c19-bfcb-acf47bafbf98' substitutionGroup='mlhim245:attestation' type='ccd:ct-09195d20-7e9d-4c19-bfcb-acf47bafbf98'/>
-  <xs:element name='el-769d1fbc-ef3e-484b-bcec-c292bdb0f16e' substitutionGroup='mlhim245:attested-view' type='ccd:ct-769d1fbc-ef3e-484b-bcec-c292bdb0f16e'/>
-  <xs:element name='el-dcc9f32f-0e24-4884-aabb-145d24e21aaf' substitutionGroup='mlhim245:proof' type='ccd:ct-dcc9f32f-0e24-4884-aabb-145d24e21aaf'/>
-  <xs:element name='el-93d066ef-c6ed-4fec-b747-aa87c71bbbbc' substitutionGroup='mlhim245:reason' type='ccd:ct-93d066ef-c6ed-4fec-b747-aa87c71bbbbc'/>
-  <xs:element name='el-0d8535e0-6bc8-424a-941d-539fa9d75211' substitutionGroup='mlhim245:committer' type='ccd:ct-0d8535e0-6bc8-424a-941d-539fa9d75211'/>
-  <xs:element name='el-ecc3bd5e-6aca-428f-ab25-fdd1c5ab2743' substitutionGroup='mlhim245:entry-data' type='ccd:ct-ecc3bd5e-6aca-428f-ab25-fdd1c5ab2743'/>
-  <xs:element name='el-f523dddb-737a-44ba-af49-5548d5f9a8d1' substitutionGroup='mlhim245:items' type='ccd:ct-f523dddb-737a-44ba-af49-5548d5f9a8d1'/>
-  <xs:element name='el-46ceabe6-ab62-4aeb-b4be-dddf454c7f19' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-46ceabe6-ab62-4aeb-b4be-dddf454c7f19'/>
-  <xs:element name='el-1667f08f-9fed-461f-bb69-b206a61938e6' substitutionGroup='mlhim245:DvQuantity-units' type='ccd:ct-1667f08f-9fed-461f-bb69-b206a61938e6'/>
-  <xs:element name='el-4016fb70-0ef8-4a26-b6e0-d1c6549efe1a' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-4016fb70-0ef8-4a26-b6e0-d1c6549efe1a'/>
-  <xs:element name='el-73602f26-fdcb-489e-a28d-79a50453cf09' substitutionGroup='mlhim245:items' type='ccd:ct-73602f26-fdcb-489e-a28d-79a50453cf09'/>
-  <xs:element name='el-1145a60e-8fad-46aa-878d-b41d9925ea4b' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-1145a60e-8fad-46aa-878d-b41d9925ea4b'/>
-  <xs:element name='el-9158aae9-4493-4d25-b3a9-d4608bbc9995' substitutionGroup='mlhim245:DvQuantity-units' type='ccd:ct-9158aae9-4493-4d25-b3a9-d4608bbc9995'/>
-  <xs:element name='el-60bb270c-11e6-46c6-b7c8-f3321f68240e' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-60bb270c-11e6-46c6-b7c8-f3321f68240e'/>
-  <xs:element name='el-2c13f479-4c71-4fe2-8fbb-82510a42f121' substitutionGroup='mlhim245:DvQuantity-units' type='ccd:ct-2c13f479-4c71-4fe2-8fbb-82510a42f121'/>
-  <xs:element name='el-3f44d623-14c4-4d27-ae17-cdafb86af886' substitutionGroup='mlhim245:items' type='ccd:ct-3f44d623-14c4-4d27-ae17-cdafb86af886'/>
-  <xs:element name='el-ff15ce4b-4f7f-47d5-bb72-bde1f68cb287' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-ff15ce4b-4f7f-47d5-bb72-bde1f68cb287'/>
-  <xs:element name='el-4b2d3e99-c031-48ba-a1b3-39793d32b2c5' substitutionGroup='mlhim245:DvCount-units' type='ccd:ct-4b2d3e99-c031-48ba-a1b3-39793d32b2c5'/>
-  <xs:element name='el-0fd6fea0-869c-4e45-b6c8-39f57f43628a' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-0fd6fea0-869c-4e45-b6c8-39f57f43628a'/>
-  <xs:element name='el-9ac654c7-7f6c-42c8-8fea-d6ed7f167b20' substitutionGroup='mlhim245:DvQuantity-units' type='ccd:ct-9ac654c7-7f6c-42c8-8fea-d6ed7f167b20'/>
-  <xs:element name='el-aea9a220-7ed5-444c-9044-5f26c584eed1' substitutionGroup='mlhim245:DvAdapter-dv' type='ccd:ct-aea9a220-7ed5-444c-9044-5f26c584eed1'/>
-  <xs:element name='el-fef4ff7b-148f-4318-bf22-2b715a2ac20b' substitutionGroup='mlhim245:numerator-units' type='ccd:ct-fef4ff7b-148f-4318-bf22-2b715a2ac20b'/>
-  <xs:element name='el-4716f056-aa09-46bf-a6e5-5e79e298217b' substitutionGroup='mlhim245:denominator-units' type='ccd:ct-4716f056-aa09-46bf-a6e5-5e79e298217b'/>
-  <xs:element name='el-70d4b917-9f7c-4ffb-bfcf-a603c4938c10' substitutionGroup='mlhim245:ratio-units' type='ccd:ct-70d4b917-9f7c-4ffb-bfcf-a603c4938c10'/>
+  <xs:element name='el-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de' substitutionGroup='definition' type='ct-2c3eeb99-7aec-4dfc-a252-5ef0e9bb57de'/>
+  <xs:element name='el-3a54417d-d1d6-4294-b868-e7a9ab28f8c4' substitutionGroup='entry-links' type='ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'/>
+  <xs:element name='el-cab1f0d2-04f4-48c4-85e2-6f2952a823ec' substitutionGroup='entry-audit' type='ct-cab1f0d2-04f4-48c4-85e2-6f2952a823ec'/>
+  <xs:element name='el-6f8999dc-5b17-4f9b-9a5f-55ec89848edc' substitutionGroup='system-id' type='ct-6f8999dc-5b17-4f9b-9a5f-55ec89848edc'/>
+  <xs:element name='el-7d7d1225-dd95-457e-a838-0bdca7be448f' substitutionGroup='entry-subject' type='ct-7d7d1225-dd95-457e-a838-0bdca7be448f'/>
+  <xs:element name='el-c3a94922-7fed-415e-8d8c-6b184b167cdb' substitutionGroup='details' type='ct-c3a94922-7fed-415e-8d8c-6b184b167cdb'/>
+  <xs:element name='el-d102a7b2-675c-432c-b7a2-1df1620e1ccc' substitutionGroup='DvAdapter-dv' type='ct-d102a7b2-675c-432c-b7a2-1df1620e1ccc'/>
+  <xs:element name='el-aea44d76-771e-4c34-ae69-6d37643e96b7' substitutionGroup='DvAdapter-dv' type='ct-aea44d76-771e-4c34-ae69-6d37643e96b7'/>
+  <xs:element name='el-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8' substitutionGroup='DvAdapter-dv' type='ct-ffa9835f-7ff3-4be8-ad9f-0fa536f8b7b8'/>
+  <xs:element name='el-9c65478e-5cdf-413b-aa54-ce0574e48374' substitutionGroup='DvAdapter-dv' type='ct-9c65478e-5cdf-413b-aa54-ce0574e48374'/>
+  <xs:element name='el-3a45af86-b8fd-4161-b9e0-4ccf6322493a' substitutionGroup='DvAdapter-dv' type='ct-3a45af86-b8fd-4161-b9e0-4ccf6322493a'/>
+  <xs:element name='el-6556e8e9-1646-4b38-bab0-72353c13c035' substitutionGroup='entry-provider' type='ct-6556e8e9-1646-4b38-bab0-72353c13c035'/>
+  <xs:element name='el-fadd4b97-559d-423d-a90f-49a712e6f1bf' substitutionGroup='external-ref' type='ct-fadd4b97-559d-423d-a90f-49a712e6f1bf'/>
+  <xs:element name='el-a66de5b3-7d00-4b0e-b6b0-b96b39b1b1ef' substitutionGroup='other-participations' type='ct-a66de5b3-7d00-4b0e-b6b0-b96b39b1b1ef'/>
+  <xs:element name='el-9c9b3fb7-bc53-4a6a-9434-392101ef9b08' substitutionGroup='performer' type='ct-9c9b3fb7-bc53-4a6a-9434-392101ef9b08'/>
+  <xs:element name='el-cf7bb5ef-b6f0-42df-b144-aa475de9f010' substitutionGroup='function' type='ct-cf7bb5ef-b6f0-42df-b144-aa475de9f010'/>
+  <xs:element name='el-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee' substitutionGroup='mode' type='ct-fa1a3488-43d7-4e2f-8807-a3f9ddeeccee'/>
+  <xs:element name='el-90f19fde-c3b0-422a-85ad-30ed7139c57a' substitutionGroup='protocol-id' type='ct-90f19fde-c3b0-422a-85ad-30ed7139c57a'/>
+  <xs:element name='el-3b46a988-3845-4660-9f3c-bc09b23ca7b7' substitutionGroup='workflow-id' type='ct-3b46a988-3845-4660-9f3c-bc09b23ca7b7'/>
+  <xs:element name='el-09195d20-7e9d-4c19-bfcb-acf47bafbf98' substitutionGroup='attestation' type='ct-09195d20-7e9d-4c19-bfcb-acf47bafbf98'/>
+  <xs:element name='el-769d1fbc-ef3e-484b-bcec-c292bdb0f16e' substitutionGroup='attested-view' type='ct-769d1fbc-ef3e-484b-bcec-c292bdb0f16e'/>
+  <xs:element name='el-dcc9f32f-0e24-4884-aabb-145d24e21aaf' substitutionGroup='proof' type='ct-dcc9f32f-0e24-4884-aabb-145d24e21aaf'/>
+  <xs:element name='el-93d066ef-c6ed-4fec-b747-aa87c71bbbbc' substitutionGroup='reason' type='ct-93d066ef-c6ed-4fec-b747-aa87c71bbbbc'/>
+  <xs:element name='el-0d8535e0-6bc8-424a-941d-539fa9d75211' substitutionGroup='committer' type='ct-0d8535e0-6bc8-424a-941d-539fa9d75211'/>
+  <xs:element name='el-ecc3bd5e-6aca-428f-ab25-fdd1c5ab2743' substitutionGroup='entry-data' type='ct-ecc3bd5e-6aca-428f-ab25-fdd1c5ab2743'/>
+  <xs:element name='el-f523dddb-737a-44ba-af49-5548d5f9a8d1' substitutionGroup='items' type='ct-f523dddb-737a-44ba-af49-5548d5f9a8d1'/>
+  <xs:element name='el-46ceabe6-ab62-4aeb-b4be-dddf454c7f19' substitutionGroup='DvAdapter-dv' type='ct-46ceabe6-ab62-4aeb-b4be-dddf454c7f19'/>
+  <xs:element name='el-1667f08f-9fed-461f-bb69-b206a61938e6' substitutionGroup='DvQuantity-units' type='ct-1667f08f-9fed-461f-bb69-b206a61938e6'/>
+  <xs:element name='el-4016fb70-0ef8-4a26-b6e0-d1c6549efe1a' substitutionGroup='DvAdapter-dv' type='ct-4016fb70-0ef8-4a26-b6e0-d1c6549efe1a'/>
+  <xs:element name='el-73602f26-fdcb-489e-a28d-79a50453cf09' substitutionGroup='items' type='ct-73602f26-fdcb-489e-a28d-79a50453cf09'/>
+  <xs:element name='el-1145a60e-8fad-46aa-878d-b41d9925ea4b' substitutionGroup='DvAdapter-dv' type='ct-1145a60e-8fad-46aa-878d-b41d9925ea4b'/>
+  <xs:element name='el-9158aae9-4493-4d25-b3a9-d4608bbc9995' substitutionGroup='DvQuantity-units' type='ct-9158aae9-4493-4d25-b3a9-d4608bbc9995'/>
+  <xs:element name='el-60bb270c-11e6-46c6-b7c8-f3321f68240e' substitutionGroup='DvAdapter-dv' type='ct-60bb270c-11e6-46c6-b7c8-f3321f68240e'/>
+  <xs:element name='el-2c13f479-4c71-4fe2-8fbb-82510a42f121' substitutionGroup='DvQuantity-units' type='ct-2c13f479-4c71-4fe2-8fbb-82510a42f121'/>
+  <xs:element name='el-3f44d623-14c4-4d27-ae17-cdafb86af886' substitutionGroup='items' type='ct-3f44d623-14c4-4d27-ae17-cdafb86af886'/>
+  <xs:element name='el-ff15ce4b-4f7f-47d5-bb72-bde1f68cb287' substitutionGroup='DvAdapter-dv' type='ct-ff15ce4b-4f7f-47d5-bb72-bde1f68cb287'/>
+  <xs:element name='el-4b2d3e99-c031-48ba-a1b3-39793d32b2c5' substitutionGroup='DvCount-units' type='ct-4b2d3e99-c031-48ba-a1b3-39793d32b2c5'/>
+  <xs:element name='el-0fd6fea0-869c-4e45-b6c8-39f57f43628a' substitutionGroup='DvAdapter-dv' type='ct-0fd6fea0-869c-4e45-b6c8-39f57f43628a'/>
+  <xs:element name='el-9ac654c7-7f6c-42c8-8fea-d6ed7f167b20' substitutionGroup='DvQuantity-units' type='ct-9ac654c7-7f6c-42c8-8fea-d6ed7f167b20'/>
+  <xs:element name='el-aea9a220-7ed5-444c-9044-5f26c584eed1' substitutionGroup='DvAdapter-dv' type='ct-aea9a220-7ed5-444c-9044-5f26c584eed1'/>
+  <xs:element name='el-fef4ff7b-148f-4318-bf22-2b715a2ac20b' substitutionGroup='numerator-units' type='ct-fef4ff7b-148f-4318-bf22-2b715a2ac20b'/>
+  <xs:element name='el-4716f056-aa09-46bf-a6e5-5e79e298217b' substitutionGroup='denominator-units' type='ct-4716f056-aa09-46bf-a6e5-5e79e298217b'/>
+  <xs:element name='el-70d4b917-9f7c-4ffb-bfcf-a603c4938c10' substitutionGroup='ratio-units' type='ct-70d4b917-9f7c-4ffb-bfcf-a603c4938c10'/>
 
 </xs:schema>
