@@ -1,3 +1,6 @@
+#Changes from 2.4.5 to 2.4.6  (see the git commit msgs. for details)                     
+    Changed RM and CCDs to the null namespace. This is as it was prior to 2.4.4.
+    
 #Changes from 2.4.4 to 2.4.5  (see the git commit msgs. for details)                     
     Modified DvBooleanType to use valid-true or valid-false in a xs:choice and deleted DvBoolean-dv. 
     Modified DvIntervalType to improve validation of the upper and lower data type selections. 

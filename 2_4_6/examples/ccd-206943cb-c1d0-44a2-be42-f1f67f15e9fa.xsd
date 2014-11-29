@@ -7,7 +7,7 @@
   xmlns:sawsdlrdf='http://www.w3.org/ns/sawsdl#'
   xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
   xmlns:vc='http://www.w3.org/2007/XMLSchema-versioning' vc:minVersion='1.1'
->
+  xml:lang="en-US">
 
   <!-- Import the Reference Model -->
   <xs:include schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246.xsd'/>
