@@ -29,7 +29,7 @@
     </xs:documentation>
     <xs:appinfo>
       <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246.xsd">
-        <rdf:isDefinedBy rdf:resource="http://www.mlhim.org"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org"/>
       </rdf:Description>
     </xs:appinfo>
   </xs:annotation>
