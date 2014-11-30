@@ -61,7 +61,7 @@
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-03be8eda-7039-47c6-9972-d8c48b26e247'>
-    <rdf:isDefinedBy rdf:resource='https%3A//github.com/mlhim/specs/tree/2_4_5/2_4_5/examples'/>
+    <rdfs:isDefinedBy rdf:resource='https%3A//github.com/mlhim/specs/tree/2_4_5/2_4_5/examples'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -94,7 +94,7 @@
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-7d7d1225-dd95-457e-a838-0bdca7be448f'>
-    <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
+    <rdfs:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -118,7 +118,7 @@
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-c3a94922-7fed-415e-8d8c-6b184b167cdb'>
-    <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
+    <rdfs:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -731,7 +731,7 @@ Examples:
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-3a45af86-b8fd-4161-b9e0-4ccf6322493a'>
-      <rdf:isDefinedBy rdf:resource='https%3A//www.usps.com/'/>
+      <rdfs:isDefinedBy rdf:resource='https%3A//www.usps.com/'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -770,7 +770,7 @@ Examples:
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-6556e8e9-1646-4b38-bab0-72353c13c035'>
-    <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
+    <rdfs:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -794,7 +794,7 @@ Examples:
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-fadd4b97-559d-423d-a90f-49a712e6f1bf'>
-    <rdf:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
+    <rdfs:isDefinedBy rdf:resource='http%3A//www.mlhim.org/generic_pcts'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -821,7 +821,7 @@ Examples:
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-af96cb66-baff-4433-acad-7f5051744b52'>
-    <rdf:isDefinedBy rdf:resource='https%3A//github.com/mlhim/specs/tree/2_4_5/2_4_5/examples'/>
+    <rdfs:isDefinedBy rdf:resource='https%3A//github.com/mlhim/specs/tree/2_4_5/2_4_5/examples'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -846,7 +846,7 @@ Examples:
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-869a8d90-16d5-4af6-91ec-acc5983ab0f0'>
-    <rdf:isDefinedBy rdf:resource='http%3A//www.hl7.org/implement/standards/fhir/patient-definitions.html%23Patient.active'/>
+    <rdfs:isDefinedBy rdf:resource='http%3A//www.hl7.org/implement/standards/fhir/patient-definitions.html%23Patient.active'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -898,7 +898,7 @@ Examples:
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-5afc20d1-72ec-4d8c-b95d-288346efcbfd'>
-      <rdf:isDefinedBy rdf:resource='https%3A//cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2518985%26version%3D1.0'/>
+      <rdfs:isDefinedBy rdf:resource='https%3A//cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2518985%26version%3D1.0'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
@@ -999,7 +999,7 @@ Examples:
     </xs:documentation>
     <xs:appinfo>
     <rdf:Description rdf:about='ct-ef8afb6b-ea90-4664-8eb1-7c0e30af7a1c'>
-      <rdf:isDefinedBy rdf:resource='http%3A//www.hl7.org/implement/standards/fhir/practitioner-definitions.html%23Patient.photo'/>
+      <rdfs:isDefinedBy rdf:resource='http%3A//www.hl7.org/implement/standards/fhir/practitioner-definitions.html%23Patient.photo'/>
     </rdf:Description>
     </xs:appinfo>
     </xs:annotation>
