@@ -1,0 +1,1097 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#"
+     xml:base="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246">
+        <dc:description rdf:datatype="&xsd;string">This is the Multi-Level Healthcare Information Modelling (MLHIM) project
+      reference model implementation in RDF/XML MLHIM Release 2.4.6 It consists of the core structures for MLHIM models, called Concept Constraint Definitions (CCDs).
+      Further documentation and implementation instructions can be found on or via links from
+      http://www.mlhim.org The abbreviations &apos;Dv&apos; and &apos;dv&apos; in the complexType and element names
+      refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along 
+     
+      This work is Copyright 2009-2014 Timothy W. Cook
+      
+      Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+      
+      http://www.apache.org/licenses/LICENSE-2.0
+      
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.</dc:description>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.mlhim.org</rdfs:isDefinedBy>
+        <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCount-unitsRef -->
+
+    <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCount-unitsRef">
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCountType"/>
+        <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvStringType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueRef -->
+
+    <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueRef">
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-statusRef -->
+
+    <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-statusRef">
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType"/>
+        <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#reference-rangesRef -->
+
+    <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#reference-rangesRef">
+        <dc:description rdf:datatype="&xsd;string">Optional list of ReferenceRanges for this value in its particular
+                measurement context</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType"/>
+        <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#reference-ranges"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrdinal-dv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrdinal-dv">
+        <dc:description rdf:datatype="&xsd;string">Value in ordered enumeration of values. The base integer is zero
+                with any number of integer values used to order the symbols. Example 1: 0 = Trace, 1
+                = +, 2 = ++, 3 = +++, etc. Example 2: 0 = Mild, 1 = Moderate, 2 = Severe</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrdinalType"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvParsable-dv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvParsable-dv">
+        <dc:description rdf:datatype="&xsd;string">The string, which may validly be empty in some
+                syntaxes.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvParsableType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvString-dv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvString-dv">
+        <dc:description rdf:datatype="&xsd;string">The string value of the item.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvStringType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURI-dv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURI-dv">
+        <dc:description rdf:datatype="&xsd;string">anyURI as a pointer.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURIType"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#accuracy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#accuracy">
+        <dc:description rdf:datatype="&xsd;string">Accuracy of the value in the magnitude attribute. 0% to +/- 100% A
+                value of 0 means that the accuracy is unknown.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#alt-txt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#alt-txt">
+        <dc:description rdf:datatype="&xsd;string">Text to display in lieu of multimedia display or execution.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#assignor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#assignor">
+        <dc:description rdf:datatype="&xsd;string">Organisation that assigned the id to the item being
+                identified.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIdentifierType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#compression-type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#compression-type">
+        <dc:description rdf:datatype="&xsd;string">Compression/archiving mime-type. Void means no
+                compression/archiving. For a list of common mime-types for compression/archiving
+                see: http://en.wikipedia.org/wiki/List_of_archive_formats.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#data-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#data-name">
+        <dc:description rdf:datatype="&xsd;string">Descriptive name of this fragment.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#encoding -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#encoding">
+        <dc:description rdf:datatype="&xsd;string">Name of character encoding scheme in which this value is encoded.
+                Coded from the IANA charcater set table:
+                http://www.iana.org/assignments/character-sets Unicode is the default assumption in
+                MLHIM, with UTF-8 being the assumed encoding. This attribute allows for variations
+                from these assumptions. </dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvEncapsulatedType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#error -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#error">
+        <dc:description rdf:datatype="&xsd;string">Error margin of measurement, indicating error in the recording
+                method or instrument (+/- %). Implemented in subtypes. A logical value of 0
+                indicates 100% accuracy, i.e. no error.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#formalism -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#formalism">
+        <dc:description rdf:datatype="&xsd;string">Name of the formalism, e.g. &apos;GLIF 1.0&apos;, &apos;ADL 1.4&apos;,
+                etc.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvParsableType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#hash-function -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#hash-function">
+        <dc:description rdf:datatype="&xsd;string">Hash function used to compute hash-result. See:
+                http://en.wikipedia.org/wiki/List_of_hash_functions#Cryptographic_hash_functions</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#hash-result -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#hash-result">
+        <dc:description rdf:datatype="&xsd;string">Hash function result of the &apos;media-content&apos;. There must be a
+                corresponding hash function type listed for this to have any meaning. See:
+                http://en.wikipedia.org/wiki/List_of_hash_functions#Cryptographic_hash_functions</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#id-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#id-name">
+        <dc:description rdf:datatype="&xsd;string">The identifier common name, such as “Driver&apos;s License” or
+                “SSN”.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIdentifierType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#issuer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#issuer">
+        <dc:description rdf:datatype="&xsd;string">Authority which issues the kind of id used in the id field of this
+                object.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIdentifierType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#language">
+        <dc:description rdf:datatype="&xsd;string">Optional indicator of the localised language in which this data-type
+                is written. The ·value space· of language is the set of all strings that are valid
+                language identifiers as defined [RFC 3066] . Only required when the language used
+                here is different from the enclosing Entry.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvEncapsulatedType"/>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvStringType"/>
+        <rdfs:range rdf:resource="&xsd;language"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude">
+        <dc:description rdf:datatype="&xsd;string">Numeric value of the quantity in canonical (i.e. single value)
+                form.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#media-content -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#media-content">
+        <dc:description rdf:datatype="&xsd;string">The content; if stored locally.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType"/>
+        <rdfs:range rdf:resource="&xsd;base64Binary"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#mime-type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#mime-type">
+        <dc:description rdf:datatype="&xsd;string">MIME type of the original media-content w/o any compression. See
+                IANA registered types:
+                http://www.iana.org/assignments/media-types/index.html</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#normal-status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#normal-status">
+        <dc:description rdf:datatype="&xsd;string">Optional normal status indicator of value with respect to normal
+                range for this value. Often included by lab, even if the normal range itself is not
+                included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL, etc.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#relation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#relation">
+        <dc:description rdf:datatype="&xsd;string">Normally constrained by on ontology such as the OBO RO
+                http://purl.obolibrary.org/obo/ro.owl</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURIType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#size">
+        <dc:description rdf:datatype="&xsd;string">Original size in bytes of unencoded encapsulated data. I.e.
+                encodings such as base64, hexadecimal, etc do not change the value of this
+                attribute.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvEncapsulatedType"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#symbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#symbol">
+        <dc:description rdf:datatype="&xsd;string">Coded textual representation of this value in the enumeration, which
+                may be strings made from “+” symbols, or other enumerations of terms such as “mild”,
+                “moderate”, “severe”, or even the same number series as the values, e.g. “1”, “2”,
+                “3”. </dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrdinalType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#terminology-abbrev -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#terminology-abbrev">
+        <dc:description rdf:datatype="&xsd;string">Version Source Abbreviation (VSAB) from NLM Metathesarus; or
+                similar.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedStringType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#terminology-code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#terminology-code">
+        <dc:description rdf:datatype="&xsd;string">The uniquely identifiable code string from the
+                terminology.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedStringType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#terminology-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#terminology-name">
+        <dc:description rdf:datatype="&xsd;string">Full Source Name from NLM Metathesarus; or
+                similar.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedStringType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#terminology-version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#terminology-version">
+        <dc:description rdf:datatype="&xsd;string">The proper release/version ID from the releasing
+                authority.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedStringType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#uri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#uri">
+        <dc:description rdf:datatype="&xsd;string">URI reference to electronic information stored outside the record as
+                a file, database entry etc, if supplied as a reference.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#valid-false -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#valid-false">
+        <dc:description rdf:datatype="&xsd;string">A string that represents a boolean False in the implementation.
+                These are generally constrained by a set of enumerations in the
+                PcT.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvBooleanType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#valid-time-begin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#valid-time-begin">
+        <dc:description rdf:datatype="&xsd;string">If present this must be a valid datetime including timezone. It is used
+            to indicate the beginning time that information is considered valid or when the
+            information was collected.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#valid-time-end -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#valid-time-end">
+        <dc:description rdf:datatype="&xsd;string">If present this must be a valid date-time including timezone. It is used
+            to indicate the ending time that information is considered valid or is to have
+            expired.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#valid-true -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#valid-true">
+        <dc:description rdf:datatype="&xsd;string">A string that represents a boolean True in the implementation. These
+                are generally constrained by a set of enumerations in the PcT.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvBooleanType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ASKRType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ASKRType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ASKUType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ASKUType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#AdminEntryType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#AdminEntryType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#EntryType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#AttestationType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#AttestationType"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#AuditType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#AuditType"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#CCDType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#CCDType"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#CareEntryType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#CareEntryType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#EntryType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ClusterType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ClusterType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ItemType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DERType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DERType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DemographicEntryType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DemographicEntryType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#EntryType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAdapterType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAdapterType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ItemType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType">
+        <dc:description rdf:datatype="&xsd;string">Serves as a common ancestor of all data-types in MLHIM models.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvBoolean -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvBoolean">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvBooleanType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvBooleanType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvBooleanType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <dc:description rdf:datatype="&xsd;string">Items which represent boolean decisions, such as true/false or yes/no
+        answers. Use for such data, it is important to devise the meanings (usually questions in
+        subjective data) carefully, so that the only allowed results are in fact true or false.
+        Potential Misuse: The DvBooleanType should not be used as a replacement for naively modelled
+        enumerated types such as male/female etc. Such values should be coded, and in any case the
+        enumeration often has more than two values.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedString -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedString">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedStringType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedStringType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCodedStringType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvStringType"/>
+        <dc:description rdf:datatype="&xsd;string">A text item whose DvString-dv element must be the long name or description
+        from a controlled terminology. The key (i.e. the &apos;code&apos;) of which is the terminology-code
+        attribute. In some cases, DvString-dv and terminology-code may have the same
+        content.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCount -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCount">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCountType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCount-units -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCount-units">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCountType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCountType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvCountType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType"/>
+        <dc:description rdf:datatype="&xsd;string">Countable quantities. Used for countable types such as pregnancies and
+        steps (taken by a physiotherapy patient), number of cigarettes smoked in a day, etc.
+        Misuse:Not used for amounts of physical entities (which all have standardized units). Note
+        that PcTs derived from DvCountType should make magnitude, error and accuracy attributes
+        minOccurs = &apos;1&apos;. The magnitude element is restricted to integers via an xs:assert.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvEncapsulatedType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvEncapsulatedType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <dc:description rdf:datatype="&xsd;string">Abstract type defining the common meta-data of all types of encapsulated
+        data.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIdentifier -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIdentifier">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIdentifierType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIdentifierType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIdentifierType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvStringType"/>
+        <dc:description rdf:datatype="&xsd;string">Type for representing identifiers of real-world entities. Typical
+        identifiers include: drivers licence number, social security number, veterans affairs
+        number, prescription id, order id, system id and so on. The actual identifier is in the
+        DvString-dv.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIntervalType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvIntervalType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvMediaType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvEncapsulatedType"/>
+        <dc:description rdf:datatype="&xsd;string">A specialisation of DvEncapsulated for audiovisual and bio-signal types.
+        Includes further metadata relating to media types which are not applicable to other subtypes
+        of DvEncapsulatedType</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrdered -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrdered">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <dc:description rdf:datatype="&xsd;string">Abstract type defining the concept of ordered values, which includes
+        ordinals as well as true quantities. The implementations require the functions ‘&amp;lt;’,
+        &apos;&amp;gt;&apos; and is_strictly_comparable_to (&apos;==&apos;).</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrdinalType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrdinalType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType"/>
+        <dc:description rdf:datatype="&xsd;string">Models rankings and scores, e.g. pain, Apgar values, etc, where there is a)
+        implied ordering, b) no implication that the distance between each value is constant, and c)
+        the total number of values is finite. Note that although the term ‘ordinal’ in mathematics
+        means natural numbers only, here any decimal is allowed, since negative and zero values are
+        often used by medical professionals for values around a neutral point. Also, decimal values
+        are sometimes used such as 0.5 or .25 Examples of sets of ordinal values: -3, -2, -1, 0, 1,
+        2, 3 -- reflex response values 0, 1, 2 -- Apgar values Used for recording any clinical datum
+        which is customarily recorded using symbolic values. Example: the results on a urinalysis
+        strip, e.g. {neg, trace, +, ++, +++} are used for leukocytes, protein, nitrites etc; for
+        non-haemolysed blood {neg, trace, moderate}; for haemolysed blood {neg, trace, small,
+        moderate, large}. </dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvParsableType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvParsableType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvEncapsulatedType"/>
+        <dc:description rdf:datatype="&xsd;string">Encapsulated data expressed as a parsable String. The internal model of the
+        data item is not described in the MLHIM model, but in this case, the form of the data is
+        assumed to be plain-text, rather than compressed or other types of large binary data. If the
+        content is to be binary data then use a DvMedia.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantified -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantified">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType"/>
+        <dc:description rdf:datatype="&xsd;string">Abstract type defining the concept of true quantified values, i.e. values
+        which are not only ordered, but which have a precise magnitude.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantityType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantityType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvRatioType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvRatioType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvQuantifiedType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvString -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvString">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvStringType"/>
+        <dc:description rdf:datatype="&xsd;string">Element of type DvStringType</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvStringType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvStringType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <dc:description rdf:datatype="&xsd;string">The string data type can contain characters, line feeds, carriage returns,
+        and tab characters.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvTemporalType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvTemporalType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURI -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURI">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURIType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURIType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvURIType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#EntryType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#EntryType"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValue -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValue">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+        <dc:description rdf:datatype="&xsd;string">Abstract element of type ExceptionalValueType</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#INVType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#INVType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ItemType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ItemType"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#MSKType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#MSKType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#NASKType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#NASKType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#NAType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#NAType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#NAVType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#NAVType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#NINFType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#NINFType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#OTHType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#OTHType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#PINFType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#PINFType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ParticipationType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ParticipationType"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#PartyType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#PartyType"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#QSType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#QSType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ReferenceRange -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ReferenceRange">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ReferenceRangeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ReferenceRangeType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ReferenceRangeType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvAnyType"/>
+        <skos:definition rdf:datatype="&xsd;string">Defines a named range to be associated with any ORDERED datum. Each such
+        range is particular to the patient and context, e.g. sex, age, and any other factor which
+        affects ranges. May be used to represent normal, therapeutic, dangerous, critical etc
+        ranges.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#TRCType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#TRCType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#UNCType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#UNCType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#UNKType -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#UNKType">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#ExceptionalValueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status">
+        <dc:description rdf:datatype="&xsd;string">&lt;!-- Optional status of magnitude with values:
+                
+                “=” : magnitude is a point value
+                
+                “&lt;“ : value is &lt; magnitude
+                
+                “&gt;” : value is &gt; magnitude
+                
+                “&lt;=” : value is &lt;= magnitude
+                
+                “&gt;=” : value is &gt;= magnitude
+                
+                “~” : value is the approximate magnitude
+                           
+             --&gt;</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#reference-ranges -->
+
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#reference-ranges">
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#DvOrderedType"/>
+        <dc:description rdf:datatype="&xsd;string">Optional list of ReferenceRanges for this value in its particular
+                measurement context</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#&amp;gt; -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#&amp;gt;">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#&amp;gt;= -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#&amp;gt;=">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#&amp;lt; -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#&amp;lt;">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#&amp;lt;= -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#&amp;lt;=">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#= -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#=">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#~ -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#~">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246#magnitude-status"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
