@@ -1,5 +1,10 @@
 #Changes from 2.4.5 to 2.4.6  (see the git commit msgs. for details)                     
-    Changed RM and CCDs to the null namespace. This is as it was prior to 2.4.4.
+    Established a single namespace for all artifacts. The prefix and namespace are:
+    mlhim2='http://www.mlhim.org/xmlns/mlhim2'
+
+    Updated the CCD and instance examples. Added the XSLT to render the CCD in a browser.  Works with Firefox on local files but not in Chrome.
+    Both browsers work when using the CCD-Gen. 
+
     
 #Changes from 2.4.4 to 2.4.5  (see the git commit msgs. for details)                     
     Modified DvBooleanType to use valid-true or valid-false in a xs:choice and deleted DvBoolean-dv. 
