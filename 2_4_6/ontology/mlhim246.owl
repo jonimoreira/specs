@@ -39,7 +39,7 @@
       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
       See the License for the specific language governing permissions and
       limitations under the License.</dc:description>
-        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.mlhim.org</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.mlhim.org/xmlns/mlhim2/mlhim246.xsd</rdfs:isDefinedBy>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/dc/protege-dc.owl"/>
     </owl:Ontology>
     
@@ -126,10 +126,10 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dv -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dvRef -->
 
-    <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dv">
-        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dv"/>
+    <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dvRef">
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dvRef"/>
         <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
     </owl:ObjectProperty>
     
@@ -1309,9 +1309,9 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dv -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dvRef -->
 
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dv">
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dvRef">
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAdapterType"/>
     </owl:Class>
     
