@@ -14,7 +14,7 @@
 xml:lang='en-US'>
 
   <!-- Include the Reference Model -->
-  <xs:include schemaLocation='http://www.mlhim.org/xmlns/mlhim2/2_4_6/mlhim246.xsd'/>
+  <xs:include schemaLocation='http://www.mlhim.org/xmlns/mlhim2/mlhim246.xsd'/>
 
   <!-- METADATA Section -->
   <xs:annotation>

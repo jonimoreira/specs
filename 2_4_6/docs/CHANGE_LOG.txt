@@ -2,6 +2,10 @@
     Established a single namespace for all artifacts. The prefix and namespace are:
     mlhim2='http://www.mlhim.org/xmlns/mlhim2'
 
+    Added an OWL ontology for RM 2.4.6
+
+    Moved the ontology and RM physical locations to the namespace location on mlhim.org.
+
     Updated the CCD and instance examples. Added the XSLT to render the CCD in a browser.  Works with Firefox on local files but not in Chrome.
     Both browsers work when using the CCD-Gen. 
 
