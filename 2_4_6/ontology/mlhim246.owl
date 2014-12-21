@@ -161,7 +161,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueRef">
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
-        <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValue"/>
     </owl:ObjectProperty>
     
 
@@ -1229,14 +1228,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#Attestation -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Attestation">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#AttestationType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#AttestationType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#AttestationType">
@@ -1246,25 +1237,9 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#Audit -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Audit">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#AuditType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#AuditType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#AuditType"/>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#CCD -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCD">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#CCDType"/>
-    </owl:Class>
     
 
 
@@ -1312,14 +1287,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvAdapter -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapter">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAdapterType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dv -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapter-dv">
@@ -1353,14 +1320,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvBoolean -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvBoolean">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvBooleanType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#DvBooleanType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvBooleanType">
@@ -1375,14 +1334,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvCodedString -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvCodedString">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType">
@@ -1391,14 +1342,6 @@
         from a controlled terminology. The key (i.e. the &apos;code&apos;) of which is the terminology-code
         attribute. In some cases, DvString-dv and terminology-code may have the same
         content.</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvCount -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvCount">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCountType"/>
     </owl:Class>
     
 
@@ -1438,14 +1381,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvIdentifier -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvIdentifier">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvIdentifierType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#DvIdentifierType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvIdentifierType">
@@ -1454,14 +1389,6 @@
         identifiers include: drivers licence number, social security number, veterans affairs
         number, prescription id, order id, system id and so on. The actual identifier is in the
         DvString-dv.</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvInterval -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvInterval">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvIntervalType"/>
     </owl:Class>
     
 
@@ -1481,14 +1408,6 @@
         <dc:description rdf:datatype="&xsd;string">A specialisation of DvEncapsulated for audiovisual and bio-signal types.
         Includes further metadata relating to media types which are not applicable to other subtypes
         of DvEncapsulatedType</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvOrdered -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrdered">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
     </owl:Class>
     
 
@@ -1535,28 +1454,12 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvQuantified -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantified">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType">
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
         <dc:description rdf:datatype="&xsd;string">Abstract type defining the concept of true quantified values, i.e. values
         which are not only ordered, but which have a precise magnitude.</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvQuantity -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantity">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantityType"/>
     </owl:Class>
     
 
@@ -1582,14 +1485,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvRatio -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvRatio">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvRatioType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#DvRatioType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvRatioType">
@@ -1604,29 +1499,12 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvString -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvString">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvStringType"/>
-        <dc:description rdf:datatype="&xsd;string">Element of type DvStringType</dc:description>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#DvStringType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvStringType">
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
         <dc:description rdf:datatype="&xsd;string">The string data type can contain characters, line feeds, carriage returns,
         and tab characters.</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvTemporal -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvTemporal">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvTemporalType"/>
     </owl:Class>
     
 
@@ -1643,27 +1521,10 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#DvURI -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvURI">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvURIType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#DvURIType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvURIType">
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#Entry -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Entry">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
-        <dc:description rdf:datatype="&xsd;string">Abstract Entry element.</dc:description>
     </owl:Class>
     
 
@@ -1684,37 +1545,9 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#ExceptionalValue -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValue">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
-        <dc:description rdf:datatype="&xsd;string">Abstract element of type ExceptionalValueType</dc:description>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType -->
 
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKRType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKUType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DERType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValue"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#INVType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#MSKType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NASKType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NAType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NAVType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NINFType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#OTHType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#PINFType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#QSType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#TRCType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#UNCType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#UNKType"/>
-        </owl:disjointUnionOf>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
     
 
 
@@ -1722,14 +1555,6 @@
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#INVType">
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#Item -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Item">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ItemType"/>
     </owl:Class>
     
 
@@ -1796,14 +1621,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#Participation -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Participation">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ParticipationType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#ParticipationType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ParticipationType">
@@ -1811,14 +1628,6 @@
         Used to represent any participation of a Party in some activity, which is not explicitly in
         the model, e.g. assisting nurse. Can be used to record past or future participations. Should
         not be used in place of more permanent relationships between demographic entities.</dc:description>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#Party -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Party">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#PartyType"/>
     </owl:Class>
     
 
@@ -1839,14 +1648,6 @@
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#QSType">
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#ReferenceRange -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ReferenceRange">
-        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ReferenceRangeType"/>
     </owl:Class>
     
 
@@ -2239,6 +2040,57 @@
     
 
 
+    <!-- http://www.mlhim.org/xmlns/mlhim2#AdminEntry -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#AdminEntry">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#AdminEntryType"/>
+        <dc:description rdf:datatype="&xsd;string">An XML element of type AdminEntryType.</dc:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#Attestation -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#Attestation"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#CCD -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCD">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#CCDType"/>
+        <dc:description rdf:datatype="&xsd;string">An XML element of type CCDType</dc:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#CareEntry -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#CareEntry">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#CareEntryType"/>
+        <dc:description rdf:datatype="&xsd;string">An XML element of CareEntryType</dc:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DemographicEntry -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DemographicEntry">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DemographicEntryType"/>
+        <dc:description rdf:datatype="&xsd;string">An XML element of DemographicEntryType</dc:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#Entry -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#Entry">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
+        <dc:description rdf:datatype="&xsd;string">An abstract element of EntryType</dc:description>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.mlhim.org/xmlns/mlhim2#proportion -->
 
     <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#proportion">
@@ -2282,9 +2134,35 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AdminEntryType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#CareEntryType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DemographicEntryType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#attestation"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-audit"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-data"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-links"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-provider"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-subject"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#other-participations"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#protocol-id"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#workflow-id"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AttestationType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AuditType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCDType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ItemType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ParticipationType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#PartyType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-type"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
+            <rdf:Description rdf:about="&xsd;dayTimeDuration"/>
+            <rdf:Description rdf:about="&xsd;gMonthDay"/>
+            <rdf:Description rdf:about="&xsd;yearMonthDuration"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2310,56 +2188,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#attestation"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-audit"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-data"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-links"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-provider"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-subject"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#other-participations"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#protocol-id"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#workflow-id"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKRType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKUType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DERType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValue"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#INVType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#MSKType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NASKType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NAType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NAVType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NINFType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#OTHType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#PINFType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#QSType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#TRCType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#UNCType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#UNKType"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AttestationType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AuditType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCDType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ItemType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ParticipationType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#PartyType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-type"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
-            <rdf:Description rdf:about="&xsd;dayTimeDuration"/>
-            <rdf:Description rdf:about="&xsd;gMonthDay"/>
-            <rdf:Description rdf:about="&xsd;yearMonthDuration"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AdminEntryType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#CareEntryType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DemographicEntryType"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
