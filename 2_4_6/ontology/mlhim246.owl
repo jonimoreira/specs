@@ -1377,6 +1377,10 @@
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
         <dc:description rdf:datatype="&xsd;string">Abstract type defining the common meta-data of all types of encapsulated
         data.</dc:description>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvMediaType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvParsableType"/>
+        </owl:disjointUnionOf>
     </owl:Class>
     
 
@@ -1419,6 +1423,11 @@
         <dc:description rdf:datatype="&xsd;string">Abstract type defining the concept of ordered values, which includes
         ordinals as well as true quantities. The implementations require the functions ‘&amp;lt;’,
         &apos;&amp;gt;&apos; and is_strictly_comparable_to (&apos;==&apos;).</dc:description>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrdinalType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvTemporalType"/>
+        </owl:disjointUnionOf>
     </owl:Class>
     
 
@@ -1460,6 +1469,11 @@
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
         <dc:description rdf:datatype="&xsd;string">Abstract type defining the concept of true quantified values, i.e. values
         which are not only ordered, but which have a precise magnitude.</dc:description>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvCountType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantityType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvRatioType"/>
+        </owl:disjointUnionOf>
     </owl:Class>
     
 
