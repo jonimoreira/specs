@@ -543,6 +543,7 @@
         <dc:description rdf:datatype="&xsd;string">Accuracy of the value in the magnitude attribute. 0% to +/- 100% A
                 value of 0 means that the accuracy is unknown.</dc:description>
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude"/>
         <rdfs:range rdf:resource="&xsd;decimal"/>
     </owl:DatatypeProperty>
     
@@ -564,6 +565,7 @@
         <dc:description rdf:datatype="&xsd;string">Organisation that assigned the id to the item being
                 identified.</dc:description>
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvIdentifierType"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#issuer"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -622,6 +624,11 @@
 
     <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-date">
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvTemporalType"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-datetime"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-day"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-month"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-time"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-year-month"/>
         <rdfs:range rdf:resource="&xsd;date"/>
     </owl:DatatypeProperty>
     
@@ -655,6 +662,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-duration">
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvTemporalType"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-month"/>
         <rdfs:range rdf:resource="&xsd;duration"/>
     </owl:DatatypeProperty>
     
@@ -688,6 +696,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-year">
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvTemporalType"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#dvtemporal-year-month"/>
         <rdfs:range rdf:resource="&xsd;gYear"/>
     </owl:DatatypeProperty>
     
@@ -793,6 +802,7 @@
         <dc:description rdf:datatype="&xsd;string">The identifier common name, such as “Driver&apos;s License” or
                 “SSN”.</dc:description>
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvIdentifierType"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#issuer"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -1138,6 +1148,7 @@
                 These are generally constrained by a set of enumerations in the
                 PcT.</dc:description>
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvBooleanType"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.mlhim.org/xmlns/mlhim2#valid-true"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -2224,6 +2235,112 @@
     <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#~">
         <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AdminEntryType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#CareEntryType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DemographicEntryType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#data-name"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#valid-time-begin"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#valid-time-end"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvBooleanType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvEncapsulatedType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvIntervalType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvStringType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvURIType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ReferenceRangeType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-date"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-dateTime"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-decimal"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-duration"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-float"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-int"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-time"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#attestation"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-audit"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-data"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-links"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-provider"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#entry-subject"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#other-participations"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#protocol-id"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#workflow-id"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKRType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKUType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DERType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValue"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#INVType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#MSKType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NASKType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NAType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NAVType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#NINFType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#OTHType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#PINFType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#QSType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#TRCType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#UNCType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#UNKType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AttestationType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AuditType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCDType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ItemType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ParticipationType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#PartyType"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-type"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
+            <rdf:Description rdf:about="&xsd;dayTimeDuration"/>
+            <rdf:Description rdf:about="&xsd;gMonthDay"/>
+            <rdf:Description rdf:about="&xsd;yearMonthDuration"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
