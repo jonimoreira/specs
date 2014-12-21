@@ -161,6 +161,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueRef">
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+        <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
     </owl:ObjectProperty>
     
 
