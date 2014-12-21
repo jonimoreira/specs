@@ -2146,6 +2146,134 @@
     
 
 
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvBooleanElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvBooleanElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvBooleanType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvCodedStringElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvCountElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvCountElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCountType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvEncapsulatedElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvEncapsulatedElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvEncapsulatedType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvIdentifierElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvIdentifierElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvIdentifierType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvIntervalElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvIntervalElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvIntervalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvMediaElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvMediaElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvMediaType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvOrderedElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrderedElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvOrdinalElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrdinalElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrdinalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvParsableElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvParsableElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvParsableType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvQuantityElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantityElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvRatioElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvRatioElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvRatioType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvStringElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvStringElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvStringType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvTemporalElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvTemporalElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvTemporalType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#DvURIElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvURIElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvURIType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.mlhim.org/xmlns/mlhim2#EntryElement -->
 
     <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#EntryElement">
@@ -2255,6 +2383,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#QSElement">
         <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#QSType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#ReferenceRangeElement -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#ReferenceRangeElement">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ReferenceRangeType"/>
     </owl:NamedIndividual>
     
 
