@@ -2,7 +2,7 @@
     Established a single namespace for all artifacts. The prefix and namespace are:
     mlhim2='http://www.mlhim.org/xmlns/mlhim2'
 
-    Added an OWL ontology for RM 2.4.6
+    Added an OWL ontology for RM 2.4.6 Visualize the ontology here: http://vowl.visualdataweb.org/webvowl/index.html?#iri=http://www.mlhim.org/xmlns/mlhim2/mlhim246.owl
 
     Moved the ontology and RM physical locations to the namespace location on mlhim.org.
 
