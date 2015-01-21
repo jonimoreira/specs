@@ -2,7 +2,7 @@
     Established a single namespace for all artifacts. The prefix and namespace are:
     mlhim2='http://www.mlhim.org/xmlns/mlhim2'
 
-    Changed the RDF Subject, 'rdf:about=' value, to a full URI  http://www.mlhim.org/xmlns/ct- with the UUID appended.
+    Changed the RDF Subject, 'rdf:about=' value, to a full URI  http://www.mlhim.org/xmlns/mlhim2/ct- with the UUID appended.
     
     Added an OWL ontology for RM 2.4.6 Visualize the ontology here: http://vowl.visualdataweb.org/webvowl/index.html?#iri=http://www.mlhim.org/xmlns/mlhim2/mlhim246.owl
 
