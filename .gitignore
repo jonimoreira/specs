@@ -56,3 +56,6 @@ nosetests.xml
 graphics/Vinheta MLHIM/*
 *.zip
 .Rproj.user
+
+#Sublime project files
+*sublime-*
