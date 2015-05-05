@@ -1,4 +1,5 @@
 #Changes from 2.4.6 to 2.4.7  (see the git commit msgs. for details)                     
+    Added 'units' capability to DvInterval.
 
 #Changes from 2.4.5 to 2.4.6  (see the git commit msgs. for details)                     
     Established a single namespace for all artifacts. The prefix and namespace are:
