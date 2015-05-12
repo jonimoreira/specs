@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mlhim2:ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9b0 xmlns:mlhim2='http://www.mlhim.org/xmlns/mlhim2'
+
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:schemaLocation='http://www.mlhim.org/xmlns/mlhim2 http://www.ccdgen.com/ccdlib/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9b0.xsd'>
+
+  <mlhim2:el-815a4d43-d237-4995-9f74-a902e23c8341> <!-- Entry -->
+  <!-- entry-links -->
+      <mlhim2:el-128f07d4-33ec-462e-826e-01f7bd0e206f> <!-- DvURI -->
+      <data-name>Connected To - Testing</data-name>
+      <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+      <valid-time-begin>1987-02-28T18:09:06</valid-time-begin>
+      <valid-time-end>1994-12-03T01:15:28</valid-time-end>
+      <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+      <relation>connected to</relation>
+    </mlhim2:el-128f07d4-33ec-462e-826e-01f7bd0e206f>
+  <!-- entry-audit -->
+      <mlhim2:el-181b7551-72fb-459a-8d2d-fcf020f3bc1c> <!-- Audit -->
+      <!-- Audit system-id -->
+      <mlhim2:el-a58bc8eb-4c3b-42fb-a35e-9314e92893dc> <!-- DvIdentifier -->
+        <data-name>Originating System ID - Testing</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2009-09-18T21:55:52</valid-time-begin>
+        <valid-time-end>2009-11-29T15:24:32</valid-time-end>
+        <DvString-dv>Default ID</DvString-dv>
+        <language>en-US</language>
+        <id-name>ID Number</id-name>
+        <issuer>Owner</issuer>
+        <assignor>Owner</assignor>
+      </mlhim2:el-a58bc8eb-4c3b-42fb-a35e-9314e92893dc>
+      <!-- Audit system-user -->
+      <mlhim2:el-2597a3ca-f92c-40ab-b83c-abe797ed70fa> <!-- Party -->
+        <party-name>A. Sample Name</party-name>
+        <!-- PI external-ref -->
+        <mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688> <!-- DvURI -->
+          <data-name>External Reference for Party</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2013-10-08T11:15:06</valid-time-begin>
+          <valid-time-end>2014-10-27T19:17:15</valid-time-end>
+          <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+          <relation>Party Associated with the record</relation>
+        </mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688>
+        <!-- PI details -->
+        <mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1> <!-- Cluster -->
+          <cluster-subject>Address Details (US)</cluster-subject>
+          <mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e> <!-- DvAdapter -->
+            <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea> <!-- DvString -->
+              <data-name>Additional Address Line(s) (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1974-03-14T21:03:54</valid-time-begin>
+              <valid-time-end>1980-07-14T10:19:29</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+          </mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+          <mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89> <!-- DvAdapter -->
+            <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63> <!-- DvString -->
+              <data-name>City Name (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1978-02-07T07:03:14</valid-time-begin>
+              <valid-time-end>1999-06-16T12:01:21</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+          </mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+          <mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a> <!-- DvAdapter -->
+            <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2> <!-- DvString -->
+              <data-name>Common Name / Nickname</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2007-12-10T19:25:51</valid-time-begin>
+              <valid-time-end>2014-02-15T04:32:20</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+          </mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+          <mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e> <!-- DvAdapter -->
+            <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626> <!-- DvString -->
+              <data-name>State Abbreviation (USPS)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1974-07-14T16:44:35</valid-time-begin>
+              <valid-time-end>1997-04-15T23:44:07</valid-time-end>
+              <DvString-dv>IA</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+          </mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+          <mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f> <!-- DvAdapter -->
+            <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5> <!-- DvString -->
+              <data-name>Street Number and Name (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2010-04-23T06:36:43</valid-time-begin>
+              <valid-time-end>2012-09-06T09:23:10</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+          </mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+          <mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88> <!-- DvAdapter -->
+            <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a> <!-- DvString -->
+              <data-name>Telephone Number (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1981-01-28T14:27:09</valid-time-begin>
+              <valid-time-end>2006-09-03T13:06:48</valid-time-end>
+              <DvString-dv>111-111-1111</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+          </mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+          <mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366> <!-- DvAdapter -->
+            <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4> <!-- DvString -->
+              <data-name>Zip Code (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2011-01-11T14:08:58</valid-time-begin>
+              <valid-time-end>2012-02-11T12:28:48</valid-time-end>
+              <DvString-dv>20385-5790</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+          </mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+        </mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1>
+      </mlhim2:el-2597a3ca-f92c-40ab-b83c-abe797ed70fa>
+      <!-- Audit location -->
+      <mlhim2:el-24fa9da1-cf56-4103-9dca-3b21b0416539> <!-- Cluster -->
+        <cluster-subject>FAD System Location (WGS84)</cluster-subject>
+        <mlhim2:el-84a78cf3-028b-4aff-a17c-fb485a582fbd> <!-- DvAdapter -->
+          <mlhim2:el-5ffee792-a475-4140-a064-677f00559561> <!-- DvString -->
+            <data-name>FAD Latitude (Decimal Format)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2011-03-10T00:23:26</valid-time-begin>
+            <valid-time-end>2013-11-22T16:15:40</valid-time-end>
+            <DvString-dv>90.00</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-5ffee792-a475-4140-a064-677f00559561>
+        </mlhim2:el-84a78cf3-028b-4aff-a17c-fb485a582fbd>
+        <mlhim2:el-5e002578-74dd-4112-be3e-5754454cbf9a> <!-- DvAdapter -->
+          <mlhim2:el-53cfa6c7-29fe-4b4a-90c2-5998eb18bf3f> <!-- DvString -->
+            <data-name>FAD Longitude (Decimal Format)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2007-06-22T09:37:31</valid-time-begin>
+            <valid-time-end>2011-08-18T13:10:03</valid-time-end>
+            <DvString-dv>-60.00</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-53cfa6c7-29fe-4b4a-90c2-5998eb18bf3f>
+        </mlhim2:el-5e002578-74dd-4112-be3e-5754454cbf9a>
+      </mlhim2:el-24fa9da1-cf56-4103-9dca-3b21b0416539>
+      <timestamp>1992-06-02T06:33:35Z</timestamp>
+    </mlhim2:el-181b7551-72fb-459a-8d2d-fcf020f3bc1c>
+  <language>en-US</language>
+  <encoding>utf-8</encoding>
+  <!-- entry-subject -->
+      <mlhim2:el-ef4abd55-562c-418f-89c3-f831bf42c33f> <!-- Party -->
+      <party-name>A. Sample Name</party-name>
+      <!-- PI external-ref -->
+      <mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688> <!-- DvURI -->
+        <data-name>External Reference for Party</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>1986-07-14T09:28:54</valid-time-begin>
+        <valid-time-end>1994-10-19T22:28:13</valid-time-end>
+        <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+        <relation>Party Associated with the record</relation>
+      </mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688>
+      <!-- PI details -->
+      <mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1> <!-- Cluster -->
+        <cluster-subject>Address Details (US)</cluster-subject>
+        <mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e> <!-- DvAdapter -->
+          <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea> <!-- DvString -->
+            <data-name>Additional Address Line(s) (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1981-03-17T08:19:01</valid-time-begin>
+            <valid-time-end>1997-08-31T02:09:16</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+        </mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+        <mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89> <!-- DvAdapter -->
+          <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63> <!-- DvString -->
+            <data-name>City Name (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2010-05-08T19:29:26</valid-time-begin>
+            <valid-time-end>2012-04-03T23:14:50</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+        </mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+        <mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a> <!-- DvAdapter -->
+          <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2> <!-- DvString -->
+            <data-name>Common Name / Nickname</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1999-08-22T18:42:48</valid-time-begin>
+            <valid-time-end>2012-05-31T15:22:31</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+        </mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+        <mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e> <!-- DvAdapter -->
+          <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626> <!-- DvString -->
+            <data-name>State Abbreviation (USPS)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1991-06-29T05:57:03</valid-time-begin>
+            <valid-time-end>1993-07-01T18:59:04</valid-time-end>
+            <DvString-dv>IA</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+        </mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+        <mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f> <!-- DvAdapter -->
+          <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5> <!-- DvString -->
+            <data-name>Street Number and Name (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2004-11-20T05:29:57</valid-time-begin>
+            <valid-time-end>2007-08-27T08:17:07</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+        </mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+        <mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88> <!-- DvAdapter -->
+          <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a> <!-- DvString -->
+            <data-name>Telephone Number (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1991-08-02T15:23:24</valid-time-begin>
+            <valid-time-end>1997-10-17T19:25:29</valid-time-end>
+            <DvString-dv>111-111-1111</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+        </mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+        <mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366> <!-- DvAdapter -->
+          <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4> <!-- DvString -->
+            <data-name>Zip Code (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1994-11-12T08:38:21</valid-time-begin>
+            <valid-time-end>2010-12-13T10:01:23</valid-time-end>
+            <DvString-dv>68719-0337</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+        </mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+      </mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1>
+    </mlhim2:el-ef4abd55-562c-418f-89c3-f831bf42c33f>
+  <!-- entry-provider -->
+      <mlhim2:el-8501f206-dfd2-4080-be79-34539d0e076b> <!-- Party -->
+      <party-name>A. Sample Name</party-name>
+      <!-- PI external-ref -->
+      <mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688> <!-- DvURI -->
+        <data-name>External Reference for Party</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>1981-08-12T13:36:08</valid-time-begin>
+        <valid-time-end>2012-09-01T04:35:25</valid-time-end>
+        <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+        <relation>Party Associated with the record</relation>
+      </mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688>
+      <!-- PI details -->
+      <mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1> <!-- Cluster -->
+        <cluster-subject>Address Details (US)</cluster-subject>
+        <mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e> <!-- DvAdapter -->
+          <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea> <!-- DvString -->
+            <data-name>Additional Address Line(s) (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2000-02-07T07:22:38</valid-time-begin>
+            <valid-time-end>2000-12-14T20:42:54</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+        </mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+        <mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89> <!-- DvAdapter -->
+          <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63> <!-- DvString -->
+            <data-name>City Name (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1983-09-15T13:27:22</valid-time-begin>
+            <valid-time-end>1985-06-02T03:55:45</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+        </mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+        <mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a> <!-- DvAdapter -->
+          <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2> <!-- DvString -->
+            <data-name>Common Name / Nickname</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1971-03-04T17:18:49</valid-time-begin>
+            <valid-time-end>1978-10-31T06:41:15</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+        </mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+        <mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e> <!-- DvAdapter -->
+          <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626> <!-- DvString -->
+            <data-name>State Abbreviation (USPS)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1980-02-26T06:11:48</valid-time-begin>
+            <valid-time-end>1982-01-09T05:36:11</valid-time-end>
+            <DvString-dv>FL</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+        </mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+        <mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f> <!-- DvAdapter -->
+          <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5> <!-- DvString -->
+            <data-name>Street Number and Name (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1973-07-18T23:46:04</valid-time-begin>
+            <valid-time-end>1995-11-01T12:24:11</valid-time-end>
+            <DvString-dv>Default String</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+        </mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+        <mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88> <!-- DvAdapter -->
+          <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a> <!-- DvString -->
+            <data-name>Telephone Number (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1977-09-22T00:45:31</valid-time-begin>
+            <valid-time-end>2001-12-10T15:12:52</valid-time-end>
+            <DvString-dv>111-111-1111</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+        </mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+        <mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366> <!-- DvAdapter -->
+          <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4> <!-- DvString -->
+            <data-name>Zip Code (US)</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1998-07-27T04:38:33</valid-time-begin>
+            <valid-time-end>2002-07-27T10:10:20</valid-time-end>
+            <DvString-dv>116821432</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+        </mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+      </mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1>
+    </mlhim2:el-8501f206-dfd2-4080-be79-34539d0e076b>
+  <!-- other-participations -->
+      <mlhim2:el-71c3b001-bb04-4479-a11b-1e31194de39c> <!-- Participation -->
+      <!-- performer -->
+      <mlhim2:el-04f35974-ea86-4cdd-8d06-fd330402356f> <!-- Party -->
+        <party-name>A. Sample Name</party-name>
+        <!-- PI external-ref -->
+        <mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688> <!-- DvURI -->
+          <data-name>External Reference for Party</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2003-02-25T03:51:19</valid-time-begin>
+          <valid-time-end>2006-12-18T10:15:29</valid-time-end>
+          <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+          <relation>Party Associated with the record</relation>
+        </mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688>
+        <!-- PI details -->
+        <mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1> <!-- Cluster -->
+          <cluster-subject>Address Details (US)</cluster-subject>
+          <mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e> <!-- DvAdapter -->
+            <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea> <!-- DvString -->
+              <data-name>Additional Address Line(s) (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1988-06-21T18:18:44</valid-time-begin>
+              <valid-time-end>2000-01-26T07:43:35</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+          </mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+          <mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89> <!-- DvAdapter -->
+            <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63> <!-- DvString -->
+              <data-name>City Name (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1972-05-18T17:30:24</valid-time-begin>
+              <valid-time-end>1999-06-08T12:57:39</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+          </mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+          <mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a> <!-- DvAdapter -->
+            <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2> <!-- DvString -->
+              <data-name>Common Name / Nickname</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1984-05-23T05:02:42</valid-time-begin>
+              <valid-time-end>1993-02-24T20:14:41</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+          </mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+          <mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e> <!-- DvAdapter -->
+            <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626> <!-- DvString -->
+              <data-name>State Abbreviation (USPS)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1979-01-12T22:25:11</valid-time-begin>
+              <valid-time-end>1987-04-20T07:11:44</valid-time-end>
+              <DvString-dv>MD</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+          </mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+          <mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f> <!-- DvAdapter -->
+            <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5> <!-- DvString -->
+              <data-name>Street Number and Name (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2010-02-26T22:25:20</valid-time-begin>
+              <valid-time-end>2011-05-22T22:16:42</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+          </mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+          <mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88> <!-- DvAdapter -->
+            <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a> <!-- DvString -->
+              <data-name>Telephone Number (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1979-10-26T23:21:27</valid-time-begin>
+              <valid-time-end>1982-12-15T22:11:09</valid-time-end>
+              <DvString-dv>111-111-1111</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+          </mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+          <mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366> <!-- DvAdapter -->
+            <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4> <!-- DvString -->
+              <data-name>Zip Code (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1990-05-19T12:33:34</valid-time-begin>
+              <valid-time-end>1991-11-30T15:18:43</valid-time-end>
+              <DvString-dv>05930-7395</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+          </mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+        </mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1>
+      </mlhim2:el-04f35974-ea86-4cdd-8d06-fd330402356f>
+      <!-- function -->
+      <mlhim2:el-3ce6e751-f80e-4caa-84e7-96ae49d82914> <!-- DvCodedString -->
+        <data-name>Participation Function</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2011-08-17T02:12:04</valid-time-begin>
+        <valid-time-end>2014-08-13T14:47:31</valid-time-end>
+        <DvString-dv>This</DvString-dv>
+        <language>en-US</language>
+        <vocab-code>This</vocab-code>
+        <vocab-uri>http://www.mlhim.org/function#This</vocab-uri>
+      </mlhim2:el-3ce6e751-f80e-4caa-84e7-96ae49d82914>
+      <!-- mode -->
+      <mlhim2:el-f24518e0-7f38-48d6-9d68-d284788293e5> <!-- DvCodedString -->
+        <data-name>Participation Mode</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2010-04-12T06:02:40</valid-time-begin>
+        <valid-time-end>2012-03-23T07:30:17</valid-time-end>
+        <DvString-dv>Doctor</DvString-dv>
+        <language>en-US</language>
+        <vocab-code>Doctor</vocab-code>
+        <vocab-uri>http://www.mlhim.org/mode#Doctor</vocab-uri>
+      </mlhim2:el-f24518e0-7f38-48d6-9d68-d284788293e5>
+      <start-time>2007-09-02T08:06:44</start-time>
+      <end-time>2008-09-14T09:46:13</end-time>
+    </mlhim2:el-71c3b001-bb04-4479-a11b-1e31194de39c>
+  <!-- protocol-id -->
+      <mlhim2:el-6ae7730b-60c5-42a8-a8d8-5e96878a1f65> <!-- DvIdentifier -->
+      <data-name>Generic Protocol ID - Testing</data-name>
+      <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+      <valid-time-begin>2004-10-26T20:37:59</valid-time-begin>
+      <valid-time-end>2006-12-05T14:11:05</valid-time-end>
+      <DvString-dv>Default ID</DvString-dv>
+      <language>en-US</language>
+      <id-name>Protocal ID</id-name>
+      <issuer>Owner</issuer>
+      <assignor>Owner</assignor>
+    </mlhim2:el-6ae7730b-60c5-42a8-a8d8-5e96878a1f65>
+  <current-state>default</current-state>
+  <!-- workflow-id -->
+      <mlhim2:el-86b77f15-1c83-48b4-a43f-039193639241> <!-- DvURI -->
+      <data-name>Workflow ID - Testing</data-name>
+      <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+      <valid-time-begin>1972-01-07T12:12:43</valid-time-begin>
+      <valid-time-end>1988-02-16T18:59:06</valid-time-end>
+      <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+      <relation>material information bearer</relation>
+    </mlhim2:el-86b77f15-1c83-48b4-a43f-039193639241>
+  <!-- attestation -->
+  <mlhim2:el-214e1907-665a-4218-ac75-9ab97ee772ef> <!-- Attestation -->
+      <!-- ATT attested-view -->
+      <mlhim2:el-77527149-1f87-414c-9af9-a042e5ec2545> <!-- DvMedia -->
+        <data-name>Attestation View</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>1988-03-01T10:32:09</valid-time-begin>
+        <valid-time-end>2006-12-02T04:41:16</valid-time-end>
+        <size>0</size>
+        <encoding>utf-8</encoding>
+        <language>en-US</language>
+        <mime-type>png</mime-type>
+        <compression-type>gz</compression-type>
+        <hash-result>dshfsoud6y3rwpef838rhf983trgf9e93w8rytgf</hash-result>
+        <hash-function>MD5</hash-function>
+        <alt-txt>Fake Media entry data.</alt-txt>
+        <uri>http://www.mlhim.org/fake_media</uri>
+        <!--<media-content></media-content>-->
+      </mlhim2:el-77527149-1f87-414c-9af9-a042e5ec2545>
+      <!-- ATT :proof -->
+      <mlhim2:el-b111953a-390f-42e1-a9ef-b2e5e429da64> <!-- DvParsable -->
+        <data-name>Proof</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>1980-12-04T01:50:59</valid-time-begin>
+        <valid-time-end>2007-11-16T23:57:57</valid-time-end>
+        <size>0</size>
+        <encoding>utf-8</encoding>
+        <language>en-US</language>
+        <DvParsable-dv>Some parsable information.</DvParsable-dv>
+        <formalism>Unknown</formalism>
+      </mlhim2:el-b111953a-390f-42e1-a9ef-b2e5e429da64>
+      <!-- ATT reason -->
+      <mlhim2:el-6df8d57d-a5fd-4155-88db-a44b4f0c5ef4> <!-- DvCodedString -->
+        <data-name>Attestation Reason</data-name>
+        <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+        <valid-time-begin>2002-09-11T01:56:08</valid-time-begin>
+        <valid-time-end>2014-07-26T01:04:38</valid-time-end>
+        <DvString-dv>Edited</DvString-dv>
+        <language>en-US</language>
+        <vocab-code>edited</vocab-code>
+        <vocab-uri>http://www.mlhim.org/attestation#edited</vocab-uri>
+      </mlhim2:el-6df8d57d-a5fd-4155-88db-a44b4f0c5ef4>
+      <!-- ATT committer -->
+      <mlhim2:el-a0a28188-adfc-4e7c-be0f-db0e88c57b84> <!-- Party -->
+        <party-name>A. Sample Name</party-name>
+        <!-- PI external-ref -->
+        <mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688> <!-- DvURI -->
+          <data-name>External Reference for Party</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>2000-03-05T12:28:24</valid-time-begin>
+          <valid-time-end>2011-08-09T08:27:53</valid-time-end>
+          <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+          <relation>Party Associated with the record</relation>
+        </mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688>
+        <!-- PI details -->
+        <mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1> <!-- Cluster -->
+          <cluster-subject>Address Details (US)</cluster-subject>
+          <mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e> <!-- DvAdapter -->
+            <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea> <!-- DvString -->
+              <data-name>Additional Address Line(s) (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2007-05-06T06:16:18</valid-time-begin>
+              <valid-time-end>2014-08-30T11:33:16</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+          </mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+          <mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89> <!-- DvAdapter -->
+            <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63> <!-- DvString -->
+              <data-name>City Name (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2011-08-26T13:11:14</valid-time-begin>
+              <valid-time-end>2015-03-22T16:57:13</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+          </mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+          <mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a> <!-- DvAdapter -->
+            <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2> <!-- DvString -->
+              <data-name>Common Name / Nickname</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2001-10-28T09:05:53</valid-time-begin>
+              <valid-time-end>2005-02-18T09:12:56</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+          </mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+          <mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e> <!-- DvAdapter -->
+            <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626> <!-- DvString -->
+              <data-name>State Abbreviation (USPS)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2003-08-16T22:55:37</valid-time-begin>
+              <valid-time-end>2014-03-05T16:44:27</valid-time-end>
+              <DvString-dv>MT</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+          </mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+          <mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f> <!-- DvAdapter -->
+            <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5> <!-- DvString -->
+              <data-name>Street Number and Name (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1971-07-26T15:21:49</valid-time-begin>
+              <valid-time-end>2010-11-26T16:12:47</valid-time-end>
+              <DvString-dv>Default String</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+          </mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+          <mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88> <!-- DvAdapter -->
+            <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a> <!-- DvString -->
+              <data-name>Telephone Number (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2000-07-27T18:34:07</valid-time-begin>
+              <valid-time-end>2015-08-22T12:13:25</valid-time-end>
+              <DvString-dv>111-111-1111</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+          </mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+          <mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366> <!-- DvAdapter -->
+            <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4> <!-- DvString -->
+              <data-name>Zip Code (US)</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1994-09-03T14:45:31</valid-time-begin>
+              <valid-time-end>2007-02-10T02:26:17</valid-time-end>
+              <DvString-dv>420621367</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+          </mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+        </mlhim2:el-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1>
+      </mlhim2:el-a0a28188-adfc-4e7c-be0f-db0e88c57b84>
+      <time-committed>1992-01-02T17:42:37Z</time-committed>
+      <is-pending>true</is-pending>
+</mlhim2:el-214e1907-665a-4218-ac75-9ab97ee772ef>
+  <!-- entry-data -->
+      <mlhim2:el-f31ba54e-5021-4f21-8a87-86312381f10f> <!-- Cluster -->
+      <cluster-subject>Test CareEntry entry-data</cluster-subject>
+      <mlhim2:el-62e20405-7908-4116-8662-2dd3bb0e6ea4> <!-- Cluster -->
+        <cluster-subject>Test Sub-Cluster</cluster-subject>
+        <mlhim2:el-8aff6c15-f828-4948-9222-195c1b2f0954> <!-- DvAdapter -->
+          <mlhim2:el-c8b3b872-dcb4-4a44-a386-5c626e116549> <!-- DvBoolean -->
+            <data-name>Bladder - Testing</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2014-09-01T05:57:48</valid-time-begin>
+            <valid-time-end>2015-01-21T21:59:26</valid-time-end>
+            <valid-true>Yes</valid-true>
+          </mlhim2:el-c8b3b872-dcb4-4a44-a386-5c626e116549>
+        </mlhim2:el-8aff6c15-f828-4948-9222-195c1b2f0954>
+        <mlhim2:el-697e8df2-7890-4f44-8442-e7f2beab4425> <!-- DvAdapter -->
+          <mlhim2:el-831a09c9-ceaf-46e0-a4e1-afcd064880bd> <!-- DvBoolean -->
+            <data-name>Fever duration: 3 weeks or less - Testing</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2004-08-18T13:04:37</valid-time-begin>
+            <valid-time-end>2006-02-24T02:01:01</valid-time-end>
+            <valid-true>YES</valid-true>
+          </mlhim2:el-831a09c9-ceaf-46e0-a4e1-afcd064880bd>
+        </mlhim2:el-697e8df2-7890-4f44-8442-e7f2beab4425>
+        <mlhim2:el-d4fd6e5a-875e-4512-8bdd-492498237341> <!-- DvAdapter -->
+          <mlhim2:el-a926d847-3a3e-45c5-af3f-3c55a35aca34> <!-- DvCount -->
+              <data-name>Heart Rate for Testing</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1997-04-21T01:56:52</valid-time-begin>
+              <valid-time-end>2009-05-29T22:56:09</valid-time-end>
+            <normal-status>Normal heart rate</normal-status>
+              <magnitude>723533</magnitude>
+              <mlhim2:magnitude-status>=</mlhim2:magnitude-status>
+              <error>0</error>
+              <accuracy>0</accuracy>
+            <mlhim2:el-3fa04c94-ea73-4c2e-8081-f706958277cb> <!-- DvString -->
+              <data-name>beats per minute</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1970-10-10T08:04:24</valid-time-begin>
+              <valid-time-end>2012-10-09T01:50:41</valid-time-end>
+              <DvString-dv>bpm</DvString-dv>
+              <language>en-US</language>
+            </mlhim2:el-3fa04c94-ea73-4c2e-8081-f706958277cb>
+          </mlhim2:el-a926d847-3a3e-45c5-af3f-3c55a35aca34>
+        </mlhim2:el-d4fd6e5a-875e-4512-8bdd-492498237341>
+      </mlhim2:el-62e20405-7908-4116-8662-2dd3bb0e6ea4>
+      <mlhim2:el-8aff6c15-f828-4948-9222-195c1b2f0954> <!-- DvAdapter -->
+        <mlhim2:el-c8b3b872-dcb4-4a44-a386-5c626e116549> <!-- DvBoolean -->
+          <data-name>Bladder - Testing</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1999-10-05T15:41:24</valid-time-begin>
+          <valid-time-end>2010-10-27T14:00:40</valid-time-end>
+          <valid-true>Yes</valid-true>
+        </mlhim2:el-c8b3b872-dcb4-4a44-a386-5c626e116549>
+      </mlhim2:el-8aff6c15-f828-4948-9222-195c1b2f0954>
+      <mlhim2:el-d97909c4-c7c9-4d47-b8ba-0c5a084bff99> <!-- DvAdapter -->
+        <mlhim2:el-cac506a0-cbf9-4588-a568-475132b9194a> <!-- DvURI -->
+          <data-name>attached to - Testing</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1985-01-06T07:10:38</valid-time-begin>
+          <valid-time-end>2011-02-26T01:24:05</valid-time-end>
+          <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+          <relation>http://purl.obolibrary.org/obo/RO_0002371</relation>
+        </mlhim2:el-cac506a0-cbf9-4588-a568-475132b9194a>
+      </mlhim2:el-d97909c4-c7c9-4d47-b8ba-0c5a084bff99>
+      <mlhim2:el-e9cbb207-9e89-416c-8b71-7cdb859b3097> <!-- DvAdapter -->
+        <mlhim2:el-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da> <!-- DvString -->
+          <data-name>Blood Pressure Device (Testing)</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1980-08-12T09:07:40</valid-time-begin>
+          <valid-time-end>1986-06-06T13:52:05</valid-time-end>
+          <DvString-dv>Aneroid sphygmomanometer</DvString-dv>
+          <language>en-US</language>
+        </mlhim2:el-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da>
+      </mlhim2:el-e9cbb207-9e89-416c-8b71-7cdb859b3097>
+      <mlhim2:el-3bdd7392-a76a-4c1a-83a4-48b3638ba2eb> <!-- DvAdapter -->
+        <mlhim2:el-1175b701-2ba4-4c27-955d-4fb2dd08ce47> <!-- DvOrdinal -->
+          <data-name>Karnofsky Performance Status Score - Testing</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1997-11-06T06:47:35</valid-time-begin>
+          <valid-time-end>2012-04-23T11:10:18</valid-time-end>
+        <mlhim2:el-e4988004-9897-4880-ae93-a469766537a7> <!-- ReferenceRange -->
+            <data-name>Test ReferenceRange</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1992-04-10T05:41:58</valid-time-begin>
+            <valid-time-end>2011-05-07T11:42:39</valid-time-end>
+            <referencerange-definition>ReferenceRange for testing only.</referencerange-definition>
+            <mlhim2:el-e9e9c3c5-6c34-41ea-b14f-d32e54d87d0e> <!-- DvInterval -->
+              <data-name>Gestational Age - Testing</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>2004-09-02T13:23:33</valid-time-begin>
+              <valid-time-end>2011-08-07T00:07:04</valid-time-end>
+              <lower>
+                <invl-int>0</invl-int>
+              </lower>
+              <upper>
+                <invl-int>2</invl-int>
+              </upper>
+              <lower-included>true</lower-included>
+              <upper-included>true</upper-included>
+              <lower-bounded>true</lower-bounded>
+              <upper-bounded>true</upper-bounded>
+            </mlhim2:el-e9e9c3c5-6c34-41ea-b14f-d32e54d87d0e>
+            <is-normal>false</is-normal>
+          </mlhim2:el-e4988004-9897-4880-ae93-a469766537a7>
+          <normal-status>Normal, no complaints, no evidence of disease</normal-status>
+          <DvOrdinal-dv>70</DvOrdinal-dv>
+          <symbol>Cares for self, unable to carry on normal activity or to do active work</symbol>
+        </mlhim2:el-1175b701-2ba4-4c27-955d-4fb2dd08ce47>
+      </mlhim2:el-3bdd7392-a76a-4c1a-83a4-48b3638ba2eb>
+      <mlhim2:el-243a0558-0406-4663-8a96-321ccb59e24f> <!-- DvAdapter -->
+        <mlhim2:el-5423322d-5a1c-4dd8-9518-baaeccf5f8ff> <!-- DvCount -->
+            <data-name>Number of aiquots - Testing</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2005-08-22T18:45:53</valid-time-begin>
+            <valid-time-end>2005-12-16T05:41:37</valid-time-end>
+        <mlhim2:el-149731a0-ac63-47f2-805e-d6cb6e6232ea> <!-- ReferenceRange -->
+            <data-name>Hypotension for 1 year old - Testing</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2002-10-20T10:44:52</valid-time-begin>
+            <valid-time-end>2014-07-11T17:28:45</valid-time-end>
+            <referencerange-definition>Hypotension for 1 year old</referencerange-definition>
+            <mlhim2:el-446e08fe-2868-4c56-baef-75a1be4f974d> <!-- DvInterval -->
+              <data-name>Hypotension for 1 year old - Testing</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1970-07-10T11:33:04</valid-time-begin>
+              <valid-time-end>1980-06-09T07:51:25</valid-time-end>
+              <lower>
+                <invl-decimal>0</invl-decimal>
+              </lower>
+              <upper>
+                <invl-decimal>72</invl-decimal>
+              </upper>
+              <lower-included>true</lower-included>
+              <upper-included>false</upper-included>
+              <lower-bounded>true</lower-bounded>
+              <upper-bounded>true</upper-bounded>
+            </mlhim2:el-446e08fe-2868-4c56-baef-75a1be4f974d>
+            <is-normal>false</is-normal>
+          </mlhim2:el-149731a0-ac63-47f2-805e-d6cb6e6232ea>
+            <magnitude>215668</magnitude>
+            <mlhim2:magnitude-status>=</mlhim2:magnitude-status>
+            <error>0</error>
+            <accuracy>0</accuracy>
+          <mlhim2:el-a2fc9034-7f68-4206-a8df-2fdb5bda814f> <!-- DvString -->
+            <data-name>Unit - Example</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2015-11-23T23:57:38</valid-time-begin>
+            <valid-time-end>2015-12-28T09:57:41</valid-time-end>
+            <DvString-dv>Ci</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-a2fc9034-7f68-4206-a8df-2fdb5bda814f>
+        </mlhim2:el-5423322d-5a1c-4dd8-9518-baaeccf5f8ff>
+      </mlhim2:el-243a0558-0406-4663-8a96-321ccb59e24f>
+      <mlhim2:el-78f38614-fce7-463c-a332-f4846d00818a> <!-- DvAdapter -->
+        <mlhim2:el-bbedbac7-63c8-4514-a83f-b3663303458f> <!-- DvQuantity -->
+          <data-name>Body Temperature - Testing</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1997-05-15T23:18:23</valid-time-begin>
+          <valid-time-end>2000-05-29T03:53:12</valid-time-end>
+        <mlhim2:el-e4988004-9897-4880-ae93-a469766537a7> <!-- ReferenceRange -->
+            <data-name>Test ReferenceRange</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1999-03-29T19:54:10</valid-time-begin>
+            <valid-time-end>2002-04-23T22:12:26</valid-time-end>
+            <referencerange-definition>ReferenceRange for testing only.</referencerange-definition>
+            <mlhim2:el-e9e9c3c5-6c34-41ea-b14f-d32e54d87d0e> <!-- DvInterval -->
+              <data-name>Gestational Age - Testing</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1988-04-13T12:49:29</valid-time-begin>
+              <valid-time-end>1994-02-15T16:50:07</valid-time-end>
+              <lower>
+                <invl-int>0</invl-int>
+              </lower>
+              <upper>
+                <invl-int>2</invl-int>
+              </upper>
+              <lower-included>true</lower-included>
+              <upper-included>true</upper-included>
+              <lower-bounded>true</lower-bounded>
+              <upper-bounded>true</upper-bounded>
+            </mlhim2:el-e9e9c3c5-6c34-41ea-b14f-d32e54d87d0e>
+            <is-normal>false</is-normal>
+          </mlhim2:el-e4988004-9897-4880-ae93-a469766537a7>
+            <magnitude>111</magnitude>
+          <mlhim2:magnitude-status>=</mlhim2:magnitude-status>
+          <error>0</error>
+          <accuracy>0</accuracy>
+          <mlhim2:el-23fd71b8-beeb-47c3-9e63-da31357e8a27> <!-- DvString -->
+            <data-name>Temperature</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1991-11-07T04:06:56</valid-time-begin>
+            <valid-time-end>2001-11-22T18:21:01</valid-time-end>
+            <DvString-dv>F</DvString-dv>
+            <language>en-US</language>
+          </mlhim2:el-23fd71b8-beeb-47c3-9e63-da31357e8a27>
+        </mlhim2:el-bbedbac7-63c8-4514-a83f-b3663303458f>
+      </mlhim2:el-78f38614-fce7-463c-a332-f4846d00818a>
+      <mlhim2:el-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f> <!-- DvAdapter -->
+        <mlhim2:el-5fa7a138-4734-4b84-99f8-4cee79d248ee> <!-- DvRatio -->
+          <data-name>Test Ratio</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1973-04-24T17:05:17</valid-time-begin>
+          <valid-time-end>2014-07-30T00:35:50</valid-time-end>
+        <mlhim2:el-e4988004-9897-4880-ae93-a469766537a7> <!-- ReferenceRange -->
+            <data-name>Test ReferenceRange</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>1980-12-12T19:38:38</valid-time-begin>
+            <valid-time-end>1997-11-19T23:29:02</valid-time-end>
+            <referencerange-definition>ReferenceRange for testing only.</referencerange-definition>
+            <mlhim2:el-e9e9c3c5-6c34-41ea-b14f-d32e54d87d0e> <!-- DvInterval -->
+              <data-name>Gestational Age - Testing</data-name>
+              <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+              <valid-time-begin>1991-09-26T05:12:57</valid-time-begin>
+              <valid-time-end>2015-01-11T22:11:57</valid-time-end>
+              <lower>
+                <invl-int>0</invl-int>
+              </lower>
+              <upper>
+                <invl-int>2</invl-int>
+              </upper>
+              <lower-included>true</lower-included>
+              <upper-included>true</upper-included>
+              <lower-bounded>true</lower-bounded>
+              <upper-bounded>true</upper-bounded>
+            </mlhim2:el-e9e9c3c5-6c34-41ea-b14f-d32e54d87d0e>
+            <is-normal>false</is-normal>
+          </mlhim2:el-e4988004-9897-4880-ae93-a469766537a7>
+            <magnitude>-3.05643874</magnitude>
+          <mlhim2:magnitude-status>=</mlhim2:magnitude-status>
+          <error>0</error>
+          <accuracy>0</accuracy>
+          <mlhim2:ratio-type>ratio</mlhim2:ratio-type>
+          <numerator>229737.81235363590531051158905029296875</numerator>
+          <denominator>-75165.194416351616382598876953125</denominator>
+          <!-- Numerator Units -->
+          <!-- Denominator Units -->
+          <!-- Ratio Units -->
+        <!-- None Defined -->
+        </mlhim2:el-5fa7a138-4734-4b84-99f8-4cee79d248ee>
+      </mlhim2:el-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f>
+      <mlhim2:el-5ff9fcfc-6260-426d-b999-86b96a6764c7> <!-- DvAdapter -->
+        <mlhim2:el-de024dcf-f004-4dcc-a367-25df22ffe89e> <!-- DvTemporal -->
+          <data-name>Minutes post injection start time - Testing</data-name>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+          <valid-time-begin>1977-08-04T07:48:29</valid-time-begin>
+          <valid-time-end>1986-04-04T13:52:38</valid-time-end>
+          <dvtemporal-time>00:00:00</dvtemporal-time>
+        </mlhim2:el-de024dcf-f004-4dcc-a367-25df22ffe89e>
+      </mlhim2:el-5ff9fcfc-6260-426d-b999-86b96a6764c7>
+    </mlhim2:el-f31ba54e-5021-4f21-8a87-86312381f10f>
+  </mlhim2:el-815a4d43-d237-4995-9f74-a902e23c8341>
+</mlhim2:ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9b0>
