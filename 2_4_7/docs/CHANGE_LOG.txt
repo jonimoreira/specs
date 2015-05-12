@@ -1,5 +1,8 @@
 #Changes from 2.4.6 to 2.4.7  (see the git commit msgs. for details)                     
     Added 'units' capability to DvInterval.
+    Simplified DvCodedString.
+    Fixed bug in ExceptionalValueRef in  ontology.
+    Made a change to complexType definitions for rdf:about
 
 #Changes from 2.4.5 to 2.4.6  (see the git commit msgs. for details)                     
     Established a single namespace for all artifacts. The prefix and namespace are:
