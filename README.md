@@ -3,9 +3,9 @@ MLHIM Specifications & Reference Implementation
 
 Multi-Level Healthcare Information Modelling Specifications
 
-The current released version is 2.4.6
+The current released version is 2.4.7
 
-The 'master' branch tracks the current stable changes of 2.4.6
+The 'master' branch tracks the current stable changes of 2.4.7
 
 After release, the only changes allowed in the Reference Model implementation (XML Schema) is for documentation purposes. Other documentation and examples maybe updated in the 'master' branch as needed.
 

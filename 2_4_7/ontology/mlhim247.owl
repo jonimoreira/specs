@@ -21,12 +21,12 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="http://www.mlhim.org/xmlns/mlhim2">
         <dc:description rdf:datatype="&xsd;string">This is the Multi-Level Healthcare Information Modelling (MLHIM) project
-      reference model implementation in RDF/XML MLHIM Release 2.4.6 It consists of the core structures for MLHIM models, called Concept Constraint Definitions (CCDs).
+      reference model implementation in RDF/XML MLHIM Release 2.4.7 It consists of the core structures for MLHIM models, called Concept Constraint Definitions (CCDs).
       Further documentation and implementation instructions can be found on or via links from
       http://www.mlhim.org The abbreviations &apos;Dv&apos; and &apos;dv&apos; in the complexType and element names
       refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along 
      
-      This work is Copyright 2009-2014 Timothy W. Cook
+      This work is Copyright 2009-2015 Timothy W. Cook
       
       Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
       you may not use this file except in compliance with the License.
@@ -1050,50 +1050,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#terminology-abbrev -->
-
-    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#terminology-abbrev">
-        <dc:description rdf:datatype="&xsd;string">Version Source Abbreviation (VSAB) from NLM Metathesarus; or
-                similar.</dc:description>
-        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#terminology-code -->
-
-    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#terminology-code">
-        <dc:description rdf:datatype="&xsd;string">The uniquely identifiable code string from the
-                terminology.</dc:description>
-        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#terminology-name -->
-
-    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#terminology-name">
-        <dc:description rdf:datatype="&xsd;string">Full Source Name from NLM Metathesarus; or
-                similar.</dc:description>
-        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#terminology-version -->
-
-    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#terminology-version">
-        <dc:description rdf:datatype="&xsd;string">The proper release/version ID from the releasing
-                authority.</dc:description>
-        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#time-committed -->
 
     <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#time-committed">
@@ -1185,6 +1141,28 @@
                 are generally constrained by a set of enumerations in the PcT.</dc:description>
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvBooleanType"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#vocab-code -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#vocab-code">
+        <dc:description rdf:datatype="&xsd;string">The uniquely identifiable code string from the
+                terminology.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#vocab-uri -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#vocab-uri">
+        <dc:description rdf:datatype="&xsd;string">Full Source Name from NLM Metathesarus; or
+                similar.</dc:description>
+        <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCodedStringType"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
     </owl:DatatypeProperty>
     
 
@@ -2015,46 +1993,6 @@
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#&amp;gt; -->
-
-    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#&amp;gt;">
-        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#&amp;gt;= -->
-
-    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#&amp;gt;=">
-        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#&amp;lt; -->
-
-    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#&amp;lt;">
-        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#&amp;lt;= -->
-
-    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#&amp;lt;=">
-        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#= -->
-
-    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#=">
-        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#ASKRElement -->
 
     <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKRElement">
@@ -2458,6 +2396,46 @@
     
 
 
+    <!-- http://www.mlhim.org/xmlns/mlhim2#&amp;gt; -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#&amp;gt;">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#&amp;gt;= -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#&amp;gt;=">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#&amp;lt; -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#&amp;lt;">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#&amp;lt;= -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#&amp;lt;=">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#= -->
+
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#=">
+        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#magnitude-status"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.mlhim.org/xmlns/mlhim2#~ -->
 
     <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#~">
@@ -2483,6 +2461,18 @@
         </owl:members>
     </rdf:Description>
     <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-date"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-dateTime"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-decimal"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-duration"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-float"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-int"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-time"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#attestation"/>
@@ -2494,6 +2484,14 @@
             <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#other-participations"/>
             <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#protocol-id"/>
             <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#workflow-id"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#data-name"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#valid-time-begin"/>
+            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#valid-time-end"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -2516,29 +2514,9 @@
             <rdf:Description rdf:about="&xsd;yearMonthDuration"/>
         </owl:members>
     </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-date"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-dateTime"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-decimal"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-duration"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-float"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-int"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#invl-time"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#data-name"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#valid-time-begin"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#valid-time-end"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
 
