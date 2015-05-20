@@ -710,7 +710,7 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="system-user" type="mlhim2:PartyType"/>
-  <xs:element name="system-id" type="mlhim2:DvIdentifierType"/>
+  <xs:element name="system-id" type="mlhim2:DvStringType"/>
   <xs:element name="location" type="mlhim2:ItemType"/>
   <xs:element name="Audit" type="mlhim2:AuditType"/>
   
@@ -840,8 +840,6 @@
   <xs:element name="function" type="mlhim2:DvStringType"/>
   <xs:element name="mode" type="mlhim2:DvStringType"/>
   <xs:element name="Participation" type="mlhim2:ParticipationType"/>
-
-
 
   <xs:complexType abstract="true" name="ExceptionalValueType">
     <xs:annotation>
@@ -1265,7 +1263,7 @@
   <xs:element name="entry-subject" type="mlhim2:PartyType"/>
   <xs:element name="entry-provider" type="mlhim2:PartyType"/>
   <xs:element name="other-participations" type="mlhim2:ParticipationType"/>
-  <xs:element name="protocol-id" type="mlhim2:DvIdentifierType"/>
+  <xs:element name="protocol-id" type="mlhim2:DvStringType"/>
   <xs:element name="workflow-id" type="mlhim2:DvURIType"/>
   <xs:element name="attestation" type="mlhim2:AttestationType"/>
   <xs:element name="entry-data" type="mlhim2:ItemType"/>
