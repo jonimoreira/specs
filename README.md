@@ -7,7 +7,7 @@ The current released version is 2.4.7
 
 The 'master' branch tracks the current stable changes of 2.4.7
 
-After release, the only changes allowed in the Reference Model implementation (XML Schema) is for documentation purposes. Other documentation and examples maybe updated in the 'master' branch as needed.
+After release, the only changes allowed in the Reference Model implementation (XML Schema) is for documentation purposes. Documentation and examples maybe updated in the 'master' branch as needed. After merging the development branch to the master and creating the release, the development branch is deleted. 
 
 A signed, compressed (zip) download is available here: https://launchpad.net/mlhim-specs Look for the large, green button. 
 
