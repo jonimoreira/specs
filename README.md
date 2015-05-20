@@ -5,7 +5,7 @@ Multi-Level Healthcare Information Modelling Specifications
 
 The current released version is 2.4.7
 
-The 'master' branch tracks the current stable changes of 2.4.7
+New developments are being made in the 2_4_8 branch.
 
 After release, the only changes allowed in the Reference Model implementation (XML Schema) is for documentation purposes. Documentation and examples maybe updated in the 'master' branch as needed. After merging the development branch to the master and creating the release, the development branch is deleted. 
 
