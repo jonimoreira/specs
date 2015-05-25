@@ -1187,19 +1187,19 @@
             identified in workflow-id as a string.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="1" name="entry-data" type="mlhim2:ItemType">
+      <xs:element maxOccurs="1" minOccurs="1" name="data" type="mlhim2:ItemType">
         <xs:annotation>
           <xs:documentation>The data structure of the Entry.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="entry-subject" type="mlhim2:PartyType">
+      <xs:element maxOccurs="1" minOccurs="0" name="subject" type="mlhim2:PartyType">
         <xs:annotation>
           <xs:documentation>Id of human subject of this Entry, e.g.: • subject of record (patient,
             etc.) • organ donor • foetus • a family member • another clinically relevant
             person.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="entry-provider" type="mlhim2:PartyType">
+      <xs:element maxOccurs="1" minOccurs="0" name="provider" type="mlhim2:PartyType">
         <xs:annotation>
           <xs:documentation>Optional identification of the source of the information in this Entry,
             which might be: • the patient• a patient agent, e.g. parent, guardian • the clinician •
@@ -1223,7 +1223,7 @@
             this workflow execution.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="entry-audit" type="mlhim2:AuditType">
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="audit" type="mlhim2:AuditType">
         <xs:annotation>
           <xs:documentation>Audit trail from the system of original commit of information forming
             the content of this node, or from a conversion gateway which has synthesised this
@@ -1235,7 +1235,7 @@
           <xs:documentation>Attestation recorded.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="entry-links" type="mlhim2:DvURIType">
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="links" type="mlhim2:DvURIType">
         <xs:annotation>
           <xs:documentation>Optional link(s) to other locatable structures or external
             entities.</xs:documentation>
