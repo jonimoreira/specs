@@ -645,13 +645,13 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="referencerange-definition" type="xs:string">
+          <xs:element maxOccurs="1" minOccurs="1" name="definition" type="xs:string">
             <xs:annotation>
               <xs:documentation>Term whose value indicates the meaning of this range, e.g. “normal”,
                 “critical”, “therapeutic” etc.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:data-range">
+          <xs:element maxOccurs="1" minOccurs="1" name='data-range' type="mlhim2:DvIntervalType">
             <xs:annotation>
               <xs:documentation>The data range for this meaning.</xs:documentation>
             </xs:annotation>
