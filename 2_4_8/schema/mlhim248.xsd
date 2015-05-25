@@ -103,7 +103,7 @@
   </xs:complexType>
   <xs:element name="DvBoolean" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvBooleanType"/>
 
-  <xs:complexType name="DvURIType">
+  <xs:complexType name="DvLinkType">
     <xs:annotation>
       <xs:documentation>Used to specify a Universal Resource Identifier. Set the pattern to
         accommodate your needs in a CCD.</xs:documentation>
@@ -111,22 +111,27 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="DvURI-dv" type="xs:anyURI">
+          <xs:element maxOccurs="1" minOccurs="1" name="link-value" type="xs:anyURI">
             <xs:annotation>
-              <xs:documentation>anyURI as a pointer.</xs:documentation>
+              <xs:documentation>A required URI. A dereferenceable (or not) URL to another CCD or just the ccd-{uuid}.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Normally constrained by on ontology such as the OBO RO
-                http://purl.obolibrary.org/obo/ro.owl</xs:documentation>
+              <xs:documentation>A required term, normally drawn from a vocabulary or ontology such as the OBO RO.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="relation-uri" type="xs:anyURI">
+            <xs:annotation>
+              <xs:documentation>A URI where the definition of the relation element term can be found. 
+                Normally points to an ontology such as the OBO RO http://purl.obolibrary.org/obo/ro.owl</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="DvURI" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvURIType"/>
+  <xs:element name="DvURI" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvLinkType"/>
 
   <xs:complexType name="DvStringType">
     <xs:annotation>
@@ -180,8 +185,8 @@
           <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language">
             <xs:annotation>
               <xs:documentation>Optional indicator of the localised language of the content. 
-                Typically reamins optional in the CM and used at runtime when the content is in a different 
-                language from the enclosing CM.</xs:documentation>
+                Typically reamins optional in the CCD and used at runtime when the content is in a different 
+                language from the enclosing CCD.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="formalism" type="xs:string">
@@ -231,19 +236,19 @@
               <xs:annotation>
                 <xs:documentation>URI reference to electronic information stored outside the record as a file, 
                   database entry etc, if supplied as a reference. 
-                  The CM modeller choooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+                  The CCD modeller chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
               </xs:annotation>
             </xs:element>
             <xs:element name="media-content" type="xs:base64Binary">
               <xs:annotation>
                 <xs:documentation>The content, if stored locally as binary content. 
-                  The CM modeller choooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+                  The CCD modeller chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
               </xs:annotation>
             </xs:element>
             <xs:element name="text-content" type="xs:string">
               <xs:annotation>
                 <xs:documentation>The content, if stored locally as text content. 
-                  The CM modeller choooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+                  The CCD modeller chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
               </xs:annotation>
             </xs:element>
           </xs:choice>
@@ -610,10 +615,10 @@
   <xs:complexType name="InvlType">
     <xs:annotation>
       <xs:documentation>
-        In the CM, the modeller creates two restrictions on this complexType. One for the 'lower' value and one for the 
+        In the CCD, the modeller creates two restrictions on this complexType. One for the 'lower' value and one for the 
         'upper' value. Both restrictions will have the same element choice and the value is 'fixed' on each 
         representing the lower and upper value range boundary. The value may be set to NULL (unbounded) by using the 
-        xsi:nil='true' attribute. maxOccurs and minOccurs must be set to 1, in the CM. 
+        xsi:nil='true' attribute. maxOccurs and minOccurs must be set to 1, in the CCD. 
         See: http://www.ibm.com/developerworks/webservices/library/ws-tip-null/index.html 
       </xs:documentation>
     </xs:annotation>
@@ -724,7 +729,7 @@
           <xs:documentation>Optional human-readable name (in String form).</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name='party-ref' type="mlhim2:DvURIType">
+      <xs:element maxOccurs="1" minOccurs="0" name='party-ref' type="mlhim2:DvLinkType">
         <xs:annotation>
           <xs:documentation>Optional reference to more detailed demographic or identification
             information for this party, in an external system.</xs:documentation>
@@ -1217,7 +1222,7 @@
             could be a clinical guideline, an operations protocol,etc.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="workflow-id" type="mlhim2:DvURIType">
+      <xs:element maxOccurs="1" minOccurs="0" name="workflow-id" type="mlhim2:DvLinkType">
         <xs:annotation>
           <xs:documentation>Identifier of externally held workflow engine (state machine) data for
             this workflow execution.</xs:documentation>
@@ -1235,7 +1240,7 @@
           <xs:documentation>Attestation recorded.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="links" type="mlhim2:DvURIType">
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="links" type="mlhim2:DvLinkType">
         <xs:annotation>
           <xs:documentation>Optional link(s) to other locatable structures or external
             entities.</xs:documentation>
