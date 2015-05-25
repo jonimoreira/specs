@@ -745,24 +745,24 @@
         attestation is recorded by the reason attribute, which my be coded. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:attested-view">
+      <xs:element maxOccurs="1" minOccurs="0" name="attested-view" type="mlhim2:DvFileType">
         <xs:annotation>
           <xs:documentation>Optional visual representation of content attested e.g. screen image.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:proof">
+      <xs:element maxOccurs="1" minOccurs="0" name="proof" type="mlhim2:DvFileType">
         <xs:annotation>
           <xs:documentation>Proof of attestation such as an GPG signature. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:reason">
+      <xs:element maxOccurs="1" minOccurs="0" name="reason" type="mlhim2:DvStringType">
         <xs:annotation>
           <xs:documentation>Reason of this attestation. Coded from a standardized
             vocabulary.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:committer">
+      <xs:element maxOccurs="1" minOccurs="0" name="committer" type="mlhim2:PartyType">
         <xs:annotation>
           <xs:documentation>Identity of person who committed the item. </xs:documentation>
         </xs:annotation>
@@ -780,10 +780,6 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="attested-view" type="mlhim2:DvFileType"/>
-  <xs:element name="proof" type="mlhim2:DvFileType"/>
-  <xs:element name="reason" type="mlhim2:DvStringType"/>
-  <xs:element name="committer" type="mlhim2:PartyType"/>
   <xs:element name="Attestation" type="mlhim2:AttestationType"/>
 
   <xs:complexType name="ParticipationType">
