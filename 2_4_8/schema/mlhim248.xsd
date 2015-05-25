@@ -680,19 +680,19 @@
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:system-id">
+      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:System-id">
         <xs:annotation>
           <xs:documentation>Identifier of systems which created or handled the information item. 
             'Systems' can also be defined as an individual application or a data repository in which the data was manipulated.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:system-user">
+      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:System-user">
         <xs:annotation>
           <xs:documentation>User(s) who created, committed, forwarded or otherwise handled the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:location">
+      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:Location">
         <xs:annotation>
           <xs:documentation>Location indoformation of the particular site/facility within an organisation which handled the item. </xs:documentation>
         </xs:annotation>
@@ -704,9 +704,9 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="system-user" type="mlhim2:PartyType"/>
-  <xs:element name="system-id" type="mlhim2:DvStringType"/>
-  <xs:element name="location" type="mlhim2:ItemType"/>
+  <xs:element name="System-user" type="mlhim2:PartyType"/>
+  <xs:element name="System-id" type="mlhim2:DvStringType"/>
+  <xs:element name="Location" type="mlhim2:ItemType"/>
   <xs:element name="Audit" type="mlhim2:AuditType"/>
   
   
