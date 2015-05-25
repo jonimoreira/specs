@@ -791,20 +791,20 @@
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:performer">
+      <xs:element maxOccurs="1" minOccurs="0" name="performer" type="mlhim2:PartyType">
         <xs:annotation>
           <xs:documentation>The id and possibly demographic system link of the party participating
             in the activity. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:function">
+      <xs:element maxOccurs="1" minOccurs="0" name="function" type="mlhim2:DvStringType">
         <xs:annotation>
           <xs:documentation>The function of the Party in this participation (note that a given party
             might participate in more than one way in a particular activity). In some applications
             this might be called a Role.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:mode">
+      <xs:element maxOccurs="1" minOccurs="0" name="mode" type="mlhim2:DvStringType">
         <xs:annotation>
           <xs:documentation>The mode of the performer / activity interaction, e.g. present, by
             telephone, by email etc. If the participation is by device or software it may contain a
@@ -825,9 +825,6 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="performer" type="mlhim2:PartyType"/>
-  <xs:element name="function" type="mlhim2:DvStringType"/>
-  <xs:element name="mode" type="mlhim2:DvStringType"/>
   <xs:element name="Participation" type="mlhim2:ParticipationType"/>
 
   <xs:complexType abstract="true" name="ExceptionalValueType">
@@ -1142,7 +1139,6 @@
   <xs:element name="items" type="mlhim2:ItemType"/>
   <xs:element name="Cluster" substitutionGroup="mlhim2:Item" type="mlhim2:ClusterType"/>
 
-  <!-- Replacement for ElementType -->
   <xs:complexType name="DvAdapterType">
     <xs:annotation>
       <xs:documentation>The leaf variant of Item, to which any DvAnyType subtype instance is
@@ -1151,7 +1147,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:ItemType">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:DvAdapter-dv">
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:DvAdapter-value">
             <xs:annotation>
               <xs:documentation>Data value type of this leaf.</xs:documentation>
             </xs:annotation>
@@ -1160,7 +1156,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="DvAdapter-dv" type="mlhim2:DvAnyType"/>
+  <xs:element name="DvAdapter-value" type="mlhim2:DvAnyType"/>
   <xs:element name="DvAdapter" substitutionGroup="mlhim2:Item" type="mlhim2:DvAdapterType"/>
 
   <!--Content / entry types -->
