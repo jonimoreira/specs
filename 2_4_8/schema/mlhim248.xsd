@@ -155,10 +155,9 @@
   </xs:complexType>
   <xs:element name="DvString" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvStringType"/>
 
-  <xs:complexType abstract="true" name="DvEncapsulatedType">
+  <xs:complexType name="DvFileType">
     <xs:annotation>
-      <xs:documentation>Abstract type defining the common meta-data of all types of encapsulated
-        data.</xs:documentation>
+      <xs:documentation>A type to use for encapsulated content (aka. files) for image, audio and other media types with a defined MIME type.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -166,8 +165,7 @@
           <xs:element maxOccurs="1" minOccurs="1" name="size" type="xs:int">
             <xs:annotation>
               <xs:documentation>Original size in bytes of unencoded encapsulated data. I.e.
-                encodings such as base64, hexadecimal, etc do not change the value of this
-                attribute.</xs:documentation>
+                encodings such as base64, hexadecimal, etc. do not change the value of this element.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="encoding" type="xs:string">
@@ -175,73 +173,35 @@
               <xs:documentation>Name of character encoding scheme in which this value is encoded.
                 Coded from the IANA charcater set table:
                 http://www.iana.org/assignments/character-sets Unicode is the default assumption in
-                MLHIM, with UTF-8 being the assumed encoding. This attribute allows for variations
+                S3Model, with UTF-8 being the assumed encoding. This attribute allows for variations
                 from these assumptions. </xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language">
             <xs:annotation>
-              <xs:documentation>Optional indicator of the localised language in which the value is
-                written. Coded IAW IETF RFC 5646. http://tools.ietf.org/html/rfc5646 language tag
-                information should be used from the IANA registry
-                http://www.iana.org/assignments/language-subtag-registry Only used when the text
-                object is in a different language from the enclosing CCD.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element abstract="true" name="DvEncapsulated" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvEncapsulatedType"/>
-
-  <xs:complexType name="DvParsableType">
-    <xs:annotation>
-      <xs:documentation>Encapsulated data expressed as a parsable String. The internal model of the
-        data item is not described in the MLHIM model, but in this case, the form of the data is
-        assumed to be plain-text, rather than compressed or other types of large binary data. If the
-        content is to be binary data then use a DvMedia. </xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="mlhim2:DvEncapsulatedType">
-        <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="DvParsable-dv" type="xs:string">
-            <xs:annotation>
-              <xs:documentation>The string, which may validly be empty in some
-                syntaxes.</xs:documentation>
+              <xs:documentation>Optional indicator of the localised language of the content. 
+                Typically reamins optional in the CM and used at runtime when the content is in a different 
+                language from the enclosing CM.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="formalism" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Name of the formalism, e.g. 'GLIF 1.0', 'ADL 1.4',
-                etc.</xs:documentation>
+              <xs:documentation>Name of the formalism or syntax used to inform an application regarding 
+                a candidate parser to use on the content. Examples might include: 'ATL', 'MOLA', 'QVT', 'GDL', 'GLIF', etc.  for DvParsables.
+                Text-based formats that have a MIME type assigned, such as XML, XHTML, etc. should use DvMediaType. 
+              </xs:documentation>
             </xs:annotation>
           </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="DvParsable" substitutionGroup="mlhim2:DvEncapsulated mlhim2:DvAny" type="mlhim2:DvParsableType"/>
-
-  <xs:complexType name="DvMediaType">
-    <xs:annotation>
-      <xs:documentation>A specialisation of DvEncapsulated for audiovisual and bio-signal types.
-        Includes further metadata relating to media types which are not applicable to other subtypes
-        of DvEncapsulatedType.</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent>
-      <xs:extension base="mlhim2:DvEncapsulatedType">
-        <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="mime-type" type="xs:string">
+          <xs:element maxOccurs="1" minOccurs="0" name="media-type" type="xs:string">
             <xs:annotation>
               <xs:documentation>MIME type of the original media-content w/o any compression. See
-                IANA registered types:
-                http://www.iana.org/assignments/media-types/index.html</xs:documentation>
+                IANA registered types: http://www.iana.org/assignments/media-types/media-types.xhtml</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="compression-type" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Compression/archiving mime-type. Void means no
-                compression/archiving. For a list of common mime-types for compression/archiving
+              <xs:documentation>Compression/archiving mime-type. If this elements does not exist then it means there is no compression/archiving. 
+                For a list of common mime-types for compression/archiving
                 see: http://en.wikipedia.org/wiki/List_of_archive_formats.</xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -266,23 +226,33 @@
               </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="uri" type="xs:anyURI">
-            <xs:annotation>
-              <xs:documentation>URI reference to electronic information stored outside the record as
-                a file, database entry etc, if supplied as a reference.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="media-content" type="xs:base64Binary">
-            <xs:annotation>
-              <xs:documentation>The content; if stored locally.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
+          <xs:choice maxOccurs="1" minOccurs="1">
+            <xs:element name="uri" type="xs:anyURI">
+              <xs:annotation>
+                <xs:documentation>URI reference to electronic information stored outside the record as a file, 
+                  database entry etc, if supplied as a reference. 
+                  The CM modeller choooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="media-content" type="xs:base64Binary">
+              <xs:annotation>
+                <xs:documentation>The content, if stored locally as binary content. 
+                  The CM modeller choooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="text-content" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The content, if stored locally as text content. 
+                  The CM modeller choooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="DvMedia" substitutionGroup="mlhim2:DvEncapsulated mlhim2:DvAny" type="mlhim2:DvMediaType"/>
-
+  <xs:element name="DvFile" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvFileType"/>
+  
   <xs:complexType abstract="true" name="DvOrderedType">
     <xs:annotation>
       <xs:documentation>Abstract type defining the concept of ordered values, which includes
@@ -787,8 +757,8 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="attested-view" type="mlhim2:DvMediaType"/>
-  <xs:element name="proof" type="mlhim2:DvParsableType"/>
+  <xs:element name="attested-view" type="mlhim2:DvFileType"/>
+  <xs:element name="proof" type="mlhim2:DvFileType"/>
   <xs:element name="reason" type="mlhim2:DvStringType"/>
   <xs:element name="committer" type="mlhim2:PartyType"/>
   <xs:element name="Attestation" type="mlhim2:AttestationType"/>
