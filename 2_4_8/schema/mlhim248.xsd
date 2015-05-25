@@ -1111,7 +1111,7 @@
         representation types.</xs:documentation>
     </xs:annotation>
   </xs:complexType>
-  <xs:element abstract="true" name="Item" substitutionGroup="mlhim2:entry-data" type="mlhim2:ItemType"/>
+  <xs:element abstract="true" name="Item" type="mlhim2:ItemType"/>
 
   <xs:complexType name="ClusterType">
     <xs:annotation>
@@ -1168,19 +1168,6 @@
         for the de-identification of clinical information. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="entry-links" type="mlhim2:DvURIType">
-        <xs:annotation>
-          <xs:documentation>Optional link(s) to other locatable structures or external
-            entities.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="entry-audit" type="mlhim2:AuditType">
-        <xs:annotation>
-          <xs:documentation>Audit trail from the system of original commit of information forming
-            the content of this node, or from a conversion gateway which has synthesised this
-            node.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="language" type="xs:language">
         <xs:annotation>
           <xs:documentation>Mandatory indicator of the localised language in which this Entry is
@@ -1192,6 +1179,17 @@
         <xs:annotation>
           <xs:documentation>Name of character set encoding in which text values in this Entry are
             encoded. Default should be utf-8.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The current state according to the state machine / workflow engine
+            identified in workflow-id as a string.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="entry-data" type="mlhim2:ItemType">
+        <xs:annotation>
+          <xs:documentation>The data structure of the Entry.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="entry-subject" type="mlhim2:PartyType">
@@ -1219,16 +1217,17 @@
             could be a clinical guideline, an operations protocol,etc.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string">
-        <xs:annotation>
-          <xs:documentation>The current state according to the state machine / workflow engine
-            identified in workflow-id as a string.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="workflow-id" type="mlhim2:DvURIType">
         <xs:annotation>
           <xs:documentation>Identifier of externally held workflow engine (state machine) data for
             this workflow execution.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="entry-audit" type="mlhim2:AuditType">
+        <xs:annotation>
+          <xs:documentation>Audit trail from the system of original commit of information forming
+            the content of this node, or from a conversion gateway which has synthesised this
+            node.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="attestation" type="mlhim2:AttestationType">
@@ -1236,9 +1235,10 @@
           <xs:documentation>Attestation recorded.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="1" name="entry-data" type="mlhim2:ItemType">
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="entry-links" type="mlhim2:DvURIType">
         <xs:annotation>
-          <xs:documentation>The data structure of the Entry.</xs:documentation>
+          <xs:documentation>Optional link(s) to other locatable structures or external
+            entities.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -1290,14 +1290,13 @@
       <xs:documentation>This is the root node of a Concept Constraint Definition.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:definition">
+      <xs:element maxOccurs="1" minOccurs="1" name="definition" type="mlhim2:EntryType">
         <xs:annotation>
           <xs:documentation>Structural definition element for this CCD.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="definition" type="mlhim2:EntryType"/>
   <xs:element name="CCD" type="mlhim2:CCDType"/>
 
 </xs:schema>
