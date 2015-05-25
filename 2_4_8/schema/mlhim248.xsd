@@ -418,7 +418,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:DvCount-units">
+          <xs:element maxOccurs="1" minOccurs="1" name='units' type="mlhim2:DvStringType">
             <xs:annotation>
               <xs:documentation>The name or type of the countable quantity. Examples: cigarettes,
                 drinks, pregnancies, episodes, etc.</xs:documentation>
@@ -444,7 +444,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:DvQuantity-units">
+          <xs:element maxOccurs="1" minOccurs="1" name='units' type="mlhim2:DvStringType">
             <xs:annotation>
               <xs:documentation>Stringified units, expressed in unit syntax, e.g. "kg/m2", “mm[Hg]",
                 "ms-1", "km/h". A DvCodedStringType should be used when possible. UOM codes can be
