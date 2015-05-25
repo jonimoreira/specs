@@ -1127,7 +1127,7 @@
               <xs:documentation>Descriptive name of this branch. </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:items">
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:Items">
             <xs:annotation>
               <xs:documentation>List of Item types.</xs:documentation>
             </xs:annotation>
@@ -1136,7 +1136,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="items" type="mlhim2:ItemType"/>
+  <xs:element name="Items" type="mlhim2:ItemType"/>
   <xs:element name="Cluster" substitutionGroup="mlhim2:Item" type="mlhim2:ClusterType"/>
 
   <xs:complexType name="DvAdapterType">
@@ -1298,5 +1298,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CCD" type="mlhim2:CCDType"/>
-
 </xs:schema>
