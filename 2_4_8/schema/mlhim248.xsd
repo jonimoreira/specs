@@ -336,7 +336,7 @@
                 form.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:magnitude-status">
+          <xs:element maxOccurs="1" minOccurs="0" name="magnitude-status" type="mlhim2:MagnitudeStatus">
             <xs:annotation>
               <xs:documentation>
                 <!-- Optional status of magnitude with values:
@@ -376,19 +376,36 @@
   </xs:complexType>
   <xs:element abstract="true" name="DvQuantified" substitutionGroup="mlhim2:DvOrdered mlhim2:DvAny" type="mlhim2:DvQuantifiedType"/>
   
-  <xs:element name="magnitude-status">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="="/>
-        <xs:enumeration value="&lt;"/>
-        <xs:enumeration value="&gt;"/>
-        <xs:enumeration value="&lt;="/>
-        <xs:enumeration value="&gt;="/>
-        <xs:enumeration value="~"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
-
+  <xs:simpleType name="MagnitudeStatus">
+    <xs:annotation>
+      <xs:documentation>
+        Optional status of magnitude with values:
+        
+        equal : magnitude is a point value
+        
+        less_than : value is less than the magnitude
+        
+        greater_than : value is greater than the magnitude
+        
+        less_than_or_equal : value is less_than_or_equal to the magnitude
+        
+        greater_than_or_equal : value is greater_than_or_equal to the magnitude
+        
+        approximate : value is the approximately the magnitude
+        
+        A simpleType is declared in the RM so there is no need to repeat the enumerations in the CMs. 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="equal"/>
+      <xs:enumeration value="less_than"/>
+      <xs:enumeration value="greater_than"/>
+      <xs:enumeration value="less_than_or_equal"/>
+      <xs:enumeration value="greater_than_or_equal"/>
+      <xs:enumeration value="approximate"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
   <xs:complexType name="DvCountType">
     <xs:annotation>
       <xs:documentation> Countable quantities. Used for countable types such as pregnancies and
