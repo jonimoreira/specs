@@ -568,12 +568,12 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="lower" type="mlhim2:invl-type">
+          <xs:element maxOccurs="1" minOccurs="0" name="lower" type="mlhim2:InvlType">
             <xs:annotation>
               <xs:documentation> Defines the lower value of the interval. </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="upper" type="mlhim2:invl-type">
+          <xs:element maxOccurs="1" minOccurs="0" name="upper" type="mlhim2:InvlType">
             <xs:annotation>
               <xs:documentation> Defines the upper value of the interval. </xs:documentation>
             </xs:annotation>
@@ -607,15 +607,24 @@
   </xs:complexType>
   <xs:element name="DvInterval" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvIntervalType"/>
 
-  <xs:complexType name="invl-type">
-    <xs:choice>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-int" type="xs:int" nillable="true"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-decimal" type="xs:decimal" nillable="true"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-float" type="xs:float" nillable="true"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-date" type="xs:date" nillable="true"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-time" type="xs:time" nillable="true"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-dateTime" type="xs:dateTime" nillable="true"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="invl-duration" type="xs:duration" nillable="true"/>
+  <xs:complexType name="InvlType">
+    <xs:annotation>
+      <xs:documentation>
+        In the CM, the modeller creates two restrictions on this complexType. One for the 'lower' value and one for the 
+        'upper' value. Both restrictions will have the same element choice and the value is 'fixed' on each 
+        representing the lower and upper value range boundary. The value may be set to NULL (unbounded) by using the 
+        xsi:nil='true' attribute. maxOccurs and minOccurs must be set to 1, in the CM. 
+        See: http://www.ibm.com/developerworks/webservices/library/ws-tip-null/index.html 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:choice  maxOccurs="1" minOccurs="1">
+      <xs:element name="invl-int" type="xs:int" nillable="true"/>
+      <xs:element name="invl-decimal" type="xs:decimal" nillable="true"/>
+      <xs:element name="invl-float" type="xs:float" nillable="true"/>
+      <xs:element name="invl-date" type="xs:date" nillable="true"/>
+      <xs:element name="invl-time" type="xs:time" nillable="true"/>
+      <xs:element name="invl-dateTime" type="xs:dateTime" nillable="true"/>
+      <xs:element name="invl-duration" type="xs:duration" nillable="true"/>
     </xs:choice>
   </xs:complexType>
   
