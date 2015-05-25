@@ -471,7 +471,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:ratio-type">
+          <xs:element maxOccurs="1" minOccurs="1" name="ratio-type" type="mlhim2:RatioType">
             <xs:annotation>
               <xs:documentation> Indicates semantic type of ratio must be set as fixed to one of the
                 below strings in PcTs. ratio = a relationship between two numbers. proportion = a
@@ -492,21 +492,21 @@
               <xs:documentation>denominator of ratio </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:numerator-units">
+          <xs:element maxOccurs="1" minOccurs="0" name="numerator-units" type="mlhim2:DvStringType">
             <xs:annotation>
               <xs:documentation>Used to convey the meaning of the numerator. Typically countable
                 units such as; cigarettes, drinks, exercise periods, etc. May or may not come from a
                 terminology such as OBO Foundry Units ontology. </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:denominator-units">
+          <xs:element maxOccurs="1" minOccurs="0" name="denominator-units" type="mlhim2:DvStringType">
             <xs:annotation>
               <xs:documentation>Used to convey the meaning of the denominator. Typically units such
                 as; days, years, months, etc. May or may not come from a standard terminology.
               </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ratio-units">
+          <xs:element maxOccurs="1" minOccurs="0" name="ratio-units" type="mlhim2:DvStringType">
             <xs:annotation>
               <xs:documentation>Used to convey the meaning of the magnitude (ratio units). May or
                 may not come from a standard terminology. </xs:documentation>
@@ -521,15 +521,14 @@
   <xs:element name="ratio-units" type="mlhim2:DvStringType"/>
   <xs:element name="DvRatio" substitutionGroup="mlhim2:DvQuantified mlhim2:DvOrdered mlhim2:DvAny" type="mlhim2:DvRatioType"/>
 
-  <xs:element name="ratio-type">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="ratio"/>
-        <xs:enumeration value="proportion"/>
-        <xs:enumeration value="rate"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
+  <xs:simpleType name="RatioType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ratio"/>
+      <xs:enumeration value="proportion"/>
+      <xs:enumeration value="rate"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
 
 
   <xs:complexType name="DvTemporalType">
