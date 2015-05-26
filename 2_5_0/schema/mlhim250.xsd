@@ -52,7 +52,6 @@
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-
       <xs:element maxOccurs="1" minOccurs="0" name="valid-time-begin" type="xs:dateTime">
         <xs:annotation>
           <xs:documentation>If present this must be a valid datetime including timezone. It is used
@@ -84,17 +83,16 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:choice>
-          <xs:element maxOccurs="1" minOccurs="0" name="valid-true" type="xs:string">
+          <xs:element maxOccurs="1" minOccurs="0" name="true" type="xs:string">
             <xs:annotation>
               <xs:documentation>A string that represents a boolean True in the implementation. These
-                are generally constrained by a set of enumerations in the PcT.</xs:documentation>
+                are constrained by a set of enumerations in the PcT.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="valid-false" type="xs:string">
+          <xs:element maxOccurs="1" minOccurs="0" name="false" type="xs:string">
             <xs:annotation>
               <xs:documentation>A string that represents a boolean False in the implementation.
-                These are generally constrained by a set of enumerations in the
-                PcT.</xs:documentation>
+                These are constrained by a set of enumerations in the PcT.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:choice>
@@ -111,7 +109,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="link-value" type="xs:anyURI">
+          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI">
             <xs:annotation>
               <xs:documentation>A required URI. A dereferenceable (or not) URL to another CCD or just the ccd-{uuid}.</xs:documentation>
             </xs:annotation>
@@ -141,7 +139,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="DvString-dv" type="xs:string">
+          <xs:element maxOccurs="1" minOccurs="0" name="value" type="xs:string">
             <xs:annotation>
               <xs:documentation>The string value of the item.</xs:documentation>
             </xs:annotation>
@@ -267,7 +265,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="reference-range" type="mlhim2:ReferenceRangeType">
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="range" type="mlhim2:ReferenceRangeType">
             <xs:annotation>
               <xs:documentation>Optional list of ReferenceRanges for this value in its particular
                 measurement context</xs:documentation>
@@ -285,7 +283,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="reference-ranges" type="mlhim2:ReferenceRangeType"/>
   <xs:element abstract="true" name="DvOrdered" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvOrderedType"/>
 
   <xs:complexType name="DvOrdinalType">
@@ -305,7 +302,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvOrderedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="DvOrdinal-dv" type="xs:decimal">
+          <xs:element maxOccurs="1" minOccurs="1" name="ordinal" type="xs:decimal">
             <xs:annotation>
               <xs:documentation>Value in ordered enumeration of values. The base integer is zero
                 with any number of integer values used to order the symbols. Example 1: 0 = Trace, 1
@@ -335,12 +332,6 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvOrderedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="magnitude" type="xs:decimal">
-            <xs:annotation>
-              <xs:documentation>Numeric value of the quantity in canonical (i.e. single value)
-                form.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="magnitude-status" type="mlhim2:MagnitudeStatus">
             <xs:annotation>
               <xs:documentation>
@@ -373,6 +364,14 @@
             <xs:annotation>
               <xs:documentation>Accuracy of the value in the magnitude attribute. 0% to +/- 100% A
                 value of 0 means that the accuracy is unknown.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name='units' type="mlhim2:DvStringType">
+            <xs:annotation>
+              <xs:documentation>The name or type of the quantity. For DvCount examples are cigarettes,
+                drinks, pregnancies, episodes, etc. For DvQuantity examples are "kg/m2", “mm[Hg]",
+                "ms-1", "km/h". For DvRatio this is used to convey the meaning of the dvratio-value. May or
+                may not come from a standard terminology.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -423,18 +422,15 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name='units' type="mlhim2:DvStringType">
+          <xs:element maxOccurs="1" minOccurs="0" name="value" type="xs:int">
             <xs:annotation>
-              <xs:documentation>The name or type of the countable quantity. Examples: cigarettes,
-                drinks, pregnancies, episodes, etc.</xs:documentation>
+              <xs:documentation>Numeric value of the counted items.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
-        <xs:assert test="(if(magnitude mod 1 = 0) then true() else false())"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="DvCount-units" type="mlhim2:DvStringType"/>
   <xs:element name="DvCount" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvCountType"/>
 
   <xs:complexType name="DvQuantityType">
@@ -449,19 +445,15 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name='units' type="mlhim2:DvStringType">
+          <xs:element maxOccurs="1" minOccurs="0" name="value" type="xs:decimal">
             <xs:annotation>
-              <xs:documentation>Stringified units, expressed in unit syntax, e.g. "kg/m2", “mm[Hg]",
-                "ms-1", "km/h". A DvCodedStringType should be used when possible. UOM codes can be
-                found: http://www.obofoundry.org Also available in other terminologies such as
-                SNOMEDCT.</xs:documentation>
+              <xs:documentation>Numeric value of the quantity.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="DvQuantity-units" type="mlhim2:DvStringType"/>
   <xs:element name="DvQuantity" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvQuantityType"/>
 
   <xs:complexType name="DvRatioType">
@@ -497,6 +489,11 @@
               <xs:documentation>denominator of ratio </xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="value" type="xs:decimal">
+            <xs:annotation>
+              <xs:documentation>Numeric value of the Ratio.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="numerator-units" type="mlhim2:DvStringType">
             <xs:annotation>
               <xs:documentation>Used to convey the meaning of the numerator. Typically countable
@@ -511,19 +508,10 @@
               </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="ratio-units" type="mlhim2:DvStringType">
-            <xs:annotation>
-              <xs:documentation>Used to convey the meaning of the magnitude (ratio units). May or
-                may not come from a standard terminology. </xs:documentation>
-            </xs:annotation>
-          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="numerator-units" type="mlhim2:DvStringType"/>
-  <xs:element name="denominator-units" type="mlhim2:DvStringType"/>
-  <xs:element name="ratio-units" type="mlhim2:DvStringType"/>
   <xs:element name="DvRatio" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvRatioType"/>
 
   <xs:simpleType name="RatioType">
@@ -534,8 +522,6 @@
     </xs:restriction>
   </xs:simpleType>
   
-
-
   <xs:complexType name="DvTemporalType">
     <xs:annotation>
       <xs:documentation> Type defining the concept of date and time types. Must be constrained in
@@ -656,15 +642,15 @@
                 “critical”, “therapeutic” etc.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name='data-range' type="mlhim2:DvIntervalType">
+          <xs:element maxOccurs="1" minOccurs="1" name='interval' type="mlhim2:DvIntervalType">
             <xs:annotation>
               <xs:documentation>The data range for this meaning.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="is-normal" type="xs:boolean">
             <xs:annotation>
-              <xs:documentation>True if this reference range only contains values that are
-                considered to be normal.</xs:documentation>
+              <xs:documentation>True if this reference range defines values that are considered to be normal. 
+                                In the context of the value in the definition element.</xs:documentation>
             </xs:annotation>
           </xs:element>
 
@@ -672,7 +658,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="data-range" type="mlhim2:DvIntervalType"/>
   <xs:element name="ReferenceRange" substitutionGroup="mlhim2:DvAny" type="mlhim2:ReferenceRangeType"/>
 
 
@@ -685,19 +670,19 @@
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:System-id">
+      <xs:element maxOccurs="1" minOccurs="1" name="system-id" type="mlhim2:DvStringType">
         <xs:annotation>
           <xs:documentation>Identifier of systems which created or handled the information item. 
             'Systems' can also be defined as an individual application or a data repository in which the data was manipulated.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:System-user">
+      <xs:element maxOccurs="1" minOccurs="0" name="system-user" type="mlhim2:PartyType">
         <xs:annotation>
           <xs:documentation>User(s) who created, committed, forwarded or otherwise handled the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:Location">
+      <xs:element maxOccurs="1" minOccurs="0" name="location" type="mlhim2:ItemType">
         <xs:annotation>
           <xs:documentation>Location indoformation of the particular site/facility within an organisation which handled the item. </xs:documentation>
         </xs:annotation>
@@ -709,12 +694,8 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="System-user" type="mlhim2:PartyType"/>
-  <xs:element name="System-id" type="mlhim2:DvStringType"/>
-  <xs:element name="Location" type="mlhim2:ItemType"/>
   <xs:element name="Audit" type="mlhim2:AuditType"/>
-  
-  
+
   <xs:complexType name="PartyType">
     <xs:annotation>
       <xs:documentation> Description of a party, including an optional external link to data for
@@ -900,7 +881,6 @@
   </xs:complexType>
   <xs:element name="INV" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:INVType"/>
 
-
   <xs:complexType name="DERType">
     <xs:complexContent>
       <xs:restriction base="mlhim2:ExceptionalValueType">
@@ -963,7 +943,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="NINF" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:NINFType"/>
-
 
   <xs:complexType name="PINFType">
     <xs:complexContent>
@@ -1107,9 +1086,7 @@
   </xs:complexType>
   <xs:element name="NA" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:NAType"/>
 
-
   <!--Structures / items types -->
-
   <xs:complexType abstract="true" name="ItemType">
     <xs:annotation>
       <xs:documentation>The abstract parent of ClusterType and DvAdapterType structural
@@ -1287,7 +1264,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="DemographicEntry" substitutionGroup="mlhim2:Entry" type="mlhim2:DemographicEntryType"/>
-
 
   <!--CCD / constraint model -->
   <xs:complexType name="CCDType">
