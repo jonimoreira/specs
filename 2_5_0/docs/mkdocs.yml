@@ -1,6 +1,0 @@
-site_name: Multi-Level Healthcare Information Modelling Specifications
-pages:
-    - [index.md, Home]
-    - [ExecutiveSummary.md, Executive Summary]
-
-theme: readthedocs
