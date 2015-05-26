@@ -1,4 +1,4 @@
-#Changes from 2.4.7 to 2.4.8  (see the git commit msgs. for details)                     
+#Changes from 2.4.7 to 2.5.0  (see the git commit msgs. for details)                     
     Started the new branch and repo 2015-05-12
     See Issues for planned changes: https://github.com/mlhim/specs/issues
 
