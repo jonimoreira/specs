@@ -5,7 +5,8 @@
   xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
   xmlns:mlhim2='http://www.mlhim.org/xmlns/mlhim2'
   xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-  targetNamespace='http://www.mlhim.org/xmlns/mlhim2'>
+  targetNamespace='http://www.mlhim.org/xmlns/mlhim2' 
+  vc:minVersion="1.1">
   <xs:annotation>
     <xs:documentation> This is the Multi-Level Healthcare Information Modelling (MLHIM) project
       reference model implementation in XML Schema 1.1. MLHIM Release 2.5.0 It consists of the core
@@ -540,9 +541,9 @@
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-year-month" type="xs:gYearMonth"/>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-month-day" type="xs:gMonthDay"/>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-duration" type="xs:duration"/>
-<!--          <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-ymduration" type="xs:yearMonthDuration"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-ymduration" type="xs:yearMonthDuration"/>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-dtduration" type="xs:dayTimeDuration"/>
--->        </xs:sequence>
+        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -590,9 +591,11 @@
           </xs:element>
           <xs:group maxOccurs="1" minOccurs="0" ref="mlhim2:IntervalUnits"/>
         </xs:sequence>
-        <!-- The assert doesn't need the value comparison if CCDs use the fixed attribute. But just in case we want to be sure the interval makes sense. upper and lower to see if the CCD restricted both to the same type. -->        
-<!--        <xs:assert test="lower/*/name() = upper/*/name()"/>
--->      </xs:extension>
+        <!-- The assert doesn't need the value comparison if CCDs use the fixed attribute. 
+          But just in case we want to be sure the interval makes sense. 
+          Check that upper and lower to see if the CCD restricted both to the same type. -->        
+        <xs:assert test="lower/*/name() = upper/*/name()"/>
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="DvInterval" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvIntervalType"/>
