@@ -325,7 +325,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element abstract="true" name="DvOrdinal" substitutionGroup="mlhim2:DvAny mlhim2:DvOrdered" type="mlhim2:DvOrdinalType"/>
+  <xs:element abstract="true" name="DvOrdinal" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvOrdinalType"/>
 
   <xs:complexType abstract="true" name="DvQuantifiedType">
     <xs:annotation>
@@ -379,7 +379,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element abstract="true" name="DvQuantified" substitutionGroup="mlhim2:DvOrdered mlhim2:DvAny" type="mlhim2:DvQuantifiedType"/>
+  <xs:element abstract="true" name="DvQuantified" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvQuantifiedType"/>
   
   <xs:simpleType name="MagnitudeStatus">
     <xs:annotation>
@@ -435,7 +435,7 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="DvCount-units" type="mlhim2:DvStringType"/>
-  <xs:element name="DvCount" substitutionGroup="mlhim2:DvQuantified mlhim2:DvAny" type="mlhim2:DvCountType"/>
+  <xs:element name="DvCount" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvCountType"/>
 
   <xs:complexType name="DvQuantityType">
     <xs:annotation>
@@ -462,7 +462,7 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="DvQuantity-units" type="mlhim2:DvStringType"/>
-  <xs:element name="DvQuantity" substitutionGroup="mlhim2:DvQuantified mlhim2:DvOrdered mlhim2:DvAny" type="mlhim2:DvQuantityType"/>
+  <xs:element name="DvQuantity" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvQuantityType"/>
 
   <xs:complexType name="DvRatioType">
     <xs:annotation>
@@ -524,7 +524,7 @@
   <xs:element name="numerator-units" type="mlhim2:DvStringType"/>
   <xs:element name="denominator-units" type="mlhim2:DvStringType"/>
   <xs:element name="ratio-units" type="mlhim2:DvStringType"/>
-  <xs:element name="DvRatio" substitutionGroup="mlhim2:DvQuantified mlhim2:DvOrdered mlhim2:DvAny" type="mlhim2:DvRatioType"/>
+  <xs:element name="DvRatio" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvRatioType"/>
 
   <xs:simpleType name="RatioType">
     <xs:restriction base="xs:string">
