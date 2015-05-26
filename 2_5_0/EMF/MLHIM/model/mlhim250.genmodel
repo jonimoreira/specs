@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/MLHIM/src" modelPluginID="MLHIM" modelName="Mlhim250"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.xsd.ecore.importer">
+    <details key="createMap" value="true"/>
+  </genAnnotations>
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.uml2.uml.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.mlhim.org/xmlns/mlhim2" value="mlhim2.uml"/>
+    </genAnnotations>
+    <genAnnotations source="selectedReferencedPackages" references="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="pathmap://UML_METAMODELS/Ecore.metamodel.uml"/>
+    </genAnnotations>
+    <details key="directoryURI" value="file:/home/tim/MLHIM/git/specs/2_5_0/UML/"/>
+    <details key="SUBSETS_ANNOTATIONS" value="PROCESS"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="DOCUMENTATION_ANNOTATIONS" value="PROCESS"/>
+    <details key="ANNOTATION_DETAILS" value="IGNORE"/>
+    <details key="UNION_ANNOTATIONS" value="PROCESS"/>
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="BODY_ANNOTATIONS" value="PROCESS"/>
+    <details key="XMI_IDENTIFIERS" value="PROCESS"/>
+    <details key="REDEFINES_ANNOTATIONS" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>file:/home/tim/workspace/mlhim250.xsd</foreignModel>
+  <genPackages prefix="Mlhim2" basePackage="org.mlhim.xmlns" resource="XML" disposableProviderFactory="true"
+      ecorePackage="mlhim2.ecore#/">
+    <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.uml2.uml.ecore.exporter">
+      <genAnnotations source="file:/home/tim/MLHIM/git/specs/2_5_0/UML/mlhim2.uml"/>
+    </genAnnotations>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mlhim2.ecore#//MagnitudeStatus">
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//MagnitudeStatus/equal"/>
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//MagnitudeStatus/lessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//MagnitudeStatus/greaterThan"/>
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//MagnitudeStatus/lessThanOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//MagnitudeStatus/greaterThanOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//MagnitudeStatus/approximate"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mlhim2.ecore#//RatioType">
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//RatioType/ratio"/>
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//RatioType/proportion"/>
+      <genEnumLiterals ecoreEnumLiteral="mlhim2.ecore#//RatioType/rate"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="mlhim2.ecore#//MagnitudeStatusObject"/>
+    <genDataTypes ecoreDataType="mlhim2.ecore#//RatioTypeObject"/>
+    <genClasses ecoreClass="mlhim2.ecore#//AdminEntryType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//ASKRType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//ASKUType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//AttestationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//AttestationType/view"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//AttestationType/proof"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//AttestationType/reason"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//AttestationType/committer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//AttestationType/committed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//AttestationType/pending"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//AuditType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//AuditType/systemId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//AuditType/systemUser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//AuditType/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//AuditType/timestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//CareEntryType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//CCDType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//CCDType/definition"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//ClusterType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//ClusterType/subject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//ClusterType/items"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DemographicEntryType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//DERType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/adminEntry"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/entry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/aSKR"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/exceptionalValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/aSKU"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/attestation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/audit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/careEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/cCD"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/cluster"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/item"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/demographicEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dER"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvAdapter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvAdapterValue"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvAny"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvBoolean"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvCount"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvFile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvInterval"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvOrdered"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvOrdinal"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvQuantified"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvQuantity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvRatio"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvString"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvTemporal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/dvURI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/iNV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/items"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/mSK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/nA"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/nASK"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/nAV"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/nI"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/nINF"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/oTH"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/participation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/party"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/pINF"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/qS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/referenceRange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/tRC"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/uNC"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DocumentRoot/uNK"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvAdapterType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DvAdapterType/dvAdapterValue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mlhim2.ecore#//DvAnyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvAnyType/dataName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvAnyType/exceptionalValueGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mlhim2.ecore#//DvAnyType/exceptionalValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvAnyType/validTimeBegin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvAnyType/validTimeEnd"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvBooleanType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvBooleanType/true"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvBooleanType/false"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvCountType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvCountType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvFileType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/encoding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/formalism"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/mediaType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/compressionType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/hashResult"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/hashFunction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/altTxt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/mediaContent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvFileType/textContent"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvIntervalType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DvIntervalType/lower"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DvIntervalType/upper"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvIntervalType/lowerIncluded"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvIntervalType/upperIncluded"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvIntervalType/lowerBounded"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvIntervalType/upperBounded"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvIntervalType/unitsName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvIntervalType/unitsUri"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvLinkType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvLinkType/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvLinkType/relation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvLinkType/relationUri"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mlhim2.ecore#//DvOrderedType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DvOrderedType/range"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvOrderedType/normalStatus"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvOrdinalType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvOrdinalType/ordinal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvOrdinalType/symbol"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mlhim2.ecore#//DvQuantifiedType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvQuantifiedType/magnitudeStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvQuantifiedType/error"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvQuantifiedType/accuracy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DvQuantifiedType/units"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvQuantityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvQuantityType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvRatioType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvRatioType/ratioType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvRatioType/numerator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvRatioType/denominator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvRatioType/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DvRatioType/numeratorUnits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//DvRatioType/denominatorUnits"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvStringType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvStringType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvStringType/language"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//DvTemporalType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalDatetime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalMonth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalYear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalYearMonth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalMonthDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//DvTemporalType/dvtemporalDuration"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mlhim2.ecore#//EntryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//EntryType/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//EntryType/encoding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//EntryType/currentState"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/subject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/provider"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/participations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/protocol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/workflow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/audit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/attestation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//EntryType/links"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mlhim2.ecore#//ExceptionalValueType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//ExceptionalValueType/evName"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//InvlType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//InvlType/invlInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//InvlType/invlDecimal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//InvlType/invlFloat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//InvlType/invlDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//InvlType/invlTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//InvlType/invlDateTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//InvlType/invlDuration"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//INVType"/>
+    <genClasses image="false" ecoreClass="mlhim2.ecore#//ItemType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//MSKType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//NASKType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//NAType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//NAVType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//NINFType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//NIType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//OTHType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//ParticipationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//ParticipationType/performer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//ParticipationType/function"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//ParticipationType/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//ParticipationType/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//ParticipationType/end"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//PartyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//PartyType/partyName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//PartyType/partyRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//PartyType/partyDetails"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//PINFType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//QSType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//ReferenceRangeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//ReferenceRangeType/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mlhim2.ecore#//ReferenceRangeType/interval"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mlhim2.ecore#//ReferenceRangeType/isNormal"/>
+    </genClasses>
+    <genClasses ecoreClass="mlhim2.ecore#//TRCType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//UNCType"/>
+    <genClasses ecoreClass="mlhim2.ecore#//UNKType"/>
+  </genPackages>
+</genmodel:GenModel>
