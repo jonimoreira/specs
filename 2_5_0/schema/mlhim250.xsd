@@ -5,8 +5,7 @@
   xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
   xmlns:mlhim2='http://www.mlhim.org/xmlns/mlhim2'
   xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-  targetNamespace='http://www.mlhim.org/xmlns/mlhim2'
-  vc:minVersion="1.1">
+  targetNamespace='http://www.mlhim.org/xmlns/mlhim2'>
   <xs:annotation>
     <xs:documentation> This is the Multi-Level Healthcare Information Modelling (MLHIM) project
       reference model implementation in XML Schema 1.1. MLHIM Release 2.5.0 It consists of the core
@@ -541,9 +540,9 @@
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-year-month" type="xs:gYearMonth"/>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-month-day" type="xs:gMonthDay"/>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-duration" type="xs:duration"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-ymduration" type="xs:yearMonthDuration"/>
+<!--          <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-ymduration" type="xs:yearMonthDuration"/>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-dtduration" type="xs:dayTimeDuration"/>
-        </xs:sequence>
+-->        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -592,8 +591,8 @@
           <xs:group maxOccurs="1" minOccurs="0" ref="mlhim2:IntervalUnits"/>
         </xs:sequence>
         <!-- The assert doesn't need the value comparison if CCDs use the fixed attribute. But just in case we want to be sure the interval makes sense. upper and lower to see if the CCD restricted both to the same type. -->        
-        <xs:assert test="lower/*/name() = upper/*/name()"/>
-      </xs:extension>
+<!--        <xs:assert test="lower/*/name() = upper/*/name()"/>
+-->      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="DvInterval" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvIntervalType"/>
@@ -731,7 +730,7 @@
         attestation is recorded by the reason attribute, which my be coded. </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="0" name="attested-view" type="mlhim2:DvFileType">
+      <xs:element maxOccurs="1" minOccurs="0" name="view" type="mlhim2:DvFileType">
         <xs:annotation>
           <xs:documentation>Optional visual representation of content attested e.g. screen image.
           </xs:documentation>
@@ -753,12 +752,12 @@
           <xs:documentation>Identity of person who committed the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="time-committed" type="xs:dateTime">
+      <xs:element maxOccurs="1" minOccurs="0" name="committed" type="xs:dateTime">
         <xs:annotation>
           <xs:documentation>Datetime of committal of the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="1" name="is-pending" type="xs:boolean">
+      <xs:element maxOccurs="1" minOccurs="1" name="pending" type="xs:boolean">
         <xs:annotation>
           <xs:documentation>True if this attestation is outstanding; 'false' means it has been
             completed.</xs:documentation>
@@ -797,13 +796,13 @@
             protocol standard or interface definition. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="start-time" type="xs:dateTime">
+      <xs:element maxOccurs="1" minOccurs="0" name="start" type="xs:dateTime">
         <xs:annotation>
           <xs:documentation>The beginning datetime when the participation took
             place.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="end-time" type="xs:dateTime">
+      <xs:element maxOccurs="1" minOccurs="0" name="end" type="xs:dateTime">
         <xs:annotation>
           <xs:documentation>The ending datetime when the participation took
             place.</xs:documentation>
@@ -1098,15 +1097,14 @@
   <xs:complexType name="ClusterType">
     <xs:annotation>
       <xs:documentation>The grouping variant of Item, which may contain further instances of Item,
-        in an ordered list. This provides the root Item for arbitrarily complex
-        structures.</xs:documentation>
+        in an ordered list. This provides the root Item for arbitrarily complex structures.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:ItemType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string">
+          <xs:element maxOccurs="1" minOccurs="1" name="subject" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Descriptive name of this branch. </xs:documentation>
+              <xs:documentation>Descriptive subject line for this group of PcTs. </xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:Items">
@@ -1188,18 +1186,18 @@
             a device or software</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="other-participations" type="mlhim2:ParticipationType">
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="participations" type="mlhim2:ParticipationType">
         <xs:annotation>
           <xs:documentation>List of other participations at Entry level.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="protocol-id" type="mlhim2:DvStringType">
+      <xs:element maxOccurs="1" minOccurs="0" name="protocol" type="mlhim2:DvStringType">
         <xs:annotation>
           <xs:documentation>Optional external identifier of protocol used to create this Entry. This
             could be a clinical guideline, an operations protocol,etc.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="workflow-id" type="mlhim2:DvLinkType">
+      <xs:element maxOccurs="1" minOccurs="0" name="workflow" type="mlhim2:DvLinkType">
         <xs:annotation>
           <xs:documentation>Identifier of externally held workflow engine (state machine) data for
             this workflow execution.</xs:documentation>
