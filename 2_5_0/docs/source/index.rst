@@ -15,7 +15,7 @@ Contents:
    executive_summary
    introduction
    MLHIM_and_EA
-
+   ecosystem
 
 Indices and tables
 ==================
