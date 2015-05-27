@@ -1,7 +1,15 @@
-site_name: Multi-Level Healthcare Information Modelling Specifications
-pages:
-    - [index.md, Home]
-    - [ExecutiveSummary.md, Executive Summary]
-    - [Another.md, Another Page]
+site_name: MLHIM Specifications
+site_description: Multi-Level Healthcare Information Modelling Specifications provide the ability for healthcare application developers to share the full semantics for their models.
+site_author: Timohy W. Cook
+copyright: Timohy W. Cook and Contributors
+site_favicon: favicon.ico
+google_analytics: ['UA-35853442-1', 'mlhim.org']
 
+repo_url: https://github.com/mlhim/specs/releases
+dev_addr: 127.0.0.1:8888
 theme: readthedocs
+pages:
+    - Home: 'index.md'
+    - ExecutiveSummary: 'ExecutiveSummary.md'
+    - AnotherPage: 'Another.md'
+
