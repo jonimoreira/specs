@@ -1,10 +1,9 @@
 Executive Summary
 =================
 
-Keep everything as simple as possible; but no simpler. - Albert Einstein
+*Keep everything as simple as possible; but no simpler. - Albert Einstein*
 
-MLHIM is pronounced *muh-leem* and it is an agile and open framework for computable semantic
-interoperability in healthcare. This capability is required in order to advance the usage of clinical (and other) decision support services (CDSS) and Big Data analysis across data coming from multiple points.  These points of data creation are increasing every day as a result of more institutions bringing new digital capabilities to more functions, in addition to the plethora of new devices arriving in the personal healthcare marketplace. 
+**MLHIM** is an agile and open framework for computable semantic interoperability in healthcare. This capability is required in order to advance the usage of clinical (and other) decision support services (CDSS) and Big Data analysis across data coming from multiple points.  These points of data creation are increasing every day as a result of more institutions bringing new digital capabilities to more functions, in addition to the plethora of new devices arriving in the personal healthcare marketplace. 
 
 MLHIM is not a *standard* in the historical sense of the term. The standards development process is far from agile; healthcare is too dynamic to wait for the 20th century
 standards processes. In addition, healthcare is too broad for a top-down, one-size-fits-all solution for information interoperability. MLHIM is based on widely used standards for data
@@ -16,5 +15,4 @@ MLHIM specifically addresses the need to communicate syntactically sound data wi
 
 We have a growing number of peer-reviewed material on our [website](http://mlhim.org/documents.html) as well as invited presentations, educational material on [SlideShare](http://www.slideshare.net/twcook) and [YouTube](https://www.youtube.com/user/MLHIMdotORG).  
 
-Insanity: doing the same thing over and over again and expecting different results. 
-- Albert Einstein
+*Insanity: doing the same thing over and over again and expecting different results. - Albert Einstein*

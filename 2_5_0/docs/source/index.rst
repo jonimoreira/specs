@@ -1,13 +1,20 @@
 Multi-Level Healthcare Information Modelling Specifications
 ===========================================================
-Implementable semantic interoperability. 
+MLHIM User & Reference Guide
+----------------------------
+
+Status - Development DRAFT for 2.5.0
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
-
+   :maxdepth: 3
+   
+   front
+   governance
    executive_summary
+   introduction
+   MLHIM_and_EA
 
 
 Indices and tables
