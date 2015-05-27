@@ -156,9 +156,9 @@ Further research is needed to determine if valid CCDs can be produced from Eclip
 RM complexTypes
 ---------------
 
-Each complexType definition below has a `Schema Docs <http://mlhim.org/rm250_html/>`_. This link goes to a page with detailed documentation on that complexType. 
+The reference implementation complexType descriptions. 
 
-The reference implementation complexType descriptions. The prefix 'xs:' is used to indicate W3C XML Schema datatypes. Elements with a MLHIM datatype (other complexTypes in the RM) do not have a prefix in the tables below. However, in the RM schema they have a prefix of 'mlhim2:' representing the namespace 'http://www.mlhim.org/xmlns/mlhim2'.
+Each complexType definition below has a `Schema Docs <http://mlhim.org/rm250_html/>`_. This link goes to a page with detailed documentation on that complexType. 
 
 
 DvAnyType
