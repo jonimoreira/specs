@@ -1,7 +1,9 @@
+=================================================
 Concept Constraint Definition Generator (CCD-Gen)
 =================================================
+
 Creating and Managing CCDs
---------------------------
+==========================
 The CCD-Gen is an online tool used to create CCDs via a web driven, declarative environment. The CCD-Gen allows the building of complete CCDs by selecting the desired Pluggable complexType (PcT) definitions from existing PcTs or ones that you design yourself.  You assemble the pieces into the concept definition you need.  By re-using PcTs you improve the data exchange and analysis capability.  Many of the PcTs have been designed based on existing data models.  Resources such as the Common Data Element definitions from the US National Cancer Institute, the United States Health Information Knowledgebase (USHIK) from the Agency for Healthcare Research and Quality (AHRQ) and HL7 FHIR® models have been translated to PcTs.  More are planned and you can contribute to the open content effort.
 The CCD is an XML Schema that is compliant with the W3C XML Schema 1.1 standards. It is valid against one MLHIM Reference Model release. However, many of the PcTs maybe used in CCDs across various reference model releases. A CCD provides an approach to improve the process of allowing semantic interoperability between various applications. This process is enabled due the ability to exchange the syntax and semantics for data models designed by domain experts. 
 The CCD-Gen has a library of some of the CCDs created using this tool. Because of the governance approach to CCDs there is no need for a centralized repository. Though, it is helpful to have some place for potential users to review published examples.  The CCD-Gen Library page displays the CCDs in a table and an included XSLT renders the details of the CCD (click on the Title link) in a familiar data dictionary format. This is similar to how applications can extract this information from the CCD for user help pages and tooltips. 

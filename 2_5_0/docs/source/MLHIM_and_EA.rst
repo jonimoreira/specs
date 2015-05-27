@@ -1,8 +1,11 @@
+==================================================
 MLHIM as a Component of an Enterprise Architecture
 ==================================================
 MLHIM is a core foundational part of any enterprise architecture that strives to attain computable semantic interoperability. In this chapter we will describe how the MLHIM eco-system fits into a typical healthcare IT architecture.  Keeping in mind that MLHIM is also applicable to any size application that needs to be semantically interoperable, from wearable devices to enterprise EHRs. 
 The Open Group Architecture Framework (TOGAF®) is a framework for enterprise architecture which provides an approach for designing, planning, implementing, and governing an enterprise information technology architecture. In this document it provides us with a formal method to communicate with implementers and decision makers on integrating MLHIM into the enterprise. 
+
 We will focus on Part V (chapter 39) and Part VI (chapter 44) of the TOGAF specification; Enterprise Continuum and Integrated Information Infrastructure Reference Model. These chapters explore the view of the enterprise repository as part of the enterprise and the information technology industry at large as well as developing a sound foundation for boundary-less information flow. 
+
 Referring to Figure 39-1 and its description, the MLHIM reference model and its implementation fits into the category Architecture Continuum. In the details description and depicted graphically in Figure 39-2 are four conceptual architectures. Their relationship to MLHIM is shown in Table1. Keeping in mind that the granularity of MLHIM is much finer than these abstract architectures.  However, this does serve as a good starting point.
 
 +-----------------+---------------------------------------------------------------+

@@ -1,33 +1,37 @@
+===================
 The Reference Model
 ===================
-Please note:  Any discrepancies between this document and the XML Schema implementation is to be resolved by the XML Schema RM. The automatically generated XML Schema documentation is available in PDF and downloadable HTML forms: http://mlhim.org/documents.html The sources are maintained on GitHub at https://github.com/mlhim/specs To get the most recent development version using git create a clone of https://github.com/mlhim/specs.git Then checkout the most recent branch.
+
+**Note:**  Any discrepancies between this document and the XML Schema implementation is to be resolved by the XML Schema RM. The automatically generated XML Schema documentation is available in PDF and downloadable HTML forms: http://mlhim.org/documents.html The sources are maintained on GitHub at https://github.com/mlhim/specs To get the most recent development version using git create a clone of https://github.com/mlhim/specs.git Then checkout the most recent branch.
+
 Assumed Types
+=============
+
 There are several types that are assumed to be supported by the underlying implementation technology. These assumed types are based on XML Schema 1.1 Part 2 Datatypes. They should be available in your implementation language or add-on libraries. The names may or may not be exactly the same.
-Non-Ordered Types:
-Name
-Description
-anyType
-Also sometimes called Object. This is the base class of the implementation technology.
-boolean
+
+-----------------
+Non-Ordered Types
+-----------------
+
+boolean 
+-------
 Two state only.  Either true or false.
+
+
 string
+-------
 The string data type can contain characters, line feeds, carriage returns, and tab characters.
-normalizedString
-The normalized string data type also contains characters, but all line feeds, carriage returns, and tab characters are removed.
-token
-The token data type also contains characters, but the line feeds, carriage returns, tabs, leading and trailing spaces are removed, and multiple spaces are replaced with one space.
+
 anyURI
+------
 Specifies a Unique Resource Identifier (URI).
-hash
-An enumeration of any type with a key:value combination. The keys must be unique.
-list
-An ordered or unordered list of any type. 
-set
-An ordered or unordered but unique list of any type.
-Table 2: Assumed: Non-ordered types
-Name
-Description
+
+-----------------
+Ordered types
+-----------------
+
 dateTime
+--------
 The dateTime data type is used to specify a date and a time.
 The dateTime is specified in the following form "YYYY-MM-DDThh:mm:ss" where:
     YYYY indicates the year
@@ -45,14 +49,17 @@ An element in your document might look like this:
 Or it might look like this:
 <startdate>2002-05-30T09:30:10:05</startdate>
 
-Time Zones
+*Time Zones*
+
 To specify a time zone, you can either enter a dateTime in UTC time by adding a "Z" behind the time - like this:
 <startdate>2002-05-30T09:30:10Z</startdate> 
 or you can specify an offset from the UTC time by adding a positive or negative time behind the time - like this:
 <startdate>2002-05-30T09:30:10-06:00</startdate>
 or
 <startdate>2002-05-30T09:30:10+06:00</startdate> 
+
 date
+----
 The date data type is used to specify a date.
 
 The date is specified in the following form "YYYY-MM-DD" where:
@@ -63,7 +70,9 @@ The date is specified in the following form "YYYY-MM-DD" where:
 
 An element in an XML Document  might look like this:
 <start>2002-09-24</start> 
+
 time
+----
 The time data type is used to specify a time.
 The time is specified in the following form "hh:mm:ss" where:
     hh indicates the hour
@@ -77,7 +86,7 @@ An element in your document might look like this:
 Or it might look like this:
 <start>09:30:10:05</start>
 
-Time Zones
+*Time Zones* 
 
 To specify a time zone, you can either enter a time in UTC time by adding a "Z" behind the time - like this:
 <start>09:30:10Z</start>
@@ -113,41 +122,49 @@ Negative Duration
 To specify a negative duration, enter a minus sign before the P:
 <period>-P10D</period>
 The example above indicates a period of minus 10 days.
+
 Partial Date Types
+------------------
 Support for partial dates is essential to avoid poor data quality. In order to provide for partial dates and times the following types are assumed to be available in the language or in a library.
-Day – provide on the day of the month, 1 – 31
-Month – provide only the month of the year, 1 – 12
-Year – provide on the year,  CCYY
-MonthDay – provide only the Month and the Day (no year)
-YearMonth – provide only the Year and the Month (no day)
+
+*Day* – provide on the day of the month, 1 – 31
+*Month* – provide only the month of the year, 1 – 12
+*Year* – provide on the year,  CCYY
+*MonthDay* – provide only the Month and the Day (no year)
+*YearMonth* – provide only the Year and the Month (no day)
+
 real
+----
 The decimal data type is used to specify a numeric value.
 Note: The maximum number of decimal digits you can specify is 18.
+
 integer
+-------
 The integer data type is used to specify a numeric value without a fractional component.
-Table 3: Assumed: Ordered Types
 
 
+2.5.0 Reference Model Documentation
+===================================
 
-Technical Documentation
-2.4.7 Reference Model
-The complete documentation in a graphical, clickable format is available on the MLHIM website via this Reference  implementation  link.  
-UML
-Drawing 1 depicts the global elements of the reference implementation.  This full size image as well as the ArgoUML project1 is available in the UML directory of the specifications.
+The complete documentation in a graphical, clickable format is available on the MLHIM website [Documents page](http://mlhim.org/documents.html).  
 
+An EMF Ecore project is available in the docs folder of the distribution. It can be imported into Eclipse and used as a base for modelling CCDs. However, developers need to be aware that there are slight differences due to the fact taht Eclipse XML tools do not support XML Schema 1.1 
 
+Further research is needed to determine if valid CCDs can be produced from Eclipse. 
 
-
-
-complexTypes
+---------------
+RM complexTypes
+---------------
 
 The reference implementation complexType descriptions. The prefix 'xs:' is used to indicate W3C XML Schema datatypes. 
-DataValue Group
-DvAnyType
-Derived from:  n/a
- Abstract: True
 
-Description:  Serves as a common ancestor of all data-types in MLHIM models.
+DvAnyType
+---------
+
+Derived from:  n/a
+Abstract: True
+*Description:*  Serves as a common ancestor of all data-types in MLHIM models.
+*Contains elements:*
 
 Name
 Type
@@ -180,6 +197,7 @@ If present this must be a valid datetime including timezone. It is used to indic
 
 
 DvBooleanType
+--------------
 Derived from: DvAnyType by extension
  Abstract: False
 
@@ -206,7 +224,8 @@ A string that represents a boolean False in the implementation. These are genera
 
 
 
-DvURIType
+DvLinkType
+----------
 Derived from: DvAnyType by extension
  Abstract: False
 
@@ -232,6 +251,7 @@ Normally constrained by on ontology such as the OBO RO http://purl.obolibrary.or
 
 
 DvStringType
+------------
 Derived from: DvAnyType by extension
  Abstract: False
 
@@ -255,115 +275,10 @@ Optional indicator of the localized language in which this data-type is written.
 
 
 
-DvCodedStringType
-Derived from: DvStringType by extension
- Abstract: False
 
-Description:  A text item whose DvString-dv element must be the long name or description from a controlled terminology. The key (i.e. the 'code') of which is the vocab-code attribute. In some cases, DvString-dv and vocab-code may have the same content.
-
-Name
-Type
-minOccurs
-maxOccurs
-Description
-vocab-code
-xs:string
-0
-1
-The uniquely identifiable code string from the vocabulary/ontology.
-vocab-uri
-xs:anyURI
-0
-1
-The full URI of the source vocabulary/ontology and item/class name to be used as rdf:isDefinedBy.
-
-
-
-DvIdentifierType
-Derived from: DvStringType by extension
- Abstract: False
-
-Description:  Type for representing identifiers of real-world entities. Typical identifiers include: driver license number, social security number, veterans affairs number, prescription id, order id, system id and so on. The actual identifier is in the DvString-dv element.
-
-Name
-Type
-minOccurs
-maxOccurs
-Description
-id-name
-xs:string
-0
-1
-The identifier common name, such as “Driver's License” or “SSN”.
-issuer
-xs:string
-0
-1
-Authority which issues the kind of id used in the id field of this object.
-assignor
-xs:string
-0
-1
-Organisation that assigned the id to the item being identified.
-
-
-
-DvEncapsulatedType
+DvFileType
+----------
 Derived from: DvAnyType by extension
- Abstract: True
-
-Description:  Abstract class defining the common meta-data of all types of encapsulated data.
-
-
-Name
-Type
-minOccurs
-maxOccurs
-Description
-size
-xs:int
-1
-1
-Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64, hexadecimal, etc do not change the value of this attribute.
-encoding
-xs:string
-0
-1
-Name of character encoding scheme in which this value is encoded. Coded from the IANA character set table: http://www.iana.org/assignments/character-sets Unicode is the default assumption in MLHIM, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions.
-language
-xs:language
-0
-1
-Optional indicator of the localised language in which the value is written. Coded IAW IETF RFC 5646 http://tools.ietf.org/html/rfc5646 language tag information should be used from the IANA registry http://www.iana.org/assignments/language-subtag-registry Only used when the text object is in a different language from the enclosing CCD.
-
-
-
-DvParsableType
-Derived from: DvEncapsulatedType by extension
- Abstract: False
-
-Description:  Encapsulated data expressed as a parsable String. The internal model of the data item is not described in the MLHIM model, but in this case, the form of the data is assumed to be plain-text, rather than compressed or other types of large binary data. If the content is to be binary data then use a DvMediaType.
-
-
-Name
-Type
-minOccurs
-maxOccurs
-Description
-DvParsable-dv
-xs:string
-0
-1
-The string, which may validly be empty in some syntaxes.
-formalism
-xs:string
-0
-1
-Name of the formalism, e.g. 'GLIF 1.0', 'ADL 1.4', etc.
-
-
-DvMediaType
-Derived from: DvEncapsulatedType by extension
  Abstract: False
 
 Description:  A specialization of DvEncapsulatedType for audiovisual and bio-signal types. Includes further metadata relating to media types which are not applicable to other subtypes of DvEncapsulatedType.
@@ -412,6 +327,7 @@ The content; if stored locally.
 
 
 DvOrderedType
+-------------
 Derived from: DvAnyType by extension
  Abstract: True
 
@@ -437,6 +353,7 @@ Optional normal status indicator of value with respect to normal range for this 
 
 
 DvOrdinalType
+-------------
 Derived from: DvOrderedType by extension
  Abstract: False
 
@@ -472,6 +389,7 @@ Coded textual representation of this value in the enumeration, which may be stri
 
 
 DvQuantifiedType
+----------------
 Derived from: DvOrderedType by extension
  Abstract: True
 
@@ -519,6 +437,7 @@ Accuracy of the value in the magnitude attribute. 0% to +/- 100% A value of 0 me
 
 
 DvCountType
+-----------
 Derived from: DvQuantifiedType by extension
  Abstract: False
 
@@ -539,6 +458,7 @@ The name or type of the countable quantity. Examples: cigarettes, drinks, pregna
 
 
 DvQuantityType
+--------------
 Derived from: DvQuantifiedType by extension
  Abstract: False
 
@@ -559,6 +479,7 @@ Stringified units, expressed in unit syntax, e.g. "kg/m2", “mm[Hg]", "ms-1", "
 
 
 DvRatioType
+-----------
 Derived from: DvQuantifiedType by extension
  Abstract: False
 
@@ -607,6 +528,7 @@ Used to convey the meaning of the magnitude (ratio units). May or may not come f
 
 
 DvTemporalType
+--------------
 Derived from: DvOrderedType by extension
  Abstract: False
 
@@ -677,6 +599,7 @@ See the W3C documentation.
 
 
 DvIntervalType
+--------------
 Derived from: DvAnyType by extension
  Abstract: False
 
@@ -784,6 +707,7 @@ xs:duration
 Defines the upper or lower interval datatype.
 
 ReferenceRangeType
+------------------
 Derived from: DvAnyType by extension
  Abstract: False
 
@@ -811,10 +735,8 @@ xs:boolean
 1
 True if this reference range only contains values that are considered to be normal.
 
-
-
-Common Group
 AuditType
+---------
 Derived from: n/a
  Abstract: False
 
@@ -831,6 +753,7 @@ DvIdentifierType
 1
 Identifier of the system which handled the information item.'Systems' can also be defined as an individual application or a data repository in which the data was manipulated.
 system-user
+
 PartyType
 0
 1
@@ -848,6 +771,7 @@ Timestamp of handling the item. For an originating system, this will be time of 
 
 
 PartyType
+---------
 Derived from: n/a
  Abstract: False
 
@@ -878,6 +802,7 @@ Structural details about the party.
 
 
 AttestationType
+---------------
 Derived from: n/a
  Abstract: False
 
@@ -922,6 +847,7 @@ True if this attestation is outstanding; 'false' means it has been completed.
 
 
 ParticipationType
+-----------------
 Derived from: n/a
  Abstract: False
 
@@ -963,6 +889,7 @@ xs:dateTime
 
 
 ExceptionalValueType
+--------------------
 Derived from: n/a
  Abstract: True
 
@@ -983,6 +910,7 @@ The fixed name of the exceptional value.
 
 
 NIType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -990,6 +918,7 @@ Description:  No Information: The value is exceptional (missing, omitted, incomp
 
 
 MSKType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -999,6 +928,7 @@ Warning:
 
 
 INVType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1006,6 +936,7 @@ Description:  Invalid: The value as represented in the instance is not a member 
 
 
 DERType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1013,6 +944,7 @@ Description:  Derived: An actual value may exist, but it must be derived from th
 
 
 UNCType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1020,6 +952,7 @@ Description:  Unencoded: No attempt has been made to encode the information corr
 
 
 OTHType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1027,6 +960,7 @@ Description:  Other: The actual value is not a member of the permitted data valu
 
 
 NINFType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1034,6 +968,7 @@ Description:  Negative Infinity: Negative infinity of numbers
 
 
 PINFType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1041,6 +976,7 @@ Description:  Positive Infinity: Positive infinity of numbers
 
 
 UNKType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1048,6 +984,7 @@ Description:  Unknown: A proper value is applicable, but not known.
 
 
 ASKRType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1055,6 +992,7 @@ Description:  Asked and Refused: Information was sought but refused to be provid
 
 
 NASKType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1062,6 +1000,7 @@ Description:  Not Asked: This information has not been sought (e.g., patient was
 
 
 QSType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1069,6 +1008,7 @@ Description:  Sufficient Quantity : The specific quantity is not known, but is k
 
 
 TRCType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1076,6 +1016,7 @@ Description:  Trace: The content is greater or less than zero but too small to b
 
 
 ASKUType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1083,6 +1024,7 @@ Description:  Asked but Unknown: Information was sought but not found (e.g., pat
 
 
 NAVType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
@@ -1090,20 +1032,21 @@ Description: Not Available: This information is not available and the specific r
 
 
 NAType
+--------------
 Derived from: ExceptionalValueType by restriction
  Abstract: False
 
 Description:  Not Applicable: No proper value is applicable in this context e.g.,the number of cigarettes smoked per day by a non-smoker subject.
 
-
-Items Group
 ItemType
+--------------
 Derived from: n/a 
  Abstract: True
 
 Description:  The abstract parent of ClusterType and DvAdapterType structural representation types.
 
 ClusterType
+--------------
 Derived from: ItemType by extension
  Abstract: False
 
@@ -1128,6 +1071,7 @@ List of Item types.
 
 
 DvAdapterType
+--------------
 Derived from: ItemType by extension
  Abstract: False
 
@@ -1145,8 +1089,8 @@ unbounded
 Data value type of this leaf.
 NOTE: The purpose for maxOccurs being unbounded is for validation of multiple instances of a DvAnyType subtype.  This seems odd, but it is how it works.  It is NOT for allowing multiple DvAnyType restrictions in one DvAdapterType. 
 
-Entry Group
 EntryType
+--------------
 Derived from: n/a
  Abstract: True
 
@@ -1221,25 +1165,28 @@ The data structure of the Entry.
 
 
 CareEntryType
+--------------
 Derived from: EntryType by extension
  Abstract: False
 
 Description:  Entry subtype for all entries related to care of a subject of record.
 
 AdminEntryType
+--------------
 Derived from: EntryType by extension
  Abstract: False
 
 Description:  Entry subtype for administrative information, i.e. information about setting up the clinical process, but not itself clinically relevant. Archetypes will define contained information. Used for administrative details of admission, episode, ward location, discharge, appointment (if not stored in a practice management or appointments system). Not used for any clinically significant information.
 
 DemographicEntryType
+--------------------
 Derived from: EntryType by extension
  Abstract: False
 
 Description:  Entry subtype for demographic information, i.e. name structures, roles, locations, etc. modeled as a separate type from AdminEntryType in order to facilitate the separation of clinical and non-clinical information to support de-identification of clinical and administrative data.
 
-Constraint Group
 CCDType
+--------------
 Derived from: n/a
  Abstract: False
 
@@ -1259,5 +1206,6 @@ Structural definition element for this CCD.
 
 
 Example CCD 
+--------------
 Please check the website documents section as well as the CCD Library on the CCD-Gen.
 The CCD-Gen requires free registration in order to view the CCD Library. 

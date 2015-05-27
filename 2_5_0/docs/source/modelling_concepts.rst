@@ -1,7 +1,9 @@
+=================
 Modeling Concepts
 =================
+
 Approach
---------
+========
 The MLHIM specifications are arranged conceptually, into packages. These packages represent logical groupings of classes providing ease of consistent implementation. That said, the MLHIM Reference Model is implemented in a single XML Schema. The fundamental concepts, expressed in the reference model classes, are based on basic philosophical concepts of real world entities. These broad concepts can then be constrained to more specific concepts using models created by domain experts, in this case healthcare experts. 
 
 In MLHIM 1.x these constraints were known as archetypes, expressed in a domain specific language (DSL) called the archetype definition language (ADL). This language is based on a specific model called the archetype object model (AOM). MLHIM 1.x is a fork of the open source openEHR specifications.

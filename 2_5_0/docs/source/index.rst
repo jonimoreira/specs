@@ -1,7 +1,10 @@
+===========================================================
 Multi-Level Healthcare Information Modelling Specifications
 ===========================================================
+
 MLHIM User & Reference Guide
-----------------------------
+============================
+
 
 Status - Development DRAFT for 2.5.0
 
