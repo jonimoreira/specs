@@ -21,6 +21,7 @@ Contents:
    data_analysis
    ccdgen
    glossary
+   support
 
 Indices and tables
 ==================
