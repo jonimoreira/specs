@@ -7,7 +7,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-    ExecutiveSummary
+   executive_summary
 
 
 Indices and tables
