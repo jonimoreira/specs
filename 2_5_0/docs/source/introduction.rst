@@ -14,7 +14,7 @@ The 1.x *attempts* are available on `Launchpad <http://launchpad.net/mlhim-specs
 Current Versions
 ----------------
 
-MLHIM 2.x (this document and related artifacts) introduces further innovation through the use of XML technologies and reducing complexity without sacrificing interoperability as well as improved modeling tools and as application development platforms. These specifications can be implemented in any structured language. 
+MLHIM 2.x (this document and related artifacts) introduces **further innovation and a departure from previous approaches**, through the use of XML technologies and reducing complexity without sacrificing interoperability as well as improved modeling tools and as application development platforms. These specifications can be implemented in any structured language. 
 While a certain level of knowledge is assumed, the primary goal of these specifications is to make them 'implementable' by the widest possible number of people. The primary motivator for these specifications is the complexity involved in the recording of the temporal-spatial-ontological relationships in healthcare information while maintaining the original semantics across all applications; for all time. 
 
 We :doc:`invite <./support>` you to join us in this effort to maintain the specifications and build great, translatable healthcare tools and applications for global use. 
