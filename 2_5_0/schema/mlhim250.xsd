@@ -111,7 +111,7 @@
         Set the pattern facet to accommodate your needs in the PcT.
         Intended use is to provide a mechanism that can be used to link together Concept Models. 
         The relation element allows for the use of a descriptive term for the link with an optional URI pointing to the 
-        source vocabulary. In most usecases the modeller will define all three of these using the 'fixed' attribute. 
+        source vocabulary. In most usecases the modeler will define all three of these using the 'fixed' attribute. 
         Other usecases will have the 'relation' and 'relation-uri' elements fixed and the application will provide 
         the 'link-value'.</xs:documentation>
     </xs:annotation>
@@ -247,19 +247,19 @@
               <xs:annotation>
                 <xs:documentation>URI reference to electronic information stored outside the record as a file, 
                   database entry etc, if supplied as a reference. 
-                  The CCD modeller chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+                  The CCD modeler chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
               </xs:annotation>
             </xs:element>
             <xs:element name="media-content" type="xs:base64Binary">
               <xs:annotation>
                 <xs:documentation>The content, if stored locally as binary content. 
-                  The CCD modeller chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+                  The CCD modeler chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
               </xs:annotation>
             </xs:element>
             <xs:element name="text-content" type="xs:string">
               <xs:annotation>
                 <xs:documentation>The content, if stored locally as text content. 
-                  The CCD modeller chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
+                  The CCD modeler chooses either a uri, a binary-content element or a text-content element.</xs:documentation>
               </xs:annotation>
             </xs:element>
           </xs:choice>
@@ -317,7 +317,7 @@
         for non-haemolysed blood {neg, trace, moderate}; 
         for haemolysed blood {neg, trace, small, moderate, large}.
         
-        Elements value and symbol MUST have exactly the same number of enumerations.
+        Elements ordinal and symbol MUST have exactly the same number of enumerations.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -336,7 +336,7 @@
               <xs:documentation>Coded textual representation of this value in the enumeration, which
                 may be strings made from “+” symbols, or other enumerations of terms such as “mild”,
                 “moderate”, “severe”, or even the same number series as the values, e.g. “1”, “2”,
-                “3”. </xs:documentation>
+                “3”.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -356,21 +356,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="magnitude-status" type="mlhim2:MagnitudeStatus">
             <xs:annotation>
               <xs:documentation>
-                <!-- Optional status of magnitude with values:
-                
-                “=” : magnitude is a point value
-                
-                “<“ : value is < magnitude
-                
-                “>” : value is > magnitude
-                
-                “<=” : value is <= magnitude
-                
-                “>=” : value is >= magnitude
-                
-                “~” : value is the approximate magnitude
-                           
-             -->
+                Optional status of magnitude.
               </xs:documentation>
             </xs:annotation>
           </xs:element>
@@ -417,8 +403,6 @@
         greater_than_or_equal : value is greater_than_or_equal to the magnitude
         
         approximate : value is the approximately the magnitude
-        
-        A simpleType is declared in the RM so there is no need to repeat the enumerations in the CMs. 
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
@@ -435,9 +419,8 @@
     <xs:annotation>
       <xs:documentation> Countable quantities. Used for countable types such as pregnancies and
         steps (taken by a physiotherapy patient), number of cigarettes smoked in a day, etc.
-        Misuse:Not used for amounts of physical entities (which all have standardized units). Note
-        that PcTs derived from DvCountType should make magnitude, error and accuracy attributes
-        minOccurs = '1'. The magnitude element is restricted to integers via an xs:assert.
+        The thing(s) being counted must be represented in the units element.
+        Misuse:Not used for amounts of physical entities (which all have standardized units). 
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -456,11 +439,10 @@
 
   <xs:complexType name="DvQuantityType">
     <xs:annotation>
-      <xs:documentation> Quantified type representing “scientific” quantities, i.e. quantities
+      <xs:documentation>Quantified type representing specific quantities, i.e. quantities
         expressed as a magnitude and units. Can also be used for time durations, where it is more
         convenient to treat these as simply a number of individual seconds, minutes, hours, days,
-        months, years, etc. when no temporal calculation is to be performed. Note that PcTs derived
-        from DvQuantityType should make magnitude, error and accuracy attributes minOccurs = '1'.
+        months, years, etc. when no temporal calculation is to be performed.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -479,25 +461,21 @@
 
   <xs:complexType name="DvRatioType">
     <xs:annotation>
-      <xs:documentation> Models a ratio of values, i.e. where the numerator and denominator are both
+      <xs:documentation>Models a ratio of values, i.e. where the numerator and denominator are both
         pure numbers. Should not be used to represent things like blood pressure which are often
         written using a ‘/’ character, giving the misleading impression that the item is a ratio,
         when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.)
-        “6/24” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols
-        like CF = count fingers etc). Should not be used for formulations. </xs:documentation>
+        “20/20” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols
+        like CF = count fingers etc). Should not be used for formulations.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="ratio-type" type="mlhim2:RatioType">
+          <xs:element maxOccurs="1" minOccurs="1" name="ratio-type" type="mlhim2:TypeOfRatio">
             <xs:annotation>
-              <xs:documentation> Indicates semantic type of ratio must be set as fixed to one of the
-                below strings in PcTs. ratio = a relationship between two numbers. proportion = a
-                relationship between two numbers where there is a bi-univocal relationship between
-                the numerator and the denominator (the numerator is contained in the denominator)
-                rate = a relationship between two numbers where there is not a bi-univocal
-                relationship between the numerator and the denominator (the numerator is not
-                contained in the denominator) </xs:documentation>
+              <xs:documentation>
+                Indicates specific type of ratio modeled in the PcT. 
+              </xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="numerator" type="xs:decimal">
@@ -535,7 +513,20 @@
   </xs:complexType>
   <xs:element name="DvRatio" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvRatioType"/>
 
-  <xs:simpleType name="RatioType">
+  <xs:simpleType name="TypeOfRatio">
+    <xs:annotation>
+      <xs:documentation>Indicates semantic type of ratio. 
+        
+        ratio = a relationship between two numbers. 
+        
+        proportion = a relationship between two numbers where there is a bi-univocal relationship between
+        the numerator and the denominator (the numerator is contained in the denominator)
+        
+        rate = a relationship between two numbers where there is not a bi-univocal
+        relationship between the numerator and the denominator (the numerator is not
+        contained in the denominator) 
+      </xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="ratio"/>
       <xs:enumeration value="proportion"/>
@@ -546,8 +537,8 @@
   <xs:complexType name="DvTemporalType">
     <xs:annotation>
       <xs:documentation> Type defining the concept of date and time types. Must be constrained in
-        PcTs to be one or more of the below elements. This gives the modeller the ability to
-        optionally allow full or partial dates at run time. Setting maxOccurs and minOccurs to zero
+        PcTs to be one or more of the below elements. This gives the modeler the ability to
+        optionally allow full or partial dates at run time. Setting both maxOccurs and minOccurs to zero
         cause the element to be prohibited. </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -572,10 +563,10 @@
 
   <xs:complexType name="DvIntervalType">
     <xs:annotation>
-      <xs:documentation> Generic type defining an interval (i.e. range) of a comparable type. An
+      <xs:documentation>Generic type defining an interval (i.e. range) of a comparable type. An
         interval is a contiguous subrange of a comparable base type. Used to define intervals of
         dates, times, quantities, etc. Whose datatypes are the same and are ordered. In MLHIM,
-        primarily used in defining reference ranges. </xs:documentation>
+        they are primarily used in defining reference ranges. </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -614,7 +605,7 @@
         </xs:sequence>
         <!-- The assert doesn't need the value comparison if CCDs use the fixed attribute. 
           But just in case we want to be sure the interval makes sense. 
-          Check that upper and lower to see if the CCD restricted both to the same type. -->        
+          Check upper and lower elements to see if the CCD restricted both to the same type. -->        
         <xs:assert test="lower/*/name() = upper/*/name()"/>
       </xs:extension>
     </xs:complexContent>
@@ -624,10 +615,12 @@
   <xs:complexType name="InvlType">
     <xs:annotation>
       <xs:documentation>
-        In the CCD, the modeller creates two restrictions on this complexType. One for the 'lower' value and one for the 
-        'upper' value. Both restrictions will have the same element choice and the value is 'fixed' on each 
-        representing the lower and upper value range boundary. The value may be set to NULL (unbounded) by using the 
-        xsi:nil='true' attribute. maxOccurs and minOccurs must be set to 1, in the CCD. 
+        In the CCD, the modeler creates two restrictions on this complexType. 
+        One for the 'lower' value and one for the 'upper' value. 
+        Both restrictions will have the same element choice and the value is 'fixed' on each 
+        representing the lower and upper value range boundary. 
+        The value may be set to NULL (unbounded) by using the xsi:nil='true' attribute. 
+        maxOccurs and minOccurs must be set to 1, in the CCD. 
         See: http://www.ibm.com/developerworks/webservices/library/ws-tip-null/index.html 
       </xs:documentation>
     </xs:annotation>
@@ -651,10 +644,12 @@
   
   <xs:complexType name="ReferenceRangeType">
     <xs:annotation>
-      <xs:documentation> Defines a named range to be associated with any ORDERED datum. Each such
-        range is particular to the patient and context, e.g. sex, age, and any other factor which
-        affects ranges. May be used to represent normal, therapeutic, dangerous, critical etc
-        ranges. </xs:documentation>
+      <xs:documentation>
+        Defines a named range to be associated with any ORDERED datum. Each such
+        range is sensitive to the context, e.g. sex, age, location, and any other factor which affects ranges. 
+        May be used to represent high, low, normal, therapeutic, dangerous, critical, etc. ranges that are 
+        constrained by an interval. 
+      </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -672,8 +667,9 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="is-normal" type="xs:boolean">
             <xs:annotation>
-              <xs:documentation>True if this reference range defines values that are considered to be normal. 
-                                In the context of the value in the definition element.</xs:documentation>
+              <xs:documentation>
+                True if this reference range defines values that are considered to be normal. 
+                In the context of the value in the definition element.</xs:documentation>
             </xs:annotation>
           </xs:element>
 
@@ -689,7 +685,8 @@
   <xs:complexType name="AuditType">
     <xs:annotation>
       <xs:documentation>
-        AuditType provides a mechanism to identifiy the who/where/when tracking of instances as they move from system to system.       
+        AuditType provides a mechanism to identify the who/where/when tracking of instances as they move from 
+        system to system.       
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -724,8 +721,7 @@
       <xs:documentation> Description of a party, including an optional external link to data for
         this party in a demographic or other identity management system. An additional details
         element provides for the inclusion of information related to this party directly. If the
-        party information is to be anonymous then do not include the details element. The string
-        'Self' may be entered as the party-name if an external_ref is include. </xs:documentation>
+        party information is to be anonymous then do not include the details element.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="party-name" type="xs:string">
@@ -795,8 +791,7 @@
     <xs:annotation>
       <xs:documentation> Model of a participation of a Party (any Actor or Role) in an activity.
         Used to represent any participation of a Party in some activity, which is not explicitly in
-        the model, e.g. assisting nurse. Can be used to record past or future participations. Should
-        not be used in place of more permanent relationships between demographic entities.
+        the model, e.g. assisting nurse. Can be used to record past or future participations.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -841,7 +836,8 @@
       <xs:documentation> Subtypes are used to indicate why a value is missing (Null) or is outside a
         measurable range. The element ev-name is fixed in restricted types to a descriptive string.
         The subtypes defined in the reference model are considered sufficiently generic to be useful
-        in many instances. CCDs may contain additional ExceptionalValueType restrictions.
+        in many instances. CCDs may contain additional ExceptionalValueType restrictions to allow for 
+        domain related reasons for errant or missing data.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -1121,14 +1117,14 @@
   <xs:complexType name="ClusterType">
     <xs:annotation>
       <xs:documentation>The grouping variant of Item, which may contain further instances of Item,
-        in an ordered list. This provides the root Item for arbitrarily complex structures.</xs:documentation>
+        in an ordered list. This can serve as the root component for arbitrarily complex structures.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:ItemType">
         <xs:sequence>
           <xs:element maxOccurs="1" minOccurs="1" name="subject" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Descriptive subject line for this group of PcTs. </xs:documentation>
+              <xs:documentation>Descriptive subject line for this group of PcTs.</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:Items">
@@ -1153,7 +1149,8 @@
         <xs:sequence>
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:DvAdapter-value">
             <xs:annotation>
-              <xs:documentation>Data value type of this leaf.</xs:documentation>
+              <xs:documentation>Data value type of this leaf. By rule, there must only be one DvAnyType subtype defined here.
+                The unbounded occurrences is allowed so that the PcT can specify how many repetitions may occur in the instance.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -1168,7 +1165,7 @@
     <xs:annotation>
       <xs:documentation>The abstract parent of all Entry subtypes. An Entry is the root of a logical
         set of data items. Each subtype has an identical information structure. The subtyping is
-        used to allow persistence to separate the types of Entries; primarily import in healthcare
+        used to allow persistence to separate the types of Entries; primarily important in healthcare
         for the de-identification of clinical information. </xs:documentation>
     </xs:annotation>
     <xs:sequence>

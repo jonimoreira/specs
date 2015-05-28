@@ -258,7 +258,7 @@ Description:  Models rankings and scores, e.g. pain, Apgar values, etc, where th
         for non-haemolysed blood {neg, trace, moderate}; 
         for haemolysed blood {neg, trace, small, moderate, large}.
         
-        Elements value and symbol MUST have exactly the same number of enumerations.
+        Elements ordinal and symbol MUST have exactly the same number of enumerations.
 
 DvQuantifiedType
 ----------------
@@ -280,7 +280,10 @@ Derived from: DvQuantifiedType by extension
 
 Abstract: False
 
-Description:  Countable quantities. Used for countable types such as pregnancies and steps (taken by a physiotherapy patient), number of cigarettes smoked in a day, etc. Misuse:Not used for amounts of physical entities (which all have standardized units). Note that PcTs derived from DvCountType should make magnitude, error and accuracy attributes minOccurs = '1'. The magnitude element is restricted to integers via an xs:assert.
+Description: Countable quantities. Used for countable types such as pregnancies and
+        steps (taken by a physiotherapy patient), number of cigarettes smoked in a day, etc.
+        The *thing(s)* being counted must be represented in the units element.
+        **Misuse:** Not used for amounts of physical entities (which all have standardized units).
 
 DvQuantityType
 --------------
@@ -291,7 +294,8 @@ Derived from: DvQuantifiedType by extension
 
 Abstract: False
 
-Description: Quantified type representing “scientific” quantities, i.e. quantities expressed as a magnitude and units. Can also be used for time durations, where it is more convenient to treat these as simply a number of individual seconds, minutes, hours, days, months, years, etc. when no temporal calculation is to be performed. Note that PcTs derived from DvQuantityType should make magnitude, error and accuracy attributes minOccurs = '1'.
+Description: Quantified type representing specific quantities, i.e. quantities
+        expressed as a magnitude and units. Can also be used for time durations, where it is more convenient to treat these as simply a number of individual seconds, minutes, hours, days, months, years, etc. when no temporal calculation is to be performed.
 
 
 DvRatioType
@@ -303,7 +307,7 @@ Derived from: DvQuantifiedType by extension
 
 Abstract: False
 
-Description: Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. Should not be used to represent things like blood pressure which are often written using a ‘/’ character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) “6/24” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations. 
+Description: Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. Should not be used to represent things like blood pressure which are often written using a ‘/’ character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) “20/20” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations. 
 
 
 DvTemporalType
@@ -315,7 +319,7 @@ Derived from: DvOrderedType by extension
 
 Abstract: False
 
-Description: Type defining the concept of date and time types. Must be constrained in PcTs to be one or more of the below elements.  This gives the modeler the ability to optionally allow full or partial dates at run time.  Setting maxOccurs and minOccurs to zero causes the element to be prohibited.
+Description: Type defining the concept of date and time types. Must be constrained in PcTs to be one or more of the below elements.  This gives the modeler the ability to optionally allow full or partial dates at run time.  Setting both maxOccurs and minOccurs to zero causes the element to be prohibited.
 
 
 DvIntervalType
@@ -327,7 +331,7 @@ Derived from: DvAnyType by extension
 
 Abstract: False
 
-Description: Generic type defining an interval (i.e. range) of a comparable type. An interval is a contiguous subrange of a comparable base type. Used to define intervals of dates, times, quantities, etc. Whose datatypes are the same and are ordered.   
+Description: Generic type defining an interval (i.e. range) of a comparable type. An interval is a contiguous subrange of a comparable base type. Used to define intervals of dates, times, quantities, etc. Whose datatypes are the same and are ordered. In MLHIM, they are primarily used in defining reference ranges.  
 
 
 InvlType
@@ -339,9 +343,13 @@ Derived from: n/a
 
 Abstract: False
 
-Description: Defines the data type of the DvIntervalType upper and lower elements.  In a CCD restriction, the xs:choice is constrained to one of the reference model  elements with minOccurs = 1 and a fixed attribute defining the value. If the value is unbounded, then the element in the CCD will not have the fixed attribute. Instead it will have nillable="true" and an xs:assert to validate the instance has an empty element. E.g. <xs:assert test='boolean(invl-int/node()) = false()'/>
-The instances must also declare the value as nil, e.g. <invl-int xsi:nil='true'/>
-
+Description: In the CCD, the modeler creates two restrictions on this complexType. 
+        One for the 'lower' value and one for the 'upper' value. 
+        Both restrictions will have the same element choice and the value is 'fixed' on each 
+        representing the lower and upper value range boundary. 
+        The value may be set to NULL (unbounded) by using the xsi:nil='true' attribute. 
+        maxOccurs and minOccurs must be set to 1, in the CCD. 
+        See: http://www.ibm.com/developerworks/webservices/library/ws-tip-null/index.html 
 
 ReferenceRangeType
 ------------------
@@ -352,7 +360,10 @@ Derived from: DvAnyType by extension
 
 Abstract: False
 
-Description: Defines a named range to be associated with any ORDERED datum. Each range is particular to the patient and context, e.g. sex, age, and any other factor which affects ranges. May be used to represent normal, therapeutic, dangerous, critical, etc. lists of concepts. 
+Description: Defines a named range to be associated with any ORDERED datum. Each such
+range is sensitive to the context, e.g. sex, age, location, and any other factor which affects ranges. 
+May be used to represent high, low, normal, therapeutic, dangerous, critical, etc. ranges that are constrained by an interval. 
+
 
 AuditType
 ---------
@@ -363,7 +374,7 @@ Derived from: n/a
 
 Abstract: False
 
-Description: AuditType provides a mechanism to identifiy the who/where/when tracking of instances as they move from system to system.
+Description: AuditType provides a mechanism to identify the who/where/when tracking of instances as they move from system to system.
 
 PartyType
 ---------
@@ -374,7 +385,9 @@ Derived from: n/a
 
 Abstract: False
 
-Description: Description of a party, including an optional external link to data for this party in a demographic or other identity management system. An additional details element provides for the inclusion of information related to this party directly. If the party information is to be anonymous then do not include the details element. The string 'Self' may be entered as the party-name if an external_ref is include.
+Description: Description of a party, including an optional external link to data for
+        this party in a demographic or other identity management system. An additional details
+        element provides for the inclusion of information related to this party directly. If the party information is to be anonymous then do not include the details element.
 
 AttestationType
 ---------------
@@ -396,7 +409,7 @@ Derived from: n/a
 
 Abstract: False
 
-Description: Model of a participation of a Party (any Actor or Role) in an activity. Used to represent any participation of a Party in some activity, which is not explicitly in the model, e.g. assisting nurse. Can be used to record past or future participations. Should not be used in place of more permanent relationships between demographic entities.
+Description: Model of a participation of a Party (any Actor or Role) in an activity. Used to represent any participation of a Party in some activity, which is not explicitly in the model, e.g. assisting nurse. Can be used to record past or future participations.
 
 ExceptionalValueType
 --------------------
@@ -407,7 +420,7 @@ Derived from: n/a
 
 Abstract: True
 
-Description:  Subtypes are used to indicate why a value is missing (Null) or is outside a measurable range. The element ev-name is fixed in restricted types to a descriptive string. The subtypes defined in the reference model are considered sufficiently generic to be useful in many instances.  CCDs may contain additional ExceptionalValueType restrictions. 
+Description:  Subtypes are used to indicate why a value is missing (Null) or is outside a measurable range. The element ev-name is fixed in restricted types to a descriptive string. The subtypes defined in the reference model are considered sufficiently generic to be useful in many instances.  CCDs may contain additional ExceptionalValueType restrictions to allow for domain related reasons for errant or missing data. 
 
 
 NIType
@@ -612,7 +625,8 @@ Derived from: ItemType by extension
 
 Abstract: False
 
-Description:  The grouping variant of Item, which may contain further instances of Item, in an ordered list. This provides the root ItemType for arbitrarily complex structures.
+Description:  The grouping variant of Item, which may contain further instances of Item, 
+in an ordered list. This can serve as the root component for arbitrarily complex structures.
 
 DvAdapterType
 -------------
@@ -623,7 +637,7 @@ Derived from: ItemType by extension
 
 Abstract: False
 
-Description:  The leaf variant of Item, to which any DvAnyType subtype instance is attached for use in a Cluster. 
+Description:  The leaf variant of Item, to which any *DvAnyType* subtype instance is attached for use in a Cluster. 
 
 EntryType
 ---------
@@ -634,7 +648,7 @@ Derived from: n/a
 
 Abstract: True
 
-Description: The abstract parent of all Entry subtypes. An Entry is the root of a logical set of data items. Each subtype has an identical information structure. The subtyping is used to allow persistence to separate the types of Entries; primarily import in healthcare for the de-identification of clinical information.
+Description: The abstract parent of all Entry subtypes. An Entry is the root of a logical set of data items. Each subtype has an identical information structure. The subtyping is used to allow persistence to separate the types of Entries; primarily important in healthcare for the de-identification of clinical information.
 
 CareEntryType
 -------------
@@ -680,9 +694,70 @@ Abstract: False
 
 Description:  This is the root node of a Concept Constraint Definition.
 
+---------------
+RM simpleTypes
+---------------
 
-Example CCD 
+The reference implementation simpleType descriptions. 
+These types do not have global element definitions. They are used to define other element types within the RM and are used as restrictions on a CCD.  
+
+MagnitudeStatus
+---------------
+
+`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Simple_Type_mlhim2_MagnitudeStatus.html#MagnitudeStatus>`_
+
+Derived from: xs:string
+
+Abstract: False
+
+Description: Optional status of magnitude with values:
+        
+        equal : magnitude is a point value
+        
+        less_than : value is less than the magnitude
+        
+        greater_than : value is greater than the magnitude
+        
+        less_than_or_equal : value is less_than_or_equal to the magnitude
+        
+        greater_than_or_equal : value is greater_than_or_equal to the magnitude
+        
+        approximate : value is the approximately the magnitude
+
+
+TypeOfRatio
+-----------
+
+`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Simple_Type_mlhim2_TypeOfRatio.html#TypeOfRatio>`_
+
+Derived from: xs:string
+
+Abstract: False
+
+Description: Indicates semantic type of ratio. 
+        
+        *ratio = a relationship between two numbers. 
+        
+        *proportion = a relationship between two numbers where there is a bi-univocal relationship between
+        the numerator and the denominator (the numerator is contained in the denominator)
+        
+        *rate = a relationship between two numbers where there is not a bi-univocal
+        relationship between the numerator and the denominator (the numerator is not
+        contained in the denominator) 
+
+
 --------------
+Element Groups
+--------------
+
+IntervalUnits
+-------------
+Used to require that *if* units are defined on a DvInterval based PcT then the units must have both a name and a URI. 
+
+
+-----------
+Example CCD 
+-----------
 
 `Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType>`_
 
