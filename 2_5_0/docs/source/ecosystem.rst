@@ -1,6 +1,7 @@
 ====================
 The MLHIM Eco-System
 ====================
+
 It is important here to describe all of the components of the MLHIM conceptual eco-system in order for the reader to appreciate the scope of MLHIM and the importance of the governance policies. 
 At the base of the MLHIM eco-system is the Reference Model (RM).  Though the reference implementation is in XML Schema format, in real world applications a chosen object oriented language will likely be used for implementations.  Often, tools are available to automatically generate the reference model classes from the XML Schema.  This is the basis for larger MLHIM compliant applications.  We will later cover implementation options for smaller applications such as mHealth (apps for smartphones and tablets, as well as purpose specific devices such as a home blood pressure monitor).  
 
@@ -35,9 +36,11 @@ the language attribute is optional.
 * define the minimum DCMI6 metadata items as shown in Figure 2.
 
 .. image:: ccd_header.png
+
 Figure 1.
 
 .. image:: ccd_metadata.png
+
 Figure 2.
 
 A Valid CCD Must Not:
