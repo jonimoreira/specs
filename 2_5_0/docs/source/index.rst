@@ -19,7 +19,7 @@ Contents:
    introduction
    MLHIM_and_EA
    ecosystem
-   modelling_concepts
+   modeling_concepts
    rm
    data_analysis
    ccdgen

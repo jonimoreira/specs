@@ -148,7 +148,7 @@ The integer data type is used to specify a numeric value without a fractional co
 
 The complete documentation in a graphical, clickable format is available on the MLHIM website [Documents page](http://mlhim.org/documents.html).  
 
-An EMF Ecore project is available in the docs folder of the distribution. It can be imported into Eclipse and used as a base for modelling CCDs. However, developers need to be aware that there are slight differences due to the fact taht Eclipse XML tools do not support XML Schema 1.1 
+An EMF Ecore project is available in the docs folder of the distribution. It can be imported into Eclipse and used as a base for modeling CCDs. However, developers need to be aware that there are slight differences due to the fact taht Eclipse XML tools do not support XML Schema 1.1 
 
 Further research is needed to determine if valid CCDs can be produced from Eclipse. 
 
@@ -181,8 +181,8 @@ Derived from: DvAnyType by extension
 
 Abstract: False
 
-Description:  Items which represent boolean decisions, such as true/false or yes/no answers. Use for such data, it is important to devise the meanings (usually questions in subjective data) carefully, so that the only allowed results are in fact true or false.  The possible choices for True or False are enumerations in the CCD. The reference model defines valid-true and valid-false in a choice so only one or the other may be present in the instance data.
-Potential Misuse: The DvBooleanType should not be used as a replacement for naively       modeled enumerated types such as male/female etc. Such values should be coded, and in any case the enumeration often has more than two values. The elements, valid-true and valid-false are contained in an xs:choice and only one or the other is instantiated in the instance data with its value coming from the enumerations defined in a CCD. 
+Description:  Items which represent boolean decisions, such as true/false or yes/no answers. Use for such data, it is important to devise the meanings (usually questions in subjective data) carefully, so that the only allowed results are in fact true or false.  The possible choices for True or False are enumerations in the CCD. The reference model defines 'true' and 'false' in a choice so only one or the other may be present in the instance data.
+Potential Misuse: The DvBooleanType should not be used as a replacement for enumerated types such as male/female, etc. Such values should be modeled as DvStrings with enumerations and may reference a controlled vocabulary. In any case the enumeration often has more than two values. The elements, 'true' and 'false' are contained in an xs:choice and only one or the other is instantiated in the instance data with its value coming from the enumerations defined in a CCD. 
 
 DvLinkType
 ----------
@@ -193,7 +193,10 @@ Derived from: DvAnyType by extension
 
 Abstract: False
 
-Description:  Used to specify a Universal Resource Identifier. Set the pattern to accommodate your needs in a CCD.
+Description: Used to specify a Universal Resource Identifier. 
+Set the pattern facet to accommodate your needs in the PcT.
+The primary use is to provide a mechanism that can be used to link together CCDs. 
+The relation element allows for the use of a descriptive term for the link with an optional URI pointing to the source vocabulary. In most use cases the modeler will define all three of these using the 'fixed' attribute. Other use cases will have the 'relation' and 'relation-uri' elements fixed and the application will provide the 'link'.
 
 DvStringType
 ------------
@@ -204,7 +207,8 @@ Derived from: DvAnyType by extension
 
 Abstract: False
 
-Description:  The string data type can contain characters, line feeds, carriage returns, and tab characters.
+Description:  The string data type can contain characters, line feeds, carriage returns,
+        and tab characters. The use cases are for any free form text entry or for any enumerated lists. Additionally the minimum and maximum lengths may be set and regular expression patterns may be specified.
 
 DvFileType
 ----------
@@ -215,7 +219,7 @@ Derived from: DvAnyType by extension
 
 Abstract: False
 
-Description:  A specialization of DvEncapsulatedType for audiovisual and bio-signal types. Includes further metadata relating to media types which are not applicable to other subtypes of DvEncapsulatedType.
+Description: A type to use for encapsulated content (aka. files) for image, audio and other media types with a defined MIME type. This type provides a choice of embedding the content into the data or using a URL to point to the content. 
 
 DvOrderedType
 -------------
@@ -237,18 +241,24 @@ Derived from: DvOrderedType by extension
 
 Abstract: False
 
-Description:  Models rankings and scores, e.g. pain, Apgar values, etc, where there is 
-a) implied ordering, 
-b) no implication that the distance between each value is constant, and 
-c) the total number of values is finite.
-Note that although the term ‘ordinal’ in mathematics means natural numbers only, here any decimal is allowed, since negative and zero values are often used by medical professionals for values around a neutral point. Also, decimal values are sometimes used such as 0.5 or .25 
-Examples of sets of ordinal values: 
--3, -2, -1, 0, 1, 2, 3 -- reflex response values
-0, 1, 2 -- Apgar values 
-
-Used for recording any clinical datum which is customarily recorded using symbolic values.
-    
-    Example: the results on a urinalysis strip, e.g. {neg, trace, +, ++, +++} are used for leukocytes, protein, nitrites etc; for non-haemolysed blood {neg, trace, moderate}; for haemolysed blood {neg, trace, small, moderate, large}
+Description:  Models rankings and scores, e.g. pain, Apgar values, etc, where there is a)
+        implied ordering, b) no implication that the distance between each value is constant, and c)
+        the total number of values is finite. Note that although the term ‘ordinal’ in mathematics
+        means natural numbers only, here any decimal is allowed, since negative and zero values are
+        often used by medical and other professionals for values around a neutral point. 
+        Also, decimal values are sometimes used such as 0.5 or .25 
+        
+        Examples of sets of ordinal values: 
+        -3, -2, -1, 0, 1, 2, 3 -- reflex response values 
+        0, 1, 2 -- Apgar values 
+        
+        Also used for recording any clinical or other datum which is customarily recorded using symbolic values. 
+        Examples: 
+        the results on a urinalysis strip, e.g. {neg, trace, +, ++, +++} are used for leukocytes, protein, nitrites etc; 
+        for non-haemolysed blood {neg, trace, moderate}; 
+        for haemolysed blood {neg, trace, small, moderate, large}.
+        
+        Elements value and symbol MUST have exactly the same number of enumerations.
 
 DvQuantifiedType
 ----------------
