@@ -15,13 +15,13 @@ The goal of MLHIM is to be Minimalistic, Sustainable, Implementable AND Interope
 
 .. raw:: html
 
-   <embed>
-   <div align='center'>
-      <audio controls>
-        <source src="http://www.mlhim.org/muh-leem.wav" type="audio/wav">
-      </audio controls>
-      </div>
-   </embed>
+  <embed>
+  <div align='center'>
+   <audio controls>
+    <source src="http://www.mlhim.org/muh-leem.wav" type="audio/wav">
+   </audio controls>
+   </div>
+  </embed>
 
 Press the play button to hear **MLHIM** pronounced. 
 
@@ -42,16 +42,16 @@ This work has received financial and in-kind support from the following persons 
 Error Reporting
 ---------------
 
-Please report all errors in documentation and/or in the specifications of the information model as bug reports at the GitHub development site.  It is easy to do and a great way to give back.  See:  `MLHIM Issues <https://github.com/mlhim/specs/issues>`_
+Please report all errors in documentation and/or in the specifications of the information model as bug reports at the GitHub development site. It is easy to do and a great way to give back. See: `MLHIM Issues <https://github.com/mlhim/specs/issues>`_
 
 Purpose & Scope
 ---------------
 *Keep everything as simple as possible; but no simpler. – Albert Einstein*
 
 The purpose of the MLHIM project is to provide a free and openly available specification for implementation of computable semantic interoperability for healthcare information exchange. 
-The MLHIM specifications are designed to provide semantic interoperability that is fully independent of any implementation specific contexts. Therefore workflow, security, user access, data persistence, etc. are all outside the scope of MLHIM.  
+The MLHIM specifications are designed to provide semantic interoperability that is fully independent of any implementation specific contexts. Therefore workflow, security, user access, data persistence, etc. are all outside the scope of MLHIM. 
 
-The MLHIM site on `GitHub <https://github.com/mlhim>`_ contains a growing number of demonstration projects and tools that research how this approach and limited scope enables interoperability across many contexts.  MLHIM based data can be exchanged via any transport method.  Including existing HL7 v.2 and v.3 exchange systems to enhance the semantic interoperability of existing HL7 implementations.  
+The MLHIM site on `GitHub <https://github.com/mlhim>`_ contains a growing number of demonstration projects and tools that research how this approach and limited scope enables interoperability across many contexts. MLHIM based data can be exchanged via any transport method. Including existing HL7 v.2 and v.3 exchange systems to enhance the semantic interoperability of existing HL7 implementations. 
 
 Conformance
 -----------

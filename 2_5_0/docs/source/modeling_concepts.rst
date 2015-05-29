@@ -8,17 +8,17 @@ The MLHIM specifications are arranged conceptually, into packages. These package
 
 In MLHIM 1.x these constraints were known as archetypes, expressed in a domain specific language (DSL) called the archetype definition language (ADL). This language is based on a specific model called the archetype object model (AOM). MLHIM 1.x is a fork of the open source openEHR specifications.
 
-In MLHIM 2.x and later, a given domain knowledge model is implemented in an XML Schema (XSD), called a Concept Constraint Definition (CCD).  This allows MLHIM to use the XML Schema language as well as other XML technologies, as the constraint, validation and processing language.  This provides the MLHIM development community with an approach to using multi-level modeling in healthcare using standardized, widely available tools and technologies.
+In MLHIM 2.x and later, a given domain knowledge model is implemented in an XML Schema (XSD), called a Concept Constraint Definition (CCD). This allows MLHIM to use the XML Schema language as well as other XML technologies, as the constraint, validation and processing language. This provides the MLHIM development community with an approach to using multi-level modeling in healthcare using standardized, widely available tools and technologies.
 
 The attempt to design a data model for a concept is still restricted to the knowledge and context of a particular domain expert. 
 
 In effect, there can never be a maximal data model for a healthcare concept. This means that from a global perspective there may be several CCDs that purport to fill the same need. 
 
-There is no conflict in the MLHIM world in this case as CCDs are identified using the UUID and there are no semantics in the processing and validation model.  
+There is no conflict in the MLHIM world in this case as CCDs are identified using the UUID and there are no semantics in the processing and validation model. 
 
 The CCD may be further constrained at the implementation level through the use of implementation templates in the selected framework. Examples are additional XML Schemas that provide further restrictions or HTML pages used for display and data form entry. These templates are constructed in the implementation and may or may not be sharable across applications. 
 
-The MLHIM specifications do not play any role in defining what these templates look like or perform like.  They are only mentioned here as a way of making note that applications will 
+The MLHIM specifications do not play any role in defining what these templates look like or perform like. They are only mentioned here as a way of making note that applications will 
 require a user interface template layer to be functional. 
 
 **The interoperability layer remains at the CCD instance level. **
@@ -33,47 +33,47 @@ To demonstrate the differences between the MLHIM approach and the typical data m
 
 Constraint Definitions
 ----------------------
-Concept Constraint Definitions (CCDs) can be created using any XML Schema or even a plain text editor. However, this is not a recommended approach.  Realistic CCDs can be several hundred lines long. They also require Type4 UUIDs to be created as complexType and element names.
+Concept Constraint Definitions (CCDs) can be created using any XML Schema or even a plain text editor. However, this is not a recommended approach. Realistic CCDs can be several hundred lines long. They also require Type4 UUIDs to be created as complexType and element names.
 An open source Constraint Definition Designer (CDD) has been started but is in need of a leader and developer community. MLHIM founders are eager to support the development of this tool. It will (eventually) be used to create constraint definitions. It is open source and we hope to build a community around its development. The CDD can be used now to create a shell XSD with the correct metadata entries. Each release is available on the MLHIM GitHub site.
-There is also a conceptual model of the information using the mind mapping software, Freemind.  It provides domain experts a method of building up the structures to define a certain healthcare concept.  There is a tool being developed to convert these Freemind definitions into a standardized format for import and processing by the CCD-Gen.  It can also be found on the GitHub Site as xml2ccd
+There is also a conceptual model of the information using the mind mapping software, Freemind. It provides domain experts a method of building up the structures to define a certain healthcare concept. There is a tool being developed to convert these Freemind definitions into a standardized format for import and processing by the CCD-Gen. It can also be found on the GitHub Site as xml2ccd
 
 CCD Identification
 ------------------
 The root element of a CCD and all complexType and global elements will use Type UUIDs as defined by the IETF RFC 4122 See: http://www.ietf.org/rfc/rfc4122.txt 
-The filename of a CCD may use any format defined by the CCD author.  The CCD author must recognize that the metadata section of the CCD must contain the correct RDF:about URI with this filename. 
+The filename of a CCD may use any format defined by the CCD author. The CCD author must recognize that the metadata section of the CCD must contain the correct RDF:about URI with this filename. 
 
 As a matter of consistency and to avoid any possible name clashes, the CCDs created by the CCD-Gen also use the CCD ID (ccd-<uuid>.xsd). To be a viable CCD for validation purposes the CCD should use the W3C assigned extension of '.xsd'. Though many tools may still process the artifact as an XML Schema without it. 
 The MLHIM community considers it a matter of good artifact management practice to use the CCD ID with the .xsd extension, as the filename. 
 
 CCD Versioning
 --------------
-Versioning of CCDs is not supported by these specifications. Though XML Schema 1.1 does have supporting concepts for versioning of schemas, this is not desirable in CCDs.  The reasons for this decision focuses primarily around the ability to capture temporal and ontological semantics for data instances and maintain them for all time (future proof data).
-A key feature of MLHIM is the ability to guarantee the semantics for all future time, as intended by the original modeler. We determined that any change in the structure or semantics of a CCD, constitutes a new CCD.  Since the complexTypes are re-usable (See the PcT description below), an approach that tools should use is to allow for copying a CCD and assigning a new CCD ID. 
+Versioning of CCDs is not supported by these specifications. Though XML Schema 1.1 does have supporting concepts for versioning of schemas, this is not desirable in CCDs. The reasons for this decision focuses primarily around the ability to capture temporal and ontological semantics for data instances and maintain them for all time (future proof data).
+A key feature of MLHIM is the ability to guarantee the semantics for all future time, as intended by the original modeler. We determined that any change in the structure or semantics of a CCD, constitutes a new CCD. Since the complexTypes are re-usable (See the PcT description below), an approach that tools should use is to allow for copying a CCD and assigning a new CCD ID. 
 
-When a complexType is changed within this new CCD, all ancestors (enclosing complexTypes) also must be assigned a new name along with its global element name.  For example if the enumerations on a DvStringType restriction are changed, the DvStringType, the DvAdapterType, the parent ClusterType and any enclosing ClusterTypes, the EntryType and the CCDType must all get new UUIDs. 
+When a complexType is changed within this new CCD, all ancestors (enclosing complexTypes) also must be assigned a new name along with its global element name. For example if the enumerations on a DvStringType restriction are changed, the DvStringType, the DvAdapterType, the parent ClusterType and any enclosing ClusterTypes, the EntryType and the CCDType must all get new UUIDs. 
 
 Pluggable complexTypes (PcTs)
 -----------------------------
 MLHIM CCDs are made up of XML schema complexTypes composed by restriction of the Reference Model complexTypes. This is the foundation of interoperability. 
-What is in the Reference Model is the superset of all CCDs.  Pluggable complexTypes (PcTs) are a name we have given to the fact that due to their unique identification the complexTypes can be seen as re-usable components.  For example, a domain expert might model a complexType that is a restriction of DvStringType with the enumerations for selecting one of the three measurement systems for temperature; Fahrenheit, Kelvin and Celsius. This PcT as well as many others can be reused in many CCDs without modification.   
+What is in the Reference Model is the superset of all CCDs. Pluggable complexTypes (PcTs) are a name we have given to the fact that due to their unique identification the complexTypes can be seen as re-usable components. For example, a domain expert might model a complexType that is a restriction of DvStringType with the enumerations for selecting one of the three measurement systems for temperature; Fahrenheit, Kelvin and Celsius. This PcT as well as many others can be reused in many CCDs without modification.  
 For this reason, the semantic links for PcTs are directly expressed in an xs:appinfo section in each PcT. This approach lends itself very well to the creation of RDF triples from this information. For example::
 
-    <xs:appinfo>
-      <rdf:Description rdf:about='http://www.mlhim.org/xmlns/mlhim2/ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'>
-        <rdfs:isDefinedBy rdf:resource='http%3A//purl.obolibrary.org/obo/RO_0002371'/>
-      </rdf:Description>
-    </xs:appinfo>
+  <xs:appinfo>
+   <rdf:Description rdf:about='http://www.mlhim.org/xmlns/mlhim2/ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'>
+    <rdfs:isDefinedBy rdf:resource='http%3A//purl.obolibrary.org/obo/RO_0002371'/>
+   </rdf:Description>
+  </xs:appinfo>
 
-In this example the subject is  http://www.mlhim.org/xmlns/mlhim2/ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4 the predicate is  rdfs:isDefinedBy  and the object is  http%3A//purl.obolibrary.org/obo/RO_0002371     
+In this example the subject is http://www.mlhim.org/xmlns/mlhim2/ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4 the predicate is rdfs:isDefinedBy and the object is http%3A//purl.obolibrary.org/obo/RO_0002371   
 
-Every xs:appinfo section must begin with the rdf:Description element and have the rdf:about attribute to define the subject, as the containing complexType.  This is then followed by one or more predicate/object components.  The predicates can be from any vocabulary/terminology.  Just be certain that the namespace prefix is correctly defined in the CCD header.  The CCD-Gen defines common namespaces by default but others may be added as needed.  Also be certain that any URLs are properly encoded so that they will be valid inside the CCD. 
-RDF triples are a cornerstone of the semantic web.  For more information see this tutorial. Of particular interest here is the section titled; Introducing RDF/XML. RDF/XML is one of the syntaxes used to describe semantic links and it is what we use in MLHIM. Another popular syntax you may see is called Turtle.  
+Every xs:appinfo section must begin with the rdf:Description element and have the rdf:about attribute to define the subject, as the containing complexType. This is then followed by one or more predicate/object components. The predicates can be from any vocabulary/terminology. Just be certain that the namespace prefix is correctly defined in the CCD header. The CCD-Gen defines common namespaces by default but others may be added as needed. Also be certain that any URLs are properly encoded so that they will be valid inside the CCD. 
+RDF triples are a cornerstone of the semantic web. For more information see this tutorial. Of particular interest here is the section titled; Introducing RDF/XML. RDF/XML is one of the syntaxes used to describe semantic links and it is what we use in MLHIM. Another popular syntax you may see is called Turtle. 
 
 Implementations
 ----------------
-It is the intent of the MLHIM community to maintain implementations and documentation in all major programming languages.  Volunteers to manage these are welcome. 
+It is the intent of the MLHIM community to maintain implementations and documentation in all major programming languages. Volunteers to manage these are welcome. 
 **XML Schema**
-The reference implementation is expressed in XML Schema 1.1.  Each release package contains the reference model schema as well as this and other documentation.  The release and current development schemas live at the versioned link on MLHIM.org. For example 2.4.7 is at: http://www.mlhim.org/xmlns/mlhim2/2_4_7/mlhim247.xsd
+The reference implementation is expressed in XML Schema 1.1. Each release package contains the reference model schema as well as this and other documentation. The release and current development schemas live at the versioned link on MLHIM.org. For example 2.4.7 is at: http://www.mlhim.org/xmlns/mlhim2/2_4_7/mlhim247.xsd
 
 **Best Practices**
-The concept of best practices for modeling and for implementation is an evolving set of results.  To accommodate new items of interest under this heading we are using the MLHIM specs Wiki. See the table of contents here: https://github.com/mlhim/specs/wiki/1.-Best-Practices 
+The concept of best practices for modeling and for implementation is an evolving set of results. To accommodate new items of interest under this heading we are using the MLHIM specs Wiki. See the table of contents here: https://github.com/mlhim/specs/wiki/1.-Best-Practices 

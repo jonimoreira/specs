@@ -14,7 +14,7 @@ The 1.x *attempts* are available on `Launchpad <http://launchpad.net/mlhim-specs
 Current Versions
 ----------------
 
-MLHIM 2.x (this document and related artifacts) introduces **further innovation and a departure from previous approaches**, through the use of XML technologies and reducing complexity without sacrificing interoperability as well as improved modeling tools and as application development platforms. These specifications can be implemented in any structured language. 
+MLHIM 2.x (this document and related artifacts) introduces **further innovation and a departure from previous approaches** that haven't worked, through the use of XML technologies and reducing complexity without sacrificing interoperability as well as improved modeling tools and as application development platforms. These specifications can be implemented in any structured language. 
 While a certain level of knowledge is assumed, the primary goal of these specifications is to make them 'implementable' by the widest possible number of people. The primary motivator for these specifications is the complexity involved in the recording of the temporal-spatial-ontological relationships in healthcare information while maintaining the original semantics across all applications; for all time. 
 
 We :doc:`invite <./support>` you to join us in this effort to maintain the specifications and build great, translatable healthcare tools and applications for global use. 
@@ -22,9 +22,9 @@ International input is encouraged in order for the MLHIM specifications to allow
 
 Actual implementation in languages other than XML Schema and related XML technologies, the packages/classes should be implemented per the standard language naming format. A Language Implementation Specification (LIS) should be created for each language. For example MLHIM-Python-LIS.rst for the Python language or MLHIM-Java-LIS.rst for the Java language. Add the LIS to the docs directory of the current development version and submit a pull request. 
 
-MLHIM intentionally does not specify full behavior within a class.  Only the data and constraints are specified.  Behavior may differ between various applications and should not be specified at the information model level. The goal is to provide a system that can capture and share the semantics and structure of information in the context in which it is captured, not define specific application behaviors.
+MLHIM intentionally does not specify full behavior within a class. Only the data and constraints are specified. Behavior may differ between various applications and should not be specified at the information model level. The goal is to provide a system that can capture and share the semantics and structure of information in the context in which it is captured, not define specific application behaviors.
 
-The generic class names in the specification documents are in CamelCase type. since this is most typical of implementation usage.  
+The generic class names in the specification documents are in CamelCase type. since this is most typical of implementation usage. 
 
 Only the reference model is implemented in software where needed. In many implementations, the application can use XML Tools to validate against the CCD and reference model using any SQL, NoSQL or other persistent storage. For devices or other small apps even the file system will suffice as a storage solution. 
 

@@ -149,7 +149,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="value" type="xs:string">
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-value" type="xs:string">
             <xs:annotation>
               <xs:documentation>The string value of the item.</xs:documentation>
             </xs:annotation>
@@ -426,7 +426,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="value" type="xs:int">
+          <xs:element maxOccurs="1" minOccurs="0" name="dvcount-value" type="xs:int">
             <xs:annotation>
               <xs:documentation>Numeric value of the counted items.</xs:documentation>
             </xs:annotation>
@@ -448,7 +448,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="value" type="xs:decimal">
+          <xs:element maxOccurs="1" minOccurs="0" name="dvquantity-value" type="xs:decimal">
             <xs:annotation>
               <xs:documentation>Numeric value of the quantity.</xs:documentation>
             </xs:annotation>
@@ -488,7 +488,7 @@
               <xs:documentation>denominator of ratio </xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="value" type="xs:decimal">
+          <xs:element maxOccurs="1" minOccurs="0" name="dvratio-value" type="xs:decimal">
             <xs:annotation>
               <xs:documentation>Numeric value of the Ratio.</xs:documentation>
             </xs:annotation>
