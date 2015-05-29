@@ -10,8 +10,8 @@ The popular `R <http://cran.r-project.org/>`_ programming language is specifical
 
 The CCD-Gen provides example R code, automatically generated for each CCD as an R project for use in `R Studio <http://www.rstudio.com/>`_ or at the R command line. 
 
-Data Description Levels
------------------------
+Semantic Models vs. Semantic Markup
+-----------------------------------
 With the growing interest in *Big Data analytics*, various efforts are ongoing to improve the description of data and datasets. The various domains are attempting to use commonly developed vocabularies, such as the `Dublin Core Metadata Initiative <http://dublincore.org/>`_ terms, the `Data Catalog Vocabulary <http://www.w3.org/TR/vocab-dcat/>`_, `Schema.org <http://schema.org/>`_ and others. 
 
 The popular approach is to use the vocabularies to directly *annotate the data*. We call this the *direct markup approach*. While this approach will work, to some limited extent. There are several problems with this method. The glaringly obvious one is that, more often than not, high quality, precise metadata is often much larger than the actual data being represented. Every instance of data and every copy of the dataset, must carry all of its own metadata. While storage size, memory size, processing speed and network bandwidth have improved immensely over the past decade. They are not infinite and every byte still counts; affecting overall performance in an inverse relationship. 
