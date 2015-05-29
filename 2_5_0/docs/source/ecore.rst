@@ -10,7 +10,7 @@ I could really use some help making this more useful.  Maybe you can even genera
 The things missing are:
 
 1. DvInterval upper and lower are not typed checked because the Eclipse XML Tools can't handle asserts. 
-2. The extra durations from XML Schema 1.1 are not present for the same reason.
+2. The extra durations from XML Schema 1.1 are not present in DvTemporal for the same reason.
 
 Everything should be there. 
 
