@@ -51,19 +51,17 @@
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-      <xs:element maxOccurs="1" minOccurs="0" name="valid-time-begin" type="xs:dateTime">
+      <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
         <xs:annotation>
-          <xs:documentation>If present this must be a valid datetime including timezone. It is used
-            to indicate the beginning time that information is considered valid or when the
-            information was collected.</xs:documentation>
+          <xs:documentation>Valid Time Begin. If present this must be a valid datetime including timezone. It is used
+            to indicate the beginning time that information is considered valid or when the information was collected.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="valid-time-end" type="xs:dateTime"
+      <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"
         nillable="true">
         <xs:annotation>
-          <xs:documentation>If present this must be a valid date-time including timezone. It is used
-            to indicate the ending time that information is considered valid or is to have
-            expired.</xs:documentation>
+          <xs:documentation>Valid Time End. If present this must be a valid date-time including timezone. It is used
+            to indicate the ending time that information is considered valid or the time the information expired.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -856,8 +854,7 @@
             value. </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-          <xs:element fixed="No Information" maxOccurs="1" minOccurs="1" name="ev-name"
-            type="xs:string"/>
+          <xs:element fixed="No Information" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -955,8 +952,7 @@
           <xs:documentation>Negative Infinity : Negative infinity of numbers</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-          <xs:element fixed="Negative Infinity" maxOccurs="1" minOccurs="1" name="ev-name"
-            type="xs:string"/>
+          <xs:element fixed="Negative Infinity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -970,8 +966,7 @@
           <xs:documentation>Positive Infinity : Positive infinity of numbers</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-          <xs:element fixed="Positive Infinity" maxOccurs="1" minOccurs="1" name="ev-name"
-            type="xs:string"/>
+          <xs:element fixed="Positive Infinity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1000,8 +995,7 @@
             (e.g., patient was asked but refused to answer)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-          <xs:element fixed="Asked and Refused" maxOccurs="1" minOccurs="1" name="ev-name"
-            type="xs:string"/>
+          <xs:element fixed="Asked and Refused" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1016,8 +1010,7 @@
             asked)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-          <xs:element fixed="Not Asked" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"
-          />
+          <xs:element fixed="Not Asked" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1065,8 +1058,7 @@
             was asked but did not know)</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-          <xs:element fixed="Asked but Unknown" maxOccurs="1" minOccurs="1" name="ev-name"
-            type="xs:string"/>
+          <xs:element fixed="Asked but Unknown" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1081,8 +1073,7 @@
           </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-          <xs:element fixed="Not Available" maxOccurs="1" minOccurs="1" name="ev-name"
-            type="xs:string"/>
+          <xs:element fixed="Not Available" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1097,8 +1088,7 @@
             number of cigarettes smoked per day by a non-smoker subject.</xs:documentation>
         </xs:annotation>
         <xs:sequence>
-          <xs:element fixed="Not Applicable" maxOccurs="1" minOccurs="1" name="ev-name"
-            type="xs:string"/>
+          <xs:element fixed="Not Applicable" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
