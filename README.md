@@ -5,7 +5,7 @@ Multi-Level Healthcare Information Modelling Specifications
 
 The current released version is 2.4.7
 
-New developments are being made in the 2_4_8 branch.
+New developments are being made in the [2.5.0 branch](https://github.com/mlhim/specs/tree/2_5_0). Development documentation is online at [ReadTheDocs](http://mlhim-specifications.readthedocs.org/en/2_5_0/index.html)
 
 After release, the only changes allowed in the Reference Model implementation (XML Schema) is for documentation purposes. Documentation and examples maybe updated in the 'master' branch as needed. After merging the development branch to the master and creating the release, the development branch is deleted. 
 
