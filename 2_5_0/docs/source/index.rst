@@ -23,6 +23,7 @@ Contents:
    rm
    data_analysis
    ccdgen
+   ecore
    glossary
    support
 
