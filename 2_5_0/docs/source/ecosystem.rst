@@ -198,22 +198,11 @@ can be converted to::
             },
 
 
-
+Two of the MLHIM projects on GitHub demonstrate combining the model semantics with the data instances to create a Graph and storing it in a Triple Store. The connections can then be visualized using oepn source tools and / or queried using SPARQL. 
 
 For deeper details on using MLHIM in various scenarios you should refer to the `GitHub repository <https://github.com/mlhim>`_ specifically `this project <https://github.com/mlhim/MLHIM_semantics_extractor>`_ as well as the `MXIC demo <https://github.com/mlhim/mxic>`_ and the `MAPLE demo <https://github.com/mlhim/MAPLE>`_ These all use oder versions of MLHIM but the concepts are the same for any 2.x version. 
 
 Two projects that may be of particular interest is `adding semantics to FHIR models <>`_ and `adding semantics to HL7v2 messages <https://github.com/mlhim/hl7v2_semantics>`_
-
-
-
-
-
-
-
-
-
-
-
 
 
 
