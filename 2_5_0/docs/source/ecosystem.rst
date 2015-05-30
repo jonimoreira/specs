@@ -148,6 +148,13 @@ So now we have three statements about the unique subject called *mlhim2:ct-a05e8
 
 So now we have some machine processable semantics as well as some documentation. All available from the model. Also note that there is the *data-name* element. When a modeler defines a PcT they give it a fixed name as a human readable string. This is included in the data instance and even though the XML element is a UUID, this readable text is immediately below it and describes what the modeler defined for the name. The rdfs:label and the data-name **SHOULD** be the same string. 
 
+Example from the instance data::
+ 
+    <mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680>
+      <data-name>Test DvLink</data-name>
+      ...
+    </mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680>  
+
 The next section describes how all of this can be used in an operational setting.
 
 ------------------
