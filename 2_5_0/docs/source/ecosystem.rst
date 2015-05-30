@@ -122,8 +122,8 @@ Taking a *simplistic* example CCD (the sequence of appearance of the complexType
       <xs:appinfo>
         <rdf:Description rdf:about='mlhim2:ct-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680'>
           <rdfs:subClassOf rdf:resource='mlhim2:DvLinkType'/>
-          <rdfs:label>Test DvLink</rdfs:label>
           <rdfs:isDefinedBy rdf:resource='http://www.mlhim.org/generic_pcts'/>
+          <rdfs:label>Test DvLink</rdfs:label>
         </rdf:Description>
       </xs:appinfo>
     </xs:annotation>
@@ -142,9 +142,11 @@ The first child of rdf:Description is a rdfs:subClassOf element. This element na
 The second child of rdf:Description is a rdfs:isDefinedBy element. This element name is the *Predicate* component of the second RDF statement about the PcT. The rdf:resource attribute 
 points to a resource on the MLHIM website. `Give it a try <http://www.mlhim.org/generic_pcts>`_. It is just a simple plain text document used as a resource for these examples. Note that it is not a requirement that all URI resources be resolvable URLs. But we think it is a good idea that they are whenever possible. 
 
-So now we have two statements about the unique subject called *mlhim2:ct-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680*. We know it is a subtype of the MLHIM DvLinkType that is defined in the MLHIM Reference Model schema that is included (via xs:include) in this CCD. We can also find a definition of this PcT in the resource at http://www.mlhim.org/generic_pcts. 
+The third child of rdf:Description is a rdfs:label This element defines a fixed text label to this PcT. So the *Predicate* is rdfs:label and the *Object* is the string "Test DvLink".
 
-So now we have some machine processable semantics as well as some documentation. All available from the model. Also note that there is the *data-name* element. When a modeler defines a PcT they give it a fixed name as a human readable string. This is included in the data instance and even though the XML element is a UUID, this readable text is immediately below it and describes what the modeler defined for the name.
+So now we have three statements about the unique subject called *mlhim2:ct-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680*. We know it is a subtype of the MLHIM DvLinkType that is defined in the MLHIM Reference Model schema that is included (via xs:include) in this CCD. We can also find a definition of this PcT in the resource at http://www.mlhim.org/generic_pcts. 
+
+So now we have some machine processable semantics as well as some documentation. All available from the model. Also note that there is the *data-name* element. When a modeler defines a PcT they give it a fixed name as a human readable string. This is included in the data instance and even though the XML element is a UUID, this readable text is immediately below it and describes what the modeler defined for the name. The rdfs:label and the data-name **SHOULD** be the same string. 
 
 The next section describes how all of this can be used in an operational setting.
 
