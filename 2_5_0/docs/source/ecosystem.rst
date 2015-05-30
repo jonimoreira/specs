@@ -160,10 +160,49 @@ The next section describes how all of this can be used in an operational setting
 ------------------
 MLHIM in Operation
 ------------------
+We have a Reference Model, a Concept Constraint Definition and some data instances; all in XML. How does all of that fit together, especially since I use JSON with my REST Services and Turtle for my RDF semantics syntax? 
 
-We have a Reference Model, a Concept Constraint Definition and some data instances. How does all of that fit together? 
+Glad you asked .... 
+
+Remember that the XML and RDF/XML syntaxes are used because they are robust. They are the canonical definitions for the models and the data because the tools are available for validating the syntax and the semantics. 
+
+Because MLHIM XML data has a *very specific structure* it is quite easy to perform lossless conversion to and from JSON. So you can send and receive JSON data. The points in your data chain that need require validated data can be converted back to XML for validation.  
+
+So (a snippet) like this::
+
+            <ccd:el-d4079097-c68b-4c99-9a5e-b85628d55897>
+          <!-- Party -->
+          <party-name>A. Sample Name</party-name>
+          <!-- PI external-ref -->
+          <ccd:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb>
+            <!-- DvURI -->
+            <data-name>External Reference for Party</data-name>
+            <!-- Use any subtype of ExceptionalValue here when a value is missing-->
+            <valid-time-begin>2006-04-15T04:18:21Z</valid-time-begin>
+            <valid-time-end>1981-12-10T19:35:00Z</valid-time-end>
+            <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
+            <relation>Party Associated with the record</relation>
+          </ccd:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb>
+
+can be converted to::
+
+              },
+          "ccd:el-d4079097-c68b-4c99-9a5e-b85628d55897": {
+            "party-name": "A. Sample Name",
+            "ccd:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb": {
+              "data-name": "External Reference for Party",
+              "valid-time-begin": "2006-04-15T04:18:21Z",
+              "valid-time-end": "1981-12-10T19:35:00Z",
+              "DvURI-dv": "http://www.ccdgen.com",
+              "relation": "Party Associated with the record"
+            },
 
 
+
+
+For deeper details on using MLHIM in various scenarios you should refer to the `GitHub repository <https://github.com/mlhim>`_ specifically `this project <https://github.com/mlhim/MLHIM_semantics_extractor>`_ as well as the `MXIC demo <https://github.com/mlhim/mxic>`_ and the `MAPLE demo <https://github.com/mlhim/MAPLE>`_ These all use oder versions of MLHIM but the concepts are the same for any 2.x version. 
+
+Two projects that may be of particular interest is `adding semantics to FHIR models <>`_ and `adding semantics to HL7v2 messages <https://github.com/mlhim/hl7v2_semantics>`_
 
 
 
