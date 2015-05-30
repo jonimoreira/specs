@@ -26,7 +26,7 @@ Videos
 
 Primary disscussion venue
 -------------------------
-`MLHIM Community <https://plus.google.com/u/0/communities/117032458601124539887`_
+`MLHIM Community <https://plus.google.com/u/0/communities/117032458601124539887>`_
 
 Issues Reporting
 ----------------

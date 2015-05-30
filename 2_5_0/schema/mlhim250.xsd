@@ -136,7 +136,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="DvURI" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvLinkType"/>
+  <xs:element name="DvLink" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvLinkType"/>
 
   <xs:complexType name="DvStringType">
     <xs:annotation>
@@ -1178,7 +1178,7 @@
             identified in workflow-id as a string.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="1" name="data" type="mlhim2:ItemType">
+      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:Item">
         <xs:annotation>
           <xs:documentation>The data structure of the Entry.</xs:documentation>
         </xs:annotation>
@@ -1197,7 +1197,7 @@
             a device or software</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="participations" type="mlhim2:ParticipationType">
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:Participation">
         <xs:annotation>
           <xs:documentation>List of other participations at Entry level.</xs:documentation>
         </xs:annotation>
@@ -1226,7 +1226,7 @@
           <xs:documentation>Attestation recorded.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="links" type="mlhim2:DvLinkType">
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:DvLink">
         <xs:annotation>
           <xs:documentation>Optional link(s) to other locatable structures or external
             entities.</xs:documentation>
@@ -1280,12 +1280,13 @@
       <xs:documentation>This is the root node of a Concept Constraint Definition.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="1" name="definition" type="mlhim2:EntryType">
+      <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:Definition" >
         <xs:annotation>
           <xs:documentation>Structural definition element for this CCD.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
+  <xs:element name="Definition" type="mlhim2:EntryType"/>
   <xs:element name="CCD" type="mlhim2:CCDType"/>
 </xs:schema>

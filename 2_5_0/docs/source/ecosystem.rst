@@ -54,7 +54,7 @@ A Valid CCD Must:
 
 * use the correct substitution group(s) as in the example above
 * define the required namespaces used in the CCD as in Figure 1.
-* define the minimum DCMI6 metadata items as shown in Figure 2.
+* define the minimum `DCMI <http://dublincore.org/>`_ metadata items as shown in Figure 2.
 
 .. image:: ccd_header.png
 
@@ -68,6 +68,100 @@ A Valid CCD Must Not:
 ---------------------
 * Contain any other language processing instructions required for validating instance data. For example; Schematron rules. While Schematron can be very valuable in some processing environments it is considered implementation specific and not part of the MLHIM interoperability framework. 
 * Import or include any XML Schema document other than its parent reference model schema.
+
+
+CCD Functionality
+-----------------
+
+---------
+Structure
+---------
+A CCD is just an XML Schema. It uses the xs:include element to reference the RM schema from the MLHIM website. For performance a local copy should be used via an `XML Catalog <https://www.oasis-open.org/standards#xmlcatalogsv1.1>`_ 
+The design of CCDs allows us to separate the structure from the domain semantics of a complexType. This is key in having a small RM that represents structural components that provide a well defined data query platform which is essential for analytics and decision support. 
+
+Prior to XML Schema 1.1, other languages (such as `Schematron <http://www.schematron.com/>`_ ) were *needed* to provide for complex validation scenarios. The `xs:assert element <http://www.w3.org/TR/xmlschema11-1/#cAssertions>`_ now takes care of those issues. This in addition to gaining additional data model types and the ability to use multiple substitutionGroups is why we specify XML Schema 1.1 as a requirement for CCDs.  
+
+Schematron may still be useful for defining business rules in your implementation. But these definitions are implementation specific and do not apply to the MLHIM semantic interoperability goals. Experience shows that these implementation details *leaked* into the data structure definition creates a barrier to interoperability. 
+
+The use of UUIDs has been controversial and is a perceived barrier by some people. In reality though they are what allows MLHIM to be such a simple, yet powerful solution. This is how we separate the structure and domain semantics. By using UUIDs for the complexType and element names we build a structure that has only *structural semantics*. As an example take a look at `HL7 <http://www.hl7.org/>`_ CDA or FHIR schemas or `NIEM <https://www.niem.gov>`_ schemas. Notice how they mix domain semantics into the names of complexTypes and elements. This creates a nasty chain of optional domain elements because you cannot know a priori what is going to be needed where.  There is an attempt to use attributes to provide some uniqueness to types of entries. But this has grow out of control to a point where those schemas are very complex. NIEM attempted to solve the problem by using a multi-level model approach.  But then *specified* that domain element names **MUST** be terms from the Oxford English Dictionary. So that limits its usefulness to 5.4% of the global population.  To be fair, NIEM is designed and named to be used in the US.  But that is a bit of a short-sighted development approach considering the global world we live in today. 
+
+In designing MLHIM we had the advantage of being able to analyze HL7 v3.x, openEHR, ISO 13606 and other interoperability attempts and use these as lessons learned points. NIEM was started about the same time as MLHIM. 
+
+We realized that this mix of structure and domain semantics was a key problem in the complexity of the models. In openEHR the focus is specifically about EHR systems but it introduced multi-level modeling as a constraint based approach. MLHIM takes the constraint based, multi-level  approach along with the data package view. We say data package because you may view a data instance as a message or as a document *or* as a component of a message or a document. A *MLHIM data instance* is just that. They can be very small or very large and they can be combined into documents or messages or standalone; depending upon the implementation needs. This is part of the *multi-level paradigm*. 
+
+The need for multiple substitutionGroups arises because, one PcT may be reused in multiple places in a CCD. For example a DvLinkType based PcT may be reused as a link in an EntryType as well as used in a ClusterType based PcT.  In this case the since *element* of type *complexType* must be defined as substituting for the RM elements *DvLink* and *DvAdapter-value* elements from the RM.  Example::
+
+      <xs:element name='el-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680' substitutionGroup="mlhim2:DvLink mlhim2:DvAdapter-value" type='mlhim2:ct-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680'/>
+
+
+
+---------
+Semantics
+---------
+With the reusability and structural simplicity out of the way we can now discuss the issue of **what does the data mean?**
+
+If you are not familiar with RDF you may want to read more at `LinkedDataTools <http://www.linkeddatatools.com/>`_ or directly from the `W3C Specifications <http://www.w3.org/TR/rdf11-primer/>`_. 
+
+The world of data exchange is composed of two primary players; *data providers* and *data consumers*. Whether those two parties are people or software applications they require this knowledge to turn *data* into useful *information*. We discussed efforts underway on transferring this information in the Semantic Models vs. Semantic Markup section of *Modeling Concepts*. 
+
+Adding the semantics to the model allows all of the meaning of the data to be in one known location. Each data instance has a pointer to its parent CCD. Example::
+
+    xsi:schemaLocation='http://www.mlhim.org/xmlns/mlhim2 http://www.ccdgen.com/ccdlib/ccd-00605c3e-cd14-492e-9891-6ad3ad26230e.xsd'>    
+
+this example from a data instance says that the schema in the namespace *http://www.mlhim.org/xmlns/mlhim2* is located on the CCD-Gen and is named *ccd-00605c3e-cd14-492e-9891-6ad3ad26230e.xsd*. Typically CCDs are located locally and an XML Catalog is used to resolve these locations. 
+
+The first part of the semantics describes the model itself. This is accomplished using the DCMI metadata elements. See the example above in Figure 2. 
+
+Taking a *simplistic* example CCD (the sequence of appearance of the complexTypes is not important) we can see a PcT with an EntryType restriction. In this case an AdminEntryType::
+
+    <xs:complexType name='ct-56c1df15-a4cc-44a6-84ec-45c310a05071'> <!-- Test AdminEntry -->
+    <xs:annotation>
+    <xs:documentation>
+      Testing Admin Entry. This is a minimal Entry and CCD.
+    </xs:documentation>
+    <xs:appinfo>
+    <rdf:Description rdf:about='mlhim2:ct-56c1df15-a4cc-44a6-84ec-45c310a05071'>
+      <rdfs:subClassOf rdf:resource='mlhim2:AdminEntryType'/>
+      <rdfs:isDefinedBy rdf:resource='http://www.mlhim.org/generic_pcts'/>
+    </rdf:Description>
+    </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base='mlhim2:AdminEntryType'>
+        <xs:sequence>
+        ...
+    </xs:complexType>
+
+Notice that inside the xs:annotation there are two child elements; xs:documentation and xs:appinfo.  The xs:documentation element has a free text, human readable description of the purpose of the PcT. The xs:annotation element has a child element rdf:Description this element has an rdf:about attribute with a value of the namespace and the complexType name. This forms the *Subject* component of the RDF statements to follow. 
+
+The first child of rdf:Description is a rdfs:subClassOf element. This element name is the *Predicate* component of the first RDF statement. This element has an attribute of rdf:resource and a URI of mlhim2:AdminEntryType which forms the *Object* component of this RDF statement. 
+
+The second child of rdf:Description is a rdfs:isDefinedBy element. This element name is the *Predicate* component of the second RDF statement about the PcT. The rdf:resource attribute 
+points to a resource on the MLHIM website. `Give it a try <http://www.mlhim.org/generic_pcts>`_. It is just a simple plain text document used as a resource for these examples. Note that it is not a requirement that all URI resources be resolvable URLs. But we think it is a good idea that they are. 
+
+
+
+
+
+
+
+
+------------------
+MLHIM in Operation
+------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .. rubric:: Footnotes
