@@ -102,7 +102,7 @@ With the reusability and structural simplicity out of the way we can now discuss
 
 If you are not familiar with RDF you may want to read more at `LinkedDataTools <http://www.linkeddatatools.com/>`_ or directly from the `W3C Specifications <http://www.w3.org/TR/rdf11-primer/>`_. 
 
-The world of data exchange is composed of two primary players; *data providers* and *data consumers*. Whether those two parties are people or software applications they require this knowledge to turn *data* into useful *information*. We discussed efforts underway on transferring this information in the Semantic Models vs. Semantic Markup section of *Modeling Concepts*. 
+The world of data exchange is composed of two primary players; *data providers* and *data consumers*. Whether those two parties are people or software applications they require this knowledge to turn *data* into useful *information*. We discussed approaches to transferring this information in the **Semantic Models vs. Semantic Markup** section of *Modeling Concepts*. 
 
 Adding the semantics to the model allows all of the meaning of the data to be in one known location. Each data instance has a pointer to its parent CCD. Example::
 
@@ -112,32 +112,37 @@ this example from a data instance says that the schema in the namespace *http://
 
 The first part of the semantics describes the model itself. This is accomplished using the DCMI metadata elements. See the example above in Figure 2. 
 
-Taking a *simplistic* example CCD (the sequence of appearance of the complexTypes is not important) we can see a PcT with an EntryType restriction. In this case an AdminEntryType::
+Taking a *simplistic* example CCD (the sequence of appearance of the complexTypes is not important) we can see a PcT with a DvLinkType restriction::
 
-    <xs:complexType name='ct-56c1df15-a4cc-44a6-84ec-45c310a05071'> <!-- Test AdminEntry -->
+    <xs:complexType name='ct-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680' xml:lang='en-US'> 
     <xs:annotation>
-    <xs:documentation>
-      Testing Admin Entry. This is a minimal Entry and CCD.
-    </xs:documentation>
-    <xs:appinfo>
-    <rdf:Description rdf:about='mlhim2:ct-56c1df15-a4cc-44a6-84ec-45c310a05071'>
-      <rdfs:subClassOf rdf:resource='mlhim2:AdminEntryType'/>
-      <rdfs:isDefinedBy rdf:resource='http://www.mlhim.org/generic_pcts'/>
-    </rdf:Description>
-    </xs:appinfo>
+      <xs:documentation>
+        This is a test DvLink used for an example.
+      </xs:documentation>
+      <xs:appinfo>
+        <rdf:Description rdf:about='mlhim2:ct-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680'>
+          <rdfs:subClassOf rdf:resource='mlhim2:DvLinkType'/>
+          <rdfs:label>Test DvLink</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource='http://www.mlhim.org/generic_pcts'/>
+        </rdf:Description>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:restriction base='mlhim2:AdminEntryType'>
+      <xs:restriction base='mlhim2:DvLinkType'>
         <xs:sequence>
+          <xs:element maxOccurs='1' minOccurs='1' name='data-name' type='xs:string' fixed="Test DvLink"/>
+
         ...
     </xs:complexType>
 
 Notice that inside the xs:annotation there are two child elements; xs:documentation and xs:appinfo.  The xs:documentation element has a free text, human readable description of the purpose of the PcT. The xs:annotation element has a child element rdf:Description this element has an rdf:about attribute with a value of the namespace and the complexType name. This forms the *Subject* component of the RDF statements to follow. 
 
-The first child of rdf:Description is a rdfs:subClassOf element. This element name is the *Predicate* component of the first RDF statement. This element has an attribute of rdf:resource and a URI of mlhim2:AdminEntryType which forms the *Object* component of this RDF statement. 
+The first child of rdf:Description is a rdfs:subClassOf element. This element name is the *Predicate* component of the first RDF statement. This element has an attribute of rdf:resource and a URI of mlhim2:DvLinkType which forms the *Object* component of this RDF statement. 
 
 The second child of rdf:Description is a rdfs:isDefinedBy element. This element name is the *Predicate* component of the second RDF statement about the PcT. The rdf:resource attribute 
-points to a resource on the MLHIM website. `Give it a try <http://www.mlhim.org/generic_pcts>`_. It is just a simple plain text document used as a resource for these examples. Note that it is not a requirement that all URI resources be resolvable URLs. But we think it is a good idea that they are. 
+points to a resource on the MLHIM website. `Give it a try <http://www.mlhim.org/generic_pcts>`_. It is just a simple plain text document used as a resource for these examples. Note that it is not a requirement that all URI resources be resolvable URLs. But we think it is a good idea that they are whenever possible. 
+
+
 
 
 
