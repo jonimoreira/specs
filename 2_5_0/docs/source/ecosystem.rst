@@ -142,18 +142,18 @@ The first child of rdf:Description is a rdfs:subClassOf element. This element na
 The second child of rdf:Description is a rdfs:isDefinedBy element. This element name is the *Predicate* component of the second RDF statement about the PcT. The rdf:resource attribute 
 points to a resource on the MLHIM website. `Give it a try <http://www.mlhim.org/generic_pcts>`_. It is just a simple plain text document used as a resource for these examples. Note that it is not a requirement that all URI resources be resolvable URLs. But we think it is a good idea that they are whenever possible. 
 
+So now we have two statements about the unique subject called *mlhim2:ct-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680*. We know it is a subtype of the MLHIM DvLinkType that is defined in the MLHIM Reference Model schema that is included (via xs:include) in this CCD. We can also find a definition of this PcT in the resource at http://www.mlhim.org/generic_pcts. 
 
+So now we have some machine processable semantics as well as some documentation. All available from the model. Also note that there is the *data-name* element. When a modeler defines a PcT they give it a fixed name as a human readable string. This is included in the data instance and even though the XML element is a UUID, this readable text is immediately below it and describes what the modeler defined for the name.
 
-
-
-
-
-
-
+The next section describes how all of this can be used in an operational setting.
 
 ------------------
 MLHIM in Operation
 ------------------
+
+We have a Reference Model, a Concept Constraint Definition and some data instances. How does all of that fit together? 
+
 
 
 
