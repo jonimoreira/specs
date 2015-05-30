@@ -197,6 +197,8 @@ can be converted to::
               "relation": "Party Associated with the record"
             },
 
+and back again. All depending upon the needs of your information flow.
+
 
 Two of the MLHIM projects on GitHub demonstrate combining the model semantics with the data instances to create a Graph and storing it in a Triple Store. The connections can then be visualized using oepn source tools and / or queried using SPARQL. 
 
