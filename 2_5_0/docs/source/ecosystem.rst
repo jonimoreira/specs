@@ -170,11 +170,11 @@ Because MLHIM XML data has a *very specific structure* it is quite easy to perfo
 
 So (a snippet) like this::
 
-            <ccd:el-d4079097-c68b-4c99-9a5e-b85628d55897>
+            <mlhim2:el-d4079097-c68b-4c99-9a5e-b85628d55897>
           <!-- Party -->
           <party-name>A. Sample Name</party-name>
           <!-- PI external-ref -->
-          <ccd:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb>
+          <mlhim2:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb>
             <!-- DvURI -->
             <data-name>External Reference for Party</data-name>
             <!-- Use any subtype of ExceptionalValue here when a value is missing-->
@@ -182,14 +182,14 @@ So (a snippet) like this::
             <valid-time-end>1981-12-10T19:35:00Z</valid-time-end>
             <DvURI-dv>http://www.ccdgen.com</DvURI-dv>
             <relation>Party Associated with the record</relation>
-          </ccd:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb>
+          </mlhim2:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb>
 
 can be converted to::
 
               },
-          "ccd:el-d4079097-c68b-4c99-9a5e-b85628d55897": {
+          "mlhim2:el-d4079097-c68b-4c99-9a5e-b85628d55897": {
             "party-name": "A. Sample Name",
-            "ccd:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb": {
+            "mlhim2:el-ab51a8c0-ba5c-4053-8201-ae29c1a534bb": {
               "data-name": "External Reference for Party",
               "valid-time-begin": "2006-04-15T04:18:21Z",
               "valid-time-end": "1981-12-10T19:35:00Z",
