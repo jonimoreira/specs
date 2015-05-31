@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mlhim2:ccd-246bf9e8-fda3-4508-8423-4e5387a5e377 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+ xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2"
+ xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.mlhim.org/xmlns/mlhim2 file:/home/tim/MLHIM/git/specs/2_5_0/examples/ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd">
+  <mlhim2:el-56c1df15-a4cc-44a6-84ec-45c310a05071>
+    <language>en-US</language>
+    <encoding>utf-8</encoding>
+    <current-state></current-state>
+    <mlhim2:el-c3a88f56-3abc-416d-9d49-3e9f06bf74a5>
+      <subject>Test AdminEntry entry-data</subject>
+      <mlhim2:el-62e20405-7908-4116-8662-2dd3bb0e6ea4>
+        <subject>Test Sub-Cluster</subject>
+        <mlhim2:el-8aff6c15-f828-4948-9222-195c1b2f0954>
+          <mlhim2:el-c8b3b872-dcb4-4a44-a386-5c626e116549>
+            <data-name>Bladder - Testing</data-name>
+          </mlhim2:el-c8b3b872-dcb4-4a44-a386-5c626e116549>
+          <mlhim2:el-c8b3b872-dcb4-4a44-a386-5c626e116549>
+            <data-name>Bladder - Testing</data-name>
+          </mlhim2:el-c8b3b872-dcb4-4a44-a386-5c626e116549>
+        </mlhim2:el-8aff6c15-f828-4948-9222-195c1b2f0954>
+        <mlhim2:el-697e8df2-7890-4f44-8442-e7f2beab4425>
+          <mlhim2:el-831a09c9-ceaf-46e0-a4e1-afcd064880bd>
+            <data-name>Fever duration: 3 weeks or less - Testing</data-name>
+          </mlhim2:el-831a09c9-ceaf-46e0-a4e1-afcd064880bd>
+          <mlhim2:el-831a09c9-ceaf-46e0-a4e1-afcd064880bd>
+            <data-name>Fever duration: 3 weeks or less - Testing</data-name>
+          </mlhim2:el-831a09c9-ceaf-46e0-a4e1-afcd064880bd>
+        </mlhim2:el-697e8df2-7890-4f44-8442-e7f2beab4425>
+        <mlhim2:el-d4fd6e5a-875e-4512-8bdd-492498237341>
+          <mlhim2:el-a926d847-3a3e-45c5-af3f-3c55a35aca34>
+            <data-name>Heart Rate for Testing</data-name>
+            <error>0</error>
+            <accuracy>0</accuracy>
+            <dvcount-value>0</dvcount-value>
+            <dvcount-units>
+              <data-name>beats per minute</data-name>
+              <dvstring-value>bpm</dvstring-value>
+            </dvcount-units>
+          </mlhim2:el-a926d847-3a3e-45c5-af3f-3c55a35aca34>
+          <mlhim2:el-a926d847-3a3e-45c5-af3f-3c55a35aca34>
+            <data-name>Heart Rate for Testing</data-name>
+            <error>0</error>
+            <accuracy>0</accuracy>
+            <dvcount-value>0</dvcount-value>
+            <dvcount-units>
+              <data-name>beats per minute</data-name>
+              <dvstring-value>bpm</dvstring-value>
+            </dvcount-units>
+          </mlhim2:el-a926d847-3a3e-45c5-af3f-3c55a35aca34>
+        </mlhim2:el-d4fd6e5a-875e-4512-8bdd-492498237341>
+      </mlhim2:el-62e20405-7908-4116-8662-2dd3bb0e6ea4>
+      <mlhim2:el-3a3396c5-a27f-4440-89f3-5ffd326dde57>
+        <mlhim2:el-7441c558-0087-4f77-bc5f-af4c82e26167>
+          <data-name>Connected To</data-name>
+          <mlhim2:ASKU>
+            <ev-name>Asked but Unknown</ev-name>
+          </mlhim2:ASKU>
+          <vtb>2006-05-04T18:13:51.0</vtb>
+          <vte>2006-05-04T18:13:51.0</vte>
+          <link>http://www.oxygenxml.com/</link>
+          <relation>connected to</relation>
+        </mlhim2:el-7441c558-0087-4f77-bc5f-af4c82e26167>
+        <mlhim2:el-7441c558-0087-4f77-bc5f-af4c82e26167>
+          <data-name>Connected To</data-name>
+          <mlhim2:ASKU>
+            <ev-name>Asked but Unknown</ev-name>
+          </mlhim2:ASKU>
+          <vtb>2006-05-04T18:13:51.0</vtb>
+          <vte>2006-05-04T18:13:51.0</vte>
+          <link>http://www.oxygenxml.com/</link>
+          <relation>connected to</relation>
+        </mlhim2:el-7441c558-0087-4f77-bc5f-af4c82e26167>
+      </mlhim2:el-3a3396c5-a27f-4440-89f3-5ffd326dde57>
+      <mlhim2:el-e9cbb207-9e89-416c-8b71-7cdb859b3097>
+        <mlhim2:el-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da>
+          <data-name>Blood Pressure Device (Testing)</data-name>
+          <mlhim2:NINF>
+            <ev-name>Negative Infinity</ev-name>
+          </mlhim2:NINF>
+          <vtb>2006-05-04T18:13:51.0</vtb>
+          <vte>2006-05-04T18:13:51.0</vte>
+          <dvstring-value>Mercury sphygmomanometer</dvstring-value>
+          <language>en-US</language>
+        </mlhim2:el-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da>
+        <mlhim2:el-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da>
+          <data-name>Blood Pressure Device (Testing)</data-name>
+          <mlhim2:MSK>
+            <ev-name>Masked</ev-name>
+          </mlhim2:MSK>
+          <vtb>2006-05-04T18:13:51.0</vtb>
+          <vte>2006-05-04T18:13:51.0</vte>
+          <dvstring-value>Mercury sphygmomanometer</dvstring-value>
+          <language>en-US</language>
+        </mlhim2:el-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da>
+      </mlhim2:el-e9cbb207-9e89-416c-8b71-7cdb859b3097>
+    </mlhim2:el-c3a88f56-3abc-416d-9d49-3e9f06bf74a5>
+    <subject>
+      <party-name>party-name0</party-name>
+      <party-ref>
+        <data-name>External Reference for Party</data-name>
+        <mlhim2:NASK>
+          <ev-name>Not Asked</ev-name>
+        </mlhim2:NASK>
+        <vtb>2006-05-04T18:13:51.0</vtb>
+        <vte>2006-05-04T18:13:51.0</vte>
+        <link>http://www.oxygenxml.com/</link>
+        <relation>Party Associated with the record</relation>
+      </party-ref>
+      <party-details>
+        <subject>Address Details (US)</subject>
+        <mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+          <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+            <data-name>Additional Address Line(s) (US)</data-name>
+            <dvstring-value>dvstring-value4</dvstring-value>
+          </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+          <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+            <data-name>Additional Address Line(s) (US)</data-name>
+            <dvstring-value>dvstring-value5</dvstring-value>
+          </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+        </mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+        <mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+          <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+            <data-name>City Name (US)</data-name>
+            <dvstring-value>dvstring-value6</dvstring-value>
+          </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+          <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+            <data-name>City Name (US)</data-name>
+            <dvstring-value>dvstring-value7</dvstring-value>
+          </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+        </mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+        <mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+          <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+            <data-name>Common Name / Nickname</data-name>
+            <dvstring-value>dvstring-value8</dvstring-value>
+          </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+          <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+            <data-name>Common Name / Nickname</data-name>
+            <dvstring-value>dvstring-value9</dvstring-value>
+          </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+        </mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+        <mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+          <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+            <data-name>State Abbreviation (USPS)</data-name>
+            <dvstring-value>AL</dvstring-value>
+          </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+          <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+            <data-name>State Abbreviation (USPS)</data-name>
+            <dvstring-value>AL</dvstring-value>
+          </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+        </mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+        <mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+          <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+            <data-name>Street Number and Name (US)</data-name>
+            <dvstring-value>dvstring-value12</dvstring-value>
+          </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+          <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+            <data-name>Street Number and Name (US)</data-name>
+            <dvstring-value>dvstring-value13</dvstring-value>
+          </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+        </mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+        <mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+          <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+            <data-name>Telephone Number (US)</data-name>
+            <dvstring-value>111-111-1111</dvstring-value>
+          </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+          <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+            <data-name>Telephone Number (US)</data-name>
+            <dvstring-value>111-111-1111</dvstring-value>
+          </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+        </mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+        <mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+          <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+            <data-name>Zip Code (US)</data-name>
+            <dvstring-value>33333</dvstring-value>
+          </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+          <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+            <data-name>Zip Code (US)</data-name>
+            <dvstring-value>44444</dvstring-value>
+          </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+        </mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+      </party-details>
+    </subject>
+    <provider>
+      <party-name>party-name1</party-name>
+      <party-ref>
+        <data-name>External Reference for Party</data-name>
+        <mlhim2:DER>
+          <ev-name>Derived</ev-name>
+        </mlhim2:DER>
+        <vtb>2006-05-04T18:13:51.0</vtb>
+        <vte>2006-05-04T18:13:51.0</vte>
+        <link>http://www.oxygenxml.com/</link>
+        <relation>Party Associated with the record</relation>
+      </party-ref>
+      <party-details>
+        <subject>Address Details (US)</subject>
+        <mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+          <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+            <data-name>Additional Address Line(s) (US)</data-name>
+            <dvstring-value>dvstring-value16</dvstring-value>
+          </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+          <mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+            <data-name>Additional Address Line(s) (US)</data-name>
+            <dvstring-value>dvstring-value17</dvstring-value>
+          </mlhim2:el-5677e6da-33df-44d3-809b-853aba4373ea>
+        </mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e>
+        <mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+          <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+            <data-name>City Name (US)</data-name>
+            <dvstring-value>dvstring-value18</dvstring-value>
+          </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+          <mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+            <data-name>City Name (US)</data-name>
+            <dvstring-value>dvstring-value19</dvstring-value>
+          </mlhim2:el-73035503-2b72-4c80-9abc-bdc967198d63>
+        </mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89>
+        <mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+          <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+            <data-name>Common Name / Nickname</data-name>
+            <dvstring-value>dvstring-value20</dvstring-value>
+          </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+          <mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+            <data-name>Common Name / Nickname</data-name>
+            <dvstring-value>dvstring-value21</dvstring-value>
+          </mlhim2:el-7f9b5fb6-8cd7-4d09-805d-13c645db49c2>
+        </mlhim2:el-77848a52-5adb-41b2-89d6-f8fec018c05a>
+        <mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+          <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+            <data-name>State Abbreviation (USPS)</data-name>
+            <dvstring-value>AL</dvstring-value>
+          </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+          <mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+            <data-name>State Abbreviation (USPS)</data-name>
+            <dvstring-value>AL</dvstring-value>
+          </mlhim2:el-f80bf2ce-f3c2-4bb9-a539-1971474f7626>
+        </mlhim2:el-2bb59f5a-223e-4b8e-b63f-ed8beb62849e>
+        <mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+          <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+            <data-name>Street Number and Name (US)</data-name>
+            <dvstring-value>dvstring-value24</dvstring-value>
+          </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+          <mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+            <data-name>Street Number and Name (US)</data-name>
+            <dvstring-value>dvstring-value25</dvstring-value>
+          </mlhim2:el-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5>
+        </mlhim2:el-caa2be1d-3e6c-4cea-b44c-9829d7b23b3f>
+        <mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+          <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+            <data-name>Telephone Number (US)</data-name>
+            <dvstring-value>111-111-1111</dvstring-value>
+          </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+          <mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+            <data-name>Telephone Number (US)</data-name>
+            <dvstring-value>111-111-1111</dvstring-value>
+          </mlhim2:el-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a>
+        </mlhim2:el-13354334-0250-4041-8b6c-ac7eefa93c88>
+        <mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+          <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+            <data-name>Zip Code (US)</data-name>
+            <dvstring-value>87876</dvstring-value>
+          </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+          <mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+            <data-name>Zip Code (US)</data-name>
+            <dvstring-value>35468</dvstring-value>
+          </mlhim2:el-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4>
+        </mlhim2:el-c64b7604-6189-412d-bb70-48baba85f366>
+      </party-details>
+    </provider>
+    <mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680>
+      <data-name>Test DvLink</data-name>
+      <mlhim2:DER>
+        <ev-name>Derived</ev-name>
+      </mlhim2:DER>
+      <vtb>2006-05-04T18:13:51.0</vtb>
+      <vte>2006-05-04T18:13:51.0</vte>
+      <link>http://www.oxygenxml.com/</link>
+      <relation>Test DvLink</relation>
+    </mlhim2:el-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680>
+    <mlhim2:el-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680>
+      <data-name>Test DvLink</data-name>
+      <mlhim2:QS>
+        <ev-name>Sufficient Quantity</ev-name>
+      </mlhim2:QS>
+      <vtb>2006-05-04T18:13:51.0</vtb>
+      <vte>2006-05-04T18:13:51.0</vte>
+      <link>http://www.oxygenxml.com/</link>
+      <relation>Test DvLink</relation>
+    </mlhim2:el-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680>
+  </mlhim2:el-56c1df15-a4cc-44a6-84ec-45c310a05071>
+</mlhim2:ccd-246bf9e8-fda3-4508-8423-4e5387a5e377>
