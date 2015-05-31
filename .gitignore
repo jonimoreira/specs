@@ -37,6 +37,10 @@ nosetests.xml
 #backup files
 *~
 
+# Protege catalog
+*/ontology/catalog-v001.xml
+
+
 #lock files
 *.lck
 .~lock*
