@@ -371,14 +371,6 @@
                 value of 0 means that the accuracy is unknown.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name='units' type="mlhim2:DvStringType">
-            <xs:annotation>
-              <xs:documentation>The name or type of the quantity. For DvCount examples are cigarettes,
-                drinks, pregnancies, episodes, etc. For DvQuantity examples are "kg/m2", “mm[Hg]",
-                "ms-1", "km/h". For DvRatio this is used to convey the meaning of the dvratio-value. May or
-                may not come from a standard terminology.</xs:documentation>
-            </xs:annotation>
-          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -429,6 +421,12 @@
               <xs:documentation>Numeric value of the counted items.</xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name='dvcount-units' type="mlhim2:DvStringType">
+            <xs:annotation>
+              <xs:documentation>The name or type of the quantity. Examples are cigarettes, drinks, pregnancies, episodes, etc. 
+                May or may not come from a standard terminology.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -451,6 +449,11 @@
               <xs:documentation>Numeric value of the quantity.</xs:documentation>
             </xs:annotation>
           </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name='dvquantity-units' type="mlhim2:DvStringType">
+            <xs:annotation>
+              <xs:documentation>The name or type of the quantity. Examples are "kg/m2", “mm[Hg]", "ms-1", "km/h". May or may not come from a standard terminology.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -469,6 +472,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
+
           <xs:element maxOccurs="1" minOccurs="1" name="ratio-type" type="mlhim2:TypeOfRatio">
             <xs:annotation>
               <xs:documentation>
@@ -503,6 +507,11 @@
               <xs:documentation>Used to convey the meaning of the denominator. Typically units such
                 as; days, years, months, etc. May or may not come from a standard terminology.
               </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name='dvratio-units' type="mlhim2:DvStringType">
+            <xs:annotation>
+              <xs:documentation>Used to convey the meaning of the dvratio-value. May or may not come from a standard terminology.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -700,9 +709,9 @@
           <xs:documentation>User(s) who created, committed, forwarded or otherwise handled the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name="location" type="mlhim2:ItemType">
+      <xs:element maxOccurs="1" minOccurs="0" name="location" type="mlhim2:ClusterType">
         <xs:annotation>
-          <xs:documentation>Location indoformation of the particular site/facility within an organisation which handled the item. </xs:documentation>
+          <xs:documentation>Location information of the particular site/facility within an organisation which handled the item. </xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="timestamp" type="xs:dateTime">

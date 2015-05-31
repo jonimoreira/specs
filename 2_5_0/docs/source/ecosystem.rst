@@ -47,10 +47,10 @@ A Valid CCD Must:
  
     <xs:complexType name='ct-8c177dbd-c25e-4908-bffa-cdcb5c0e38e6' xml:lang='en-US'>
 
-* publish a global element for each complexType with the name defined using the same UUID as the complexType with the 'ct-' prefix replaced with 'el-'.
+* publish a global element for each complexType where a substitutionGroup is required. The element **MUST** be defined using the same UUID as the complexType with the 'ct-' prefix replaced with 'el-'.
 * Include the reference model schema from www.mlhim.org using the appropriately defined namespace. Example for release 2.4.7 and later releases, MLHIM uses the namespace http://www.mlhim.org/xmlns/mlhim2 with the standard prefix of mlhim2 [#f3]_ ::
 
-  <xs:element name='el-8c177dbd-c25e-4908-bffa-cdcb5c0e3888' substitutionGroup='mlhim2:DvString' type='mlhim2:ct-8c177dbd-c25e-4908-bffa-cdcb5c0e3888'/>
+  <xs:element name='el-8c177dbd-c25e-4908-bffa-cdcb5c0e3888' substitutionGroup='mlhim2:DvAdapter-value' type='mlhim2:ct-8c177dbd-c25e-4908-bffa-cdcb5c0e3888'/>
 
 * use the correct substitution group(s) as in the example above
 * define the required namespaces used in the CCD as in Figure 1.
@@ -200,7 +200,7 @@ can be converted to::
 and back again. All depending upon the needs of your information flow.
 
 
-Two of the MLHIM projects on GitHub demonstrate combining the model semantics with the data instances to create a Graph and storing it in a Triple Store. The connections can then be visualized using oepn source tools and / or queried using SPARQL. 
+Two of the MLHIM projects on GitHub demonstrate combining the model semantics with the data instances to create a Graph and storing it in a Triple Store. The connections can then be visualized using open source tools and / or queried using SPARQL. 
 
 For deeper details on using MLHIM in various scenarios you should refer to the `GitHub repository <https://github.com/mlhim>`_ specifically `this project <https://github.com/mlhim/MLHIM_semantics_extractor>`_ as well as the `MXIC demo <https://github.com/mlhim/mxic>`_ and the `MAPLE demo <https://github.com/mlhim/MAPLE>`_ These all use older versions of MLHIM but the concepts are the same for any 2.x version. 
 
