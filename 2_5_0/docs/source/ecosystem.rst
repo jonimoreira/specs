@@ -47,8 +47,8 @@ A Valid CCD Must:
  
     <xs:complexType name='ct-8c177dbd-c25e-4908-bffa-cdcb5c0e38e6' xml:lang='en-US'>
 
-* publish a global element for each complexType where a substitutionGroup is required. The element **MUST** be defined using the same UUID as the complexType with the 'ct-' prefix replaced with 'el-'.
-* Include the reference model schema from www.mlhim.org using the appropriately defined namespace. Example for release 2.4.7 and later releases, MLHIM uses the namespace http://www.mlhim.org/xmlns/mlhim2 with the standard prefix of mlhim2 [#f3]_ ::
+* publish a global element for each complexType where a substitutionGroup is required [#f3]_. The element **MUST** be defined using the same UUID as the complexType with the 'ct-' prefix replaced with 'el-'.
+* Include the reference model schema from www.mlhim.org using the appropriately defined namespace. Example for release 2.4.7 and later releases, MLHIM uses the namespace http://www.mlhim.org/xmlns/mlhim2 with the standard prefix of mlhim2 [#f4]_ ::
 
   <xs:element name='el-8c177dbd-c25e-4908-bffa-cdcb5c0e3888' substitutionGroup='mlhim2:DvAdapter-value' type='mlhim2:ct-8c177dbd-c25e-4908-bffa-cdcb5c0e3888'/>
 
@@ -212,4 +212,5 @@ Two projects that may be of particular interest is `adding semantics to FHIR mod
 
 .. [#f1] Used here to mean; trees, lists, tables, etc.
 .. [#f2] The language attribute is optional. 
-.. [#f3] Some previous releases had a specific namespace for the RM and each CCD. This was changed to a single namespace for all of MLHIM 2.x versions to improve query and processing interoperability. 
+.. [#f3] Substitution groups are required where the base type allows multiple elements and where the base type allows an abstract element. 
+.. [#f4] Some previous releases had a specific namespace for the RM and each CCD. This was changed to a single namespace for all of MLHIM 2.x versions to improve query and processing interoperability. 
