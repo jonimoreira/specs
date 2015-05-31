@@ -32,3 +32,6 @@ Issues Reporting
 ----------------
 Please report all issues `here <https://github.com/mlhim/specs/issues>`_.
 
+FaceBook
+--------
+Just announcements and a few questions answered on our `FB page <https://www.facebook.com/mlhim2>`_. 

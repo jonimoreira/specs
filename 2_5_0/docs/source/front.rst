@@ -37,7 +37,7 @@ This work has received financial and in-kind support from the following persons 
 * National Institute of Science and Technology on Medicine Assisted by Scientific Computing (INCT-MACC), coordinated by the National Laboratory of Scientific Computing (macc.lncc.br)
 * Multilevel Healthcare Information Modeling Technological Development Unit, Member of the Emergent Group for Research and Innovation in Healthcare Information Technology, coordinated by Prof. Luciana Tricai Cavalini, MD, PhD (lutricav@mlhim.org) 
 * Timothy W. Cook, Independent Consultant 
-* Roger Erens, Independent Consultant
+* Roger Erens, Independent Consultant (1.0.x version)
 
 Error Reporting
 ---------------
