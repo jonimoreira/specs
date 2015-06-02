@@ -4,7 +4,8 @@
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
   xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
   xmlns:mlhim2='http://www.mlhim.org/xmlns/mlhim2'
-  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   targetNamespace='http://www.mlhim.org/xmlns/mlhim2' 
   vc:minVersion="1.1">
   <xs:annotation>
@@ -30,9 +31,17 @@
       limitations under the License.
     </xs:documentation>
     <xs:appinfo>
-      <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd">
-        <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org"/>
-      </rdf:Description>
+      <owl:Ontology rdf:about="http://www.mlhim.org/xmlns/mlhim2/mlhim250.owl">
+        <owl:imports rdf:resource="http://www.mlhim.org/mlhim2.owl"/>
+        <rdfs:label>MLHIM Release 2.5.0 Reference Model Ontology</rdfs:label>
+      </owl:Ontology>
+      
+      <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd">
+        <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/"/>
+        <rdfs:subClassOf rdf:resource="http://www.mlhim.org/mlhim2#MLHIM"/>
+        <rdfs:label>MLHIM Release 2.5.0 Reference Model Schema</rdfs:label>
+      </owl:Class>
+      
     </xs:appinfo>
   </xs:annotation>
 
@@ -40,8 +49,14 @@
 
   <xs:complexType abstract="true" name="DvAnyType">
     <xs:annotation>
-      <xs:documentation>Serves as a common ancestor of all data-types in MLHIM models.
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAnyType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>DvAnyType</rdfs:label>
+          <skos:definition xml:lang="en-us">Serves as a common ancestor of all data-types in MLHIM models.</skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string">
@@ -70,17 +85,25 @@
 
   <xs:complexType name="DvBooleanType">
     <xs:annotation>
-      <xs:documentation>Items which represent boolean decisions, such as true/false or yes/no answers. 
-        Use for such data, it is important to devise the meanings (usually questions in subjective data) carefully, 
-        so that the only allowed results are in fact true or false.  The possible choices for True or False are 
-        enumerations in the CCD. The reference model defines 'true' and 'false' in a choice so only one or the other 
-        may be present in the instance data.
-        Potential Misuse: The DvBooleanType should not be used as a replacement for enumerated types such as 
-        male/female, etc. Such values should be modeled as DvStrings with enumerations and may reference a 
-        controlled vocabulary. In any case the enumeration often has more than two values. 
-        The elements, 'true' and 'false' are contained in an xs:choice and only one or the other is instantiated 
-        in the instance data with its value coming from the enumerations defined in a CCD. 
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvBooleanType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvBooleanType.html#DvBooleanType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+          <rdfs:label>DvBooleanType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Items which represent boolean decisions, such as true/false or yes/no answers. 
+            Use for such data, it is important to devise the meanings (usually questions in subjective data) carefully, 
+            so that the only allowed results are in fact true or false.  The possible choices for True or False are 
+            enumerations in the CCD. The reference model defines 'true' and 'false' in a choice so only one or the other 
+            may be present in the instance data.
+            Potential Misuse: The DvBooleanType should not be used as a replacement for enumerated types such as 
+            male/female, etc. Such values should be modeled as DvStrings with enumerations and may reference a 
+            controlled vocabulary. In any case the enumeration often has more than two values. 
+            The elements, 'true' and 'false' are contained in an xs:choice and only one or the other is instantiated 
+            in the instance data with its value coming from the enumerations defined in a CCD.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -105,13 +128,22 @@
 
   <xs:complexType name="DvLinkType">
     <xs:annotation>
-      <xs:documentation>Used to specify a Universal Resource Identifier. 
-        Set the pattern facet to accommodate your needs in the PcT.
-        Intended use is to provide a mechanism that can be used to link together Concept Models. 
-        The relation element allows for the use of a descriptive term for the link with an optional URI pointing to the 
-        source vocabulary. In most usecases the modeler will define all three of these using the 'fixed' attribute. 
-        Other usecases will have the 'relation' and 'relation-uri' elements fixed and the application will provide 
-        the 'link-value'.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvLinkType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvLinkType.html#DvLinkType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+          <rdfs:label>DvLinkType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Used to specify a Universal Resource Identifier. 
+            Set the pattern facet to accommodate your needs in the PcT.
+            Intended use is to provide a mechanism that can be used to link together Concept Models. 
+            The relation element allows for the use of a descriptive term for the link with an optional URI pointing to the 
+            source vocabulary. In most usecases the modeler will define all three of these using the 'fixed' attribute. 
+            Other usecases will have the 'relation' and 'relation-uri' elements fixed and the application will provide 
+            the 'link-value'.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -140,9 +172,18 @@
 
   <xs:complexType name="DvStringType">
     <xs:annotation>
-      <xs:documentation>The string data type can contain characters, line feeds, carriage returns,
-        and tab characters. The use cases are for any free form text entry or for any enumerated lists.
-        Additionally the minimum and maximum lengths may be set and regular expression patterns may be specified.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvStringType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvStringType.html#DvStringType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+          <rdfs:label>DvStringType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            The string data type can contain characters, line feeds, carriage returns,
+            and tab characters. The use cases are for any free form text entry or for any enumerated lists.
+            Additionally the minimum and maximum lengths may be set and regular expression patterns may be specified.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -168,10 +209,20 @@
 
   <xs:complexType name="DvFileType">
     <xs:annotation>
-      <xs:documentation>A type to use for encapsulated content (aka. files) for image, audio and other media types 
-        with a defined MIME type. This type provides a choice of embedding the content into the data or using a URL 
-        to point to the content.
+      <xs:documentation>
       </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvFileType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvFileType.html#DvFileType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+          <rdfs:label>DvFileType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            A type to use for encapsulated content (aka. files) for image, audio and other media types 
+            with a defined MIME type. This type provides a choice of embedding the content into the data or using a URL 
+            to point to the content.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -269,9 +320,18 @@
   
   <xs:complexType abstract="true" name="DvOrderedType">
     <xs:annotation>
-      <xs:documentation>Abstract type defining the concept of ordered values, which includes
-        ordinals as well as true quantities. The implementations require the functions ‘&lt;’,
-        '&gt;' and is_strictly_comparable_to ('=='). </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvOrderedType.html#DvOrderedType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+          <rdfs:label>DvOrderedType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Abstract type defining the concept of ordered values, which includes
+            ordinals as well as true quantities. The implementations require the functions ‘&lt;’,
+            '&gt;' and is_strictly_comparable_to ('==').
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -298,25 +358,33 @@
 
   <xs:complexType name="DvOrdinalType">
     <xs:annotation>
-      <xs:documentation>Models rankings and scores, e.g. pain, Apgar values, etc, where there is a)
-        implied ordering, b) no implication that the distance between each value is constant, and c)
-        the total number of values is finite. Note that although the term ‘ordinal’ in mathematics
-        means natural numbers only, here any decimal is allowed, since negative and zero values are
-        often used by medical and other professionals for values around a neutral point. 
-        Also, decimal values are sometimes used such as 0.5 or .25 
-        
-        Examples of sets of ordinal values: 
-        -3, -2, -1, 0, 1, 2, 3 -- reflex response values 
-        0, 1, 2 -- Apgar values 
-        
-        Also used for recording any clinical or other datum which is customarily recorded using symbolic values. 
-        Examples: 
-        the results on a urinalysis strip, e.g. {neg, trace, +, ++, +++} are used for leukocytes, protein, nitrites etc; 
-        for non-haemolysed blood {neg, trace, moderate}; 
-        for haemolysed blood {neg, trace, small, moderate, large}.
-        
-        Elements ordinal and symbol MUST have exactly the same number of enumerations.
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrdinalType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvOrdinalType.html#DvOrdinalType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
+          <rdfs:label>DvOrdinalType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Models rankings and scores, e.g. pain, Apgar values, etc, where there is a)
+            implied ordering, b) no implication that the distance between each value is constant, and c)
+            the total number of values is finite. Note that although the term ‘ordinal’ in mathematics
+            means natural numbers only, here any decimal is allowed, since negative and zero values are
+            often used by medical and other professionals for values around a neutral point. 
+            Also, decimal values are sometimes used such as 0.5 or .25 
+            
+            Examples of sets of ordinal values: 
+            -3, -2, -1, 0, 1, 2, 3 -- reflex response values 
+            0, 1, 2 -- Apgar values 
+            
+            Also used for recording any clinical or other datum which is customarily recorded using symbolic values. 
+            Examples: 
+            the results on a urinalysis strip, e.g. {neg, trace, +, ++, +++} are used for leukocytes, protein, nitrites etc; 
+            for non-haemolysed blood {neg, trace, moderate}; 
+            for haemolysed blood {neg, trace, small, moderate, large}.
+            
+            Elements ordinal and symbol MUST have exactly the same number of enumerations.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvOrderedType">
@@ -345,8 +413,17 @@
 
   <xs:complexType abstract="true" name="DvQuantifiedType">
     <xs:annotation>
-      <xs:documentation>Abstract type defining the concept of true quantified values, i.e. values
-        which are not only ordered, but which have a precise magnitude. </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantifiedType.html#DvQuantifiedType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
+          <rdfs:label>DvQuantifiedType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Abstract type defining the concept of true quantified values, i.e. values
+            which are not only ordered, but which have a precise magnitude.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvOrderedType">
@@ -407,11 +484,19 @@
   
   <xs:complexType name="DvCountType">
     <xs:annotation>
-      <xs:documentation> Countable quantities. Used for countable types such as pregnancies and
-        steps (taken by a physiotherapy patient), number of cigarettes smoked in a day, etc.
-        The thing(s) being counted must be represented in the units element.
-        Misuse:Not used for amounts of physical entities (which all have standardized units). 
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvCountType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvCountType.html#DvCountType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
+          <rdfs:label>DvCountType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Countable quantities. Used for countable types such as pregnancies and
+            steps (taken by a physiotherapy patient), number of cigarettes smoked in a day, etc.
+            The thing(s) being counted must be represented in the units element.
+            Misuse:Not used for amounts of physical entities (which all have standardized units).
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
@@ -435,11 +520,19 @@
 
   <xs:complexType name="DvQuantityType">
     <xs:annotation>
-      <xs:documentation>Quantified type representing specific quantities, i.e. quantities
-        expressed as a magnitude and units. Can also be used for time durations, where it is more
-        convenient to treat these as simply a number of individual seconds, minutes, hours, days,
-        months, years, etc. when no temporal calculation is to be performed.
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantityType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantityType.html#DvQuantityType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
+          <rdfs:label>DvQuantityType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Quantified type representing specific quantities, i.e. quantities
+            expressed as a magnitude and units. Can also be used for time durations, where it is more
+            convenient to treat these as simply a number of individual seconds, minutes, hours, days,
+            months, years, etc. when no temporal calculation is to be performed.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
@@ -462,12 +555,21 @@
 
   <xs:complexType name="DvRatioType">
     <xs:annotation>
-      <xs:documentation>Models a ratio of values, i.e. where the numerator and denominator are both
-        pure numbers. Should not be used to represent things like blood pressure which are often
-        written using a ‘/’ character, giving the misleading impression that the item is a ratio,
-        when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.)
-        “20/20” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols
-        like CF = count fingers etc). Should not be used for formulations.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvRatioType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvRatioType.html#DvRatioType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
+          <rdfs:label>DvRatioType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Models a ratio of values, i.e. where the numerator and denominator are both
+            pure numbers. Should not be used to represent things like blood pressure which are often
+            written using a ‘/’ character, giving the misleading impression that the item is a ratio,
+            when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.)
+            “20/20” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols
+            like CF = count fingers etc). Should not be used for formulations.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
@@ -543,10 +645,19 @@
   
   <xs:complexType name="DvTemporalType">
     <xs:annotation>
-      <xs:documentation> Type defining the concept of date and time types. Must be constrained in
-        PcTs to be one or more of the below elements. This gives the modeler the ability to
-        optionally allow full or partial dates at run time. Setting both maxOccurs and minOccurs to zero
-        cause the element to be prohibited. </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvTemporalType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvTemporalType.html#DvTemporalType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
+          <rdfs:label>DvTemporalType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Type defining the concept of date and time types. Must be constrained in
+            PcTs to be one or more of the below elements. This gives the modeler the ability to
+            optionally allow full or partial dates at run time. Setting both maxOccurs and minOccurs to zero
+            cause the element to be prohibited.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvOrderedType">
@@ -570,10 +681,19 @@
 
   <xs:complexType name="DvIntervalType">
     <xs:annotation>
-      <xs:documentation>Generic type defining an interval (i.e. range) of a comparable type. An
-        interval is a contiguous subrange of a comparable base type. Used to define intervals of
-        dates, times, quantities, etc. Whose datatypes are the same and are ordered. In MLHIM,
-        they are primarily used in defining reference ranges. </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvIntervalType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvIntervalType.html#DvIntervalType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+          <rdfs:label>DvIntervalType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Generic type defining an interval (i.e. range) of a comparable type. An
+            interval is a contiguous subrange of a comparable base type. Used to define intervals of
+            dates, times, quantities, etc. Whose datatypes are the same and are ordered. In MLHIM,
+            they are primarily used in defining reference ranges.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -651,12 +771,19 @@
   
   <xs:complexType name="ReferenceRangeType">
     <xs:annotation>
-      <xs:documentation>
-        Defines a named range to be associated with any ORDERED datum. Each such
-        range is sensitive to the context, e.g. sex, age, location, and any other factor which affects ranges. 
-        May be used to represent high, low, normal, therapeutic, dangerous, critical, etc. ranges that are 
-        constrained by an interval. 
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ReferenceRangeType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ReferenceRangeType.html#ReferenceRangeType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+          <rdfs:label>ReferenceRangeType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Defines a named range to be associated with any ORDERED datum. Each such
+            range is sensitive to the context, e.g. sex, age, location, and any other factor which affects ranges. 
+            May be used to represent high, low, normal, therapeutic, dangerous, critical, etc. ranges that are 
+            constrained by an interval.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
@@ -691,10 +818,17 @@
   
   <xs:complexType name="AuditType">
     <xs:annotation>
-      <xs:documentation>
-        AuditType provides a mechanism to identify the who/where/when tracking of instances as they move from 
-        system to system.       
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#AuditType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AuditType.html#AuditType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>AuditType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            AuditType provides a mechanism to identify the who/where/when tracking of instances as they move from 
+            system to system.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" name="system-id" type="mlhim2:DvStringType">
@@ -725,10 +859,19 @@
 
   <xs:complexType name="PartyType">
     <xs:annotation>
-      <xs:documentation> Description of a party, including an optional external link to data for
-        this party in a demographic or other identity management system. An additional details
-        element provides for the inclusion of information related to this party directly. If the
-        party information is to be anonymous then do not include the details element.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#PartyType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_PartyType.html#PartyType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>PartyType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Description of a party, including an optional external link to data for
+            this party in a demographic or other identity management system. An additional details
+            element provides for the inclusion of information related to this party directly. If the
+            party information is to be anonymous then do not include the details element.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="party-name" type="xs:string">
@@ -753,8 +896,17 @@
 
   <xs:complexType name="AttestationType">
     <xs:annotation>
-      <xs:documentation> Record an attestation by a party of item(s) of record content. The type of
-        attestation is recorded by the reason attribute, which my be coded. </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#AttestationType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AttestationType.html#AttestationType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>AttestationType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Record an attestation by a party of item(s) of record content. The type of
+            attestation is recorded by the reason attribute, which my be coded.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="view" type="mlhim2:DvFileType">
@@ -796,10 +948,18 @@
 
   <xs:complexType name="ParticipationType">
     <xs:annotation>
-      <xs:documentation> Model of a participation of a Party (any Actor or Role) in an activity.
-        Used to represent any participation of a Party in some activity, which is not explicitly in
-        the model, e.g. assisting nurse. Can be used to record past or future participations.
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ParticipationType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ParticipationType.html#ParticipationType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>ParticipationType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Model of a participation of a Party (any Actor or Role) in an activity.
+            Used to represent any participation of a Party in some activity, which is not explicitly in
+            the model, e.g. assisting nurse. Can be used to record past or future participations.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="0" name="performer" type="mlhim2:PartyType">
@@ -840,12 +1000,20 @@
 
   <xs:complexType abstract="true" name="ExceptionalValueType">
     <xs:annotation>
-      <xs:documentation> Subtypes are used to indicate why a value is missing (Null) or is outside a
-        measurable range. The element ev-name is fixed in restricted types to a descriptive string.
-        The subtypes defined in the reference model are considered sufficiently generic to be useful
-        in many instances. CCDs may contain additional ExceptionalValueType restrictions to allow for 
-        domain related reasons for errant or missing data.
-      </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ExceptionalValueType.html#ExceptionalValueType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>ExceptionalValueType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Subtypes are used to indicate why a value is missing (Null) or is outside a
+            measurable range. The element ev-name is fixed in restricted types to a descriptive string.
+            The subtypes defined in the reference model are considered sufficiently generic to be useful
+            in many instances. CCDs may contain additional ExceptionalValueType restrictions to allow for 
+            domain related reasons for errant or missing data.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1109,14 +1277,33 @@
     <xs:annotation>
       <xs:documentation>The abstract parent of ClusterType and DvAdapterType structural
         representation types.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ItemType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ItemType.html#ItemType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>ItemType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
   </xs:complexType>
   <xs:element abstract="true" name="Item" type="mlhim2:ItemType"/>
 
   <xs:complexType name="ClusterType">
     <xs:annotation>
-      <xs:documentation>The grouping variant of Item, which may contain further instances of Item,
-        in an ordered list. This can serve as the root component for arbitrarily complex structures.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ClusterType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ClusterType.html#ClusterType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ItemType"/>
+          <rdfs:label>ClusterType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            The grouping variant of Item, which may contain further instances of Item,
+            in an ordered list. This can serve as the root component for arbitrarily complex structures.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:ItemType">
@@ -1140,8 +1327,17 @@
 
   <xs:complexType name="DvAdapterType">
     <xs:annotation>
-      <xs:documentation>The leaf variant of Item, to which any DvAnyType subtype instance is
-        attached for use in a Cluster.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapterType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAdapterType.html#DvAdapterType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ItemType"/>
+          <rdfs:label>DvAdapterType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            The leaf variant of Item, to which any DvAnyType subtype instance is
+            attached for use in a Cluster.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:ItemType">
@@ -1162,10 +1358,19 @@
   <!--Content / entry types -->
   <xs:complexType abstract="true" name="EntryType">
     <xs:annotation>
-      <xs:documentation>The abstract parent of all Entry subtypes. An Entry is the root of a logical
-        set of data items. Each subtype has an identical information structure. The subtyping is
-        used to allow persistence to separate the types of Entries; primarily important in healthcare
-        for the de-identification of clinical information. </xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#EntryType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_EntryType.html#EntryType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>EntryType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            The abstract parent of all Entry subtypes. An Entry is the root of a logical
+            set of data items. Each subtype has an identical information structure. The subtyping is
+            used to allow persistence to separate the types of Entries; primarily important in healthcare
+            for the de-identification of clinical information.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" name="language" type="xs:language">
@@ -1247,8 +1452,16 @@
 
   <xs:complexType name="CareEntryType">
     <xs:annotation>
-      <xs:documentation>Entry subtype for all entries related to care of an a subject of
-        record.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#CareEntryType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CareEntryType.html#CareEntryType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
+          <rdfs:label>CareEntryType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Entry subtype for all entries related to care of an a subject of record.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:EntryType"/>
@@ -1258,11 +1471,20 @@
 
   <xs:complexType name="AdminEntryType">
     <xs:annotation>
-      <xs:documentation>Entry subtype for administrative information, i.e. information about setting
-        up the clinical process, but not itself clinically relevant. Archetypes will define
-        contained information. Used for administrative details of admission, episode, ward location,
-        discharge, appointment (if not stored in a practice management or appointments system). Not
-        used for any clinically significant information.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#AdminEntryType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AdminEntryType.html#AdminEntryType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
+          <rdfs:label>AdminEntryType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Entry subtype for administrative information, i.e. information about setting
+            up the clinical process, but not itself clinically relevant. Archetypes will define
+            contained information. Used for administrative details of admission, episode, ward location,
+            discharge, appointment (if not stored in a practice management or appointments system). Not
+            used for any clinically significant information.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:EntryType"/>
@@ -1272,10 +1494,19 @@
 
   <xs:complexType name="DemographicEntryType">
     <xs:annotation>
-      <xs:documentation>Entry subtype for demographic information, i.e. name structures, roles,
-        locations, etc. Modelled as a separate type from AdminEntry in order to facilitate the
-        separation of clinical and non-clical information to support de-identification of clinical
-        and administrative data.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DemographicEntryType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DemographicEntryType.html#DemographicEntryType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
+          <rdfs:label>DemographicEntryType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            Entry subtype for demographic information, i.e. name structures, roles,
+            locations, etc. Modelled as a separate type from AdminEntry in order to facilitate the
+            separation of clinical and non-clical information to support de-identification of clinical
+            and administrative data.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="mlhim2:EntryType"/>
@@ -1286,7 +1517,16 @@
   <!--CCD / constraint model -->
   <xs:complexType name="CCDType">
     <xs:annotation>
-      <xs:documentation>This is the root node of a Concept Constraint Definition.</xs:documentation>
+      <xs:appinfo>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCDType">
+          <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CCDType.html#CCDType"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+          <rdfs:label>CCDType</rdfs:label>
+          <skos:definition xml:lang="en-us">
+            This is the root node of a Concept Constraint Definition.
+          </skos:definition>
+        </owl:Class>
+      </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
       <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:Definition" >

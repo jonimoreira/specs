@@ -100,6 +100,8 @@ Semantics
 ---------
 With the reusability and structural simplicity out of the way we can now discuss the issue of **what does the data mean?**
 
+**NOTE: This section is in active transition from RDF Semantics to OWL2 DL using the RL Profile.**
+
 If you are not familiar with RDF you may want to read more at `LinkedDataTools <http://www.linkeddatatools.com/>`_ or directly from the `W3C Specifications <http://www.w3.org/TR/rdf11-primer/>`_. 
 
 The world of data exchange is composed of two primary players; *data providers* and *data consumers*. Whether those two parties are people or software applications they require this knowledge to turn *data* into useful *information*. We discussed approaches to transferring this information in the **Semantic Models vs. Semantic Markup** section of *Modeling Concepts*. 
