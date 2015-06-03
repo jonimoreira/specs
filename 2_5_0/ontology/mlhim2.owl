@@ -16,7 +16,7 @@
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#">
   
-  <owl:Ontology rdf:about="http://www.mlhim.org/mlhim2.owl">
+  <owl:Ontology rdf:about="http://www.mlhim.org/xmlns/mlhim2.owl">
     <dc:description rdf:datatype="&xsd;string">
       This is the Multi-Level Healthcare Information Modelling (MLHIM) project root ontology.
       All MLHIM Reference Models and CCDs are subclasses of the MLHIM class (defined below) and must import this ontology.
@@ -45,7 +45,7 @@
     <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
   </owl:Ontology>
 
-  <owl:Class rdf:about="http://www.mlhim.org/mlhim2#MLHIM">
+  <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#MLHIM">
     <rdfs:subClassOf rdf:resource="owl:Thing"/>
   </owl:Class>
  
