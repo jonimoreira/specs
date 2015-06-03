@@ -40,8 +40,7 @@
         <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/"/>
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#MLHIM"/>
         <rdfs:label>MLHIM Release 2.5.0 Reference Model Schema</rdfs:label>
-      </owl:Class>
-      
+      </owl:Class>      
     </xs:appinfo>
   </xs:annotation>
 
@@ -88,8 +87,8 @@
   <xs:element abstract="true" name="DvAny" type="mlhim2:DvAnyType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAny">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
@@ -139,8 +138,8 @@
   <xs:element name="DvBoolean" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvBooleanType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvBoolean">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvBooleanType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
@@ -191,12 +190,11 @@
   <xs:element name="DvLink" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvLinkType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvLink">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvLinkType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DvStringType">
@@ -237,12 +235,11 @@
   <xs:element name="DvString" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvStringType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvString">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvStringType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DvFileType">
@@ -357,12 +354,11 @@
   <xs:element name="DvFile" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvFileType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvFile">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvFileType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
   
   <xs:complexType abstract="true" name="DvOrderedType">
@@ -404,12 +400,11 @@
   <xs:element abstract="true" name="DvOrdered" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvOrderedType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrdered">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrderedType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DvOrdinalType">
@@ -468,12 +463,11 @@
   <xs:element abstract="true" name="DvOrdinal" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvOrdinalType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvOrdinal">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvOrdinalType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType abstract="true" name="DvQuantifiedType">
@@ -520,12 +514,11 @@
   <xs:element abstract="true" name="DvQuantified" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvQuantifiedType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantified">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
   
   <xs:simpleType name="MagnitudeStatus">
@@ -638,12 +631,11 @@
   <xs:element name="DvCount" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvCountType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvCount">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvCountType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DvQuantityType">
@@ -682,12 +674,11 @@
   <xs:element name="DvQuantity" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvQuantityType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvQuantity">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantityType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DvRatioType">
@@ -711,7 +702,6 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvQuantifiedType">
         <xs:sequence>
-
           <xs:element maxOccurs="1" minOccurs="1" name="ratio-type" type="mlhim2:TypeOfRatio">
             <xs:annotation>
               <xs:documentation>
@@ -760,12 +750,11 @@
   <xs:element name="DvRatio" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvRatioType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvRatio">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvRatioType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:simpleType name="TypeOfRatio">
@@ -853,12 +842,11 @@
   <xs:element name="DvTemporal" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvTemporalType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvTemporal">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvTemporalType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DvIntervalType">
@@ -922,12 +910,11 @@
   <xs:element name="DvInterval" substitutionGroup="mlhim2:DvAny" type="mlhim2:DvIntervalType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvInterval">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvIntervalType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="InvlType">
@@ -997,7 +984,6 @@
                 In the context of the value in the definition element.</xs:documentation>
             </xs:annotation>
           </xs:element>
-
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1005,12 +991,11 @@
   <xs:element name="ReferenceRange" substitutionGroup="mlhim2:DvAny" type="mlhim2:ReferenceRangeType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ReferenceRange">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ReferenceRangeType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
 
@@ -1058,12 +1043,11 @@
   <xs:element name="Audit" type="mlhim2:AuditType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Audit">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#AuditType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="PartyType">
@@ -1104,12 +1088,11 @@
   <xs:element name="Party" type="mlhim2:PartyType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Party">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#PartyType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="AttestationType">
@@ -1165,12 +1148,11 @@
   <xs:element name="Attestation" type="mlhim2:AttestationType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Attestation">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#AttestationType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="ParticipationType">
@@ -1226,12 +1208,11 @@
   <xs:element name="Participation" type="mlhim2:ParticipationType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Participation">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ParticipationType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType abstract="true" name="ExceptionalValueType">
@@ -1258,12 +1239,11 @@
   <xs:element abstract="true" name="ExceptionalValue" type="mlhim2:ExceptionalValueType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValue">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
-
   </xs:element>
 
   <xs:complexType name="NIType">
@@ -1293,12 +1273,11 @@
   <xs:element name="NI" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:NIType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#NI">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#NIType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="MSKType">
@@ -1320,8 +1299,7 @@
                 any detail. 
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Masked" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1332,12 +1310,11 @@
   <xs:element name="MSK" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:MSKType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#MSK">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#MSKType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="INVType">
@@ -1354,8 +1331,7 @@
                 the set of permitted data values in the constrained value domain of a variable.
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Invalid" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1366,12 +1342,11 @@
   <xs:element name="INV" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:INVType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#INV">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#INVType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DERType">
@@ -1388,8 +1363,7 @@
                 provided information; usually an expression is provided directly.
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Derived" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1400,12 +1374,11 @@
   <xs:element name="DER" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:DERType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DER">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DERType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="UNCType">
@@ -1422,8 +1395,7 @@
                 correctly but the raw source information is represented, usually in free text.
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Unencoded" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"
@@ -1435,12 +1407,11 @@
   <xs:element name="UNC" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:UNCType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#UNC">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#UNCType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="OTHType">
@@ -1457,8 +1428,7 @@
                 the variable. (e.g., when the value of the variable is not by the coding system)
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Other" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1469,12 +1439,11 @@
   <xs:element name="OTH" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:OTHType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#OTH">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#OTHType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="NINFType">
@@ -1490,8 +1459,7 @@
                 Negative Infinity : Negative infinity of numbers
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Negative Infinity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1502,12 +1470,11 @@
   <xs:element name="NINF" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:NINFType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#NINF">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#NINFType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="PINFType">
@@ -1523,8 +1490,7 @@
                 Positive Infinity : Positive infinity of numbers
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Positive Infinity" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1535,12 +1501,11 @@
   <xs:element name="PINF" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:PINFType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#PINF">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#PINFType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="UNKType">
@@ -1556,8 +1521,7 @@
                 Unknown : A proper value is applicable, but not known.
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Unknown" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1568,12 +1532,11 @@
   <xs:element name="UNK" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:UNKType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#UNK">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#UNKType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="ASKRType">
@@ -1591,8 +1554,7 @@
                 (e.g., patient was asked but refused to answer).
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Asked and Refused" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1603,12 +1565,11 @@
   <xs:element name="ASKR" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:ASKRType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKR">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ASKRType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="NASKType">
@@ -1624,8 +1585,7 @@
                 Not Asked : This information has not been sought (e.g., patient was not asked)
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Asked" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1636,12 +1596,11 @@
   <xs:element name="NASK" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:NASKType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#NASK">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#NASKType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="QSType">
@@ -1660,8 +1619,7 @@
                 100mL.
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Sufficient Quantity" maxOccurs="1" minOccurs="1" name="ev-name"
@@ -1673,12 +1631,11 @@
   <xs:element name="QS" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:QSType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#QS">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#QSType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="TRCType">
@@ -1694,8 +1651,7 @@
                 Trace : The content is greater or less than zero but too small to be quantified.
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Trace" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1706,12 +1662,11 @@
   <xs:element name="TRC" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:TRCType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#TRC">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#TRCType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="ASKUType">
@@ -1728,8 +1683,7 @@
                 Asked but Unknown : Information was sought but not found (e.g., patient was asked but did not know)
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Asked but Unknown" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1740,12 +1694,11 @@
   <xs:element name="ASKU" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:ASKUType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ASKU">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ASKUType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="NAVType">
@@ -1761,8 +1714,7 @@
                 Not Available: This information is not available and the specific reason is not known.
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Available" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1773,12 +1725,11 @@
   <xs:element name="NAV" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:NAVType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#NAV">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#NAVType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="NAType">
@@ -1796,8 +1747,7 @@
                 number of cigarettes smoked per day by a non-smoker subject.
               </skos:definition>
             </owl:Class>
-          </xs:appinfo>
-          
+          </xs:appinfo>          
         </xs:annotation>
         <xs:sequence>
           <xs:element fixed="Not Applicable" maxOccurs="1" minOccurs="1" name="ev-name" type="xs:string"/>
@@ -1808,26 +1758,23 @@
   <xs:element name="NA" substitutionGroup="mlhim2:ExceptionalValue" type="mlhim2:NAType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#NA">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#NAType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <!--Structures / items types -->
   <xs:complexType abstract="true" name="ItemType">
     <xs:annotation>
-      <xs:documentation>The abstract parent of ClusterType and DvAdapterType structural
-        representation types.</xs:documentation>
       <xs:appinfo>
         <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ItemType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ItemType.html#ItemType"/>
           <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
           <rdfs:label>ItemType</rdfs:label>
           <skos:definition xml:lang="en-us">
-            
+            The abstract parent of ClusterType and DvAdapterType structural representation types.
           </skos:definition>
         </owl:Class>
       </xs:appinfo>
@@ -1836,12 +1783,11 @@
   <xs:element abstract="true" name="Item" type="mlhim2:ItemType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Item">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ItemType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="ClusterType">
@@ -1878,12 +1824,11 @@
   <xs:element name="Cluster" substitutionGroup="mlhim2:Item" type="mlhim2:ClusterType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Cluster">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ClusterType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DvAdapterType">
@@ -1916,9 +1861,9 @@
   <xs:element name="DvAdapter-value" type="mlhim2:DvAnyType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
-        </owl:Class>
+       <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapter/DvAdapter-value">
+         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
+       </owl:Class>
       </xs:appinfo>
     </xs:annotation>
     
@@ -1926,12 +1871,11 @@
   <xs:element name="DvAdapter" substitutionGroup="mlhim2:Item" type="mlhim2:DvAdapterType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAdapter">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvAdapterType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <!--Content / entry types -->
@@ -2030,12 +1974,11 @@
   <xs:element abstract="true" name="Entry" type="mlhim2:EntryType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#Entry">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="CareEntryType">
@@ -2058,12 +2001,11 @@
   <xs:element name="CareEntry" substitutionGroup="mlhim2:Entry" type="mlhim2:CareEntryType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#CareEntry">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#CareEntryType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="AdminEntryType">
@@ -2090,12 +2032,11 @@
   <xs:element name="AdminEntry" substitutionGroup="mlhim2:Entry" type="mlhim2:AdminEntryType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#AdminEntry">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#AdminEntryType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <xs:complexType name="DemographicEntryType">
@@ -2121,12 +2062,11 @@
   <xs:element name="DemographicEntry" substitutionGroup="mlhim2:Entry" type="mlhim2:DemographicEntryType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#DemographicEntry">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DemographicEntryType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 
   <!--CCD / constraint model -->
@@ -2154,21 +2094,19 @@
   <xs:element name="Definition" type="mlhim2:EntryType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCDType/Definition">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
   <xs:element name="CCD" type="mlhim2:CCDType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:Class rdf:about="">
-          <rdfs:subClassOf rdf:resource=""/>
+        <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCD">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#CCDType"/>
         </owl:Class>
       </xs:appinfo>
-    </xs:annotation>
-    
+    </xs:annotation>    
   </xs:element>
 </xs:schema>
