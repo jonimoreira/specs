@@ -347,7 +347,6 @@ refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along
 
     <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#magnitude-statusRef">
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvQuantifiedType"/>
-        <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2#MagnitudeStatus"/>
     </owl:ObjectProperty>
     
 
@@ -405,7 +404,6 @@ refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along
 
     <owl:ObjectProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#ratio-typeRef">
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvRatioType"/>
-        <rdfs:range rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
     </owl:ObjectProperty>
     
 
@@ -519,6 +517,84 @@ refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along
         <dc:description rdf:datatype="&xsd;string">anyURI as a pointer.</dc:description>
         <rdfs:domain rdf:resource="http://www.mlhim.org/xmlns/mlhim2#DvLinkType"/>
         <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#MagnitudeStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#MagnitudeStatus">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>approximate</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>equal</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>greater_than</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first>greater_than_or_equal</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first>less_than</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first>less_than_or_equal</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2#TypeOfRatio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#TypeOfRatio">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>proportion</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>rate</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>ratio</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -1510,26 +1586,6 @@ refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along
     
 
 
-    <!-- http://www.mlhim.org/xmlns/mlhim2#MagnitudeStatus -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#MagnitudeStatus">
-        <dc:description rdf:datatype="&xsd;string">Optional status of magnitude with values:
-        
-        equal : magnitude is a point value
-        
-        less_than : value is less than the magnitude
-        
-        greater_than : value is greater than the magnitude
-        
-        less_than_or_equal : value is less_than_or_equal to the magnitude
-        
-        greater_than_or_equal : value is greater_than_or_equal to the magnitude
-        
-        approximate : value is the approximately the magnitude</dc:description>
-    </owl:Class>
-    
-
-
     <!-- http://www.mlhim.org/xmlns/mlhim2#NASKType -->
 
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#NASKType">
@@ -1727,12 +1783,6 @@ refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along
     <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#performer">
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ParticipationType"/>
     </owl:Class>
-    
-
-
-    <!-- http://www.mlhim.org/xmlns/mlhim2#ratio-type -->
-
-    <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
     
 
 
@@ -2168,25 +2218,19 @@ refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along
 
     <!-- http://www.mlhim.org/xmlns/mlhim2#proportion -->
 
-    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#proportion">
-        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#proportion"/>
     
 
 
     <!-- http://www.mlhim.org/xmlns/mlhim2#rate -->
 
-    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#rate">
-        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#rate"/>
     
 
 
     <!-- http://www.mlhim.org/xmlns/mlhim2#ratio -->
 
-    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#ratio">
-        <rdf:type rdf:resource="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.mlhim.org/xmlns/mlhim2#ratio"/>
     
 
 
@@ -2204,26 +2248,6 @@ refer to the words; Data Value. Dvs are the leaf datatypes in MLHIM along
             <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#data-name"/>
             <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#valid-time-begin"/>
             <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#valid-time-end"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AttestationType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#AuditType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#CCDType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#DvAnyType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#EntryType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ExceptionalValueType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#InvlType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ItemType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#MagnitudeStatus"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ParticipationType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#PartyType"/>
-            <rdf:Description rdf:about="http://www.mlhim.org/xmlns/mlhim2#ratio-type"/>
-            <rdf:Description rdf:about="&xsd;dayTimeDuration"/>
-            <rdf:Description rdf:about="&xsd;gMonthDay"/>
-            <rdf:Description rdf:about="&xsd;yearMonthDuration"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

@@ -471,6 +471,51 @@
         
         approximate : value is the approximately the magnitude
       </xs:documentation>
+      <xs:appinfo>
+        <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#MagnitudeStatus">
+          <rdfs:range>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+                  <rdf:type rdf:resource="rdf:List"/>
+                  <rdf:first>approximate</rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:type rdf:resource="rdf:List"/>
+                      <rdf:first>equal</rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:type rdf:resource="rdf:List"/>
+                          <rdf:first>greater_than</rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:type rdf:resource="rdf:List"/>
+                              <rdf:first>greater_than_or_equal</rdf:first>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:type rdf:resource="rdf:List"/>
+                                  <rdf:first>less_than</rdf:first>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:type rdf:resource="rdf:List"/>
+                                      <rdf:first>less_than_or_equal</rdf:first>
+                                      <rdf:rest rdf:resource="rdf:nil"/>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </rdfs:range>
+        </owl:DatatypeProperty>
+      </xs:appinfo>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="equal"/>
@@ -635,6 +680,33 @@
         relationship between the numerator and the denominator (the numerator is not
         contained in the denominator) 
       </xs:documentation>
+      <xs:appinfo>
+        <owl:DatatypeProperty rdf:about="http://www.mlhim.org/xmlns/mlhim2#TypeOfRatio">
+          <rdfs:range>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+                  <rdf:type rdf:resource="rdf:List"/>
+                  <rdf:first>proportion</rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:type rdf:resource="rdf:List"/>
+                      <rdf:first>rate</rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:type rdf:resource="rdf:List"/>
+                          <rdf:first>ratio</rdf:first>
+                          <rdf:rest rdf:resource="rdf:nil"/>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </rdfs:range>
+        </owl:DatatypeProperty>        
+      </xs:appinfo>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="ratio"/>
