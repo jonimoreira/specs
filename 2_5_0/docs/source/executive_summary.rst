@@ -12,6 +12,10 @@ exchange and expression on the semantic web.
 
 MLHIM uses these tools in conjunction with the Unix/Linux model of iterate and release often. A new release does not invalidate the previous models or data.
 
+In designing MLHIM we took the view that data is produced by people that have a need to record that data. Often that data is useful to others. In healthcare this is certainly true. To transfer raw data is not enough for the receiver to determine if it is useful for their needs. 
+
+If I have a leaky faucet in my home and need a washer to repair it. I go to the local hardware store to purchase a new one. The attendant there doesn't know what I need because they do not know what type of faucet I have. However, I can look at the package information and determine based on thickness, inside and outside diameters and shape (flat, conical, round, etc.) if a particular washer fits my needs.  In this sense, MLHIM is the packaging for data.  It allows the data consumer to determine if the data is useful to them as is or maybe it can even be adjusted because the consumer knows the context in which the data was captured.
+
 MLHIM can be implemented as the information model for applications ranging from mobile apps to enterprise suites. MLHIM is also useful to enhance semantic interoperability of existing systems and healthcare IT interfaces such as those based on HL7 messaging.
 
 MLHIM specifically addresses the need to communicate syntactically sound data with the intended semantics. The larger picture of information exchange is already handled by other formal and de-facto standards and MLHIM builds on those standards.
