@@ -2,7 +2,7 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -12,12 +12,12 @@
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#">
   
   <owl:Ontology rdf:about="http://www.mlhim.org/xmlns/mlhim2.owl">
-    <dc:description rdf:datatype="&xsd;string">
+    <dc:description rdf:datatype="&xs;string">
       This is the Multi-Level Healthcare Information Modelling (MLHIM) project root ontology.
       All MLHIM Reference Models and CCDs are subclasses of the MLHIM class (defined below) and must import this ontology.
       
@@ -41,17 +41,28 @@
       See the License for the specific language governing permissions and
       limitations under the License.
     </dc:description>
-    <dc:creator rdf:datatype="&xsd;string">Timothy W. Cook</dc:creator>
-    <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
+    <dc:creator rdf:datatype="&xs;string">Timothy W. Cook</dc:creator>
+    <rdfs:isDefinedBy rdf:datatype="&xs;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
   </owl:Ontology>
 
-  <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2#MLHIM">
+  <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/MLHIM">
     <rdfs:subClassOf rdf:resource="owl:Thing"/>
   </owl:Class>
  
+  <!-- Additional XMLSchema datatypes -->
+  <rdfs:Datatype rdf:about="&xs;date"/>
+  <rdfs:Datatype rdf:about="&xs;duration"/>
+  <rdfs:Datatype rdf:about="&xs;gDay"/>
+  <rdfs:Datatype rdf:about="&xs;gMonth"/>
+  <rdfs:Datatype rdf:about="&xs;gYear"/>
+  <rdfs:Datatype rdf:about="&xs;gYearMonth"/>
+  <rdfs:Datatype rdf:about="&xs;time"/>
+  
  
- 
-<!-- DCMI Terms defined as annotation properties for CCDs. -->  
+  <!-- http://www.w3.org/2004/02/skos/core#definition -->
+  <owl:AnnotationProperty rdf:about="&skos;definition"/>
+  
+  <!-- DCMI Terms defined as annotation properties for CCDs. -->  
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
     <rdfs:label xml:lang="en-us">Title</rdfs:label>
     <skos:definition xml:lang="en-us">A name given to the resource.</skos:definition>
