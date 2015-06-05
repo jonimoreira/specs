@@ -3116,15 +3116,15 @@
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:Item">
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:Items">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 List of Item types.
               </xs:documentation>
               <xs:appinfo>
-                <owl:ObjectProperty rdf:about="&mlhim2;/ClusterType/items">
+                <owl:ObjectProperty rdf:about="&mlhim2;/ClusterType/Items">
                   <rdfs:domain rdf:resource="&mlhim2;/ClusterType"/>
-                  <rdfs:range rdf:resource="&mlhim2;/Item"/>
+                  <rdfs:range rdf:resource="&mlhim2;/ItemType"/>
                   <skos:definition xml:lang="en-us">
                     List of Item types.
                   </skos:definition>
@@ -3136,6 +3136,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:element name="Items" type="mlhim2:ItemType"/>
   <xs:element name="Cluster" substitutionGroup="mlhim2:Item" type="mlhim2:ClusterType">
     <xs:annotation>
       <xs:appinfo>
@@ -3178,7 +3179,8 @@
                   <rdfs:domain rdf:resource="&mlhim2;/DvAdapterType"/>
                   <rdfs:range rdf:resource="&mlhim2;/DvAnyType"/>
                   <skos:definition xml:lang="en-us">
-                    
+                    Data value type of this leaf. By rule, there must only be one DvAnyType subtype defined here.
+                    The unbounded occurrences is allowed so that the PcT can specify how many repetitions may occur in the instance.
                   </skos:definition>
                 </owl:ObjectProperty>
               </xs:appinfo>
