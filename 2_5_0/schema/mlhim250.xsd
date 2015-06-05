@@ -19,7 +19,8 @@
   targetNamespace='http://www.mlhim.org/xmlns/mlhim2' 
   vc:minVersion="1.1">
   <xs:annotation>
-    <xs:documentation xml:lang="en-us"> This is the Multi-Level Healthcare Information Modelling (MLHIM) project
+    <xs:documentation xml:lang="en-us"> 
+      This is the Multi-Level Healthcare Information Modelling (MLHIM) project
       reference model implementation in XML Schema 1.1. MLHIM Release 2.5.0 It consists of the core
       datatypes and structures for MLHIM models, called Concept Constraint Definitions (CCDs).
       Further documentation and implementation instructions can be found on or via links from
@@ -44,12 +45,37 @@
       <owl:Ontology rdf:about="&mlhim2;/mlhim250.owl">
         <owl:imports rdf:resource="http://www.mlhim.org/mlhim2.owl"/>
         <rdfs:label>MLHIM Release 2.5.0 Reference Model Ontology</rdfs:label>
+        <dc:description rdf:datatype="&xs;string">
+          This is the Multi-Level Healthcare Information Modelling (MLHIM) project
+          reference model ontology - MLHIM Release 2.5.0
+          
+          It consists of the core structures for MLHIM models, called Concept Constraint Definitions (CCDs).
+          
+          Further documentation and implementation instructions can be found on or via links from http://www.mlhim.org
+          
+          This work is Copyright 2009-2015 Timothy W. Cook
+          
+          Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+          you may not use this file except in compliance with the License.
+          You may obtain a copy of the License at
+          
+          http://www.apache.org/licenses/LICENSE-2.0
+          
+          Unless required by applicable law or agreed to in writing, software
+          distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+          
+          See the License for the specific language governing permissions and
+          limitations under the License.
+        </dc:description>
+        <dc:creator rdf:datatype="&xs;string">Timothy W. Cook</dc:creator>
+        
       </owl:Ontology>
       
       <owl:Class rdf:about="&mlhim2;/mlhim250">
         <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/"/>
         <rdfs:subClassOf rdf:resource="&mlhim2;/MLHIM"/>
-        <rdfs:label>MLHIM Release 2.5.0 Reference Model Schema</rdfs:label>
+        <rdfs:label>MLHIM Release 2.5.0 Reference Model Ontology</rdfs:label>
       </owl:Class>      
     </xs:appinfo>
   </xs:annotation>
@@ -694,7 +720,7 @@
               <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;/DvOrderedType/range">
                   <rdfs:domain rdf:resource="&mlhim2;/DvOrderedType"/>
-                  <rdfs:range rdf:resource="&mlhim2;ReferenceRangeType"/>
+                  <rdfs:range rdf:resource="&mlhim2;/ReferenceRangeType"/>
                   <skos:definition xml:lang="en-us">
                     Optional list of ReferenceRanges for this value in its particular measurement context.
                   </skos:definition>
@@ -1057,7 +1083,7 @@
               <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;/DvCountType/dvcount-units">
                   <rdfs:domain rdf:resource="&mlhim2;/DvCountType"/>
-                  <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
+                  <rdfs:range rdf:resource="&mlhim2;/DvStringType"/>
                   <skos:definition xml:lang="en-us">
                     The name or type of the quantity. 
                     Examples are cigarettes, drinks, pregnancies, episodes, etc. 
@@ -1133,7 +1159,7 @@
               <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;/DvQuantityType/dvquantity-units">
                   <rdfs:domain rdf:resource="&mlhim2;/DvQuantityType"/>
-                  <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
+                  <rdfs:range rdf:resource="&mlhim2;/DvStringType"/>
                   <skos:definition xml:lang="en-us">
                     The name or type of the quantity. 
                     Examples are "kg/m2", “mm[Hg]", "ms-1", "km/h". 
@@ -1252,7 +1278,8 @@
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="numerator-units" type="mlhim2:DvStringType">
             <xs:annotation>
-              <xs:documentation>Used to convey the meaning of the numerator. Typically countable
+              <xs:documentation xml:lang="en-us">
+                Used to convey the meaning of the numerator. Typically countable
                 units such as; cigarettes, drinks, exercise periods, etc. May or may not come from a
                 terminology such as OBO Foundry Units ontology. 
               </xs:documentation>
@@ -1261,7 +1288,9 @@
                   <rdfs:domain rdf:resource="&mlhim2;/DvRatioType"/>
                   <rdfs:range rdf:resource="&mlhim2;/DvStringType"/>
                   <skos:definition xml:lang="en-us">
-                    
+                    Used to convey the meaning of the numerator. Typically countable
+                    units such as; cigarettes, drinks, exercise periods, etc. May or may not come from a
+                    terminology such as OBO Foundry Units ontology.                     
                   </skos:definition>
                 </owl:ObjectProperty>
               </xs:appinfo>
@@ -1279,7 +1308,9 @@
                   <rdfs:domain rdf:resource="&mlhim2;/DvRatioType"/>
                   <rdfs:range rdf:resource="&mlhim2;/DvStringType"/>
                   <skos:definition xml:lang="en-us">
-                    
+                    Used to convey the meaning of the denominator. 
+                    Typically units such as; minutes, hours, days, years, months, etc. 
+                    May or may not come from a standard terminology.
                   </skos:definition>
                 </owl:ObjectProperty>
               </xs:appinfo>
@@ -1686,7 +1717,7 @@
                   <rdfs:domain rdf:resource="&mlhim2;/DvIntervalType"/>
                   <rdfs:range rdf:resource="&mlhim2;/InvlType"/>
                   <skos:definition xml:lang="en-us">
-                    
+                    Defines the lower value of the interval. 
                   </skos:definition>
                 </owl:ObjectProperty>
               </xs:appinfo>
@@ -1702,7 +1733,7 @@
                   <rdfs:domain rdf:resource="&mlhim2;/DvIntervalType"/>
                   <rdfs:range rdf:resource="&mlhim2;/InvlType"/>
                   <skos:definition xml:lang="en-us">
-                    
+                    Defines the upper value of the interval. 
                   </skos:definition>
                 </owl:ObjectProperty>
               </xs:appinfo>
@@ -1854,6 +1885,7 @@
       </xs:documentation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/IntervalUnits">
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
           <skos:definition xml:lang="en-us">
             The units designation for an Intreval is slightly different than other complexTypes.
             This group is composed of a units name and a URI because in a ReferenceRange parent there can be different units
@@ -3559,9 +3591,9 @@
           <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;/CCDType/definition">
               <rdfs:domain rdf:resource="&mlhim2;/CCDType"/>
-              <rdfs:range rdf:resource="&mlhim2;/Definition"/>
+              <rdfs:range rdf:resource="&mlhim2;/CCDType/Definition"/>
               <skos:definition xml:lang="en-us">
-                
+                Structural definition element for this CCD.
               </skos:definition>
             </owl:ObjectProperty>
           </xs:appinfo>

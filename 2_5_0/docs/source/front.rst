@@ -82,3 +82,4 @@ From Release 2.4.7 on, you may download a zip file from the GitHub repository us
 
 Official release are listed `here <https://github.com/mlhim/specs/releases>`_.
 
+*The ninety and nine are with dreams, content but the hope of the world made new, is the hundredth man who is grimly bent on making those dreams come true. - Edgar Alan Poe*

@@ -45,9 +45,7 @@
     <rdfs:isDefinedBy rdf:datatype="&xs;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
   </owl:Ontology>
 
-  <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/MLHIM">
-    <rdfs:subClassOf rdf:resource="owl:Thing"/>
-  </owl:Class>
+  <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/MLHIM"/>
  
   <!-- Additional XMLSchema datatypes -->
   <rdfs:Datatype rdf:about="&xs;date"/>
