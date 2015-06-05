@@ -89,7 +89,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/DvAnyType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>DvAnyType</rdfs:label>
           <skos:definition xml:lang="en-us">Serves as a common ancestor of all data-types in MLHIM models.</skos:definition>
         </owl:Class>
@@ -1852,7 +1852,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/InvlType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_InvlType.html#InvlType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>InvlType</rdfs:label>
           <skos:definition xml:lang="en-us">
             In the CCD, the modeler creates two restrictions on this complexType. 
@@ -1886,7 +1886,7 @@
       </xs:documentation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/IntervalUnits">
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <skos:definition xml:lang="en-us">
             The units designation for an Intreval is slightly different than other complexTypes.
             This group is composed of a units name and a URI because in a ReferenceRange parent there can be different units
@@ -2002,7 +2002,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/AuditType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AuditType.html#AuditType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>AuditType</rdfs:label>
           <skos:definition xml:lang="en-us">
             AuditType provides a mechanism to identify the who/where/when tracking of instances as they move from 
@@ -2100,7 +2100,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/PartyType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_PartyType.html#PartyType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>PartyType</rdfs:label>
           <skos:definition xml:lang="en-us">
             Description of a party, including an optional external link to data for
@@ -2182,7 +2182,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/AttestationType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AttestationType.html#AttestationType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>AttestationType</rdfs:label>
           <skos:definition xml:lang="en-us">
             Record an attestation by a party of item(s) of record content. The type of
@@ -2310,7 +2310,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/ParticipationType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ParticipationType.html#ParticipationType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>ParticipationType</rdfs:label>
           <skos:definition xml:lang="en-us">
             Model of a participation of a Party (any Actor or Role) in an activity.
@@ -2429,7 +2429,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/ExceptionalValueType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ExceptionalValueType.html#ExceptionalValueType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>ExceptionalValueType</rdfs:label>
           <skos:definition xml:lang="en-us">
             Subtypes are used to indicate why a value is missing (Null) or is outside a
@@ -3060,7 +3060,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/ItemType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ItemType.html#ItemType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>ItemType</rdfs:label>
           <skos:definition xml:lang="en-us">
             The abstract parent of ClusterType and DvAdapterType structural representation types.
@@ -3222,7 +3222,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/EntryType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_EntryType.html#EntryType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>EntryType</rdfs:label>
           <skos:definition xml:lang="en-us">
             The abstract parent of all Entry subtypes. An Entry is the root of a logical
@@ -3577,7 +3577,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/CCDType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CCDType.html#CCDType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250.xsd"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <rdfs:label>CCDType</rdfs:label>
           <skos:definition xml:lang="en-us">
             This is the root node of a Concept Constraint Definition.
