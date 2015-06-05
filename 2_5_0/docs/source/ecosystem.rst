@@ -220,6 +220,8 @@ This core ontology is imported into each reference model ontology.  The referenc
 
 If you want a quick visualization of the ontologies you can use the `WebVOWL <http://vowl.visualdataweb.org/webvowl/index.html>`_ online tool to visualize the `core ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/mlhim2.owl>`_ and the `MLHIM 2.5.0 ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/xmlns/mlhim2/mlhim250.owl>`_ .
 
+This 2.5.0 development version still has a few quirks in the way the ontology components are defined. Once these are worked out, a document describing the mapping process will also be part of this documentation. 
+
 
 
 .. rubric:: Footnotes
