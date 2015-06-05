@@ -222,6 +222,10 @@ If you want a quick visualization of the ontologies you can use the `WebVOWL <ht
 
 This 2.5.0 development version still has a few quirks in the way the ontology components are defined. Once these are worked out, a document describing the mapping process will also be part of this documentation. 
 
+The process for CCD ontologies is essentially the same and a tool will also be proveide to build those from the CCD schema xs:appinfo information. 
+
+This approach has been shown to be much more reliable than building an ontology in a separate file. Plus, it makes automated processing quite easy via tools like the CCD-Gen. 
+
 
 
 .. rubric:: Footnotes
