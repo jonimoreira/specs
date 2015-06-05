@@ -8,8 +8,6 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2" >
 ]>
-
-
 <rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2#"
      xml:base="http://www.mlhim.org/xmlns/mlhim2"
      xmlns:mlhim2='http://www.mlhim.org/xmlns/mlhim2'

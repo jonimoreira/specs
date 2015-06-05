@@ -3,6 +3,9 @@
     See: Issues for planned and resolved changes: https://github.com/mlhim/specs/issues
     Use: 'git log --oneline' for commit messages.
     Added dateTimeStamp as dvtemporal-datetime-stamp.
+    Changed Audit/timestamp to dateTimeStamp.
+    Changed Attestation/committed to dateTimeStamp.
+    Changed Participation start and end to dateTimeStamp.
     
 #Changes from 2.4.6 to 2.4.7  (see the git commit msgs. for details)                     
     Added 'units' capability to DvInterval.
