@@ -6,6 +6,7 @@
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2" >
 ]>
 <rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2#"
      xml:base="http://www.mlhim.org/xmlns/mlhim2"
@@ -17,9 +18,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
 
-    <owl:Ontology xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.mlhim.org/xmlns/mlhim2/mlhim250.owl">
+    <owl:Ontology xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:about="http://www.mlhim.org/xmlns/mlhim2/mlhim250.owl"  xml:lang="en-us">
         <owl:imports rdf:resource="http://www.mlhim.org/mlhim2.owl"/>
         <rdfs:label>MLHIM Release 2.5.0 Reference Model Ontology</rdfs:label>
+        <dc:title>MLHIM Release 2.5.0 Reference Model Ontology</dc:title>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
           This is the Multi-Level Healthcare Information Modelling (MLHIM) project
           reference model ontology - MLHIM Release 2.5.0
@@ -44,7 +46,7 @@
           limitations under the License.
         </dc:description>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timothy W. Cook</dc:creator>
-        
+        <dc:language>en-us</dc:language>
       </owl:Ontology>
       
       
