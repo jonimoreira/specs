@@ -216,9 +216,9 @@ They link the MLHIM structured (XML) data to Semantic Web / Linked Data tools.
 
 The mlhim2.owl file contains a core ontology used to build a basis for metadata and other classes and properties not found in existing ontologies and tools.
 
-This core ontology is imported into each reference model ontology.  The reference model ontologies are built using information from the xs:appinfo elements in the reference model schema.  A tool pyMOE.py can be found in the utils folder that extracts this information and builds the RM ontology.  The ontology file carries the same name as the RM schema, just with the extension replaced with '.owl'. It is located in the 'ontology' folder along with mlhim2.owl. 
+This core ontology is imported into each reference model ontology.  The reference model ontologies are built using information from the xs:appinfo elements in the reference model schema.  A tool, pyMOE.py can be found in the *utils* folder that extracts this information and builds the RM ontology.  The ontology file carries the same name as the RM schema, just with the extension replaced with '.owl'. It is located in the *ontology* folder along with mlhim2.owl. 
 
-If you want a quick visualization you can use the `WebVOWL <http://vowl.visualdataweb.org/webvowl/index.html>`_ online tool to visualize the `core ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/mlhim2.owl>`_ and the `MLHIM 2.5.0 ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/xmlns/mlhim2/mlhim250.owl>`_ .
+If you want a quick visualization of the ontologies you can use the `WebVOWL <http://vowl.visualdataweb.org/webvowl/index.html>`_ online tool to visualize the `core ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/mlhim2.owl>`_ and the `MLHIM 2.5.0 ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/xmlns/mlhim2/mlhim250.owl>`_ .
 
 
 
