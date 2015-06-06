@@ -388,6 +388,18 @@ Both restrictions will have the same element choice and the value is 'fixed' on 
 
 For more information on using this approach `see these tips <http://www.ibm.com/developerworks/webservices/library/ws-tip-null/index.html>`_ 
 
+InvlUnits
+---------
+
+`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_InvlUnits.html#InvlUnits>`_
+
+**Derived from:** n/a 
+
+**Abstract:** False
+
+**Description:** The units designation for an Interval is slightly different than other complexTypes. This complexType is composed of a units name and a URI because in a ReferenceRange parent there can be different units for different ranges. Example: A DvQuantity of temperature can have a range in degrees Fahrenheit and one in degrees Celsius.
+The derived complexType in the CCD has these values fixed by the modeler.
+
 ReferenceRangeType
 ------------------
 

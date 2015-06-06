@@ -1804,22 +1804,22 @@
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:group maxOccurs="1" minOccurs="0" ref="mlhim2:IntervalUnits">
-            <xs:annotation>
-              <xs:documentation xml:lang="en-us"> 
-                Defines the the units for this Interval. 
-              </xs:documentation>
-              <xs:appinfo>
-                <owl:ObjectProperty rdf:about="&mlhim2;/DvIntervalType/units">
-                  <rdfs:domain rdf:resource="&mlhim2;/DvIntervalType"/>
-                  <rdfs:range rdf:resource="&mlhim2;/IntervalUnits"/>
-                  <skos:definition xml:lang="en-us">
-                    Defines the the units for this Interval.     
-                  </skos:definition>
-                </owl:ObjectProperty>
-              </xs:appinfo>
-            </xs:annotation>
-          </xs:group>
+         <xs:element maxOccurs="1"  minOccurs="0" name="interval-units" type="mlhim2:InvlUnits">
+          <xs:annotation>
+            <xs:documentation xml:lang="en-us"> 
+              Defines the the units for this Interval. 
+            </xs:documentation>
+            <xs:appinfo>
+              <owl:ObjectProperty rdf:about="&mlhim2;/DvIntervalType/interval-units">
+                <rdfs:domain rdf:resource="&mlhim2;/DvIntervalType"/>
+                <rdfs:range rdf:resource="&mlhim2;/IntervalUnits"/>
+                <skos:definition xml:lang="en-us">
+                  Defines the the units for this Interval.     
+                </skos:definition>
+              </owl:ObjectProperty>
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
         </xs:sequence>
         <!-- The assert doesn't need the value comparison if CCDs use the fixed attribute. 
           But just in case we want to be sure the interval makes sense. 
@@ -1877,20 +1877,22 @@
     </xs:choice>
   </xs:complexType>
   
-  <xs:group name="IntervalUnits">
+  <xs:complexType name="InvlUnits">
     <xs:annotation>
       <xs:documentation xml:lang="en-us">
         The units designation for an Intreval is slightly different than other complexTypes.
-        This group is composed of a units name and a URI because in a ReferenceRange parent there can be different units
-        for different ranges. Example: A DvQuantity of temperature can have a range in degrees Fahrenheit and one in degrees Celcius.
+        This complexType is composed of a units name and a URI because in a ReferenceRange parent there can be different units
+        for different ranges. Example: A DvQuantity of temperature can have a range in degrees Fahrenheit and one in degrees Celsius.
+        The derived complexType in the CCD has these values fixed by the modeler.
       </xs:documentation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;/IntervalUnits">
           <rdfs:subClassOf rdf:resource="&mlhim2;/mlhim250"/>
           <skos:definition xml:lang="en-us">
-            The units designation for an Intreval is slightly different than other complexTypes.
-            This group is composed of a units name and a URI because in a ReferenceRange parent there can be different units
-            for different ranges. Example: A DvQuantity of temperature can have a range in degrees Fahrenheit and one in degrees Celcius.
+            The units designation for an Interval is slightly different than other complexTypes.
+            This complexType is composed of a units name and a URI because in a ReferenceRange parent there can be different units
+            for different ranges. Example: A DvQuantity of temperature can have a range in degrees Fahrenheit and one in degrees Celsius.
+            The derived complexType in the CCD has these values fixed by the modeler.
           </skos:definition>
         </owl:Class>
       </xs:appinfo>
@@ -1899,7 +1901,7 @@
       <xs:element maxOccurs="1" minOccurs="1" name="units-name" type="xs:string"/>
       <xs:element maxOccurs="1" minOccurs="1" name="units-uri" type="xs:anyURI"/>
     </xs:sequence>
-  </xs:group>
+  </xs:complexType>
   
   <xs:complexType name="ReferenceRangeType">
     <xs:annotation>

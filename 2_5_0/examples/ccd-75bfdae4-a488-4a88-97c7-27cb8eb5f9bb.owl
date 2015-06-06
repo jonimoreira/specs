@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2" >
+]>
+
+
+<rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2#"
+     xml:base="http://www.mlhim.org/xmlns/mlhim2"
+     xmlns:mlhim2='http://www.mlhim.org/xmlns/mlhim2'
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+    <owl:Ontology xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb">
+          <owl:imports rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250.owl"/>
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250"/>
+          <rdfs:label>Testing Implementation (Care)</rdfs:label>
+        </owl:Ontology>
+      
+    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AL">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>AL</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Alabama"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AK">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>AK</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Alaska"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AS">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>AS</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="American Samoa"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AZ">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>AZ</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Arizona"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AR">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>AR</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Arkansas"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#CA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>CA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="California"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#CO">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>CO</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Colorado"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#CT">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>CT</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Connecticut"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#DE">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>DE</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Delaware"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#DC">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>DC</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="District of Columbia"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#FM">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>FM</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Federated States of Micronesia"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#FL">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>FL</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Florida"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#GA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>GA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Georgia"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#GU">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>GU</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Guam"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#HI">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>HI</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Hawaii"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#ID">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>ID</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Idaho"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#IL">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>IL</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Illinois"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#IN">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>IN</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Indiana"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#IA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>IA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Iowa"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#KS">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>KS</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Kansas"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#KY">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>KY</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Kentucky"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#LA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>LA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Louisiana"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#ME">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>ME</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Maine"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MH">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MH</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Marshall Islands"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MD">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MD</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Maryland"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Massachusetts"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MI">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MI</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Michigan"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MN">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MN</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Minnesota"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MS">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MS</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Mississippi"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MO">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MO</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Missouri"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MT">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MT</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Montana"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NE">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>NE</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Nebraska"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NV">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>NV</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Nevada"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NH">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>NH</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="New Hampshire"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NJ">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>NJ</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="New Jersey"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NM">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>NM</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="New Mexico"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NY">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>NY</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="New York"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NC">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>NC</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="North Carolina"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#ND">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>ND</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="North Dakota"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MP">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>MP</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Northern Mariana Islands"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#CM">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>CM</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Northern Mariana Islands"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#OH">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>OH</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Ohio"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#OK">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>OK</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Oklahoma"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#OR">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>OR</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Oregon"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#PA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>PA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Pennsylvania"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#PR">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>PR</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Puerto Rico"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#RI">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>RI</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Rhode Island"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#SC">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>SC</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="South Carolina"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#SD">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>SD</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="South Dakota"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#TN">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>TN</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Tennessee"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#TX">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>TX</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Texas"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#TT">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>TT</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Trust Territory of the Pacific Islands"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>AA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="U.S. Armed Forces&#160;&#8211;&#160;Americas"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AE">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>AE</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="U.S. Armed Forces &#8211;&#160;Europe"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AP">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>AP</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="U.S. Armed Forces &#8211;&#160;Pacific"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#UT">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>UT</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Utah"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#VT">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>VT</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Vermont"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#VI">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>VI</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Virgin Islands"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#VA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>VA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Virginia"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#WA">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>WA</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Washington"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#WV">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>WV</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="West Virginia"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#WI">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>WI</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Wisconsin"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#WY">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
+                        <rdfs:label>WY</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="Wyoming"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-3fa04c94-ea73-4c2e-8081-f706958277cb/dvstring-value#bpm">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-3fa04c94-ea73-4c2e-8081-f706958277cb"/>
+                        <rdfs:label>bpm</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&amp;FirstTimer=0&amp;PageId=ElementDetailsGroup&amp;publicId=2767073&amp;version=1.0"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/dvstring-value#Mercury sphygmomanometer">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da"/>
+                        <rdfs:label>Mercury sphygmomanometer</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="http://noharm.org/lib/downloads/mercury/Accuracy_Alts_Mercury_Sphyg_rev10-09.pdf"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da#Aneroid sphygmomanometer">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da"/>
+                        <rdfs:label>Aneroid sphygmomanometer</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/Sphygmomanometer"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/dvstring-value#Digital">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da"/>
+                        <rdfs:label>Digital</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/7934182"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#%">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>%</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2567635"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#%">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>%</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2732864"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^3">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^3</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2569441"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^5{Cells}/kg">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^5{Cells}/kg</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2725086"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^6">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^6</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2569409"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^6eV">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^6eV</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2569402"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^6{Cells}/kg">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^6{Cells}/kg</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2725088"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^6{pfu}">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^6{pfu}</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2569408"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^6{VP}">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^6{VP}</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2569420"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^7{Cells}/kg">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^7{Cells}/kg</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2718641"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^7{pfu}">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^7{pfu}</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2725133"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^8{pfu}">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^8{pfu}</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2725131"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^9{Cells}/kg">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^9{Cells}/kg</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2725073"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#10^9{pfu}">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>10^9{pfu}</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2725129"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#cGy">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>cGy</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2569067"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#Ci">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>Ci</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2569376"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#dL">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>dL</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2569378"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#eq">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>eq</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2725118"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#g">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>g</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=2567649"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f/dvstring-value#g/d">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f"/>
+                        <rdfs:label>g/d</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/valueMeaningAlternates.do?method=showValueMeaningAlternates&amp;id=3108593"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-23fd71b8-beeb-47c3-9e63-da31357e8a27/dvstring-value#F">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-23fd71b8-beeb-47c3-9e63-da31357e8a27"/>
+                        <rdfs:label>F</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="http://www.thefreedictionary.com/temperature+unit"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-23fd71b8-beeb-47c3-9e63-da31357e8a27/dvstring-value#C">
+                        <rdfs:subPropertyOf rdf:resource="s3m:ct-23fd71b8-beeb-47c3-9e63-da31357e8a27"/>
+                        <rdfs:label>C</rdfs:label>
+                        <rdfs:isDefinedBy rdf:resource="http://www.thefreedictionary.com/temperature+unit"/>
+                      </owl:DatatypeProperty>
+                    
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/CCDType"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <rdfs:label>Testing Implementation (Care)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>        
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-815a4d43-d237-4995-9f74-a902e23c8341">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/CareEntryType"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-128f07d4-33ec-462e-826e-01f7bd0e206f">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvLinkType"/>
+          <rdfs:label>Connected To - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/RO_0002150"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-181b7551-72fb-459a-8d2d-fcf020f3bc1c">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/AuditType"/>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a58bc8eb-4c3b-42fb-a35e-9314e92893dc">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Originating System ID - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-2597a3ca-f92c-40ab-b83c-abe797ed70fa">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/PartyType"/>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvLinkType"/>
+          <rdfs:label>External Reference for Party</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ClusterType"/>
+          <rdfs:label>Address Details (US)</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-5677e6da-33df-44d3-809b-853aba4373ea">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Additional Address Line(s) (US)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-73035503-2b72-4c80-9abc-bdc967198d63">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>City Name (US)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-7f9b5fb6-8cd7-4d09-805d-13c645db49c2">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Common Name / Nickname</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>State Abbreviation (USPS)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Street Number and Name (US)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Telephone Number (US)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Zip Code (US)</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://www.usps.com/"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-24fa9da1-cf56-4103-9dca-3b21b0416539">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ClusterType"/>
+          <rdfs:label>FAD System Location (WGS84)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-5ffee792-a475-4140-a064-677f00559561">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>FAD Latitude (Decimal Format)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-53cfa6c7-29fe-4b4a-90c2-5998eb18bf3f">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>FAD Longitude (Decimal Format)</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-ef4abd55-562c-418f-89c3-f831bf42c33f">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/PartyType"/>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-8501f206-dfd2-4080-be79-34539d0e076b">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/PartyType"/>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-71c3b001-bb04-4479-a11b-1e31194de39c">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ParticipationType"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-04f35974-ea86-4cdd-8d06-fd330402356f">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/PartyType"/>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-3ce6e751-f80e-4caa-84e7-96ae49d82914">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Participation Function</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/spec/%23glance"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f24518e0-7f38-48d6-9d68-d284788293e5">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Participation Mode</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-6ae7730b-60c5-42a8-a8d8-5e96878a1f65">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Generic Protocol ID - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-86b77f15-1c83-48b4-a43f-039193639241">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvLinkType"/>
+          <rdfs:label>Workflow ID - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/IAO_0000178"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-214e1907-665a-4218-ac75-9ab97ee772ef">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/AttestationType"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-77527149-1f87-414c-9af9-a042e5ec2545">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvFileType"/>
+          <rdfs:label>Attestation View</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-b111953a-390f-42e1-a9ef-b2e5e429da64">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvParsableType"/>
+          <rdfs:label>Proof</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-6df8d57d-a5fd-4155-88db-a44b4f0c5ef4">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Attestation Reason</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://usefulinc.com/ns/doap%2523release"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a0a28188-adfc-4e7c-be0f-db0e88c57b84">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/PartyType"/>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f31ba54e-5021-4f21-8a87-86312381f10f">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ClusterType"/>
+          <rdfs:label>Test CareEntry entry-data</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/test_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-62e20405-7908-4116-8662-2dd3bb0e6ea4">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ClusterType"/>
+          <rdfs:label>Test Sub-Cluster</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/test_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-c8b3b872-dcb4-4a44-a386-5c626e116549">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvBooleanType"/>
+          <rdfs:label>Bladder - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2182237%26version%3D1.0"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-831a09c9-ceaf-46e0-a4e1-afcd064880bd">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvBooleanType"/>
+          <rdfs:label>Fever duration: 3 weeks or less - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://bvsms.saude.gov.br/bvs/periodicos/boletim_eletronico_epi_ano04_n04.pdf"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a926d847-3a3e-45c5-af3f-3c55a35aca34">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvCountType"/>
+          <rdfs:label>Heart Rate for Testing</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-3fa04c94-ea73-4c2e-8081-f706958277cb">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>beats per minute</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2767073%26version%3D1.0"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-cac506a0-cbf9-4588-a568-475132b9194a">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvLinkType"/>
+          <rdfs:label>attached to - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/RO_0002371"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Blood Pressure Device (Testing)</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/test_pcts"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-1175b701-2ba4-4c27-955d-4fb2dd08ce47">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvOrdinalType"/>
+          <rdfs:label>Karnofsky Performance Status Score - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2003853%26version%3D4.2"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-e4988004-9897-4880-ae93-a469766537a7">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ReferenceRangeType"/>
+          <rdfs:label>Test ReferenceRange</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-e9e9c3c5-6c34-41ea-b14f-d32e54d87d0e">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvIntervalType"/>
+          <rdfs:label>Gestational Age - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D3192017%26version%3D1.0"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-5423322d-5a1c-4dd8-9518-baaeccf5f8ff">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvCountType"/>
+          <rdfs:label>Number of aiquots - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D3192457%26version%3D1.0"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-149731a0-ac63-47f2-805e-d6cb6e6232ea">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ReferenceRangeType"/>
+          <rdfs:label>Hypotension for 1 year old - Testing</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-446e08fe-2868-4c56-baef-75a1be4f974d">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvIntervalType"/>
+          <rdfs:label>Hypotension for 1 year old - Testing</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-a2fc9034-7f68-4206-a8df-2fdb5bda814f">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Unit - Example</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search%3FdataElementDetails%3D9%26tabClicked%3D0%26PageId%3DValidValuesGroup"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-bbedbac7-63c8-4514-a83f-b3663303458f">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvQuantityType"/>
+          <rdfs:label>Body Temperature - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2644401%26version%3D1.0"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-23fd71b8-beeb-47c3-9e63-da31357e8a27">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvStringType"/>
+          <rdfs:label>Temperature</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-5fa7a138-4734-4b84-99f8-4cee79d248ee">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvRatioType"/>
+          <rdfs:label>Test Ratio</rdfs:label>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+    <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-de024dcf-f004-4dcc-a367-25df22ffe89e">
+          <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/DvTemporalType"/>
+          <rdfs:label>Minutes post injection start time - Testing</rdfs:label>
+          <rdfs:isDefinedBy rdf:resource="https://cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D3916051%26version%3D1.0"/>
+          <mlhim2:ctOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ccd-75bfdae4-a488-4a88-97c7-27cb8eb5f9bb"/>        
+        </owl:Class>
+      
+</rdf:RDF>

@@ -3,11 +3,9 @@
 """
  pyMOE.py - Python MLHIM Ontology Extractor
 
-A utility to extract the ontology from the RM schema.
-Looks for a single XML Schema doc ../schema/mlhim250.xsd.
-Produces a file ../ontology/mlhim250.owl.
-The output file is an RDF document with an ontology defined based on the extracted xs:appinfo information.
-TODO: make the file names parameters for future versions.
+A utility to extract the ontology from MLHIM schemas.
+Looks for files with the xsd extension in the directory passed from the commandline. Relative or absolute directories are okay.
+Produces an ontology file for each schema using the same name as the input file but replaces the xsd extension with owl.
 
     Copyright (C) 2015 Timothy W. Cook tim@mlhim.org
 
@@ -30,7 +28,15 @@ import sys
 import re
 from lxml import etree
 
-def main():
+
+def getfiles(path):
+    #returns a list of all files in a directory
+    for file in os.listdir(path):
+        if os.path.isfile(os.path.join(path, file)):
+            yield file
+
+
+def main(path):
     rootdir = '.'
     nsDict={'xs':'http://www.w3.org/2001/XMLSchema',
             'rdf':'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
@@ -39,14 +45,7 @@ def main():
             'owl':'http://www.w3.org/2002/07/owl#',
             'skos':'http://www.w3.org/2004/02/skos/core#',
             'mlhim2':'http://www.mlhim.org/xmlns/mlhim2'}
-
-    parser = etree.XMLParser(ns_clean=True, recover=True)
-    about = etree.XPath("//xs:complexType/xs:annotation/xs:appinfo/rdf:Description", namespaces=nsDict)
-    md = etree.XPath("//rdf:RDF/rdf:Description", namespaces=nsDict)
-    src = open('../schema/mlhim250.xsd', 'r')
-    dest = open('../ontology/mlhim250.owl', 'w')
-
-    dest.write("""<?xml version="1.0" encoding="UTF-8"?>
+    header = """<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -68,48 +67,74 @@ def main():
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
 
-""")
+"""
 
-    print('Processing RM schema: mlhim250.xsd \n')
-    tree = etree.parse(src, parser)
-    root = tree.getroot()
+    parser = etree.XMLParser(ns_clean=True, recover=True)
+    about = etree.XPath("//xs:complexType/xs:annotation/xs:appinfo/rdf:Description", namespaces=nsDict)
+    md = etree.XPath("//rdf:RDF/rdf:Description", namespaces=nsDict)
 
-    # Ontology
-    print('Writing ontology header. \n')
-    onto = etree.XPath("//xs:appinfo/owl:Ontology", namespaces=nsDict)
-    owl = onto(root)
-    for x in owl:
-        dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
+    files = getfiles(path)
 
-    # DatatypeProperty
-    print('Writing DatatypeProperties. \n')
-    onto = etree.XPath("//xs:appinfo/owl:DatatypeProperty", namespaces=nsDict)
-    owl = onto(root)
-    for x in owl:
-        dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
+    for f in files:
+        if f[-3:] != 'xsd':
+            continue
 
-    # ObjectProperty
-    print('Writing ObjectProperties. \n')
-    onto = etree.XPath("//xs:appinfo/owl:ObjectProperty", namespaces=nsDict)
-    owl = onto(root)
-    for x in owl:
-        dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
+        owlfile = path+"/"+f[:-3] + "owl"
+        print("Creating: ", owlfile + " from: ",path+"/"+f)
 
-    # Class
-    print('Writing Classes. \n')
-    onto = etree.XPath("//xs:appinfo/owl:Class", namespaces=nsDict)
-    owl = onto(root)
-    for x in owl:
-        dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
+        src = open(path+"/"+f, 'r')
+
+        dest = open(owlfile, 'w')
+
+        dest.write(header)
+
+        tree = etree.parse(src, parser)
+        root = tree.getroot()
+
+        # Ontology
+        print('Writing ontology header. \n')
+        onto = etree.XPath("//xs:appinfo/owl:Ontology", namespaces=nsDict)
+        owl = onto(root)
+        for x in owl:
+            dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
+
+        # DatatypeProperty
+        print('Writing DatatypeProperties. \n')
+        onto = etree.XPath("//xs:appinfo/owl:DatatypeProperty", namespaces=nsDict)
+        owl = onto(root)
+        for x in owl:
+            dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
+
+        # ObjectProperty
+        print('Writing ObjectProperties. \n')
+        onto = etree.XPath("//xs:appinfo/owl:ObjectProperty", namespaces=nsDict)
+        owl = onto(root)
+        for x in owl:
+            dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
+
+        # Class
+        print('Writing Classes. \n')
+        onto = etree.XPath("//xs:appinfo/owl:Class", namespaces=nsDict)
+        owl = onto(root)
+        for x in owl:
+            dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
 
 
-    dest.write('</rdf:RDF>\n')
-    src.close()
-    dest.close()
+        dest.write('</rdf:RDF>\n')
+        src.close()
+        dest.close()
 
+    return
 
 if __name__ == '__main__':
-    main()
-    print("\n\nFinished!!!!! \nCreated: schema/mlhim250.owl \n\n")
+
+    if len(sys.argv) < 2:
+        print("\nInclude the path of where to look for the schemas.\n")
+        sys.exit()
+
+    path = sys.argv[1]
+
+    main(path)
+    print("\n\nFinished!!!!! \n\n")
     sys.exit(0)
 

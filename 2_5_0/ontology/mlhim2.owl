@@ -6,6 +6,7 @@
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2" >
 ]>
 <rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2"
   xml:base="http://www.mlhim.org/xmlns/mlhim2"
@@ -45,6 +46,18 @@
     <rdfs:isDefinedBy rdf:datatype="&xs;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
   </owl:Ontology>
 
+  <!-- MLHIM DatatypeProperties -->
+
+  <!-- MLHIM ObjectProperties -->
+  <owl:ObjectProperty rdf:ID="http://mlhim.org/xmlns/mlhim2/ctOf">
+    <rdfs:label>complexTypeOf</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      Indicates that this PcT is a component of the CCD named in the resource value.
+      PcTs can appear in many CCDs. PcTs are subclasses of their RM complexTypes.
+    </skos:definition>
+  </owl:ObjectProperty>
+  
+  <!-- MLHIM Classes -->
   <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/MLHIM"/>
  
   <!-- Additional XMLSchema datatypes -->

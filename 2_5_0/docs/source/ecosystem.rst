@@ -208,7 +208,7 @@ For deeper details on using MLHIM in various scenarios you should refer to the `
 
 Two projects that may be of particular interest is `adding semantics to FHIR models <https://github.com/mlhim/ichi2015_fhir_semantics>`_ and `adding semantics to HL7v2 messages <https://github.com/mlhim/hl7v2_semantics>`_
 
-
+----------
 Ontologies
 ----------
 The operational ontologies are a key part of the semantic interoperability schema of MLHIM. 
@@ -216,13 +216,23 @@ They link the MLHIM structured (XML) data to Semantic Web / Linked Data tools.
 
 The mlhim2.owl file contains a core ontology used to build a basis for metadata and other classes and properties not found in existing ontologies and tools.
 
-This core ontology is imported into each reference model ontology.  The reference model ontologies are built using information from the xs:appinfo elements in the reference model schema.  A tool, pyMOE.py can be found in the *utils* folder that extracts this information and builds the RM ontology.  The ontology file carries the same name as the RM schema, just with the extension replaced with '.owl'. It is located in the *ontology* folder along with mlhim2.owl. 
+This core ontology is imported into each reference model ontology.  The reference model ontologies are built using information from the xs:appinfo elements in the reference model schema.  
+
+CCD ontologies are built from the xs:appinfo element information in the same way as the RM.
+
+Building Ontologies
+-------------------
+
+A tool, pyMOE.py can be found in the *utils* folder that extracts this information and builds the ontology.  The ontology file carries the same name as the schema, just with the extension replaced with '.owl'. It is located in the same folder along with schema (RM or CCD). 
+
+Viewing Ontologies
+------------------
 
 If you want a quick visualization of the ontologies you can use the `WebVOWL <http://vowl.visualdataweb.org/webvowl/index.html>`_ online tool to visualize the `core ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/mlhim2.owl>`_ and the `MLHIM 2.5.0 ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/xmlns/mlhim2/mlhim250.owl>`_ .
 
-This 2.5.0 development version still has a few quirks in the way the ontology components are defined. Once these are worked out, a document describing the mapping process will also be part of this documentation. 
+**Development Notes:**
 
-The process for CCD ontologies is essentially the same and a tool will also be proveide to build those from the CCD schema xs:appinfo information. 
+This 2.5.0 development version still has a few quirks in the way the ontology components are defined. Once these are worked out, a document describing the mapping process will also be part of this documentation. 
 
 This approach has been shown to be much more reliable than building an ontology in a separate file. Plus, it makes automated processing quite easy via tools like the CCD-Gen. 
 

@@ -6,6 +6,7 @@
     Changed Audit/timestamp to dateTimeStamp.
     Changed Attestation/committed to dateTimeStamp.
     Changed Participation start and end to dateTimeStamp.
+    Added a complexType for interval-units.
     
 #Changes from 2.4.6 to 2.4.7  (see the git commit msgs. for details)                     
     Added 'units' capability to DvInterval.

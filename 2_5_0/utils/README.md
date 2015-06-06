@@ -1,1 +1,1 @@
-Utility scripts (Python, XSLT, etc.) for manipulating schemas and other artifacts.
+Utility scripts (Python, XSLT, etc.) for manipulating schemas, CCDs and other artifacts.
