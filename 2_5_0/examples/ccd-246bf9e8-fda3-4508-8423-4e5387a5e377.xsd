@@ -438,7 +438,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AL">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AL</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Alabama"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Alabama"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -449,7 +449,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AK">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AK</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Alaska"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Alaska"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -460,7 +460,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AS">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AS</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="American Samoa"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#American%20Samoa"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -471,7 +471,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AZ">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AZ</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Arizona"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Arizona"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -482,7 +482,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AR">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AR</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Arkansas"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Arkansas"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -493,7 +493,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#CA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>CA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="California"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#California"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -504,7 +504,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#CO">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>CO</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Colorado"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Colorado"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -515,7 +515,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#CT">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>CT</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Connecticut"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Connecticut"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -526,7 +526,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#DE">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>DE</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Delaware"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Delaware"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -537,7 +537,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#DC">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>DC</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="District of Columbia"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#District%20of%20Columbia"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -548,7 +548,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#FM">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>FM</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Federated States of Micronesia"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Federated%20States%20of%20Micronesia"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -559,7 +559,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#FL">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>FL</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Florida"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Florida"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -570,7 +570,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#GA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>GA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Georgia"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Georgia"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -581,7 +581,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#GU">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>GU</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Guam"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Guam"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -592,7 +592,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#HI">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>HI</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Hawaii"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Hawaii"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -603,7 +603,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#ID">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>ID</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Idaho"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Idaho"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -614,7 +614,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#IL">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>IL</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Illinois"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Illinois"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -625,7 +625,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#IN">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>IN</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Indiana"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Indiana"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -636,7 +636,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#IA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>IA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Iowa"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Iowa"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -647,7 +647,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#KS">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>KS</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Kansas"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Kansas"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -658,7 +658,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#KY">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>KY</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Kentucky"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Kentucky"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -669,7 +669,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#LA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>LA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Louisiana"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Louisiana"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -680,7 +680,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#ME">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>ME</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Maine"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Maine"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -691,7 +691,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MH">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MH</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Marshall Islands"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Marshall%20Islands"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -702,7 +702,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MD">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MD</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Maryland"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Maryland"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -713,7 +713,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Massachusetts"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Massachusetts"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -724,7 +724,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MI">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MI</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Michigan"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Michigan"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -735,7 +735,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MN">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MN</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Minnesota"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Minnesota"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -746,7 +746,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MS">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MS</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Mississippi"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Mississippi"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -757,7 +757,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MO">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MO</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Missouri"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Missouri"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -768,7 +768,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MT">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MT</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Montana"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Montana"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -779,7 +779,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NE">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>NE</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Nebraska"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Nebraska"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -790,7 +790,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NV">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>NV</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Nevada"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Nevada"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -801,7 +801,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NH">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>NH</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="New Hampshire"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#New%20Hampshire"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -812,7 +812,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NJ">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>NJ</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="New Jersey"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#New%20Jersey"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -823,7 +823,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NM">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>NM</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="New Mexico"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#New%20Mexico"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -834,7 +834,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NY">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>NY</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="New York"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#New%20York"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -845,7 +845,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#NC">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>NC</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="North Carolina"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#North%20Carolina"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -856,7 +856,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#ND">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>ND</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="North Dakota"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#North%20Dakota"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -867,7 +867,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#MP">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>MP</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Northern Mariana Islands"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Northern%20Mariana%20Islands"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -878,7 +878,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#CM">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>CM</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Northern Mariana Islands"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Northern%20Mariana%20Islands"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -889,7 +889,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#OH">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>OH</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Ohio"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Ohio"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -900,7 +900,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#OK">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>OK</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Oklahoma"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Oklahoma"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -911,7 +911,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#OR">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>OR</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Oregon"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Oregon"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -922,7 +922,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#PA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>PA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Pennsylvania"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Pennsylvania"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -933,7 +933,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#PR">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>PR</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Puerto Rico"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Puerto%20Rico"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -944,7 +944,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#RI">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>RI</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Rhode Island"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Rhode%20Island"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -955,7 +955,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#SC">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>SC</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="South Carolina"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#South%20Carolina"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -966,7 +966,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#SD">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>SD</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="South Dakota"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#South%20Dakota"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -977,7 +977,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#TN">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>TN</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Tennessee"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Tennessee"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -988,7 +988,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#TX">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>TX</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Texas"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Texas"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -999,7 +999,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#TT">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>TT</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Trust Territory of the Pacific Islands"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Trust%20Territory%20of%20the%20Pacific%20Islands"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1010,7 +1010,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="U.S. Armed Forces – Americas"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#U.S.%20Armed%20Forces%20–%20Americas"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1021,7 +1021,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AE">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AE</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="U.S. Armed Forces – Europe"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#U.S.%20Armed%20Forces%20–%20Europe"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1032,7 +1032,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AP">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AP</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="U.S. Armed Forces – Pacific"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#U.S.%20Armed%20Forces%20–%20Pacific"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1043,7 +1043,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#UT">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>UT</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Utah"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Utah"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1054,7 +1054,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#VT">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>VT</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Vermont"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Vermont"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1065,7 +1065,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#VI">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>VI</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Virgin Islands"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Virgin%20Islands"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1076,7 +1076,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#VA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>VA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Virginia"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Virginia"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1087,7 +1087,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#WA">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>WA</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Washington"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Washington"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1098,7 +1098,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#WV">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>WV</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="West Virginia"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#West%20Virginia"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1109,7 +1109,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#WI">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>WI</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Wisconsin"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Wisconsin"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1120,7 +1120,7 @@
                       <owl:DatatypeProperty rdf:about="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#WY">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>WY</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="Wyoming"/>
+                        <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations#Wyoming"/>
                       </owl:DatatypeProperty>
                     </xs:appinfo>
                   </xs:annotation>
@@ -1676,7 +1676,7 @@ Examples:
                   <xs:annotation>
                     <xs:appinfo>
                       <owl:DatatypeProperty
-                        rdf:about="&mlhim2;/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/dvstring-value#Mercury sphygmomanometer">
+                        rdf:about="&mlhim2;/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/dvstring-value#Mercury%20sphygmomanometer">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da"/>
                         <rdfs:label>Mercury sphygmomanometer</rdfs:label>
                         <rdfs:isDefinedBy
@@ -1690,7 +1690,7 @@ Examples:
                   <xs:annotation>
                     <xs:appinfo>
                       <owl:DatatypeProperty
-                        rdf:about="&mlhim2;/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/dvstring-value#Aneroid sphygmomanometer">
+                        rdf:about="&mlhim2;/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/dvstring-value#Aneroid%20sphygmomanometer">
                         <rdfs:subPropertyOf rdf:resource="&mlhim2;/ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da"/>
                         <rdfs:label>Aneroid sphygmomanometer</rdfs:label>
                         <rdfs:isDefinedBy rdf:resource="http://en.wikipedia.org/wiki/Sphygmomanometer"/>

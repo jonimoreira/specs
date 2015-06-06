@@ -6,10 +6,10 @@
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2/" >
 ]>
-<rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2"
-  xml:base="http://www.mlhim.org/xmlns/mlhim2"
+<rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2/"
+  xml:base="http://www.mlhim.org/xmlns/mlhim2/"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -17,7 +17,7 @@
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#">
   
-  <owl:Ontology rdf:about="http://www.mlhim.org/xmlns/mlhim2.owl"  xml:lang="en-us">
+  <owl:Ontology rdf:about="&mlhim2;mlhim2.owl"  xml:lang="en-us">
     <dc:description rdf:datatype="&xs;string">
       This is the Multi-Level Healthcare Information Modelling (MLHIM) project root ontology.
       All MLHIM Reference Models and CCDs are subclasses of the MLHIM class (defined below) and must import this ontology.
@@ -49,7 +49,7 @@
   <!-- MLHIM DatatypeProperties -->
 
   <!-- MLHIM ObjectProperties -->
-  <owl:ObjectProperty rdf:ID="http://mlhim.org/xmlns/mlhim2/ctOf">
+  <owl:ObjectProperty rdf:ID="&mlhim2;ctOf">
     <rdfs:label>complexTypeOf</rdfs:label>
     <skos:definition xml:lang="en-us">
       Indicates that this PcT is a component of the CCD named in the resource value.
@@ -58,7 +58,7 @@
   </owl:ObjectProperty>
   
   <!-- MLHIM Classes -->
-  <owl:Class rdf:about="http://www.mlhim.org/xmlns/mlhim2/MLHIM"/>
+  <owl:Class rdf:about="&mlhim2;MLHIM"/>
  
   <!-- Additional XMLSchema datatypes -->
   <rdfs:Datatype rdf:about="&xs;date"/>
