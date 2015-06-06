@@ -48,7 +48,7 @@ A Valid CCD Must:
     <xs:complexType name='ct-8c177dbd-c25e-4908-bffa-cdcb5c0e38e6' xml:lang='en-US'>
 
 * publish a global element for each complexType where a substitutionGroup is required [#f3]_. The element **MUST** be defined using the same UUID as the complexType with the 'ct-' prefix replaced with 'el-'.
-* Include the reference model schema from www.mlhim.org using the appropriately defined namespace. Example for release 2.4.7 and later releases, MLHIM uses the namespace http://www.mlhim.org/xmlns/mlhim2 with the standard prefix of mlhim2 [#f4]_ ::
+* Include the reference model schema from www.mlhim.org using the appropriately defined namespace. Example for release 2.5.0 and later releases, MLHIM uses the namespace http://www.mlhim.org/xmlns/mlhim2/ with the standard prefix of mlhim2 [#f4]_ ::
 
   <xs:element name='el-8c177dbd-c25e-4908-bffa-cdcb5c0e3888' substitutionGroup='mlhim2:DvAdapter-value' type='mlhim2:ct-8c177dbd-c25e-4908-bffa-cdcb5c0e3888'/>
 
@@ -108,9 +108,9 @@ The world of data exchange is composed of two primary players; *data providers* 
 
 Adding the semantics to the model allows all of the meaning of the data to be in one known location. Each data instance has a pointer to its parent CCD. Example::
 
-    xsi:schemaLocation='http://www.mlhim.org/xmlns/mlhim2 http://www.ccdgen.com/ccdlib/ccd-00605c3e-cd14-492e-9891-6ad3ad26230e.xsd'>    
+    xsi:schemaLocation='http://www.mlhim.org/xmlns/mlhim2/ http://www.ccdgen.com/ccdlib/ccd-00605c3e-cd14-492e-9891-6ad3ad26230e.xsd'>    
 
-this example from a data instance says that the schema in the namespace *http://www.mlhim.org/xmlns/mlhim2* is located on the CCD-Gen and is named *ccd-00605c3e-cd14-492e-9891-6ad3ad26230e.xsd*. Typically CCDs are located locally and an XML Catalog is used to resolve these locations. 
+this example from a data instance says that the schema in the namespace *http://www.mlhim.org/xmlns/mlhim2/* is located on the CCD-Gen and is named *ccd-00605c3e-cd14-492e-9891-6ad3ad26230e.xsd*. Typically CCDs are located locally and an XML Catalog is used to resolve these locations. 
 
 The first part of the semantics describes the model itself. This is accomplished using the DCMI metadata elements. See the example above in Figure 2. 
 
@@ -123,7 +123,7 @@ Taking a *simplistic* example CCD (the sequence of appearance of the complexType
       </xs:documentation>
       <xs:appinfo>
         <rdf:Description rdf:about='mlhim2:ct-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680'>
-          <rdfs:subClassOf rdf:resource='mlhim2:DvLinkType'/>
+          <rdfs:subClassOf rdf:resource='&mlhim2;DvLinkType'/>
           <rdfs:isDefinedBy rdf:resource='http://www.mlhim.org/generic_pcts'/>
           <rdfs:label>Test DvLink</rdfs:label>
         </rdf:Description>

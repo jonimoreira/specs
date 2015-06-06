@@ -59,12 +59,12 @@ What is in the Reference Model is the superset of all CCDs. Pluggable complexTyp
 For this reason, the semantic links for PcTs are directly expressed in an xs:appinfo section in each PcT. This approach lends itself very well to the creation of RDF triples from this information. For example::
 
   <xs:appinfo>
-   <rdf:Description rdf:about='http://www.mlhim.org/xmlns/mlhim2/ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'>
+   <rdf:Description rdf:about='&mlhim2;ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'>
     <rdfs:isDefinedBy rdf:resource='http%3A//purl.obolibrary.org/obo/RO_0002371'/>
    </rdf:Description>
   </xs:appinfo>
 
-In this example the subject is http://www.mlhim.org/xmlns/mlhim2/ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4 the predicate is rdfs:isDefinedBy and the object is http%3A//purl.obolibrary.org/obo/RO_0002371   
+In this example the subject is &mlhim2;ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4 the predicate is rdfs:isDefinedBy and the object is http%3A//purl.obolibrary.org/obo/RO_0002371   
 
 Every xs:appinfo section must begin with the rdf:Description element and have the rdf:about attribute to define the subject, as the containing complexType. This is then followed by one or more predicate/object components. The predicates can be from any vocabulary/terminology. Just be certain that the namespace prefix is correctly defined in the CCD header. The CCD-Gen defines common namespaces by default but others may be added as needed. Also be certain that any URLs are properly encoded so that they will be valid inside the CCD. 
 RDF triples are a cornerstone of the semantic web. For more information see this tutorial. Of particular interest here is the section titled; Introducing RDF/XML. RDF/XML is one of the syntaxes used to describe semantic links and it is what we use in MLHIM. Another popular syntax you may see is called Turtle. 
@@ -73,7 +73,7 @@ Implementations
 ----------------
 It is the intent of the MLHIM community to maintain implementations and documentation in all major programming languages. Volunteers to manage these are welcome. 
 **XML Schema**
-The reference implementation is expressed in XML Schema 1.1. Each release package contains the reference model schema as well as this and other documentation. The release and current development schemas live at the versioned link on MLHIM.org. For example 2.5.0 is at: http://www.mlhim.org/xmlns/mlhim2/2_5_0/mlhim250.xsd  A full release is available from GitHub. The previous release is `2.4.7 <https://github.com/mlhim/specs/releases/tag/2.4.7-Release>`_ 
+The reference implementation is expressed in XML Schema 1.1. Each release package contains the reference model schema as well as this and other documentation. The release and current development schemas live at the versioned link on MLHIM.org. For example 2.5.0 is at: http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd  A full release is available from GitHub. The previous release is `2.4.7 <https://github.com/mlhim/specs/releases/tag/2.4.7-Release>`_ 
 
 **Best Practices**
 The concept of best practices for modeling and for implementation is an evolving set of results. To accommodate new items of interest under this heading we are using the MLHIM specs Wiki. See the table of contents here: https://github.com/mlhim/specs/wiki/1.-Best-Practices 
