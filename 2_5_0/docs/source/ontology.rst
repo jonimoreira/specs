@@ -58,7 +58,7 @@ There are several sub-categories of query responses. Those that immediately come
 
 OWL Modeling
 ============
-Each of these concepts must be converted to OWL DL syntax using the RL profile so that they can be used by query engines and reasoners to provide answers to questions and insights about connections not easily seen by people.
+Each of these concepts must be converted to OWL using the `RL profile <http://www.w3.org/TR/owl2-profiles/#OWL_2_RL>`_ so that they can be used by query engines and reasoners to provide answers to questions and insights about connections not easily seen by people.
 
 
 
