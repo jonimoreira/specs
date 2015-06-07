@@ -40,7 +40,7 @@ A set of selected components from the RM that represent constraints on the RM co
 
 Instance
 --------
-A set of data items that conforms to a CCD to represent and instance of that concept.
+A set of data items that conforms to a CCD to represent an instance of that concept.
 
 
 UI View
