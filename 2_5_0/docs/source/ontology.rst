@@ -41,14 +41,13 @@ RM
 --
 Reference Model
 
-A specific implementation of components to provide structural integrity for a domain concept. 
-Some are mandatory in CCDs and some are optional.
+A specific implementation of components (CCMs) to provide structural integrity for a domain concept. Some are mandatory in CCDs and some are optional.
 
 CCM
 ---
 Core Concept Model
 
-A set of composable concept models contained in a reference model. 
+A composable model contained in a reference model. A CCM represents a specific core type of component that further contains elements with base datatypes and/or other CCMs to define its structure. 
 
 
 CCD
