@@ -53,6 +53,8 @@ There are multiple UI Views:
 
 There may be many versions of each of those view types. These are application specific models. 
 
+There are several sub-categories of query responses. Those that immediately come to mind are from either a query language (SQL, SPARQL, XQuery, JSONiq, etc.) and results from other types of analysis such as CDSS engines and OWL reasoners. 
+
 
 OWL Modeling
 ============
