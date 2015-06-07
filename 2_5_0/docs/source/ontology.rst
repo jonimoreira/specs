@@ -65,18 +65,18 @@ Pluggable Concept Model
 The name given to a CCM that has been constrained for use in a CCD. Through the constraints, a PCM defines a single concept based on syntactic data constraints as well as specified semantics. It is *pluggable* because it can be reused in multiple CCDs. 
 
 
-Instance
---------
+DataInstance
+------------
 A set of data items that conforms to a CCD to represent an instance of that concept. 
 
-ValidInstance
--------------
-Subclass of Instance.
+ValidDataInstance
+-----------------
+Subclass of DataInstance.
 A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data values are valid according to the CCD constraints.
 
-InvalidInstance
----------------
-Subclass of Instance.
+InvalidDataInstance
+-------------------
+Subclass of DataInstance.
 A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data values are **NOT** valid according to the CCD constraints. An InvalidInstance must contain one or more children of an Exception.
 
 Exception
@@ -84,17 +84,6 @@ Exception
 Indicates that some data is outside of the parameters defined by the CCD. 
 
 
-UI View
--------
-There are multiple UI Views:
-
-* Form
-* View
-* Query Response
-
-There may be many versions of each of those view types. These are application specific models. 
-
-There are several sub-categories of query responses. Those that immediately come to mind are from either a query language (SQL, SPARQL, XQuery, JSONiq, etc.) and results from other types of analysis such as CDSS engines and OWL reasoners. 
 
 ============
 OWL Modeling
@@ -122,9 +111,9 @@ The TBox contains the classes defined by MLHIM 2.x.
     * CCM
     * CCD
     * PCM
-    * Instance
-        * ValidInstance
-        * InvalidInstance
+    * DataInstance
+        * ValidDataInstance
+        * InvalidDataInstance
     * Exception
 
     
