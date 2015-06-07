@@ -67,7 +67,7 @@ There may be many versions of each of those view types. These are application sp
 
 There are several sub-categories of query responses. Those that immediately come to mind are from either a query language (SQL, SPARQL, XQuery, JSONiq, etc.) and results from other types of analysis such as CDSS engines and OWL reasoners. 
 
-
+============
 OWL Modeling
 ============
 Each of these concepts must be converted to OWL using the `RL profile <http://www.w3.org/TR/owl2-profiles/#OWL_2_RL>`_ so that they can be used by query engines and reasoners to provide answers to questions and insights about connections not easily seen by people. 
@@ -76,10 +76,15 @@ The serialization format is RDF/XML due to the ubiquity of XML throughout comput
 
 The RL profile was chosen due to its aim at applications that require scalable reasoning without sacrificing too much expressive power. The subset defined in RL is designed to be used for rule based processing and therefore lends itself well to CDSS. 
 
+An ontology can be broadly defined by two types of components: entities and descriptors. Entities are the main body of the ontology and include classes, properties, instances and rules. Entities are usually sub-grouped into boxes:
 
-----
+    * The TBox contains intensional knowledge, or the properties of an entity required to identify it.
+    * The ABox contains extensional knowledge, and describes knowledge specific to the domain of interest.
+    * The RBox contains the rule axioms defining the knowledge.
+
+
 TBox
-----
+====
 The TBox contains the classes defined by MLHIM.
 
 
@@ -94,14 +99,13 @@ A specific version of the MLHIM reference model.
 
 
 
-----
 ABox
-----
+====
+
 The ABox contains the instances defined by MLHIM.
 
 
-----
 RBox
-----
+====
 The RBox contains the rules defined by MLHIM.
 
