@@ -259,6 +259,8 @@ DvFileType
 
 **Description:** A type to use for encapsulated content (aka. files) for image, audio and other media types with a defined MIME type. This type provides a choice of embedding the content into the data or using a URL to point to the content. 
 
+DvEncapsulated and its children were consolidated into this one concept and implemented as one complexType to represent any type file based artifact.
+
 DvOrderedType
 -------------
 
