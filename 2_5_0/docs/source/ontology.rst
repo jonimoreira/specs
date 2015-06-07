@@ -42,7 +42,7 @@ RM
 --
 Reference Model
 
-A specific implementation of components (CCMs) to provide structural integrity for a domain concept. Some are mandatory in CCDs and some are optional.
+A set of components (CCMs) to provide structural integrity for a domain concept. Some CCMs are mandatory in CCDs and some are optional.
 
 CCM
 ---
