@@ -32,11 +32,11 @@ MLHIM is by definition and name a multi-level modeling approach.  This means tha
 Model Levels
 ------------
 
-MLHIM
+MLHIM2
 -----
 Multi-Level Healthcare Information Modeling
 
-The root concept. The abstract idea of MLHIM.
+The root concept. The abstract idea of MLHIM 2.x.
 
 RM
 --
@@ -114,23 +114,24 @@ An ontology can be broadly defined by two types of components: entities and desc
 
 TBox
 ====
-The TBox contains the classes defined by MLHIM.
+The TBox contains the classes defined by MLHIM 2.x.
 
 
-MLHIM
------
-The root class of all MLHIM classes. This is the subclass of owl:Thing
+    * MLHIM2
+    * RM
+    * CCM
+    * CCD
+    * PCM
+    * Instance
+        * ValidInstance
+        * InvalidInstance
+    * Exception
 
-RM(version)
------------
-A specific version of the MLHIM reference model.
-
-
+    
 
 
 ABox
 ====
-
 The ABox contains the instances defined by MLHIM.
 
 
