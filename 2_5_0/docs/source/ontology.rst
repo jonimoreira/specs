@@ -4,10 +4,11 @@ Ontological Modeling of MLHIM
 
 Mission
 =======
-The mission of MLHIM is to provide a basis for federated, interlinked knowledge transfer with the ability to test for data validity and without the loss of semantics.
+The mission of MLHIM is to provide a basis for distributed definitions of interlinked knowledge with the ability to transfer and then test for data validity and without the loss of the original semantics.
 
-Reasoning
----------
+Reasoning for the Need
+----------------------
+
 Current approaches to data exchange is in a flat format and without computable semantics. The semantics are typically locked up in the persistence structure (database, etc.) and the source code of the application capturing and processing the data. These semantics cannot be shared with other potential users of the data. 
 
 Mapping and integration processes typically lose semantics or worse; confuse semantics of the data as it is shared and reused downstream. This makes decision support impossible or even creates disastrous situations in domains where lives are at risk. 
