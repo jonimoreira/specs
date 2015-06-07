@@ -54,13 +54,14 @@ CCD
 ---
 Concept Constraint Definition
 
-A set of selected components from the RM that represent constraints on the RM components in order to represent a domain concept.
+A set of selected CCMs from the RM that are constraints on the RM components in order to represent a domain concept. Therefore a CCD is composed of PCMs. In the implementation language there may be additional syntactic conventions required. 
+
 
 PCM
 ---
 Pluggable Concept Model
 
-The name given to a CCM that has been constrained for use in a CCD. Through the constraints it defines a single concept based on syntactic data constraints as well as specified semantics. It is *pluggable* because it can be reused in multiple CCDs. 
+The name given to a CCM that has been constrained for use in a CCD. Through the constraints, a PCM defines a single concept based on syntactic data constraints as well as specified semantics. It is *pluggable* because it can be reused in multiple CCDs. 
 
 
 Instance
