@@ -44,6 +44,12 @@ Reference Model
 A specific implementation of components to provide structural integrity for a domain concept. 
 Some are mandatory in CCDs and some are optional.
 
+CCM
+---
+Core Concept Model
+
+A set of composable concept models contained in a reference model. 
+
 CCD
 ---
 Concept Constraint Definition
