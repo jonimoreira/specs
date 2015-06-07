@@ -51,7 +51,7 @@
 
   <!-- MLHIM ObjectProperties -->
   <owl:ObjectProperty rdf:ID="&mlhim2;ctOf">
-    <rdfs:label>complexTypeOf</rdfs:label>
+    <rdfs:label xml:lang="en-us">complexTypeOf</rdfs:label>
     <skos:definition xml:lang="en-us">
       Indicates that this PcT is a component of the CCD named in the resource value.
       PcTs can appear in many CCDs. PcTs are subclasses of their RM complexTypes.
@@ -59,17 +59,19 @@
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:ID="&mlhim2;hasCT">
-    <rdfs:label>hasComplexType</rdfs:label>
+    <rdfs:label xml:lang="en-us">hasComplexType</rdfs:label>
     <skos:definition xml:lang="en-us">
       Indicates that this element refers to an element with a type attribute of this complexType name.
     </skos:definition>
   </owl:ObjectProperty>
   
+  <!-- Classes -->
   <owl:Class rdf:about="&owl;Thing"/>
+  
   <!-- MLHIM Classes -->
   <owl:Class rdf:about="&mlhim2;MLHIM2">
     <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-    <rdfs:label>MLHIM 2.x</rdfs:label>
+    <rdfs:label xml:lang="en-us">MLHIM 2.x</rdfs:label>
     <skos:definition xml:lang="en-us">
       The top level class of MLHIM 2. MLHIM 1.x was never successfully modelled in OWL and MLHIM 3 
       will likely be a pure OWL implementation; sometime in the distant future.
@@ -78,7 +80,7 @@
 
   <owl:Class rdf:about="&mlhim2;RM">
     <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:label>Reference Model</rdfs:label>
+    <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
     <skos:definition xml:lang="en-us">
       A set of components (CCMs) to provide structural integrity for a domain concept. 
       Some CCMs are mandatory in CCDs and some are optional.
@@ -87,10 +89,64 @@
   
   <owl:Class rdf:about="&mlhim2;CCM">
     <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:label>Core Concept Model</rdfs:label>
+    <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
     <skos:definition xml:lang="en-us">
       A composable model contained in a reference model. A CCM represents a specific
       core type of component that further contains elements with base datatypes and/or other CCMs to define its structure.
+    </skos:definition>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&mlhim2;CCD">
+    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:label xml:lang="en-us">Concept Constraint Definition</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      A set of selected CCMs from the RM that are constraints on the RM components in order to represent a domain concept. 
+      Therefore a CCD is composed of PCMs. In the implementation language there may be additional syntactic conventions required. 
+    </skos:definition>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&mlhim2;PCM">
+    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      The name given to a CCM that has been constrained for use in a CCD. Through the constraints, a PCM defines a 
+      single concept based on syntactic data constraints as well as specified semantics. 
+      It is *pluggable* because it can be reused in multiple CCDs. 
+    </skos:definition>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&mlhim2;Instance">
+    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:label xml:lang="en-us">Instance</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      A set of data items that conforms to a CCD to represent an instance of that concept.
+    </skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="&mlhim2;ValidInstance">
+    <rdfs:subClassOf rdf:resource="&mlhim2;Instance"/>
+    <rdfs:label xml:lang="en-us">ValidInstance</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      A set of data items that conforms to a CCD to represent an instance of that concept 
+      **AND** the data values are valid according to the CCD constraints.
+    </skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="&mlhim2;InvalidInstance">
+    <rdfs:subClassOf rdf:resource="&mlhim2;Instance"/>
+    <rdfs:label xml:lang="en-us">InvalidInstance</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data 
+      values are **NOT** valid according to the CCD constraints. 
+      An InvalidInstance must contain one or more children of an Exception.      
+    </skos:definition>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&mlhim2;Exception">
+    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:label xml:lang="en-us">Exception</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      Indicates that some data is outside of the parameters defined by the CCD.
     </skos:definition>
   </owl:Class>
   
@@ -107,7 +163,9 @@
   
  
   <!-- http://www.w3.org/2004/02/skos/core#definition -->
-  <owl:AnnotationProperty rdf:about="&skos;definition"/>
+  <owl:AnnotationProperty rdf:about="&skos;definition">
+    <rdfs:label xml:lang="en-us">Definition</rdfs:label>
+  </owl:AnnotationProperty>
   
   <!-- DCMI Terms defined as annotation properties for CCDs. -->  
   <owl:AnnotationProperty rdf:about="&dc;title">

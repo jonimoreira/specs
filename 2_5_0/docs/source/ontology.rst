@@ -67,7 +67,21 @@ The name given to a CCM that has been constrained for use in a CCD. Through the 
 
 Instance
 --------
-A set of data items that conforms to a CCD to represent an instance of that concept.
+A set of data items that conforms to a CCD to represent an instance of that concept. 
+
+ValidInstance
+-------------
+Subclass of Instance.
+A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data values are valid according to the CCD constraints.
+
+InvalidInstance
+---------------
+Subclass of Instance.
+A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data values are **NOT** valid according to the CCD constraints. An InvalidInstance must contain one or more children of an Exception.
+
+Exception
+---------
+Indicates that some data is outside of the parameters defined by the CCD. 
 
 
 UI View
