@@ -223,7 +223,7 @@ CCD ontologies are built from the xs:appinfo element information in the same way
 Building Ontologies
 -------------------
 
-A tool, pyMOE.py can be found in the *utils* folder that extracts this information and builds the ontology.  The ontology file carries the same name as the schema, just with the extension replaced with '.owl'. It is located in the same folder along with schema (RM or CCD). 
+The tool, Python MLHIM Ontology Extractor (pyMOE.py) can be found in the *utils* folder that extracts this information and builds the ontology.  The ontology file carries the same name as the schema, just with the extension replaced with '.owl'. It is located in the same folder along with schema (RM or CCD). 
 
 Viewing Ontologies
 ------------------

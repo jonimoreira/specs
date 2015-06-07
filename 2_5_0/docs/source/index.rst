@@ -21,6 +21,7 @@ Contents:
    ecosystem
    modeling_concepts
    rm
+   ontology
    data_analysis
    ccdgen
    ecore

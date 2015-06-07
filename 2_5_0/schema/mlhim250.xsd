@@ -2,7 +2,7 @@
 <!DOCTYPE xs:schema [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -46,7 +46,7 @@
       <owl:Ontology rdf:about="&mlhim2;mlhim250.owl">
         <owl:imports rdf:resource="&mlhim2;mlhim2.owl"/>
         <rdfs:label>MLHIM Release 2.5.0 Reference Model Ontology</rdfs:label>
-        <dc:description rdf:datatype="&xs;string">
+        <dc:description rdf:datatype="&xsd;string">
           This is the Multi-Level Healthcare Information Modelling (MLHIM) project
           reference model ontology - MLHIM Release 2.5.0
           
@@ -69,7 +69,7 @@
           See the License for the specific language governing permissions and
           limitations under the License.
         </dc:description>
-        <dc:creator rdf:datatype="&xs;string">Timothy W. Cook</dc:creator>
+        <dc:creator rdf:datatype="&xsd;string">Timothy W. Cook</dc:creator>
         
       </owl:Ontology>
       
@@ -105,7 +105,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;DvAnyType/data-name">
               <rdfs:domain rdf:resource="&mlhim2;DvAnyType"/>
-              <rdfs:range rdf:resource="&xs;string"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
               <skos:definition xml:lang="en-us">
                 Descriptive name of this datatype model. Provides the semantic 'name' for the model.
                 Replaces what would be XML element name or class name in conventional modelling.
@@ -124,7 +124,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;DvAnyType/vtb">
               <rdfs:domain rdf:resource="&mlhim2;DvAnyType"/>
-              <rdfs:range rdf:resource="&xs;dateTime"/>
+              <rdfs:range rdf:resource="&xsd;dateTime"/>
               <skos:definition xml:lang="en-us">
                 Valid Time Begin. If present this must be a valid datetime including timezone. It is used
                 to indicate the beginning time that information is considered valid or when the information was collected.
@@ -143,7 +143,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;DvAnyType/vte">
               <rdfs:domain rdf:resource="&mlhim2;DvAnyType"/>
-              <rdfs:range rdf:resource="&xs;dateTime"/>
+              <rdfs:range rdf:resource="&xsd;dateTime"/>
               <skos:definition xml:lang="en-us">
                 Valid Time End. If present this must be a valid date-time including timezone. It is used
                 to indicate the ending time that information is considered valid or the time the information expired.
@@ -210,7 +210,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvBooleanType/true">
                   <rdfs:domain rdf:resource="&mlhim2;DvBooleanType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     A string that represents a boolean True in the implementation. These
                     are constrained by a set of enumerations in the PcT.
@@ -228,7 +228,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvBooleanType/false">
                   <rdfs:domain rdf:resource="&mlhim2;DvBooleanType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     A string that represents a boolean False in the implementation.
                     These are constrained by a set of enumerations in the PcT.
@@ -290,7 +290,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvLinkType/link">
                   <rdfs:domain rdf:resource="&mlhim2;DvLinkType"/>
-                  <rdfs:range rdf:resource="&xs;anyURI"/>
+                  <rdfs:range rdf:resource="&xsd;anyURI"/>
                   <skos:definition xml:lang="en-us">
                     A required URI. A dereferenceable (or not) URL to another CCD or just the ccd-{uuid}.
                   </skos:definition>
@@ -306,7 +306,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvLinkType/relation">
                   <rdfs:domain rdf:resource="&mlhim2;DvLinkType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     A required term, normally drawn from a vocabulary or ontology such as the OBO RO.
                   </skos:definition>
@@ -323,7 +323,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvLinkType/relation-uri">
                   <rdfs:domain rdf:resource="&mlhim2;DvLinkType"/>
-                  <rdfs:range rdf:resource="&xs;anyURI"/>
+                  <rdfs:range rdf:resource="&xsd;anyURI"/>
                   <skos:definition xml:lang="en-us">
                     A URI where the definition of the relation element term can be found. 
                     Normally points to an ontology such as the OBO RO http://purl.obolibrary.org/obo/ro.owl
@@ -377,7 +377,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvStringType/dvstring-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvStringType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     The string value of the item.
                   </skos:definition>
@@ -396,7 +396,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvStringType/language">
                   <rdfs:domain rdf:resource="&mlhim2;DvStringType"/>
-                  <rdfs:range rdf:resource="&xs;language"/>
+                  <rdfs:range rdf:resource="&xsd;language"/>
                   <skos:definition xml:lang="en-us">
                     Optional indicator of the localised language in which this data-type
                     is written. The value space of language is the set of all strings that are valid
@@ -453,7 +453,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/size">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;int"/>
+                  <rdfs:range rdf:resource="&xsd;int"/>
                   <skos:definition xml:lang="en-us">
                     Original size in bytes of unencoded encapsulated data. I.e.
                     encodings such as base64, hexadecimal, etc. do not change the value of this element.
@@ -474,7 +474,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/encoding">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Name of character encoding scheme in which this value is encoded.
                     Coded from the IANA charcater set table:
@@ -496,7 +496,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/language">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;language"/>
+                  <rdfs:range rdf:resource="&xsd;language"/>
                   <skos:definition xml:lang="en-us">
                     Optional indicator of the localised language of the content. 
                     Typically reamins optional in the CCD and used at runtime when the content is in a different 
@@ -516,7 +516,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/formalism">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Name of the formalism or syntax used to inform an application regarding 
                     a candidate parser to use on the content. Examples might include: 'ATL', 'MOLA', 'QVT', 'GDL', 'GLIF', etc.  for DvParsables.
@@ -535,7 +535,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/media-type">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     MIME type of the original media-content w/o any compression. See
                     IANA registered types: http://www.iana.org/assignments/media-types/media-types.xhtml
@@ -554,7 +554,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/compression-type">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Compression/archiving mime-type. If this elements does not exist then it means there is no compression/archiving. 
                     For a list of common mime-types for compression/archiving
@@ -574,7 +574,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/hash-result">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Hash function result of the 'media-content'. There must be a
                     corresponding hash function type listed for this to have any meaning. See:
@@ -593,7 +593,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/hash-function">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Hash function used to compute hash-result. See:
                     http://en.wikipedia.org/wiki/List_of_hash_functions#Cryptographic_hash_functions
@@ -610,7 +610,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/alt-txt">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Text to display in lieu of multimedia display or execution.
                   </skos:definition>
@@ -629,7 +629,7 @@
                 <xs:appinfo>
                   <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/uri">
                     <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                    <rdfs:range rdf:resource="&xs;anyURI"/>
+                    <rdfs:range rdf:resource="&xsd;anyURI"/>
                     <skos:definition xml:lang="en-us">
                       URI reference to electronic information stored outside the record as a file, 
                       database entry etc, if supplied as a reference. 
@@ -648,7 +648,7 @@
                 <xs:appinfo>
                   <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/media-content">
                     <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                    <rdfs:range rdf:resource="&xs;base64Binary"/>
+                    <rdfs:range rdf:resource="&xsd;base64Binary"/>
                     <skos:definition xml:lang="en-us">
                       The content, if stored locally as binary content. 
                       The CCD modeler chooses either a uri, a binary-content element or a text-content element.
@@ -666,7 +666,7 @@
                 <xs:appinfo>
                   <owl:DatatypeProperty rdf:about="&mlhim2;DvFileType/text-content">
                     <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
-                    <rdfs:range rdf:resource="&xs;string"/>
+                    <rdfs:range rdf:resource="&xsd;string"/>
                     <skos:definition xml:lang="en-us">
                       The content, if stored locally as text content. 
                       The CCD modeler chooses either a uri, a binary-content element or a text-content element.
@@ -739,7 +739,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvOrderedType/normal-status">
                   <rdfs:domain rdf:resource="&mlhim2;DvOrderedType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Optional normal status indicator of value with respect to normal
                     range for this value. Often included by lab, even if the normal range itself is not
@@ -827,7 +827,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvOrdinalType/ordinal">
                   <rdfs:domain rdf:resource="&mlhim2;DvOrdinalType"/>
-                  <rdfs:range rdf:resource="&xs;decimal"/>
+                  <rdfs:range rdf:resource="&xsd;decimal"/>
                   <skos:definition xml:lang="en-us">
                     Value in ordered enumeration of values. The base integer is zero
                     with any number of integer values used to order the symbols. 
@@ -848,7 +848,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvOrdinalType/symbol">
                   <rdfs:domain rdf:resource="&mlhim2;DvOrdinalType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Coded textual representation of this value in the enumeration, which
                     may be strings made from “+” symbols, or other enumerations of terms such as “mild”,
@@ -918,7 +918,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvQuantifiedType/error">
                   <rdfs:domain rdf:resource="&mlhim2;DvQuantifiedType"/>
-                  <rdfs:range rdf:resource="&xs;int"/>
+                  <rdfs:range rdf:resource="&xsd;int"/>
                   <skos:definition xml:lang="en-us">
                     Error margin of measurement, indicating error in the recording method or instrument (+/- %). 
                     A logical value of 0 indicates 100% accuracy, i.e. no error.
@@ -937,7 +937,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvQuantifiedType/accuracy">
                   <rdfs:domain rdf:resource="&mlhim2;DvQuantifiedType"/>
-                  <rdfs:range rdf:resource="&xs;decimal"/>
+                  <rdfs:range rdf:resource="&xsd;decimal"/>
                   <skos:definition xml:lang="en-us">
                     Accuracy of the value in the magnitude attribute in the range 0% to (+/-)100%.
                     A value of 0 means that the accuracy is unknown.
@@ -1066,7 +1066,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvCountType/dvcount-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvCountType"/>
-                  <rdfs:range rdf:resource="&xs;int"/>
+                  <rdfs:range rdf:resource="&xsd;int"/>
                   <skos:definition xml:lang="en-us">
                     Numeric value of the counted items.
                   </skos:definition>
@@ -1142,7 +1142,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvQuantityType/dvquantity-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvQuantityType"/>
-                  <rdfs:range rdf:resource="&xs;decimal"/>
+                  <rdfs:range rdf:resource="&xsd;decimal"/>
                   <skos:definition xml:lang="en-us">
                     Numeric value of the quantity.
                   </skos:definition>
@@ -1237,7 +1237,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvRatioType/numerator">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
-                  <rdfs:range rdf:resource="&xs;decimal"/>
+                  <rdfs:range rdf:resource="&xsd;decimal"/>
                   <skos:definition xml:lang="en-us">
                     Numerator of ratio.
                   </skos:definition>
@@ -1253,7 +1253,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvRatioType/denominator">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
-                  <rdfs:range rdf:resource="&xs;decimal"/>
+                  <rdfs:range rdf:resource="&xsd;decimal"/>
                   <skos:definition xml:lang="en-us">
                     Denominator of ratio.
                   </skos:definition>
@@ -1269,7 +1269,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvRatioType/dvratio-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
-                  <rdfs:range rdf:resource="&xs;decimal"/>
+                  <rdfs:range rdf:resource="&xsd;decimal"/>
                   <skos:definition xml:lang="en-us">
                     Numeric value of the ratio.
                   </skos:definition>
@@ -1433,7 +1433,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-date">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;date"/>
+                  <rdfs:range rdf:resource="&xsd;date"/>
                   <skos:definition xml:lang="en-us">
                     Represents top-open intervals of exactly one day in length on the timelines of dateTime, beginning on the 
                     beginning moment of each day, up to but not including the beginning moment of the next day).  
@@ -1454,7 +1454,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-time">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;time"/>
+                  <rdfs:range rdf:resource="&xsd;time"/>
                   <skos:definition xml:lang="en-us">
                     Represents instants of time that recur at the same point in each calendar day, 
                     or that occur in some arbitrary calendar day.
@@ -1473,7 +1473,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-datetime">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;dateTime"/>
+                  <rdfs:range rdf:resource="&xsd;dateTime"/>
                   <skos:definition xml:lang="en-us">
                     Represents instants of time, optionally marked with a particular time zone offset.  
                     Values representing the same instant but having different time zone offsets are equal but not identical.
@@ -1493,7 +1493,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-datetime-stamp">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;dateTimeStamp"/>
+                  <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
                   <skos:definition xml:lang="en-us">
                     Derived from dateTime by giving the value required to its explicitTimezone facet. 
                     The result is that all values of dateTimeStamp are required to have explicit 
@@ -1516,7 +1516,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-day">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;gDay"/>
+                  <rdfs:range rdf:resource="&xsd;gDay"/>
                   <skos:definition xml:lang="en-us">
                     Represents whole days within an arbitrary month—days that recur at the same point in each (Gregorian) month. 
                     This datatype is used to represent a specific day of the month. To indicate, for example, that an employee 
@@ -1538,7 +1538,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-month">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;gMonth"/>
+                  <rdfs:range rdf:resource="&xsd;gMonth"/>
                   <skos:definition xml:lang="en-us">
                     Represents whole (Gregorian) months within an arbitrary year—months that recur at the same point in each year.  
                     It might be used, for example, to say what month annual Thanksgiving celebrations fall in different countries 
@@ -1557,7 +1557,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-year">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;gYear"/>
+                  <rdfs:range rdf:resource="&xsd;gYear"/>
                   <skos:definition xml:lang="en-us">
                     Represents Gregorian calendar years.
                   </skos:definition>
@@ -1574,7 +1574,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-year-month">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;gYearMonth"/>
+                  <rdfs:range rdf:resource="&xsd;gYearMonth"/>
                   <skos:definition xml:lang="en-us">
                     Represents specific whole Gregorian months in specific Gregorian years.
                   </skos:definition>
@@ -1592,7 +1592,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-month-day">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;gMonthDay"/>
+                  <rdfs:range rdf:resource="&xsd;gMonthDay"/>
                   <skos:definition xml:lang="en-us">
                     Represents whole calendar days that recur at the same point in each calendar year, or that occur in some arbitrary calendar year.  
                     (Obviously, days beyond 28 cannot occur in all Februaries; 29 is nonetheless permitted.)
@@ -1615,7 +1615,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-duration">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;duration"/>
+                  <rdfs:range rdf:resource="&xsd;duration"/>
                   <skos:definition xml:lang="en-us">
                     A datatype that represents durations of time.  
                     The concept of duration being captured is drawn from those of [ISO 8601], specifically durations without fixed endpoints.  
@@ -1638,7 +1638,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-ymduration">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;yearMonthDuration"/>
+                  <rdfs:range rdf:resource="&xsd;yearMonthDuration"/>
                   <skos:definition xml:lang="en-us">
                     a datatype ·derived· from duration by restricting its ·lexical representations· to instances of yearMonthDurationLexicalRep.  
                     The ·value space· of yearMonthDuration is therefore that of duration restricted to those whose ·seconds· property is 0.  
@@ -1659,7 +1659,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-dtduration">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
-                  <rdfs:range rdf:resource="&xs;dayTimeDuration"/>
+                  <rdfs:range rdf:resource="&xsd;dayTimeDuration"/>
                   <skos:definition xml:lang="en-us">
                     A datatype ·derived· from duration by restricting its ·lexical representations· to instances of dayTimeDurationLexicalRep. 
                     The ·value space· of dayTimeDuration is therefore that of duration restricted to those whose ·months· property is 0.  
@@ -1748,7 +1748,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvIntervalType/lower-included">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
-                  <rdfs:range rdf:resource="&xs;boolean"/>
+                  <rdfs:range rdf:resource="&xsd;boolean"/>
                   <skos:definition xml:lang="en-us">
                     Is the lower value of the interval inclusive?
                   </skos:definition>
@@ -1764,7 +1764,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvIntervalType/upper-included">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
-                  <rdfs:range rdf:resource="&xs;boolean"/>
+                  <rdfs:range rdf:resource="&xsd;boolean"/>
                   <skos:definition xml:lang="en-us">
                     Is the upper value of the interval inclusive?
                   </skos:definition>
@@ -1780,7 +1780,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvIntervalType/lower-bounded">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
-                  <rdfs:range rdf:resource="&xs;boolean"/>
+                  <rdfs:range rdf:resource="&xsd;boolean"/>
                   <skos:definition xml:lang="en-us">
                     Is the lower value of the interval bounded?
                   </skos:definition>
@@ -1796,7 +1796,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvIntervalType/upper-bounded">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
-                  <rdfs:range rdf:resource="&xs;boolean"/>
+                  <rdfs:range rdf:resource="&xsd;boolean"/>
                   <skos:definition xml:lang="en-us">
                     Is the upper value of the interval bounded?
                   </skos:definition>
@@ -1936,7 +1936,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;ReferenceRangeType/definition">
                   <rdfs:domain rdf:resource="&mlhim2;ReferenceRangeType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Term whose value indicates the meaning of this range, e.g. 'normal', 'critical', 'therapeutic' etc.
                   </skos:definition>
@@ -1969,7 +1969,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;ReferenceRangeType/is-normal">
                   <rdfs:domain rdf:resource="&mlhim2;ReferenceRangeType"/>
-                  <rdfs:range rdf:resource="&xs;boolean"/>
+                  <rdfs:range rdf:resource="&xsd;boolean"/>
                   <skos:definition xml:lang="en-us">
                     True if this reference range defines values that are considered to be normal. 
                     In the context of the value in the definition element.
@@ -2071,7 +2071,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;AuditType">
               <rdfs:domain rdf:resource="&mlhim2;AuditType"/>
-              <rdfs:range rdf:resource="&xs;dateTimeStamp"/>
+              <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
               <skos:definition xml:lang="en-us">
                 Timestamp of handling the item.
               </skos:definition>
@@ -2122,7 +2122,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;PartyType/party-name">
               <rdfs:domain rdf:resource="&mlhim2;PartyType"/>
-              <rdfs:range rdf:resource="&xs;string"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
               <skos:definition xml:lang="en-us">
                 Optional human-readable name (in String form).
               </skos:definition>
@@ -2266,7 +2266,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;AttestationType/committed">
               <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
-              <rdfs:range rdf:resource="&xs;dateTimeStamp"/>
+              <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
               <skos:definition xml:lang="en-us">
                 Timestamp of committal of the item.
               </skos:definition>
@@ -2282,7 +2282,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;AttestationType/pending">
               <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
-              <rdfs:range rdf:resource="&xs;boolean"/>
+              <rdfs:range rdf:resource="&xsd;boolean"/>
               <skos:definition xml:lang="en-us">
                 True if this attestation is outstanding; 'false' means it has been completed.
               </skos:definition>
@@ -2383,7 +2383,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;ParticipationType/start">
               <rdfs:domain rdf:resource="&mlhim2;ParticipationType"/>
-              <rdfs:range rdf:resource="&xs;dateTimeStamp"/>
+              <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
               <skos:definition xml:lang="en-us">
                 The beginning datetime when the participation took place.
               </skos:definition>
@@ -2399,7 +2399,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;ParticipationType/end">
               <rdfs:domain rdf:resource="&mlhim2;ParticipationType"/>
-              <rdfs:range rdf:resource="&xs;dateTimeStamp"/>
+              <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
               <skos:definition xml:lang="en-us">
                 The ending datetime when the participation took place.
               </skos:definition>
@@ -2452,7 +2452,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;ExceptionalValueType/ev-name">
               <rdfs:domain rdf:resource="&mlhim2;ExceptionalValueType"/>
-              <rdfs:range rdf:resource="&xs;string"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
               <skos:definition xml:lang="en-us">
                 A short title or phase for the exceptional type value. 
               </skos:definition>
@@ -3110,7 +3110,7 @@
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;ClusterType/subject">
                   <rdfs:domain rdf:resource="&mlhim2;ClusterType"/>
-                  <rdfs:range rdf:resource="&xs;string"/>
+                  <rdfs:range rdf:resource="&xsd;string"/>
                   <skos:definition xml:lang="en-us">
                     Descriptive subject line for this group of PcTs.
                   </skos:definition>
@@ -3245,7 +3245,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;EntryType/language">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
-              <rdfs:range rdf:resource="&xs;language"/>
+              <rdfs:range rdf:resource="&xsd;language"/>
               <skos:definition xml:lang="en-us">
                 Mandatory indicator of the localised language in which this Entry is
                 written. The value space of language is the set of all strings that are valid language
@@ -3262,7 +3262,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;EntryType/encoding">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
-              <rdfs:range rdf:resource="&xs;string"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
               <skos:definition xml:lang="en-us">
                 Name of character set encoding in which text values in this Entry are encoded. Default is utf-8.
               </skos:definition>
@@ -3279,7 +3279,7 @@
           <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;EntryType/current-state">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
-              <rdfs:range rdf:resource="&xs;string"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
               <skos:definition xml:lang="en-us">
                 The current state according to the state machine / workflow engine
                 identified in the workflow element.                

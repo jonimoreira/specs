@@ -25,8 +25,12 @@
         <rdfs:subClassOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/mlhim250"/>
         <rdfs:label>Testing Implementation (Admin)</rdfs:label>
       </owl:Ontology>
-
     
+    <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2/" rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ct-56c1df15-a4cc-44a6-84ec-45c310a05071/language">
+                  <rdfs:domain rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+                  <rdfs:range rdf:resource="en-US"/>
+                </owl:DatatypeProperty>
+              
     <owl:DatatypeProperty xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2/" rdf:about="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value#AL">
                         <rdfs:subPropertyOf rdf:resource="http://www.mlhim.org/xmlns/mlhim2/ct-f80bf2ce-f3c2-4bb9-a539-1971474f7626"/>
                         <rdfs:label>AL</rdfs:label>

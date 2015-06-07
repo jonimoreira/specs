@@ -3,7 +3,7 @@
 <!DOCTYPE xs:schema [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -56,7 +56,6 @@
         <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
         <rdfs:label>Testing Implementation (Admin)</rdfs:label>
       </owl:Ontology>
-
     </xs:appinfo>
   </xs:annotation>
 
@@ -101,11 +100,25 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:AdminEntryType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="language" type="xs:language" fixed="en-US"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="encoding" type="xs:string" fixed="utf-8"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="language" type="xs:language" fixed="en-US">
+            <xs:annotation>
+              <xs:appinfo>
+                <owl:DatatypeProperty rdf:resource="&mlhim2;ct-56c1df15-a4cc-44a6-84ec-45c310a05071/language">
+                  <rdfs:domain rdf:resource="&xsd;language"/>
+                  <rdfs:range rdf:resource="en-US"/>
+                </owl:DatatypeProperty>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="encoding" type="xs:string" fixed="utf-8">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string" default=""/>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:el-c3a88f56-3abc-416d-9d49-3e9f06bf74a5"/>
-          <!-- data -->
+          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:el-c3a88f56-3abc-416d-9d49-3e9f06bf74a5"/> <!-- data -->
           <xs:element maxOccurs="1" minOccurs="0" name="subject"
             type="mlhim2:ct-ef4abd55-562c-418f-89c3-f831bf42c33f"/>
           <xs:element maxOccurs="1" minOccurs="0" name="provider"

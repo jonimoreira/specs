@@ -2,7 +2,7 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -18,7 +18,7 @@
   xmlns:skos="http://www.w3.org/2004/02/skos/core#">
   
   <owl:Ontology rdf:about="&mlhim2;mlhim2.owl"  xml:lang="en-us">
-    <dc:description rdf:datatype="&xs;string">
+    <dc:description rdf:datatype="&xsd;string">
       This is the Multi-Level Healthcare Information Modelling (MLHIM) project root ontology.
       All MLHIM Reference Models and CCDs are subclasses of the MLHIM class (defined below) and must import this ontology.
       
@@ -42,8 +42,8 @@
       See the License for the specific language governing permissions and
       limitations under the License.
     </dc:description>
-    <dc:creator rdf:datatype="&xs;string">Timothy W. Cook</dc:creator>
-    <rdfs:isDefinedBy rdf:datatype="&xs;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
+    <dc:creator rdf:datatype="&xsd;string">Timothy W. Cook</dc:creator>
+    <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
   </owl:Ontology>
 
   <!-- MLHIM DatatypeProperties -->
@@ -56,18 +56,26 @@
       PcTs can appear in many CCDs. PcTs are subclasses of their RM complexTypes.
     </skos:definition>
   </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="&mlhim2;hasCT">
+    <rdfs:label>hasComplexType</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      Indicates that this element refers to an element with a type attribute of this complexType name.
+    </skos:definition>
+  </owl:ObjectProperty>
+  
   
   <!-- MLHIM Classes -->
   <owl:Class rdf:about="&mlhim2;MLHIM"/>
  
   <!-- Additional XMLSchema datatypes -->
-  <rdfs:Datatype rdf:about="&xs;date"/>
-  <rdfs:Datatype rdf:about="&xs;duration"/>
-  <rdfs:Datatype rdf:about="&xs;gDay"/>
-  <rdfs:Datatype rdf:about="&xs;gMonth"/>
-  <rdfs:Datatype rdf:about="&xs;gYear"/>
-  <rdfs:Datatype rdf:about="&xs;gYearMonth"/>
-  <rdfs:Datatype rdf:about="&xs;time"/>
+  <rdfs:Datatype rdf:about="&xsd;date"/>
+  <rdfs:Datatype rdf:about="&xsd;duration"/>
+  <rdfs:Datatype rdf:about="&xsd;gDay"/>
+  <rdfs:Datatype rdf:about="&xsd;gMonth"/>
+  <rdfs:Datatype rdf:about="&xsd;gYear"/>
+  <rdfs:Datatype rdf:about="&xsd;gYearMonth"/>
+  <rdfs:Datatype rdf:about="&xsd;time"/>
   
  
   <!-- http://www.w3.org/2004/02/skos/core#definition -->
