@@ -28,12 +28,9 @@ Logical Model
 =============
 MLHIM is by definition and name a multi-level modeling approach.  This means that there are multiple models with increasing specificity to get to the instance data point. MLHIM is constraint based which provides a complete validation path back to the reference model for the instance data. 
 
-------------
-Model Levels
-------------
 
 MLHIM2
------
+------
 Multi-Level Healthcare Information Modeling
 
 The root concept. The abstract idea of MLHIM 2.x.
