@@ -118,7 +118,6 @@ The TBox contains the classes defined by MLHIM 2.x.
 
     
 
-
 ABox
 ====
 The ABox contains the instances defined by MLHIM.
