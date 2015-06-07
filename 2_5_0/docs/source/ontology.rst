@@ -25,7 +25,7 @@ In this document, when we talk about MLHIM we will use the term *MLHIM*. When we
 
 Concepts
 ========
-MLHIM is by definition and name a multi-level modeling approach.  This means that there are multiple models with increasing specificity to get to the instance data point. MLHIM is constraint based which provides an complete path back to the reference model for the instance data. 
+MLHIM is by definition and name a multi-level modeling approach.  This means that there are multiple models with increasing specificity to get to the instance data point. MLHIM is constraint based which provides a complete validation path back to the reference model for the instance data. 
 
 ------------
 Model Levels
@@ -50,11 +50,19 @@ Core Concept Model
 
 A set of composable concept models contained in a reference model. 
 
+
 CCD
 ---
 Concept Constraint Definition
 
 A set of selected components from the RM that represent constraints on the RM components in order to represent a domain concept.
+
+PCM
+---
+Pluggable Concept Model
+
+The name given to a CCM that has been constrained for use in a CCD. Through the constraints it defines a single concept based on syntactic data constraints as well as specified semantics. It is *pluggable* because it can be reused in multiple CCDs. 
+
 
 Instance
 --------
