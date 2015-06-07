@@ -87,7 +87,7 @@ OWL Modeling
 ============
 Each of these concepts must be converted to OWL using the `RL profile <http://www.w3.org/TR/owl2-profiles/#OWL_2_RL>`_ so that they can be used by query engines and reasoners to provide answers to questions and insights about connections not easily seen by people. 
 
-The serialization format is RDF/XML due to the ubiquity of XML throughout computer science. 
+The serialization format is RDF/XML due to the ubiquity of XML throughout computer science. It also allows the ontology to be contained in the same file as the XML Schema that defines the reference implementation syntactic structure. This conveniently encapsulates the concept models for easy sharability. 
 
 The RL profile was chosen due to its aim at applications that require scalable reasoning without sacrificing too much expressive power. The subset defined in RL is designed to be used for rule based processing and therefore lends itself well to CDSS. 
 
