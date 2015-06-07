@@ -6,6 +6,7 @@ Mission
 =======
 The mission of MLHIM is to provide a basis for distributed definitions of interlinked knowledge with the ability to transfer and then test for data validity and without the loss of the original semantics.
 
+----------------------
 Reasoning for the Need
 ----------------------
 
@@ -23,8 +24,8 @@ When we began MLHIM in 2009, we intended to use OWL as the basis on which to bui
 In this document, when we talk about MLHIM we will use the term *MLHIM*. When we talk about modeling concepts in an area of interest we use the term *domain*.  Though we are thinking primarily about the domain of healthcare and the information technology to support healthcare information exchange, MLHIM concepts may be applied to any domain of interest.
 
 
-Concepts
-========
+Logical Model
+=============
 MLHIM is by definition and name a multi-level modeling approach.  This means that there are multiple models with increasing specificity to get to the instance data point. MLHIM is constraint based which provides a complete validation path back to the reference model for the instance data. 
 
 ------------
