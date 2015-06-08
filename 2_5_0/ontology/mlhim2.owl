@@ -119,11 +119,12 @@
     <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
-      A set of data items that conforms to a CCD to represent an instance of that concept.
+      A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD.
+      It has not been tested for validation.
     </skos:definition>
   </owl:Class>
 
-  <owl:Class rdf:about="&mlhim2;ValidDataInstance">
+  <owl:Class rdf:about="&mlhim2;DataInstanceValid">
     <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
     <rdfs:label xml:lang="en-us">Valid Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
@@ -132,13 +133,22 @@
     </skos:definition>
   </owl:Class>
 
-  <owl:Class rdf:about="&mlhim2;InvalidDataInstance">
+  <owl:Class rdf:about="&mlhim2;DataInstanceInvalid">
     <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
     <rdfs:label xml:lang="en-us">Invalid Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
       A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data 
       values are **NOT** valid according to the CCD constraints. 
       An InvalidDataInstance must contain one or more children of an Exception.      
+    </skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="&mlhim2;DataInstanceError">
+    <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
+    <rdfs:label xml:lang="en-us">Erroneous Data Instance</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      A set of data items that **DOES NOT** conform to the CCD it represents in its xsi:schemaLocation attribute **OR**
+      it contains invalid data and does not contain one or more children of an Exception.
     </skos:definition>
   </owl:Class>
   

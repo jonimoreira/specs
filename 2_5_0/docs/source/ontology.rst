@@ -26,7 +26,7 @@ In this document, when we talk about MLHIM we will use the term *MLHIM*. When we
 
 Logical Model
 =============
-MLHIM is by definition and name a multi-level modeling approach.  This means that there are multiple models with increasing specificity to get to the instance data point. MLHIM is constraint based which provides a complete validation path back to the reference model for the instance data. 
+MLHIM is by name as well as by definition and design a multi-level modeling approach.  This means that there are multiple models with increasing specificity to get to the instance data point. MLHIM is constraint based which provides a complete syntactic validation path back to the reference model for the instance data. The semantic model is designed around the concepts of this multi-level model approach.
 
 
 MLHIM2
@@ -47,13 +47,11 @@ Core Concept Model
 
 A composable model contained in a reference model. A CCM represents a specific core type of component that further contains elements with base datatypes and/or other CCMs to define its structure. 
 
-
 CCD
 ---
 Concept Constraint Definition
 
 A set of selected CCMs from the RM that are constraints on the RM components in order to represent a domain concept. Therefore a CCD is composed of PCMs. In the implementation language there may be additional syntactic conventions required. 
-
 
 PCM
 ---
@@ -61,24 +59,30 @@ Pluggable Concept Model
 
 The name given to a CCM that has been constrained for use in a CCD. Through the constraints, a PCM defines a single concept based on syntactic data constraints as well as specified semantics. It is *pluggable* because it can be reused in multiple CCDs. 
 
-
 DataInstance
 ------------
-A set of data items that conforms to a CCD to represent an instance of that concept. 
+A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD.
+It has not been tested for validation.
 
-ValidDataInstance
+DataInstanceValid
 -----------------
 Subclass of DataInstance.
 A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data values are valid according to the CCD constraints.
 
-InvalidDataInstance
+DataInstanceInvalid
 -------------------
 Subclass of DataInstance.
-A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data values are **NOT** valid according to the CCD constraints. An InvalidInstance must contain one or more children of an Exception.
+A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data values are **NOT** valid according to the CCD constraints. An Invalid Data Instance must contain one or more children of an Exception.
+
+DataInstanceError
+-------------------
+Subclass of DataInstance.
+A set of data items that **DOES NOT** conform to the CCD it represents in its xsi:schemaLocation attribute **OR** it contains invalid data and does not contain one or more children of an Exception.
 
 Exception
 ---------
 Indicates that some data is outside of the parameters defined by the CCD. 
+
 
 
 
