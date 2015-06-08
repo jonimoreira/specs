@@ -21,7 +21,7 @@ The CCD may be further constrained at the implementation level through the use o
 The MLHIM specifications do not play any role in defining what these templates look like or perform like. They are only mentioned here as a way of making note that applications will 
 require a user interface template layer to be functional. 
 
-**The interoperability layer remains at the CCD instance level. **
+**The interoperability layer remains at the CCD instance level.**
 
 The real advantage to using the MLHIM approach to healthcare information modeling is that it provides for a wide variety of healthcare applications to be developed based on the broad concepts defined in the reference model. By having domain experts within the healthcare field to define and create the CCDs, they can then be shared across multiple applications so that the structure and semantics of the data is not locked into one specific application, but can be exchanged among many different applications. This properly implements the separation of roles between IT and domain experts.
 
