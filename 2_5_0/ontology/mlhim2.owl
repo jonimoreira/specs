@@ -8,6 +8,7 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2/" >
 ]>
+
 <rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2/"
   xml:base="http://www.mlhim.org/xmlns/mlhim2/"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -114,6 +115,15 @@
       Relates a Pluggable Concept Symbol to a Core Concept Symbol that it subtitutes for. 
     </skos:definition>
   </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="&mlhim2;isMLHIM2Component">
+    <rdfs:label xml:lang="en-us">Is MLHIM Component</rdfs:label>
+    <rdfs:domain rdf:resource="&owl;Thing"/>
+    <rdfs:range rdf:resource="&mlhim2;MLHIM2"/>
+    <skos:definition xml:lang="en-us">
+      Relates classes to the MLHIM2 top-level class.  
+    </skos:definition>
+  </owl:ObjectProperty>
   
   <!-- Classes -->
   <owl:Class rdf:about="&owl;Thing"/>
@@ -129,7 +139,8 @@
   </owl:Class>
 
   <owl:Class rdf:about="&mlhim2;RM">
-    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
     <skos:definition xml:lang="en-us">
       A set of components (CCMs) to provide structural integrity for a domain concept. 
@@ -138,7 +149,8 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;CCM">
-    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
     <skos:definition xml:lang="en-us">
       A composable model contained in a reference model. A CCM represents a specific
@@ -147,7 +159,8 @@
   </owl:Class>
 
   <owl:Class rdf:about="&mlhim2;CCS">
-    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
     <skos:definition xml:lang="en-us">
       A CCS represents a CCM in instance data. In practice, it is usually subtituted for by a PCS.
@@ -155,16 +168,18 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;CCDInstance">
-    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
       A set of selected CCMs from the RM that are constraints on the RM components in order to represent a domain concept. 
-      Therefore a CCD is composed of PCMs. In the implementation language there may be additional syntactic conventions required. 
+      Therefore a CCD Instance is composed of PCMs. In the implementation language there may be additional syntactic conventions required. 
     </skos:definition>
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;PCM">
-    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
     <skos:definition xml:lang="en-us">
       The name given to a CCM that has been constrained for use in a CCD Instance. 
@@ -175,7 +190,8 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;PCS">
-    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Pluggable Concept Symbol</rdfs:label>
     <skos:definition xml:lang="en-us">
       Represents a PCM in instance data. Can be considered a data container for the components of a PCM. 
@@ -183,7 +199,8 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;DataInstance">
-    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
       A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD Instance.
@@ -220,7 +237,8 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;Exception">
-    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Exception</rdfs:label>
     <skos:definition xml:lang="en-us">
       Indicates that some data is outside of the parameters defined by the CCD Instance.
