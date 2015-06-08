@@ -63,7 +63,7 @@
   <owl:ObjectProperty rdf:ID="&mlhim2;isPCMin">
     <rdfs:label xml:lang="en-us">Is PCM In</rdfs:label>
     <rdfs:domain rdf:resource="&mlhim2;PCM"/>
-    <rdfs:range rdf:resource="&mlhim2;CCD"/>
+    <rdfs:range rdf:resource="&mlhim2;CCDInstance"/>
     <skos:definition xml:lang="en-us">
       Used to relate a PCM to a CCD.  
     </skos:definition>
@@ -71,19 +71,19 @@
 
   <owl:ObjectProperty rdf:ID="&mlhim2;isConstraintOn">
     <rdfs:label xml:lang="en-us">Is Constraint On</rdfs:label>
-    <rdfs:domain rdf:resource="&mlhim2;CCD"/>
+    <rdfs:domain rdf:resource="&mlhim2;CCDInstance"/>
     <rdfs:range rdf:resource="&mlhim2;RM"/>
     <skos:definition xml:lang="en-us">
-      Used to relate a CCD to a RM.  
+      Used to relate a CCD Instance to a RM.  
     </skos:definition>
   </owl:ObjectProperty>
   
-  <owl:ObjectProperty rdf:ID="&mlhim2;isInstanceOf">
-    <rdfs:label xml:lang="en-us">Is Instance Of</rdfs:label>
+  <owl:ObjectProperty rdf:ID="&mlhim2;isDataInstanceOf">
+    <rdfs:label xml:lang="en-us">Is Data Instance Of</rdfs:label>
     <rdfs:domain rdf:resource="&mlhim2;DataInstance"/>
-    <rdfs:range rdf:resource="&mlhim2;CCD"/>
+    <rdfs:range rdf:resource="&mlhim2;CCDInstance"/>
     <skos:definition xml:lang="en-us">
-      Relates a DataInstance to a CCD. 
+      Relates a Data Instance to a CCD Instance. 
       In the reference implementation this property should be applied based on the xsi:schemaLocation attribute of the data instance. 
     </skos:definition>
   </owl:ObjectProperty>
@@ -154,9 +154,9 @@
     </skos:definition>
   </owl:Class>
   
-  <owl:Class rdf:about="&mlhim2;CCD">
+  <owl:Class rdf:about="&mlhim2;CCDInstance">
     <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:label xml:lang="en-us">Concept Constraint Definition</rdfs:label>
+    <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
       A set of selected CCMs from the RM that are constraints on the RM components in order to represent a domain concept. 
       Therefore a CCD is composed of PCMs. In the implementation language there may be additional syntactic conventions required. 
@@ -167,9 +167,10 @@
     <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
     <skos:definition xml:lang="en-us">
-      The name given to a CCM that has been constrained for use in a CCD. Through the constraints, a PCM defines a 
-      single concept based on syntactic data constraints as well as specified semantics. 
-      It is *pluggable* because it can be reused in multiple CCDs. 
+      The name given to a CCM that has been constrained for use in a CCD Instance. 
+      Through the constraints, a PCM defines a single domain concept based on syntactic data constraints as well 
+      as specified semantics. 
+      It is *pluggable* because it can be reused in multiple CCD Instances. 
     </skos:definition>
   </owl:Class>
   
@@ -185,7 +186,7 @@
     <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
-      A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD.
+      A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD Instance.
       It has not been tested for validation.
     </skos:definition>
   </owl:Class>
@@ -194,8 +195,8 @@
     <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
     <rdfs:label xml:lang="en-us">Valid Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
-      A set of data items that conforms to a CCD to represent an instance of that concept 
-      **AND** the data values are valid according to the CCD constraints.
+      A set of data items that conforms to a CCD Instance to represent an instance of that concept 
+      **AND** the data values are valid according to the CCD Instance constraints.
     </skos:definition>
   </owl:Class>
 
@@ -203,8 +204,8 @@
     <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
     <rdfs:label xml:lang="en-us">Invalid Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
-      A set of data items that conforms to a CCD to represent an instance of that concept **AND** the data 
-      values are **NOT** valid according to the CCD constraints. 
+      A set of data items that conforms to a CCD Instance to represent an instance of that concept **AND** the data 
+      values are **NOT** valid according to the CCD Instance constraints. 
       An InvalidDataInstance must contain one or more children of an Exception.      
     </skos:definition>
   </owl:Class>
@@ -213,7 +214,7 @@
     <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
     <rdfs:label xml:lang="en-us">Erroneous Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
-      A set of data items that **DOES NOT** conform to the CCD it represents in its xsi:schemaLocation attribute **OR**
+      A set of data items that **DOES NOT** conform to the CCD Instance it represents in its xsi:schemaLocation attribute **OR**
       it contains invalid data and does not contain one or more children of an Exception.
     </skos:definition>
   </owl:Class>
@@ -222,7 +223,7 @@
     <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Exception</rdfs:label>
     <skos:definition xml:lang="en-us">
-      Indicates that some data is outside of the parameters defined by the CCD.
+      Indicates that some data is outside of the parameters defined by the CCD Instance.
     </skos:definition>
   </owl:Class>
   
