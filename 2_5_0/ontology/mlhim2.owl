@@ -50,21 +50,30 @@
   <!-- MLHIM DatatypeProperties -->
 
   <!-- MLHIM ObjectProperties -->
-  <owl:ObjectProperty rdf:ID="&mlhim2;ctOf">
-    <rdfs:label xml:lang="en-us">complexTypeOf</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      Indicates that this PcT is a component of the CCD named in the resource value.
-      PcTs can appear in many CCDs. PcTs are subclasses of their RM complexTypes.
-    </skos:definition>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;hasCT">
-    <rdfs:label xml:lang="en-us">hasComplexType</rdfs:label>
+  <owl:ObjectProperty rdf:ID="&mlhim2;hasCCM">
+    <rdfs:label xml:lang="en-us">has Core Concept Model</rdfs:label>
     <skos:definition xml:lang="en-us">
-      Indicates that this element refers to an element with a type attribute of this complexType name.
+      Indicates that this RM contains the referenced Core Concept Model 
     </skos:definition>
   </owl:ObjectProperty>
   
+  <owl:ObjectProperty rdf:ID="&mlhim2;hasPCM">
+    <rdfs:label xml:lang="en-us">has Pluggable Concept Model</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      Indicates that this CCD contains the referenced Pluggable Concept Model 
+    </skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="&mlhim2;isInstanceOf">
+    <rdfs:label xml:lang="en-us">isInstanceOf</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      Relates a DataInstance to a CCD. This property should be applied based on the xsi:schemaLocation attribute 
+      of the data instance. 
+    </skos:definition>
+  </owl:ObjectProperty>
+  
+
   <!-- Classes -->
   <owl:Class rdf:about="&owl;Thing"/>
   

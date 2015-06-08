@@ -61,8 +61,8 @@ The name given to a CCM that has been constrained for use in a CCD. Through the 
 
 DataInstance
 ------------
-A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD.
-It has not been tested for validation.
+A set of data items that reports via *isInstanceOf* property that it conforms to a CCD.
+It has not been tested for validation. 
 
 DataInstanceValid
 -----------------
@@ -77,12 +77,23 @@ A set of data items that conforms to a CCD to represent an instance of that conc
 DataInstanceError
 -------------------
 Subclass of DataInstance.
-A set of data items that **DOES NOT** conform to the CCD it represents in its xsi:schemaLocation attribute **OR** it contains invalid data and does not contain one or more children of an Exception.
+A set of data items that **DOES NOT** conform to the CCD it represents **OR** it contains invalid data and does not contain one or more children of an Exception.
 
 Exception
 ---------
 Indicates that some data is outside of the parameters defined by the CCD. 
 
+has Core Concept Model
+----------------------
+Indicates that this RM contains the referenced Core Concept Model
+
+has Pluggable Concept Model
+---------------------------
+Indicates that this CCD contains the referenced Pluggable Concept Model
+
+is Instance Of
+--------------
+Relates a DataInstance to a CCD. In the reference implementation this property should be applied based on the xsi:schemaLocation attribute of the data instance.
 
 
 
