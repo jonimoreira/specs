@@ -51,22 +51,15 @@
 
   <!-- MLHIM ObjectProperties -->
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;hasCCM">
-    <rdfs:label xml:lang="en-us">has Core Concept Model</rdfs:label>
+  <owl:ObjectProperty rdf:ID="&mlhim2;isComponentOf">
+    <rdfs:label xml:lang="en-us">is Component Of</rdfs:label>
     <skos:definition xml:lang="en-us">
-      Indicates that this RM contains the referenced Core Concept Model 
+      Used to relate a CCM to a RM and to relate a PCM to a CCD.  
     </skos:definition>
   </owl:ObjectProperty>
   
-  <owl:ObjectProperty rdf:ID="&mlhim2;hasPCM">
-    <rdfs:label xml:lang="en-us">has Pluggable Concept Model</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      Indicates that this CCD contains the referenced Pluggable Concept Model 
-    </skos:definition>
-  </owl:ObjectProperty>
-
   <owl:ObjectProperty rdf:ID="&mlhim2;isInstanceOf">
-    <rdfs:label xml:lang="en-us">isInstanceOf</rdfs:label>
+    <rdfs:label xml:lang="en-us">is Instance Of</rdfs:label>
     <skos:definition xml:lang="en-us">
       Relates a DataInstance to a CCD. This property should be applied based on the xsi:schemaLocation attribute 
       of the data instance. 

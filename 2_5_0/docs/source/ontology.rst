@@ -83,13 +83,9 @@ Exception
 ---------
 Indicates that some data is outside of the parameters defined by the CCD. 
 
-has Core Concept Model
-----------------------
-Indicates that this RM contains the referenced Core Concept Model
-
-has Pluggable Concept Model
----------------------------
-Indicates that this CCD contains the referenced Pluggable Concept Model
+is Component Of
+---------------
+Used to relate a CCM to a RM and to relate a PCM to a CCD.
 
 is Instance Of
 --------------
