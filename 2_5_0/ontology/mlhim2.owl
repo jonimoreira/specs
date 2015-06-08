@@ -51,22 +51,70 @@
 
   <!-- MLHIM ObjectProperties -->
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;isComponentOf">
-    <rdfs:label xml:lang="en-us">is Component Of</rdfs:label>
+  <owl:ObjectProperty rdf:ID="&mlhim2;isCCMin">
+    <rdfs:label xml:lang="en-us">Is CCM In</rdfs:label>
+    <rdfs:domain rdf:resource="&mlhim2;CCM"/>
+    <rdfs:range rdf:resource="&mlhim2;RM"/>
     <skos:definition xml:lang="en-us">
-      Used to relate a CCM to a RM and to relate a PCM to a CCD.  
+      Used to relate a CCM to a RM.  
+    </skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="&mlhim2;isPCMin">
+    <rdfs:label xml:lang="en-us">Is PCM In</rdfs:label>
+    <rdfs:domain rdf:resource="&mlhim2;PCM"/>
+    <rdfs:range rdf:resource="&mlhim2;CCD"/>
+    <skos:definition xml:lang="en-us">
+      Used to relate a PCM to a CCD.  
+    </skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="&mlhim2;isConstraintOn">
+    <rdfs:label xml:lang="en-us">Is Constraint On</rdfs:label>
+    <rdfs:domain rdf:resource="&mlhim2;CCD"/>
+    <rdfs:range rdf:resource="&mlhim2;RM"/>
+    <skos:definition xml:lang="en-us">
+      Used to relate a CCD to a RM.  
     </skos:definition>
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:ID="&mlhim2;isInstanceOf">
-    <rdfs:label xml:lang="en-us">is Instance Of</rdfs:label>
+    <rdfs:label xml:lang="en-us">Is Instance Of</rdfs:label>
+    <rdfs:domain rdf:resource="&mlhim2;DataInstance"/>
+    <rdfs:range rdf:resource="&mlhim2;CCD"/>
     <skos:definition xml:lang="en-us">
-      Relates a DataInstance to a CCD. This property should be applied based on the xsi:schemaLocation attribute 
-      of the data instance. 
+      Relates a DataInstance to a CCD. 
+      In the reference implementation this property should be applied based on the xsi:schemaLocation attribute of the data instance. 
+    </skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="&mlhim2;isCoreSymbolOf">
+    <rdfs:label xml:lang="en-us">Is Core Symbol Of</rdfs:label>
+    <rdfs:domain rdf:resource="&mlhim2;CCS"/>
+    <rdfs:range rdf:resource="&mlhim2;CCM"/>
+    <skos:definition xml:lang="en-us">
+      Relates a Core Concept Symbol to a Core Concept Model. 
+    </skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="&mlhim2;isPluggableSymbolOf">
+    <rdfs:label xml:lang="en-us">Is Pluggable Symbol Of</rdfs:label>
+    <rdfs:domain rdf:resource="&mlhim2;PCS"/>
+    <rdfs:range rdf:resource="&mlhim2;PCM"/>
+    <skos:definition xml:lang="en-us">
+      Relates a Pluggable Concept Symbol to a Pluggable Concept Model. 
+    </skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="&mlhim2;isSymbolSubstituteFor">
+    <rdfs:label xml:lang="en-us">Is Symbol Substitute For</rdfs:label>
+    <rdfs:domain rdf:resource="&mlhim2;PCS"/>
+    <rdfs:range rdf:resource="&mlhim2;CCS"/>
+    <skos:definition xml:lang="en-us">
+      Relates a Pluggable Concept Symbol to a Core Concept Symbol that it subtitutes for. 
     </skos:definition>
   </owl:ObjectProperty>
   
-
   <!-- Classes -->
   <owl:Class rdf:about="&owl;Thing"/>
   
@@ -75,8 +123,8 @@
     <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <rdfs:label xml:lang="en-us">MLHIM 2.x</rdfs:label>
     <skos:definition xml:lang="en-us">
-      The top level class of MLHIM 2. MLHIM 1.x was never successfully modelled in OWL and MLHIM 3 
-      will likely be a pure OWL implementation; sometime in the distant future.
+      The top level class of MLHIM 2. 
+      MLHIM 1.x was never successfully modeled in OWL and MLHIM 3 will likely be a pure OWL implementation; sometime in the distant future.
     </skos:definition>
   </owl:Class>
 
@@ -85,7 +133,7 @@
     <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
     <skos:definition xml:lang="en-us">
       A set of components (CCMs) to provide structural integrity for a domain concept. 
-      Some CCMs are mandatory in CCDs and some are optional.
+      Some CCMs are mandatory in CCDs and some are optional. Optionality is defined in each RM.
     </skos:definition>
   </owl:Class>
   
@@ -95,6 +143,14 @@
     <skos:definition xml:lang="en-us">
       A composable model contained in a reference model. A CCM represents a specific
       core type of component that further contains elements with base datatypes and/or other CCMs to define its structure.
+    </skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="&mlhim2;CCS">
+    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      A CCS represents a CCM in instance data. In practice, it is usually subtituted for by a PCS.
     </skos:definition>
   </owl:Class>
   
@@ -114,6 +170,14 @@
       The name given to a CCM that has been constrained for use in a CCD. Through the constraints, a PCM defines a 
       single concept based on syntactic data constraints as well as specified semantics. 
       It is *pluggable* because it can be reused in multiple CCDs. 
+    </skos:definition>
+  </owl:Class>
+  
+  <owl:Class rdf:about="&mlhim2;PCS">
+    <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:label xml:lang="en-us">Pluggable Concept Symbol</rdfs:label>
+    <skos:definition xml:lang="en-us">
+      Represents a PCM in instance data. Can be considered a data container for the components of a PCM. 
     </skos:definition>
   </owl:Class>
   

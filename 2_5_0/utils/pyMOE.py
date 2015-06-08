@@ -80,7 +80,7 @@ def main(path):
             continue
 
         owlfile = path+"/"+f[:-3] + "owl"
-        print("Creating: ", owlfile + " from: ",path+"/"+f)
+        print("\n\nCreating: ", owlfile + " from: ",path+"/"+f)
 
         src = open(path+"/"+f, 'r')
 

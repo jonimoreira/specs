@@ -75,7 +75,7 @@
       
       <owl:Class rdf:about="&mlhim2;mlhim250">
         <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/"/>
-        <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM"/>
+        <rdfs:subClassOf rdf:resource="&mlhim2;RM"/>
         <rdfs:label>MLHIM Release 2.5.0 Reference Model Ontology</rdfs:label>
       </owl:Class>      
     </xs:appinfo>
@@ -89,7 +89,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvAnyType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>DvAnyType</rdfs:label>
           <skos:definition xml:lang="en-us">Serves as a common ancestor of all data-types in MLHIM models.</skos:definition>
         </owl:Class>
@@ -158,7 +159,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvAny">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvAnyType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
@@ -245,7 +247,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvBoolean">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvBooleanType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvBooleanType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
@@ -340,7 +343,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvLink">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvLinkType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvLinkType"/>          
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -415,7 +419,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvString">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvStringType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvStringType"/>          
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -684,7 +689,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvFile">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvFileType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvFileType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -757,7 +763,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvOrdered">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvOrderedType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvOrderedType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -866,7 +873,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvOrdinal">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvOrdinalType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvOrdinalType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -954,7 +962,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvQuantified">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvQuantifiedType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvQuantifiedType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -1103,7 +1112,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvCount">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvCountType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvCountType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -1178,7 +1188,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvQuantity">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvQuantityType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvQuantityType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -1343,7 +1354,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvRatio">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvRatioType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvRatioType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -1677,7 +1689,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvTemporal">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvTemporalType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvTemporalType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -1832,7 +1845,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvInterval">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvIntervalType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvIntervalType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -1986,7 +2000,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ReferenceRange">
-          <rdfs:subClassOf rdf:resource="&mlhim2;ReferenceRangeType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ReferenceRangeType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2004,7 +2019,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;AuditType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AuditType.html#AuditType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>AuditType</rdfs:label>
           <skos:definition xml:lang="en-us">
             AuditType provides a mechanism to identify the who/where/when tracking of instances as they move from 
@@ -2085,7 +2101,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;Audit">
-          <rdfs:subClassOf rdf:resource="&mlhim2;AuditType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;AuditType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2102,7 +2119,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;PartyType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_PartyType.html#PartyType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>PartyType</rdfs:label>
           <skos:definition xml:lang="en-us">
             Description of a party, including an optional external link to data for
@@ -2169,7 +2187,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;Party">
-          <rdfs:subClassOf rdf:resource="&mlhim2;PartyType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;PartyType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2184,7 +2203,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;AttestationType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AttestationType.html#AttestationType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>AttestationType</rdfs:label>
           <skos:definition xml:lang="en-us">
             Record an attestation by a party of item(s) of record content. The type of
@@ -2296,7 +2316,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;Attestation">
-          <rdfs:subClassOf rdf:resource="&mlhim2;AttestationType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;AttestationType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2413,7 +2434,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;Participation">
-          <rdfs:subClassOf rdf:resource="&mlhim2;ParticipationType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ParticipationType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2431,7 +2453,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ExceptionalValueType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ExceptionalValueType.html#ExceptionalValueType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;Exception"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>ExceptionalValueType</rdfs:label>
           <skos:definition xml:lang="en-us">
             Subtypes are used to indicate why a value is missing (Null) or is outside a
@@ -2467,7 +2490,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ExceptionalValue">
-          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValueType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ExceptionalValueType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
@@ -2507,7 +2531,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NI">
-          <rdfs:subClassOf rdf:resource="&mlhim2;NIType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NIType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2553,7 +2578,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;MSK">
-          <rdfs:subClassOf rdf:resource="&mlhim2;MSKType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;MSKType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2589,7 +2615,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;INV">
-          <rdfs:subClassOf rdf:resource="&mlhim2;INVType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;INVType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2625,7 +2652,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DER">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DERType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DERType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2662,7 +2690,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;UNC">
-          <rdfs:subClassOf rdf:resource="&mlhim2;UNCType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;UNCType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2698,7 +2727,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;OTH">
-          <rdfs:subClassOf rdf:resource="&mlhim2;OTHType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;OTHType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2732,7 +2762,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NINF">
-          <rdfs:subClassOf rdf:resource="&mlhim2;NINFType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NINFType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2766,7 +2797,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;PINF">
-          <rdfs:subClassOf rdf:resource="&mlhim2;PINFType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;PINFType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2800,7 +2832,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;UNK">
-          <rdfs:subClassOf rdf:resource="&mlhim2;UNKType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;UNKType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2836,7 +2869,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ASKR">
-          <rdfs:subClassOf rdf:resource="&mlhim2;ASKRType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ASKRType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2870,7 +2904,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NASK">
-          <rdfs:subClassOf rdf:resource="&mlhim2;NASKType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NASKType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2909,7 +2944,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;QS">
-          <rdfs:subClassOf rdf:resource="&mlhim2;QSType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;QSType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2943,7 +2979,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;TRC">
-          <rdfs:subClassOf rdf:resource="&mlhim2;TRCType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;TRCType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -2977,7 +3014,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ASKU">
-          <rdfs:subClassOf rdf:resource="&mlhim2;ASKUType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ASKUType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3011,7 +3049,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NAV">
-          <rdfs:subClassOf rdf:resource="&mlhim2;NAVType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NAVType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3047,7 +3086,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NA">
-          <rdfs:subClassOf rdf:resource="&mlhim2;NAType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NAType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3062,7 +3102,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ItemType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ItemType.html#ItemType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>ItemType</rdfs:label>
           <skos:definition xml:lang="en-us">
             The abstract parent of ClusterType and DvAdapterType structural representation types.
@@ -3075,7 +3116,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;Item">
-          <rdfs:subClassOf rdf:resource="&mlhim2;ItemType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ItemType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3143,7 +3185,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;Cluster">
-          <rdfs:subClassOf rdf:resource="&mlhim2;ClusterType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ClusterType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3196,7 +3239,7 @@
     <xs:annotation>
       <xs:appinfo>
        <owl:Class rdf:about="&mlhim2;DvAdapter/DvAdapter-value">
-         <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
+         <rdfs:subClassOf rdf:resource="&mlhim2;DvAdapterType"/>
        </owl:Class>
       </xs:appinfo>
     </xs:annotation>
@@ -3206,7 +3249,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DvAdapter">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DvAdapterType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DvAdapterType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3224,7 +3268,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;EntryType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_EntryType.html#EntryType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>EntryType</rdfs:label>
           <skos:definition xml:lang="en-us">
             The abstract parent of all Entry subtypes. An Entry is the root of a logical
@@ -3460,7 +3505,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;Entry">
-          <rdfs:subClassOf rdf:resource="&mlhim2;EntryType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;EntryType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3490,7 +3536,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;CareEntry">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CareEntryType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;CareEntryType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3528,7 +3575,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;AdminEntry">
-          <rdfs:subClassOf rdf:resource="&mlhim2;AdminEntryType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;AdminType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3564,7 +3612,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DemographicEntry">
-          <rdfs:subClassOf rdf:resource="&mlhim2;DemographicEntryType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DemographicType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
@@ -3579,7 +3628,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;CCDType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CCDType.html#CCDType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>CCDType</rdfs:label>
           <skos:definition xml:lang="en-us">
             This is the root node of a Concept Constraint Definition.
@@ -3619,7 +3669,8 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;CCD">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCDType"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;CCDType"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>    
