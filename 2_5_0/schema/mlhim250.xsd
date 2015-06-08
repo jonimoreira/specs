@@ -2333,7 +2333,7 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ParticipationType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ParticipationType.html#ParticipationType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
           <rdfs:label>ParticipationType</rdfs:label>
           <skos:definition xml:lang="en-us">
             Model of a participation of a Party (any Actor or Role) in an activity.

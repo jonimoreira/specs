@@ -66,7 +66,7 @@
     <rdfs:domain rdf:resource="&mlhim2;PCM"/>
     <rdfs:range rdf:resource="&mlhim2;CCDInstance"/>
     <skos:definition xml:lang="en-us">
-      Used to relate a PCM to a CCD.  
+      Used to relate a PCM to a CCD Instance.  
     </skos:definition>
   </owl:ObjectProperty>
 
@@ -117,7 +117,7 @@
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:ID="&mlhim2;isMLHIM2Component">
-    <rdfs:label xml:lang="en-us">Is MLHIM Component</rdfs:label>
+    <rdfs:label xml:lang="en-us">Is MLHIM2 Component</rdfs:label>
     <rdfs:domain rdf:resource="&owl;Thing"/>
     <rdfs:range rdf:resource="&mlhim2;MLHIM2"/>
     <skos:definition xml:lang="en-us">
@@ -144,7 +144,7 @@
     <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
     <skos:definition xml:lang="en-us">
       A set of components (CCMs) to provide structural integrity for a domain concept. 
-      Some CCMs are mandatory in CCDs and some are optional. Optionality is defined in each RM.
+      Some CCMs are mandatory in CCDs and some are optional. Optionality is defined in each RM implementation.
     </skos:definition>
   </owl:Class>
   
@@ -163,7 +163,7 @@
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
     <skos:definition xml:lang="en-us">
-      A CCS represents a CCM in instance data. In practice, it is usually subtituted for by a PCS.
+      A CCS represents a CCM in instance data. In practice, it is usually substituted for by a PCS.
     </skos:definition>
   </owl:Class>
   
@@ -172,8 +172,8 @@
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
-      A set of selected CCMs from the RM that are constraints on the RM components in order to represent a domain concept. 
-      Therefore a CCD Instance is composed of PCMs. In the implementation language there may be additional syntactic conventions required. 
+      A set of selected PCMs that are constraints on the RM components (CCMs) in order to represent a domain concept. 
+      In the implementation language there may be additional syntactic conventions required. 
     </skos:definition>
   </owl:Class>
   
