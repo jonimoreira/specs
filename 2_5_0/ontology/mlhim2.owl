@@ -118,19 +118,15 @@
 
   <owl:ObjectProperty rdf:ID="&mlhim2;isMLHIM2Component">
     <rdfs:label xml:lang="en-us">Is MLHIM2 Component</rdfs:label>
-    <rdfs:domain rdf:resource="&owl;Thing"/>
     <rdfs:range rdf:resource="&mlhim2;MLHIM2"/>
     <skos:definition xml:lang="en-us">
       Relates classes to the MLHIM2 top-level class.  
     </skos:definition>
   </owl:ObjectProperty>
   
-  <!-- Classes -->
-  <owl:Class rdf:about="&owl;Thing"/>
-  
+ 
   <!-- MLHIM Classes -->
   <owl:Class rdf:about="&mlhim2;MLHIM2">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <rdfs:label xml:lang="en-us">MLHIM 2.x</rdfs:label>
     <skos:definition xml:lang="en-us">
       The top level class of MLHIM 2. 
@@ -139,7 +135,6 @@
   </owl:Class>
 
   <owl:Class rdf:about="&mlhim2;RM">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
     <skos:definition xml:lang="en-us">
@@ -149,7 +144,6 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;CCM">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
     <skos:definition xml:lang="en-us">
@@ -159,7 +153,6 @@
   </owl:Class>
 
   <owl:Class rdf:about="&mlhim2;CCS">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
     <skos:definition xml:lang="en-us">
@@ -168,7 +161,6 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;CCDInstance">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
@@ -178,7 +170,6 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;PCM">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
     <skos:definition xml:lang="en-us">
@@ -190,7 +181,6 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;PCS">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Pluggable Concept Symbol</rdfs:label>
     <skos:definition xml:lang="en-us">
@@ -199,7 +189,6 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;DataInstance">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
     <skos:definition xml:lang="en-us">
@@ -237,7 +226,6 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;Exception">
-    <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     <rdfs:label xml:lang="en-us">Exception</rdfs:label>
     <skos:definition xml:lang="en-us">

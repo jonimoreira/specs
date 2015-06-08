@@ -6,9 +6,9 @@ Mission
 =======
 The mission of MLHIM is to provide a basis for distributed definitions of interlinked knowledge with the ability to transfer and then test for data validity and without the loss of the original semantics.
 
-----------------------
-Reasoning for the Need
-----------------------
+---------
+Why MLHIM
+---------
 
 Current approaches to data exchange is in a flat format and without computable semantics. The semantics are typically locked up in the persistence structure (database, etc.) and the source code of the application capturing and processing the data. These semantics cannot be shared with other potential users of the data. 
 
@@ -55,6 +55,7 @@ CCS
 Core Concept Symbol
 
 A CCS represents a CCM in instance data. In practice, it is usually substituted for by a PCS.
+This substitution is due to the fact that constraints are expressed in a PCM which is then represented by a PCS. However the overall constraint model (CCD Instance) must match with components of the RM.
 
 -----------
 CCDInstance
@@ -154,7 +155,7 @@ isSymbolSubstituteFor
 ---------------------
 Is Symbol Substitute For
 
-Relates a Pluggable Concept Symbol to a Core Concept Symbol that it subtitutes for.
+Relates a Pluggable Concept Symbol to a Core Concept Symbol that it substitutes for.
 
 -----------------
 isMLHIM2Component
@@ -171,7 +172,7 @@ Relates classes to the MLHIM2 top-level class.
 ============
 OWL Modeling
 ============
-Each of these concepts must be converted to OWL using the `RL profile <http://www.w3.org/TR/owl2-profiles/#OWL_2_RL>`_ so that they can be used by query engines and reasoners to provide answers to questions and insights about connections not easily seen by people. 
+Each of these concepts must be converted to `OWL DL <http://www.w3.org/TR/owl2-rdf-based-semantics/>`_ so that they can be used by query engines and reasoners to provide answers to questions and insights about connections not easily seen by people. 
 
 The serialization format is RDF/XML due to the ubiquity of XML throughout computer science. It also allows the ontology to be contained in the same file as the XML Schema that defines the reference implementation syntactic structure. This conveniently encapsulates the concept models for easy sharability. 
 
