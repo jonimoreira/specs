@@ -972,7 +972,10 @@
   <xs:simpleType name="MagnitudeStatus">
     <xs:annotation>
       <xs:documentation xml:lang="en-us">
-        Optional status of magnitude with values:
+        MagnitudeStatus provides a general indication of the accuracy of the magnitude expressed in the DvQuantified subtypes.
+        Should be used to inform users and not for decision support uses.
+        
+        Optional status of magnitude indicators:
         
         equal : magnitude is a point value
         
@@ -987,49 +990,47 @@
         approximate : value is the approximately the magnitude
       </xs:documentation>
       <xs:appinfo>
-        <owl:DatatypeProperty rdf:about="&mlhim2;MagnitudeStatus">
-          <rdfs:range>
-            <rdfs:Datatype>
-              <owl:oneOf>
-                <rdf:Description>
-                  <rdf:type rdf:resource="rdf:List"/>
-                  <rdf:first>approximate</rdf:first>
-                  <rdf:rest>
-                    <rdf:Description>
-                      <rdf:type rdf:resource="rdf:List"/>
-                      <rdf:first>equal</rdf:first>
-                      <rdf:rest>
-                        <rdf:Description>
-                          <rdf:type rdf:resource="rdf:List"/>
-                          <rdf:first>greater_than</rdf:first>
-                          <rdf:rest>
-                            <rdf:Description>
-                              <rdf:type rdf:resource="rdf:List"/>
-                              <rdf:first>greater_than_or_equal</rdf:first>
-                              <rdf:rest>
-                                <rdf:Description>
-                                  <rdf:type rdf:resource="rdf:List"/>
-                                  <rdf:first>less_than</rdf:first>
-                                  <rdf:rest>
-                                    <rdf:Description>
-                                      <rdf:type rdf:resource="rdf:List"/>
-                                      <rdf:first>less_than_or_equal</rdf:first>
-                                      <rdf:rest rdf:resource="rdf:nil"/>
-                                    </rdf:Description>
-                                  </rdf:rest>
-                                </rdf:Description>
-                              </rdf:rest>
-                            </rdf:Description>
-                          </rdf:rest>
-                        </rdf:Description>
-                      </rdf:rest>
-                    </rdf:Description>
-                  </rdf:rest>
-                </rdf:Description>
-              </owl:oneOf>
-            </rdfs:Datatype>
-          </rdfs:range>
-        </owl:DatatypeProperty>
+        <owl:Class rdf:about="&mlhim2;MagnitudeStatus">
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/> 
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
+          <skos:definition xml:lang="en-us">
+            MagnitudeStatus provides a general indication of the accuracy of the magnitude expressed in the DvQuantified subtypes.
+            Should be used to inform users and not for decision support uses.
+            
+            Optional status of magnitude indicators:
+            
+            equal : magnitude is a point value
+            
+            less_than : value is less than the magnitude
+            
+            greater_than : value is greater than the magnitude
+            
+            less_than_or_equal : value is less_than_or_equal to the magnitude
+            
+            greater_than_or_equal : value is greater_than_or_equal to the magnitude
+            
+            approximate : value is the approximately the magnitude
+            
+          </skos:definition>
+        </owl:Class>
+        <rdf:Description rdf:about="&mlhim2;approximate">
+          <rdf:type rdf:resource="&mlhim2;MagnitudeStatus"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="&mlhim2;equal">
+          <rdf:type rdf:resource="&mlhim2;MagnitudeStatus"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="&mlhim2;greater_than">
+          <rdf:type rdf:resource="&mlhim2;MagnitudeStatus"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="&mlhim2;greater_than_or_equal">
+          <rdf:type rdf:resource="&mlhim2;MagnitudeStatus"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="&mlhim2;less_than">
+          <rdf:type rdf:resource="&mlhim2;MagnitudeStatus"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="&mlhim2;less_than_or_equal">
+          <rdf:type rdf:resource="&mlhim2;MagnitudeStatus"/>
+        </rdf:Description>                    
       </xs:appinfo>
     </xs:annotation>
     <xs:restriction base="xs:string">
@@ -1363,7 +1364,8 @@
 
   <xs:simpleType name="TypeOfRatio">
     <xs:annotation>
-      <xs:documentation>Indicates semantic type of ratio. 
+      <xs:documentation>
+        Indicates semantic type of ratio. 
         
         ratio = a relationship between two numbers. 
         
@@ -1375,31 +1377,33 @@
         contained in the denominator) 
       </xs:documentation>
       <xs:appinfo>
-        <owl:DatatypeProperty rdf:about="&mlhim2;TypeOfRatio">
-          <rdfs:range>
-            <rdfs:Datatype>
-              <owl:oneOf>
-                <rdf:Description>
-                  <rdf:type rdf:resource="rdf:List"/>
-                  <rdf:first>proportion</rdf:first>
-                  <rdf:rest>
-                    <rdf:Description>
-                      <rdf:type rdf:resource="rdf:List"/>
-                      <rdf:first>rate</rdf:first>
-                      <rdf:rest>
-                        <rdf:Description>
-                          <rdf:type rdf:resource="rdf:List"/>
-                          <rdf:first>ratio</rdf:first>
-                          <rdf:rest rdf:resource="rdf:nil"/>
-                        </rdf:Description>
-                      </rdf:rest>
-                    </rdf:Description>
-                  </rdf:rest>
-                </rdf:Description>
-              </owl:oneOf>
-            </rdfs:Datatype>
-          </rdfs:range>
-        </owl:DatatypeProperty>        
+        <owl:Class rdf:about="&mlhim2;TypeOfRatio">
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>
+          <skos:definition xml:lang="en-us">
+            Indicates semantic type of ratio. 
+            
+            ratio = a relationship between two numbers. 
+            
+            proportion = a relationship between two numbers where there is a bi-univocal relationship between
+            the numerator and the denominator (the numerator is contained in the denominator)
+            
+            rate = a relationship between two numbers where there is not a bi-univocal
+            relationship between the numerator and the denominator (the numerator is not
+            contained in the denominator) 
+          </skos:definition>        
+        </owl:Class>   
+        <!-- Individual types of ratio -->
+        <rdf:Description rdf:about="&mlhim2;proportion">
+          <rdf:type rdf:resource="&mlhim2;TypeOfRatio"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="&mlhim2;rate">
+          <rdf:type rdf:resource="&mlhim2;TypeOfRatio"/>
+        </rdf:Description>
+        <rdf:Description rdf:about="&mlhim2;ratio">
+          <rdf:type rdf:resource="&mlhim2;TypeOfRatio"/>
+        </rdf:Description>
+        
       </xs:appinfo>
     </xs:annotation>
     <xs:restriction base="xs:string">
@@ -1866,7 +1870,8 @@
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;InvlType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_InvlType.html#InvlType"/>
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>          
           <rdfs:label>InvlType</rdfs:label>
           <skos:definition xml:lang="en-us">
             In the CCD, the modeler creates two restrictions on this complexType. 
@@ -1901,7 +1906,8 @@
       </xs:documentation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;IntervalUnits">
-          <rdfs:subClassOf rdf:resource="&mlhim2;mlhim250"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
+          <mlhim2:isCCMin rdf:resource="&mlhim2;mlhim250"/>          
           <skos:definition xml:lang="en-us">
             The units designation for an Interval is slightly different than other complexTypes.
             This complexType is composed of a units name and a URI because in a ReferenceRange parent there can be different units
@@ -2531,7 +2537,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NI">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NIType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2578,7 +2584,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;MSK">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;MSKType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2615,7 +2621,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;INV">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;INVType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2652,7 +2658,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;DER">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;DERType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2690,7 +2696,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;UNC">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;UNCType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2727,7 +2733,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;OTH">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;OTHType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2762,7 +2768,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NINF">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NINFType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2797,7 +2803,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;PINF">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;PINFType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2832,7 +2838,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;UNK">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;UNKType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2869,7 +2875,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ASKR">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ASKRType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2904,7 +2910,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NASK">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NASKType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2944,7 +2950,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;QS">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;QSType"/>
         </owl:Class>
       </xs:appinfo>
@@ -2979,7 +2985,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;TRC">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;TRCType"/>
         </owl:Class>
       </xs:appinfo>
@@ -3014,7 +3020,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;ASKU">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;ASKUType"/>
         </owl:Class>
       </xs:appinfo>
@@ -3049,7 +3055,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NAV">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NAVType"/>
         </owl:Class>
       </xs:appinfo>
@@ -3086,7 +3092,7 @@
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;NA">
-          <rdfs:subClassOf rdf:resource="&mlhim2;CCS"/>
+          <rdfs:subClassOf rdf:resource="&mlhim2;ExceptionalValue"/>
           <mlhim2:isCoreSymbolOf rdf:resource="&mlhim2;NAType"/>
         </owl:Class>
       </xs:appinfo>

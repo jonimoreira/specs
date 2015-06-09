@@ -119,6 +119,13 @@ def main(path):
         for x in owl:
             dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
 
+        # Individuals
+        print('Writing Individuals. \n')
+        onto = etree.XPath("//xs:appinfo/rdf:Description", namespaces=nsDict)
+        owl = onto(root)
+        for x in owl:
+            dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
+
 
         dest.write('</rdf:RDF>\n')
         src.close()

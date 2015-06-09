@@ -226,7 +226,7 @@
   </owl:Class>
   
   <owl:Class rdf:about="&mlhim2;Exception">
-    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+    <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
     <rdfs:label xml:lang="en-us">Exception</rdfs:label>
     <skos:definition xml:lang="en-us">
       Indicates that some data is outside of the parameters defined by the CCD Instance.
@@ -238,10 +238,13 @@
   <!-- Additional XMLSchema datatypes -->
   <rdfs:Datatype rdf:about="&xsd;date"/>
   <rdfs:Datatype rdf:about="&xsd;duration"/>
+  <rdfs:Datatype rdf:about="&xsd;yearMonthDuration"/>
+  <rdfs:Datatype rdf:about="&xsd;dayTimeDuration"/>
   <rdfs:Datatype rdf:about="&xsd;gDay"/>
   <rdfs:Datatype rdf:about="&xsd;gMonth"/>
   <rdfs:Datatype rdf:about="&xsd;gYear"/>
   <rdfs:Datatype rdf:about="&xsd;gYearMonth"/>
+  <rdfs:Datatype rdf:about="&xsd;gMonthDay"/>
   <rdfs:Datatype rdf:about="&xsd;time"/>
   
  
