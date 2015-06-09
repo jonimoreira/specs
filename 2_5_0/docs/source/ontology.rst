@@ -166,48 +166,26 @@ Relates classes to the MLHIM2 top-level class.
 
 
 
-
-
-
-============
 OWL Modeling
 ============
 Each of these concepts must be converted to `OWL DL <http://www.w3.org/TR/owl2-rdf-based-semantics/>`_ so that they can be used by query engines and reasoners to provide answers to questions and insights about connections not easily seen by people. 
 
 The serialization format is RDF/XML due to the ubiquity of XML throughout computer science. It also allows the ontology to be contained in the same file as the XML Schema that defines the reference implementation syntactic structure. This conveniently encapsulates the concept models for easy sharability. 
 
-The RL profile was chosen due to its aim at applications that require scalable reasoning without sacrificing too much expressive power. The subset defined in RL is designed to be used for rule based processing and therefore lends itself well to CDSS. 
+An ontology can be broadly defined by two types of components: entities and descriptors. Entities are the main body of the ontology and include classes, properties, instances and rules. 
 
-An ontology can be broadly defined by two types of components: entities and descriptors. Entities are the main body of the ontology and include classes, properties, instances and rules. Entities are usually sub-grouped into boxes:
-
-    * The TBox contains intensional knowledge, or the properties of an entity required to identify it.
-    * The ABox contains extensional knowledge, and describes knowledge specific to the domain of interest.
-    * The RBox contains the rule axioms defining the knowledge.
-
-
-TBox
-====
-The TBox contains the classes defined by MLHIM 2.x.
-
-
+MLHIM2 Entities
+===============
     * MLHIM2
     * RM
     * CCM
-    * CCD
+    * CCS
+    * CCDInstance
     * PCM
+    * PCS
     * DataInstance
-        * ValidDataInstance
-        * InvalidDataInstance
+        * DataInstanceValid
+        * DataInstanceInvalid
+        * DataInstanceError
     * Exception
-
-    
-
-ABox
-====
-The ABox contains the instances defined by MLHIM.
-
-
-RBox
-====
-The RBox contains the rules defined by MLHIM.
 
