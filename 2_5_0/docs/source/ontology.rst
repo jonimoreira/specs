@@ -33,7 +33,7 @@ MLHIM2
 ------
 Multi-Level Healthcare Information Modeling
 
-The root concept. The abstract idea of MLHIM 2.x.
+The root concept. The abstract idea of MLHIM 2.x. All of the MLHIM2 classes are subclasses of this class.
 
 --
 RM
@@ -107,6 +107,14 @@ Exception
 ---------
 Indicates that some data is outside of the parameters defined by the CCD Instance. 
 
+----------
+isMLHIM2op
+----------
+is MLHIM2 Object Property
+
+The root object property in MLHIM2.
+
+
 -------
 isCCMin
 -------
@@ -164,6 +172,13 @@ Is MLHIM2 Component
 
 Relates classes to the MLHIM2 top-level class.
 
+----------
+isMLHIM2dp
+----------
+is MLHIM2 Data Property
+
+The root data property in MLHIM2.
+
 
 
 OWL Modeling
@@ -176,16 +191,58 @@ An ontology can be broadly defined by two types of components: entities and desc
 
 MLHIM2 Entities
 ===============
+
+These are the entities defined in `mlhim2.owl <http://www.mlhim.org/xmlns/mlhim2/mlhim2.owl>`_
+
+Classes
+-------
+
     * MLHIM2
     * RM
-    * CCM
-    * CCS
+    * ConceptModel
+        * CCM
+        * PCM
+    * Symbol
+        * CCS
+        * PCS
     * CCDInstance
-    * PCM
-    * PCS
     * DataInstance
         * DataInstanceValid
         * DataInstanceInvalid
         * DataInstanceError
     * Exception
+
+
+Object Properties
+-----------------
+    * isCCMin
+    * isPCMin
+    * isConstraintOn
+    * isDataInstanceOf
+    * isCoreSymbolOf
+    * isPluggableSymbolOf
+    * isSymbolSubstituteFor
+    * isSubSymbolOf
+    * isMLHIM2Component
+
+Datatype Properties
+-------------------
+Some tools (e.g. Protégé) do not support the full range of XML Schema datatypes. We defined these in mlhim2.owl as well.
+
+  * date
+  * duration
+  * yearMonthDuration
+  * dayTimeDuration
+  * gDay
+  * gMonth
+  * gYear
+  * gYearMonth
+  * gMonthDay
+  * time
+
+Annotation Properties
+---------------------
+The most widely used (at this writing) metadata definitions come from the Dublin Core Metadata Initiative (DCMI) terms. We found the file dcterms.rdf linked from `here <http://bloody-byte.net/rdf/dc_owl2dl/>`_. It meets all of our needs and has a number of other classes dealing with information resources. We may or may not include these as part of the MLHIM2 infrastructure in the future. 
+
+
 
