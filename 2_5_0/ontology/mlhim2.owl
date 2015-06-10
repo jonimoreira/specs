@@ -189,13 +189,13 @@
     
 
 
-    <!-- &mlhim2;ConceptConstraintDefinitionInstance -->
+    <!-- &mlhim2;CCDInstance -->
 
-    <owl:Class rdf:about="&mlhim2;ConceptConstraintDefinitionInstance">
+    <owl:Class rdf:about="&mlhim2;CCDInstance">
         <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
         <mlhim2:description xml:lang="en-us">
-      A set of selected PluggableConceptModels that are constraints on the ReferenceModel components (CoreConceptModels) in order to represent a domain concept. 
+      A set of selected PluggableCMs that are constraints on the RM components (CoreCMs) in order to represent a domain concept. 
       In the implementation language there may be additional syntactic conventions required. 
     </mlhim2:description>
         <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
@@ -203,14 +203,14 @@
     
 
 
-    <!-- &mlhim2;CoreConceptModel -->
+    <!-- &mlhim2;CoreCM -->
 
-    <owl:Class rdf:about="&mlhim2;CoreConceptModel">
+    <owl:Class rdf:about="&mlhim2;CoreCM">
         <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;ConceptModel"/>
         <description xml:lang="en-us">
-      A composable model contained in a reference model. A CoreConceptModel represents a specific
-      core type of component that further contains elements with base datatypes and/or other CoreConceptModels to define its structure.
+      A composable model contained in a reference model. A CoreCM represents a specific
+      core type of component that further contains elements with base datatypes and/or other CoreCMs to define its structure.
     </description>
     </owl:Class>
     
@@ -222,7 +222,7 @@
         <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
         <description xml:lang="en-us">
-      A CoreConceptSymbol represents a CoreConceptModel in instance data. In practice, it is usually substituted for by a PluggableConceptSymbol.
+      A CoreConceptSymbol represents a CoreCM in instance data. In practice, it is usually substituted for by a PluggableConceptSymbol.
     </description>
     </owl:Class>
     
@@ -299,7 +299,7 @@
 
     <owl:Class rdf:about="&mlhim2;Exception">
         <rdfs:label xml:lang="en-us">Exception</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mlhim2;CoreConceptModel"/>
+        <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
         <description xml:lang="en-us">
       Indicates that some data is outside of the parameters defined by the CCD Instance.
     </description>
@@ -319,14 +319,14 @@
     
 
 
-    <!-- &mlhim2;PluggableConceptModel -->
+    <!-- &mlhim2;PluggableCM -->
 
-    <owl:Class rdf:about="&mlhim2;PluggableConceptModel">
+    <owl:Class rdf:about="&mlhim2;PluggableCM">
         <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;ConceptModel"/>
         <description xml:lang="en-us">
-      The name given to a CoreConceptModel that has been constrained for use in a CCD Instance. 
-      Through the constraints, a PluggableConceptModel defines a single domain concept based on syntactic data constraints as well 
+      The name given to a CoreCM that has been constrained for use in a CCD Instance. 
+      Through the constraints, a PluggableCM defines a single domain concept based on syntactic data constraints as well 
       as specified semantics. 
       It is *pluggable* because it can be reused in multiple CCD Instances. 
     </description>
@@ -340,20 +340,20 @@
         <rdfs:label xml:lang="en-us">Pluggable Concept Symbol</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
         <description xml:lang="en-us">
-      Represents a PluggableConceptModel in instance data. Can be considered a data container for the components of a PluggableConceptModel. 
+      Represents a PluggableCM in instance data. Can be considered a data container for the components of a PluggableCM. 
     </description>
     </owl:Class>
     
 
 
-    <!-- &mlhim2;ReferenceModel -->
+    <!-- &mlhim2;RM -->
 
-    <owl:Class rdf:about="&mlhim2;ReferenceModel">
+    <owl:Class rdf:about="&mlhim2;RM">
         <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
         <description xml:lang="en-us">
-      A set of components (CoreConceptModels) to provide structural integrity for a domain concept. 
-      Some CoreConceptModels are mandatory in CCDs and some are optional. Optionality is defined in each ReferenceModel implementation.
+      A set of components (CoreCMs) to provide structural integrity for a domain concept. 
+      Some CoreCMs are mandatory in CCDs and some are optional. Optionality is defined in each RM implementation.
     </description>
         <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     </owl:Class>
