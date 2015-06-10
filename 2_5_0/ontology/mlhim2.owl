@@ -1,25 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
+
+
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2/" >
+    <!ENTITY mlhim2  "http://www.mlhim.org/xmlns/mlhim2/" >
 ]>
 
+
 <rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2/"
-  xml:base="http://www.mlhim.org/xmlns/mlhim2/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xml:base="http://www.mlhim.org/xmlns/mlhim2/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+     xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2/">
   
-  <owl:Ontology rdf:about="&mlhim2;mlhim2.owl"  xml:lang="en-us">
-    <dc:description rdf:datatype="&xsd;string">
+    <owl:Ontology rdf:about="http://www.mlhim.org/xmlns/mlhim2/mlhim2.owl">
+        <description rdf:datatype="&xs;string">
       This is the Multi-Level Healthcare Information Modelling (MLHIM) project root ontology.
       All MLHIM Reference Models and CCDs are subclasses of the MLHIM class (defined below) and must import this ontology.
       
@@ -42,269 +45,335 @@
       
       See the License for the specific language governing permissions and
       limitations under the License.
-    </dc:description>
-    <dc:creator rdf:datatype="&xsd;string">Timothy W. Cook</dc:creator>
-    <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
-    <owl:imports rdf:resource="&mlhim2;dcterms.rdf"/>
-  </owl:Ontology>
+    </description>
+        <creator rdf:datatype="&xs;string">Timothy W. Cook</creator>
+        <rdfs:isDefinedBy rdf:datatype="&xs;anyURI">http://www.mlhim.org/</rdfs:isDefinedBy>
+    </owl:Ontology>
+    
 
 
-  <!-- MLHIM DatatypeProperties -->
-  <owl:DatatypeProperty rdf:ID="&mlhim2;isMLHIM2dp">
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- &mlhim2;isMLHIM2Component -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;isMLHIM2Component"/>
+    <owl:AnnotationProperty rdf:about="&mlhim2;description"/>
+    <owl:AnnotationProperty rdf:about="&mlhim2;creator"/>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xs;date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dayTimeDuration -->
+
+    <rdfs:Datatype rdf:about="&xs;dayTimeDuration"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <rdfs:Datatype rdf:about="&xs;duration"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gDay -->
+
+    <rdfs:Datatype rdf:about="&xs;gDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonth -->
+
+    <rdfs:Datatype rdf:about="&xs;gMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonthDay -->
+
+    <rdfs:Datatype rdf:about="&xs;gMonthDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="&xs;gYear"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
+
+    <rdfs:Datatype rdf:about="&xs;gYearMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="&xs;time"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#yearMonthDuration -->
+
+    <rdfs:Datatype rdf:about="&xs;yearMonthDuration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <owl:ObjectProperty rdf:about="&mlhim2;isMLHIM2objprop">
+        <rdfs:label xml:lang="en-us">Is MLHIM2 Object Property</rdfs:label>
+        <description xml:lang="en-us">
+      The top object property of MLHIM2. 
+    </description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+  <owl:DatatypeProperty rdf:about="&mlhim2;isMLHIM2dataprop">
     <rdfs:label xml:lang="en-us">Is MLHIM2 Data Property</rdfs:label>
-    <rdfs:domain rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:range rdf:resource="&mlhim2;MLHIM2"/>
-    <skos:definition xml:lang="en-us">
+    <description xml:lang="en-us">
       The top data property of MLHIM2. 
-    </skos:definition>
+    </description>
   </owl:DatatypeProperty>
   
-  <!-- MLHIM ObjectProperties -->
-
-  <owl:ObjectProperty rdf:ID="&mlhim2;isMLHIM2op">
-    <rdfs:label xml:lang="en-us">Is MLHIM2 Object Property</rdfs:label>
-    <rdfs:domain rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:range rdf:resource="&mlhim2;MLHIM2"/>
-    <skos:definition xml:lang="en-us">
-      The top object property of MLHIM2. 
-    </skos:definition>
-  </owl:ObjectProperty>
   
-  <owl:ObjectProperty rdf:ID="&mlhim2;isCCMin">
-    <rdfs:label xml:lang="en-us">Is CCM In</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;CCM"/>
-    <rdfs:range rdf:resource="&mlhim2;RM"/>
-    <skos:definition xml:lang="en-us">
-      Used to relate a CCM to a RM.  
-    </skos:definition>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;isPCMin">
-    <rdfs:label xml:lang="en-us">Is PCM In</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;PCM"/>
-    <rdfs:range rdf:resource="&mlhim2;CCDInstance"/>
-    <skos:definition xml:lang="en-us">
-      Used to relate a PCM to a CCD Instance.  
-    </skos:definition>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;isConstraintOn">
-    <rdfs:label xml:lang="en-us">Is Constraint On</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;CCDInstance"/>
-    <rdfs:range rdf:resource="&mlhim2;RM"/>
-    <skos:definition xml:lang="en-us">
-      Used to relate a CCD Instance to a RM.  
-    </skos:definition>
-  </owl:ObjectProperty>
-  
-  <owl:ObjectProperty rdf:ID="&mlhim2;isDataInstanceOf">
-    <rdfs:label xml:lang="en-us">Is Data Instance Of</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;DataInstance"/>
-    <rdfs:range rdf:resource="&mlhim2;CCDInstance"/>
-    <skos:definition xml:lang="en-us">
-      Relates a Data Instance to a CCD Instance. 
-      In the reference implementation this property should be applied based on the xsi:schemaLocation attribute of the data instance. 
-    </skos:definition>
-  </owl:ObjectProperty>
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;isCoreSymbolOf">
-    <rdfs:label xml:lang="en-us">Is Core Symbol Of</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;CCS"/>
-    <rdfs:range rdf:resource="&mlhim2;CCM"/>
-    <skos:definition xml:lang="en-us">
-      Relates a Core Concept Symbol to a Core Concept Model. 
-    </skos:definition>
-  </owl:ObjectProperty>
+    
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;isPluggableSymbolOf">
-    <rdfs:label xml:lang="en-us">Is Pluggable Symbol Of</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;PCS"/>
-    <rdfs:range rdf:resource="&mlhim2;PCM"/>
-    <skos:definition xml:lang="en-us">
-      Relates a Pluggable Concept Symbol to a Pluggable Concept Model. 
-    </skos:definition>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;isSymbolSubstituteFor">
-    <rdfs:label xml:lang="en-us">Is Symbol Substitute For</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;PCS"/>
-    <rdfs:range rdf:resource="&mlhim2;CCS"/>
-    <skos:definition xml:lang="en-us">
-      Relates a Pluggable Concept Symbol to a Core Concept Symbol that it subtitutes for. 
-    </skos:definition>
-  </owl:ObjectProperty>
+    <!-- &mlhim2;ConceptConstraintDefinitionInstance -->
 
-  <owl:ObjectProperty rdf:ID="&mlhim2;isSubSymbolOf">
-    <rdfs:label xml:lang="en-us">Is Sub-Symbol Of</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;CCS"/>
-    <rdfs:range rdf:resource="&mlhim2;Symbol"/>
-    <skos:definition xml:lang="en-us">
-      Symbols are contained within Core Concept Symbols. 
-    </skos:definition>
-  </owl:ObjectProperty>
-  
-  <owl:ObjectProperty rdf:ID="&mlhim2;isMLHIM2Component">
-    <rdfs:label xml:lang="en-us">Is MLHIM2 Component</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2op"/>
-    <rdfs:domain rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:range rdf:resource="&mlhim2;MLHIM2"/>
-    <skos:definition xml:lang="en-us">
-      Relates classes to the MLHIM2 top-level class.  
-    </skos:definition>
-  </owl:ObjectProperty>
-  
- 
-  <!-- MLHIM Classes -->
-  <owl:Class rdf:about="&mlhim2;MLHIM2">
-    <rdfs:label xml:lang="en-us">MLHIM 2.x</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      The top level class of MLHIM 2. 
-      MLHIM 1.x was never successfully modeled in OWL and MLHIM 3 will likely be a pure OWL implementation; sometime in the distant future.
-    </skos:definition>
-  </owl:Class>
-
-  <owl:Class rdf:about="&mlhim2;RM">
-    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      A set of components (CCMs) to provide structural integrity for a domain concept. 
-      Some CCMs are mandatory in CCDs and some are optional. Optionality is defined in each RM implementation.
-    </skos:definition>
-  </owl:Class>
-
-  <owl:Class rdf:about="&mlhim2;ConceptModel">
-    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:label xml:lang="en-us">Concept Model</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      A model of an abstract concept.
-    </skos:definition>
-  </owl:Class>
-  
-  <owl:Class rdf:about="&mlhim2;CCM">
-    <rdfs:subClassOf rdf:resource="&mlhim2;ConceptModel"/>
-    <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      A composable model contained in a reference model. A CCM represents a specific
-      core type of component that further contains elements with base datatypes and/or other CCMs to define its structure.
-    </skos:definition>
-  </owl:Class>
-
-  <owl:Class rdf:about="&mlhim2;Symbol">
-    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:label xml:lang="en-us">Symbol</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      A is used to delineate or markup instance data. 
-      In practice, it is usually a variable name or XML element name.
-    </skos:definition>
-  </owl:Class>
-  
-  <owl:Class rdf:about="&mlhim2;CCS">
-    <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
-    <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      A CCS represents a CCM in instance data. In practice, it is usually substituted for by a PCS.
-    </skos:definition>
-  </owl:Class>
-  
-  <owl:Class rdf:about="&mlhim2;CCDInstance">
-    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      A set of selected PCMs that are constraints on the RM components (CCMs) in order to represent a domain concept. 
+    <owl:Class rdf:about="&mlhim2;ConceptConstraintDefinitionInstance">
+        <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+        <mlhim2:description xml:lang="en-us">
+      A set of selected PluggableConceptModels that are constraints on the ReferenceModel components (CoreConceptModels) in order to represent a domain concept. 
       In the implementation language there may be additional syntactic conventions required. 
-    </skos:definition>
-  </owl:Class>
-  
-  <owl:Class rdf:about="&mlhim2;PCM">
-    <rdfs:subClassOf rdf:resource="&mlhim2;ConceptModel"/>
-    <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      The name given to a CCM that has been constrained for use in a CCD Instance. 
-      Through the constraints, a PCM defines a single domain concept based on syntactic data constraints as well 
-      as specified semantics. 
-      It is *pluggable* because it can be reused in multiple CCD Instances. 
-    </skos:definition>
-  </owl:Class>
-  
-  <owl:Class rdf:about="&mlhim2;PCS">
-    <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
-    <rdfs:label xml:lang="en-us">Pluggable Concept Symbol</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      Represents a PCM in instance data. Can be considered a data container for the components of a PCM. 
-    </skos:definition>
-  </owl:Class>
-  
-  <owl:Class rdf:about="&mlhim2;DataInstance">
-    <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
-    <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
-    <skos:definition xml:lang="en-us">
+    </mlhim2:description>
+        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;CoreConceptModel -->
+
+    <owl:Class rdf:about="&mlhim2;CoreConceptModel">
+        <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;ConceptModel"/>
+        <description xml:lang="en-us">
+      A composable model contained in a reference model. A CoreConceptModel represents a specific
+      core type of component that further contains elements with base datatypes and/or other CoreConceptModels to define its structure.
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;CoreConceptSymbol -->
+
+    <owl:Class rdf:about="&mlhim2;CoreConceptSymbol">
+        <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
+        <description xml:lang="en-us">
+      A CoreConceptSymbol represents a CoreConceptModel in instance data. In practice, it is usually substituted for by a PluggableConceptSymbol.
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;ConceptModel -->
+
+    <owl:Class rdf:about="&mlhim2;ConceptModel">
+        <rdfs:label xml:lang="en-us">Concept Model</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+        <description xml:lang="en-us">
+      A model of an abstract concept.
+    </description>
+        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;DataInstance -->
+
+    <owl:Class rdf:about="&mlhim2;DataInstance">
+        <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+        <description xml:lang="en-us">
       A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD Instance.
       It has not been tested for validation.
-    </skos:definition>
-  </owl:Class>
+    </description>
+        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+    </owl:Class>
+    
 
-  <owl:Class rdf:about="&mlhim2;DataInstanceValid">
-    <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
-    <rdfs:label xml:lang="en-us">Valid Data Instance</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      A set of data items that conforms to a CCD Instance to represent an instance of that concept 
-      **AND** the data values are valid according to the CCD Instance constraints.
-    </skos:definition>
-  </owl:Class>
 
-  <owl:Class rdf:about="&mlhim2;DataInstanceInvalid">
-    <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
-    <rdfs:label xml:lang="en-us">Invalid Data Instance</rdfs:label>
-    <skos:definition xml:lang="en-us">
+    <!-- &mlhim2;DataInstanceError -->
+
+    <owl:Class rdf:about="&mlhim2;DataInstanceError">
+        <rdfs:label xml:lang="en-us">Erroneous Data Instance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
+        <description xml:lang="en-us">
+      A set of data items that **DOES NOT** conform to the CCD Instance it represents in its xsi:schemaLocation attribute **OR**
+      it contains invalid data and does not contain one or more children of an Exception.
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;DataInstanceInvalid -->
+
+    <owl:Class rdf:about="&mlhim2;DataInstanceInvalid">
+        <rdfs:label xml:lang="en-us">Invalid Data Instance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
+        <description xml:lang="en-us">
       A set of data items that conforms to a CCD Instance to represent an instance of that concept **AND** the data 
       values are **NOT** valid according to the CCD Instance constraints. 
       An InvalidDataInstance must contain one or more children of an Exception.      
-    </skos:definition>
-  </owl:Class>
+    </description>
+    </owl:Class>
+    
 
-  <owl:Class rdf:about="&mlhim2;DataInstanceError">
-    <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
-    <rdfs:label xml:lang="en-us">Erroneous Data Instance</rdfs:label>
-    <skos:definition xml:lang="en-us">
-      A set of data items that **DOES NOT** conform to the CCD Instance it represents in its xsi:schemaLocation attribute **OR**
-      it contains invalid data and does not contain one or more children of an Exception.
-    </skos:definition>
-  </owl:Class>
-  
-  <owl:Class rdf:about="&mlhim2;Exception">
-    <rdfs:subClassOf rdf:resource="&mlhim2;CCM"/>
-    <rdfs:label xml:lang="en-us">Exception</rdfs:label>
-    <skos:definition xml:lang="en-us">
+
+    <!-- &mlhim2;DataInstanceValid -->
+
+    <owl:Class rdf:about="&mlhim2;DataInstanceValid">
+        <rdfs:label xml:lang="en-us">Valid Data Instance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
+        <description xml:lang="en-us">
+      A set of data items that conforms to a CCD Instance to represent an instance of that concept 
+      **AND** the data values are valid according to the CCD Instance constraints.
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;Exception -->
+
+    <owl:Class rdf:about="&mlhim2;Exception">
+        <rdfs:label xml:lang="en-us">Exception</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;CoreConceptModel"/>
+        <description xml:lang="en-us">
       Indicates that some data is outside of the parameters defined by the CCD Instance.
-    </skos:definition>
-  </owl:Class>
-  
-  
-  
-  <!-- Additional XMLSchema datatypes -->
-  <rdfs:Datatype rdf:about="&xsd;date"/>
-  <rdfs:Datatype rdf:about="&xsd;duration"/>
-  <rdfs:Datatype rdf:about="&xsd;yearMonthDuration"/>
-  <rdfs:Datatype rdf:about="&xsd;dayTimeDuration"/>
-  <rdfs:Datatype rdf:about="&xsd;gDay"/>
-  <rdfs:Datatype rdf:about="&xsd;gMonth"/>
-  <rdfs:Datatype rdf:about="&xsd;gYear"/>
-  <rdfs:Datatype rdf:about="&xsd;gYearMonth"/>
-  <rdfs:Datatype rdf:about="&xsd;gMonthDay"/>
-  <rdfs:Datatype rdf:about="&xsd;time"/>
-  
- 
-  <!-- http://www.w3.org/2004/02/skos/core#definition -->
-  <owl:AnnotationProperty rdf:about="&skos;definition">
-    <rdfs:label xml:lang="en-us">Definition</rdfs:label>
-  </owl:AnnotationProperty>
-  
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;MLHIM2 -->
+
+    <owl:Class rdf:about="&mlhim2;MLHIM2">
+        <rdfs:label xml:lang="en-us">MLHIM 2.x</rdfs:label>
+        <description xml:lang="en-us">
+      The top level class of MLHIM 2. 
+      MLHIM 1.x was never successfully modeled in OWL and MLHIM 3 will likely be a pure OWL implementation; sometime in the distant future.
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;PluggableConceptModel -->
+
+    <owl:Class rdf:about="&mlhim2;PluggableConceptModel">
+        <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;ConceptModel"/>
+        <description xml:lang="en-us">
+      The name given to a CoreConceptModel that has been constrained for use in a CCD Instance. 
+      Through the constraints, a PluggableConceptModel defines a single domain concept based on syntactic data constraints as well 
+      as specified semantics. 
+      It is *pluggable* because it can be reused in multiple CCD Instances. 
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;PluggableConceptSymbol -->
+
+    <owl:Class rdf:about="&mlhim2;PluggableConceptSymbol">
+        <rdfs:label xml:lang="en-us">Pluggable Concept Symbol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
+        <description xml:lang="en-us">
+      Represents a PluggableConceptModel in instance data. Can be considered a data container for the components of a PluggableConceptModel. 
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;ReferenceModel -->
+
+    <owl:Class rdf:about="&mlhim2;ReferenceModel">
+        <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+        <description xml:lang="en-us">
+      A set of components (CoreConceptModels) to provide structural integrity for a domain concept. 
+      Some CoreConceptModels are mandatory in CCDs and some are optional. Optionality is defined in each ReferenceModel implementation.
+    </description>
+        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+    </owl:Class>
+    
+
+
+    <!-- &mlhim2;Symbol -->
+
+    <owl:Class rdf:about="&mlhim2;Symbol">
+        <rdfs:label xml:lang="en-us">Symbol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
+        <description xml:lang="en-us">
+      A is used to delineate or markup instance data. 
+      In practice, it is usually a variable name or XML element name.
+    </description>
+        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+    </owl:Class>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
