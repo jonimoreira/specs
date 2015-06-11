@@ -5,10 +5,9 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY mlhim2  "http://www.mlhim.org/xmlns/mlhim2/" >
 ]>
 
 
@@ -16,12 +15,11 @@
      xml:base="http://www.mlhim.org/xmlns/mlhim2/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xs="http://www.w3.org/2001/XMLSchema#"
-     xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2/">
-  
-    <owl:Ontology rdf:about="http://www.mlhim.org/xmlns/mlhim2/mlhim2.owl">
+     xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+    <owl:Ontology rdf:about="&mlhim2;mlhim2.owl">
         <description rdf:datatype="&xs;string">
       This is the Multi-Level Healthcare Information Modelling (MLHIM) project root ontology.
       All MLHIM Reference Models and CCDs are subclasses of the MLHIM class (defined below) and must import this ontology.
@@ -63,11 +61,22 @@
     
 
 
-    <!-- &mlhim2;isMLHIM2Component -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/creator -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;creator"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/description -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;description"/>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/isMLHIM2Component -->
 
     <owl:AnnotationProperty rdf:about="&mlhim2;isMLHIM2Component"/>
-    <owl:AnnotationProperty rdf:about="&mlhim2;description"/>
-    <owl:AnnotationProperty rdf:about="&mlhim2;creator"/>
+    
 
 
     <!-- 
@@ -149,14 +158,87 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/isCoreModelOf -->
+
+    <owl:ObjectProperty rdf:about="&mlhim2;isCoreModelIn">
+        <rdfs:label xml:lang="en-us">Is Core Model In</rdfs:label>
+        <description xml:lang="en-us">
+      Relates a Core Model to a Reference Model
+    </description>
+        <rdfs:domain rdf:resource="&mlhim2;CoreCM"/>
+        <rdfs:range rdf:resource="&mlhim2;RM"/>
+        <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/isCoreSymbolOf -->
+
+    <owl:ObjectProperty rdf:about="&mlhim2;isCoreSymbolOf">
+        <rdfs:label xml:lang="en-us">Is Core Symbol Of</rdfs:label>
+        <description xml:lang="en-us">
+      Relates a Core Symbol to a Core Model
+    </description>
+      <rdfs:domain rdf:resource="&mlhim2;CoreCS"/>
+      <rdfs:range rdf:resource="&mlhim2;CoreCM"/>
+      <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/isMLHIM2objprop -->
 
     <owl:ObjectProperty rdf:about="&mlhim2;isMLHIM2objprop">
         <rdfs:label xml:lang="en-us">Is MLHIM2 Object Property</rdfs:label>
         <description xml:lang="en-us">
       The top object property of MLHIM2. 
-    </description>
+      </description>
+        <rdfs:domain rdf:resource="&mlhim2;MLHIM2"/>
+        <rdfs:range rdf:resource="&mlhim2;MLHIM2"/>
     </owl:ObjectProperty>
     
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/isPluggableSymbolOf -->
+
+    <owl:ObjectProperty rdf:about="&mlhim2;isPluggableSymbolOf">
+        <rdfs:label xml:lang="en-us">Is Pluggable Symbol Of</rdfs:label>
+        <description xml:lang="en-us">
+      Relates a Pluggable Symbol to a Pluggable Model
+    </description>
+      <rdfs:domain rdf:resource="&mlhim2;PluggableCS"/>
+      <rdfs:range rdf:resource="&mlhim2;PluggableCM"/>
+      <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/isSymbolIn -->
+
+    <owl:ObjectProperty rdf:about="&mlhim2;isSymbolIn">
+      <rdf:type rdf:resource="&owl;FunctionalProperty" />
+        <rdfs:label xml:lang="en-us">Is Symbol In</rdfs:label>
+        <description xml:lang="en-us">
+      The internal definitions of Models have Symbols that provide structure in instance data. 
+    </description>
+      <rdfs:domain rdf:resource="&mlhim2;Symbol"/>
+      <rdfs:range rdf:resource="&mlhim2;ConceptModel"/>
+      <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+    </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="&mlhim2;refersToSymbol">
+    <rdfs:label xml:lang="en-us">Refers To Symbol</rdfs:label>
+    <description xml:lang="en-us">
+      Used to describe when a Model refers to an external Symbol as part of its composition. 
+    </description>
+    <rdfs:domain rdf:resource="&mlhim2;ConceptModel"/>
+    <rdfs:range rdf:resource="&mlhim2;Symbol"/>
+    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+  </owl:ObjectProperty>
+  
 
 
     <!-- 
@@ -168,14 +250,17 @@
      -->
 
     
-  <owl:DatatypeProperty rdf:about="&mlhim2;isMLHIM2dataprop">
-    <rdfs:label xml:lang="en-us">Is MLHIM2 Data Property</rdfs:label>
-    <description xml:lang="en-us">
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/isMLHIM2dataprop -->
+
+    <owl:DatatypeProperty rdf:about="&mlhim2;isMLHIM2dataprop">
+        <rdfs:label xml:lang="en-us">Is MLHIM2 Data Property</rdfs:label>
+        <description xml:lang="en-us">
       The top data property of MLHIM2. 
     </description>
-  </owl:DatatypeProperty>
-  
-  
+    </owl:DatatypeProperty>
+    
 
 
     <!-- 
@@ -189,46 +274,21 @@
     
 
 
-    <!-- &mlhim2;CCDInstance -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/CCDInstance -->
 
     <owl:Class rdf:about="&mlhim2;CCDInstance">
         <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
-        <mlhim2:description xml:lang="en-us">
+        <description xml:lang="en-us">
       A set of selected PluggableCMs that are constraints on the RM components (CoreCMs) in order to represent a domain concept. 
       In the implementation language there may be additional syntactic conventions required. 
-    </mlhim2:description>
+    </description>
         <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
     </owl:Class>
     
 
 
-    <!-- &mlhim2;CoreCM -->
-
-    <owl:Class rdf:about="&mlhim2;CoreCM">
-        <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mlhim2;ConceptModel"/>
-        <description xml:lang="en-us">
-      A composable model contained in a reference model. A CoreCM represents a specific
-      core type of component that further contains elements with base datatypes and/or other CoreCMs to define its structure.
-    </description>
-    </owl:Class>
-    
-
-
-    <!-- &mlhim2;CoreConceptSymbol -->
-
-    <owl:Class rdf:about="&mlhim2;CoreConceptSymbol">
-        <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
-        <description xml:lang="en-us">
-      A CoreConceptSymbol represents a CoreCM in instance data. In practice, it is usually substituted for by a PluggableConceptSymbol.
-    </description>
-    </owl:Class>
-    
-
-
-    <!-- &mlhim2;ConceptModel -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/ConceptModel -->
 
     <owl:Class rdf:about="&mlhim2;ConceptModel">
         <rdfs:label xml:lang="en-us">Concept Model</rdfs:label>
@@ -241,7 +301,32 @@
     
 
 
-    <!-- &mlhim2;DataInstance -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/CoreCM -->
+
+    <owl:Class rdf:about="&mlhim2;CoreCM">
+        <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;ConceptModel"/>
+        <description xml:lang="en-us">
+      A composable model contained in a reference model. A CoreCM represents a specific
+      core type of component that further contains elements with base datatypes and/or other CoreCMs to define its structure.
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/CoreCS -->
+
+    <owl:Class rdf:about="&mlhim2;CoreCS">
+        <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
+        <description xml:lang="en-us">
+      A CoreCS represents a CoreCM in instance data. In practice, it is usually substituted for by a PluggableCS.
+    </description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mlhim.org/xmlns/mlhim2/DataInstance -->
 
     <owl:Class rdf:about="&mlhim2;DataInstance">
         <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
@@ -255,7 +340,7 @@
     
 
 
-    <!-- &mlhim2;DataInstanceError -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/DataInstanceError -->
 
     <owl:Class rdf:about="&mlhim2;DataInstanceError">
         <rdfs:label xml:lang="en-us">Erroneous Data Instance</rdfs:label>
@@ -268,7 +353,7 @@
     
 
 
-    <!-- &mlhim2;DataInstanceInvalid -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/DataInstanceInvalid -->
 
     <owl:Class rdf:about="&mlhim2;DataInstanceInvalid">
         <rdfs:label xml:lang="en-us">Invalid Data Instance</rdfs:label>
@@ -282,7 +367,7 @@
     
 
 
-    <!-- &mlhim2;DataInstanceValid -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/DataInstanceValid -->
 
     <owl:Class rdf:about="&mlhim2;DataInstanceValid">
         <rdfs:label xml:lang="en-us">Valid Data Instance</rdfs:label>
@@ -295,7 +380,7 @@
     
 
 
-    <!-- &mlhim2;Exception -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/Exception -->
 
     <owl:Class rdf:about="&mlhim2;Exception">
         <rdfs:label xml:lang="en-us">Exception</rdfs:label>
@@ -307,7 +392,7 @@
     
 
 
-    <!-- &mlhim2;MLHIM2 -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/MLHIM2 -->
 
     <owl:Class rdf:about="&mlhim2;MLHIM2">
         <rdfs:label xml:lang="en-us">MLHIM 2.x</rdfs:label>
@@ -319,7 +404,7 @@
     
 
 
-    <!-- &mlhim2;PluggableCM -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/PluggableCM -->
 
     <owl:Class rdf:about="&mlhim2;PluggableCM">
         <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
@@ -334,9 +419,9 @@
     
 
 
-    <!-- &mlhim2;PluggableConceptSymbol -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/PluggableCS -->
 
-    <owl:Class rdf:about="&mlhim2;PluggableConceptSymbol">
+    <owl:Class rdf:about="&mlhim2;PluggableCS">
         <rdfs:label xml:lang="en-us">Pluggable Concept Symbol</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
         <description xml:lang="en-us">
@@ -346,7 +431,7 @@
     
 
 
-    <!-- &mlhim2;RM -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/RM -->
 
     <owl:Class rdf:about="&mlhim2;RM">
         <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
@@ -360,7 +445,7 @@
     
 
 
-    <!-- &mlhim2;Symbol -->
+    <!-- http://www.mlhim.org/xmlns/mlhim2/Symbol -->
 
     <owl:Class rdf:about="&mlhim2;Symbol">
         <rdfs:label xml:lang="en-us">Symbol</rdfs:label>
