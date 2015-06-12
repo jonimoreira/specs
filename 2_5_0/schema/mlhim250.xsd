@@ -3370,6 +3370,11 @@
           <mlhim2:description xml:lang="en-us">
             The abstract parent of ClusterType and DvAdapterType structural representation types.
           </mlhim2:description>
+          <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&mlhim2;ClusterType"/>
+            <rdf:Description rdf:about="&mlhim2;DvAdapterType"/>
+          </owl:disjointUnionOf>
+          
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>

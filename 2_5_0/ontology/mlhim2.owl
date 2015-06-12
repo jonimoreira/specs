@@ -178,6 +178,7 @@
     <!-- http://www.mlhim.org/xmlns/mlhim2/isCoreSymbolOf -->
 
     <owl:ObjectProperty rdf:about="&mlhim2;isCoreSymbolOf">
+      <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">Is Core Symbol Of</rdfs:label>
         <description xml:lang="en-us">
       Relates a Core Symbol to a Core Model
@@ -205,6 +206,7 @@
     <!-- http://www.mlhim.org/xmlns/mlhim2/isPluggableSymbolOf -->
 
     <owl:ObjectProperty rdf:about="&mlhim2;isPluggableSymbolOf">
+      <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">Is Pluggable Symbol Of</rdfs:label>
         <description xml:lang="en-us">
       Relates a Pluggable Symbol to a Pluggable Model
