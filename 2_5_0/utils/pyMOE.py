@@ -43,7 +43,7 @@ def main(path):
             'rdf':'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
             'rdfs':'http://www.w3.org/2000/01/rdf-schema#',
             'owl':'http://www.w3.org/2002/07/owl#',
-            'mlhim2':'http://www.mlhim.org/xmlns/mlhim2/'}
+            'mlhim2':'http://www.mlhim.org/ns/mlhim2/'}
 
     header = """<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
@@ -52,13 +52,13 @@ def main(path):
     <!ENTITY xs "http://www.w3.org/2001/XMLSchema" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2/" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/ns/mlhim2/" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.mlhim.org/xmlns/mlhim2/"
-     xml:base="http://www.mlhim.org/xmlns/mlhim2/"
-     xmlns:mlhim2='http://www.mlhim.org/xmlns/mlhim2/'
+<rdf:RDF xmlns="http://www.mlhim.org/ns/mlhim2/"
+     xml:base="http://www.mlhim.org/ns/mlhim2/"
+     xmlns:mlhim2='http://www.mlhim.org/ns/mlhim2/'
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xs="http://www.w3.org/2001/XMLSchema"

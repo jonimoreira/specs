@@ -4,16 +4,16 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2/" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/ns/mlhim2/" >
 ]>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:rdfs='http://www.w3.org/2000/01/rdf-schema#'
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
   xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
-  xmlns:mlhim2='http://www.mlhim.org/xmlns/mlhim2/'
+  xmlns:mlhim2='http://www.mlhim.org/ns/mlhim2/'
   xmlns:owl="http://www.w3.org/2002/07/owl#"
-  targetNamespace='http://www.mlhim.org/xmlns/mlhim2/' 
+  targetNamespace='http://www.mlhim.org/ns/mlhim2/' 
   vc:minVersion="1.1">
   <xs:annotation>
     <xs:documentation xml:lang="en-us"> 

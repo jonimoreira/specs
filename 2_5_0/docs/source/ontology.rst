@@ -192,7 +192,7 @@ An ontology can be broadly defined by two types of components: entities and desc
 MLHIM2 Entities
 ===============
 
-These are the entities defined in `mlhim2.owl <http://www.mlhim.org/xmlns/mlhim2/mlhim2.owl>`_
+These are the entities defined in `mlhim2.owl <http://www.mlhim.org/ns/mlhim2/mlhim2.owl>`_
 
 Classes
 -------

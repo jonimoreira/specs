@@ -73,7 +73,7 @@ Implementations
 ----------------
 It is the intent of the MLHIM community to maintain implementations and documentation in all major programming languages. Volunteers to manage these are welcome. 
 **XML Schema**
-The reference implementation is expressed in XML Schema 1.1. Each release package contains the reference model schema as well as this and other documentation. The release and current development schemas live at the versioned link on MLHIM.org. For example 2.5.0 is at: http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd  A full release is available from GitHub. The previous release is `2.4.7 <https://github.com/mlhim/specs/releases/tag/2.4.7-Release>`_ 
+The reference implementation is expressed in XML Schema 1.1. Each release package contains the reference model schema as well as this and other documentation. The release and current development schemas live at the versioned link on MLHIM.org. For example 2.5.0 is at: http://www.mlhim.org/ns/mlhim2/mlhim250.xsd  A full release is available from GitHub. The previous release is `2.4.7 <https://github.com/mlhim/specs/releases/tag/2.4.7-Release>`_ 
 
 **Best Practices**
 The concept of best practices for modeling and for implementation is an evolving set of results. To accommodate new items of interest under this heading we are using the MLHIM specs Wiki. See the table of contents here: https://github.com/mlhim/specs/wiki/1.-Best-Practices 
