@@ -96,11 +96,11 @@
   <xs:complexType abstract="true" name="DvAnyType">
     <xs:annotation>
       <xs:documentation xml:lang="en-us">Serves as a common ancestor of all data-types in MLHIM models.</xs:documentation>
-      <xs:appinfo>
+      <xs:appinfo>     
         <owl:Class rdf:about="&mlhim2;DvAnyType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;data-name" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
@@ -118,7 +118,7 @@
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
           </rdfs:subClassOf>
--->          <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
+          <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>DvAnyType</rdfs:label>
           <mlhim2:description xml:lang="en-us">Serves as a common ancestor of all data-types in MLHIM models.</mlhim2:description>
           <owl:disjointUnionOf rdf:parseType="Collection">
@@ -141,7 +141,7 @@
             Descriptive name of this datatype model. Provides the semantic 'name' for the model.
             Replaces what would be XML element name or class name in conventional modelling.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;data-name">
               <rdfs:domain rdf:resource="&mlhim2;DvAnyType"/>
               <rdfs:range rdf:resource="&xsd;string"/>
@@ -151,7 +151,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
       <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
@@ -160,7 +160,7 @@
             Valid Time Begin. If present this must be a valid datetime including timezone. It is used
             to indicate the beginning time that information is considered valid or when the information was collected.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;vtb">
               <rdfs:domain rdf:resource="&mlhim2;DvAnyType"/>
               <rdfs:range rdf:resource="&xsd;dateTime"/>
@@ -170,7 +170,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"
         nillable="true">
@@ -179,7 +179,7 @@
             Valid Time End. If present this must be a valid date-time including timezone. It is used
             to indicate the ending time that information is considered valid or the time the information expired.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;vte">
               <rdfs:domain rdf:resource="&mlhim2;DvAnyType"/>
               <rdfs:range rdf:resource="&xsd;dateTime"/>
@@ -189,7 +189,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -222,7 +222,7 @@
         <owl:Class rdf:about="&mlhim2;DvBooleanType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvBooleanType.html#DvBooleanType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;true-value" />
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
@@ -234,7 +234,7 @@
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
           </rdfs:subClassOf>          
--->
+
           <rdfs:label>DvBooleanType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Items which represent boolean decisions, such as true/false or yes/no answers. 
@@ -260,7 +260,7 @@
                 A string that represents a boolean True in the implementation. These
                 are constrained by a set of enumerations in the PcT.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;true-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvBooleanType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -270,7 +270,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="false-value" type="xs:string">
             <xs:annotation>
@@ -278,7 +278,7 @@
                 A string that represents a boolean False in the implementation.
                 These are constrained by a set of enumerations in the PcT.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;false-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvBooleanType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -288,7 +288,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:choice>
       </xs:extension>
@@ -320,7 +320,7 @@
         <owl:Class rdf:about="&mlhim2;DvLinkType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvLinkType.html#DvLinkType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;link" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
@@ -338,7 +338,7 @@
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
           </rdfs:subClassOf>          
--->          
+          
           <rdfs:label>DvLinkType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Used to specify a Universal Resource Identifier. 
@@ -360,7 +360,7 @@
               <xs:documentation xml:lang="en-us">
                 A required URI. A dereferenceable (or not) URL to another CCD or just the ccd-{uuid}.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;link">
                   <rdfs:domain rdf:resource="&mlhim2;DvLinkType"/>
                   <rdfs:range rdf:resource="&xsd;anyURI"/>
@@ -369,14 +369,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 A required term, normally drawn from a vocabulary or ontology such as the OBO RO.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;relation">
                   <rdfs:domain rdf:resource="&mlhim2;DvLinkType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -385,7 +385,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="relation-uri" type="xs:anyURI">
             <xs:annotation>
@@ -393,7 +393,7 @@
                 A URI where the definition of the relation element term can be found. 
                 Normally points to an ontology such as the OBO RO http://purl.obolibrary.org/obo/ro.owl
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;relation-uri">
                   <rdfs:domain rdf:resource="&mlhim2;DvLinkType"/>
                   <rdfs:range rdf:resource="&xsd;anyURI"/>
@@ -403,7 +403,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -431,7 +431,7 @@
         <owl:Class rdf:about="&mlhim2;DvStringType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvStringType.html#DvStringType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;dvstring-value" />
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
@@ -443,7 +443,7 @@
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
           </rdfs:subClassOf>          
--->          
+          
           <rdfs:label>DvStringType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             The string data type can contain characters, line feeds, carriage returns,
@@ -461,7 +461,7 @@
               <xs:documentation xml:lang="en-us">
                 The string value of the item.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;dvstring-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvStringType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -470,7 +470,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
             <xs:annotation>
@@ -480,7 +480,7 @@
                 language identifiers as defined [RFC 3066]. Only required when the language used
                 here is different from the enclosing Entry.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;dvstring-language">
                   <rdfs:domain rdf:resource="&mlhim2;DvStringType"/>
                   <rdfs:range rdf:resource="&xsd;language"/>
@@ -492,7 +492,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -520,7 +520,7 @@
         <owl:Class rdf:about="&mlhim2;DvFileType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvFileType.html#DvFileType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;size" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
@@ -575,7 +575,7 @@
             </owl:Restriction>
           </rdfs:subClassOf>       
           
-          <!-\- TODO: There should only be one of these and exactly one of these allowed in the model. -\->
+          <!-- TODO: There should only be one of these and exactly one of these allowed in the model. -->
           <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;uri" />
@@ -594,7 +594,7 @@
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
           </rdfs:subClassOf>                    
--->          <rdfs:label>DvFileType</rdfs:label>
+          <rdfs:label>DvFileType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             A type to use for encapsulated content (aka. files) for image, audio and other media types 
             with a defined MIME type. This type provides a choice of embedding the content into the data or using a URL 
@@ -612,7 +612,7 @@
                 Original size in bytes of unencoded encapsulated data. I.e.
                 encodings such as base64, hexadecimal, etc. do not change the value of this element.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;size">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;int"/>
@@ -622,7 +622,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="encoding" type="xs:string">
             <xs:annotation>
@@ -633,7 +633,7 @@
                 S3Model, with UTF-8 being the assumed encoding. This attribute allows for variations
                 from these assumptions.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;encoding">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -646,7 +646,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvfile-language" type="xs:language">
             <xs:annotation>
@@ -655,7 +655,7 @@
                 Typically reamins optional in the CCD and used at runtime when the content is in a different 
                 language from the enclosing CCD.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;dvfile-language">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;language"/>
@@ -666,7 +666,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="formalism" type="xs:string">
             <xs:annotation>
@@ -675,7 +675,7 @@
                 a candidate parser to use on the content. Examples might include: 'ATL', 'MOLA', 'QVT', 'GDL', 'GLIF', etc.  for DvParsables.
                 Text-based formats that have a MIME type assigned, such as XML, XHTML, etc. should use DvMediaType.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;formalism">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -686,7 +686,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="media-type" type="xs:string">
             <xs:annotation>
@@ -694,7 +694,7 @@
                 MIME type of the original media-content w/o any compression. See
                 IANA registered types: http://www.iana.org/assignments/media-types/media-types.xhtml
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;media-type">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -704,7 +704,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="compression-type" type="xs:string">
             <xs:annotation>
@@ -713,7 +713,7 @@
                 For a list of common mime-types for compression/archiving
                 see: http://en.wikipedia.org/wiki/List_of_archive_formats.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;compression-type">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -724,7 +724,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="hash-result" type="xs:string">
             <xs:annotation>
@@ -733,7 +733,7 @@
                 corresponding hash function type listed for this to have any meaning. See:
                 http://en.wikipedia.org/wiki/List_of_hash_functions#Cryptographic_hash_functions
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;hash-result">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -744,7 +744,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="hash-function" type="xs:string">
             <xs:annotation>
@@ -752,7 +752,7 @@
                 Hash function used to compute hash-result. See:
                 http://en.wikipedia.org/wiki/List_of_hash_functions#Cryptographic_hash_functions
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;hash-function">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -762,14 +762,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="alt-txt" type="xs:string">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Text to display in lieu of multimedia display or execution.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;alt-txt">
                   <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -778,7 +778,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:choice maxOccurs="1" minOccurs="1">
             <xs:element name="uri" type="xs:anyURI">
@@ -788,7 +788,7 @@
                   database entry etc, if supplied as a reference. 
                   The CCD modeler chooses either a uri, a binary-content element or a text-content element.
                 </xs:documentation>
-<!--                <xs:appinfo>
+                <xs:appinfo>
                   <owl:DatatypeProperty rdf:about="&mlhim2;uri">
                     <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                     <rdfs:range rdf:resource="&xsd;anyURI"/>
@@ -799,7 +799,7 @@
                     </mlhim2:description>
                   </owl:DatatypeProperty>
                 </xs:appinfo>
--->              </xs:annotation>
+              </xs:annotation>
             </xs:element>
             <xs:element name="media-content" type="xs:base64Binary">
               <xs:annotation>
@@ -807,7 +807,7 @@
                   The content, if stored locally as binary content. 
                   The CCD modeler chooses either a uri, a binary-content element or a text-content element.
                 </xs:documentation>
-<!--                <xs:appinfo>
+                <xs:appinfo>
                   <owl:DatatypeProperty rdf:about="&mlhim2;media-content">
                     <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                     <rdfs:range rdf:resource="&xsd;base64Binary"/>
@@ -817,7 +817,7 @@
                     </mlhim2:description>
                   </owl:DatatypeProperty>
                 </xs:appinfo>
--->              </xs:annotation>
+              </xs:annotation>
             </xs:element>
             <xs:element name="text-content" type="xs:string">
               <xs:annotation>
@@ -825,7 +825,7 @@
                   The content, if stored locally as text content. 
                   The CCD modeler chooses either a uri, a binary-content element or a text-content element.
                 </xs:documentation>
-<!--                <xs:appinfo>
+                <xs:appinfo>
                   <owl:DatatypeProperty rdf:about="&mlhim2;text-content">
                     <rdfs:domain rdf:resource="&mlhim2;DvFileType"/>
                     <rdfs:range rdf:resource="&xsd;string"/>
@@ -835,7 +835,7 @@
                     </mlhim2:description>
                   </owl:DatatypeProperty>
                 </xs:appinfo>
--->              </xs:annotation>
+              </xs:annotation>
             </xs:element>
           </xs:choice>
         </xs:sequence>
@@ -864,8 +864,8 @@
         <owl:Class rdf:about="&mlhim2;DvOrderedType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvOrderedType.html#DvOrderedType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
-<!--          
-          <!-\- Need to add a subclass for 'range' here.  How to express zero to unbounded? -\->
+          
+          <!-- Need to add a subclass for 'range' here.  How to express zero to unbounded? -->
        
           <rdfs:subClassOf>
             <owl:Restriction>
@@ -873,7 +873,7 @@
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
           </rdfs:subClassOf>                    
--->          <rdfs:label>DvOrderedType</rdfs:label>
+          <rdfs:label>DvOrderedType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Abstract type defining the concept of ordered values, which includes
             ordinals as well as true quantities. The implementations require the functions ‘&lt;’,
@@ -896,7 +896,7 @@
               <xs:documentation xml:lang="en-us">
                 Optional list of ReferenceRanges for this value in its particular measurement context.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;range">
                   <rdfs:domain rdf:resource="&mlhim2;DvOrderedType"/>
                   <rdfs:range rdf:resource="&mlhim2;ReferenceRangeType"/>
@@ -905,7 +905,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="normal-status" type="xs:string">
             <xs:annotation>
@@ -914,7 +914,7 @@
                 range for this value. Often included by lab, even if the normal range itself is not
                 included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL, etc.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;normal-status">
                   <rdfs:domain rdf:resource="&mlhim2;DvOrderedType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -925,7 +925,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -968,7 +968,7 @@
         <owl:Class rdf:about="&mlhim2;DvOrdinalType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvOrdinalType.html#DvOrdinalType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvOrderedType"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;ordinal" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
@@ -980,7 +980,7 @@
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
           </rdfs:subClassOf>          
--->          
+          
           <rdfs:label>DvOrdinalType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Models rankings and scores, e.g. pain, Apgar values, etc, where there is a)
@@ -1016,7 +1016,7 @@
                 Example 1: 0 = Trace, 1 = +, 2 = ++, 3 = +++, etc. 
                 Example 2: 0 = Mild, 1 = Moderate, 2 = Severe
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;ordinal">
                   <rdfs:domain rdf:resource="&mlhim2;DvOrdinalType"/>
                   <rdfs:range rdf:resource="&xsd;decimal"/>
@@ -1028,7 +1028,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="symbol" type="xs:string">
             <xs:annotation>
@@ -1037,7 +1037,7 @@
                 may be strings made from “+” symbols, or other enumerations of terms such as “mild”,
                 “moderate”, “severe”, or even the same number series as the values, e.g. “1”, “2”, “3”.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;symbol">
                   <rdfs:domain rdf:resource="&mlhim2;DvOrdinalType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -1048,7 +1048,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -1075,7 +1075,7 @@
         <owl:Class rdf:about="&mlhim2;DvQuantifiedType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantifiedType.html#DvQuantifiedType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvOrderedType"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;magnitude-status" />
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
@@ -1093,7 +1093,7 @@
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
           </rdfs:subClassOf>          
--->          
+          
           <rdfs:label>DvQuantifiedType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Abstract type defining the concept of true quantified values, i.e. values
@@ -1116,7 +1116,7 @@
               <xs:documentation xml:lang="en-us">
                 Optional status of magnitude.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;magnitude-status">
                   <rdfs:domain rdf:resource="&mlhim2;DvQuantifiedType"/>
                   <rdfs:range rdf:resource="&mlhim2;MagnitudeStatus"/>
@@ -1125,7 +1125,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="error" type="xs:int">
             <xs:annotation>
@@ -1133,7 +1133,7 @@
                 Error margin of measurement, indicating error in the recording method or instrument (+/- %). 
                 A logical value of 0 indicates 100% accuracy, i.e. no error.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;error">
                   <rdfs:domain rdf:resource="&mlhim2;DvQuantifiedType"/>
                   <rdfs:range rdf:resource="&xsd;int"/>
@@ -1143,7 +1143,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="accuracy" type="xs:decimal">
             <xs:annotation>
@@ -1152,7 +1152,7 @@
                 Accuracy of the value in the magnitude attribute in the range 0% to (+/-)100%.
                 A value of 0 means that the accuracy is unknown.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;accuracy">
                   <rdfs:domain rdf:resource="&mlhim2;DvQuantifiedType"/>
                   <rdfs:range rdf:resource="&xsd;decimal"/>
@@ -1162,7 +1162,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -1199,7 +1199,7 @@
         
         approximate : value is the approximately the magnitude
       </xs:documentation>
-<!--      <xs:appinfo>
+      <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;MagnitudeStatus">
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/> 
           <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
@@ -1238,7 +1238,7 @@
         <rdf:Description rdf:about="&mlhim2;less_than"/>
         <rdf:Description rdf:about="&mlhim2;less_than_or_equal"/>
       </xs:appinfo>
--->    </xs:annotation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="equal"/>
       <xs:enumeration value="less_than"/>
@@ -1261,7 +1261,7 @@
         <owl:Class rdf:about="&mlhim2;DvCountType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvCountType.html#DvCountType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvQuantifiedType"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;dvcount-value" />
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
@@ -1273,7 +1273,7 @@
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
           </rdfs:subClassOf>          
--->          
+          
           <rdfs:label>DvCountType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Countable quantities. Used for countable types such as pregnancies and
@@ -1292,7 +1292,7 @@
               <xs:documentation xml:lang="en-us">
                 Numeric value of the counted items.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;dvcount-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvCountType"/>
                   <rdfs:range rdf:resource="&xsd;int"/>
@@ -1301,7 +1301,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name='dvcount-units' type="mlhim2:DvStringType">
             <xs:annotation>
@@ -1310,7 +1310,7 @@
                 Examples are cigarettes, drinks, pregnancies, episodes, etc. 
                 May or may not come from a standard terminology.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;dvcount-units">
                   <rdfs:domain rdf:resource="&mlhim2;DvCountType"/>
                   <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -1321,7 +1321,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -1351,7 +1351,7 @@
         <owl:Class rdf:about="&mlhim2;DvQuantityType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantityType.html#DvQuantityType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvQuantifiedType"/>
-<!--          <rdfs:subClassOf>
+          <rdfs:subClassOf>
             <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;dvquantity-value" />
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
@@ -1363,7 +1363,7 @@
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
           </rdfs:subClassOf>          
--->          
+          
           <rdfs:label>DvQuantityType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Quantified type representing specific quantities, i.e. quantities
@@ -1382,7 +1382,7 @@
               <xs:documentation xml:lang="en-us">
                 Numeric value of the quantity.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;dvquantity-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvQuantityType"/>
                   <rdfs:range rdf:resource="&xsd;decimal"/>
@@ -1391,7 +1391,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name='dvquantity-units' type="mlhim2:DvStringType">
             <xs:annotation>
@@ -1400,7 +1400,7 @@
                 Examples are "kg/m2", “mm[Hg]", "ms-1", "km/h". 
                 May or may not come from a standard terminology.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;dvquantity-units">
                   <rdfs:domain rdf:resource="&mlhim2;DvQuantityType"/>
                   <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -1411,7 +1411,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -1462,7 +1462,7 @@
               <xs:documentation xml:lang="en-us">
                 Indicates specific type of ratio modeled in the PcT. 
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;DvRatioType/ratio-type">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
                   <rdfs:range rdf:resource="&mlhim2;TypeOfRatio"/>
@@ -1471,14 +1471,14 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="numerator" type="xs:decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Numerator of ratio.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvRatioType/numerator">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
                   <rdfs:range rdf:resource="&xsd;decimal"/>
@@ -1487,14 +1487,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="denominator" type="xs:decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Denominator of ratio.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvRatioType/denominator">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
                   <rdfs:range rdf:resource="&xsd;decimal"/>
@@ -1503,14 +1503,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvratio-value" type="xs:decimal">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Numeric value of the ratio.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvRatioType/dvratio-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
                   <rdfs:range rdf:resource="&xsd;decimal"/>
@@ -1519,7 +1519,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="numerator-units" type="mlhim2:DvStringType">
             <xs:annotation>
@@ -1528,7 +1528,7 @@
                 units such as; cigarettes, drinks, exercise periods, etc. May or may not come from a
                 terminology such as OBO Foundry Units ontology. 
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;DvRatioType/numerator-units">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
                   <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -1539,7 +1539,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="denominator-units" type="mlhim2:DvStringType">
             <xs:annotation>
@@ -1548,7 +1548,7 @@
                 Typically units such as; minutes, hours, days, years, months, etc. 
                 May or may not come from a standard terminology.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;DvRatioType/denominator-units">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
                   <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -1559,7 +1559,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name='dvratio-units' type="mlhim2:DvStringType">
             <xs:annotation>
@@ -1567,7 +1567,7 @@
                 Used to convey the meaning of the dvratio-value. 
                 May or may not come from a standard terminology.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;DvRatioType/dvratio-units">
                   <rdfs:domain rdf:resource="&mlhim2;DvRatioType"/>
                   <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -1577,7 +1577,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -1608,7 +1608,7 @@
         relationship between the numerator and the denominator (the numerator is not
         contained in the denominator) 
       </xs:documentation>
-<!--      <xs:appinfo>
+      <xs:appinfo>
         <owl:Class rdf:about="&mlhim2;TypeOfRatio">
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
           <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
@@ -1631,13 +1631,13 @@
           </owl:oneOf>
           
         </owl:Class>   
-        <!-\- Individual types of ratio -\->
+        <!-- Individual types of ratio -->
         <rdf:Description rdf:about="&mlhim2;proportion"/>
         <rdf:Description rdf:about="&mlhim2;rate"/>
         <rdf:Description rdf:about="&mlhim2;ratio"/>
         
       </xs:appinfo>
--->    </xs:annotation>
+    </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="ratio"/>
       <xs:enumeration value="proportion"/>
@@ -1678,7 +1678,7 @@
                 For non-timezoned values, the top-open intervals disjointly cover the non-timezoned timeline, one per day.  
                 For timezoned values, the intervals begin at every minute and therefore overlap.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-date">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;date"/>
@@ -1690,7 +1690,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-time" type="xs:time">
@@ -1699,7 +1699,7 @@
                 Represents instants of time that recur at the same point in each calendar day, 
                 or that occur in some arbitrary calendar day.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-time">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;time"/>
@@ -1709,7 +1709,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-datetime" type="xs:dateTime">
@@ -1718,7 +1718,7 @@
                 Represents instants of time, optionally marked with a particular time zone offset.  
                 Values representing the same instant but having different time zone offsets are equal but not identical.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-datetime">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;dateTime"/>
@@ -1728,7 +1728,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-datetime-stamp" type="xs:dateTimeStamp">
@@ -1738,7 +1738,7 @@
                 The result is that all values of dateTimeStamp are required to have explicit 
                 time zone offsets and the datatype is totally ordered.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-datetime-stamp">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
@@ -1749,7 +1749,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
 
@@ -1761,7 +1761,7 @@
                 gets a paycheck on the 15th of each month.  
                 (Obviously, days beyond 28 cannot occur in all months; they are nonetheless permitted, up to 31.)
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-day">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;gDay"/>
@@ -1773,7 +1773,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-month" type="xs:gMonth">
@@ -1783,18 +1783,18 @@
                 It might be used, for example, to say what month annual Thanksgiving celebrations fall in different countries 
                 (--11 in the United States, --10 in Canada, and possibly other months in other countries).
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-month">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;gMonth"/>
                   <mlhim2:description xml:lang="en-us">
                     Represents whole (Gregorian) months within an arbitrary year—months that recur at the same point in each year.  
                     It might be used, for example, to say what month annual Thanksgiving celebrations fall in different countries 
-                    (-\-11 in the United States, -\-10 in Canada, and possibly other months in other countries).
+                    (--11 in the United States, --10 in Canada, and possibly other months in other countries).
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-year" type="xs:gYear">
@@ -1802,7 +1802,7 @@
               <xs:documentation xml:lang="en-us">
                 Represents Gregorian calendar years.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-year">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;gYear"/>
@@ -1811,7 +1811,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-year-month" type="xs:gYearMonth">
@@ -1819,7 +1819,7 @@
               <xs:documentation xml:lang="en-us">
                 Represents specific whole Gregorian months in specific Gregorian years.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-year-month">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;gYearMonth"/>
@@ -1828,7 +1828,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-month-day" type="xs:gMonthDay">
@@ -1837,7 +1837,7 @@
                 Represents whole calendar days that recur at the same point in each calendar year, or that occur in some arbitrary calendar year.  
                 (Obviously, days beyond 28 cannot occur in all Februaries; 29 is nonetheless permitted.)
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-month-day">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;gMonthDay"/>
@@ -1847,7 +1847,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-duration" type="xs:duration">
@@ -1860,7 +1860,7 @@
                 This datatype can provide addition and subtraction operations between duration values and between 
                 duration/dateTime value pairs, and can be the result of subtracting dateTime values.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-duration">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;duration"/>
@@ -1874,7 +1874,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>              
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-ymduration" type="xs:yearMonthDuration">
             <xs:annotation>
@@ -1883,7 +1883,7 @@
                 The ·value space· of yearMonthDuration is therefore that of duration restricted to those whose ·seconds· property is 0.  
                 This results in a duration datatype which is totally ordered.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-ymduration">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;yearMonthDuration"/>
@@ -1894,7 +1894,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->              
+              
             </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="dvtemporal-dtduration" type="xs:dayTimeDuration">
@@ -1904,7 +1904,7 @@
                 The ·value space· of dayTimeDuration is therefore that of duration restricted to those whose ·months· property is 0.  
                 This results in a duration datatype which is totally ordered.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvTemporalType/dvtemporal-dtduration">
                   <rdfs:domain rdf:resource="&mlhim2;DvTemporalType"/>
                   <rdfs:range rdf:resource="&xsd;dayTimeDuration"/>
@@ -1915,7 +1915,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>              
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -1962,7 +1962,7 @@
               <xs:documentation xml:lang="en-us"> 
                 Defines the lower value of the interval. 
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;DvIntervalType/lower">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
                   <rdfs:range rdf:resource="&mlhim2;InvlType"/>
@@ -1971,14 +1971,14 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="upper" type="mlhim2:InvlType">
             <xs:annotation>
               <xs:documentation xml:lang="en-us"> 
                 Defines the upper value of the interval. 
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;DvIntervalType/upper">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
                   <rdfs:range rdf:resource="&mlhim2;InvlType"/>
@@ -1987,14 +1987,14 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="lower-included" type="xs:boolean">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Is the lower value of the interval inclusive?
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvIntervalType/lower-included">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
                   <rdfs:range rdf:resource="&xsd;boolean"/>
@@ -2003,14 +2003,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="upper-included" type="xs:boolean">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Is the upper value of the interval inclusive?
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvIntervalType/upper-included">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
                   <rdfs:range rdf:resource="&xsd;boolean"/>
@@ -2019,14 +2019,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="lower-bounded" type="xs:boolean">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Is the lower value of the interval bounded?
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvIntervalType/lower-bounded">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
                   <rdfs:range rdf:resource="&xsd;boolean"/>
@@ -2035,14 +2035,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="upper-bounded" type="xs:boolean">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Is the upper value of the interval bounded?
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;DvIntervalType/upper-bounded">
                   <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
                   <rdfs:range rdf:resource="&xsd;boolean"/>
@@ -2051,14 +2051,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
          <xs:element maxOccurs="1"  minOccurs="0" name="interval-units" type="mlhim2:InvlUnits">
           <xs:annotation>
             <xs:documentation xml:lang="en-us"> 
               Defines the the units for this Interval. 
             </xs:documentation>
-<!--            <xs:appinfo>
+            <xs:appinfo>
               <owl:ObjectProperty rdf:about="&mlhim2;DvIntervalType/interval-units">
                 <rdfs:domain rdf:resource="&mlhim2;DvIntervalType"/>
                 <rdfs:range rdf:resource="&mlhim2;IntervalUnits"/>
@@ -2067,7 +2067,7 @@
                 </mlhim2:description>
               </owl:ObjectProperty>
             </xs:appinfo>
--->          </xs:annotation>
+          </xs:annotation>
         </xs:element>
         </xs:sequence>
         <!-- The assert doesn't need the value comparison if CCDs use the fixed attribute. 
@@ -2185,7 +2185,7 @@
               <xs:documentation xml:lang="en-us">
                 Term whose value indicates the meaning of this range, e.g. 'normal', 'critical', 'therapeutic' etc.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;ReferenceRangeType/definition">
                   <rdfs:domain rdf:resource="&mlhim2;ReferenceRangeType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -2194,14 +2194,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name='interval' type="mlhim2:DvIntervalType">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 The data range for this meaning.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;ReferenceRangeType/interval">
                   <rdfs:domain rdf:resource="&mlhim2;ReferenceRangeType"/>
                   <rdfs:range rdf:resource="&mlhim2;DvIntervalType"/>
@@ -2210,7 +2210,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="is-normal" type="xs:boolean">
             <xs:annotation>
@@ -2218,7 +2218,7 @@
                 True if this reference range defines values that are considered to be normal. 
                 In the context of the value in the definition element.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;ReferenceRangeType/is-normal">
                   <rdfs:domain rdf:resource="&mlhim2;ReferenceRangeType"/>
                   <rdfs:range rdf:resource="&xsd;boolean"/>
@@ -2228,7 +2228,7 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -2274,7 +2274,7 @@
             Identifier of systems which created or handled the information item. 
             'Systems' can also be defined as an individual application or a data repository in which the data was manipulated.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;AuditType/system-id">
               <rdfs:domain rdf:resource="&mlhim2;AuditType"/>
               <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -2284,14 +2284,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="system-user" type="mlhim2:PartyType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             User(s) who created, committed, forwarded or otherwise handled the item. 
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;AuditType/system-user">
               <rdfs:domain rdf:resource="&mlhim2;AuditType"/>
               <rdfs:range rdf:resource="&mlhim2;PartyType"/>
@@ -2300,14 +2300,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="location" type="mlhim2:ClusterType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Location information of the particular site/facility within an organisation which handled the item. 
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;AuditType/location">
               <rdfs:domain rdf:resource="&mlhim2;AuditType"/>
               <rdfs:range rdf:resource="&mlhim2;ClusterType"/>
@@ -2316,14 +2316,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="timestamp" type="xs:dateTimeStamp">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Timestamp of handling the item.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;AuditType">
               <rdfs:domain rdf:resource="&mlhim2;AuditType"/>
               <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
@@ -2332,7 +2332,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -2376,7 +2376,7 @@
           <xs:documentation xml:lang="en-us">
             Optional human-readable name (in String form).
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;PartyType/party-name">
               <rdfs:domain rdf:resource="&mlhim2;PartyType"/>
               <rdfs:range rdf:resource="&xsd;string"/>
@@ -2385,7 +2385,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name='party-ref' type="mlhim2:DvLinkType">
         <xs:annotation>
@@ -2393,7 +2393,7 @@
             Optional reference to more detailed demographic or identification
             information for this party, in an external system.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;PartyType/party-ref">
               <rdfs:domain rdf:resource="&mlhim2;PartyType"/>
               <rdfs:range rdf:resource="&mlhim2;DvLinkType"/>
@@ -2403,14 +2403,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="party-details" type="mlhim2:ClusterType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Structural details about the party.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;PartyType/party-details">
               <rdfs:domain rdf:resource="&mlhim2;PartyType"/>
               <rdfs:range rdf:resource="&mlhim2;ClusterType"/>
@@ -2419,7 +2419,7 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -2459,7 +2459,7 @@
           <xs:documentation xml:lang="en-us">
             Optional visual representation of content attested e.g. screen image.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;AttestationType/view">
               <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
               <rdfs:range rdf:resource="&mlhim2;DvFileType"/>
@@ -2468,14 +2468,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="proof" type="mlhim2:DvFileType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Proof of attestation such as an GPG signature. 
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;AttestationType/proof">
               <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
               <rdfs:range rdf:resource="&mlhim2;DvFileType"/>
@@ -2484,14 +2484,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="reason" type="mlhim2:DvStringType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Reason of this attestation. Usually coded from a standardized vocabulary.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;AttestationType/reason">
               <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
               <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -2500,14 +2500,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="committer" type="mlhim2:PartyType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Identity of person who committed the item. 
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;AttestationType/committer">
               <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
               <rdfs:range rdf:resource="&mlhim2;PartyType"/>
@@ -2516,14 +2516,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="committed" type="xs:dateTimeStamp">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Timestamp of committal of the item.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;AttestationType/committed">
               <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
               <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
@@ -2532,14 +2532,14 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="pending" type="xs:boolean">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             True if this attestation is outstanding; 'false' means it has been completed.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;AttestationType/pending">
               <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
               <rdfs:range rdf:resource="&xsd;boolean"/>
@@ -2548,7 +2548,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -2589,7 +2589,7 @@
           <xs:documentation xml:lang="en-us">
             The id and possibly demographic system link of the party participating in the activity. 
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;ParticipationType/performer">
               <rdfs:domain rdf:resource="&mlhim2;ParticipationType"/>
               <rdfs:range rdf:resource="&mlhim2;PartyType"/>
@@ -2598,7 +2598,7 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="function" type="mlhim2:DvStringType">
         <xs:annotation>
@@ -2607,7 +2607,7 @@
             might participate in more than one way in a particular activity). In some applications
             this might be called a Role.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;ParticipationType/function">
               <rdfs:domain rdf:resource="&mlhim2;ParticipationType"/>
               <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -2618,7 +2618,7 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="mode" type="mlhim2:DvStringType">
         <xs:annotation>
@@ -2627,7 +2627,7 @@
             telephone, by email etc. If the participation is by device or software it may contain a
             protocol standard or interface definition. 
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;ParticipationType/mode">
               <rdfs:domain rdf:resource="&mlhim2;ParticipationType"/>
               <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -2638,14 +2638,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="start" type="xs:dateTimeStamp">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             The beginning datetime when the participation took place.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;ParticipationType/start">
               <rdfs:domain rdf:resource="&mlhim2;ParticipationType"/>
               <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
@@ -2654,14 +2654,14 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="end" type="xs:dateTimeStamp">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             The ending datetime when the participation took place.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;ParticipationType/end">
               <rdfs:domain rdf:resource="&mlhim2;ParticipationType"/>
               <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
@@ -2670,7 +2670,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -2735,7 +2735,7 @@
           <xs:documentation xml:lang="en-us">
             A short title or phase for the exceptional type value. 
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;ExceptionalValueType/ev-name">
               <rdfs:domain rdf:resource="&mlhim2;ExceptionalValueType"/>
               <rdfs:range rdf:resource="&xsd;string"/>
@@ -2744,7 +2744,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>         
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -3416,7 +3416,7 @@
               <xs:documentation xml:lang="en-us">
                 Descriptive subject line for this group of PcTs.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="&mlhim2;ClusterType/subject">
                   <rdfs:domain rdf:resource="&mlhim2;ClusterType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
@@ -3425,14 +3425,14 @@
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:Items">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 List of Item types.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;ClusterType/Items">
                   <rdfs:domain rdf:resource="&mlhim2;ClusterType"/>
                   <rdfs:range rdf:resource="&mlhim2;ItemType"/>
@@ -3441,7 +3441,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -3486,7 +3486,7 @@
                 Data value type of this leaf. By rule, there must only be one DvAnyType subtype defined here.
                 The unbounded occurrences is allowed so that the PcT can specify how many repetitions may occur in the instance.
               </xs:documentation>
-<!--              <xs:appinfo>
+              <xs:appinfo>
                 <owl:ObjectProperty rdf:about="&mlhim2;DvAdapterType/DvAdapter-value">
                   <rdfs:domain rdf:resource="&mlhim2;DvAdapterType"/>
                   <rdfs:range rdf:resource="&mlhim2;DvAnyType"/>
@@ -3496,7 +3496,7 @@
                   </mlhim2:description>
                 </owl:ObjectProperty>
               </xs:appinfo>
--->            </xs:annotation>
+            </xs:annotation>
           </xs:element>
         </xs:sequence>
       </xs:extension>
@@ -3556,7 +3556,7 @@
             written. The value space of language is the set of all strings that are valid language
             identifiers as defined [RFC 3066].
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;EntryType/language">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&xsd;language"/>
@@ -3567,14 +3567,14 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="encoding" type="xs:string" default="utf-8">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Name of character set encoding in which text values in this Entry are encoded. Default is utf-8.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;EntryType/encoding">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&xsd;string"/>
@@ -3583,7 +3583,7 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string">
         <xs:annotation>
@@ -3591,7 +3591,7 @@
             The current state according to the state machine / workflow engine
             identified in the workflow element.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:DatatypeProperty rdf:about="&mlhim2;EntryType/current-state">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&xsd;string"/>
@@ -3601,14 +3601,14 @@
               </mlhim2:description>
             </owl:DatatypeProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:Item">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             The data structure of the Entry.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/data">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;Item"/>
@@ -3617,7 +3617,7 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="subject" type="mlhim2:PartyType">
         <xs:annotation>
@@ -3629,7 +3629,7 @@
             • a family member 
             • another clinically relevant person.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/subject">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;PartyType"/>
@@ -3643,7 +3643,7 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="provider" type="mlhim2:PartyType">
         <xs:annotation>
@@ -3654,7 +3654,7 @@
             • the clinician 
             • a device or software
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/provider">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;PartyType"/>
@@ -3667,14 +3667,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:Participation">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             List of other participations at Entry level.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/participations">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;Participation"/>
@@ -3683,7 +3683,7 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="protocol" type="mlhim2:DvStringType">
         <xs:annotation>
@@ -3691,7 +3691,7 @@
             Optional external identifier of protocol used to create this Entry. 
             This could be a clinical guideline, an operations protocol,etc.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/protocol">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;DvStringType"/>
@@ -3701,14 +3701,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="workflow" type="mlhim2:DvLinkType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Identifier of externally held workflow engine (state machine) data for this workflow execution.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/workflow">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;DvLinkType"/>
@@ -3717,7 +3717,7 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="unbounded" minOccurs="0" name="audit" type="mlhim2:AuditType">
         <xs:annotation>
@@ -3725,7 +3725,7 @@
             Audit trail from the system of original commit of information forming
             the content of this node, or from a conversion gateway which has synthesised this node.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/audit">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;AuditType"/>
@@ -3735,14 +3735,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="attestation" type="mlhim2:AttestationType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Attestation recorded.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/attestation">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;AttestationType"/>
@@ -3751,14 +3751,14 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
       <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:DvLink">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Optional link(s) to other locatable structures or external entities.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;EntryType/links">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&mlhim2;DvLink"/>
@@ -3767,7 +3767,7 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -3782,7 +3782,7 @@
     </xs:annotation>    
   </xs:element>
 
-<!--  <xs:complexType name="CareEntryType">
+  <xs:complexType name="CareEntryType">
     <xs:annotation>
       <xs:documentation xml:lang="en-us">
         Entry subtype for all entries related to care of an a subject of record.
@@ -3889,7 +3889,7 @@
     </xs:annotation>    
   </xs:element>
 
--->  
+  
   
   <!--CCD / constraint model -->
   <xs:complexType name="CCDType">
@@ -3916,7 +3916,7 @@
           <xs:documentation xml:lang="en-us">
             Structural definition element for this CCD.
           </xs:documentation>
-<!--          <xs:appinfo>
+          <xs:appinfo>
             <owl:ObjectProperty rdf:about="&mlhim2;definition">
               <rdfs:domain rdf:resource="&mlhim2;CCDType"/>
               <rdfs:range rdf:resource="&mlhim2;Definition"/>
@@ -3925,25 +3925,16 @@
               </mlhim2:description>
             </owl:ObjectProperty>
           </xs:appinfo>
--->        </xs:annotation>
+        </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Definition" type="mlhim2:EntryType">
     <xs:annotation>
       <xs:appinfo>
-        <owl:equivalentClass>
-          <owl:Class>
-            <owl:intersectionOf rdf:parseType="Collection">
-              <rdf:Description rdf:about="&mlhim2;Definition"/>
-              <owl:Restriction>
-                <owl:onProperty rdf:resource="&mlhim2;isCoreSymbolOf"/>
-                <owl:someValuesFrom rdf:resource="&mlhim2;EntryType"/>
-              </owl:Restriction>
-            </owl:intersectionOf>
+        <owl:Class rdf:about="&mlhim2;Definition">
+            <rdfs:subClassOf rdf:resource="&mlhim2;CoreCS"/>
           </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&mlhim2;CoreCS"/>
       </xs:appinfo>
     </xs:annotation>    
   </xs:element>
