@@ -19,6 +19,7 @@ Contents:
    introduction
    MLHIM_and_EA
    ecosystem
+   abstract_model
    modeling_concepts
    rm
    ontology
