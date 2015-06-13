@@ -2328,6 +2328,25 @@
         <owl:Class rdf:about="&mlhim2;ReferenceRangeType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ReferenceRangeType.html#ReferenceRangeType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;definition" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;interval" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;is-normal" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+                    
           <rdfs:label>ReferenceRangeType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Defines a named range to be associated with any ORDERED datum. Each such
@@ -2419,6 +2438,31 @@
         <owl:Class rdf:about="&mlhim2;AuditType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AuditType.html#AuditType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;system-id" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;system-user" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;location" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;timestamp" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+            
           <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>AuditType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
@@ -2520,6 +2564,25 @@
         <owl:Class rdf:about="&mlhim2;PartyType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_PartyType.html#PartyType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;party-name" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;party-ref" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;party-details" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          
           <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>PartyType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
@@ -2548,7 +2611,7 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="0" name='party-ref' type="mlhim2:DvLinkType">
+      <xs:element maxOccurs="1" minOccurs="0" name="party-ref" type="mlhim2:DvLinkType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Optional reference to more detailed demographic or identification
@@ -2605,6 +2668,43 @@
         <owl:Class rdf:about="&mlhim2;AttestationType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AttestationType.html#AttestationType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;view" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;proof" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;reason" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;committer" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;committed" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;pending" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          
           <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>AttestationType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
@@ -2735,6 +2835,37 @@
         <owl:Class rdf:about="&mlhim2;ParticipationType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ParticipationType.html#ParticipationType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;performer" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;function" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;mode" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;start" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;end" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          
           <rdfs:label>ParticipationType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Model of a participation of a Party (any Actor or Role) in an activity.
@@ -3561,6 +3692,21 @@
         <owl:Class rdf:about="&mlhim2;ClusterType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ClusterType.html#ClusterType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;ItemType"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;cluster-subject" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          
+          <!-- TODO: This should be allValuesFrom? -->
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;Items" />
+              <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          
           <rdfs:label>ClusterType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             The grouping variant of Item, which may contain further instances of Item,
@@ -3630,6 +3776,15 @@
         <owl:Class rdf:about="&mlhim2;DvAdapterType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAdapterType.html#DvAdapterType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;ItemType"/>
+          
+          <!-- TODO: Test to be sure this behaves properly. -->
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;DvAdapter-value" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          
           <rdfs:label>DvAdapterType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             The leaf variant of Item, to which any DvAnyType subtype instance is
@@ -3698,6 +3853,69 @@
         <owl:Class rdf:about="&mlhim2;EntryType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_EntryType.html#EntryType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;entry-language" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;entry-encoding" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;current-state" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;data" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;subject" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;provider" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          
+          <!-- TODO: participations -->
+          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;protocol" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;workflow" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          
+          <!-- TODO: audit -->
+          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;attestation" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
+          
+          <!-- TODO: links -->
+          
           <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>EntryType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
@@ -3710,7 +3928,7 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="1" name="language" type="xs:language">
+      <xs:element maxOccurs="1" minOccurs="1" name="entry-language" type="xs:language">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Mandatory indicator of the localised language in which this Entry is
@@ -3730,13 +3948,13 @@
           </xs:appinfo>
         </xs:annotation>
       </xs:element>
-      <xs:element maxOccurs="1" minOccurs="1" name="encoding" type="xs:string" default="utf-8">
+      <xs:element maxOccurs="1" minOccurs="1" name="entry-encoding" type="xs:string" default="utf-8">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Name of character set encoding in which text values in this Entry are encoded. Default is utf-8.
           </xs:documentation>
           <xs:appinfo>
-            <owl:DatatypeProperty rdf:about="&mlhim2;encoding">
+            <owl:DatatypeProperty rdf:about="&mlhim2;entry-encoding">
               <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
               <rdfs:range rdf:resource="&xsd;string"/>
               <mlhim2:description xml:lang="en-us">
@@ -4062,6 +4280,12 @@
         <owl:Class rdf:about="&mlhim2;CCDType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CCDType.html#CCDType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;ccd-definition" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>        
           
           <mlhim2:isCoreModelIn rdf:resource="&mlhim2;mlhim250"/>
           <rdfs:label>CCDType</rdfs:label>
