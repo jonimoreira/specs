@@ -17,12 +17,12 @@ Contents:
    governance
    executive_summary
    introduction
-   MLHIM_and_EA
-   ecosystem
    abstract_model
    modeling_concepts
    rm
    ontology
+   MLHIM_and_EA
+   ecosystem
    data_analysis
    ccdgen
    ecore

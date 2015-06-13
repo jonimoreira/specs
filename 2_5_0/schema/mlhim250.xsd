@@ -2062,6 +2062,49 @@
         <owl:Class rdf:about="&mlhim2;DvIntervalType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvIntervalType.html#DvIntervalType"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;lower" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;upper" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;lower-included" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;upper-included" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;lower-bounded" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;upper-bounded" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          <rdfs:subClassOf>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;interval-units" />
+              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>          
+          
           <rdfs:label>DvIntervalType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Generic type defining an interval (i.e. range) of a comparable type. An
