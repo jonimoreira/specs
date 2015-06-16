@@ -7,18 +7,18 @@
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY mlhim2 "http://www.mlhim.org/xmlns/mlhim2" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/ns/mlhim2/" >
 ]>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-  xmlns:mlhim2="http://www.mlhim.org/xmlns/mlhim2" targetNamespace="http://www.mlhim.org/xmlns/mlhim2"
+  xmlns:mlhim2="http://www.mlhim.org/ns/mlhim2/" targetNamespace="http://www.mlhim.org/ns/mlhim2/"
   vc:minVersion="1.1" xml:lang="en-US">
 
   <!-- Include the Reference Model -->
-  <xs:include schemaLocation="http://www.mlhim.org/xmlns/mlhim2/mlhim250.xsd"/>
+  <xs:include schemaLocation="http://www.mlhim.org/ns/mlhim2/mlhim250.xsd"/>
 
   <!-- METADATA Section -->
   <xs:annotation>
@@ -98,8 +98,8 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:CareEntryType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="language" type="xs:language" fixed="en-US"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="encoding" type="xs:string" fixed="utf-8"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="entry-language" type="xs:language" fixed="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="entry-encoding" type="xs:string" fixed="utf-8"/>
           <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string" default="testing"/>
           <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:el-f31ba54e-5021-4f21-8a87-86312381f10f"/>
           <!-- entry-data -->
@@ -216,7 +216,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -304,7 +304,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="subject" type="xs:string" fixed="Address Details (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string" fixed="Address Details (US)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e"/>
           <!-- DvString Additional Address Line(s) (US)  -->
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89"/>
@@ -347,7 +347,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -389,7 +389,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -432,7 +432,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1173,7 +1173,7 @@
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1217,7 +1217,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1261,7 +1261,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"
             default="111-111-1111"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
         <xs:assert test="matches(dvstring-value, '[0-9]{3}-[0-9]{3}-[0-9]{4}')"/>
       </xs:restriction>
@@ -1309,7 +1309,7 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
         <xs:assert test="matches(dvstring-value, '^\d{5}([\-]?\d{4})?$')"/>
       </xs:restriction>
@@ -1349,7 +1349,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="subject" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string"
             fixed="FAD System Location (WGS84)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-84a78cf3-028b-4aff-a17c-fb485a582fbd"/>
           <!-- DvString FAD Latitude (Decimal Format) -->
@@ -1383,7 +1383,7 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
         <xs:assert test="matches(dvstring-value, '^-?([1-8]?[0-9]\.{1}\d{1,6}$|90\.{1}0{1,6}$)')"/>
       </xs:restriction>
@@ -1427,7 +1427,7 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
         <xs:assert
           test="matches(dvstring-value, '^-?((([1]?[0-7][0-9]|[1-9]?[0-9])\.{1}\d{1,6}$)|[1]?[1-8][0]\.{1}0{1,6}$)')"
@@ -1611,7 +1611,7 @@ Examples:
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1649,7 +1649,7 @@ Examples:
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1681,7 +1681,7 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1780,7 +1780,7 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="size" type="xs:int"/>
           <xs:element maxOccurs="1" minOccurs="1" name="encoding" type="xs:string" default="utf-8"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvfile-language" type="xs:language" default="en-US"/>
           <xs:element maxOccurs="1" minOccurs="0" name="media-type" type="xs:string"/>
           <xs:element maxOccurs="1" minOccurs="0" name="compression-type" type="xs:string"/>
           <xs:element maxOccurs="1" minOccurs="0" name="hash-result" type="xs:string"/>
@@ -1817,7 +1817,7 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="1" name="size" type="xs:int"/>
           <xs:element maxOccurs="1" minOccurs="1" name="encoding" type="xs:string" default="utf-8"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvfile-language" type="xs:language" default="en-US"/>
           <xs:element maxOccurs="1" minOccurs="1" name="formalism" type="xs:string"/>
           <xs:element maxOccurs="1" minOccurs="1" name="text-content" type="xs:string"/>
         </xs:sequence>
@@ -1857,7 +1857,7 @@ Examples:
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1914,7 +1914,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="subject" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string"
             fixed="Test CareEntry entry-data"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-62e20405-7908-4116-8662-2dd3bb0e6ea4"/>
           <!-- Cluster Test Sub-Cluster -->
@@ -1959,7 +1959,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="subject" type="xs:string" fixed="Test Sub-Cluster"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string" fixed="Test Sub-Cluster"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-8aff6c15-f828-4948-9222-195c1b2f0954"/>
           <!-- DvBoolean Bladder - Testing -->
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-697e8df2-7890-4f44-8442-e7f2beab4425"/>
@@ -1998,14 +1998,14 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:choice>
-            <xs:element maxOccurs="1" minOccurs="0" name="true">
+            <xs:element maxOccurs="1" minOccurs="0" name="true-value">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="Yes"/>
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="0" name="false">
+            <xs:element maxOccurs="1" minOccurs="0" name="false-value">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="No"/>
@@ -2059,14 +2059,14 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
           <xs:choice>
-            <xs:element maxOccurs="1" minOccurs="0" name="true">
+            <xs:element maxOccurs="1" minOccurs="0" name="true-value">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="YES"/>
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="0" name="false">
+            <xs:element maxOccurs="1" minOccurs="0" name="false-value">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="NO"/>
@@ -2175,7 +2175,7 @@ Examples:
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -2308,7 +2308,7 @@ Examples:
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -3006,7 +3006,7 @@ WARNING: This PcT is incomplete and it is only here for example purposes. There 
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -3125,7 +3125,7 @@ WARNING: This PcT is incomplete and it is only here for example purposes. There 
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>

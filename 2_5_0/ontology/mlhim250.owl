@@ -1350,6 +1350,7 @@
           <mlhim2:isCoreSymbolOf rdf:resource="http://www.mlhim.org/ns/mlhim2/DvCountType"/>
         </owl:Class>
       
+      
     <owl:Class xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:mlhim2="http://www.mlhim.org/ns/mlhim2/" rdf:about="http://www.mlhim.org/ns/mlhim2/DvQuantityType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantityType.html#DvQuantityType"/>
           <rdfs:subClassOf rdf:resource="http://www.mlhim.org/ns/mlhim2/DvQuantifiedType"/>

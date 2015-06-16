@@ -63,19 +63,26 @@
 
     <!-- http://www.mlhim.org/ns/mlhim2/creator -->
 
-    <owl:AnnotationProperty rdf:about="&mlhim2;creator"/>
+    <owl:AnnotationProperty rdf:about="&mlhim2;creator">
+      <rdfs:label>The plaintext creator/author of this item.</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.mlhim.org/ns/mlhim2/description -->
 
-    <owl:AnnotationProperty rdf:about="&mlhim2;description"/>
+    <owl:AnnotationProperty rdf:about="&mlhim2;description">
+      <rdfs:label>A plaintext description of this MLHIM 2 component.</rdfs:label>      
+    </owl:AnnotationProperty>
     
-
-
-    <!-- http://www.mlhim.org/ns/mlhim2/isMLHIM2Component -->
-
-    <owl:AnnotationProperty rdf:about="&mlhim2;isMLHIM2Component"/>
+  
+    <owl:AnnotationProperty rdf:about="&mlhim2;dataID">
+      <rdfs:label>The Unique name of this MLHIM 2 component.</rdfs:label>
+    </owl:AnnotationProperty>
+    
+    <owl:AnnotationProperty rdf:about="&mlhim2;hasUniqueName">
+      <rdfs:label>The Unique name of this MLHIM 2 component.</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -202,6 +209,20 @@
     </owl:ObjectProperty>
     
 
+  <!-- http://www.mlhim.org/ns/mlhim2/isPluggableModelIn -->
+  
+  <owl:ObjectProperty rdf:about="&mlhim2;isPluggableModelIn">
+    <rdfs:label xml:lang="en-us">Is Pluggable Model In</rdfs:label>
+    <description xml:lang="en-us">
+      Relates a Pluggable Model to a CCDInstance.
+    </description>
+    <rdfs:domain rdf:resource="&mlhim2;PluggableCM"/>
+    <rdfs:range rdf:resource="&mlhim2;CCDInstance"/>
+    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+  </owl:ObjectProperty>
+  
+  
+  
 
     <!-- http://www.mlhim.org/ns/mlhim2/isPluggableSymbolOf -->
 
@@ -224,7 +245,8 @@
       <rdf:type rdf:resource="&owl;FunctionalProperty" />
         <rdfs:label xml:lang="en-us">Is Symbol In</rdfs:label>
         <description xml:lang="en-us">
-      The internal definitions of Models have Symbols that provide structure in instance data. 
+      The internal definitions of Models have Symbols used to provide structure in instance data.
+      This property states that this is a symbol internal to the concept model.
     </description>
       <rdfs:domain rdf:resource="&mlhim2;Symbol"/>
       <rdfs:range rdf:resource="&mlhim2;ConceptModel"/>
@@ -234,7 +256,8 @@
   <owl:ObjectProperty rdf:about="&mlhim2;refersToSymbol">
     <rdfs:label xml:lang="en-us">Refers To Symbol</rdfs:label>
     <description xml:lang="en-us">
-      Used to describe when a Model refers to an external Symbol as part of its composition. 
+      Used to describe when a Concept Model refers to a Symbol that is not part of its internal structure.
+      This is typically refering to another public Symbol in the same ontology that represents another complete Concept Model. 
     </description>
     <rdfs:domain rdf:resource="&mlhim2;ConceptModel"/>
     <rdfs:range rdf:resource="&mlhim2;Symbol"/>
@@ -285,7 +308,7 @@
       A set of selected PluggableCMs that are constraints on the RM components (CoreCMs) in order to represent a domain concept. 
       In the implementation language there may be additional syntactic conventions required. 
     </description>
-        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+
     </owl:Class>
     
 
@@ -298,7 +321,7 @@
         <description xml:lang="en-us">
       A model of an abstract concept.
     </description>
-        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+
     </owl:Class>
     
 
@@ -337,7 +360,7 @@
       A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD Instance.
       It has not been tested for validation.
     </description>
-        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+
     </owl:Class>
     
 
@@ -442,7 +465,7 @@
       A set of components (CoreCMs) to provide structural integrity for a domain concept. 
       Some CoreCMs are mandatory in CCDs and some are optional. Optionality is defined in each RM implementation.
     </description>
-        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+
     </owl:Class>
     
 
@@ -456,7 +479,7 @@
       A is used to delineate or markup instance data. 
       In practice, it is usually a variable name or XML element name.
     </description>
-        <isMLHIM2Component rdf:resource="&mlhim2;MLHIM2"/>
+
     </owl:Class>
 </rdf:RDF>
 

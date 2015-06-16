@@ -9,6 +9,9 @@
     Added a complexType for interval-units.
 
     Changed namespace from http://www.mlhim.org/xmlns/mlhim2/ to http://www.mlhim.org/ns/mlhim2/
+
+    Changed ct- to pcm- and el- to pcs- to better represent the abstract concepts.
+
     
 #Changes from 2.4.6 to 2.4.7  (see the git commit msgs. for details)                     
     Added 'units' capability to DvInterval.
