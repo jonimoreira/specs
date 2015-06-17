@@ -77,11 +77,11 @@
     
   
     <owl:AnnotationProperty rdf:about="&mlhim2;dataID">
-      <rdfs:label>The Unique name of this MLHIM 2 component.</rdfs:label>
+      <rdfs:label>The unique Symbol name of this MLHIM 2 component.</rdfs:label>
     </owl:AnnotationProperty>
     
     <owl:AnnotationProperty rdf:about="&mlhim2;hasUniqueName">
-      <rdfs:label>The Unique name of this MLHIM 2 component.</rdfs:label>
+      <rdfs:label>The unique name of this MLHIM 2 component.</rdfs:label>
     </owl:AnnotationProperty>
     
 

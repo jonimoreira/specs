@@ -12,6 +12,13 @@
 
     Changed ct- to pcm- and el- to pcs- to better represent the abstract concepts.
 
+    Fixed bug in DvBoolean that allowed instance data to not have any true or false value.
+
+    Changed data-name to label for improved understanding.
+    Changed cluster-subject to label for improved understanding.
+    Added label to other types. See Issue # 87.
+    
+
     
 #Changes from 2.4.6 to 2.4.7  (see the git commit msgs. for details)                     
     Added 'units' capability to DvInterval.

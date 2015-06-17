@@ -111,12 +111,16 @@
           <rdfs:label>Testing Implementation (Admin)</rdfs:label>
           <mlhim2:hasUniqueName>pcm-56c1df15-a4cc-44a6-84ec-45c310a05071</mlhim2:hasUniqueName>
           <rdfs:subClassOf rdf:resource="&mlhim2;PluggableCM"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/entry-language"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/entry-encoding"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/current-status"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:restriction base="mlhim2:AdminEntryType">
         <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Testing Implementation (Admin)"/>
           <xs:element maxOccurs="1" minOccurs="1" name="entry-language" type="xs:language" fixed="en-US">
             <xs:annotation>
               <xs:appinfo>
@@ -124,6 +128,7 @@
                   <rdfs:domain rdf:resource="&xsd;language"/>
                   <rdfs:range rdf:resource="en-US"/>
                 </owl:DatatypeProperty>
+
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
@@ -134,7 +139,13 @@
               </xs:appinfo>
             </xs:annotation>            
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string" default=""/>
+          <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string" default="">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:pcs-c3a88f56-3abc-416d-9d49-3e9f06bf74a5"/> <!-- data -->
           <xs:element maxOccurs="1" minOccurs="0" name="subject"
             type="mlhim2:pcm-ef4abd55-562c-418f-89c3-f831bf42c33f"/>
@@ -166,13 +177,21 @@
           <rdfs:label>A generic Entry provider.</rdfs:label>
           <mlhim2:hasUniqueName>pcm-ef4abd55-562c-418f-89c3-f831bf42c33f</mlhim2:hasUniqueName>   
           <rdfs:subClassOf rdf:resource="&mlhim2;PluggableCM"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-ef4abd55-562c-418f-89c3-f831bf42c33f/party-name"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:restriction base="mlhim2:PartyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="party-name" type="xs:string"/>
+          <xs:element maxOccurs="1"  minOccurs="1" name="label" type="xs:string" fixed="A generic Entry provider."/>
+          <xs:element maxOccurs="1" minOccurs="1" name="party-name" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="party-ref"
             type="mlhim2:pcm-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688"/>
           <!-- external-ref -->
@@ -199,18 +218,57 @@
           <mlhim2:isPluggableModelIn rdf:resource="&mlhim2;ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;PluggableCM"/>
           <mlhim2:hasUniqueName>pcm-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680</mlhim2:hasUniqueName>                   
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680/label"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680/vtb"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680/vte"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680/link"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680/relation"/>
+          
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Test DvLink"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Test DvLink">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string" fixed="Test DvLink"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string" fixed="Test DvLink">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -230,19 +288,56 @@
           <mlhim2:isPluggableModelIn rdf:resource="&mlhim2;ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
           <rdfs:subClassOf rdf:resource="&mlhim2;PluggableCM"/>
           <mlhim2:hasUniqueName>pcm-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680</mlhim2:hasUniqueName>                   
-          
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680/label"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680/vtb"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680/vte"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680/link"/>
+          <mlhim2:dataID rdf:resource="&mlhim2;pcs-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680/relation"/>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Test DvLink"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Test DvLink">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string" fixed="Test DvLink"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string" fixed="Test DvLink">
+            <xs:annotation>
+              <xs:appinfo>
+
+              </xs:appinfo>
+            </xs:annotation>                        
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -269,14 +364,44 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="External Reference for Party"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="External Reference for Party">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string"
-            fixed="Party Associated with the record"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688/link"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string" fixed="Party Associated with the record">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688/relation"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -303,7 +428,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string" fixed="Address Details (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Address Details (US)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:pcs-d24affc1-a9ff-487a-9029-204f3b4d8e7e"/>
           <!-- DvString Additional Address Line(s) (US)  -->
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:pcs-b65ea20c-3768-45cd-a059-004ece61bc89"/>
@@ -343,13 +468,44 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="Additional Address Line(s) (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Additional Address Line(s) (US)">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-5677e6da-33df-44d3-809b-853aba4373ea/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-5677e6da-33df-44d3-809b-853aba4373ea/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-5677e6da-33df-44d3-809b-853aba4373ea/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-5677e6da-33df-44d3-809b-853aba4373ea/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-5677e6da-33df-44d3-809b-853aba4373ea/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -389,12 +545,44 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="City Name (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="City Name (US)">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-73035503-2b72-4c80-9abc-bdc967198d63/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-73035503-2b72-4c80-9abc-bdc967198d63/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-73035503-2b72-4c80-9abc-bdc967198d63/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-73035503-2b72-4c80-9abc-bdc967198d63/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-73035503-2b72-4c80-9abc-bdc967198d63/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -434,13 +622,44 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="Common Name / Nickname"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Common Name / Nickname">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7f9b5fb6-8cd7-4d09-805d-13c645db49c2/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7f9b5fb6-8cd7-4d09-805d-13c645db49c2/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7f9b5fb6-8cd7-4d09-805d-13c645db49c2/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7f9b5fb6-8cd7-4d09-805d-13c645db49c2/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7f9b5fb6-8cd7-4d09-805d-13c645db49c2/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -480,12 +699,36 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="State Abbreviation (USPS)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="State Abbreviation (USPS)">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f80bf2ce-f3c2-4bb9-a539-1971474f7626/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f80bf2ce-f3c2-4bb9-a539-1971474f7626/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f80bf2ce-f3c2-4bb9-a539-1971474f7626/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
             <xs:simpleType>
               <xs:restriction base="xs:string">
                 <xs:enumeration value="AL">
@@ -1184,7 +1427,13 @@
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f80bf2ce-f3c2-4bb9-a539-1971474f7626/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1225,13 +1474,44 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="Street Number and Name (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Street Number and Name (US)">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1271,14 +1551,44 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="Telephone Number (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"  fixed="Telephone Number (US)">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"
-            default="111-111-1111"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string" default="111-111-1111">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
         <xs:assert test="matches(dvstring-value, '[0-9]{3}-[0-9]{3}-[0-9]{4}')"/>
       </xs:restriction>
@@ -1324,12 +1634,44 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Zip Code (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Zip Code (US)">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
         <xs:assert test="matches(dvstring-value, '^\d{5}([\-]?\d{4})?$')"/>
       </xs:restriction>
@@ -1372,7 +1714,14 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:PartyType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="party-name" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="A generic Entry provider."/>
+          <xs:element maxOccurs="1" minOccurs="1" name="party-name" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-8501f206-dfd2-4080-be79-34539d0e076b/party-name"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="party-ref"
             type="mlhim2:pcm-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688"/>
           <!-- external-ref -->
@@ -1407,8 +1756,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string"
-            fixed="Test AdminEntry entry-data"/>
+          <xs:element maxOccurs="1"  minOccurs="1" name="label" type="xs:string" fixed="Test AdminEntry entry-data"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:pcs-62e20405-7908-4116-8662-2dd3bb0e6ea4"/>
           <!-- Cluster Test Sub-Cluster -->
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:pcs-3a3396c5-a27f-4440-89f3-5ffd326dde57"/>
@@ -1443,7 +1791,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string" fixed="Test Sub-Cluster"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Test Sub-Cluster"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:pcs-8aff6c15-f828-4948-9222-195c1b2f0954"/>
           <!-- DvBoolean Bladder - Testing -->
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:pcs-697e8df2-7890-4f44-8442-e7f2beab4425"/>
@@ -1454,8 +1802,6 @@ Examples:
       </xs:restriction>
     </xs:complexContent>
   </xs:complexType>
-
-
 
   <xs:complexType name="pcm-c8b3b872-dcb4-4a44-a386-5c626e116549" xml:lang="en-US">
     <!-- Bladder - Testing -->
@@ -1480,19 +1826,47 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvBooleanType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Bladder - Testing"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Bladder - Testing">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-c8b3b872-dcb4-4a44-a386-5c626e116549/label"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-c8b3b872-dcb4-4a44-a386-5c626e116549/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-c8b3b872-dcb4-4a44-a386-5c626e116549/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:choice maxOccurs="1" minOccurs="1">
-            <xs:element maxOccurs="1" minOccurs="0" name="true-value">
+            <xs:element name="true-value">
+              <xs:annotation>
+                <xs:appinfo>
+                  <mlhim2:dataID rdf:resource="&mlhim2;pcs-c8b3b872-dcb4-4a44-a386-5c626e116549/true-value"/>
+                </xs:appinfo>
+              </xs:annotation>              
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="Yes"/>
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="0" name="false-value">
+            <xs:element name="false-value">
+              <xs:annotation>
+                <xs:appinfo>
+                  <mlhim2:dataID rdf:resource="&mlhim2;pcs-c8b3b872-dcb4-4a44-a386-5c626e116549/false-value"/>
+                </xs:appinfo>
+              </xs:annotation>              
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="No"/>
@@ -1543,20 +1917,50 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvBooleanType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="Fever duration: 3 weeks or less - Testing"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Fever duration: 3 weeks or less - Testing">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-831a09c9-ceaf-46e0-a4e1-afcd064880bd/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-831a09c9-ceaf-46e0-a4e1-afcd064880bd/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-831a09c9-ceaf-46e0-a4e1-afcd064880bd/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          
           <xs:choice>
-            <xs:element maxOccurs="1" minOccurs="0" name="true-value">
+            <xs:element name="true-value">
+              <xs:annotation>
+                <xs:appinfo>
+                  <mlhim2:dataID rdf:resource="&mlhim2;pcs-831a09c9-ceaf-46e0-a4e1-afcd064880bd/true-value"/>
+                </xs:appinfo>
+              </xs:annotation>            
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="YES"/>
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="0" name="false-value">
+            <xs:element name="false-value">
+              <xs:annotation>
+                <xs:appinfo>
+                  <mlhim2:dataID rdf:resource="&mlhim2;pcs-831a09c9-ceaf-46e0-a4e1-afcd064880bd/false-value"/>
+                </xs:appinfo>
+              </xs:annotation>            
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="NO"/>
@@ -1605,18 +2009,59 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvCountType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="Heart Rate for Testing"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Heart Rate for Testing">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-a926d847-3a3e-45c5-af3f-3c55a35aca34/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="normal-status" type="xs:string"
-            default="Normal heart rate"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="error" type="xs:int" default="0"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="accuracy" type="xs:int" default="0"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="dvcount-value" type="xs:int"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="dvcount-units"
-            type="mlhim2:pcm-3fa04c94-ea73-4c2e-8081-f706958277cb"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-a926d847-3a3e-45c5-af3f-3c55a35aca34/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-a926d847-3a3e-45c5-af3f-3c55a35aca34/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="normal-status" type="xs:string" default="Normal heart rate">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-a926d847-3a3e-45c5-af3f-3c55a35aca34/normal-status"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="error" type="xs:int" default="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-a926d847-3a3e-45c5-af3f-3c55a35aca34/error"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="accuracy" type="xs:int" default="0">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-a926d847-3a3e-45c5-af3f-3c55a35aca34/accuracy"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="dvcount-value" type="xs:int">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-a926d847-3a3e-45c5-af3f-3c55a35aca34/dvcount-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="dvcount-units"  type="mlhim2:pcm-3fa04c94-ea73-4c2e-8081-f706958277cb"/>
           <!-- DvCount-units -->
         </xs:sequence>
       </xs:restriction>
@@ -1646,11 +2091,36 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="beats per minute"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="beats per minute">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-3fa04c94-ea73-4c2e-8081-f706958277cb/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-3fa04c94-ea73-4c2e-8081-f706958277cb/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-3fa04c94-ea73-4c2e-8081-f706958277cb/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-3fa04c94-ea73-4c2e-8081-f706958277cb/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
             <xs:simpleType>
               <xs:restriction base="xs:string">
                 <xs:enumeration value="bpm">
@@ -1669,7 +2139,13 @@ Examples:
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-3fa04c94-ea73-4c2e-8081-f706958277cb/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1710,12 +2186,44 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Connected To"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Connected To">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7441c558-0087-4f77-bc5f-af4c82e26167/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI"/>
-          <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string" fixed="connected to"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7441c558-0087-4f77-bc5f-af4c82e26167/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7441c558-0087-4f77-bc5f-af4c82e26167/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="link" type="xs:anyURI">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7441c558-0087-4f77-bc5f-af4c82e26167/link"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="1" name="relation" type="xs:string" fixed="connected to">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-7441c558-0087-4f77-bc5f-af4c82e26167/relation"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -1756,12 +2264,36 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
-            fixed="Blood Pressure Device (Testing)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Blood Pressure Device (Testing)">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/label"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/vtb"/>
+              </xs:appinfo>
+            </xs:annotation>            
+            
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/vte"/>
+              </xs:appinfo>
+            </xs:annotation>            
+          </xs:element>
           <xs:element maxOccurs="1" minOccurs="1" name="dvstring-value">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/dvstring-value"/>
+              </xs:appinfo>
+            </xs:annotation>            
             <xs:simpleType>
               <xs:restriction base="xs:string">
                 <xs:enumeration value="Mercury sphygmomanometer">
@@ -1804,7 +2336,13 @@ Examples:
               </xs:restriction>
             </xs:simpleType>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="dvstring-language" type="xs:language" default="en-US">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:dataID rdf:resource="&mlhim2;pcs-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da/dvstring-language"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>

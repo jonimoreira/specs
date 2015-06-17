@@ -102,7 +102,7 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
           <rdfs:subClassOf>
             <owl:Restriction>
-              <owl:onProperty rdf:resource="&mlhim2;data-name" />
+              <owl:onProperty rdf:resource="&mlhim2;label" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
           </rdfs:subClassOf>
@@ -135,14 +135,14 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string">
+      <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
             Descriptive name of this datatype model. Provides the semantic 'name' for the model.
             Replaces what would be XML element name or class name in conventional modelling.
           </xs:documentation>
           <xs:appinfo>
-            <owl:DatatypeProperty rdf:about="&mlhim2;data-name">
+            <owl:DatatypeProperty rdf:about="&mlhim2;label">
               <rdfs:domain rdf:resource="&mlhim2;DvAnyType"/>
               <rdfs:range rdf:resource="&xsd;string"/>
               <mlhim2:description xml:lang="en-us">
@@ -254,7 +254,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:choice maxOccurs="1" minOccurs="1">
-          <xs:element maxOccurs="1" minOccurs="0" name="true-value" type="xs:string">
+          <xs:element name="true-value" type="xs:string">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 A string that represents a boolean True in the implementation. These
@@ -272,7 +272,7 @@
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name="false-value" type="xs:string">
+          <xs:element name="false-value" type="xs:string">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 A string that represents a boolean False in the implementation.
@@ -2330,7 +2330,7 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;DvAnyType"/>
           <rdfs:subClassOf>
             <owl:Restriction>
-              <owl:onProperty rdf:resource="&mlhim2;definition" />
+              <owl:onProperty rdf:resource="&mlhim2;label" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
           </rdfs:subClassOf>          
@@ -2440,6 +2440,12 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
           <rdfs:subClassOf>
             <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;label" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>                    
+          <rdfs:subClassOf>
+            <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;system-id" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
@@ -2473,6 +2479,24 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">
+            Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+            Replaces what would be XML element name or class name in conventional modelling.
+          </xs:documentation>
+          <xs:appinfo>
+            <owl:DatatypeProperty rdf:about="&mlhim2;label">
+              <rdfs:domain rdf:resource="&mlhim2;AuditType"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
+              <mlhim2:description xml:lang="en-us">
+                Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+                Replaces what would be XML element name or class name in conventional modelling.
+              </mlhim2:description>
+            </owl:DatatypeProperty>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="system-id" type="mlhim2:DvStringType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
@@ -2566,6 +2590,12 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
           <rdfs:subClassOf>
             <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;label" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>                    
+          <rdfs:subClassOf>
+            <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;party-name" />
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
@@ -2595,6 +2625,24 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">
+            Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+            Replaces what would be XML element name or class name in conventional modelling.
+          </xs:documentation>
+          <xs:appinfo>
+            <owl:DatatypeProperty rdf:about="&mlhim2;label">
+              <rdfs:domain rdf:resource="&mlhim2;PartyType"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
+              <mlhim2:description xml:lang="en-us">
+                Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+                Replaces what would be XML element name or class name in conventional modelling.
+              </mlhim2:description>
+            </owl:DatatypeProperty>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="party-name" type="xs:string">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
@@ -2670,6 +2718,12 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
           <rdfs:subClassOf>
             <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;label" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>                    
+          <rdfs:subClassOf>
+            <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;view" />
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
@@ -2715,6 +2769,24 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">
+            Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+            Replaces what would be XML element name or class name in conventional modelling.
+          </xs:documentation>
+          <xs:appinfo>
+            <owl:DatatypeProperty rdf:about="&mlhim2;label">
+              <rdfs:domain rdf:resource="&mlhim2;AttestationType"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
+              <mlhim2:description xml:lang="en-us">
+                Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+                Replaces what would be XML element name or class name in conventional modelling.
+              </mlhim2:description>
+            </owl:DatatypeProperty>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="view" type="mlhim2:DvFileType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
@@ -2837,6 +2909,12 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
           <rdfs:subClassOf>
             <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;label" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>                    
+          <rdfs:subClassOf>
+            <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;performer" />
               <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
@@ -2876,6 +2954,24 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">
+            Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+            Replaces what would be XML element name or class name in conventional modelling.
+          </xs:documentation>
+          <xs:appinfo>
+            <owl:DatatypeProperty rdf:about="&mlhim2;label">
+              <rdfs:domain rdf:resource="&mlhim2;ParticipationType"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
+              <mlhim2:description xml:lang="en-us">
+                Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+                Replaces what would be XML element name or class name in conventional modelling.
+              </mlhim2:description>
+            </owl:DatatypeProperty>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
       <xs:element maxOccurs="1" minOccurs="0" name="performer" type="mlhim2:PartyType">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
@@ -3694,7 +3790,7 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;ItemType"/>
           <rdfs:subClassOf>
             <owl:Restriction>
-              <owl:onProperty rdf:resource="&mlhim2;cluster-subject" />
+              <owl:onProperty rdf:resource="&mlhim2;label" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
           </rdfs:subClassOf>        
@@ -3718,13 +3814,13 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:ItemType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string">
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Descriptive subject line for this group of PcTs.
               </xs:documentation>
               <xs:appinfo>
-                <owl:DatatypeProperty rdf:about="&mlhim2;cluster-subject">
+                <owl:DatatypeProperty rdf:about="&mlhim2;label">
                   <rdfs:domain rdf:resource="&mlhim2;ClusterType"/>
                   <rdfs:range rdf:resource="&xsd;string"/>
                   <mlhim2:description xml:lang="en-us">
@@ -3855,6 +3951,12 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
           <rdfs:subClassOf>
             <owl:Restriction>
+              <owl:onProperty rdf:resource="&mlhim2;label" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+          </rdfs:subClassOf>                    
+          <rdfs:subClassOf>
+            <owl:Restriction>
               <owl:onProperty rdf:resource="&mlhim2;entry-language" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
@@ -3928,6 +4030,24 @@
       </xs:appinfo>
     </xs:annotation>
     <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string">
+        <xs:annotation>
+          <xs:documentation xml:lang="en-us">
+            Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+            Replaces what would be XML element name or class name in conventional modelling.
+          </xs:documentation>
+          <xs:appinfo>
+            <owl:DatatypeProperty rdf:about="&mlhim2;label">
+              <rdfs:domain rdf:resource="&mlhim2;EntryType"/>
+              <rdfs:range rdf:resource="&xsd;string"/>
+              <mlhim2:description xml:lang="en-us">
+                Descriptive name of this datatype model. Provides the semantic 'name' for the model.
+                Replaces what would be XML element name or class name in conventional modelling.
+              </mlhim2:description>
+            </owl:DatatypeProperty>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
       <xs:element maxOccurs="1" minOccurs="1" name="entry-language" type="xs:language">
         <xs:annotation>
           <xs:documentation xml:lang="en-us">
@@ -4282,7 +4402,7 @@
           <rdfs:subClassOf rdf:resource="&mlhim2;CoreCM"/>
           <rdfs:subClassOf>
             <owl:Restriction>
-              <owl:onProperty rdf:resource="&mlhim2;ccd-definition" />
+              <owl:onProperty rdf:resource="&mlhim2;definition" />
               <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
           </rdfs:subClassOf>        
@@ -4302,7 +4422,7 @@
             Structural definition element for this CCD.
           </xs:documentation>
           <xs:appinfo>
-            <owl:ObjectProperty rdf:about="&mlhim2;ccd-definition">
+            <owl:ObjectProperty rdf:about="&mlhim2;definition">
               <rdfs:domain rdf:resource="&mlhim2;CCDType"/>
               <rdfs:range rdf:resource="&mlhim2;Definition"/>
               <mlhim2:description xml:lang="en-us">
