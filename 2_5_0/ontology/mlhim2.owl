@@ -3,22 +3,24 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY mlhim2 "http://www.mlhim.org/ns/mlhim2/" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xs "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY mlhim2 "http://www.mlhim.org/ns/mlhim2/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY mlhim22 "http://www.mlhim.org/ns/mlhim2/mlhim2.owl/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
 <rdf:RDF xmlns="http://www.mlhim.org/ns/mlhim2/"
      xml:base="http://www.mlhim.org/ns/mlhim2/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:mlhim2="http://www.mlhim.org/ns/mlhim2/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:mlhim22="&mlhim2;mlhim2.owl/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:mlhim2="http://www.mlhim.org/ns/mlhim2/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="&mlhim2;mlhim2.owl">
         <description rdf:datatype="&xs;string">
       This is the Multi-Level Healthcare Information Modelling (MLHIM) project root ontology.
@@ -61,10 +63,11 @@
     
 
 
-    <!-- http://www.mlhim.org/ns/mlhim2/creator -->
+    <!-- http://www.mlhim.org/ns/mlhim2/creatorName -->
 
-    <owl:AnnotationProperty rdf:about="&mlhim2;creator">
-      <rdfs:label>The plaintext creator/author of this item.</rdfs:label>
+    <owl:AnnotationProperty rdf:about="&mlhim2;creatorName">
+        <rdfs:comment rdf:datatype="&xs;string">The primary author or creator of this CCD.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;creator"/>
     </owl:AnnotationProperty>
     
 
@@ -72,16 +75,166 @@
     <!-- http://www.mlhim.org/ns/mlhim2/description -->
 
     <owl:AnnotationProperty rdf:about="&mlhim2;description">
-      <rdfs:label>A plaintext description of this MLHIM 2 component.</rdfs:label>      
+        <rdfs:comment rdf:datatype="&xs;string">A plaintext description of this MLHIM 2 component.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;description"/>
     </owl:AnnotationProperty>
     
-  
-    <owl:AnnotationProperty rdf:about="&mlhim2;dataID">
-      <rdfs:label>The unique Symbol name of this MLHIM 2 component.</rdfs:label>
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/uniqueID -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;uniqueID">
+        <rdfs:comment rdf:datatype="&xs;string">The unique name of this MLHIM 2 component.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;identifier"/>
     </owl:AnnotationProperty>
     
-    <owl:AnnotationProperty rdf:about="&mlhim2;hasUniqueName">
-      <rdfs:label>The unique name of this MLHIM 2 component.</rdfs:label>
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/ccdTitle -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/ccdTitle">
+        <rdfs:comment rdf:datatype="&xs;string">A descriptive title. Typically, a Title will be a name by which the resource is formally known.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;title"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/contributorName -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/contributorName">
+        <rdfs:comment rdf:datatype="&xs;string">Anyone contributiing to the development of this CCD. Similar to co-author status. If there are no contributirs then the word &apos;None&apos; must be used.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;contributor"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/correspondenceEmail -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/correspondenceEmail">
+        <rdfs:comment rdf:datatype="&xs;string">The creator or a contributor email address for correspondence about this CCD.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/coverage -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/coverage">
+        <rdfs:comment rdf:datatype="&xs;string">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.
+
+The default value must be &apos;Universal&apos; if there are no other applicable values.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;coverage"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/format -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/format">
+        <rdfs:comment rdf:datatype="&xs;string">The format of the content using IANA MIME type. The only accepted MIME Type for CCDs is &apos;text/xml&apos;.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;format"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/identifier -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/identifier">
+        <rdfs:comment rdf:datatype="&xs;string">The four characters &apos;ccd-&apos; followed by the Type 4 UUID for this CCD.  Example:
+ccd-246bf9e8-fda3-4508-8423-4e5387a5e377</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;identifier"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/language -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/language">
+        <rdfs:comment rdf:datatype="&xs;string">The [RFC4646] http://www.ietf.org/rfc/rfc4646.txt language code for the target language for this CCD. The metadata text and other descriptive text should be in this language.  However, this does not preclude includsion of PCMs with different language tags.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;language"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/publicationDate -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/publicationDate">
+        <rdfs:comment rdf:datatype="&xs;string">The date of publication of this CCD.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;date"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/publisher -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/publisher">
+        <rdfs:comment rdf:datatype="&xs;string">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.
+
+This is considered the rights holder of this CCD. 
+
+Example: MLHIM LAB, UERJ</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;publisher"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/relation -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/relation">
+        <rdfs:comment rdf:datatype="&xs;string">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.  To relate a CCD to another CCD, enter the related CCD identifier here. The Entry subtype should have one or more links defined describing the relationship(s).</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/rights -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/rights">
+        <rdfs:comment rdf:datatype="&xs;string">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights. 
+
+Examples are well defined license statements such as the Creative Commons licenses such as; CC-BY http://creativecommons.org/licenses/by/3.0/</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;rights"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/schemaLocation -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/schemaLocation">
+        <rdfs:comment rdf:datatype="&xs;string">A resolvable URI for the RM/CCD schema.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/source -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/source">
+        <rdfs:comment rdf:datatype="&xs;string">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.
+
+CCDs are typically modeled from formal documents or well defined &apos;forms&apos;. If available a URI for this source is preferred. Otherwise a document identifier should be used.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;source"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/subject -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/subject">
+        <rdfs:comment rdf:datatype="&xs;string">The subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.
+
+The primary source for CCD keywords should be MeSH terms. http://www.ncbi.nlm.nih.gov/mesh
+
+Each subject entry must contain only one keyword/phrase.  There is no limit on how many may be used but there must be at least one.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;subject"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.mlhim.org/ns/mlhim2/mlhim2.owl/type -->
+
+    <owl:AnnotationProperty rdf:about="&mlhim2;mlhim2.owl/type">
+        <rdfs:comment rdf:datatype="&xs;string">The only acceptable value is:
+MLHIM Concept Constraint Definition (CCD)</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&dc;type"/>
     </owl:AnnotationProperty>
     
 
@@ -168,7 +321,7 @@
     
 
 
-    <!-- http://www.mlhim.org/ns/mlhim2/isCoreModelOf -->
+    <!-- http://www.mlhim.org/ns/mlhim2/isCoreModelIn -->
 
     <owl:ObjectProperty rdf:about="&mlhim2;isCoreModelIn">
         <rdfs:label xml:lang="en-us">Is Core Model In</rdfs:label>
@@ -177,7 +330,7 @@
     </description>
         <rdfs:domain rdf:resource="&mlhim2;CoreCM"/>
         <rdfs:range rdf:resource="&mlhim2;RM"/>
-        <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -185,56 +338,43 @@
     <!-- http://www.mlhim.org/ns/mlhim2/isCoreSymbolOf -->
 
     <owl:ObjectProperty rdf:about="&mlhim2;isCoreSymbolOf">
-      <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">Is Core Symbol Of</rdfs:label>
         <description xml:lang="en-us">
       Relates a Core Symbol to a Core Model
     </description>
-      <rdfs:domain rdf:resource="&mlhim2;CoreCS"/>
-      <rdfs:range rdf:resource="&mlhim2;CoreCM"/>
-      <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+        <rdfs:range rdf:resource="&mlhim2;CoreCM"/>
+        <rdfs:domain rdf:resource="&mlhim2;CoreCS"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.mlhim.org/ns/mlhim2/isMLHIM2objprop -->
+    <!-- http://www.mlhim.org/ns/mlhim2/isPluggableModelIn -->
 
-    <owl:ObjectProperty rdf:about="&mlhim2;isMLHIM2objprop">
-        <rdfs:label xml:lang="en-us">Is MLHIM2 Object Property</rdfs:label>
+    <owl:ObjectProperty rdf:about="&mlhim2;isPluggableModelIn">
+        <rdfs:label xml:lang="en-us">Is Pluggable Model In</rdfs:label>
         <description xml:lang="en-us">
-      The top object property of MLHIM2. 
-      </description>
-        <rdfs:domain rdf:resource="&mlhim2;MLHIM2"/>
-        <rdfs:range rdf:resource="&mlhim2;MLHIM2"/>
-    </owl:ObjectProperty>
-    
-
-  <!-- http://www.mlhim.org/ns/mlhim2/isPluggableModelIn -->
-  
-  <owl:ObjectProperty rdf:about="&mlhim2;isPluggableModelIn">
-    <rdfs:label xml:lang="en-us">Is Pluggable Model In</rdfs:label>
-    <description xml:lang="en-us">
       Relates a Pluggable Model to a CCDInstance.
     </description>
-    <rdfs:domain rdf:resource="&mlhim2;PluggableCM"/>
-    <rdfs:range rdf:resource="&mlhim2;CCDInstance"/>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
-  </owl:ObjectProperty>
-  
-  
-  
+        <rdfs:range rdf:resource="&mlhim2;CCDInstance"/>
+        <rdfs:domain rdf:resource="&mlhim2;PluggableCM"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
 
     <!-- http://www.mlhim.org/ns/mlhim2/isPluggableSymbolOf -->
 
     <owl:ObjectProperty rdf:about="&mlhim2;isPluggableSymbolOf">
-      <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">Is Pluggable Symbol Of</rdfs:label>
         <description xml:lang="en-us">
       Relates a Pluggable Symbol to a Pluggable Model
     </description>
-      <rdfs:domain rdf:resource="&mlhim2;PluggableCS"/>
-      <rdfs:range rdf:resource="&mlhim2;PluggableCM"/>
-      <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+        <rdfs:range rdf:resource="&mlhim2;PluggableCM"/>
+        <rdfs:domain rdf:resource="&mlhim2;PluggableCS"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -242,49 +382,31 @@
     <!-- http://www.mlhim.org/ns/mlhim2/isSymbolIn -->
 
     <owl:ObjectProperty rdf:about="&mlhim2;isSymbolIn">
-      <rdf:type rdf:resource="&owl;FunctionalProperty" />
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">Is Symbol In</rdfs:label>
         <description xml:lang="en-us">
       The internal definitions of Models have Symbols used to provide structure in instance data.
       This property states that this is a symbol internal to the concept model.
     </description>
-      <rdfs:domain rdf:resource="&mlhim2;Symbol"/>
-      <rdfs:range rdf:resource="&mlhim2;ConceptModel"/>
-      <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
+        <rdfs:range rdf:resource="&mlhim2;ConceptModel"/>
+        <rdfs:domain rdf:resource="&mlhim2;Symbol"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="&mlhim2;refersToSymbol">
-    <rdfs:label xml:lang="en-us">Refers To Symbol</rdfs:label>
-    <description xml:lang="en-us">
-      Used to describe when a Concept Model refers to a Symbol that is not part of its internal structure.
-      This is typically refering to another public Symbol in the same ontology that represents another complete Concept Model. 
-    </description>
-    <rdfs:domain rdf:resource="&mlhim2;ConceptModel"/>
-    <rdfs:range rdf:resource="&mlhim2;Symbol"/>
-    <rdfs:subPropertyOf rdf:resource="&mlhim2;isMLHIM2objprop"/>
-  </owl:ObjectProperty>
-  
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
-    <!-- http://www.mlhim.org/ns/mlhim2/isMLHIM2dataprop -->
+    <!-- http://www.mlhim.org/ns/mlhim2/refersToSymbol -->
 
-    <owl:DatatypeProperty rdf:about="&mlhim2;isMLHIM2dataprop">
-        <rdfs:label xml:lang="en-us">Is MLHIM2 Data Property</rdfs:label>
+    <owl:ObjectProperty rdf:about="&mlhim2;refersToSymbol">
+        <rdfs:label xml:lang="en-us">Refers To Symbol</rdfs:label>
         <description xml:lang="en-us">
-      The top data property of MLHIM2. 
+      Used to describe when a Concept Model refers to a Symbol that is not part of its internal structure.
+      This is typically refering to another public Symbol in the same ontology that represents another complete Concept Model. 
     </description>
-    </owl:DatatypeProperty>
+        <rdfs:domain rdf:resource="&mlhim2;ConceptModel"/>
+        <rdfs:range rdf:resource="&mlhim2;Symbol"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -308,7 +430,6 @@
       A set of selected PluggableCMs that are constraints on the RM components (CoreCMs) in order to represent a domain concept. 
       In the implementation language there may be additional syntactic conventions required. 
     </description>
-
     </owl:Class>
     
 
@@ -321,7 +442,6 @@
         <description xml:lang="en-us">
       A model of an abstract concept.
     </description>
-
     </owl:Class>
     
 
@@ -357,10 +477,9 @@
         <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
         <description xml:lang="en-us">
-      A set of data items that reports via an xsi:schemaLocation attribute that it conforms to a CCD Instance.
+      A set of data items (e.g. a document) that conforms restrictions described in a CCD Instance.
       It has not been tested for validation.
     </description>
-
     </owl:Class>
     
 
@@ -371,7 +490,7 @@
         <rdfs:label xml:lang="en-us">Erroneous Data Instance</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;DataInstance"/>
         <description xml:lang="en-us">
-      A set of data items that **DOES NOT** conform to the CCD Instance it represents in its xsi:schemaLocation attribute **OR**
+      A set of data items that **DOES NOT** conform to the CCD Instance it represents **OR**
       it contains invalid data and does not contain one or more children of an Exception.
     </description>
     </owl:Class>
@@ -465,7 +584,6 @@
       A set of components (CoreCMs) to provide structural integrity for a domain concept. 
       Some CoreCMs are mandatory in CCDs and some are optional. Optionality is defined in each RM implementation.
     </description>
-
     </owl:Class>
     
 
@@ -476,14 +594,27 @@
         <rdfs:label xml:lang="en-us">Symbol</rdfs:label>
         <rdfs:subClassOf rdf:resource="&mlhim2;MLHIM2"/>
         <description xml:lang="en-us">
-      A is used to delineate or markup instance data. 
+      Used to delineate or markup instance data. 
       In practice, it is usually a variable name or XML element name.
     </description>
-
     </owl:Class>
+
+    <!-- http://www.mlhim.org/ns/mlhim2/PluggableCS -->
+    
+    <owl:Class rdf:about="&mlhim2;DataPoint">
+        <rdfs:label xml:lang="en-us">Data Point</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mlhim2;Symbol"/>
+        <description xml:lang="en-us">
+            Represents a complete path in instance data defined by a Pluggable Concept Model.
+            The root of the path begins at the CCDInstance with the 'ccd-{UUID}'.  
+        </description>
+    </owl:Class>
+    
+
+
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
