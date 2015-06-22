@@ -28,7 +28,7 @@
   <!-- METADATA Section -->
   <xs:annotation>
     <xs:appinfo>    
-      <owl:Ontology rdf:ID="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377">
+      <owl:Ontology rdf:ID="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd">
         <mlhim2:schemaLocation rdf:resource="http://www.ccdgen.com/ccdlib/ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
         <owl:imports rdf:resource="mlhim250.owl"/>
         <rdfs:subClassOf rdf:resource="CCDInstance"/>
@@ -58,41 +58,32 @@
   </xs:annotation>
 
   <!-- CCD Root Element -->
-  <xs:element name="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377" type="mlhim2:pcm-246bf9e8-fda3-4508-8423-4e5387a5e377">
-    <xs:annotation>
-      <xs:appinfo>
-        <owl:Class rdf:ID="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377">
-          <rdfs:subClassOf rdf:resource="PluggableCS"/>
-          <mlhim2:isPluggableSymbolOf rdf:resource="pcm-246bf9e8-fda3-4508-8423-4e5387a5e377"/>
-          <mlhim2:uniqueID>ccd-246bf9e8-fda3-4508-8423-4e5387a5e377</mlhim2:uniqueID>
-        </owl:Class>
-      </xs:appinfo>
-    </xs:annotation>
-  </xs:element>
+  <xs:element name="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377" type="mlhim2:pcm-246bf9e8-fda3-4508-8423-4e5387a5e377"/>
+  
   
   <xs:complexType name="pcm-246bf9e8-fda3-4508-8423-4e5387a5e377">
     <xs:annotation>
       <xs:appinfo>
         <owl:Class rdf:ID="pcm-246bf9e8-fda3-4508-8423-4e5387a5e377">
           <rdfs:subClassOf rdf:resource="CCDType"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <rdfs:subClassOf rdf:resource="PluggableCM"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
-          <rdfs:label>Testing Implementation (Admin)</rdfs:label>
+          <rdfs:label>Testing Implementation (Admin) CCD</rdfs:label>
           <mlhim2:uniqueID>pcm-246bf9e8-fda3-4508-8423-4e5387a5e377</mlhim2:uniqueID>
         </owl:Class>        
+        <owl:Class rdf:ID="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377">
+          <rdfs:subClassOf rdf:resource="PluggableCS"/>
+          <mlhim2:isPluggableSymbolOf rdf:resource="pcm-246bf9e8-fda3-4508-8423-4e5387a5e377"/>
+          <rdfs:label>Testing Implementation (Admin) CCD</rdfs:label>
+          <mlhim2:uniqueID>ccd-246bf9e8-fda3-4508-8423-4e5387a5e377</mlhim2:uniqueID>
+        </owl:Class>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:restriction base="mlhim2:CCDType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:pcs-56c1df15-a4cc-44a6-84ec-45c310a05071">
-          <xs:annotation>
-            <xs:appinfo>
-              <mlhim2:refersToSymbol rdf:datatype="pcs-56c1df15-a4cc-44a6-84ec-45c310a05071"/>
-            </xs:appinfo>
-          </xs:annotation>  
-          </xs:element>
-          
+          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:pcs-56c1df15-a4cc-44a6-84ec-45c310a05071"/>
         </xs:sequence>
       </xs:restriction>
     </xs:complexContent>
@@ -108,7 +99,7 @@
       <xs:appinfo>
         <owl:Class rdf:ID="pcm-56c1df15-a4cc-44a6-84ec-45c310a05071">
           <rdfs:subClassOf rdf:resource="AdminEntryType"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
           <rdfs:label>Testing Implementation (Admin)</rdfs:label>
           <mlhim2:uniqueID>pcm-56c1df15-a4cc-44a6-84ec-45c310a05071</mlhim2:uniqueID>
@@ -123,9 +114,10 @@
           <xs:element maxOccurs="1" minOccurs="1" name="entry-language" type="xs:language" fixed="en-US">
             <xs:annotation>
               <xs:appinfo>
-                <owl:Class rdf:ID="&mlhim2;pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/language">
-                  <rdfs:subClassOf rdf:resource="PluggableCS"/>
-                  <rdfs:label>Testing Implementation (Admin) language</rdfs:label>
+                <owl:Class rdf:ID="pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/entry-language">
+                  <rdfs:subClassOf rdf:resource="#pcs-56c1df15-a4cc-44a6-84ec-45c310a05071"/>
+                  <rdfs:label>language &#1013; Testing Implementation (Admin) </rdfs:label>
+                  <mlhim2:uniqueID>pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/entry-language</mlhim2:uniqueID>
                 </owl:Class>
               </xs:appinfo>
             </xs:annotation>
@@ -133,22 +125,34 @@
           <xs:element maxOccurs="1" minOccurs="1" name="entry-encoding" type="xs:string" fixed="utf-8">
             <xs:annotation>
               <xs:appinfo>
-
+                <owl:Class rdf:ID="pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/entry-encoding">
+                  <rdfs:subClassOf rdf:resource="#pcs-56c1df15-a4cc-44a6-84ec-45c310a05071"/>
+                  <rdfs:label>entry-encoding &#1013; Testing Implementation (Admin) </rdfs:label>
+                  <mlhim2:uniqueID>pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/entry-encoding</mlhim2:uniqueID>
+                </owl:Class>
               </xs:appinfo>
-            </xs:annotation>            
+            </xs:annotation>
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="current-state" type="xs:string" default="">
             <xs:annotation>
               <xs:appinfo>
-
+                <owl:Class rdf:ID="pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/current-state">
+                  <rdfs:subClassOf rdf:resource="#pcs-56c1df15-a4cc-44a6-84ec-45c310a05071"/>
+                  <rdfs:label>current-state &#1013; Testing Implementation (Admin) </rdfs:label>
+                  <mlhim2:uniqueID>pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/current-state</mlhim2:uniqueID>
+                </owl:Class>                
               </xs:appinfo>
             </xs:annotation>            
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:pcs-c3a88f56-3abc-416d-9d49-3e9f06bf74a5"/> <!-- data -->
-          <xs:element maxOccurs="1" minOccurs="0" name="subject"
-            type="mlhim2:pcm-ef4abd55-562c-418f-89c3-f831bf42c33f"/>
-          <xs:element maxOccurs="1" minOccurs="0" name="provider"
-            type="mlhim2:pcm-8501f206-dfd2-4080-be79-34539d0e076b"/>
+          <xs:element maxOccurs="1" minOccurs="1" ref="mlhim2:pcs-c3a88f56-3abc-416d-9d49-3e9f06bf74a5">
+            <xs:annotation>
+              <xs:appinfo>
+                <mlhim2:data rdf:resource="#pcs-c3a88f56-3abc-416d-9d49-3e9f06bf74a5"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element> <!-- data -->
+          <xs:element maxOccurs="1" minOccurs="0" name="subject"  type="mlhim2:pcm-ef4abd55-562c-418f-89c3-f831bf42c33f"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="provider" type="mlhim2:pcm-8501f206-dfd2-4080-be79-34539d0e076b"/>
 
           <!-- Demonstrates participation, protocol, workflow, audit and attestation are not required 
             and multiple links allowed -->
@@ -171,7 +175,7 @@
         <owl:Class rdf:ID="pcm-ef4abd55-562c-418f-89c3-f831bf42c33f">
           <rdfs:subClassOf rdf:resource="PartyType"/>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:label>A generic Entry subject.</rdfs:label>
           <mlhim2:uniqueID>pcm-ef4abd55-562c-418f-89c3-f831bf42c33f</mlhim2:uniqueID>   
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
@@ -212,7 +216,7 @@
           <rdfs:subClassOf rdf:resource="DvLinkType"/>
           <rdfs:label>Test DvLink</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-c05e8d88-a6dc-43d5-b1b8-723cdc9bf680</mlhim2:uniqueID>                   
         </owl:Class>
@@ -276,7 +280,7 @@
           <rdfs:subClassOf rdf:resource="DvLinkType"/>
           <rdfs:label>Test DvLink</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-a05e8d88-a6dc-43d5-b1b8-723cdc9bf680</mlhim2:uniqueID>                   
         </owl:Class>
@@ -340,7 +344,7 @@
           <rdfs:subClassOf rdf:resource="DvLinkType"/>
           <rdfs:label>External Reference for Party</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688</mlhim2:uniqueID>                   
           
@@ -354,7 +358,7 @@
             <xs:annotation>
               <xs:appinfo>
                 <owl:Class rdf:ID="pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688/label">
-                  <rdfs:subClassOf rdf:resource="#pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688"/>
+                  <rdfs:subClassOf rdf:resource="#pcs-8501f206-dfd2-4080-be79-34539d0e076b/party-ref"/>
                 </owl:Class>
               </xs:appinfo>
             </xs:annotation>            
@@ -422,7 +426,7 @@
           <rdfs:subClassOf rdf:resource="ClusterType"/>
           <rdfs:label>Address Details (US)</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-be9013c4-2b6e-4b8f-96fd-16ab39d5c8a1</mlhim2:uniqueID>                   
           
@@ -462,7 +466,7 @@
         <owl:Class rdf:ID="pcm-5677e6da-33df-44d3-809b-853aba4373ea">
           <rdfs:subClassOf rdf:resource="DvStringType"/>
           <rdfs:label>Additional Address Line(s) (US)</rdfs:label>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-5677e6da-33df-44d3-809b-853aba4373ea</mlhim2:uniqueID>                   
           
@@ -549,7 +553,7 @@
         <owl:Class rdf:ID="pcm-73035503-2b72-4c80-9abc-bdc967198d63">
           <rdfs:subClassOf rdf:resource="DvStringType"/>
           <rdfs:label>City Name (US)</rdfs:label>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-73035503-2b72-4c80-9abc-bdc967198d63</mlhim2:uniqueID>                   
           
@@ -636,7 +640,7 @@
         <owl:Class rdf:ID="pcm-7f9b5fb6-8cd7-4d09-805d-13c645db49c2">
           <rdfs:subClassOf rdf:resource="DvStringType"/>
           <rdfs:label>Common Name / Nickname</rdfs:label>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-7f9b5fb6-8cd7-4d09-805d-13c645db49c2</mlhim2:uniqueID>                   
           
@@ -723,7 +727,7 @@
         <owl:Class rdf:ID="pcm-f80bf2ce-f3c2-4bb9-a539-1971474f7626">
           <rdfs:subClassOf rdf:resource="DvStringType"/>
           <rdfs:label>State Abbreviation (USPS)</rdfs:label>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-f80bf2ce-f3c2-4bb9-a539-1971474f7626</mlhim2:uniqueID>                   
           
@@ -1508,7 +1512,7 @@
         <owl:Class rdf:ID="pcm-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5">
           <rdfs:subClassOf rdf:resource="DvStringType"/>
           <rdfs:label>Street Number and Name (US)</rdfs:label>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-cfaa55cd-2290-4ec2-8c7a-ff9e6cf68dd5</mlhim2:uniqueID>                   
           
@@ -1595,7 +1599,7 @@
         <owl:Class rdf:ID="pcm-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a">
           <rdfs:subClassOf rdf:resource="DvStringType"/>
           <rdfs:label>Telephone Number (US)</rdfs:label>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-f51bbd8d-672e-4b8d-871c-2d84ac1c5d4a</mlhim2:uniqueID>                   
           
@@ -1688,7 +1692,7 @@ Examples:
           <rdfs:subClassOf rdf:resource="DvStringType"/>
           <rdfs:label>Zip Code (US)</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="https%3A//www.usps.com/"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-74fd469d-e9e9-48e9-8a1a-9e2ccf3fbde4</mlhim2:uniqueID>                   
           
@@ -1778,7 +1782,7 @@ Examples:
         <owl:Class rdf:ID="pcm-8501f206-dfd2-4080-be79-34539d0e076b">
           <rdfs:subClassOf rdf:resource="PartyType"/>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/generic_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-8501f206-dfd2-4080-be79-34539d0e076b</mlhim2:uniqueID>                   
           <rdfs:label>A generic Entry provider.</rdfs:label>
@@ -1792,8 +1796,10 @@ Examples:
           <xs:element maxOccurs="1" minOccurs="1" name="party-name" type="xs:string">
             <xs:annotation>
               <xs:appinfo>
-                <owl:Class rdf:ID="pcs-8501f206-dfd2-4080-be79-34539d0e076b/party-name">
-                  <rdfs:subClassOf rdf:resource="#pcs-8501f206-dfd2-4080-be79-34539d0e076b"/>
+                <owl:Class rdf:ID="pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/party-name">
+                  <rdfs:subClassOf rdf:resource="#pcs-56c1df15-a4cc-44a6-84ec-45c310a05071"/>
+                  <mlhim2:uniqueID>pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/party-name</mlhim2:uniqueID>                   
+                  <rdfs:label>party-name &#1013; A generic Entry provider.</rdfs:label>
                 </owl:Class>
               </xs:appinfo>
             </xs:annotation>            
@@ -1822,7 +1828,7 @@ Examples:
           <rdfs:subClassOf rdf:resource="ClusterType"/>
           <rdfs:label>Test AdminEntry entry-data</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/test_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-c3a88f56-3abc-416d-9d49-3e9f06bf74a5</mlhim2:uniqueID>                   
           
@@ -1857,7 +1863,7 @@ Examples:
           <rdfs:subClassOf rdf:resource="ClusterType"/>
           <rdfs:label>Test Sub-Cluster</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/test_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-62e20405-7908-4116-8662-2dd3bb0e6ea4</mlhim2:uniqueID>                   
           
@@ -1892,7 +1898,7 @@ Examples:
           <rdfs:isDefinedBy
             rdf:resource="https%3A//cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2182237%26version%3D1.0"
           />
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-c8b3b872-dcb4-4a44-a386-5c626e116549</mlhim2:uniqueID>                   
           
@@ -1993,7 +1999,7 @@ Examples:
           <rdfs:label>Fever duration: 3 weeks or less - Testing</rdfs:label>
           <rdfs:isDefinedBy
             rdf:resource="http://bvsms.saude.gov.br/bvs/periodicos/boletim_eletronico_epi_ano04_n04.pdf"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-831a09c9-ceaf-46e0-a4e1-afcd064880bd</mlhim2:uniqueID>                   
           
@@ -2095,7 +2101,7 @@ Examples:
         <owl:Class rdf:ID="pcm-a926d847-3a3e-45c5-af3f-3c55a35aca34">
           <rdfs:subClassOf rdf:resource="DvCountType"/>
           <rdfs:label>Heart Rate for Testing</rdfs:label>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-a926d847-3a3e-45c5-af3f-3c55a35aca34</mlhim2:uniqueID>                   
           
@@ -2202,7 +2208,7 @@ Examples:
           <rdfs:isDefinedBy
             rdf:resource="https%3A//cdebrowser.nci.nih.gov/CDEBrowser/search%3FelementDetails%3D9%26FirstTimer%3D0%26PageId%3DElementDetailsGroup%26publicId%3D2767073%26version%3D1.0"
           />
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-3fa04c94-ea73-4c2e-8081-f706958277cb</mlhim2:uniqueID>                   
           
@@ -2307,7 +2313,7 @@ Examples:
           <rdfs:subClassOf rdf:resource="DvLinkType"/>
           <rdfs:label>Connected To</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/RO_0002150"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-7441c558-0087-4f77-bc5f-af4c82e26167</mlhim2:uniqueID>                   
           
@@ -2395,7 +2401,7 @@ Examples:
           <rdfs:subClassOf rdf:resource="DvStringType"/>
           <rdfs:label>Blood Pressure Device (Testing)</rdfs:label>
           <rdfs:isDefinedBy rdf:resource="http://www.mlhim.org/test_pcts"/>
-          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.owl"/>        
+          <mlhim2:isPluggableModelIn rdf:resource="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377.xsd"/>        
           <rdfs:subClassOf rdf:resource="PluggableCM"/>
           <mlhim2:uniqueID>pcm-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da</mlhim2:uniqueID>                   
           
@@ -2518,8 +2524,10 @@ Examples:
       <xs:appinfo>
         <owl:Class rdf:ID="pcs-56c1df15-a4cc-44a6-84ec-45c310a05071">
           <rdfs:subClassOf rdf:resource="PluggableCS"/>
+          <rdfs:subClassOf rdf:resource="AdminEntry"/>
           <mlhim2:isPluggableSymbolOf rdf:resource="pcm-56c1df15-a4cc-44a6-84ec-45c310a05071"/>
           <mlhim2:uniqueID>pcs-56c1df15-a4cc-44a6-84ec-45c310a05071</mlhim2:uniqueID>
+          <rdfs:label>Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>
         </owl:Class>
       </xs:appinfo>
     </xs:annotation>  

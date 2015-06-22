@@ -386,7 +386,7 @@ MLHIM Concept Constraint Definition (CCD)</rdfs:comment>
         <rdfs:label xml:lang="en-us">Is Symbol In</rdfs:label>
         <description xml:lang="en-us">
       The internal definitions of Models have Symbols used to provide structure in instance data.
-      This property states that this is a symbol internal to the concept model.
+      This property states that this is a symbol that is local to the concept model.
     </description>
         <rdfs:range rdf:resource="&mlhim2;ConceptModel"/>
         <rdfs:domain rdf:resource="&mlhim2;Symbol"/>
