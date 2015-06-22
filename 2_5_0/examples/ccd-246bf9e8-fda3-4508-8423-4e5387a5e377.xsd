@@ -354,36 +354,24 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="label" type="xs:string" fixed="External Reference for Party">
-            <xs:annotation>
-              <xs:appinfo>
-                <owl:Class rdf:ID="pcs-c05e8d88-a6dc-43d5-b1b8-723cdc9bf688/label">
-                  <rdfs:subClassOf rdf:resource="#pcs-8501f206-dfd2-4080-be79-34539d0e076b/party-ref"/>
-                </owl:Class>
-              </xs:appinfo>
-            </xs:annotation>            
-            
-          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="label" type="xs:string" fixed="External Reference for Party"/>          
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime">
             <xs:annotation>
               <xs:appinfo>
                 <owl:Class rdf:ID="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377/mlhim2:pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/subject/party-ref/vtb">
                   <rdfs:subClassOf rdf:resource="DataPoint"/>
-                  <rdfs:label>vtb &#1013; party-ref &#1013; External Reference for Party &#1013; subject &#1013; Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>
-                  
+                  <rdfs:label>vtb &#1013; party-ref &#1013; External Reference for Party &#1013; subject &#1013; Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>                  
                 </owl:Class>
               </xs:appinfo>
-            </xs:annotation>            
-            
+            </xs:annotation>                        
           </xs:element>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime">
             <xs:annotation>
               <xs:appinfo>
                 <owl:Class rdf:ID="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377/mlhim2:pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/subject/party-ref/vte">
                   <rdfs:subClassOf rdf:resource="DataPoint"/>
-                  <rdfs:label>vte &#1013; party-ref &#1013; External Reference for Party &#1013; subject &#1013; Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>
-                  
+                  <rdfs:label>vte &#1013; party-ref &#1013; External Reference for Party &#1013; subject &#1013; Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>                  
                 </owl:Class>
               </xs:appinfo>
             </xs:annotation>            
@@ -393,8 +381,7 @@
               <xs:appinfo>
                 <owl:Class rdf:ID="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377/mlhim2:pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/subject/party-ref/link">
                   <rdfs:subClassOf rdf:resource="DataPoint"/>
-                  <rdfs:label>link &#1013; party-ref &#1013; External Reference for Party &#1013; subject &#1013; Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>
-                  
+                  <rdfs:label>link &#1013; party-ref &#1013; External Reference for Party &#1013; subject &#1013; Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>                  
                 </owl:Class>
               </xs:appinfo>
             </xs:annotation>            
@@ -404,8 +391,7 @@
               <xs:appinfo>
                 <owl:Class rdf:ID="ccd-246bf9e8-fda3-4508-8423-4e5387a5e377/mlhim2:pcs-56c1df15-a4cc-44a6-84ec-45c310a05071/subject/party-ref/relation">
                   <rdfs:subClassOf rdf:resource="DataPoint"/>
-                  <rdfs:label>relation &#1013; party-ref &#1013; External Reference for Party &#1013; subject &#1013; Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>
-                  
+                  <rdfs:label>relation &#1013; party-ref &#1013; External Reference for Party &#1013; subject &#1013; Testing Implementation (Admin) &#1013; Testing Implementation (Admin) CCD</rdfs:label>                  
                 </owl:Class>
               </xs:appinfo>
             </xs:annotation>            

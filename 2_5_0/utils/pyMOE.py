@@ -122,7 +122,7 @@ def main(path):
 
         # Individuals
         print('Writing Individuals. \n')
-        onto = etree.XPath("//xs:appinfo/rdf:Description", namespaces=nsDict)
+        onto = etree.XPath("//xs:appinfo/owl:NamedIndividual", namespaces=nsDict)
         owl = onto(root)
         for x in owl:
             dest.write('    '+etree.tostring(x).decode('utf-8')+'\n')
