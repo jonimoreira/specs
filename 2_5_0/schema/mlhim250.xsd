@@ -383,18 +383,6 @@
         <owl:Class rdf:about="DvStringType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvStringType.html#DvStringType"/>
           <rdfs:subClassOf rdf:resource="DvAnyType"/>
-          <rdfs:subClassOf>
-            <owl:Restriction>
-              <owl:onProperty rdf:resource="dvstring-value" />
-              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-          </rdfs:subClassOf>          
-          <rdfs:subClassOf>
-            <owl:Restriction>
-              <owl:onProperty rdf:resource="dvstring-language" />
-              <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-          </rdfs:subClassOf>          
           <owl:disjointWith rdf:resource="&mlhim2;DvBooleanType"/>
           <owl:disjointWith rdf:resource="&mlhim2;DvFileType"/>
           <owl:disjointWith rdf:resource="&mlhim2;DvIntervalType"/>
