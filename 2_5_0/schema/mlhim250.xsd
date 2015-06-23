@@ -1279,9 +1279,7 @@
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvRatioType.html#DvRatioType"/>
           <rdfs:subClassOf rdf:resource="DvQuantifiedType"/>
           <owl:disjointWith rdf:resource="&mlhim2;DvQuantityType"/>
-          <owl:disjointWith rdf:resource="&mlhim2;DvCountType"/>
-
-          
+          <owl:disjointWith rdf:resource="&mlhim2;DvCountType"/>        
           <rdfs:label>DvRatioType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             Models a ratio of values, i.e. where the numerator and denominator are both
@@ -3387,7 +3385,7 @@
         <owl:Class rdf:about="ClusterType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ClusterType.html#ClusterType"/>
           <rdfs:subClassOf rdf:resource="ItemType"/>
-         
+          <owl:disjointWith rdf:resource="&mlhim2;DvAdapterType"/>
           <rdfs:label>ClusterType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             The grouping variant of Item, which may contain further instances of Item,
@@ -3457,6 +3455,7 @@
         <owl:Class rdf:about="DvAdapterType">
           <rdfs:isDefinedBy rdf:resource="http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAdapterType.html#DvAdapterType"/>
           <rdfs:subClassOf rdf:resource="ItemType"/>
+          <owl:disjointWith rdf:resource="&mlhim2;ClusterType"/>
           <rdfs:label>DvAdapterType</rdfs:label>
           <mlhim2:description xml:lang="en-us">
             The leaf variant of Item, to which any DvAnyType subtype instance is
