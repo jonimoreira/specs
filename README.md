@@ -29,7 +29,7 @@ If you would like to help then please let us know by commenting on the [Issue #5
     * :memo: `:memo:` when writing/improving comments
     * :art: `:art:` when improving the format/structure of the code
     * :racehorse: `:racehorse:` when improving performance
-    * :books: `:books:` when writing/improving documentation
+    * :books: `:books:` when writing/improving documentation or examples
     * :bug: `:bug:` when fixing a bug
     * :fire: `:fire:` when removing code or files
     * :white_check_mark: `:white_check_mark:` when adding tests
