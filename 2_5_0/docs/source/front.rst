@@ -2,7 +2,7 @@
 MLHIM Docs Overview
 ===================
 
-Implementable semantic interoperability. 
+Implementable semantic interoperability.
 
 Status - **Development DRAFT for 2.5.0**
 
@@ -23,7 +23,7 @@ The goal of MLHIM is to be Minimalistic, Sustainable, Implementable AND Interope
    </div>
   </embed>
 
-Press the play button to hear **MLHIM** pronounced. 
+Press the play button to hear **MLHIM** pronounced.
 
 
 
@@ -35,8 +35,8 @@ Acknowledgements
 This work has received financial and in-kind support from the following persons and organizations;
 
 * National Institute of Science and Technology on Medicine Assisted by Scientific Computing (INCT-MACC), coordinated by the National Laboratory of Scientific Computing (macc.lncc.br)
-* Multilevel Healthcare Information Modeling Technological Development Unit, Member of the Emergent Group for Research and Innovation in Healthcare Information Technology, coordinated by Prof. Luciana Tricai Cavalini, MD, PhD (lutricav@mlhim.org) 
-* Timothy W. Cook, Independent Consultant 
+* Multilevel Healthcare Information Modeling Technological Development Unit, Member of the Emergent Group for Research and Innovation in Healthcare Information Technology, coordinated by Prof. Luciana Tricai Cavalini, MD, PhD (lutricav@mlhim.org)
+* Timothy W. Cook, Independent Consultant
 * Roger Erens, Independent Consultant (1.0.x version)
 
 Error Reporting
@@ -48,24 +48,24 @@ Purpose & Scope
 ---------------
 *Keep everything as simple as possible; but no simpler. – Albert Einstein*
 
-The purpose of the MLHIM project is to provide a free and openly available specification for implementation of computable semantic interoperability for healthcare information exchange. 
-The MLHIM specifications are designed to provide semantic interoperability that is fully independent of any implementation specific contexts. Therefore workflow, security, user access, data persistence, etc. are all outside the scope of MLHIM. 
+The purpose of the MLHIM project is to provide a free and openly available specification for implementation of computable semantic interoperability for healthcare information exchange.
+The MLHIM specifications are designed to provide semantic interoperability that is fully independent of any implementation specific contexts. Therefore workflow, security, user access, data persistence, etc. are all outside the scope of MLHIM.
 
-The MLHIM site on `GitHub <https://github.com/mlhim>`_ contains a growing number of demonstration projects and tools that research how this approach and limited scope enables interoperability across many contexts. MLHIM based data can be exchanged via any transport method. Including existing HL7 v.2 and v.3 exchange systems to enhance the semantic interoperability of existing HL7 implementations. 
+The MLHIM site on `GitHub <https://github.com/mlhim>`_ contains a growing number of demonstration projects and tools that research how this approach and focused scope enables interoperability across many contexts. MLHIM based data can be exchanged via any transport method. Including existing HL7 v.2 and v.3 exchange systems to enhance the semantic interoperability of existing HL7 implementations.
 
 Conformance
 -----------
-Conformance to these specifications are represented in a Language Implementation Specification (LIS). A LIS is formal document detailing the mappings and conventions used in relation to these specifications. 
+Conformance to these specifications are represented in a Language Implementation Specification (LIS). A LIS is a formal document detailing the mappings and conventions used in relation to these specifications.
 A LIS is in direct conformance to these specifications when;
 
 1. All datatypes are defined and mapped.
-2. The value spaces of the healthcare datatypes used by the entity to be identical to the value spaces specified herein. 
+2. The value spaces of the healthcare datatypes used by the entity to be identical to the value spaces specified herein.
 3. To the extent that the entity provides operations other than movement or translation of values, define operations on the healthcare datatypes which can be derived from, or are otherwise consistent with the characterizing operations specified herein.
 
 Compliance
 ----------
 These specifications;
-* Are in indirect conformance with ISO/DIS 21090/2008. 
+* Are in indirect conformance with ISO/DIS 21090/2008.
 * Are in compliance with applicable sections of ISO 18308/2008.
 * Are in compliance with applicable sections of ISO/TR 20514:2005.
 * Are in compliance with applicable sections of ISO 13606-1:2007.

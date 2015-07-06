@@ -25,4 +25,4 @@ We have a growing amount of *peer-reviewed* material on our `website <http://mlh
 
 MLHIM is the foundation for retro-fitting your current applications to interoperate with your future applications without requiring wholesale replacement.
 
-*Insanity: doing the same thing over and over again and expecting different results. - Albert Einstein*
+*For every complex problem there is an answer that is clear, simple, and wrong. - H. L. Mencken*
