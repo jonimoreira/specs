@@ -34,6 +34,7 @@ So, the various applications are now part of a larger infrastructure or eco-syst
 Constraint Definitions
 ----------------------
 Concept Constraint Definitions (CCDs) can be created using any XML Schema editor or even a plain text editor. However, this is not a recommended approach. Realistic CCDs can be several hundred and upto thousands of lines long. They also require Type4 UUIDs to be created as complexType and element names. These UUIDs should be machine generated.
+
 An open source Constraint Definition Designer (CDD) has been started but is in need of a leader and developer community. MLHIM founders are eager to support the development of this tool. It will (eventually) be used to create constraint definitions. It is open source and we hope to build a community around its development. The CDD can be used now to create a shell XSD with the correct metadata entries. Each release is available on the MLHIM GitHub site.
 
 
