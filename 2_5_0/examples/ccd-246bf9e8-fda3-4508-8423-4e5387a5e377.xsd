@@ -1770,8 +1770,7 @@
                         <rdfs:subPropertyOf
                           rdf:resource="s3m:ct-90d6bc7b-1fb9-4c18-858f-4283ef6ce2da"/>
                         <rdfs:label>Digital</rdfs:label>
-                        <rdfs:isDefinedBy rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/7934182"
-                        />
+                        <rdfs:isDefinedBy rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/7934182"/>
                       </rdf:Description>
                     </xs:appinfo>
                   </xs:annotation>
