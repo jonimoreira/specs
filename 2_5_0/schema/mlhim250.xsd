@@ -1387,7 +1387,7 @@
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="0" name='dvratio-units' type="mlhim2:DvStringType">
+          <xs:element maxOccurs="1" minOccurs="0" name="dvratio-units" type="mlhim2:DvStringType">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Used to convey the meaning of the dvratio-value. 
@@ -2062,7 +2062,7 @@
               </xs:appinfo>
             </xs:annotation>
           </xs:element>
-          <xs:element maxOccurs="1" minOccurs="1" name='interval' type="mlhim2:DvIntervalType">
+          <xs:element maxOccurs="1" minOccurs="1" name="interval" type="mlhim2:DvIntervalType">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 The data range for this meaning.
