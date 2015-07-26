@@ -151,7 +151,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="attached to - Testing"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -184,7 +184,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Connected To - Testing"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -250,7 +250,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Originating System ID - Testing"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -311,7 +311,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="External Reference for Party"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -344,7 +344,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string" fixed="Address Details (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Address Details (US)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-d24affc1-a9ff-487a-9029-204f3b4d8e7e"/>
           <!-- DvString Additional Address Line(s) (US)  -->
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-b65ea20c-3768-45cd-a059-004ece61bc89"/>
@@ -381,7 +381,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Additional Address Line(s) (US)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -424,7 +424,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="City Name (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="City Name (US)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
@@ -466,7 +466,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Common Name / Nickname"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -509,7 +509,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="State Abbreviation (USPS)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -1251,7 +1251,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Street Number and Name (US)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -1294,7 +1294,7 @@
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Telephone Number (US)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -1344,7 +1344,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Zip Code (US)"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Zip Code (US)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
@@ -1389,7 +1389,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="FAD System Location (WGS84)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-84a78cf3-028b-4aff-a17c-fb485a582fbd"/>
           <!-- DvString FAD Latitude (Decimal Format) -->
@@ -1417,7 +1417,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="FAD Latitude (Decimal Format)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -1461,7 +1461,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="FAD Longitude (Decimal Format)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -1637,7 +1637,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Participation Function"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -1676,7 +1676,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Participation Mode"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Participation Mode"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
@@ -1715,7 +1715,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Generic Protocol ID - Testing"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -1747,7 +1747,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvLinkType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Workflow ID - Testing"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
@@ -1816,7 +1816,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvFileType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Attestation View"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Attestation View"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
@@ -1853,7 +1853,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvFileType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Proof"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Proof"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
@@ -1887,7 +1887,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Attestation Reason"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Attestation Reason"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
@@ -1956,7 +1956,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:ClusterType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="cluster-subject" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Test  DemographicEntry entry-data"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:el-697e8df2-7890-4f44-8442-e7f2beab4425"/>
           <!-- DvBoolean Fever duration: 3 weeks or less - Testing -->
@@ -1990,20 +1990,20 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvBooleanType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Fever duration: 3 weeks or less - Testing"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:choice>
-            <xs:element maxOccurs="1" minOccurs="0" name="true-value">
+          <xs:choice  maxOccurs="1" minOccurs="1">
+            <xs:element name="true-value">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="YES"/>
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="0" name="false-value">
+            <xs:element name="false-value">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="NO"/>
@@ -2049,12 +2049,12 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvBooleanType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string" fixed="Test DvBoolean"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string" fixed="Test DvBoolean"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vte" type="xs:dateTime"/>
-          <xs:choice>
-            <xs:element maxOccurs="1" minOccurs="0" name="true-value">
+          <xs:choice maxOccurs="1" minOccurs="1">
+            <xs:element name="true-value">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="Yes"/>
@@ -2062,7 +2062,7 @@ Examples:
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
-            <xs:element maxOccurs="1" minOccurs="0" name="false-value">
+            <xs:element name="false-value">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
                   <xs:enumeration value="No"/>
@@ -2108,7 +2108,7 @@ Examples:
     <xs:complexContent>
       <xs:restriction base="mlhim2:DvStringType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="1" name="data-name" type="xs:string"
+          <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"
             fixed="Blood Pressure Device (Testing)"/>
           <xs:element maxOccurs="1" minOccurs="0" ref="mlhim2:ExceptionalValue"/>
           <xs:element maxOccurs="1" minOccurs="0" name="vtb" type="xs:dateTime"/>
