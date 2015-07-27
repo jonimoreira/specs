@@ -765,7 +765,7 @@
     <xs:complexContent>
       <xs:extension base="mlhim2:DvAnyType">
         <xs:sequence>
-          <xs:element maxOccurs="unbounded" minOccurs="0" name="range" type="mlhim2:ReferenceRangeType">
+          <xs:element maxOccurs="unbounded" minOccurs="0" ref="mlhim2:ReferenceRange">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Optional list of ReferenceRanges for this value in its particular measurement context.
