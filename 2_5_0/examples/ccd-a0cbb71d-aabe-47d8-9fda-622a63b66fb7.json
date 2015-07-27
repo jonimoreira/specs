@@ -1,0 +1,240 @@
+{"mlhim2:ccd-a0cbb71d-aabe-47d8-9fda-622a63b66fb7": {
+    "xmlns:rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xmlns:rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xmlns:vc": "http://www.w3.org/2007/XMLSchema-versioning",
+    "xmlns:mlhim2": "http://www.mlhim.org/ns/mlhim2/",
+    "xmlns:owl": "http://www.w3.org/2002/07/owl#",
+    "xmlns:dc": "http://purl.org/dc/elements/1.1/",
+    "xmlns:sawsdlrdf": "http://www.w3.org/ns/sawsdl#",
+    "xmlns:sch": "http://purl.oclc.org/dsdl/schematron",
+    "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "xsi:schemaLocation": "http://www.mlhim.org/ns/mlhim2/ ccd-a0cbb71d-aabe-47d8-9fda-622a63b66fb7.xsd",
+    "mlhim2:pcs-194082c6-aa79-4b94-ba11-0d413c62926f": {
+        "label": "AdminEntry  - Testing Only",
+        "entry-language": "en-US",
+        "entry-encoding": "utf-8",
+        "current-state": "",
+        "mlhim2:pcs-a620aa80-b195-405c-8244-67bf6ec7eb5e": {
+            "label": "AdminEntry entry-data - Testing Only",
+            "mlhim2:pcs-ac0588d4-de6a-4772-8e8e-9a737af6f260": {
+                "label": "Test Sub-Cluster  - Testing Only",
+                "mlhim2:pcs-8aff6c15-f828-4948-9222-195c1b2f0954": {"mlhim2:pcs-426da684-48d4-4f23-adf4-e796e7a08ed6": [
+                    {
+                        "label": "Bladder  - Testing Only",
+                        "true-value": "Yes"
+                    },
+                    {
+                        "label": "Bladder  - Testing Only",
+                        "false-value": "No"
+                    }
+                ]},
+                "mlhim2:pcs-697e8df2-7890-4f44-8442-e7f2beab4425": {"mlhim2:pcs-de4f8cae-5ef2-4e92-b76e-22f06501a942": [
+                    {
+                        "label": "Fever duration: 3 weeks or less  - Testing Only",
+                        "false-value": "NO"
+                    },
+                    {
+                        "label": "Fever duration: 3 weeks or less  - Testing Only",
+                        "false-value": "NO"
+                    }
+                ]},
+                "mlhim2:pcs-d4fd6e5a-875e-4512-8bdd-492498237341": {"mlhim2:pcs-a6198d5d-9314-4f83-9151-4f6b05609c04": [
+                    {
+                        "label": "Heart Rate  - Testing Only",
+                        "normal-status": "Normal heart rate",
+                        "error": 0,
+                        "accuracy": 0,
+                        "dvcount-value": 0,
+                        "dvcount-units": {
+                            "label": "beats per minute  - Testing Only",
+                            "dvstring-value": "bpm"
+                        }
+                    },
+                    {
+                        "label": "Heart Rate  - Testing Only",
+                        "normal-status": "Normal heart rate",
+                        "error": 0,
+                        "accuracy": 0,
+                        "dvcount-value": 0,
+                        "dvcount-units": {
+                            "label": "beats per minute  - Testing Only",
+                            "dvstring-value": "bpm"
+                        }
+                    }
+                ]}
+            },
+            "mlhim2:pcs-a3052842-92af-4cff-a21f-afb44cce2cda": {"mlhim2:pcs-473e1662-801b-41c3-ad01-9046d963f00d": [
+                {
+                    "label": "Connected To  - Testing Only",
+                    "mlhim2:INV": {"ev-name": "Invalid"},
+                    "vtb": "2006-05-04T18:13:51.0",
+                    "vte": "2006-05-04T18:13:51.0",
+                    "link": "http://www.oxygenxml.com/",
+                    "relation": "connected to",
+                    "relation-uri": "Needs a URI"
+                },
+                {
+                    "label": "Connected To  - Testing Only",
+                    "mlhim2:MSK": {"ev-name": "Masked"},
+                    "vtb": "2006-05-04T18:13:51.0",
+                    "vte": "2006-05-04T18:13:51.0",
+                    "link": "http://www.oxygenxml.com/",
+                    "relation": "connected to",
+                    "relation-uri": "Needs a URI"
+                }
+            ]},
+            "mlhim2:pcs-e9cbb207-9e89-416c-8b71-7cdb859b3097": {"mlhim2:pcs-b3dd6ce1-fc73-47c7-a5ec-e05f4f494e1d": [
+                {
+                    "label": "Blood Pressure Device - Testing Use Only",
+                    "mlhim2:NAV": {"ev-name": "Not Available"},
+                    "vtb": "2006-05-04T18:13:51.0",
+                    "vte": "2006-05-04T18:13:51.0",
+                    "dvstring-value": "Mercury sphygmomanometer",
+                    "dvstring-language": "en-US"
+                },
+                {
+                    "label": "Blood Pressure Device - Testing Use Only",
+                    "mlhim2:NASK": {"ev-name": "Not Asked"},
+                    "vtb": "2006-05-04T18:13:51.0",
+                    "vte": "2006-05-04T18:13:51.0",
+                    "dvstring-value": "Mercury sphygmomanometer",
+                    "dvstring-language": "en-US"
+                }
+            ]}
+        },
+        "subject": {
+            "label": "Subject of the Entry (US)  - Testing Only",
+            "party-name": "party-name0",
+            "party-details": {
+                "label": "Address Details (US)  - Testing Only",
+                "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {"mlhim2:pcs-3cc2f238-7c90-4d36-bc9a-bea26b737ff6": [
+                    {
+                        "label": "Additional Address Line(s) (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value4"
+                    },
+                    {
+                        "label": "Additional Address Line(s) (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value5"
+                    }
+                ]},
+                "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {"mlhim2:pcs-ee244f65-2052-4708-8d2e-7721d864c46b": [
+                    {
+                        "label": "City Name (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value6"
+                    },
+                    {
+                        "label": "City Name (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value7"
+                    }
+                ]},
+                "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {"mlhim2:pcs-2fff9fb6-d022-418a-869d-60bd4551fb4c": [
+                    {
+                        "label": "State Abbreviation (USPS)  - Testing Only",
+                        "dvstring-value": "AL"
+                    },
+                    {
+                        "label": "State Abbreviation (USPS)  - Testing Only",
+                        "dvstring-value": "AL"
+                    }
+                ]},
+                "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {"mlhim2:pcs-c73db9db-94fd-4641-84df-bf4c8e2c4632": [
+                    {
+                        "label": "Street Number and Name (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value10"
+                    },
+                    {
+                        "label": "Street Number and Name (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value11"
+                    }
+                ]},
+                "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {"mlhim2:pcs-42599aa0-2030-4f46-8bf4-053bbef2eb37": [
+                    {
+                        "label": "Telephone Number (US)  - Testing Only",
+                        "dvstring-value": "111-111-1111"
+                    },
+                    {
+                        "label": "Telephone Number (US)  - Testing Only",
+                        "dvstring-value": "111-111-1111"
+                    }
+                ]},
+                "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {"mlhim2:pcs-cab630ec-ec96-4247-951a-42eac6343ba5": [
+                    {
+                        "label": "Zip Code (US)  - Testing Only",
+                        "dvstring-value": 78613
+                    },
+                    {
+                        "label": "Zip Code (US)  - Testing Only",
+                        "dvstring-value": 78613
+                    }
+                ]}
+            }
+        },
+        "provider": {
+            "label": "Entry Provider (US)  - Testing Only",
+            "party-name": "party-name1",
+            "party-details": {
+                "label": "Address Details (US)  - Testing Only",
+                "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {"mlhim2:pcs-3cc2f238-7c90-4d36-bc9a-bea26b737ff6": [
+                    {
+                        "label": "Additional Address Line(s) (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value14"
+                    },
+                    {
+                        "label": "Additional Address Line(s) (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value15"
+                    }
+                ]},
+                "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {"mlhim2:pcs-ee244f65-2052-4708-8d2e-7721d864c46b": [
+                    {
+                        "label": "City Name (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value16"
+                    },
+                    {
+                        "label": "City Name (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value17"
+                    }
+                ]},
+                "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {"mlhim2:pcs-2fff9fb6-d022-418a-869d-60bd4551fb4c": [
+                    {
+                        "label": "State Abbreviation (USPS)  - Testing Only",
+                        "dvstring-value": "AL"
+                    },
+                    {
+                        "label": "State Abbreviation (USPS)  - Testing Only",
+                        "dvstring-value": "AL"
+                    }
+                ]},
+                "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {"mlhim2:pcs-c73db9db-94fd-4641-84df-bf4c8e2c4632": [
+                    {
+                        "label": "Street Number and Name (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value20"
+                    },
+                    {
+                        "label": "Street Number and Name (US)  - Testing Only",
+                        "dvstring-value": "dvstring-value21"
+                    }
+                ]},
+                "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {"mlhim2:pcs-42599aa0-2030-4f46-8bf4-053bbef2eb37": [
+                    {
+                        "label": "Telephone Number (US)  - Testing Only",
+                        "dvstring-value": "111-111-1111"
+                    },
+                    {
+                        "label": "Telephone Number (US)  - Testing Only",
+                        "dvstring-value": "111-111-1111"
+                    }
+                ]},
+                "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {"mlhim2:pcs-cab630ec-ec96-4247-951a-42eac6343ba5": [
+                    {
+                        "label": "Zip Code (US)  - Testing Only",
+                        "dvstring-value": 78613
+                    },
+                    {
+                        "label": "Zip Code (US)  - Testing Only",
+                        "dvstring-value": 78613
+                    }
+                ]}
+            }
+        }
+    }
+}}
