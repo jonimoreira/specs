@@ -509,7 +509,7 @@
                 Name of character encoding scheme in which this value is encoded.
                 Coded from the IANA charcater set table:
                 http://www.iana.org/assignments/character-sets Unicode is the default assumption in
-                S3Model, with UTF-8 being the assumed encoding. This attribute allows for variations
+                MLHIM2, with UTF-8 being the assumed encoding. This attribute allows for variations
                 from these assumptions.
               </xs:documentation>
               <xs:appinfo>
@@ -551,8 +551,7 @@
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 Name of the formalism or syntax used to inform an application regarding 
-                a candidate parser to use on the content. Examples might include: 'ATL', 'MOLA', 'QVT', 'GDL', 'GLIF', etc.  for DvParsables.
-                Text-based formats that have a MIME type assigned, such as XML, XHTML, etc. should use DvMediaType.
+                a candidate parser to use on the content. Examples might include: 'ATL', 'MOLA', 'QVT', 'GDL', 'GLIF', etc.
               </xs:documentation>
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="formalism">
@@ -560,8 +559,7 @@
                   <rdfs:range rdf:resource="&xsd;string"/>
                   <mlhim2:description xml:lang="en-us">
                     Name of the formalism or syntax used to inform an application regarding 
-                    a candidate parser to use on the content. Examples might include: 'ATL', 'MOLA', 'QVT', 'GDL', 'GLIF', etc.  for DvParsables.
-                    Text-based formats that have a MIME type assigned, such as XML, XHTML, etc. should use DvMediaType.
+                    a candidate parser to use on the content. Examples might include: 'ATL', 'MOLA', 'QVT', 'GDL', 'GLIF', etc. 
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
@@ -570,7 +568,7 @@
           <xs:element maxOccurs="1" minOccurs="0" name="media-type" type="xs:string">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
-                MIME type of the original media-content w/o any compression. See
+                Media (MIME) type of the original media-content w/o any compression. See
                 IANA registered types: http://www.iana.org/assignments/media-types/media-types.xhtml
               </xs:documentation>
               <xs:appinfo>
@@ -1123,14 +1121,14 @@
           <xs:element maxOccurs="1" minOccurs="0" name="dvcount-value" type="xs:int">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
-                Numeric value of the counted items.
+                Integer value of the counted items.
               </xs:documentation>
               <xs:appinfo>
                 <owl:DatatypeProperty rdf:about="dvcount-value">
                   <rdfs:domain rdf:resource="DvCountType"/>
                   <rdfs:range rdf:resource="&xsd;int"/>
                   <mlhim2:description xml:lang="en-us">
-                    Numeric value of the counted items.
+                    Integer value of the counted items.
                   </mlhim2:description>
                 </owl:DatatypeProperty>
               </xs:appinfo>
@@ -1139,7 +1137,7 @@
           <xs:element maxOccurs="1" minOccurs="1" name='dvcount-units' type="mlhim2:DvStringType">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
-                The name or type of the quantity. 
+                The name or type of the items counted. 
                 Examples are cigarettes, drinks, pregnancies, episodes, etc. 
                 May or may not come from a standard terminology.
               </xs:documentation>
@@ -1148,7 +1146,7 @@
                   <rdfs:domain rdf:resource="DvCountType"/>
                   <rdfs:range rdf:resource="DvStringType"/>
                   <mlhim2:description xml:lang="en-us">
-                    The name or type of the quantity. 
+                    The name or type of the items counted. 
                     Examples are cigarettes, drinks, pregnancies, episodes, etc. 
                     May or may not come from a standard terminology.
                   </mlhim2:description>
@@ -1221,7 +1219,7 @@
             <xs:annotation>
               <xs:documentation xml:lang="en-us">
                 The name or type of the quantity. 
-                Examples are "kg/m2", “mm[Hg]", "ms-1", "km/h". 
+                Examples are "kg/m2", “mmHg", "ms-1", "km/h". 
                 May or may not come from a standard terminology.
               </xs:documentation>
               <xs:appinfo>
@@ -1230,7 +1228,7 @@
                   <rdfs:range rdf:resource="DvStringType"/>
                   <mlhim2:description xml:lang="en-us">
                     The name or type of the quantity. 
-                    Examples are "kg/m2", “mm[Hg]", "ms-1", "km/h". 
+                    Examples are "kg/m2", “mmHg", "ms-1", "km/h". 
                     May or may not come from a standard terminology.                    
                   </mlhim2:description>
                 </owl:ObjectProperty>
