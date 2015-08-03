@@ -85,7 +85,6 @@ DvQuantity <- function(pcm) {
     }
 
     n <- XML::getNodeSet(pcm, '//label', nsDEF)
-
     if (length(n) > 0)
     {
       label <- XML::xmlValue(n[[1]])
@@ -118,10 +117,11 @@ DvQuantity <- function(pcm) {
     error <- NA
     magnitude_status <- NA
 
-    n <- XML::getNodeSet(pcm, '//reference_ranges', nsDEF)
+    # test for reference range(s) by looking for a definition element
+    n <- XML::getNodeSet(pcm, '//definition/parent::node()', nsDEF)
     if (length(n) > 0)
     {
-      reference_ranges <- XML::xmlValue(n[[1]])
+      reference_ranges <- lapply(n, ReferenceRange)
     }
 
     n <- XML::getNodeSet(pcm, '//normal-status', nsDEF)
@@ -164,9 +164,8 @@ DvQuantity <- function(pcm) {
       accuracy <- XML::xmlValue(n[[1]])
     }
 
-    data <- data.frame(label, vtb, vte,
-                       reference_ranges, normal_status, dvquantity_value,  units_value, units_label, magnitude_status, error, accuracy,
-                       ev_name, stringsAsFactors = FALSE)
+    data <- data.frame(label, vtb, vte, normal_status, dvquantity_value,  units_value, units_label, magnitude_status, error, accuracy,
+                       ev_name, reference_ranges, stringsAsFactors = FALSE)
 
   } else
   {

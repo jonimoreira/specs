@@ -30,13 +30,31 @@
 #'
 #' normal_status - Optional normal status indicator of value with respect to normal range for this value.
 #'                 Often included by lab, even if the normal range itself is not included.
-#'                 Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL, etc.
+#'                 Coded by ordinals in series HHH, HH, H, nothing, L, LL, LLL, etc.
 #'
-#' ordinal - Value in ordered enumeration of values. The base integer is zero with any number of integer values used to order the symbols.
-#'           Example 1: 0 = Trace, 1 = +, 2 = ++, 3 = +++, etc. Example 2: 0 = Mild, 1 = Moderate, 2 = Severe
+#' dvtemporal_date
 #'
-#' symbol - Coded textual representation of this value in the enumeration, which may be strings made from “+” symbols, or other enumerations of
-#'          terms such as “mild”, “moderate”, “severe”, or even the same number series as the values, e.g. “1”, “2”, “3”.
+#' dvtemporal_time
+#'
+#' dvtemporal_datetime
+#'
+#' dvtemporal_datetime_stamp
+#'
+#' dvtemporal_day
+#'
+#' dvtemporal_month
+#'
+#' dvtemporal_year
+#'
+#' dvtemporal_year_month
+#'
+#' dvtemporal_month_day
+#'
+#' dvtemporal_duration
+#'
+#' dvtemporal_ymduration
+#'
+#' dvtemporal_dtduration
 #'
 #' @param pcm - the XML fragment to parse.
 #' @return A dataframe consisting of the vectors listed in the Description.
@@ -103,8 +121,18 @@ DvTemporal <- function(pcm) {
     # PCMdefaults
     reference_ranges <- NA
     normal_status <- NA
-    ordinal <- NA
-    symbol <- NA
+    dvtemporal_date <- NA
+    dvtemporal_time <- NA
+    dvtemporal_datetime <- NA
+    dvtemporal_datetime_stamp <- NA
+    dvtemporal_day <- NA
+    dvtemporal_month <- NA
+    dvtemporal_year <- NA
+    dvtemporal_year_month <- NA
+    dvtemporal_month_day <- NA
+    dvtemporal_duration <- NA
+    dvtemporal_ymduration <- NA
+    dvtemporal_dtduration <- NA
 
     n <- XML::getNodeSet(pcm, '//reference_ranges', nsDEF)
     if (length(n) > 0)
@@ -118,16 +146,70 @@ DvTemporal <- function(pcm) {
       normal_status <- XML::xmlValue(n[[1]])
     }
 
-    n <- XML::getNodeSet(pcm, '//ordinal', nsDEF)
+    n <- XML::getNodeSet(pcm, '//dvtemporal-date', nsDEF)
     if (length(n) > 0)
     {
-      ordinal <- XML::xmlValue(n[[1]])
+      dvtemporal_date <- XML::xmlValue(n[[1]])
     }
 
-    n <- XML::getNodeSet(pcm, '//symbol', nsDEF)
+    n <- XML::getNodeSet(pcm, '//dvtemporal-time', nsDEF)
     if (length(n) > 0)
     {
-      symbol <- XML::xmlValue(n[[1]])
+      dvtemporal_time <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-datetime', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_datetime <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-datetime-stamp', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_datetime_stamp <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-day', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_day <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-month', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_year <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-year-month', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_month_day <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-month-day', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_month_day <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-duration', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_duration <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-ymduration', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_ymduration <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//dvtemporal-dtduration', nsDEF)
+    if (length(n) > 0)
+    {
+      dvtemporal_dtduration <- XML::xmlValue(n[[1]])
     }
 
     data <- data.frame(label, vtb, vte,
