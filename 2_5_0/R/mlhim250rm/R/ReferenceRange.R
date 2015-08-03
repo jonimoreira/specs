@@ -3,6 +3,7 @@
 #
 ReferenceRange <- function(rr) {
   nsDEF <- c(mlhim2='http://www.mlhim.org/ns/mlhim2/')
+  rr_label <- NA
   rr_definition <- NA
   rr_vtb <- NA
   rr_vte <- NA
@@ -15,7 +16,13 @@ ReferenceRange <- function(rr) {
   lower_bounded <- NA
   upper_bounded <- NA
 
-  n <- XML::getNodeSet(rr, '//definition', nsDEF)
+  n <- XML::getNodeSet(rr, '//label', nsDEF)
+  if (length(n) > 0)
+  {
+    rr_label <- XML::xmlValue(n[[1]])
+  }
+
+    n <- XML::getNodeSet(rr, '//definition', nsDEF)
   if (length(n) > 0)
   {
     rr_definition <- XML::xmlValue(n[[1]])
@@ -85,7 +92,7 @@ ReferenceRange <- function(rr) {
     upper_bounded <- XML::xmlValue(n[[1]])
   }
 
-  data <- data.frame(rr_definition, rr_vtb, rr_vte, rr_is_normal, interval_label, interval_lower, interval_upper, lower_included, upper_included,
+  data <- data.frame(rr_label, rr_definition, rr_vtb, rr_vte, rr_is_normal, interval_label, interval_lower, interval_upper, lower_included, upper_included,
                      lower_bounded, upper_bounded, stringsAsFactors = FALSE)
   return(data)
 }

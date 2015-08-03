@@ -106,10 +106,11 @@ DvOrdinal <- function(pcm) {
     ordinal <- NA
     symbol <- NA
 
-    n <- XML::getNodeSet(pcm, '//reference_ranges', nsDEF)
+    # test for reference range(s) by looking for a definition element
+    n <- XML::getNodeSet(pcm, '//definition/parent::node()', nsDEF)
     if (length(n) > 0)
     {
-      reference_ranges <- XML::xmlValue(n[[1]])
+      reference_ranges <- lapply(n, ReferenceRange)
     }
 
     n <- XML::getNodeSet(pcm, '//normal-status', nsDEF)

@@ -114,14 +114,21 @@ DvRatio <- function(pcm) {
     dvratio_value <- NA
     units_value <- NA
     units_label <- NA
+    numerator <- NA
+    numerator_units_value <- NA
+    numerator_units_label <- NA
+    denominator <- NA
+    denominator_units_value <- NA
+    denominator_units_label <- NA
     accuracy <- NA
     error <- NA
     magnitude_status <- NA
 
-    n <- XML::getNodeSet(pcm, '//reference_ranges', nsDEF)
+    # test for reference range(s) by looking for a definition element
+    n <- XML::getNodeSet(pcm, '//definition/parent::node()', nsDEF)
     if (length(n) > 0)
     {
-      reference_ranges <- XML::xmlValue(n[[1]])
+      reference_ranges <- lapply(n, ReferenceRange)
     }
 
     n <- XML::getNodeSet(pcm, '//normal-status', nsDEF)
@@ -148,6 +155,42 @@ DvRatio <- function(pcm) {
       units_label <- XML::xmlValue(n[[1]])
     }
 
+    n <- XML::getNodeSet(pcm, '//numerator', nsDEF)
+    if (length(n) > 0)
+    {
+      numerator <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//numerator-units/dvstring-value', nsDEF)
+    if (length(n) > 0)
+    {
+      numerator_units_value <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//numerator-units/label', nsDEF)
+    if (length(n) > 0)
+    {
+      numerator_units_label <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//denominator', nsDEF)
+    if (length(n) > 0)
+    {
+      numerator <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//denominator-units/dvstring-value', nsDEF)
+    if (length(n) > 0)
+    {
+      denominator_units_value <- XML::xmlValue(n[[1]])
+    }
+
+    n <- XML::getNodeSet(pcm, '//denominator-units/label', nsDEF)
+    if (length(n) > 0)
+    {
+      denominator_units_label <- XML::xmlValue(n[[1]])
+    }
+
     n <- XML::getNodeSet(pcm, '//magnitude-status', nsDEF)
     if (length(n) > 0)
     {
@@ -164,9 +207,12 @@ DvRatio <- function(pcm) {
       accuracy <- XML::xmlValue(n[[1]])
     }
 
-    data <- data.frame(label, vtb, vte,
-                       reference_ranges, normal_status, dvratio_value,  units_value, units_label, magnitude_status, error, accuracy,
-                       ev_name, stringsAsFactors = FALSE)
+    data <- data.frame(label, vtb, vte,  normal_status,
+                       dvratio_value,  units_value, units_label,
+                       numerator,  numerator_units_value, numerator_units_label,
+                       denominator,  denominator_units_value, denominator_units_label,
+                       magnitude_status, error, accuracy,
+                       ev_name, reference_ranges, stringsAsFactors = FALSE)
 
   } else
   {
