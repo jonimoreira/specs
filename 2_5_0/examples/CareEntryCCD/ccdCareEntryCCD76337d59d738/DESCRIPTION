@@ -1,0 +1,15 @@
+Package: ccdCareEntryCCD76337d59d738
+Type: Package
+Title: ccdCareEntryCCD76337d59d738
+Version: 1.0
+Date: 2015-08-03
+Author: Timothy W. Cook <tim@mlhim.org>
+Maintainer: Timothy W. Cook <tim@mlhim.org>
+Description: Creates a data frame from instances of the MLHIM CCD for:
+  CareEntry CCD
+  The CCD ID is: ccd-72f3fa87-20b4-4bef-9eed-76337d59d738
+  Testing CCD-Gen Implementation of the MLHIM RM functionality.
+License: Apache License 2.0
+Depends: 
+  mlhim250rm (>= 1.0.0),
+  data.table

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mlhim2:ccd-f7c1b481-593e-4a93-bc51-50da4ff15e86
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:mlhim2="http://www.mlhim.org/ns/mlhim2/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sawsdlrdf="http://www.w3.org/ns/sawsdl#"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.mlhim.org/ns/mlhim2/ http://www.ccdgen.com/ccdlib/ccd-f7c1b481-593e-4a93-bc51-50da4ff15e86.xsd">
+<mlhim2:pcs-433cbc5a-c6b6-404c-a74d-bfb84483487c>
+<label>AdminEntry  - Testing Only</label>
+<entry-language>en-US</entry-language>
+<entry-encoding>utf-8</entry-encoding>
+<current-state></current-state>
+  <mlhim2:pcs-cfa3c6c9-a32b-47f5-89b9-acbd2ae11c90>
+    <label>AdminEntry entry-data - Testing Only</label>
+    <mlhim2:pcs-d14ae90a-23ad-4f54-944c-f68c4b197d6a>
+      <label>Test Sub-Cluster  - Testing Only</label>
+      <mlhim2:pcs-8aff6c15-f828-4948-9222-195c1b2f0954>
+        <mlhim2:pcs-c9ffeb03-867f-42ec-8fe4-592bb8f03111>
+          <label>Bladder  - Testing Only</label>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing or invalid or invalid -->
+          <vtb>2011-05-24T03:51:15</vtb>
+          <vte>2014-01-03T11:29:39</vte>
+          <true-value>Yes</true-value>
+        </mlhim2:pcs-c9ffeb03-867f-42ec-8fe4-592bb8f03111>
+      </mlhim2:pcs-8aff6c15-f828-4948-9222-195c1b2f0954>
+      <mlhim2:pcs-697e8df2-7890-4f44-8442-e7f2beab4425>
+        <mlhim2:pcs-6f6bb8d8-2f5f-4e97-bdd5-ef9a2eb24ba6>
+          <label>Fever duration: 3 weeks or less  - Testing Only</label>
+          <!-- Use any subtype of ExceptionalValue here when a value is missing or invalid or invalid -->
+          <vtb>2002-04-08T06:53:32</vtb>
+          <vte>2011-03-11T16:32:24</vte>
+          <true-value>YES</true-value>
+        </mlhim2:pcs-6f6bb8d8-2f5f-4e97-bdd5-ef9a2eb24ba6>
+      </mlhim2:pcs-697e8df2-7890-4f44-8442-e7f2beab4425>
+      <mlhim2:pcs-ab00881d-77f8-4129-bbf0-6b2cbf970df6>
+        <mlhim2:pcs-422f37ef-3c71-41ea-a0a2-cd145bd25e34>
+          <label>Contains  - Testing Only</label>
+          <vtb>2003-03-11T09:49:14</vtb>
+          <vte>2004-02-20T14:08:59</vte>
+          <link>http://www.ccdgen.com</link>
+          <relation>contains</relation>
+          <relation-uri>Needs a URI</relation-uri>
+        </mlhim2:pcs-422f37ef-3c71-41ea-a0a2-cd145bd25e34>
+      </mlhim2:pcs-ab00881d-77f8-4129-bbf0-6b2cbf970df6>
+      <mlhim2:pcs-d4fd6e5a-875e-4512-8bdd-492498237341>
+        <mlhim2:pcs-dc439229-024f-4d0c-80fa-96121a94b200>
+            <label>Heart Rate  - Testing Only</label>
+            <vtb>1972-09-16T04:39:04</vtb>
+            <vte>2007-01-02T08:36:33</vte>
+          <normal-status>Normal heart rate</normal-status>
+            <magnitude-status>equal</magnitude-status>
+            <error>0</error>
+            <accuracy>0</accuracy>
+            <dvcount-value>855375</dvcount-value>
+            <dvcount-units>
+<label>beats per minute  - Testing Only</label>
+<dvstring-value>bpm</dvstring-value>
+</dvcount-units>
+        </mlhim2:pcs-dc439229-024f-4d0c-80fa-96121a94b200>
+      </mlhim2:pcs-d4fd6e5a-875e-4512-8bdd-492498237341>
+    </mlhim2:pcs-d14ae90a-23ad-4f54-944c-f68c4b197d6a>
+    <mlhim2:pcs-a3052842-92af-4cff-a21f-afb44cce2cda>
+      <mlhim2:pcs-634143df-bff2-42b5-84d6-a20040fcda22>
+        <label>Connected To  - Testing Only</label>
+        <vtb>1985-01-04T04:45:08</vtb>
+        <vte>2006-09-20T20:48:04</vte>
+        <link>http://www.ccdgen.com</link>
+        <relation>connected to</relation>
+        <relation-uri>Needs a URI</relation-uri>
+      </mlhim2:pcs-634143df-bff2-42b5-84d6-a20040fcda22>
+    </mlhim2:pcs-a3052842-92af-4cff-a21f-afb44cce2cda>
+    <mlhim2:pcs-e9cbb207-9e89-416c-8b71-7cdb859b3097>
+      <mlhim2:pcs-8c917c63-9bfd-4913-96e6-11678968d308>
+        <label>Blood Pressure Device - Testing Use Only</label>
+        <vtb>1974-04-21T06:00:30</vtb>
+        <vte>1984-10-20T12:06:05</vte>
+        <dvstring-value>Mercury sphygmomanometer</dvstring-value>
+        <dvstring-language>en-US</dvstring-language>
+      </mlhim2:pcs-8c917c63-9bfd-4913-96e6-11678968d308>
+    </mlhim2:pcs-e9cbb207-9e89-416c-8b71-7cdb859b3097>
+    <mlhim2:pcs-08e457fa-0c53-4f9f-acaf-539750222df7>
+      <mlhim2:pcs-39705d7f-3077-4ae7-9d33-3f170a809450>
+        <label>Date of most recent contact  - Testing Only</label>
+        <vtb>2011-11-10T21:38:30</vtb>
+        <vte>2014-02-11T12:00:44</vte>
+        <dvtemporal-date>1983-03-07</dvtemporal-date>
+      </mlhim2:pcs-39705d7f-3077-4ae7-9d33-3f170a809450>
+    </mlhim2:pcs-08e457fa-0c53-4f9f-acaf-539750222df7>
+  </mlhim2:pcs-cfa3c6c9-a32b-47f5-89b9-acbd2ae11c90>
+<subject>
+    <label>Subject of the Entry (US)  - Testing Only</label>
+    <party-name>A. Sample Name</party-name>
+<party-details>
+      <label>Address Details (US)  - Testing Only</label>
+      <mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191>
+        <mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026>
+          <label>Additional Address Line(s) (US)  - Testing Only</label>
+          <vtb>2004-05-08T16:20:05</vtb>
+          <vte>2009-02-27T17:01:49</vte>
+          <dvstring-value>DefaultString</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026>
+      </mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191>
+      <mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8>
+        <mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0>
+          <label>City Name (US)  - Testing Only</label>
+          <vtb>1998-10-08T14:49:00</vtb>
+          <vte>2006-12-24T22:37:34</vte>
+          <dvstring-value>DefaultString</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0>
+      </mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8>
+      <mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58>
+        <mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb>
+          <label>State Abbreviation (USPS)  - Testing Only</label>
+          <vtb>2014-03-22T15:07:02</vtb>
+          <vte>2015-01-03T01:57:24</vte>
+          <dvstring-value>MT</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb>
+      </mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58>
+      <mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246>
+        <mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9>
+          <label>Street Number and Name (US)  - Testing Only</label>
+          <vtb>1977-08-19T16:47:44</vtb>
+          <vte>1993-07-19T01:47:34</vte>
+          <dvstring-value>DefaultString</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9>
+      </mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246>
+      <mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4>
+        <mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7>
+          <label>Telephone Number (US)  - Testing Only</label>
+          <vtb>2009-01-14T18:17:18</vtb>
+          <vte>2009-07-04T13:33:10</vte>
+          <dvstring-value>111-111-1111</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7>
+      </mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4>
+      <mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5>
+        <mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053>
+          <label>Zip Code (US)  - Testing Only</label>
+          <vtb>1988-09-03T18:02:12</vtb>
+          <vte>2011-05-29T04:16:34</vte>
+          <dvstring-value>849476330</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053>
+      </mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5>
+</party-details>
+</subject>
+<provider>
+    <label>Entry Provider (US)  - Testing Only</label>
+    <party-name>A. Sample Name</party-name>
+<party-details>
+      <label>Address Details (US)  - Testing Only</label>
+      <mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191>
+        <mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026>
+          <label>Additional Address Line(s) (US)  - Testing Only</label>
+          <vtb>2009-01-13T12:23:45</vtb>
+          <vte>2015-10-28T02:23:43</vte>
+          <dvstring-value>DefaultString</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026>
+      </mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191>
+      <mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8>
+        <mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0>
+          <label>City Name (US)  - Testing Only</label>
+          <vtb>1983-04-07T01:46:23</vtb>
+          <vte>2009-12-23T03:17:59</vte>
+          <dvstring-value>DefaultString</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0>
+      </mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8>
+      <mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58>
+        <mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb>
+          <label>State Abbreviation (USPS)  - Testing Only</label>
+          <vtb>1973-04-22T22:37:40</vtb>
+          <vte>2014-12-31T15:58:08</vte>
+          <dvstring-value>TT</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb>
+      </mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58>
+      <mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246>
+        <mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9>
+          <label>Street Number and Name (US)  - Testing Only</label>
+          <vtb>1996-12-31T17:32:08</vtb>
+          <vte>2008-08-19T16:11:28</vte>
+          <dvstring-value>DefaultString</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9>
+      </mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246>
+      <mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4>
+        <mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7>
+          <label>Telephone Number (US)  - Testing Only</label>
+          <vtb>1973-10-02T11:54:35</vtb>
+          <vte>1990-03-08T07:20:08</vte>
+          <dvstring-value>111-111-1111</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7>
+      </mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4>
+      <mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5>
+        <mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053>
+          <label>Zip Code (US)  - Testing Only</label>
+          <vtb>1998-09-21T00:13:06</vtb>
+          <vte>2005-04-17T23:59:42</vte>
+          <dvstring-value>90725</dvstring-value>
+          <dvstring-language>en-US</dvstring-language>
+        </mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053>
+      </mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5>
+</party-details>
+</provider>
+</mlhim2:pcs-433cbc5a-c6b6-404c-a74d-bfb84483487c>
+</mlhim2:ccd-f7c1b481-593e-4a93-bc51-50da4ff15e86>

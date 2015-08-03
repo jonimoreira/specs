@@ -1,0 +1,608 @@
+{
+  "mlhim2:ccd-72f3fa87-20b4-4bef-9eed-76337d59d738": {
+    "@xmlns:rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "@xmlns:rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "@xmlns:owl": "http://www.w3.org/2002/07/owl#",
+    "@xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+    "@xmlns:mlhim2": "http://www.mlhim.org/ns/mlhim2/",
+    "@xmlns:dc": "http://purl.org/dc/elements/1.1/",
+    "@xmlns:sawsdlrdf": "http://www.w3.org/ns/sawsdl#",
+    "@xmlns:sch": "http://purl.oclc.org/dsdl/schematron",
+    "@xmlns:vc": "http://www.w3.org/2007/XMLSchema-versioning",
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:schemaLocation": "http://www.mlhim.org/ns/mlhim2/ http://www.ccdgen.com/ccdlib/ccd-72f3fa87-20b4-4bef-9eed-76337d59d738.xsd",
+    "mlhim2:pcs-37ce4235-d6bb-4811-a92d-b283bf13b91a": {
+      "label": "CareEntry  - Testing Only",
+      "entry-language": "en-US",
+      "entry-encoding": "utf-8",
+      "current-state": "testing",
+      "mlhim2:pcs-c145fd39-2d43-4f83-a998-a223b67cce1a": {
+        "label": "CareEntry entry-data  - Testing Only",
+        "mlhim2:pcs-d14ae90a-23ad-4f54-944c-f68c4b197d6a": {
+          "label": "Test Sub-Cluster  - Testing Only",
+          "mlhim2:pcs-8aff6c15-f828-4948-9222-195c1b2f0954": {
+            "mlhim2:pcs-c9ffeb03-867f-42ec-8fe4-592bb8f03111": {
+              "label": "Bladder  - Testing Only",
+              "vtb": "1995-04-20T22:41:36",
+              "vte": "2015-03-26T20:29:10",
+              "true-value": "Yes"
+            }
+          },
+          "mlhim2:pcs-697e8df2-7890-4f44-8442-e7f2beab4425": {
+            "mlhim2:pcs-6f6bb8d8-2f5f-4e97-bdd5-ef9a2eb24ba6": {
+              "label": "Fever duration: 3 weeks or less  - Testing Only",
+              "vtb": "2012-07-14T01:44:58",
+              "vte": "2014-05-24T02:47:26",
+              "true-value": "YES"
+            }
+          },
+          "mlhim2:pcs-ab00881d-77f8-4129-bbf0-6b2cbf970df6": {
+            "mlhim2:pcs-422f37ef-3c71-41ea-a0a2-cd145bd25e34": {
+              "label": "Contains  - Testing Only",
+              "vtb": "1993-04-06T20:20:50",
+              "vte": "2012-07-18T16:52:10",
+              "link": "http://www.ccdgen.com",
+              "relation": "contains",
+              "relation-uri": "Needs a URI"
+            }
+          },
+          "mlhim2:pcs-d4fd6e5a-875e-4512-8bdd-492498237341": {
+            "mlhim2:pcs-dc439229-024f-4d0c-80fa-96121a94b200": {
+              "label": "Heart Rate  - Testing Only",
+              "vtb": "1995-02-01T23:26:47",
+              "vte": "2007-07-18T03:21:29",
+              "normal-status": "Normal heart rate",
+              "magnitude-status": "equal",
+              "error": "0",
+              "accuracy": "0",
+              "dvcount-value": "945836",
+              "dvcount-units": {
+                "label": "beats per minute  - Testing Only",
+                "dvstring-value": "bpm"
+              }
+            }
+          }
+        },
+        "mlhim2:pcs-8aff6c15-f828-4948-9222-195c1b2f0954": {
+          "mlhim2:pcs-c9ffeb03-867f-42ec-8fe4-592bb8f03111": {
+            "label": "Bladder  - Testing Only",
+            "vtb": "1976-10-06T21:30:09",
+            "vte": "1980-06-10T14:32:13",
+            "true-value": "Yes"
+          }
+        },
+        "mlhim2:pcs-d97909c4-c7c9-4d47-b8ba-0c5a084bff99": {
+          "mlhim2:pcs-30cba7ce-d56e-491a-ab92-076cfe52e2b0": {
+            "label": "attached to - Testing Only",
+            "vtb": "1992-07-15T06:11:01",
+            "vte": "2000-01-14T04:53:16",
+            "link": "http://www.ccdgen.com",
+            "relation": "http://purl.obolibrary.org/obo/RO_0002371",
+            "relation-uri": "Needs a URI"
+          }
+        },
+        "mlhim2:pcs-e9cbb207-9e89-416c-8b71-7cdb859b3097": {
+          "mlhim2:pcs-8c917c63-9bfd-4913-96e6-11678968d308": {
+            "label": "Blood Pressure Device - Testing Use Only",
+            "vtb": "1998-06-02T02:19:48",
+            "vte": "2002-12-14T06:07:01",
+            "dvstring-value": "Aneroid sphygmomanometer",
+            "dvstring-language": "en-US"
+          }
+        },
+        "mlhim2:pcs-f8b545d8-eb53-4e4c-bab1-f0595f6c9a71": {
+          "mlhim2:pcs-687bb47c-374e-47eb-8cc7-08b963b84d03": {
+            "label": "Proof  - Testing Only",
+            "vtb": "2003-07-12T10:35:59",
+            "vte": "2011-01-15T12:22:50",
+            "size": "64536",
+            "encoding": "utf-8",
+            "dvfile-language": "en-US",
+            "media-type": "text/html",
+            "compression-type": "gz",
+            "hash-result": "dshfsoud6y3rwpef838rhf983trgf9e93w8rytgf",
+            "hash-function": "MD5",
+            "alt-txt": "Fake entry data.",
+            "text-content": "my sample text content"
+          }
+        },
+        "mlhim2:pcs-3bdd7392-a76a-4c1a-83a4-48b3638ba2eb": {
+          "mlhim2:pcs-15d2fcfd-0d8f-430f-98ec-e53f6ec93a41": {
+            "label": "Karnofsky Performance Status Score  - Testing Only",
+            "vtb": "2015-03-20T09:05:48",
+            "vte": "2015-11-07T03:48:41",
+            "normal-status": "Normal, no complaints, no evidence of disease",
+            "ordinal": "10",
+            "symbol": "Moribund, fatal processes progressing rapidly"
+          }
+        },
+        "mlhim2:pcs-243a0558-0406-4663-8a96-321ccb59e24f": {
+          "mlhim2:pcs-d34ecc85-250e-4b06-b328-d91695458756": {
+            "label": "Number of aiquots  - Testing Only",
+            "vtb": "1977-04-16T12:03:00",
+            "vte": "2010-08-04T14:57:54",
+            "magnitude-status": "equal",
+            "error": "0",
+            "accuracy": "0",
+            "dvcount-value": "-106488",
+            "dvcount-units": {
+              "label": "Unit - Example  - Testing Only",
+              "dvstring-value": "10^5{Cells}/kg"
+            }
+          }
+        },
+        "mlhim2:pcs-78f38614-fce7-463c-a332-f4846d00818a": {
+          "mlhim2:pcs-15d8cae0-beb4-4b7a-a7a5-85407960191c": {
+            "label": "Body Temperature -  - Testing Only",
+            "vtb": "1984-07-12T18:30:17",
+            "vte": "1986-10-10T08:05:06",
+            "mlhim2:pcs-ab75485a-685b-45f2-9ae2-e95c68cff1e9": {
+              "label": "Body Temp",
+              "vtb": "1991-06-05T09:35:20",
+              "vte": "1993-03-18T22:49:50",
+              "definition": "Normal Body Temp",
+              "interval": {
+                "label": "Body Temp",
+                "vtb": "1993-03-01T19:45:51",
+                "vte": "1996-06-13T14:07:14",
+                "lower": {
+                  "invl-decimal": "95.0"
+                },
+                "upper": {
+                  "invl-decimal": "100.0"
+                },
+                "lower-included": "true",
+                "upper-included": "true",
+                "lower-bounded": "true",
+                "upper-bounded": "true"
+              },
+              "is-normal": "true"
+            },
+            "magnitude-status": "equal",
+            "error": "0",
+            "accuracy": "0",
+            "dvquantity-value": "111",
+            "dvquantity-units": {
+              "label": "Unit - Example  - Testing Only",
+              "dvstring-value": "g/d"
+            }
+          }
+        },
+        "mlhim2:pcs-90d5df6f-b3ef-4d53-93d2-de4a5afdb18f": {
+          "mlhim2:pcs-b1ddb5ab-cd53-40c4-b32d-1b63324561aa": {
+            "label": "Test Ratio - Testing Only",
+            "vtb": "1995-10-09T15:52:52",
+            "vte": "2002-12-15T08:35:19",
+            "magnitude-status": "equal",
+            "error": "0",
+            "accuracy": "0",
+            "ratio-type": "ratio",
+            "numerator": "-477996.903156519285403192043304443359375",
+            "denominator": "357096.61835563299246132373809814453125",
+            "dvratio-value": "-1.33856463"
+          }
+        },
+        "mlhim2:pcs-5ff9fcfc-6260-426d-b999-86b96a6764c7": {
+          "mlhim2:pcs-eb2135b0-0e27-4419-8de9-c04580ab7ca0": {
+            "label": "Minutes post injection start time  - Testing Only",
+            "vtb": "1996-07-28T20:12:46",
+            "vte": "2009-05-17T18:20:11",
+            "dvtemporal-time": "00:00:00"
+          }
+        }
+      },
+      "subject": {
+        "label": "Subject of the Entry (US)  - Testing Only",
+        "party-name": "A. Sample Name",
+        "party-details": {
+          "label": "Address Details (US)  - Testing Only",
+          "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {
+            "mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026": {
+              "label": "Additional Address Line(s) (US)  - Testing Only",
+              "vtb": "1975-01-28T17:01:01",
+              "vte": "1996-09-09T19:35:43",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {
+            "mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0": {
+              "label": "City Name (US)  - Testing Only",
+              "vtb": "2003-03-30T07:01:45",
+              "vte": "2010-10-31T05:21:43",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {
+            "mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb": {
+              "label": "State Abbreviation (USPS)  - Testing Only",
+              "vtb": "2005-07-03T16:38:23",
+              "vte": "2007-01-28T01:02:10",
+              "dvstring-value": "OK",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {
+            "mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9": {
+              "label": "Street Number and Name (US)  - Testing Only",
+              "vtb": "1985-12-16T16:39:10",
+              "vte": "1998-01-05T15:10:09",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {
+            "mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7": {
+              "label": "Telephone Number (US)  - Testing Only",
+              "vtb": "1985-02-01T14:26:44",
+              "vte": "2008-01-14T08:12:11",
+              "dvstring-value": "111-111-1111",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {
+            "mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053": {
+              "label": "Zip Code (US)  - Testing Only",
+              "vtb": "2006-04-29T03:05:57",
+              "vte": "2014-04-24T04:40:21",
+              "dvstring-value": "26684-0381",
+              "dvstring-language": "en-US"
+            }
+          }
+        }
+      },
+      "provider": {
+        "label": "Entry Provider (US)  - Testing Only",
+        "party-name": "A. Sample Name",
+        "party-details": {
+          "label": "Address Details (US)  - Testing Only",
+          "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {
+            "mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026": {
+              "label": "Additional Address Line(s) (US)  - Testing Only",
+              "vtb": "1979-09-11T06:44:00",
+              "vte": "2013-09-24T15:20:32",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {
+            "mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0": {
+              "label": "City Name (US)  - Testing Only",
+              "vtb": "1993-09-04T19:03:21",
+              "vte": "2010-12-26T21:02:58",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {
+            "mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb": {
+              "label": "State Abbreviation (USPS)  - Testing Only",
+              "vtb": "1978-04-28T11:40:31",
+              "vte": "1996-07-22T23:08:15",
+              "dvstring-value": "AK",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {
+            "mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9": {
+              "label": "Street Number and Name (US)  - Testing Only",
+              "vtb": "1970-02-12T09:21:47",
+              "vte": "1972-12-26T07:01:47",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {
+            "mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7": {
+              "label": "Telephone Number (US)  - Testing Only",
+              "vtb": "2013-12-18T03:18:08",
+              "vte": "2014-04-26T07:36:38",
+              "dvstring-value": "111-111-1111",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {
+            "mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053": {
+              "label": "Zip Code (US)  - Testing Only",
+              "vtb": "1996-02-09T14:34:17",
+              "vte": "2003-03-25T20:50:53",
+              "dvstring-value": "49718",
+              "dvstring-language": "en-US"
+            }
+          }
+        }
+      },
+      "mlhim2:pcs-72c8396a-4a73-4348-a5e7-eaea2fd243db": {
+        "label": "Entry Participation  - Testing Only",
+        "performer": {
+          "label": "Participation Performer  - Testing Only",
+          "party-name": "A. Sample Name",
+          "party-details": {
+            "label": "Address Details (US)  - Testing Only",
+            "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {
+              "mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026": {
+                "label": "Additional Address Line(s) (US)  - Testing Only",
+                "vtb": "1998-09-29T16:42:51",
+                "vte": "2001-07-22T00:32:45",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {
+              "mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0": {
+                "label": "City Name (US)  - Testing Only",
+                "vtb": "1974-08-09T09:07:52",
+                "vte": "1983-12-10T08:42:06",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {
+              "mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb": {
+                "label": "State Abbreviation (USPS)  - Testing Only",
+                "vtb": "1972-04-10T12:36:43",
+                "vte": "1973-01-05T03:55:00",
+                "dvstring-value": "NE",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {
+              "mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9": {
+                "label": "Street Number and Name (US)  - Testing Only",
+                "vtb": "1976-08-04T05:44:18",
+                "vte": "2015-10-21T01:20:59",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {
+              "mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7": {
+                "label": "Telephone Number (US)  - Testing Only",
+                "vtb": "2007-05-31T04:49:19",
+                "vte": "2009-05-17T04:28:32",
+                "dvstring-value": "111-111-1111",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {
+              "mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053": {
+                "label": "Zip Code (US)  - Testing Only",
+                "vtb": "2001-01-26T14:45:58",
+                "vte": "2011-11-15T12:18:41",
+                "dvstring-value": "52917",
+                "dvstring-language": "en-US"
+              }
+            }
+          }
+        },
+        "function": {
+          "label": "Participation Function - Testing Only",
+          "vtb": "1983-05-05T00:06:57",
+          "vte": "1986-12-03T03:55:03",
+          "dvstring-value": "That",
+          "dvstring-language": "en-US"
+        },
+        "mode": {
+          "label": "Participation Mode - Testing Only",
+          "vtb": "1980-01-09T09:53:42",
+          "vte": "2003-02-24T04:29:11",
+          "dvstring-value": "CandlestickMaker",
+          "dvstring-language": "en-US"
+        },
+        "start": "1972-07-11T03:36:03Z",
+        "end": "2007-08-19T12:41:14Z"
+      },
+      "protocol": {
+        "label": "Outros",
+        "vtb": "1986-07-27T19:47:24",
+        "vte": "2010-11-17T10:19:40",
+        "dvstring-value": "DefaultString",
+        "dvstring-language": "pt-BR"
+      },
+      "workflow": {
+        "label": "Workflow ID  - Testing Only",
+        "vtb": "2015-05-25T03:10:45",
+        "vte": "2015-12-24T00:01:53",
+        "link": "http://www.ccdgen.com",
+        "relation": "material information bearer",
+        "relation-uri": "Needs a URI"
+      },
+      "audit": {
+        "label": "Audit Test  - Testing Only",
+        "system-id": {
+          "label": "Outras Neoplasias",
+          "vtb": "1981-12-02T14:26:54",
+          "vte": "2011-09-22T17:13:41",
+          "dvstring-value": "DefaultString",
+          "dvstring-language": "pt-BR"
+        },
+        "system-user": {
+          "label": "Audit Details Provider (US)  - Testing Only",
+          "party-name": "A. Sample Name",
+          "party-details": {
+            "label": "Address Details (US)  - Testing Only",
+            "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {
+              "mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026": {
+                "label": "Additional Address Line(s) (US)  - Testing Only",
+                "vtb": "1983-01-22T20:12:39",
+                "vte": "2004-01-10T03:46:30",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {
+              "mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0": {
+                "label": "City Name (US)  - Testing Only",
+                "vtb": "2009-02-07T02:51:38",
+                "vte": "2010-04-09T12:14:40",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {
+              "mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb": {
+                "label": "State Abbreviation (USPS)  - Testing Only",
+                "vtb": "1976-08-30T20:30:57",
+                "vte": "2002-04-29T01:20:49",
+                "dvstring-value": "TN",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {
+              "mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9": {
+                "label": "Street Number and Name (US)  - Testing Only",
+                "vtb": "1981-12-05T15:52:41",
+                "vte": "1989-11-12T19:42:38",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {
+              "mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7": {
+                "label": "Telephone Number (US)  - Testing Only",
+                "vtb": "2006-04-13T14:41:15",
+                "vte": "2009-09-30T02:40:43",
+                "dvstring-value": "111-111-1111",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {
+              "mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053": {
+                "label": "Zip Code (US)  - Testing Only",
+                "vtb": "2014-10-22T18:06:52",
+                "vte": "2015-01-21T11:46:22",
+                "dvstring-value": "616962157",
+                "dvstring-language": "en-US"
+              }
+            }
+          }
+        },
+        "location": {
+          "label": "Latitude/Longitude Location (WGS84)  - Testing Only",
+          "mlhim2:pcs-494fc0e0-0977-4523-9272-fec73912a4e7": {
+            "mlhim2:pcs-5bc6e2e3-1ed7-4624-b71c-0279dd07b960": {
+              "label": "System Location Latitude  - Testing Only",
+              "vtb": "1999-12-08T14:56:32",
+              "vte": "2008-05-30T16:37:33",
+              "dvstring-value": "90.000",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-680d23bb-eacd-4308-a272-315ccdd68b3f": {
+            "mlhim2:pcs-c4481c64-c28e-40cd-8a39-45b8f0a9b1cd": {
+              "label": "System Location Longitude  - Testing Only",
+              "vtb": "1988-07-28T15:14:47",
+              "vte": "1999-12-31T16:29:46",
+              "dvstring-value": "-35.419",
+              "dvstring-language": "en-US"
+            }
+          }
+        },
+        "timestamp": "2014-05-24T07:19:11Z"
+      },
+      "attestation": {
+        "label": "Attestation  - Testing Only",
+        "view": {
+          "label": "Attestation View  - Testing Only",
+          "vtb": "1999-01-12T23:56:12",
+          "vte": "2008-06-22T20:55:48",
+          "size": "64536",
+          "encoding": "utf-8",
+          "dvfile-language": "en-US",
+          "media-type": "png",
+          "compression-type": "gz",
+          "hash-result": "dshfsoud6y3rwpef838rhf983trgf9e93w8rytgf",
+          "hash-function": "MD5",
+          "alt-txt": "Fake entry data.",
+          "media-content": "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"
+        },
+        "proof": {
+          "label": "Proof  - Testing Only",
+          "vtb": "1992-05-21T19:40:09",
+          "vte": "1993-05-03T08:16:28",
+          "size": "64536",
+          "encoding": "utf-8",
+          "dvfile-language": "en-US",
+          "media-type": "text/html",
+          "compression-type": "gz",
+          "hash-result": "dshfsoud6y3rwpef838rhf983trgf9e93w8rytgf",
+          "hash-function": "MD5",
+          "alt-txt": "Fake entry data.",
+          "text-content": "my sample text content"
+        },
+        "committer": {
+          "label": "Attestation Committer  - Testing Only",
+          "party-name": "A. Sample Name",
+          "party-details": {
+            "label": "Address Details (US)  - Testing Only",
+            "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {
+              "mlhim2:pcs-e30b92ce-2a07-4429-8759-964cb349c026": {
+                "label": "Additional Address Line(s) (US)  - Testing Only",
+                "vtb": "1991-02-20T03:26:46",
+                "vte": "2001-09-05T20:57:12",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {
+              "mlhim2:pcs-2d7a26bc-9ad0-46a1-817c-6005cd335db0": {
+                "label": "City Name (US)  - Testing Only",
+                "vtb": "2010-10-09T03:43:10",
+                "vte": "2012-12-20T01:02:26",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {
+              "mlhim2:pcs-cb869c75-dfbe-46c4-b355-3fe2369a1adb": {
+                "label": "State Abbreviation (USPS)  - Testing Only",
+                "vtb": "2014-11-06T09:33:00",
+                "vte": "2015-03-04T03:52:59",
+                "dvstring-value": "CM",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {
+              "mlhim2:pcs-4616d2bf-9ba2-4293-aed3-ab97eec933f9": {
+                "label": "Street Number and Name (US)  - Testing Only",
+                "vtb": "1982-05-20T11:58:15",
+                "vte": "1983-10-26T04:53:50",
+                "dvstring-value": "DefaultString",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {
+              "mlhim2:pcs-be4fce18-2fab-4716-a956-5fb0d857b0a7": {
+                "label": "Telephone Number (US)  - Testing Only",
+                "vtb": "1977-01-14T20:02:17",
+                "vte": "2008-07-03T01:07:23",
+                "dvstring-value": "111-111-1111",
+                "dvstring-language": "en-US"
+              }
+            },
+            "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {
+              "mlhim2:pcs-9280457b-eff5-491a-9137-f3899c33a053": {
+                "label": "Zip Code (US)  - Testing Only",
+                "vtb": "1992-03-27T15:24:02",
+                "vte": "2010-12-18T15:57:44",
+                "dvstring-value": "84175",
+                "dvstring-language": "en-US"
+              }
+            }
+          }
+        },
+        "committed": "1973-08-22T15:56:45Z",
+        "pending": "true"
+      },
+      "mlhim2:pcs-634143df-bff2-42b5-84d6-a20040fcda22": {
+        "label": "Connected To  - Testing Only",
+        "vtb": "1988-02-02T22:40:08",
+        "vte": "1999-12-30T19:27:17",
+        "link": "http://www.ccdgen.com",
+        "relation": "connected to",
+        "relation-uri": "Needs a URI"
+      }
+    }
+  }
+}
