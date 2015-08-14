@@ -14,4 +14,4 @@ See the open issues at:
 
 Check Open and Closed issues after setting the Milestone filter to 2.5.0
 
-For full documentation see the repository folder for each version You can find the 2.5.0 docs at ReadTheDocs http://mlhim-specifications.readthedocs.org/en/2_5_0/
+For full documentation see the repository folder for each version You can find the 2.5.0 docs at [ReadTheDocs](http://mlhim-specifications.readthedocs.org/en/2_5_0/)
