@@ -232,7 +232,7 @@ DvLinkType
 **Abstract:** False
 
 **Description:** Used to specify a Universal Resource Identifier. 
-Set the pattern facet to accommodate your needs in the PcT.
+Set the pattern facet to accommodate your needs in the PCM.
 The primary use is to provide a mechanism that can be used to link together CCDs. 
 The relation element allows for the use of a descriptive term for the link with an optional URI pointing to the source vocabulary. In most use cases the modeler will define all three of these using the 'fixed' attribute. Other use cases will have the 'relation' and 'relation-uri' elements fixed and the application will provide the 'link'.
 
@@ -300,7 +300,7 @@ Also used for recording any clinical or other datum which is customarily recorde
 * for non-haemolysed blood {neg, trace, moderate}; 
 * for haemolysed blood {neg, trace, small, moderate, large}.
 
-Elements ordinal and symbol MUST have exactly the same number of enumerations in the PcT.
+Elements ordinal and symbol MUST have exactly the same number of enumerations in the PCM.
 
 DvQuantifiedType
 ----------------
@@ -360,7 +360,7 @@ DvTemporalType
 
 **Abstract:** False
 
-**Description:** Type defining the concept of date and time types. Must be constrained in PcTs to be one or more of the below elements.  This gives the modeler the ability to optionally allow full or partial dates at run time.  Setting both maxOccurs and minOccurs to zero causes the element to be prohibited.
+**Description:** Type defining the concept of date and time types. Must be constrained in PCMs to be one or more of the below elements.  This gives the modeler the ability to optionally allow full or partial dates at run time.  Setting both maxOccurs and minOccurs to zero causes the element to be prohibited.
 
 
 DvIntervalType
@@ -798,7 +798,7 @@ Element Groups
 
 IntervalUnits
 -------------
-Used to state that if units are defined on a DvInterval based PcT then the units must have both a name and a URI. 
+Used to state that if units are defined on a DvInterval based PCM then the units must have both a name and a URI. 
 
 
 -----------

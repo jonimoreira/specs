@@ -50,23 +50,23 @@ The MLHIM community considers it a matter of good artifact management practice t
 CCD Versioning
 --------------
 Versioning of CCDs is not supported by these specifications. Though XML Schema 1.1 does have supporting concepts for versioning of schemas, this is not desirable in CCDs. The reasons for this decision focuses primarily around the ability to capture temporal and ontological semantics for data instances and maintain them for all time (future proof data).
-A key feature of MLHIM is the ability to guarantee the semantics for all future time, as intended by the original modeler. We determined that any change in the structure or semantics of a CCD, constitutes a new CCD. Since the complexTypes are re-usable (See the PcT description below), an approach that tools should use is to allow for copying a CCD and assigning a new CCD ID.
+A key feature of MLHIM is the ability to guarantee the semantics for all future time, as intended by the original modeler. We determined that any change in the structure or semantics of a CCD, constitutes a new CCD. Since the complexTypes are re-usable (See the PCM description below), an approach that tools should use is to allow for copying a CCD and assigning a new CCD ID.
 
 When a complexType is changed within this new CCD, all ancestors (enclosing complexTypes) also must be assigned a new name along with its global element name. For example if the enumerations on a DvStringType restriction are changed, the DvStringType, the DvAdapterType, the parent ClusterType and any enclosing ClusterTypes, the EntryType and the CCDType must all get new UUIDs.
 
-Pluggable complexTypes (PcTs)
+Pluggable complexTypes (PCMs)
 -----------------------------
 MLHIM CCDs are made up of XML schema complexTypes composed by restriction of the Reference Model complexTypes. This is the foundation of interoperability.
-What is in the Reference Model is the superset of all CCDs. Pluggable complexTypes (PcTs) are a name we have given to the fact that due to their unique identification the complexTypes can be seen as re-usable components. For example, a domain expert might model a complexType that is a restriction of DvStringType with the enumerations for selecting one of the three measurement systems for temperature; Fahrenheit, Kelvin and Celsius. This PcT as well as many others can be reused in many CCDs without modification.
-For this reason, the semantic links for PcTs are directly expressed in an xs:appinfo section in each PcT. This approach lends itself very well to the creation of RDF triples from this information. For example::
+What is in the Reference Model is the superset of all CCDs. Pluggable complexTypes (PCMs) are a name we have given to the fact that due to their unique identification the complexTypes can be seen as re-usable components. For example, a domain expert might model a complexType that is a restriction of DvStringType with the enumerations for selecting one of the three measurement systems for temperature; Fahrenheit, Kelvin and Celsius. This PCM as well as many others can be reused in many CCDs without modification.
+For this reason, the semantic links for PCMs are directly expressed in an xs:appinfo section in each PCM. This approach lends itself very well to the creation of RDF triples from this information. For example::
 
   <xs:appinfo>
-   <rdf:Description rdf:about='&mlhim2;ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'>
+   <rdf:Description rdf:about='&mlhim2;pcm-3a54417d-d1d6-4294-b868-e7a9ab28f8c4'>
     <rdfs:isDefinedBy rdf:resource='http%3A//purl.obolibrary.org/obo/RO_0002371'/>
    </rdf:Description>
   </xs:appinfo>
 
-In this example the subject is &mlhim2;ct-3a54417d-d1d6-4294-b868-e7a9ab28f8c4 the predicate is rdfs:isDefinedBy and the object is http%3A//purl.obolibrary.org/obo/RO_0002371
+In this example the subject is &mlhim2;pcm-3a54417d-d1d6-4294-b868-e7a9ab28f8c4 the predicate is rdfs:isDefinedBy and the object is http%3A//purl.obolibrary.org/obo/RO_0002371
 
 Every xs:appinfo section must begin with the rdf:Description element and have the rdf:about attribute to define the subject, as the containing complexType. This is then followed by one or more predicate/object components. The predicates can be from any vocabulary/terminology. Just be certain that the namespace prefix is correctly defined in the CCD header. The CCD-Gen defines common namespaces by default but others may be added as needed. Also be certain that any URLs are properly encoded so that they will be valid inside the CCD.
 RDF triples are a cornerstone of the semantic web. For more information see this tutorial. Of particular interest here is the section titled; Introducing RDF/XML. RDF/XML is one of the syntaxes used to describe semantic links and it is what we use in MLHIM. Another popular syntax you may see is called Turtle.

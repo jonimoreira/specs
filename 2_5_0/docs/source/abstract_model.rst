@@ -25,7 +25,7 @@ CoreCM
 ------
 Core Concept Model
 
-A composable model contained in a reference model. A CoreCM represents a specific core type of component that further contains elements with base datatypes and/or other CoreCMs to define its structure. 
+A composable model contained in a reference model. A CoreCM represents a specific core type of component that further contains elements with base datatypes and/or other CoreCMs to define its structure.
 
 ------
 CoreCS
@@ -40,15 +40,15 @@ CCDInstance
 -----------
 Concept Constraint Definition Instance
 
-A set of selected PluggableCMs that are constraints on the RM components (CoreCMs) in order to represent a domain concept. 
-In the implementation language there may be additional syntactic conventions required. 
+A set of selected PluggableCMs that are constraints on the RM components (CoreCMs) in order to represent a domain concept.
+In the implementation language there may be additional syntactic conventions required.
 
 -----------
 PluggableCM
 -----------
 Pluggable Concept Model
 
-The name given to a CoreCM that has been constrained for use in a CCDInstance. Through the constraints, a PluggableCM defines a single concept based on syntactic data constraints as well as specified semantics. It is *pluggable* because it can be reused in multiple CCDInstances. 
+The name given to a CoreCM that has been constrained for use in a CCDInstance. Through the constraints, a PluggableCM defines a single concept based on syntactic data constraints as well as specified semantics. It is *pluggable* because it can be reused in multiple CCDInstances.
 
 -----------
 PluggableCS
@@ -59,7 +59,7 @@ Represents a PluggableCM in instance data. Can be considered as a data container
 ------------
 DataInstance
 ------------
-A set of data items that reports via *isInstanceOf* property that it conforms to a CCDInstance. In this state it has not been tested for validation. 
+A set of data items that reports via *isInstanceOf* property that it conforms to a CCDInstance. In this state it has not been tested for validation.
 
 -----------------
 DataInstanceValid
@@ -82,4 +82,4 @@ A set of data items that **DOES NOT** conform to the CCD Instance it represents 
 ---------
 Exception
 ---------
-Indicates that some data is outside of the parameters defined by the CCD Instance. 
+Indicates that some data is outside of the parameters defined by the CCD Instance.

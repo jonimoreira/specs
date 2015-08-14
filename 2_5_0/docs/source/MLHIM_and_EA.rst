@@ -18,11 +18,11 @@ The MLHIM specifications and reference implementation represent a foundation mod
 
 TOGAF® Common System Architectures
 ----------------------------------
-The MLHIM CCDs are composed of multiple, reusable (pluggable) complexType restrictions of the reference model. These PcTs can be reused in many CCDs and can represent a common group of components. Again from the broader perspective the use of XML Schema 1.1 as an easily transported model is of primary importance as a common architecture.
+The MLHIM CCDs are composed of multiple, reusable (pluggable) complexType restrictions of the reference model. These PCMs can be reused in many CCDs and can represent a common group of components. Again from the broader perspective the use of XML Schema 1.1 as an easily transported model is of primary importance as a common architecture.
 
 TOGAF® Industry Architectures
 ----------------------------------
-CCDs that have broad applicability in healthcare across many types of applications fit into the architecture.These CCDs may be openly licensed and shared globally. One might consider the availability of tools for XML in this category as well as tools that might be used specifically for creating MLHIM knowledge artifacts (PcTs and CCDs).
+CCDs that have broad applicability in healthcare across many types of applications fit into the architecture.These CCDs may be openly licensed and shared globally. One might consider the availability of tools for XML in this category as well as tools that might be used specifically for creating MLHIM knowledge artifacts (PCMs and CCDs).
 
 TOGAF® Organization Specific Architectures
 ------------------------------------------

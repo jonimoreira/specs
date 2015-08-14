@@ -28,7 +28,7 @@ The CCD-Gen creates one sample XML instance along with every CCD. These samples 
 
 JSON Data Instances
 -------------------
-The CCD-Gen executes an XML to JSON conversion to create the example JSON data instance. The namespace entries are treated as data so that they are maintained for conversion back to XML. 
+The CCD-Gen executes an XML to JSON conversion to create the example JSON data instance. The namespace entries are treated as data so that they are maintained for conversion back to XML.
 
 HTML Forms
 ----------
@@ -47,7 +47,7 @@ In conjunction with each CCD, the CCD-Gen creates source code for use with the R
 
 The R code is package complete and compliant for distribution via the The Comprehensive R Archive Network[#f3]_ . You can use R Studio or the R tools for package creation to generate the desired package format, either source or compiled binary for a specific platform (Linux, Mac, Windows, etc.). The code written by the CCD-Gen also contains package documentation (R help files) that can be created using the tools mentioned above.
 
-The R code is created on a PCM level and will return a dataframe from all matching instances of a PCM. For example you may search across a complete repository of XML instances and receive a dataframe containing all occurrences of a specific PCM in a CCD. Users should note however that the generated R code will only return the first instance in a given file.
+The R code is created on a PCM level and will return a dataframe from all matching instances of a PCM. For example you may search across a complete repository of XML instances and receive a dataframe containing all occurrences of a specific PCM in all CCDs. Users should note however that the generated R code will only return the first instance in a given file.
 
 For more practical use, the code modules can be edited and combined into an application specific library and used to build any desired data structure based on the content of your repository. For example you may want to provide an additional loop or apply function to gather cases where multiple instances appear within a given DvAdapter node.
 **Customizing these basic routines allows the analyst to apply any of the thousands of algorithms available as R packages to their MLHIM based data repository.**
