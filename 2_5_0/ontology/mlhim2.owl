@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
-
-
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY mlhim2 "http://www.mlhim.org/ns/mlhim2/" >

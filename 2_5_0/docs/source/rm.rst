@@ -13,7 +13,7 @@ There are several types that are assumed to be supported by the underlying imple
 Non-Ordered Types
 -----------------
 
-boolean 
+boolean
 -------
 Two state only.  Either true or false.
 
@@ -59,12 +59,12 @@ Or it might look like this::
 
 To specify a time zone, you can either enter a dateTime in UTC time by adding a "Z" behind the time - like this::
 
-    <startdate>2002-05-30T09:30:10Z</startdate> 
+    <startdate>2002-05-30T09:30:10Z</startdate>
 
 or you can specify an offset from the UTC time by adding a positive or negative time behind the time - like this::
 
     <startdate>2002-05-30T09:30:10-06:00</startdate> or
-    <startdate>2002-05-30T09:30:10+06:00</startdate> 
+    <startdate>2002-05-30T09:30:10+06:00</startdate>
 
 date
 ----
@@ -78,7 +78,7 @@ The date is specified in the following form "YYYY-MM-DD" where:
 
 An element in an XML Document  might look like this::
 
-    <start>2002-09-24</start> 
+    <start>2002-09-24</start>
 
 time
 ----
@@ -102,7 +102,7 @@ Or it might look like this::
     <start>09:30:10:05</start>
 
 
-*Time Zones* 
+*Time Zones*
 
 To specify a time zone, you can either enter a time in UTC time by adding a "Z" behind the time - like this::
 
@@ -117,7 +117,7 @@ duration
 
 The duration data type is used to specify a time interval.
 The time interval is specified in the following form "PnYnMnDTnHnMnS" where:
-    
+
 * P indicates the period (required)
 * nY indicates the number of years
 * nM indicates the number of months
@@ -184,25 +184,25 @@ The integer data type is used to specify a numeric value without a fractional co
 2.5.0 Reference Model Documentation
 ===================================
 
-The complete documentation in a graphical, clickable format is available on the MLHIM website `Documents page <http://mlhim.org/documents.html>`_.  
+The complete documentation in a graphical, clickable format is available on the MLHIM website `Documents page <http://mlhim.org/documents.html>`_.
 
-An EMF Ecore project is available in the docs folder of the distribution. It can be imported into Eclipse and used as a base for modeling CCDs. However, developers need to be aware that there are slight differences due to the fact that Eclipse XML tools do not support XML Schema 1.1 
+An EMF Ecore project is available in the docs folder of the distribution. It can be imported into Eclipse and used as a base for modeling CCDs. However, developers need to be aware that there are slight differences due to the fact that Eclipse XML tools do not support XML Schema 1.1
 
-Further research is needed to determine if valid CCDs can be produced from Eclipse. 
+Further research is needed to determine if valid CCDs can be produced from Eclipse. Please let us know if you can help with `this issue <https://github.com/mlhim/specs/issues/91>`_.
 
 ---------------
 RM complexTypes
 ---------------
 
-The reference implementation complexType descriptions. 
+The reference implementation complexType descriptions.
 
-Each complexType definition below has a `Schema Docs <http://mlhim.org/rm250_html/>`_. This link goes to a page with detailed documentation on that complexType. 
+Each complexType definition below has a `Details <http://mlhim.org/rm250_html/>`_. This link goes to a page with detailed documentation on that complexType.
 
 
 DvAnyType
 -----------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType>`_
 
 **Derived from:**  n/a
 
@@ -213,33 +213,32 @@ DvAnyType
 DvBooleanType
 --------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvBooleanType.html#DvBooleanType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvBooleanType.html#DvBooleanType>`_
 
 **Derived from:** DvAnyType by extension
 
 **Abstract:** False
 
-**Description:**  Items which represent boolean decisions, such as true/false or yes/no answers. Use for such data, it is important to devise the meanings (usually questions in subjective data) carefully, so that the only allowed results are in fact true or false.  The possible choices for True or False are enumerations in the CCD. The reference model defines 'true' and 'false' in a choice so only one or the other may be present in the instance data.
-Potential Misuse: The DvBooleanType should not be used as a replacement for enumerated types such as male/female, etc. Such values should be modeled as DvStrings with enumerations and may reference a controlled vocabulary. In any case the enumeration often has more than two values. The elements, 'true' and 'false' are contained in an xs:choice and only one or the other is instantiated in the instance data with its value coming from the enumerations defined in a CCD. 
+**Description:**  An enumerated type which represents boolean decisions. Such as true/false or yes/no answers. Useful where it is important to devise the meanings (usually questions in subjective data) carefully, so that the only allowed results are in fact true or false but are presented to the user as a list of options. The possible choices for True or False are enumerations in the CCD. The reference model defines 'true' and 'false' in a choice so only one or the other may be present in the instance data. The DvBooleanType should not be used as a replacement for enumerated choice types such as male/female, etc. Such values should be modeled as DvStrings with enumerations and may reference a controlled vocabulary. In any case the enumeration often has more than two values. The elements, 'true' and 'false' are contained in an xs:choice and only one or the other is instantiated in the instance data with its value coming from the enumerations defined in a CCD.
 
 DvLinkType
 ----------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvLinkType.html#DvLinkType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvLinkType.html#DvLinkType>`_
 
 **Derived from:** DvAnyType by extension
 
 **Abstract:** False
 
-**Description:** Used to specify a Universal Resource Identifier. 
+**Description:** Used to specify a Universal Resource Identifier.
 Set the pattern facet to accommodate your needs in the PCM.
-The primary use is to provide a mechanism that can be used to link together CCDs. 
+The primary use is to provide a mechanism that can be used to link together CCDs.
 The relation element allows for the use of a descriptive term for the link with an optional URI pointing to the source vocabulary. In most use cases the modeler will define all three of these using the 'fixed' attribute. Other use cases will have the 'relation' and 'relation-uri' elements fixed and the application will provide the 'link'.
 
 DvStringType
 ------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvStringType.html#DvStringType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvStringType.html#DvStringType>`_
 
 **Derived from:** DvAnyType by extension
 
@@ -251,20 +250,22 @@ and tab characters. The use cases are for any free form text entry or for any en
 DvFileType
 ----------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvFileType.html#DvFileType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvFileType.html#DvFileType>`_
 
 **Derived from:** DvAnyType by extension
 
 **Abstract:** False
 
-**Description:** A type to use for encapsulated content (aka. files) for image, audio and other media types with a defined MIME type. This type provides a choice of embedding the content into the data or using a URL to point to the content. 
+**Description:** A type to use for encapsulated content (aka. files) for image, audio and other media types with a defined MIME type. This type provides a choice of embedding the content into the data or using a URL to point to the content.
+
+*New in 2.5.0*
 
 DvEncapsulated and its children were consolidated into this one concept and implemented as one complexType to represent any type file based artifact.
 
 DvOrderedType
 -------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvOrderedType.html#DvOrderedType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvOrderedType.html#DvOrderedType>`_
 
 **Derived from:** DvAnyType by extension
 
@@ -275,7 +276,7 @@ DvOrderedType
 DvOrdinalType
 -------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvOrdinalType.html#DvOrdinalType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvOrdinalType.html#DvOrdinalType>`_
 
 **Derived from:** DvOrderedType by extension
 
@@ -284,20 +285,20 @@ DvOrdinalType
 **Description:**  Models rankings and scores, e.g. pain, Apgar values, etc, where there is;
 
 * implied ordering,
-* no implication that the distance between each value is constant, and 
-* the total number of values is finite. 
+* no implication that the distance between each value is constant, and
+* the total number of values is finite.
 
-Note that although the term ‘ordinal’ in mathematics means natural numbers only, here any decimal is allowed, since negative and zero values are often used by medical and other professionals for values around a neutral point. Also, decimal values are sometimes used such as 0.5 or .25 
+Note that although the term ‘ordinal’ in mathematics means natural numbers only, here any decimal is allowed, since negative and zero values are often used by medical and other professionals for values around a neutral point. Also, decimal values are sometimes used such as 0.5 or .25
 
 Examples of sets of ordinal values;
 
 * -3, -2, -1, 0, 1, 2, 3 -- reflex response values
-* 0, 1, 2 -- Apgar values 
+* 0, 1, 2 -- Apgar values
 
 Also used for recording any clinical or other datum which is customarily recorded using symbolic values. Examples;
 
-* the results on a urinalysis strip, e.g. {neg, trace, +, ++, +++} are used for leukocytes, protein, nitrites etc; 
-* for non-haemolysed blood {neg, trace, moderate}; 
+* the results on a urinalysis strip, e.g. {neg, trace, +, ++, +++} are used for leukocytes, protein, nitrites etc;
+* for non-haemolysed blood {neg, trace, moderate};
 * for haemolysed blood {neg, trace, small, moderate, large}.
 
 Elements ordinal and symbol MUST have exactly the same number of enumerations in the PCM.
@@ -305,7 +306,7 @@ Elements ordinal and symbol MUST have exactly the same number of enumerations in
 DvQuantifiedType
 ----------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantifiedType.html#DvQuantifiedType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantifiedType.html#DvQuantifiedType>`_
 
 **Derived from:** DvOrderedType by extension
 
@@ -316,7 +317,7 @@ DvQuantifiedType
 DvCountType
 -----------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvCountType.html#DvCountType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvCountType.html#DvCountType>`_
 
 **Derived from:** DvQuantifiedType by extension
 
@@ -330,7 +331,7 @@ The *thing(s)* being counted must be represented in the units element.
 DvQuantityType
 --------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantityType.html#DvQuantityType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvQuantityType.html#DvQuantityType>`_
 
 **Derived from:** DvQuantifiedType by extension
 
@@ -342,19 +343,19 @@ DvQuantityType
 DvRatioType
 -----------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvRatioType.html#DvRatioType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvRatioType.html#DvRatioType>`_
 
 **Derived from:** DvQuantifiedType by extension
 
 **Abstract:** False
 
-**Description:** Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. Should not be used to represent things like blood pressure which are often written using a forward slash ('/') character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) “20/20” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations. 
+**Description:** Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. Should not be used to represent things like blood pressure which are often written using a forward slash ('/') character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) “20/20” in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations.
 
 
 DvTemporalType
 --------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvTemporalType.html#DvTemporalType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvTemporalType.html#DvTemporalType>`_
 
 **Derived from:** DvOrderedType by extension
 
@@ -366,36 +367,36 @@ DvTemporalType
 DvIntervalType
 --------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvIntervalType.html#DvIntervalType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvIntervalType.html#DvIntervalType>`_
 
 **Derived from:** DvAnyType by extension
 
 **Abstract:** False
 
-**Description:** Generic type defining an interval (i.e. range) of a comparable type. An interval is a contiguous subrange of a comparable base type. Used to define intervals of dates, times, quantities, etc. Whose datatypes are the same and are ordered. In MLHIM, they are primarily used in defining reference ranges.  
+**Description:** Generic type defining an interval (i.e. range) of a comparable type. An interval is a contiguous subrange of a comparable base type. Used to define intervals of dates, times, quantities, etc. Whose datatypes are the same and are ordered. In MLHIM, they are primarily used in defining reference ranges.
 
 
 InvlType
 --------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_InvlType.html#InvlType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_InvlType.html#InvlType>`_
 
-**Derived from:** n/a 
+**Derived from:** n/a
 
 **Abstract:** False
 
-**Description:** In the CCD, the modeler creates two restrictions on this complexType. 
-One for the 'lower' value and one for the 'upper' value. 
-Both restrictions will have the same element choice and the value is 'fixed' on each representing the lower and upper value range boundary. The value may be set to NULL (unbounded) by using the xsi:nil='true' attribute. The maxOccurs and minOccurs attributes must be set to 1, in the CCD. 
+**Description:** In the CCD, the modeler creates two restrictions on this complexType.
+One for the 'lower' value and one for the 'upper' value.
+Both restrictions will have the same element choice and the value is 'fixed' on each representing the lower and upper value range boundary. The value may be set to NULL (unbounded) by using the xsi:nil='true' attribute. The maxOccurs and minOccurs attributes must be set to 1, in the CCD.
 
-For more information on using this approach `see these tips <http://www.ibm.com/developerworks/webservices/library/ws-tip-null/index.html>`_ 
+For more information on using this approach `see these tips <http://www.ibm.com/developerworks/webservices/library/ws-tip-null/index.html>`_
 
 InvlUnits
 ---------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_InvlUnits.html#InvlUnits>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_InvlUnits.html#InvlUnits>`_
 
-**Derived from:** n/a 
+**Derived from:** n/a
 
 **Abstract:** False
 
@@ -405,20 +406,20 @@ The derived complexType in the CCD has these values fixed by the modeler.
 ReferenceRangeType
 ------------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ReferenceRangeType.html#ReferenceRangeType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ReferenceRangeType.html#ReferenceRangeType>`_
 
 **Derived from:** DvAnyType by extension
 
 **Abstract:** False
 
 **Description:** Defines a named range to be associated with any ORDERED datum. Each such
-range is sensitive to the context, e.g. sex, age, location, and any other factor which affects ranges. May be used to represent high, low, normal, therapeutic, dangerous, critical, etc. ranges that are constrained by an interval. 
+range is sensitive to the context, e.g. sex, age, location, and any other factor which affects ranges. May be used to represent high, low, normal, therapeutic, dangerous, critical, etc. ranges that are constrained by an interval.
 
 
 AuditType
 ---------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AuditType.html#AuditType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AuditType.html#AuditType>`_
 
 **Derived from:** n/a
 
@@ -429,7 +430,7 @@ AuditType
 PartyType
 ---------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_PartyType.html#PartyType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_PartyType.html#PartyType>`_
 
 **Derived from:** n/a
 
@@ -440,7 +441,7 @@ PartyType
 AttestationType
 ---------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AttestationType.html#AttestationType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AttestationType.html#AttestationType>`_
 
 **Derived from:** n/a
 
@@ -451,7 +452,7 @@ AttestationType
 ParticipationType
 -----------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ParticipationType.html#ParticipationType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ParticipationType.html#ParticipationType>`_
 
 **Derived from:** n/a
 
@@ -462,21 +463,21 @@ ParticipationType
 ExceptionalValueType
 --------------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ExceptionalValueType.html#ExceptionalValueType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ExceptionalValueType.html#ExceptionalValueType>`_
 
 **Derived from:** n/a
 
 **Abstract:** True
 
-**Description:** Subtypes are used to indicate why a value is missing (Null) or is outside a measurable range. The element ev-name is fixed in restricted types to a descriptive string. The subtypes defined in the reference model are considered sufficiently generic to be useful in many instances. 
+**Description:** Subtypes are used to indicate why a value is missing (Null) or is outside a measurable range. The element ev-name is fixed in restricted types to a descriptive string. The subtypes defined in the reference model are considered sufficiently generic to be useful in many instances.
 
-CCDs may contain additional ExceptionalValueType restrictions to allow for domain related reasons for errant or missing data. 
+CCDs may contain additional ExceptionalValueType restrictions to allow for domain related reasons for errant or missing data.
 
 
 NIType
 ------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NIType.html#NIType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NIType.html#NIType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -487,20 +488,20 @@ NIType
 MSKType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_MSKType.html#MSKType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_MSKType.html#MSKType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
 **Abstract:** False
 
-**Description:**  Masked: There is information on this item available but it has not been provided by the sender due to security, privacy or other reasons. There may be an alternate mechanism for gaining access to this information. 
+**Description:**  Masked: There is information on this item available but it has not been provided by the sender due to security, privacy or other reasons. There may be an alternate mechanism for gaining access to this information.
 .. Warning:
 Using this exceptional value does provide information that may be a breach of confidentiality, even though no detail data is provided. Its primary purpose is for those circumstances where it is necessary to inform the receiver that the information does exist without providing any detail.
 
 INVType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_INVType.html#INVType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_INVType.html#INVType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -511,7 +512,7 @@ INVType
 DERType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DERType.html#DERType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DERType.html#DERType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -522,7 +523,7 @@ DERType
 UNCType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_UNCType.html#UNCType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_UNCType.html#UNCType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -533,7 +534,7 @@ UNCType
 OTHType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_OTHType.html#OTHType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_OTHType.html#OTHType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -545,7 +546,7 @@ OTHType
 NINFType
 --------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NINFType.html#NINFType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NINFType.html#NINFType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -557,7 +558,7 @@ NINFType
 PINFType
 --------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_PINFType.html#PINFType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_PINFType.html#PINFType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -568,7 +569,7 @@ PINFType
 UNKType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_UNKType.html#UNKType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_UNKType.html#UNKType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -579,7 +580,7 @@ UNKType
 ASKRType
 --------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ASKRType.html#ASKRType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ASKRType.html#ASKRType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -590,7 +591,7 @@ ASKRType
 NASKType
 --------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NASKType.html#NASKType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NASKType.html#NASKType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -602,7 +603,7 @@ NASKType
 QSType
 ------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_QSType.html#QSType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_QSType.html#QSType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -613,7 +614,7 @@ QSType
 TRCType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_TRCType.html#TRCType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_TRCType.html#TRCType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -624,7 +625,7 @@ TRCType
 ASKUType
 --------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ASKUType.html#ASKUType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ASKUType.html#ASKUType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -636,7 +637,7 @@ ASKUType
 NAVType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NAVType.html#NAVType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NAVType.html#NAVType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -647,7 +648,7 @@ NAVType
 NAType
 ------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NAType.html#NAType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_NAType.html#NAType>`_
 
 **Derived from:** ExceptionalValueType by restriction
 
@@ -658,9 +659,9 @@ NAType
 ItemType
 --------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ItemType.html#ItemType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_ItemType.html#ItemType>`_
 
-**Derived from:** n/a 
+**Derived from:** n/a
 
 **Abstract:** True
 
@@ -669,30 +670,30 @@ ItemType
 ClusterType
 -----------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType>`_
 
 **Derived from:** ItemType by extension
 
 **Abstract:** False
 
-**Description:**  The grouping variant of Item, which may contain further instances of Item, 
+**Description:**  The grouping variant of Item, which may contain further instances of Item,
 in an ordered list. This can serve as the root component for arbitrarily complex structures.
 
 DvAdapterType
 -------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAdapterType.html#DvAdapterType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAdapterType.html#DvAdapterType>`_
 
 **Derived from:** ItemType by extension
 
 **Abstract:** False
 
-**Description:**  The leaf variant of Item, to which any *DvAnyType* subtype instance is attached for use in a Cluster. 
+**Description:**  The leaf variant of Item, to which any *DvAnyType* subtype instance is attached for use in a Cluster.
 
 EntryType
 ---------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_EntryType.html#EntryType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_EntryType.html#EntryType>`_
 
 **Derived from:** n/a
 
@@ -703,7 +704,7 @@ EntryType
 CareEntryType
 -------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CareEntryType.html#CareEntryType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CareEntryType.html#CareEntryType>`_
 
 **Derived from:** EntryType by extension
 
@@ -714,7 +715,7 @@ CareEntryType
 AdminEntryType
 --------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AdminEntryType.html#AdminEntryType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_AdminEntryType.html#AdminEntryType>`_
 
 **Derived from:** EntryType by extension
 
@@ -725,7 +726,7 @@ AdminEntryType
 DemographicEntryType
 --------------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DemographicEntryType.html#DemographicEntryType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DemographicEntryType.html#DemographicEntryType>`_
 
 **Derived from:** EntryType by extension
 
@@ -736,7 +737,7 @@ DemographicEntryType
 CCDType
 -------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CCDType.html#CCDType>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_CCDType.html#CCDType>`_
 
 **Derived from:** n/a
 
@@ -748,30 +749,30 @@ CCDType
 RM simpleTypes
 ---------------
 
-The reference implementation simpleType descriptions. 
-These types do not have global element definitions. They are used to define other element types within the RM and are used as restrictions on a CCD.  
+The reference implementation simpleType descriptions.
+These types do not have global element definitions. They are used to define other element types within the RM and are used as restrictions on a CCD.
 
 MagnitudeStatus
 ---------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Simple_Type_mlhim2_MagnitudeStatus.html#MagnitudeStatus>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Simple_Type_mlhim2_MagnitudeStatus.html#MagnitudeStatus>`_
 
 **Derived from:** xs:string
 
 **Abstract:** False
 
 **Description:** Optional status of magnitude with values::
-        
+
         equal : magnitude is a point value
-        
+
         less_than : value is less than the magnitude
-        
+
         greater_than : value is greater than the magnitude
-        
+
         less_than_or_equal : value is less_than_or_equal to the magnitude
-        
+
         greater_than_or_equal : value is greater_than_or_equal to the magnitude
-        
+
         approximate : value is the approximately the magnitude
 
 These enumerations are used in they DvQuantifiedType subtypes.
@@ -779,17 +780,17 @@ These enumerations are used in they DvQuantifiedType subtypes.
 TypeOfRatio
 -----------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Simple_Type_mlhim2_TypeOfRatio.html#TypeOfRatio>`_
+`Details <http://mlhim.org/rm250_html/mlhim250_xsd_Simple_Type_mlhim2_TypeOfRatio.html#TypeOfRatio>`_
 
 **Derived from:** xs:string
 
 **Abstract:** False
 
-**Description:** Indicates semantic type of ratio. 
-        
-* ratio = a relationship between two numbers. 
+**Description:** Indicates semantic type of ratio.
+
+* ratio = a relationship between two numbers.
 * proportion = a relationship between two numbers where there is a bi-univocal relationship between the numerator and the denominator (the numerator is contained in the denominator)
-* rate = a relationship between two numbers where there is not a bi-univocal relationship between the numerator and the denominator (the numerator is not contained in the denominator) 
+* rate = a relationship between two numbers where there is not a bi-univocal relationship between the numerator and the denominator (the numerator is not contained in the denominator)
 
 
 --------------
@@ -798,14 +799,11 @@ Element Groups
 
 IntervalUnits
 -------------
-Used to state that if units are defined on a DvInterval based PCM then the units must have both a name and a URI. 
+Used to state that if units are defined on a DvInterval based PCM then the units must have both a name and a URI.
 
 
------------
-Example CCD 
------------
+------------
+Example CCDs
+------------
 
-`Schema Docs <http://mlhim.org/rm250_html/mlhim250_xsd_Complex_Type_mlhim2_DvAnyType.html#DvAnyType>`_
-
-Please check the website documents section as well as the CCD Library on the CCD-Gen.
-The CCD-Gen requires free registration in order to view the CCD Library. 
+Please check the `MLHIM website documents <http://mlhim.org/documents.html>`_ section as well as the `CCD Library <http://www.ccdgen.com/ccdlib/>`_ on the CCD-Gen.
