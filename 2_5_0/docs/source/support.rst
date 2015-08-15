@@ -1,7 +1,7 @@
 ====================================
 Support, Publications & Social Media
 ====================================
-Publications, tutorials and presentations by the developers of MLHIM and other interested parties that relate to MLHIM. 
+Publications, tutorials and presentations by the developers of MLHIM and other interested parties that relate to MLHIM.
 
 
 Peer Reviewed
@@ -34,4 +34,4 @@ Please report all issues `here <https://github.com/mlhim/specs/issues>`_.
 
 FaceBook
 --------
-Just announcements and a few questions answered on our `FB page <https://www.facebook.com/mlhim2>`_. 
+Just announcements and a few questions answered on our `FB page <https://www.facebook.com/mlhim2>`_.

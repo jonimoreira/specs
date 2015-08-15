@@ -24,4 +24,3 @@ The point that must be re-iterated here are:
  * the PCMs (complexTypes) are named in accordance witht he specifications using a Type4 UUID and preceeded with the string 'pcm-'.
 
  The CCD-Gen maintained by the MLHIM team does have its own governance policies.
- 

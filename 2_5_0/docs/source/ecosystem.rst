@@ -36,7 +36,7 @@ In MLHIM, the bottom-up approach makes room for dozens, hundreds or even thousan
 
 CCDs are assembled out of pluggable concept models (PCMs) so that modelers can use granular definitions to create any size application model or models, as needed. Modelers and developers can create systems that allow users to choose between a selection of CCDs to include at specific points, at run-time. Reuse of existing PCMs in multiple CCDs and reusing CCDs across multiple applications makes data sharing and analysis easier. However, given that the semantics are in the CCD, data consumers can decide if the data fits their needs or how to include certain components (PCM based data) from multiple CCDs.
 
-Over time, **the cream will rise to the top** and the most useful CCDs will be used most often. 
+Over time, **the cream will rise to the top** and the most useful CCDs will be used most often.
 
 With MLHIM CCDs you can deliver your data with complete syntactic interoperability and as much semantic interoperability and information exchange as the modeler chose to include in the CCD.
 The governance of CCDs is left to the modeler and/or publishing organization.
@@ -211,34 +211,6 @@ Two of the MLHIM projects on GitHub demonstrate combining the model semantics wi
 For deeper details on using MLHIM in various scenarios you should refer to the `GitHub repository <https://github.com/mlhim>`_ specifically `this project <https://github.com/mlhim/MLHIM_semantics_extractor>`_ as well as the `MXIC demo <https://github.com/mlhim/mxic>`_ and the `MAPLE demo <https://github.com/mlhim/MAPLE>`_ These all use older versions of MLHIM but the concepts are the same for any 2.x version.
 
 Two projects that may be of particular interest is `adding semantics to FHIR models <https://github.com/mlhim/ichi2015_fhir_semantics>`_ and `adding semantics to HL7v2 messages <https://github.com/mlhim/hl7v2_semantics>`_
-
-----------
-Ontologies
-----------
-The operational ontologies are a key part of the semantic interoperability schema of MLHIM.
-They link the MLHIM structured (XML) data to Semantic Web / Linked Data tools.
-
-The mlhim2.owl file contains a core ontology used to build a basis for metadata and other classes and properties not found in existing ontologies and tools.
-
-This core ontology is imported into each reference model ontology.  The reference model ontologies are built using information from the xs:appinfo elements in the reference model schema.
-
-CCD ontologies are built from the xs:appinfo element information in the same way as the RM.
-
-Building Ontologies
--------------------
-
-The tool, Python MLHIM Ontology Extractor (pyMOE.py) can be found in the *utils* folder that extracts this information and builds the ontology.  The ontology file carries the same name as the schema, just with the extension replaced with '.owl'. It is located in the same folder along with schema (RM or CCD).
-
-Viewing Ontologies
-------------------
-
-If you want a quick visualization of the ontologies you can use the `WebVOWL <http://vowl.visualdataweb.org/webvowl/index.html>`_ online tool to visualize the `core ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/mlhim2.owl>`_ and the `MLHIM 2.5.0 ontology <http://vowl.visualdataweb.org/webvowl/index.html#iri=https://raw.githubusercontent.com/mlhim/mlhim.github.io/master/ns/mlhim2/mlhim250.owl>`_ .
-
-**Development Notes:**
-
-This 2.5.0 development version still has a few quirks in the way the ontology components are defined. Once these are worked out, a document describing the mapping process will also be part of this documentation.
-
-This approach has been shown to be much more reliable than building an ontology in a separate file. Plus, it makes automated processing quite easy via tools like the CCD-Gen.
 
 
 

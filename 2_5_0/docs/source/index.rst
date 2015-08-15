@@ -12,7 +12,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 3
-   
+
    front
    governance
    executive_summary
@@ -20,7 +20,7 @@ Contents:
    abstract_model
    modeling_concepts
    rm
-   ontology
+   linked_data
    MLHIM_and_EA
    ecosystem
    data_analysis
@@ -35,4 +35,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
