@@ -1,0 +1,15 @@
+Package: ccdDemographicEntryCCDd2986d6e341d
+Type: Package
+Title: ccdDemographicEntryCCDd2986d6e341d
+Version: 1.0
+Date: 2015-08-15
+Author: Timothy W. Cook <tim@mlhim.org>
+Maintainer: Timothy W. Cook <tim@mlhim.org>
+Description: Creates a data frame from instances of the MLHIM CCD for:
+  DemographicEntry CCD
+  The CCD ID is: ccd-3107dabc-f5d4-4e2a-98f8-d2986d6e341d
+  Testing CCD-Gen Implementation of the MLHIM RM functionality.
+License: Apache License 2.0
+Depends: 
+  mlhim250rm (>= 1.0.0),
+  data.table
