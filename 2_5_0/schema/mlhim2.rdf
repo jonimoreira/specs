@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://www.mlhim.org/ns/mlhim2/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <rdf:Description rdf:about="DataInstanceValid">
+    <description xml:lang="en-us"> A set of data items that conforms to a CCD Instance to represent
+      an instance of that concept **AND** the data values are valid according to the CCD Instance
+      constraints. </description>
+    <rdfs:subClassOf rdf:resource="DataInstance"/>
+    <rdfs:label xml:lang="en-us">Valid Data Instance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gMonth">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="isCoreSymbolOf">
+    <rdfs:domain rdf:resource="CoreCS"/>
+    <rdfs:label xml:lang="en-us">Is Core Symbol Of</rdfs:label>
+    <description xml:lang="en-us"> Relates a Core Symbol to a Core Model </description>
+    <rdfs:range rdf:resource="CoreCM"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="Symbol">
+    <description xml:lang="en-us"> Used to delineate or markup instance data. In practice, it is
+      usually a variable name or XML element name. </description>
+    <rdfs:label xml:lang="en-us">Symbol</rdfs:label>
+    <rdfs:subClassOf rdf:resource="MLHIM2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="PluggableCM">
+    <rdfs:label xml:lang="en-us">Pluggable Concept Model</rdfs:label>
+    <description xml:lang="en-us"> The name given to a CoreCM that has been constrained for use in a
+      CCD Instance. Through the constraints, a PluggableCM defines a single domain concept based on
+      syntactic data constraints as well as specified semantics. It is *pluggable* because it can be
+      reused in multiple CCD Instances. </description>
+    <rdfs:subClassOf rdf:resource="ConceptModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="DataPoint">
+    <rdfs:subClassOf rdf:resource="Symbol"/>
+    <rdfs:label xml:lang="en-us">Data Point</rdfs:label>
+    <description xml:lang="en-us"> Represents a complete path in instance data defined by a
+      Pluggable Concept Model. Beginning from the left at the data node and ending at the
+      CCDInstance with the 'ccd-{UUID}' on the right. This does not include file, graph, server,
+      etc. names. </description>
+  </rdf:Description>
+  <rdf:Description rdf:about="isPluggableSymbolOf">
+    <description xml:lang="en-us"> Relates a Pluggable Symbol to a Pluggable Model </description>
+    <rdfs:label xml:lang="en-us">Is Pluggable Symbol Of</rdfs:label>
+    <rdfs:range rdf:resource="PluggableCM"/>
+    <rdfs:domain rdf:resource="PluggableCS"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="Exception">
+    <rdfs:subClassOf rdf:resource="CoreCM"/>
+    <rdfs:label xml:lang="en-us">Exception</rdfs:label>
+    <description xml:lang="en-us"> Indicates that some data is outside of the parameters defined by
+      the CCD Instance. </description>
+  </rdf:Description>
+  <rdf:Description rdf:about="description">
+    <rdfs:comment>A plaintext description of this MLHIM 2 component.</rdfs:comment>
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="CoreCM">
+    <rdfs:label xml:lang="en-us">Core Concept Model</rdfs:label>
+    <description xml:lang="en-us"> A composable model contained in a reference model. A CoreCM
+      represents a specific core type of component that further contains elements with base
+      datatypes and/or other CoreCMs to define its structure. </description>
+    <rdfs:subClassOf rdf:resource="ConceptModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="CoreCS">
+    <rdfs:label xml:lang="en-us">Core Concept Symbol</rdfs:label>
+    <rdfs:subClassOf rdf:resource="Symbol"/>
+    <description xml:lang="en-us"> A CoreCS represents a CoreCM in instance data. In practice, it is
+      usually substituted for by a PluggableCS. </description>
+  </rdf:Description>
+  <rdf:Description rdf:about="isSymbolIn">
+    <rdfs:label xml:lang="en-us">Is Symbol In</rdfs:label>
+    <rdfs:domain rdf:resource="Symbol"/>
+    <description xml:lang="en-us"> The internal definitions of Models have Symbols used to provide
+      structure in instance data. This property states that this is a symbol that is local to the
+      concept model. </description>
+    <rdfs:range rdf:resource="ConceptModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="ConceptModel">
+    <rdfs:label xml:lang="en-us">Concept Model</rdfs:label>
+    <rdfs:subClassOf rdf:resource="MLHIM2"/>
+    <description xml:lang="en-us"> A model of an abstract concept. </description>
+  </rdf:Description>
+  <rdf:Description rdf:about="schemaLocation">
+    <rdfs:comment>A resolvable URI for the RM/CCD schema.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="PluggableCS">
+    <rdfs:label xml:lang="en-us">Pluggable Concept Symbol</rdfs:label>
+    <description xml:lang="en-us"> Represents a PluggableCM in instance data. Can be considered a
+      data container for the components of a PluggableCM. </description>
+    <rdfs:subClassOf rdf:resource="Symbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="DataInstance">
+    <rdfs:label xml:lang="en-us">Data Instance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="MLHIM2"/>
+    <description xml:lang="en-us"> A set of data items (e.g. a document) that conforms restrictions
+      described in a CCD Instance. It has not been tested for validation. </description>
+  </rdf:Description>
+  <rdf:Description rdf:about="DataInstanceInvalid">
+    <description xml:lang="en-us"> A set of data items that conforms to a CCD Instance to represent
+      an instance of that concept **AND** the data values are **NOT** valid according to the CCD
+      Instance constraints. An InvalidDataInstance must contain one or more children of an
+      Exception. </description>
+    <rdfs:label xml:lang="en-us">Invalid Data Instance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="DataInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="DataInstanceError">
+    <description xml:lang="en-us"> A set of data items that **DOES NOT** conform to the CCD Instance
+      it represents **OR** it contains invalid data and does not contain one or more children of an
+      Exception. </description>
+    <rdfs:subClassOf rdf:resource="DataInstance"/>
+    <rdfs:label xml:lang="en-us">Erroneous Data Instance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="source">
+    <rdfs:comment>The described resource may be derived from the related resource in whole or in
+      part. Recommended best practice is to identify the related resource by means of a string
+      conforming to a formal identification system. CCDs are typically modeled from formal documents
+      or well defined 'forms'. If available a URI for this source is preferred. Otherwise a document
+      identifier should be used.</rdfs:comment>
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="isCoreModelIn">
+    <rdfs:domain rdf:resource="CoreCM"/>
+    <rdfs:range rdf:resource="RM"/>
+    <description xml:lang="en-us"> Relates a Core Model to a Reference Model </description>
+    <rdfs:label xml:lang="en-us">Is Core Model In</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="isPluggableModelIn">
+    <rdfs:range rdf:resource="CCDInstance"/>
+    <description xml:lang="en-us"> Relates a Pluggable Model to a CCDInstance. </description>
+    <rdfs:domain rdf:resource="PluggableCM"/>
+    <rdfs:label xml:lang="en-us">Is Pluggable Model In</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="subject">
+    <rdfs:comment>The subject will be represented using keywords, key phrases, or classification
+      codes. Recommended best practice is to use a controlled vocabulary. The primary source for CCD
+      keywords should be MeSH terms. http://www.ncbi.nlm.nih.gov/mesh Each subject entry must
+      contain only one keyword/phrase. There is no limit on how many may be used but there must be
+      at least one.</rdfs:comment>
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="identifier">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+    <rdfs:comment>The four characters 'ccd-' followed by the Type 4 UUID for this CCD. Example:
+      ccd-246bf9e8-fda3-4508-8423-4e5387a5e377</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="language">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+    <rdfs:comment>The [RFC4646] http://www.ietf.org/rfc/rfc4646.txt language code for the target
+      language for this CCD. The metadata text and other descriptive text should be in this
+      language. However, this does not preclude includsion of PCMs with different language
+      tags.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="RM">
+    <description xml:lang="en-us"> A set of components (CoreCMs) to provide structural integrity for
+      a domain concept. Some CoreCMs are mandatory in CCDs and some are optional. Optionality is
+      defined in each RM implementation. </description>
+    <rdfs:label xml:lang="en-us">Reference Model</rdfs:label>
+    <rdfs:subClassOf rdf:resource="MLHIM2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="rights">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+    <rdfs:comment>Typically, rights information includes a statement about various property rights
+      associated with the resource, including intellectual property rights. Examples are well
+      defined license statements such as the Creative Commons licenses such as; CC-BY
+      http://creativecommons.org/licenses/by/3.0/</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="MLHIM2">
+    <rdfs:label xml:lang="en-us">MLHIM 2.x</rdfs:label>
+    <description xml:lang="en-us"> The top level class of MLHIM 2. MLHIM 1.x was never successfully
+      modeled in OWL and MLHIM 3 will likely be a pure OWL implementation; sometime in the distant
+      future. </description>
+  </rdf:Description>
+  <rdf:Description rdf:about="correspondenceEmail">
+    <rdfs:comment>The creator or a contributor email address for correspondence about this
+      CCD.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="creatorName">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+    <rdfs:comment>The primary author or creator of this CCD.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="uniqueID">
+    <rdfs:comment>The unique name of this MLHIM 2 component.</rdfs:comment>
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="relation">
+    <rdfs:comment>Recommended best practice is to identify the related resource by means of a string
+      conforming to a formal identification system. To relate a CCD to another CCD, enter the
+      related CCD identifier here. The Entry subtype should have one or more links defined
+      describing the relationship(s).</rdfs:comment>
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="CCDInstance">
+    <rdfs:subClassOf rdf:resource="MLHIM2"/>
+    <rdfs:label xml:lang="en-us">Concept Constraint Definition Instance</rdfs:label>
+    <description xml:lang="en-us"> A set of selected PluggableCMs that are constraints on the RM
+      components (CoreCMs) in order to represent a domain concept. In the implementation language
+      there may be additional syntactic conventions required. </description>
+  </rdf:Description>
+  <rdf:Description rdf:about="refersToSymbol">
+    <rdfs:label xml:lang="en-us">Refers To Symbol</rdfs:label>
+    <description xml:lang="en-us"> Used to describe when a Concept Model refers to a Symbol that is
+      not part of its internal structure. This is typically refering to another public Symbol in the
+      same ontology that represents another complete Concept Model. </description>
+    <rdfs:range rdf:resource="Symbol"/>
+    <rdfs:domain rdf:resource="ConceptModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="publicationDate">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:comment>The date of publication of this CCD.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gMonthDay">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="coverage">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/coverage"/>
+    <rdfs:comment>Spatial topic and spatial applicability may be a named place or a location
+      specified by its geographic coordinates. Temporal topic may be a named period, date, or date
+      range. A jurisdiction may be a named administrative entity or a geographic place to which the
+      resource applies. Recommended best practice is to use a controlled vocabulary such as the
+      Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be
+      used in preference to numeric identifiers such as sets of coordinates or date ranges. The
+      default value must be 'Universal' if there are no other applicable values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="ccdTitle">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    <rdfs:comment>A descriptive title. Typically, a Title will be a name by which the resource is
+      formally known.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="type">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/type"/>
+    <rdfs:comment>The only acceptable value is: MLHIM Concept Constraint Definition
+      (CCD)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gDay">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#gYear">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="contributorName">
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/contributor"/>
+    <rdfs:comment>Anyone contributiing to the development of this CCD. Similar to co-author status.
+      If there are no contributirs then the word 'None' must be used.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="publisher">
+    <rdfs:comment>Examples of a Publisher include a person, an organization, or a service.
+      Typically, the name of a Publisher should be used to indicate the entity. This is considered
+      the rights holder of this CCD. Example: MLHIM LAB, UERJ</rdfs:comment>
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/publisher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dayTimeDuration">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="format">
+    <rdfs:comment>The format of the content using IANA MIME type. The only accepted MIME Type for
+      CCDs is 'text/xml'.</rdfs:comment>
+    <skos:exactMatch rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#yearMonthDuration">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+</rdf:RDF>

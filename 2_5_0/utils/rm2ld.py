@@ -31,8 +31,8 @@ import sys
 import re
 from datetime import datetime
 from lxml import etree
-from pyld import jsonld
-import json
+from rdflib import Graph, plugin
+from rdflib.serializer import Serializer
 
 def getfiles(path):
     # returns a list of all files in a directory
@@ -51,7 +51,7 @@ def main(path):
     header = """<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns="http://www.mlhim.org/ns/mlhim2/"
      xml:base="http://www.mlhim.org/ns/mlhim2/"
-     xmlns:mlhim2='http://www.mlhim.org/ns/mlhim2/'
+     xmlns:mlhim2="http://www.mlhim.org/ns/mlhim2/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xs="http://www.w3.org/2001/XMLSchema"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -59,7 +59,7 @@ def main(path):
 
 """
 
-    parser = etree.XMLParser(ns_clean=True, recover=True)
+    parser = etree.XMLParser(ns_clean=True, recover=True, resolve_entities=False, remove_comments=True)
     files = getfiles(path)
 
     for f in files:
@@ -67,6 +67,7 @@ def main(path):
             continue
 
         rdffile = path + "/" + f[:-3] + "rdf"
+        jsonfile = path + "/" + f[:-3] + "jsonld"
         print("\n\nCreating: ", rdffile + " from: ", path + "/" + f)
 
         src = open(path + "/" + f, 'r')
@@ -86,9 +87,20 @@ def main(path):
         descr = etree.XPath("//xs:appinfo/rdf:Description", namespaces=nsDict)
         rdf = descr(root)
         for x in rdf:
+            #print(x.xpath('local-name()'))
             dest.write('    ' + etree.tostring(x).decode('utf-8') + '\n')
 
         dest.write('</rdf:RDF>\n')
+        src.close()
+        dest.close()
+
+        # Create JSON-LD
+        print("\n\nCreating: ", jsonfile + " from: ", path + "/" + rdffile)
+        src = open(rdffile, 'r')
+        dest = open(jsonfile, 'w')
+        g = Graph().parse(src, format='xml')
+        context = {"@mlhim2": "http://www.mlhim.org/ns/mlhim2/mlhim2.jsonld", "@language": "en"}
+        g.serialize(jsonfile, format='json-ld', context=context, indent=4)
         src.close()
         dest.close()
 
