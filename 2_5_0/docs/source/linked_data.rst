@@ -12,7 +12,6 @@ As the Linked Data environment matures, graph based technologies are becomming m
 
 In this document, when we talk about MLHIM we will use the term *MLHIM*. When we talk about modeling concepts in an area of interest we use the term *domain*.  Though we are thinking primarily about the domain of healthcare and the information technology to support healthcare information exchange, MLHIM concepts may be applied to any domain of interest.
 
-==================
 Syntactic Modeling
 ==================
 
@@ -22,7 +21,6 @@ Components of the Reference Model can be assembled in virtually any structure ne
 
 This guarantee means that it is easier to build persistence and query infrastructure that can accomodate unforseen domain concept models. This greatly reduces application complexity and maintenance.
 
-=================
 Semantic Modeling
 =================
 
