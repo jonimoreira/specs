@@ -103,10 +103,10 @@ def main(path):
         dest = open(jsonfile, 'w')
         g = Graph().parse(src, format='xml')
 
-        cxt = rm(root)[0]
-        abbv = cxt[-12:-4]
-        context = {"@"+abbv: cxt[:-3] + "jsonld", "@language": "en"}
-        print("\n\n Creating JSONLD with context: ", context)
+        cxt = rm(root)[0] # the JSON-LD context document is the same as the RM with a .jsonld instead of .xsd extension
+#        context = ['http://www.mlhim.org/ns/mlhim2/mlhim2.jsonld',cxt[:-3] + "jsonld"]
+        context = [cxt[:-3] + "jsonld"]
+        print("\n\n Creating JSON-LD with context: ", context)
         g.serialize(jsonfile, format='json-ld', context=context, indent=4)
         src.close()
         dest.close()
@@ -116,7 +116,7 @@ def main(path):
 if __name__ == '__main__':
 
     if len(sys.argv) < 2:
-        print("\nInclude the path of where to look for the schemas.\n")
+        print("\n You MUST provide a path to the CCDs (schemas).\n")
         sys.exit()
 
     path = sys.argv[1]

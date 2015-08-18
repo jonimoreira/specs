@@ -1,54 +1,42 @@
 {
     "@context": {
         "@language": "en",
-        "@mlhim2": "http://www.mlhim.org/ns/mlhim2/mlhim2.jsonld"
+        "mlhim2": "http://www.mlhim.org/ns/mlhim2/"
     },
     "@graph": [
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/format",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The format of the content using IANA MIME type. The only accepted MIME Type for\n      CCDs is 'text/xml'."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/format"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/format",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The format of the content using IANA MIME type. The only accepted MIME Type for\n      CCDs is 'text/xml'."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/format"}
         },
         {
             "@id": "http://www.w3.org/2001/XMLSchema#gMonth",
             "@type": "http://www.w3.org/2000/01/rdf-schema#Datatype"
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/isCoreSymbolOf",
+            "@id": "http://www.mlhim.org/ns/mlhim2/isCoreSymbolOf",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Relates a Core Symbol to a Core Model "
             },
-            "http://www.w3.org/2000/01/rdf-schema#domain": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/CoreCS"
-            },
+            "http://www.w3.org/2000/01/rdf-schema#domain": {"@id": "http://www.mlhim.org/ns/mlhim2/CoreCS"},
             "http://www.w3.org/2000/01/rdf-schema#label": {
                 "@language": "en-us",
                 "@value": "Is Core Symbol Of"
             },
-            "http://www.w3.org/2000/01/rdf-schema#range": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/CoreCM"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#range": {"@id": "http://www.mlhim.org/ns/mlhim2/CoreCM"}
         },
         {
             "@id": "http://www.w3.org/2001/XMLSchema#yearMonthDuration",
             "@type": "http://www.w3.org/2000/01/rdf-schema#Datatype"
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/identifier",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The four characters 'ccd-' followed by the Type 4 UUID for this CCD. Example:\n      ccd-246bf9e8-fda3-4508-8423-4e5387a5e377"
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/identifier"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/identifier",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The four characters 'ccd-' followed by the Type 4 UUID for this CCD. Example:\n      ccd-246bf9e8-fda3-4508-8423-4e5387a5e377"},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/identifier"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/RM",
+            "@id": "http://www.mlhim.org/ns/mlhim2/RM",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A set of components (CoreCMs) to provide structural integrity for\n      a domain concept. Some CoreCMs are mandatory in CCDs and some are optional. Optionality is\n      defined in each RM implementation. "
@@ -57,44 +45,32 @@
                 "@language": "en-us",
                 "@value": "Reference Model"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/MLHIM2"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/MLHIM2"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/coverage",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "Spatial topic and spatial applicability may be a named place or a location\n      specified by its geographic coordinates. Temporal topic may be a named period, date, or date\n      range. A jurisdiction may be a named administrative entity or a geographic place to which the\n      resource applies. Recommended best practice is to use a controlled vocabulary such as the\n      Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be\n      used in preference to numeric identifiers such as sets of coordinates or date ranges. The\n      default value must be 'Universal' if there are no other applicable values."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/coverage"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/coverage",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "Spatial topic and spatial applicability may be a named place or a location\n      specified by its geographic coordinates. Temporal topic may be a named period, date, or date\n      range. A jurisdiction may be a named administrative entity or a geographic place to which the\n      resource applies. Recommended best practice is to use a controlled vocabulary such as the\n      Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be\n      used in preference to numeric identifiers such as sets of coordinates or date ranges. The\n      default value must be 'Universal' if there are no other applicable values."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/coverage"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/refersToSymbol",
+            "@id": "http://www.mlhim.org/ns/mlhim2/refersToSymbol",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Used to describe when a Concept Model refers to a Symbol that is\n      not part of its internal structure. This is typically refering to another public Symbol in the\n      same ontology that represents another complete Concept Model. "
             },
-            "http://www.w3.org/2000/01/rdf-schema#domain": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/ConceptModel"
-            },
+            "http://www.w3.org/2000/01/rdf-schema#domain": {"@id": "http://www.mlhim.org/ns/mlhim2/ConceptModel"},
             "http://www.w3.org/2000/01/rdf-schema#label": {
                 "@language": "en-us",
                 "@value": "Refers To Symbol"
             },
-            "http://www.w3.org/2000/01/rdf-schema#range": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/Symbol"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#range": {"@id": "http://www.mlhim.org/ns/mlhim2/Symbol"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/schemaLocation",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "A resolvable URI for the RM/CCD schema."
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/schemaLocation",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "A resolvable URI for the RM/CCD schema."}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/MLHIM2",
+            "@id": "http://www.mlhim.org/ns/mlhim2/MLHIM2",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " The top level class of MLHIM 2. MLHIM 1.x was never successfully\n      modeled in OWL and MLHIM 3 will likely be a pure OWL implementation; sometime in the distant\n      future. "
@@ -105,7 +81,7 @@
             }
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/PluggableCS",
+            "@id": "http://www.mlhim.org/ns/mlhim2/PluggableCS",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Represents a PluggableCM in instance data. Can be considered a\n      data container for the components of a PluggableCM. "
@@ -114,38 +90,28 @@
                 "@language": "en-us",
                 "@value": "Pluggable Concept Symbol"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/Symbol"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/Symbol"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/uniqueID",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The unique name of this MLHIM 2 component."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/identifier"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/uniqueID",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The unique name of this MLHIM 2 component."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/identifier"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/isSymbolIn",
+            "@id": "http://www.mlhim.org/ns/mlhim2/isSymbolIn",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " The internal definitions of Models have Symbols used to provide\n      structure in instance data. This property states that this is a symbol that is local to the\n      concept model. "
             },
-            "http://www.w3.org/2000/01/rdf-schema#domain": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/Symbol"
-            },
+            "http://www.w3.org/2000/01/rdf-schema#domain": {"@id": "http://www.mlhim.org/ns/mlhim2/Symbol"},
             "http://www.w3.org/2000/01/rdf-schema#label": {
                 "@language": "en-us",
                 "@value": "Is Symbol In"
             },
-            "http://www.w3.org/2000/01/rdf-schema#range": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/ConceptModel"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#range": {"@id": "http://www.mlhim.org/ns/mlhim2/ConceptModel"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/DataInstance",
+            "@id": "http://www.mlhim.org/ns/mlhim2/DataInstance",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A set of data items (e.g. a document) that conforms restrictions\n      described in a CCD Instance. It has not been tested for validation. "
@@ -154,51 +120,37 @@
                 "@language": "en-us",
                 "@value": "Data Instance"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/MLHIM2"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/MLHIM2"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/ccdTitle",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "A descriptive title. Typically, a Title will be a name by which the resource is\n      formally known."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/title"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/ccdTitle",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "A descriptive title. Typically, a Title will be a name by which the resource is\n      formally known."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/title"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/description",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "A plaintext description of this MLHIM 2 component."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/description"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/description",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "A plaintext description of this MLHIM 2 component."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/description"}
         },
         {
             "@id": "http://www.w3.org/2001/XMLSchema#gYearMonth",
             "@type": "http://www.w3.org/2000/01/rdf-schema#Datatype"
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/isPluggableModelIn",
+            "@id": "http://www.mlhim.org/ns/mlhim2/isPluggableModelIn",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Relates a Pluggable Model to a CCDInstance. "
             },
-            "http://www.w3.org/2000/01/rdf-schema#domain": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/PluggableCM"
-            },
+            "http://www.w3.org/2000/01/rdf-schema#domain": {"@id": "http://www.mlhim.org/ns/mlhim2/PluggableCM"},
             "http://www.w3.org/2000/01/rdf-schema#label": {
                 "@language": "en-us",
                 "@value": "Is Pluggable Model In"
             },
-            "http://www.w3.org/2000/01/rdf-schema#range": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/CCDInstance"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#range": {"@id": "http://www.mlhim.org/ns/mlhim2/CCDInstance"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/DataInstanceInvalid",
+            "@id": "http://www.mlhim.org/ns/mlhim2/DataInstanceInvalid",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A set of data items that conforms to a CCD Instance to represent\n      an instance of that concept **AND** the data values are **NOT** valid according to the CCD\n      Instance constraints. An InvalidDataInstance must contain one or more children of an\n      Exception. "
@@ -207,12 +159,10 @@
                 "@language": "en-us",
                 "@value": "Invalid Data Instance"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/DataInstance"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/DataInstance"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/CCDInstance",
+            "@id": "http://www.mlhim.org/ns/mlhim2/CCDInstance",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A set of selected PluggableCMs that are constraints on the RM\n      components (CoreCMs) in order to represent a domain concept. In the implementation language\n      there may be additional syntactic conventions required. "
@@ -221,38 +171,28 @@
                 "@language": "en-us",
                 "@value": "Concept Constraint Definition Instance"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/MLHIM2"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/MLHIM2"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/type",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The only acceptable value is: MLHIM Concept Constraint Definition\n      (CCD)"
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/type"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/type",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The only acceptable value is: MLHIM Concept Constraint Definition\n      (CCD)"},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/type"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/isCoreModelIn",
+            "@id": "http://www.mlhim.org/ns/mlhim2/isCoreModelIn",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Relates a Core Model to a Reference Model "
             },
-            "http://www.w3.org/2000/01/rdf-schema#domain": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/CoreCM"
-            },
+            "http://www.w3.org/2000/01/rdf-schema#domain": {"@id": "http://www.mlhim.org/ns/mlhim2/CoreCM"},
             "http://www.w3.org/2000/01/rdf-schema#label": {
                 "@language": "en-us",
                 "@value": "Is Core Model In"
             },
-            "http://www.w3.org/2000/01/rdf-schema#range": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/RM"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#range": {"@id": "http://www.mlhim.org/ns/mlhim2/RM"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/DataPoint",
+            "@id": "http://www.mlhim.org/ns/mlhim2/DataPoint",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Represents a complete path in instance data defined by a\n      Pluggable Concept Model. Beginning from the left at the data node and ending at the\n      CCDInstance with the 'ccd-{UUID}' on the right. This does not include file, graph, server,\n      etc. names. "
@@ -261,16 +201,14 @@
                 "@language": "en-us",
                 "@value": "Data Point"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/Symbol"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/Symbol"}
         },
         {
             "@id": "http://www.w3.org/2001/XMLSchema#dayTimeDuration",
             "@type": "http://www.w3.org/2000/01/rdf-schema#Datatype"
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/CoreCS",
+            "@id": "http://www.mlhim.org/ns/mlhim2/CoreCS",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A CoreCS represents a CoreCM in instance data. In practice, it is\n      usually substituted for by a PluggableCS. "
@@ -279,12 +217,10 @@
                 "@language": "en-us",
                 "@value": "Core Concept Symbol"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/Symbol"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/Symbol"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/PluggableCM",
+            "@id": "http://www.mlhim.org/ns/mlhim2/PluggableCM",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " The name given to a CoreCM that has been constrained for use in a\n      CCD Instance. Through the constraints, a PluggableCM defines a single domain concept based on\n      syntactic data constraints as well as specified semantics. It is *pluggable* because it can be\n      reused in multiple CCD Instances. "
@@ -293,34 +229,24 @@
                 "@language": "en-us",
                 "@value": "Pluggable Concept Model"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/ConceptModel"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/ConceptModel"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/creatorName",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The primary author or creator of this CCD."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/creator"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/creatorName",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The primary author or creator of this CCD."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/creator"}
         },
         {
             "@id": "http://www.w3.org/2001/XMLSchema#gMonthDay",
             "@type": "http://www.w3.org/2000/01/rdf-schema#Datatype"
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/publisher",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "Examples of a Publisher include a person, an organization, or a service.\n      Typically, the name of a Publisher should be used to indicate the entity. This is considered\n      the rights holder of this CCD. Example: MLHIM LAB, UERJ"
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/publisher"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/publisher",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "Examples of a Publisher include a person, an organization, or a service.\n      Typically, the name of a Publisher should be used to indicate the entity. This is considered\n      the rights holder of this CCD. Example: MLHIM LAB, UERJ"},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/publisher"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/DataInstanceError",
+            "@id": "http://www.mlhim.org/ns/mlhim2/DataInstanceError",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A set of data items that **DOES NOT** conform to the CCD Instance\n      it represents **OR** it contains invalid data and does not contain one or more children of an\n      Exception. "
@@ -329,16 +255,14 @@
                 "@language": "en-us",
                 "@value": "Erroneous Data Instance"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/DataInstance"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/DataInstance"}
         },
         {
             "@id": "http://www.w3.org/2001/XMLSchema#gYear",
             "@type": "http://www.w3.org/2000/01/rdf-schema#Datatype"
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/Exception",
+            "@id": "http://www.mlhim.org/ns/mlhim2/Exception",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Indicates that some data is outside of the parameters defined by\n      the CCD Instance. "
@@ -347,21 +271,15 @@
                 "@language": "en-us",
                 "@value": "Exception"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/CoreCM"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/CoreCM"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/subject",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The subject will be represented using keywords, key phrases, or classification\n      codes. Recommended best practice is to use a controlled vocabulary. The primary source for CCD\n      keywords should be MeSH terms. http://www.ncbi.nlm.nih.gov/mesh Each subject entry must\n      contain only one keyword/phrase. There is no limit on how many may be used but there must be\n      at least one."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/subject"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/subject",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The subject will be represented using keywords, key phrases, or classification\n      codes. Recommended best practice is to use a controlled vocabulary. The primary source for CCD\n      keywords should be MeSH terms. http://www.ncbi.nlm.nih.gov/mesh Each subject entry must\n      contain only one keyword/phrase. There is no limit on how many may be used but there must be\n      at least one."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/subject"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/DataInstanceValid",
+            "@id": "http://www.mlhim.org/ns/mlhim2/DataInstanceValid",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A set of data items that conforms to a CCD Instance to represent\n      an instance of that concept **AND** the data values are valid according to the CCD Instance\n      constraints. "
@@ -370,18 +288,14 @@
                 "@language": "en-us",
                 "@value": "Valid Data Instance"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/DataInstance"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/DataInstance"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/correspondenceEmail",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The creator or a contributor email address for correspondence about this\n      CCD."
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/correspondenceEmail",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The creator or a contributor email address for correspondence about this\n      CCD."}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/Symbol",
+            "@id": "http://www.mlhim.org/ns/mlhim2/Symbol",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Used to delineate or markup instance data. In practice, it is\n      usually a variable name or XML element name. "
@@ -390,16 +304,14 @@
                 "@language": "en-us",
                 "@value": "Symbol"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/MLHIM2"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/MLHIM2"}
         },
         {
             "@id": "http://www.w3.org/2001/XMLSchema#gDay",
             "@type": "http://www.w3.org/2000/01/rdf-schema#Datatype"
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/ConceptModel",
+            "@id": "http://www.mlhim.org/ns/mlhim2/ConceptModel",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A model of an abstract concept. "
@@ -408,12 +320,10 @@
                 "@language": "en-us",
                 "@value": "Concept Model"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/MLHIM2"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/MLHIM2"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/CoreCM",
+            "@id": "http://www.mlhim.org/ns/mlhim2/CoreCM",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " A composable model contained in a reference model. A CoreCM\n      represents a specific core type of component that further contains elements with base\n      datatypes and/or other CoreCMs to define its structure. "
@@ -422,80 +332,50 @@
                 "@language": "en-us",
                 "@value": "Core Concept Model"
             },
-            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/ConceptModel"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#subClassOf": {"@id": "http://www.mlhim.org/ns/mlhim2/ConceptModel"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/relation",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "Recommended best practice is to identify the related resource by means of a string\n      conforming to a formal identification system. To relate a CCD to another CCD, enter the\n      related CCD identifier here. The Entry subtype should have one or more links defined\n      describing the relationship(s)."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/relation"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/relation",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "Recommended best practice is to identify the related resource by means of a string\n      conforming to a formal identification system. To relate a CCD to another CCD, enter the\n      related CCD identifier here. The Entry subtype should have one or more links defined\n      describing the relationship(s)."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/relation"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/rights",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "Typically, rights information includes a statement about various property rights\n      associated with the resource, including intellectual property rights. Examples are well\n      defined license statements such as the Creative Commons licenses such as; CC-BY\n      http://creativecommons.org/licenses/by/3.0/"
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/rights"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/rights",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "Typically, rights information includes a statement about various property rights\n      associated with the resource, including intellectual property rights. Examples are well\n      defined license statements such as the Creative Commons licenses such as; CC-BY\n      http://creativecommons.org/licenses/by/3.0/"},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/rights"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/source",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The described resource may be derived from the related resource in whole or in\n      part. Recommended best practice is to identify the related resource by means of a string\n      conforming to a formal identification system. CCDs are typically modeled from formal documents\n      or well defined 'forms'. If available a URI for this source is preferred. Otherwise a document\n      identifier should be used."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/source"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/source",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The described resource may be derived from the related resource in whole or in\n      part. Recommended best practice is to identify the related resource by means of a string\n      conforming to a formal identification system. CCDs are typically modeled from formal documents\n      or well defined 'forms'. If available a URI for this source is preferred. Otherwise a document\n      identifier should be used."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/source"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/isPluggableSymbolOf",
+            "@id": "http://www.mlhim.org/ns/mlhim2/isPluggableSymbolOf",
             "http://www.mlhim.org/ns/mlhim2/description": {
                 "@language": "en-us",
                 "@value": " Relates a Pluggable Symbol to a Pluggable Model "
             },
-            "http://www.w3.org/2000/01/rdf-schema#domain": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/PluggableCS"
-            },
+            "http://www.w3.org/2000/01/rdf-schema#domain": {"@id": "http://www.mlhim.org/ns/mlhim2/PluggableCS"},
             "http://www.w3.org/2000/01/rdf-schema#label": {
                 "@language": "en-us",
                 "@value": "Is Pluggable Symbol Of"
             },
-            "http://www.w3.org/2000/01/rdf-schema#range": {
-                "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/PluggableCM"
-            }
+            "http://www.w3.org/2000/01/rdf-schema#range": {"@id": "http://www.mlhim.org/ns/mlhim2/PluggableCM"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/contributorName",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "Anyone contributiing to the development of this CCD. Similar to co-author status.\n      If there are no contributirs then the word 'None' must be used."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/contributor"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/contributorName",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "Anyone contributiing to the development of this CCD. Similar to co-author status.\n      If there are no contributirs then the word 'None' must be used."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/contributor"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/publicationDate",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The date of publication of this CCD."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/date"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/publicationDate",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The date of publication of this CCD."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/date"}
         },
         {
-            "@id": "file:///home/tim/MLHIM/git/specs/2_5_0/schema/language",
-            "http://www.w3.org/2000/01/rdf-schema#comment": {
-                "@value": "The [RFC4646] http://www.ietf.org/rfc/rfc4646.txt language code for the target\n      language for this CCD. The metadata text and other descriptive text should be in this\n      language. However, this does not preclude includsion of PCMs with different language\n      tags."
-            },
-            "http://www.w3.org/2004/02/skos/core#exactMatch": {
-                "@id": "http://purl.org/dc/elements/1.1/language"
-            }
+            "@id": "http://www.mlhim.org/ns/mlhim2/language",
+            "http://www.w3.org/2000/01/rdf-schema#comment": {"@value": "The [RFC4646] http://www.ietf.org/rfc/rfc4646.txt language code for the target\n      language for this CCD. The metadata text and other descriptive text should be in this\n      language. However, this does not preclude includsion of PCMs with different language\n      tags."},
+            "http://www.w3.org/2004/02/skos/core#exactMatch": {"@id": "http://purl.org/dc/elements/1.1/language"}
         }
     ]
 }

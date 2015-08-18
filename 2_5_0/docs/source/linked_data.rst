@@ -93,3 +93,7 @@ Some tools (e.g. Protégé) do not support the full range of XML Schema 1.1 data
 Annotation Properties
 =====================
 The most widely used (at this writing) metadata definitions come from the Dublin Core Metadata Initiative (DCMI) terms. However, the definitions for these do not meet the requirements for some reasoners. We have defined our own metadata properties and related them to other standards.
+
+Context processing
+==================
+Refer to the JSON-LD-API `context processing <http://www.w3.org/TR/json-ld-api/#context-processing-algorithms>`_ specifications to understand how the mlhim2.jsonld, mlhim250.jsonld and the ccd jsonld work together.
