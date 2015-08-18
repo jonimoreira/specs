@@ -9,30 +9,19 @@ Looks for the file with the '.xsd' extension in the '../schema/' directory.
 Produces a RDF/XML file for the RM schema using the same name as the input file but replaces the '.xsd' extension with '.rdf'.
 Produces a JSON-LD file for each RDF file using the same name as the input file but replaces the '.rdf' extension with '.jsonld'.
 All MLHIM Reference Models have a context of; 'mlhim2':'http://www.mlhim.org/ns/mlhim2/mlhim2.jsonld'
-
-    Copyright (C) 2015 Timothy W. Cook tim@mlhim.org
-
-      Licensed under the Apache License, Version 2.0 (the "License");
-      you may not use this file except in compliance with the License.
-      You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-      Unless required by applicable law or agreed to in writing, software
-      distributed under the License is distributed on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-      See the License for the specific language governing permissions and
-      limitations under the License.
-
 """
 
 import os
 import sys
 import re
+import configparser
 from datetime import datetime
 from lxml import etree
 from rdflib import Graph, plugin
 from rdflib.serializer import Serializer
+
+config = configparser.ConfigParser()
+config.read('utils.ini')
 
 def getfiles(path):
     # returns a list of all files in a directory
@@ -41,7 +30,7 @@ def getfiles(path):
             yield file
 
 
-def main(path):
+def rmmain(path):
     rootdir = '.'
     nsDict = {'xs': 'http://www.w3.org/2001/XMLSchema',
               'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
@@ -60,17 +49,20 @@ def main(path):
 """
 
     parser = etree.XMLParser(ns_clean=True, recover=True, resolve_entities=False, remove_comments=True)
-    files = getfiles(path)
+    LDPATH = config.get('Locations', 'LDPATH')
+    RDFPATH = config.get('Locations', 'RDFPATH')
+    RMPATH = config.get('Locations', 'RMPATH')
+    files = getfiles(RMPATH)
 
     for f in files:
         if f[-3:] != 'xsd':
             continue
 
-        rdffile = path + "/" + f[:-3] + "rdf"
-        jsonfile = path + "/" + f[:-3] + "jsonld"
-        print("\n\nCreating: ", rdffile + " from: ", path + "/" + f)
+        rdffile = RDFPATH + f[:-3] + "rdf"
+        jsonfile = LDPATH + f[:-3] + "jsonld"
+        print("\n\nCreating: ", rdffile + " from: ", RMPATH + f)
 
-        src = open(path + "/" + f, 'r')
+        src = open(RMPATH + f, 'r')
 
         dest = open(rdffile, 'w')
 
@@ -95,7 +87,7 @@ def main(path):
         dest.close()
 
         # Create JSON-LD
-        print("\n\nCreating: ", jsonfile + " from: ", path + "/" + rdffile)
+        print("\n\nCreating: ", jsonfile + " from: ", RDFPATH + rdffile)
         src = open(rdffile, 'r')
         dest = open(jsonfile, 'w')
         g = Graph().parse(src, format='xml')
@@ -107,10 +99,6 @@ def main(path):
     return
 
 if __name__ == '__main__':
-
-    path = '../schema'
-
-    main(path)
-    print(
-        "\n\nFinished  " + datetime.now().strftime("%Y-%m-%d %H:%M") + " \n\n")
+    rmmain()
+    print("\n\nFinished  " + datetime.now().strftime("%Y-%m-%d %H:%M") + " \n\n")
     sys.exit(0)

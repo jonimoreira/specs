@@ -1,4 +1,4 @@
-Utility scripts for manipulating schemas, CCDs and other artifacts.
+Utility scripts for manipulating RM schemas, CCDs and other artifacts.
 
 
 ========

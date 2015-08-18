@@ -12,29 +12,18 @@ The JSON-LD context is set to a context  based on the include element for the RM
 Example: "@mlhim250": "http://www.mlhim.org/ns/mlhim2/mlhim250.jsonld" The mlhim250.jsonld file is included with the specs but can also be generated using rm2ld.py
 All MLHIM Reference Models have a context of; 'mlhim2':'http://www.mlhim.org/ns/mlhim2/mlhim2.jsonld'
 
-    Copyright (C) 2015 Timothy W. Cook tim@mlhim.org
-
-      Licensed under the Apache License, Version 2.0 (the "License");
-      you may not use this file except in compliance with the License.
-      You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-      Unless required by applicable law or agreed to in writing, software
-      distributed under the License is distributed on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-      See the License for the specific language governing permissions and
-      limitations under the License.
-
 """
-
 import os
 import sys
 import re
+import configparser
 from datetime import datetime
 from lxml import etree
 from rdflib import Graph, plugin
 from rdflib.serializer import Serializer
+
+config = configparser.ConfigParser()
+config.read('utils.ini')
 
 def getfiles(path):
     # returns a list of all files in a directory
@@ -43,7 +32,7 @@ def getfiles(path):
             yield file
 
 
-def main(path):
+def ccdmain():
     rootdir = '.'
     nsDict = {'xs': 'http://www.w3.org/2001/XMLSchema',
               'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
@@ -62,18 +51,22 @@ def main(path):
 """
 
     parser = etree.XMLParser(ns_clean=True, recover=True, resolve_entities=False, remove_comments=True)
-    files = getfiles(path)
+    CCDPATH = config.get('Locations', 'CCDPATH')
+    LDPATH = config.get('Locations', 'LDPATH')
+    RDFPATH = config.get('Locations', 'RDFPATH')
+
+    files = getfiles(CCDPATH)
 
     for f in files:
         if f[-3:] != 'xsd':
             continue
 
         rm = etree.XPath("//xs:include/@schemaLocation", namespaces=nsDict)
-        rdffile = path + "/" + f[:-3] + "rdf"
-        jsonfile = path + "/" + f[:-3] + "jsonld"
-        print("\n\nCreating: ", rdffile + " from: ", path + "/" + f)
+        rdffile = RDFPATH + f[:-3] + "rdf"
+        jsonfile = LDPATH + f[:-3] + "jsonld"
+        print("\n\nCreating: ", rdffile + " from: ", CCDPATH + f)
 
-        src = open(path + "/" + f, 'r')
+        src = open(CCDPATH + f, 'r')
 
         dest = open(rdffile, 'w')
 
@@ -98,7 +91,7 @@ def main(path):
         dest.close()
 
         # Create JSON-LD
-        print("\n\nCreating: ", jsonfile + " from: ", path + "/" + rdffile)
+        print("\n\nCreating: ", jsonfile + " from: ", RDFPATH + rdffile)
         src = open(rdffile, 'r')
         dest = open(jsonfile, 'w')
         g = Graph().parse(src, format='xml')
@@ -115,14 +108,6 @@ def main(path):
 
 if __name__ == '__main__':
 
-    if len(sys.argv) < 2:
-        print("\n You MUST provide a path to the CCDs (schemas).\n")
-        sys.exit()
-
-    path = sys.argv[1]
-
-    main(path)
-
+    ccdmain()
     print("\n\nFinished  " + datetime.now().strftime("%Y-%m-%d %H:%M") + " \n\n")
-
     sys.exit(0)

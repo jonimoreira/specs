@@ -30,20 +30,18 @@ import sys
 import os
 import json
 import uuid
+import configparser
 from rdflib import Graph, plugin
 from rdflib.serializer import Serializer
 
 import xmltodict
 import shortuuid
 
-# These paths are configured for the demo data. Adjust them for your own needs.
-
-RMPATH = ''
-CCDPATH = './ccds/'
-DATAPATH = './data/'
-LDPATH = './jsonld/'
+config = configparser.ConfigParser()
+config.read('utils.ini')
 
 def ldmain():
+    DATAPATH = config.get('Locations', 'DATAPATH')
     files = getfiles(DATAPATH)
     jsonld(files)
     return
@@ -52,11 +50,11 @@ def ldmain():
 def getfiles(path):
     for file in os.listdir(path):
         if os.path.isfile(os.path.join(path, file)):
-            yield file
+            yield path + file
 
 def jsonld(files=[]):
-    if len(files) == 0:
-        files = getfiles('.') # all files in the current directory
+    DATAPATH = config.get('Locations', 'DATAPATH')
+    LDPATH = config.get('Locations', 'LDPATH')
     for file in files:
         if file[-4:] == '.xml' and not file[:5] == 'suid-':  # only the source XML files
             #TODO: You should check the files for the validity status
@@ -68,13 +66,13 @@ def jsonld(files=[]):
             ld_obj = None
             f1 = open(file,'r')
             xfile = file.replace('.xml', '.jsonld')
-
+            xfile = xfile.replace(DATAPATH, LDPATH)
             print('Creating: ', xfile)
             for line in f1.readlines():
                 if 'xsi:schemaLocation=' in line:
                     n2 = line.index('.xsd')
                     n1 = line.rfind('/')
-                    cxt = CCDPATH + line[n1+1:n2] + '.jsonld'
+                    cxt = LDPATH + line[n1+1:n2] + '.jsonld'
 
                 if '<mlhim2:pcs-' in line:
                     ld_obj = ''
