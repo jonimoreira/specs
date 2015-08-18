@@ -71,3 +71,4 @@ build/
 # utils generated files
 rdfxml/
 jsonld/
+mxic_data/
