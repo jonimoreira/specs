@@ -41,8 +41,8 @@ def jsonld(files=[]):
     DATAPATH = config.get('Locations', 'DATAPATH')
     LDPATH = config.get('Locations', 'LDPATH')
     for file in files:
-        if file[-4:] == '.xml' and not file[:5] == 'suid-':  # only the source XML files
-            #TODO: You should check the files for the validity status
+        if file[-4:] == '.xml':
+            #TODO: You should check the files for the validity status. We are assuming they are valid here.
             ld_obj = '{\n"@id": "'+file+'",\n'
             ld_obj += '"@type":"http://www.mlhim.org/ns/mlhim2/DataInstanceValid"\n'
             ld_obj += '},\n'
@@ -50,15 +50,18 @@ def jsonld(files=[]):
             output += ld_obj
             ld_obj = None
             f1 = open(file,'r')
-            xfile = file.replace('.xml', '.jsonld')
-            xfile = xfile.replace(DATAPATH, LDPATH)
+            xfile = file.replace('.xml', '.jsonld') # use the same filename with a new extension
+            xfile = xfile.replace(DATAPATH, LDPATH) # change the path portion of the filename
+
             print('Creating: ', xfile)
             for line in f1.readlines():
+                # get the context from the name of the ccd schema being refered to here.
                 if 'xsi:schemaLocation=' in line:
                     n2 = line.index('.xsd')
                     n1 = line.rfind('/')
-                    cxt = LDPATH + line[n1+1:n2] + '.jsonld'
+                    cxt = line[n1+1:n2] + '.jsonld'
 
+                # we find a global element name.
                 if '<mlhim2:pcs-' in line:
                     ld_obj = ''
                     n1 = line.index('-')
@@ -68,6 +71,12 @@ def jsonld(files=[]):
                     ld_obj += '"@type":"http://www.mlhim.org/ns/mlhim2/PluggableCS",\n'
                     ld_obj += '"http://www.mlhim.org/ns/mlhim2/isSymbolIn":"'+cxt+'"\n'
                     ld_obj += '},\n'
+                elif '</mlhim2:pcs-' in line: # we are closing a global element
+                    pass
+                else: # process the internal elements
+                    ld_obj += 'internal\n'
+
+
 
 
                 if ld_obj:
