@@ -69,5 +69,5 @@ site/
 build/
 
 # utils generated files
-utils/rdfxml/
-utils/jsonld/
+rdfxml/
+jsonld/
