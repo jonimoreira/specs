@@ -67,3 +67,7 @@ graphics/Vinheta MLHIM/*
 # documentation build
 site/
 build/
+
+# utils generated files
+utils/rdfxml/
+utils/jsonld/
