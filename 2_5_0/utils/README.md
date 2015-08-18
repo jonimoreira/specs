@@ -29,7 +29,7 @@ This script will access the directory pointed to by DATAPATH and create a JSON-L
 mxic.py
 -------
 This script is a multi-function tool to demonstrate converting XML instances into JSON. It also demonstrates using shorter UUIDs as well as converting the JSON back to XML and the short UUIDs back to Type 4 UUIDs.
-It reads the source files from DATAPATH and outputs all of its conversions to the mxic_data directory.
+It reads the source files from DATAPATH and outputs its conversions (shorten & json) to the mxic_data directory. For the conversion back (json2xml and longid) it reads the converted files from mxic_data and writes the new ones back. 
 
 Usage:
 
