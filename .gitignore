@@ -72,3 +72,4 @@ build/
 rdfxml/
 jsonld/
 mxic_data/
+uuid_types.csv

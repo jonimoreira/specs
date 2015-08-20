@@ -1,4 +1,9 @@
+Introduction
+============
+
 Utility scripts for manipulating RM schemas, CCDs and other artifacts.
+
+These utilities expect that you  have Python 3.4.0 or later as well as the requirements listed in the requirements.txt file.
 
 The utils.ini file is a configuration file to set the locations for source and destination files.
 The default configuration is setup for demonstration and the existing directories.
@@ -6,6 +11,33 @@ The default configuration is setup for demonstration and the existing directorie
 The example CCDs and their associated data files are not meaningful but do include all of the components of MLHIM2 and the MLHIM RM 2.5.0.
 
 The Python scripts are meant as educational tools and not as production level products. They are designed for clarity not performance. They will probably work fine only in low throughput situations. The configuration file utils.ini will need to be adjusted for use outside of this demo.
+
+Quick Start
+===========
+If you just want to create all of the sample JSON-LD without getting into each script, follow this approach.
+Be sure you have Python 3.4.0 or later installed. Not *required* but suggested is to use a [virtual environment](https://docs.python.org/3/library/venv.html).
+
+from the utils directory execute:
+
+<code>
+$pip install -r requirements.txt
+</code>
+
+If you are not using a virtual environment you may have to execute this as root/admin.
+
+Once the requirements are met, execute each of these scripts in this sequence:
+
+<code>
+$python uuid_types.py
+$python mlhim2_json.py
+$python rm2ld.py
+$python ccd2ld.py
+$python data2ld.py
+$python mxic.py json
+$python mxic.py shorten
+</code>
+
+You will now have additional data and model examples to explore. They are all derived from the Reference Model and CCDs. 
 
 Scripts
 =======
