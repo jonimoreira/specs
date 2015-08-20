@@ -12,7 +12,7 @@ Scripts
 
 mlhim2_jsonld.py
 ----------------
-This script will use the RDF/mlhim2.rdf file to create a jsonld formatted file.
+This script will use the specs/RDF/mlhim2.rdf file to create a jsonld formatted file.
 
 rm2ld.py
 --------
@@ -22,14 +22,29 @@ ccd2ld.py
 ---------
 This script will access the directory pointed to by CCDPATH in utils.ini and create both a RDF/XML file and a JSON-LD file for each CCD found.
 
+uuid_types.py
+-------------
+Creates a file in the ccds directory that maps all of the complexType name UUIDs to the Reference Model base type.
+The file uuid_types.csv is used by other scripts.
+
 data2ld.py
 ----------
-This script will access the directory pointed to by DATAPATH and create a JSON-LD file for each XML data instance found.
+This script will access the directory pointed to by DATAPATH and create a JSON-LD file for each XML data instance found. You must create the uuid_types.csv file prior to running this script. The uuid_types.py script will create that file.  
+
+
+Usage:
+------
+The above scripts are executed from the commandline as:
+
+$python [scriptname]
+
+Their settings are all in the utils.ini file.
+
 
 mxic.py
 -------
 This script is a multi-function tool to demonstrate converting XML instances into JSON. It also demonstrates using shorter UUIDs as well as converting the JSON back to XML and the short UUIDs back to Type 4 UUIDs.
-It reads the source files from DATAPATH and outputs its conversions (shorten & json) to the MXICPATH directory. For the conversion back (json2xml and longid) it reads the converted files from MXICPATH and writes the new ones back to the same MXICPATH. 
+It reads the source files from DATAPATH and outputs its conversions (shorten & json) to the MXICPATH directory. For the conversion back (json2xml and longid) it reads the converted files from MXICPATH and writes the new ones back to the same MXICPATH.
 
 Usage:
 
@@ -42,3 +57,7 @@ actions:
 *  shortjson - shorten the UUIDs and then convert to JSON.
 *  json2xml  - convert JSON back to XML.
 *  longid    - convert shortened UUID XML back to normal Type 4 UUID XML. Output filename will  'lid-' prepended
+
+data_parser.py
+--------------
+This is a library module used by data2ld.py

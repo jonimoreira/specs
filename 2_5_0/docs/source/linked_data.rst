@@ -97,3 +97,9 @@ The most widely used (at this writing) metadata definitions come from the Dublin
 Context processing
 ==================
 Refer to the JSON-LD-API `context processing <http://www.w3.org/TR/json-ld-api/#context-processing-algorithms>`_ specifications to understand how the mlhim2.jsonld, mlhim250.jsonld and the ccd jsonld work together.
+
+For setting your JSON-LD processor for the correct location of context files, see this `StackExchange <https://stackoverflow.com/questions/32047434/json-ld-external-context-redirect/32105641>`_ discussion. The options for compliant processors is discussed in the `JSON-LD Specs <http://www.w3.org/TR/json-ld-api/#the-jsonldoptions-type>`_
+
+Linked Data Tools
+=================
+To reduce the learning curve for working with MLHIM data in your Linked Data environment we have included a few simple Python scripts to get you started. See the utils/README.md for details.

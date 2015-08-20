@@ -7,7 +7,7 @@ Registration & Access
 ---------------------
 The CCD-Gen does require free registration to gain access to be able to view and download current CCDs. Note that CCDs are also available on `GitHub <https://github.com/mlhim/ccdlib>`_.
 
-Access to authoring your own PCMs & CCDs requires posting a request in the MLHIM Google+ Community See the Support page for links.
+Access to authoring your own PCMs & CCDs requires posting a request in the MLHIM Google+ Community. See the Support page for links.
 
 
 Creating and Managing CCDs
