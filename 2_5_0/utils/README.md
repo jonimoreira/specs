@@ -29,17 +29,29 @@ Once the requirements are met, execute each of these scripts in this sequence:
 
 <code>
 $python uuid_types.py
+</code>
 
+<code>
 $python mlhim2_json.py
+</code>
 
+<code>
 $python rm2ld.py
+</code>
 
+<code>
 $python ccd2ld.py
+</code>
 
+<code>
 $python data2ld.py
+</code>
 
+<code>
 $python mxic.py json
+</code>
 
+<code>
 $python mxic.py shorten
 </code>
 
