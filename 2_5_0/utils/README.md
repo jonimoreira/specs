@@ -17,10 +17,10 @@ Quick Start
 If you just want to create all of the sample JSON-LD without getting into each script, follow this approach.
 Be sure you have Python 3.4.0 or later installed. Not *required* but suggested is to use a [virtual environment](https://docs.python.org/3/library/venv.html).
 
-from the utils directory execute:
+from the specs directory execute:
 
 <code>
-$pip install -r requirements.txt
+$pip install -r python_requirements.txt
 </code>
 
 If you are not using a virtual environment you may have to execute this as root/admin.
@@ -29,15 +29,21 @@ Once the requirements are met, execute each of these scripts in this sequence:
 
 <code>
 $python uuid_types.py
+
 $python mlhim2_json.py
+
 $python rm2ld.py
+
 $python ccd2ld.py
+
 $python data2ld.py
+
 $python mxic.py json
+
 $python mxic.py shorten
 </code>
 
-You will now have additional data and model examples to explore. They are all derived from the Reference Model and CCDs. 
+You will now have additional data and model examples to explore. They are all derived from the Reference Model and CCDs.
 
 Scripts
 =======
