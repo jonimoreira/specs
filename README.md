@@ -7,7 +7,6 @@ This is the 2.5.0 Release
 -------------------------
 See the open issues at:
 
-
     https://github.com/mlhim/specs/issues
 
 For full documentation see the repository folder for each version You can find the 2.5.0 docs at [ReadTheDocs](http://mlhim-specifications.readthedocs.org/en/2_5_0/)
