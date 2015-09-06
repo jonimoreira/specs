@@ -1,0 +1,15 @@
+Package: ccdAdminEntryCCDf6f47253ab2a
+Type: Package
+Title: ccdAdminEntryCCDf6f47253ab2a
+Version: 1.0
+Date: 2015-09-06
+Author: Timothy W. Cook <tim@mlhim.org>
+Maintainer: Timothy W. Cook <tim@mlhim.org>
+Description: Creates a data frame from instances of the MLHIM CCD for:
+  AdminEntry CCD
+  The CCD ID is: ccd-2daecb30-e319-4db2-afe2-f6f47253ab2a
+  Testing CCD-Gen Implementation of the MLHIM RM functionality.
+License: Apache License 2.0
+Depends: 
+  mlhim250rm (>= 1.0.0),
+  data.table

@@ -1,0 +1,245 @@
+{
+  "mlhim2:ccd-2daecb30-e319-4db2-afe2-f6f47253ab2a": {
+    "@http://www.w3.org/2001/XMLSchema-instance:schemaLocation": "http://www.mlhim.org/ns/mlhim2/ http://www.ccdgen.com/ccdlib/ccd-2daecb30-e319-4db2-afe2-f6f47253ab2a.xsd",
+    "mlhim2:pcs-f0af64cf-85ba-459d-ad0b-f44ef52ef9ee": {
+      "label": "AdminEntry  - Testing Only",
+      "entry-language": "en-US",
+      "entry-encoding": "utf-8",
+      "current-state": null,
+      "mlhim2:pcs-0a004562-8a05-4a23-b5cc-f6756c8075ee": {
+        "label": "AdminEntry entry-data - Testing Only",
+        "mlhim2:pcs-62d19cce-de61-4d94-a65f-2e9a3a313df8": {
+          "label": "Test Sub-Cluster  - Testing Only",
+          "mlhim2:pcs-8aff6c15-f828-4948-9222-195c1b2f0954": {
+            "mlhim2:pcs-36b53536-b6a2-4284-b36b-dbf95d36f84b": {
+              "label": "Bladder  Full - Testing Only",
+              "vtb": "1981-02-21T02:50:12",
+              "vte": "1985-12-24T13:35:51",
+              "true-value": "Yes"
+            }
+          },
+          "mlhim2:pcs-30310824-74a6-411a-9c7b-e6970b6c7369": {
+            "mlhim2:pcs-9a2153ec-832e-4d1c-98a7-8ea4a0e22f11": {
+              "label": "AdverseReaction.identifier -  - Testing Only",
+              "vtb": "1970-05-22T12:37:19",
+              "vte": "1990-10-29T05:36:04",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-b69c2157-19e7-4a9b-bcc1-bcd204a5ae54": {
+            "mlhim2:pcs-f36c0e5b-0bb6-4b58-b014-768169d3c2b4": {
+              "label": "How often do you have six or more drinks on one occasion?  - Testing Only",
+              "vtb": "1988-03-01T03:44:29",
+              "vte": "2008-06-12T13:46:28",
+              "ordinal": "1",
+              "symbol": "Two To Three Instance Per Week"
+            }
+          },
+          "mlhim2:pcs-d4fd6e5a-875e-4512-8bdd-492498237341": {
+            "mlhim2:pcs-66087287-b89b-40fe-9710-e1af92062af6": {
+              "label": "Heart Rate  - Testing Only",
+              "vtb": "1974-08-08T17:13:37",
+              "vte": "2012-05-15T06:19:33",
+              "normal-status": "Normal heart rate",
+              "magnitude-status": "equal",
+              "error": "0",
+              "accuracy": "0",
+              "dvcount-value": "636018",
+              "dvcount-units": {
+                "label": "beats per minute  - Testing Only",
+                "dvstring-value": "bpm"
+              }
+            }
+          },
+          "mlhim2:pcs-78f38614-fce7-463c-a332-f4846d00818a": {
+            "mlhim2:pcs-7cb2b570-102f-4f0b-8d59-89739713c6f0": {
+              "label": "Body Temperature -  - Testing Only",
+              "vtb": "1989-10-28T12:18:10",
+              "vte": "2012-06-13T16:14:45",
+              "magnitude-status": "equal",
+              "error": "0",
+              "accuracy": "0",
+              "dvquantity-value": "111",
+              "dvquantity-units": {
+                "label": "Unit - Example  - Testing Only",
+                "dvstring-value": "10^9{Cells}/kg"
+              }
+            }
+          },
+          "mlhim2:pcs-c62f6cf2-8b4f-4531-a0a5-af494af297fc": {
+            "mlhim2:pcs-ab34fd84-b21c-403b-9bc3-c6a4e0ed3fcd": {
+              "label": "MedicationAdministration dosage rate  - Testing Only",
+              "vtb": "1997-10-24T14:11:42",
+              "vte": "2011-01-05T11:02:09",
+              "magnitude-status": "equal",
+              "error": "0",
+              "accuracy": "0",
+              "ratio-type": "ratio",
+              "numerator": "-621883.83444187976419925689697265625",
+              "denominator": "-473083.047055118368007242679595947265625",
+              "dvratio-value": "1.31453418"
+            }
+          },
+          "mlhim2:pcs-08e457fa-0c53-4f9f-acaf-539750222df7": {
+            "mlhim2:pcs-7657a1e0-e247-43da-9ae2-4f0d1f603603": {
+              "label": "Date of most recent contact  - Testing Only",
+              "vtb": "1991-04-19T11:35:45",
+              "vte": "1997-11-05T23:10:31",
+              "dvtemporal-date": "2008-10-30"
+            }
+          }
+        },
+        "mlhim2:pcs-a3052842-92af-4cff-a21f-afb44cce2cda": {
+          "mlhim2:pcs-a4b92ef6-1b6a-40e9-b92c-6bd7ef24c39a": {
+            "label": "Connected To  - Testing Only",
+            "vtb": "2004-12-19T01:36:52",
+            "vte": "2006-04-22T14:16:53",
+            "link": "http://www.ccdgen.com",
+            "relation": "connected to",
+            "relation-uri": "Needs a URI"
+          }
+        },
+        "mlhim2:pcs-e9cbb207-9e89-416c-8b71-7cdb859b3097": {
+          "mlhim2:pcs-6669a777-2d29-44b6-97ae-4d47c16ee587": {
+            "label": "Blood Pressure Device - Testing Use Only",
+            "vtb": "1982-06-11T08:47:58",
+            "vte": "1983-02-09T13:38:57",
+            "dvstring-value": "Mercury sphygmomanometer",
+            "dvstring-language": "en-US"
+          }
+        }
+      },
+      "subject": {
+        "label": "Subject of the Entry (US)  - Testing Only",
+        "party-name": "A. Sample Name",
+        "party-details": {
+          "label": "Address Details (US)  - Testing Only",
+          "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {
+            "mlhim2:pcs-d5a8042c-e131-48f8-894c-8bf26592f393": {
+              "label": "Additional Address Line(s) (US)  - Testing Only",
+              "vtb": "2009-06-05T09:51:45",
+              "vte": "2015-12-06T17:20:33",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {
+            "mlhim2:pcs-2ec4df99-e557-40cc-8f43-f1bf97bd1e83": {
+              "label": "City Name (US)  - Testing Only",
+              "vtb": "2001-05-20T02:24:22",
+              "vte": "2007-12-15T07:10:55",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {
+            "mlhim2:pcs-6fb84cfa-a865-473e-ae89-cc829c1bcf01": {
+              "label": "State Abbreviation (USPS)  - Testing Only",
+              "vtb": "2011-06-05T22:01:11",
+              "vte": "2012-01-09T09:45:28",
+              "dvstring-value": "AE",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {
+            "mlhim2:pcs-18647d15-9ac4-403f-bf25-0bfe203f4fd0": {
+              "label": "Street Number and Name (US)  - Testing Only",
+              "vtb": "1972-06-24T04:02:59",
+              "vte": "1987-09-09T03:31:27",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {
+            "mlhim2:pcs-369de379-d09c-43aa-8334-8de02590f702": {
+              "label": "Telephone Number North American Plan  - Testing Only",
+              "vtb": "2007-12-20T21:37:19",
+              "vte": "2015-02-19T03:31:17",
+              "dvstring-value": "111-111-1111",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {
+            "mlhim2:pcs-7a33b261-0895-4c5b-9a4d-3f3aae0da570": {
+              "label": "Zip Code (US)  - Testing Only",
+              "vtb": "1985-02-05T12:43:49",
+              "vte": "1988-06-16T12:38:52",
+              "dvstring-value": "43976-9379",
+              "dvstring-language": "en-US"
+            }
+          }
+        }
+      },
+      "provider": {
+        "label": "Entry Provider (US)  - Testing Only",
+        "party-name": "A. Sample Name",
+        "mlhim2:pcs-0672fe6a-943f-4297-8d59-8239b02c4fe1": {
+          "label": "External Reference for Party  - Testing Only",
+          "vtb": "1988-02-19T19:41:47",
+          "vte": "1994-09-14T01:37:03",
+          "link": "http://www.ccdgen.com",
+          "relation": "Party Associated with the record",
+          "relation-uri": "Needs a URI"
+        },
+        "party-details": {
+          "label": "Address Details (US)  - Testing Only",
+          "mlhim2:pcs-ba9f0692-280f-4ea4-996d-0e5767238191": {
+            "mlhim2:pcs-d5a8042c-e131-48f8-894c-8bf26592f393": {
+              "label": "Additional Address Line(s) (US)  - Testing Only",
+              "vtb": "1981-07-07T21:14:55",
+              "vte": "2010-05-12T08:31:29",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-292d5a72-d065-45af-903e-a7afe798ece8": {
+            "mlhim2:pcs-2ec4df99-e557-40cc-8f43-f1bf97bd1e83": {
+              "label": "City Name (US)  - Testing Only",
+              "vtb": "2001-04-26T00:43:14",
+              "vte": "2006-10-12T13:21:15",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-b6c0cbb4-6fed-4172-a470-53dca59eba58": {
+            "mlhim2:pcs-6fb84cfa-a865-473e-ae89-cc829c1bcf01": {
+              "label": "State Abbreviation (USPS)  - Testing Only",
+              "vtb": "2009-01-13T00:59:17",
+              "vte": "2011-05-07T23:19:58",
+              "dvstring-value": "MA",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-7065c308-842d-4cd6-a041-374367dc1246": {
+            "mlhim2:pcs-18647d15-9ac4-403f-bf25-0bfe203f4fd0": {
+              "label": "Street Number and Name (US)  - Testing Only",
+              "vtb": "1976-03-20T15:27:21",
+              "vte": "2004-10-28T11:27:15",
+              "dvstring-value": "DefaultString",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-64508ffb-066f-406f-9d8e-093417103eb4": {
+            "mlhim2:pcs-369de379-d09c-43aa-8334-8de02590f702": {
+              "label": "Telephone Number North American Plan  - Testing Only",
+              "vtb": "1985-01-24T04:29:17",
+              "vte": "1991-10-20T21:00:04",
+              "dvstring-value": "111-111-1111",
+              "dvstring-language": "en-US"
+            }
+          },
+          "mlhim2:pcs-1fb5aee4-dcb6-460c-888c-251573b557b5": {
+            "mlhim2:pcs-7a33b261-0895-4c5b-9a4d-3f3aae0da570": {
+              "label": "Zip Code (US)  - Testing Only",
+              "vtb": "2012-10-01T09:02:17",
+              "vte": "2015-04-10T03:46:03",
+              "dvstring-value": "98185-3339",
+              "dvstring-language": "en-US"
+            }
+          }
+        }
+      }
+    }
+  }
+}
