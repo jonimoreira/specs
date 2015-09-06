@@ -6,7 +6,7 @@ MLHIM User & Reference Guide
 ============================
 
 
-Status - Development DRAFT for 2.5.0
+Status - 2.5.0 Released - 2015-09-06
 
 Contents:
 
