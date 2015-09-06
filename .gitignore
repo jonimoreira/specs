@@ -37,6 +37,10 @@ nosetests.xml
 #backup files
 *~
 
+# Protege catalog
+*/ontology/catalog-v001.xml
+
+
 #lock files
 *.lck
 .~lock*
@@ -59,3 +63,13 @@ graphics/Vinheta MLHIM/*
 
 #Sublime project files
 *sublime-*
+
+# documentation build
+site/
+build/
+
+# utils generated files
+rdfxml/
+jsonld/
+mxic_data/
+uuid_types.csv

@@ -1,0 +1,14 @@
+Package: mlhim250rm
+Type: Package
+Title: MLHIM 2.5.0 XML Data Instance Parsing.
+Version: 1.0.1
+Date: 2015-08-02
+Author: Timothy W. Cook <tim@mlhim.org>
+Maintainer: Timothy W. Cook <tim@mlhim.org>
+Description: Provides XML data instance parsing for each of the core datatypes in the MLHIM 2.5.0 Reference Model.
+             Returns a dataframe based on the structure of each datatype.
+License: Apache License 2.0
+LazyData: TRUE
+Depends:
+  R (>= 3.2),
+  XML (>= 3.98)

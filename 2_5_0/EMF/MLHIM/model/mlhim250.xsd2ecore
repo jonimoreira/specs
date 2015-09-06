@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="file:/home/tim/workspace/mlhim250.xsd#/" outputs="mlhim2.ecore#/"
+    topToBottom="true">
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//language;XSDSimpleTypeDefinition=30"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Language"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//string;XSDSimpleTypeDefinition=9"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ItemType;XSDComplexTypeDefinition=36"
+      outputs="mlhim2.ecore#//ItemType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ExceptionalValueType;XSDComplexTypeDefinition=19"
+      outputs="mlhim2.ecore#//ExceptionalValueType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ExceptionalValueType;XSDComplexTypeDefinition=19/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//ExceptionalValueType/evName"/>
+  </nested>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//dateTime;XSDSimpleTypeDefinition=15"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//DateTime"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAnyType;XSDComplexTypeDefinition"
+      outputs="mlhim2.ecore#//DvAnyType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAnyType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvAnyType/dataName"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAnyType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvAnyType/exceptionalValueGroup"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAnyType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvAnyType/exceptionalValue"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAnyType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//DvAnyType/validTimeBegin"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAnyType;XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//DvAnyType/validTimeEnd"/>
+  </nested>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//anyURI;XSDSimpleTypeDefinition=25"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvLinkType;XSDComplexTypeDefinition=2"
+      outputs="mlhim2.ecore#//DvLinkType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvLinkType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvLinkType/link"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvLinkType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvLinkType/relation"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvLinkType;XSDComplexTypeDefinition=2/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//DvLinkType/relationUri"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ClusterType;XSDComplexTypeDefinition=37"
+      outputs="mlhim2.ecore#//ClusterType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ClusterType;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//ClusterType/subject"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ClusterType;XSDComplexTypeDefinition=37/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//ClusterType/items"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//PartyType;XSDComplexTypeDefinition=16"
+      outputs="mlhim2.ecore#//PartyType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//PartyType;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//PartyType/partyName"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//PartyType;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//PartyType/partyRef"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//PartyType;XSDComplexTypeDefinition=16/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//PartyType/partyDetails"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvStringType;XSDComplexTypeDefinition=3"
+      outputs="mlhim2.ecore#//DvStringType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvStringType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvStringType/value"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvStringType;XSDComplexTypeDefinition=3/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvStringType/language"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ParticipationType;XSDComplexTypeDefinition=18"
+      outputs="mlhim2.ecore#//ParticipationType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ParticipationType;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//ParticipationType/performer"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ParticipationType;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//ParticipationType/function"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ParticipationType;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//ParticipationType/mode"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ParticipationType;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//ParticipationType/start"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ParticipationType;XSDComplexTypeDefinition=18/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="mlhim2.ecore#//ParticipationType/end"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AuditType;XSDComplexTypeDefinition=15"
+      outputs="mlhim2.ecore#//AuditType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AuditType;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//AuditType/systemId"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AuditType;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//AuditType/systemUser"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AuditType;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//AuditType/location"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AuditType;XSDComplexTypeDefinition=15/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//AuditType/timestamp"/>
+  </nested>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//int;XSDSimpleTypeDefinition=44"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//base64Binary;XSDSimpleTypeDefinition=24"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Base64Binary"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4"
+      outputs="mlhim2.ecore#//DvFileType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvFileType/size"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvFileType/encoding"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//DvFileType/language"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//DvFileType/formalism"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="mlhim2.ecore#//DvFileType/mediaType"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="mlhim2.ecore#//DvFileType/compressionType"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="mlhim2.ecore#//DvFileType/hashResult"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=7"
+        outputs="mlhim2.ecore#//DvFileType/hashFunction"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=8"
+        outputs="mlhim2.ecore#//DvFileType/altTxt"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=9/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvFileType/uri"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=9/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvFileType/mediaContent"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFileType;XSDComplexTypeDefinition=4/XSDParticle/XSDModelGroup/XSDParticle=9/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//DvFileType/textContent"/>
+  </nested>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//boolean;XSDSimpleTypeDefinition=10"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AttestationType;XSDComplexTypeDefinition=17"
+      outputs="mlhim2.ecore#//AttestationType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AttestationType;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//AttestationType/view"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AttestationType;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//AttestationType/proof"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AttestationType;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//AttestationType/reason"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AttestationType;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//AttestationType/committer"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AttestationType;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="mlhim2.ecore#//AttestationType/committed"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AttestationType;XSDComplexTypeDefinition=17/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="mlhim2.ecore#//AttestationType/pending"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39"
+      outputs="mlhim2.ecore#//EntryType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//EntryType/language"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//EntryType/encoding"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//EntryType/currentState"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//EntryType/data"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="mlhim2.ecore#//EntryType/subject"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="mlhim2.ecore#//EntryType/provider"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="mlhim2.ecore#//EntryType/participations"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=7"
+        outputs="mlhim2.ecore#//EntryType/protocol"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=8"
+        outputs="mlhim2.ecore#//EntryType/workflow"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=9"
+        outputs="mlhim2.ecore#//EntryType/audit"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=10"
+        outputs="mlhim2.ecore#//EntryType/attestation"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//EntryType;XSDComplexTypeDefinition=39/XSDParticle/XSDModelGroup/XSDParticle=11"
+        outputs="mlhim2.ecore#//EntryType/links"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AdminEntryType;XSDComplexTypeDefinition=41"
+      outputs="mlhim2.ecore#//AdminEntryType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//AdminEntry;XSDElementDeclaration=42"
+      outputs="mlhim2.ecore#//DocumentRoot/adminEntry"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//Entry;XSDElementDeclaration=40"
+      outputs="mlhim2.ecore#//DocumentRoot/entry"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ASKRType;XSDComplexTypeDefinition=29"
+      outputs="mlhim2.ecore#//ASKRType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ASKR;XSDElementDeclaration=28"
+      outputs="mlhim2.ecore#//DocumentRoot/aSKR"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ExceptionalValue;XSDElementDeclaration=18"
+      outputs="mlhim2.ecore#//DocumentRoot/exceptionalValue"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ASKUType;XSDComplexTypeDefinition=33"
+      outputs="mlhim2.ecore#//ASKUType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ASKU;XSDElementDeclaration=32"
+      outputs="mlhim2.ecore#//DocumentRoot/aSKU"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//Attestation;XSDElementDeclaration=16"
+      outputs="mlhim2.ecore#//DocumentRoot/attestation"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//Audit;XSDElementDeclaration=14"
+      outputs="mlhim2.ecore#//DocumentRoot/audit"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//CareEntryType;XSDComplexTypeDefinition=40"
+      outputs="mlhim2.ecore#//CareEntryType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//CareEntry;XSDElementDeclaration=41"
+      outputs="mlhim2.ecore#//DocumentRoot/careEntry"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//CCDType;XSDComplexTypeDefinition=43"
+      outputs="mlhim2.ecore#//CCDType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//CCDType;XSDComplexTypeDefinition=43/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//CCDType/definition"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//CCD;XSDElementDeclaration=44"
+      outputs="mlhim2.ecore#//DocumentRoot/cCD"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//Cluster;XSDElementDeclaration=37"
+      outputs="mlhim2.ecore#//DocumentRoot/cluster"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//Item;XSDElementDeclaration=35"
+      outputs="mlhim2.ecore#//DocumentRoot/item"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DemographicEntryType;XSDComplexTypeDefinition=42"
+      outputs="mlhim2.ecore#//DemographicEntryType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DemographicEntry;XSDElementDeclaration=43"
+      outputs="mlhim2.ecore#//DocumentRoot/demographicEntry"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DERType;XSDComplexTypeDefinition=23"
+      outputs="mlhim2.ecore#//DERType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DER;XSDElementDeclaration=22"
+      outputs="mlhim2.ecore#//DocumentRoot/dER"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAdapterType;XSDComplexTypeDefinition=38"
+      outputs="mlhim2.ecore#//DvAdapterType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAdapterType;XSDComplexTypeDefinition=38/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvAdapterType/dvAdapterValue"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAdapter;XSDElementDeclaration=39"
+      outputs="mlhim2.ecore#//DocumentRoot/dvAdapter"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAdapter-value;XSDElementDeclaration=38"
+      outputs="mlhim2.ecore#//DocumentRoot/dvAdapterValue"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvAny;XSDElementDeclaration"
+      outputs="mlhim2.ecore#//DocumentRoot/dvAny"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvBooleanType;XSDComplexTypeDefinition=1"
+      outputs="mlhim2.ecore#//DvBooleanType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvBooleanType;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvBooleanType/true"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvBooleanType;XSDComplexTypeDefinition=1/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvBooleanType/false"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvBoolean;XSDElementDeclaration=1"
+      outputs="mlhim2.ecore#//DocumentRoot/dvBoolean"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//decimal;XSDSimpleTypeDefinition=13"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Decimal"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//float;XSDSimpleTypeDefinition=11"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Float"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//date;XSDSimpleTypeDefinition=17"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Date"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//time;XSDSimpleTypeDefinition=16"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Time"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//duration;XSDSimpleTypeDefinition=14"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Duration"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//InvlType;XSDComplexTypeDefinition=13"
+      outputs="mlhim2.ecore#//InvlType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//InvlType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//InvlType/invlInt"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//InvlType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//InvlType/invlDecimal"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//InvlType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//InvlType/invlFloat"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//InvlType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//InvlType/invlDate"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//InvlType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="mlhim2.ecore#//InvlType/invlTime"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//InvlType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="mlhim2.ecore#//InvlType/invlDateTime"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//InvlType;XSDComplexTypeDefinition=13/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="mlhim2.ecore#//InvlType/invlDuration"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//IntervalUnits;XSDModelGroupDefinition/XSDModelGroup/XSDParticle"
+      outputs="mlhim2.ecore#//DvIntervalType/unitsName"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//IntervalUnits;XSDModelGroupDefinition/XSDModelGroup/XSDParticle=1"
+      outputs="mlhim2.ecore#//DvIntervalType/unitsUri"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvIntervalType;XSDComplexTypeDefinition=12"
+      outputs="mlhim2.ecore#//DvIntervalType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvIntervalType;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvIntervalType/lower"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvIntervalType;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvIntervalType/upper"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvIntervalType;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//DvIntervalType/lowerIncluded"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvIntervalType;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//DvIntervalType/upperIncluded"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvIntervalType;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="mlhim2.ecore#//DvIntervalType/lowerBounded"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvIntervalType;XSDComplexTypeDefinition=12/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="mlhim2.ecore#//DvIntervalType/upperBounded"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ReferenceRangeType;XSDComplexTypeDefinition=14"
+      outputs="mlhim2.ecore#//ReferenceRangeType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ReferenceRangeType;XSDComplexTypeDefinition=14/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//ReferenceRangeType/definition"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ReferenceRangeType;XSDComplexTypeDefinition=14/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//ReferenceRangeType/interval"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ReferenceRangeType;XSDComplexTypeDefinition=14/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//ReferenceRangeType/isNormal"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvOrderedType;XSDComplexTypeDefinition=5"
+      outputs="mlhim2.ecore#//DvOrderedType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvOrderedType;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvOrderedType/range"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvOrderedType;XSDComplexTypeDefinition=5/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvOrderedType/normalStatus"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MagnitudeStatus;XSDSimpleTypeDefinition"
+      outputs="mlhim2.ecore#//MagnitudeStatus">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MagnitudeStatus;XSDSimpleTypeDefinition/XSDEnumerationFacet"
+        outputs="mlhim2.ecore#//MagnitudeStatus/equal"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MagnitudeStatus;XSDSimpleTypeDefinition/XSDEnumerationFacet=1"
+        outputs="mlhim2.ecore#//MagnitudeStatus/lessThan"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MagnitudeStatus;XSDSimpleTypeDefinition/XSDEnumerationFacet=2"
+        outputs="mlhim2.ecore#//MagnitudeStatus/greaterThan"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MagnitudeStatus;XSDSimpleTypeDefinition/XSDEnumerationFacet=3"
+        outputs="mlhim2.ecore#//MagnitudeStatus/lessThanOrEqual"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MagnitudeStatus;XSDSimpleTypeDefinition/XSDEnumerationFacet=4"
+        outputs="mlhim2.ecore#//MagnitudeStatus/greaterThanOrEqual"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MagnitudeStatus;XSDSimpleTypeDefinition/XSDEnumerationFacet=5"
+        outputs="mlhim2.ecore#//MagnitudeStatus/approximate"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantifiedType;XSDComplexTypeDefinition=7"
+      outputs="mlhim2.ecore#//DvQuantifiedType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantifiedType;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvQuantifiedType/magnitudeStatus"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantifiedType;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvQuantifiedType/error"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantifiedType;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//DvQuantifiedType/accuracy"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantifiedType;XSDComplexTypeDefinition=7/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//DvQuantifiedType/units"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvCountType;XSDComplexTypeDefinition=8"
+      outputs="mlhim2.ecore#//DvCountType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvCountType;XSDComplexTypeDefinition=8/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvCountType/value"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvCount;XSDElementDeclaration=8"
+      outputs="mlhim2.ecore#//DocumentRoot/dvCount"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvFile;XSDElementDeclaration=4"
+      outputs="mlhim2.ecore#//DocumentRoot/dvFile"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvInterval;XSDElementDeclaration=12"
+      outputs="mlhim2.ecore#//DocumentRoot/dvInterval"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvOrdered;XSDElementDeclaration=5"
+      outputs="mlhim2.ecore#//DocumentRoot/dvOrdered"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvOrdinalType;XSDComplexTypeDefinition=6"
+      outputs="mlhim2.ecore#//DvOrdinalType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvOrdinalType;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvOrdinalType/ordinal"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvOrdinalType;XSDComplexTypeDefinition=6/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvOrdinalType/symbol"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvOrdinal;XSDElementDeclaration=6"
+      outputs="mlhim2.ecore#//DocumentRoot/dvOrdinal"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantified;XSDElementDeclaration=7"
+      outputs="mlhim2.ecore#//DocumentRoot/dvQuantified"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantityType;XSDComplexTypeDefinition=9"
+      outputs="mlhim2.ecore#//DvQuantityType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantityType;XSDComplexTypeDefinition=9/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvQuantityType/value"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvQuantity;XSDElementDeclaration=9"
+      outputs="mlhim2.ecore#//DocumentRoot/dvQuantity"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//RatioType;XSDSimpleTypeDefinition=1"
+      outputs="mlhim2.ecore#//RatioType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//RatioType;XSDSimpleTypeDefinition=1/XSDEnumerationFacet"
+        outputs="mlhim2.ecore#//RatioType/ratio"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//RatioType;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=1"
+        outputs="mlhim2.ecore#//RatioType/proportion"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//RatioType;XSDSimpleTypeDefinition=1/XSDEnumerationFacet=2"
+        outputs="mlhim2.ecore#//RatioType/rate"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvRatioType;XSDComplexTypeDefinition=10"
+      outputs="mlhim2.ecore#//DvRatioType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvRatioType;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvRatioType/ratioType"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvRatioType;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvRatioType/numerator"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvRatioType;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//DvRatioType/denominator"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvRatioType;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//DvRatioType/value"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvRatioType;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="mlhim2.ecore#//DvRatioType/numeratorUnits"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvRatioType;XSDComplexTypeDefinition=10/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="mlhim2.ecore#//DvRatioType/denominatorUnits"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvRatio;XSDElementDeclaration=10"
+      outputs="mlhim2.ecore#//DocumentRoot/dvRatio"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvString;XSDElementDeclaration=3"
+      outputs="mlhim2.ecore#//DocumentRoot/dvString"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//gDay;XSDSimpleTypeDefinition=21"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//GDay"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//gMonth;XSDSimpleTypeDefinition=22"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//GMonth"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//gYear;XSDSimpleTypeDefinition=19"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//GYear"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//gYearMonth;XSDSimpleTypeDefinition=18"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//GYearMonth"/>
+  <nested inputs="bundleentry://1082.fwk1452605835/cache/www.w3.org/2001/XMLSchema.xsd#//gMonthDay;XSDSimpleTypeDefinition=20"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//GMonthDay"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11"
+      outputs="mlhim2.ecore#//DvTemporalType">
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalDate"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalTime"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=2"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalDatetime"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=3"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalDay"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=4"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalMonth"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=5"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalYear"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=6"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalYearMonth"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=7"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalMonthDay"/>
+    <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporalType;XSDComplexTypeDefinition=11/XSDParticle/XSDModelGroup/XSDParticle=8"
+        outputs="mlhim2.ecore#//DvTemporalType/dvtemporalDuration"/>
+  </nested>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvTemporal;XSDElementDeclaration=11"
+      outputs="mlhim2.ecore#//DocumentRoot/dvTemporal"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//DvURI;XSDElementDeclaration=2"
+      outputs="mlhim2.ecore#//DocumentRoot/dvURI"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//INVType;XSDComplexTypeDefinition=22"
+      outputs="mlhim2.ecore#//INVType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//INV;XSDElementDeclaration=21"
+      outputs="mlhim2.ecore#//DocumentRoot/iNV"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//Items;XSDElementDeclaration=36"
+      outputs="mlhim2.ecore#//DocumentRoot/items"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MSKType;XSDComplexTypeDefinition=21"
+      outputs="mlhim2.ecore#//MSKType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//MSK;XSDElementDeclaration=20"
+      outputs="mlhim2.ecore#//DocumentRoot/mSK"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NAType;XSDComplexTypeDefinition=35"
+      outputs="mlhim2.ecore#//NAType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NA;XSDElementDeclaration=34"
+      outputs="mlhim2.ecore#//DocumentRoot/nA"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NASKType;XSDComplexTypeDefinition=30"
+      outputs="mlhim2.ecore#//NASKType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NASK;XSDElementDeclaration=29"
+      outputs="mlhim2.ecore#//DocumentRoot/nASK"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NAVType;XSDComplexTypeDefinition=34"
+      outputs="mlhim2.ecore#//NAVType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NAV;XSDElementDeclaration=33"
+      outputs="mlhim2.ecore#//DocumentRoot/nAV"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NIType;XSDComplexTypeDefinition=20"
+      outputs="mlhim2.ecore#//NIType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NI;XSDElementDeclaration=19"
+      outputs="mlhim2.ecore#//DocumentRoot/nI"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NINFType;XSDComplexTypeDefinition=26"
+      outputs="mlhim2.ecore#//NINFType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//NINF;XSDElementDeclaration=25"
+      outputs="mlhim2.ecore#//DocumentRoot/nINF"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//OTHType;XSDComplexTypeDefinition=25"
+      outputs="mlhim2.ecore#//OTHType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//OTH;XSDElementDeclaration=24"
+      outputs="mlhim2.ecore#//DocumentRoot/oTH"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//Participation;XSDElementDeclaration=17"
+      outputs="mlhim2.ecore#//DocumentRoot/participation"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//Party;XSDElementDeclaration=15"
+      outputs="mlhim2.ecore#//DocumentRoot/party"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//PINFType;XSDComplexTypeDefinition=27"
+      outputs="mlhim2.ecore#//PINFType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//PINF;XSDElementDeclaration=26"
+      outputs="mlhim2.ecore#//DocumentRoot/pINF"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//QSType;XSDComplexTypeDefinition=31"
+      outputs="mlhim2.ecore#//QSType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//QS;XSDElementDeclaration=30"
+      outputs="mlhim2.ecore#//DocumentRoot/qS"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//ReferenceRange;XSDElementDeclaration=13"
+      outputs="mlhim2.ecore#//DocumentRoot/referenceRange"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//TRCType;XSDComplexTypeDefinition=32"
+      outputs="mlhim2.ecore#//TRCType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//TRC;XSDElementDeclaration=31"
+      outputs="mlhim2.ecore#//DocumentRoot/tRC"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//UNCType;XSDComplexTypeDefinition=24"
+      outputs="mlhim2.ecore#//UNCType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//UNC;XSDElementDeclaration=23"
+      outputs="mlhim2.ecore#//DocumentRoot/uNC"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//UNKType;XSDComplexTypeDefinition=28"
+      outputs="mlhim2.ecore#//UNKType"/>
+  <nested inputs="file:/home/tim/workspace/mlhim250.xsd#//UNK;XSDElementDeclaration=27"
+      outputs="mlhim2.ecore#//DocumentRoot/uNK"/>
+</xsd2ecore:XSD2EcoreMappingRoot>
