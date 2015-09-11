@@ -35,3 +35,10 @@ We have provided open source examples of this transformation process, specifical
 One last comment on the issues with the *direct markup approach* is that is not robust enough for mission-critical data management; certainly not for your clinical healthcare data. This issue is widely recognized and is being addressed by `W3C <http://www.w3.org/2012/12/rdf-val/report>`_. However, we know from previous experience that the W3C process is a slow one.
 
 In a few years, there may be widespread adoption and tools for validation of RDF syntaxes and/or the various levels of OWL. At that time it will be easy enough to migrate to MLHIM 3.x using that approach. But we need solutions today and MLHIM offers that solution now; with XML and RDF mix of technologies.
+
+Support for Legacy Systems
+---------------------------
+
+MLHIM is designed to provide semantic interoeperability for future systems. Based on small, granular models taht can be well defined. However, it is quite capable of supporting the transition of legacy data as well.  Several examples are available from the MLHIM GitHub site.
+
+A capability often over looked is the ability to create models for CSV data in order to build Linked Data graphs. An often perplexing problem is how to support validation of data when that data may have come from a printed vocabulary or a terminology server. An example of this is in the TB demo where the Brazilian Death Certificate and Hospital Discharge data are modeled from CSV files. Of particular note are the DvStringType models that constrain the ICD 10 codes via an xs:assert for validation in the XML.  For Linked Data a vocabulary root is provided via mlhim2:vocabRoot predicate and the resource is the URL to the WHO online repository. In cases where there is no online repsository (such as a published PDF) and the number of enumerations would be to large to be practical as constraints, we suggest creating a URI prefix for the link to the PDF and use a # plus the values found in the data.
