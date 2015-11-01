@@ -4,7 +4,7 @@ MLHIM Docs Overview
 
 Implementable semantic interoperability.
 
-Status - **Development DRAFT for 2.5.0**
+Status - **Final for 2.5.0** Released: 2015-09-06
 
 MLHIM User & Reference Manual
 -----------------------------
